@@ -119,11 +119,9 @@ $lavender: #E6E6FA !default; // lavender
 .page-header {
     /*  Sep 28/2022 - Strange have to add this today. Page header has
         way too much empty space above. */
-    // z-index: 2;  // experiments with #hidden-menu
     @include large { margin-top: -4rem; }
     @include medium { margin-top: -2rem; }
     @include small { margin-top: -1rem; }
-    // margin-top: -3rem;  // Chops test
 }
 
 #hidden-menu {  // In conjunction with class .page-header-button in HTML
@@ -142,7 +140,8 @@ $lavender: #E6E6FA !default; // lavender
     top: 1rem;  // From Top of screen when no page header
     margin-top: 4rem;  // From page <header>
     margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
-    right: 0;
+    //right: 0;
+    float: right;
 }
 
 .page-header-button {
