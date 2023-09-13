@@ -75,8 +75,12 @@
     </header>
 
     {% include tcm-draggable-window.html %}
-    <!-- jump must appear after? -->
-    {% include jump.html %}
+    <!-- jump must appear after?
+    { % include jump.html %} -->
+    <button id="jump-button" class="page-header-button"
+        title="Quick Jump Menu"
+        >&#x2630;
+    </button>
 
     <main id="content" class="main-content" role="main">
 
