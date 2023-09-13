@@ -25,8 +25,8 @@ p b, p strong, :not(a) ul b, :not(a) ul strong {
     position: fixed;
     top: 1rem;
     left: 0;
-    margin-left: .3rem;
-    z-index: 0;  // class page-header has z-index 2
+    margin-left: 1rem;
+    z-index: -3;
 }
 
 // Input fields
