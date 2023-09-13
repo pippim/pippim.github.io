@@ -344,7 +344,7 @@ j.onclick = function (event) {
         //m.style.display = "none"  // Jump modal may be open
         //window.scrollTo({top: 0, behavior: 'smooth'});
         //reverseContentDimmed()
-        //closeJumpForm()  // Sep 2/23
+        closeJumpForm()
         /* TODO: Check function below:
             function closeJumpForm() {
                 f.style.display = "none"  // Close search form
@@ -355,6 +355,16 @@ j.onclick = function (event) {
         */
     }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpForm:", boolJumpForm)
+}
+
+function closeJumpForm() {
+    /* Shared between 'X' to close and click outside search query */
+    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    //f.style.display = "none"  // Close search form
+    //m.style.display = "none"  // Sep 2/23 - Search modal may be open
+    boolJumpForm = false
+    //window.scrollTo({top: 0, behavior: 'smooth'});
+    //reverseContentDimmed()
 }
 
 function setContentDimmed(elm) {
