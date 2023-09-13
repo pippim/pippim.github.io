@@ -332,39 +332,31 @@ jb.onclick = function (event) {
     //const n = document.getElementsByClassName('page-header-search-button');
     event.stopPropagation()  // Don't let window.onclick see this click
     e.style.display = "none"  // Drop down content
+    boolDropdown = false
     f.style.display = "none"  // Search form
     m.style.display = "none"  // Search modal
+    boolSearchForm = false
+    reverseContentDimmed()
+
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
         jm.style.display = "block";      // Display search results by revealing modal
-        // setContentDimmed(g)  // New g replaces f  // Don't know about dim yet
-        // Move to top so children have room to grow (after scrollbar removed)
-        // scrollToJustAbove(g)  // Will need jump later to header
-        // Cursor into search words input field
-        // q.focus();  // _includes/search.html id="search_query"
-        // q.select();
-        // Hamburger dropdown may be open and stopPropagation stops window.click() running
-        if (e !== null && e != "none") {
-            e.style.display = "none";  // Close dropdown menu options
-            boolDropdown = false
+        setContentDimmed(jm)
         }
     }
     else  {
         //window.scrollTo({top: 0, behavior: 'smooth'});
-        //reverseContentDimmed()
         closeJumpModal()
     }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpModal:", boolJumpModal)
 }
 
 function closeJumpModal() {
-    /* Shared between 'X' to close and click outside modal */
+    /* Shared between set_x_to_close and click outside modal */
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     jm.style.display = "none"  // Close jump modal
-    //m.style.display = "none"  // Sep 2/23 - Search modal may be open
     boolJumpModal = false
-    //window.scrollTo({top: 0, behavior: 'smooth'});
-    //reverseContentDimmed()
+    reverseContentDimmed()
 }
 
 // From: https://stackoverflow.com/a/35376840/6929343
@@ -392,6 +384,7 @@ function reverseContentDimmed() {
     e.classList.remove("dim-body")  // dropdown menu dimming
     f.classList.remove("dim-body")  // search form dimming
     g.classList.remove("dim-body")  // search form dimming
+    jm.classList.remove("dim-body")  // jump-modal
 }
 
 f.addEventListener('submit', submitted);
@@ -405,7 +398,10 @@ i.onclick = function(event) {
         q.value = ""  // Erase search string
         set_x_to_close()  // Set 'X' (Close) icon or back tab character
     }
-    else closeSearchForm()
+    else {
+        closeSearchForm()
+        closeJumpModal()  // Sep 13/23 new modal shares 'X' close
+    }
 }
 
 function set_x_to_close() {
