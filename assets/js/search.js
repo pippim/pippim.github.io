@@ -347,7 +347,8 @@ jb.onclick = function (event) {
         // Where is jump button in viewport now?
         var viewportOffset = jb.getBoundingClientRect();
         // these are relative to the viewport
-        var top = viewportOffset.top;
+        var top = viewportOffset.top; +
+                  jb.document.defaultView.pageYOffset
         var left = viewportOffset.left;
         console.log("jb.onclick jm top:", top, "jm left:", left)
         setContentDimmed(jm)
