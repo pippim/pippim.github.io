@@ -344,7 +344,9 @@ jb.onclick = function (event) {
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
         jm.style.display = "block"  // Display #jump-modal
-        jm.style.top = window.scrollY + "px"
+        top = window.scrollY + "px"
+        console.log("New jm top:", top, "scrollY:", window.scrollY)
+        jm.style.top = top
         // Where is jump button in viewport now?
         var viewportOffset = jb.getBoundingClientRect();
         // these are relative to the viewport
@@ -352,7 +354,7 @@ jb.onclick = function (event) {
                   window.pageYOffset
                   //jb.document.defaultView.pageYOffset
         var left = viewportOffset.left;
-        console.log("jb.onclick REAL jm top:", top, "scrollY:", window.scrollY)
+        console.log("jb.onclick REAL jb top:", top, "scrollY:", window.scrollY)
         /* Messes up page-header font size
         for (hi=1; hi<=3; hi++) {  // h1, h2, h3
             var headers = document.getElementsByTagName('h'+hi);
@@ -360,8 +362,10 @@ jb.onclick = function (event) {
                 headers[hj].className = 'h';
             }
         }
+        console.log("h1, h2, h3 count:", headers.length)
         */
         var headers = document.getElementsByClassName('h');
+        console.log("h1 -> h6 count:", headers.length)
         /* Messes up page-header font size
         for (hi=0; hi<headers.length; hi++) {
             headers[hi].innerHTML += ' '+hi;
