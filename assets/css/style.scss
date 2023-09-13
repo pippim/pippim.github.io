@@ -595,6 +595,7 @@ details[open] > summary {
 
 .modal #jump-modal {
     position: absolute;  // Override with window.scrollY in search.js
+    z-index: 4;  // above body and jump button
     float: right;
 }
 
