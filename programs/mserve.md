@@ -1139,8 +1139,14 @@ changes to music files' last modification time.  **mserve** uses this file
 as a shadow filesystem to track last modification time. Used by the 
 *Synchronize Location* function.
 
-**lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
-When working inside the `location.py` module, drop the **lc.** prefix.
+Within **mserve** Python scripts, **lc.FNAME** represents:
+
+- "location.py" (**lc.**)
+- "Filename" (**FNAME**). 
+ 
+
+*Note:* When working inside the `location.py` module, 
+drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
 
 ## JSON Data Files
@@ -1156,10 +1162,10 @@ FTP Host Server like an Android mobile phone.
 
 These are the files you will find in the location subdirectory:
 
-- **walk_list** - lc.FNAME_WALK_LIST - Cached directory and
+- ***walk_list*** - lc.FNAME_WALK_LIST - Cached directory and
 filenames that dramatically speeds up **mserve** startup time from
 many minutes to a split second.
-- **size_dict** - lc.FNAME_SIZE_DICT - Filename dictionary with
+- ***size_dict*** - lc.FNAME_SIZE_DICT - Filename dictionary with
 file sizes dramatically speeds up generating the *Music Location Tree*.
 
 
