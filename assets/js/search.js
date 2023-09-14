@@ -345,25 +345,14 @@ jb.onclick = function (event) {
     if (boolJumpModal) {
         jm.style.display = "block"  // Display #jump-modal
         const headers_array = []
-        /* Messes up page-header font size
-        for (hi=1; hi<=3; hi++) {  // h1, h2, h3 push
-            var headers = document.getElementsByTagName('h'+hi);
-            for (hj=0; hj<headers.length; hj++) {
-                console.log("Adding header:", headers[hj])
-                headers_array.push(headers[hj])
-            }
-        }
-        console.log("h1 -> h6 count:", headers_array.length)
-        console.log("h1, h2, h3 count:", headers.length)
-        */
-        var headers = document.getElementsByClassName('h');
         var headers = document.querySelectorAll("h1,h2,h3,h4")
         for (hj=0; hj<headers.length; hj++) {
-            console.log("Adding header:", headers[hj])
+            if (hg<10) {
+                console.log("Adding header:", headers[hj])
+            }
             headers_array.push(headers[hj])
         }
-        console.log("h1 -> h6 count:", headers_array.length)
-        // Above prints NOTHING FOUND !!!
+        console.log("h1 -> h4 count:", headers_array.length)
 
         // parse the ToC content: https://stackoverflow.com/a/40946392/6929343
         /*
