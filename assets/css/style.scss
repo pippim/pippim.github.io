@@ -579,7 +579,7 @@ details[open] > summary {
     font-size: 1.1rem;
 }
 
-.modal #search-modal {
+#search-modal {  // Sep 14/23 - remove class .modal {
     margin-top: .75rem;
     text-align: start;  // parent flex box is centering text
 }
