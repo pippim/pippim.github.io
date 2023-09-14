@@ -353,7 +353,7 @@ function buildJumpModal() {
     const headers_array = []
     var headers = document.querySelectorAll("h1,h2,h3,h4")
     for (ndx=0; ndx<headers.length; ndx++) {
-        if (ndx<0) {  // Set # of debug lines to display
+        if (ndx<5) {  // Set # of debug lines to display
             console.log("Header :", headers[ndx])
             console.log("HTML   :", headers[ndx].innerHTML)
             console.log("1st 100: '" +
@@ -392,6 +392,7 @@ function buildJumpModal() {
         html += '  <li><a href="#' + hyper_link + '">' + hyper_title + '</a></li>\n'
     }
     html += "</ul>\n";
+    //
 
     jt.innerHTML = html  // Put TOC into modal box
     jm.style.display = "block"  // Display search headers by revealing modal
