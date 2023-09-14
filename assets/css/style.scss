@@ -584,20 +584,23 @@ details[open] > summary {
     text-align: start;  // parent flex box is centering text
 }
 
-.jump-modal,
 #jump-button {  // In conjunction with class .page-header-button in HTML
     position: sticky;
     top: 1rem;  // From Top of screen when no page header
     margin-top: 4rem;  // From page <header>
     margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
-    //right: 0;
     float: right;
 }
 
 .jump-modal {
     display: none;  // Start invisible
+    position: absolute;
+    top: 1rem;  // From Top of screen when no page header
+    //margin-top: 4rem;  // From page <header>
+    //margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
+    float: right;
     margin-right: 1rem;
-    z-index: 1; /* Sit on top */
+    z-index: 40; /* Sit on top of all */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
