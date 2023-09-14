@@ -354,7 +354,7 @@ function buildJumpModal() {
     var title = ""  // page title
     var headings = document.querySelectorAll("h1,h2,h3,h4")
     for (ndx=0; ndx<headings.length; ndx++) {
-        if (ndx<5) {  // Set # of debug lines to display
+        if (ndx<0) {  // Set # of debug lines to display
             console.log("Header :", headings[ndx])
             console.log("HTML   :", headings[ndx].innerHTML)
             console.log("1st 100: '" +
@@ -372,7 +372,7 @@ function buildJumpModal() {
         }
     }
 
-    console.log("title:", title, "headings.length:", headings.length)
+    //console.log("title:", title, "headings.length:", headings.length)
 
     // Introduction based on heading counts
     if (hdgArr.length == 0) {
@@ -395,7 +395,7 @@ function buildJumpModal() {
         hn = hdgArr[ndx].tagName
         // Use slice(), avoid substring() and substr()
         var n = parseInt(hn.slice(1))
-        if (ndx<5) {  // Set # of debug lines to display
+        if (ndx<0) {  // Set # of debug lines to display
             console.log("hn:", hn, "n:", n)
         }
         if (n > last_n) {
@@ -410,7 +410,8 @@ function buildJumpModal() {
         hyper_link = hdgArr[ndx].id
         hyper_title = hdgArr[ndx].innerHTML
         // e.g.: <a href="#hdr5">ToS</a>
-        html += '  <li><a href="#' + hyper_link + '">' + hyper_title + '</a></li>\n'
+        html += '  <li><a href="#' + hyper_link + '">' +
+                hyper_title + '</a></li>\n'
     }
     html += dedent.repeat(last_n)  // </ul> * levels 
 
