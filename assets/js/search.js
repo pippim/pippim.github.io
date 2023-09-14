@@ -388,7 +388,7 @@ function buildJumpModal() {
         hyper_link = headers[ndx].id
         hyper_title = headers[ndx].innerHTML
         // e.g.: <a href="#hdr5">ToS</a>
-        html += '  <li><a href="#' + hyper_link + '>' + hyper_title + '</a></li>\n"
+        html += '  <li><a href="#' + hyper_link + '">' + hyper_title + '</a></li>\n'
     }
     html += "</ul>\n";
 
