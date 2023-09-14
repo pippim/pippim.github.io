@@ -345,6 +345,7 @@ jb.onclick = function (event) {
     if (boolJumpModal) {
         jm.style.display = "block"  // Display #jump-modal
         const headers_array = []
+        /* Messes up page-header font size
         for (hi=1; hi<=3; hi++) {  // h1, h2, h3 push
             var headers = document.getElementsByTagName('h'+hi);
             for (hj=0; hj<headers.length; hj++) {
@@ -352,11 +353,14 @@ jb.onclick = function (event) {
                 headers_array.push(headers[hj])
             }
         }
-        /* Messes up page-header font size
+        console.log("h1 -> h6 count:", headers_array.length)
         console.log("h1, h2, h3 count:", headers.length)
-        var headers = document.getElementsByClassName('h');
-        console.log("h1 -> h6 count:", headers.length)
         */
+        var headers = document.getElementsByClassName('h');
+        for (hj=0; hj<headers.length; hj++) {
+            console.log("Adding header:", headers[hj])
+            headers_array.push(headers[hj])
+        console.log("h1 -> h6 count:", headers_array.length)
 
         /* Messes up page-header font size
         for (hi=0; hi<headers.length; hi++) {
