@@ -2309,8 +2309,8 @@ for the VU meters to display the correct output sound device.
    caption="pavucontrol recording tab.png"
 %}
 
-This screenshot shows the *Pulse Audio Volume Control*
-"Recording" Tab.
+This screenshot shows the *Pulse Audio Volume Control's*
+***Recording*** Tab.
 
 Notice the thick progress bar at the bottom indicates no sound
 is being recorded. That is because it is listening to the
@@ -2328,34 +2328,35 @@ speakers.
 ### Pulse Audio Volume Control Change Recording Source
 {:.no_toc}
 
-{% include image.html src="/assets/img/mserve/pavucontrol recording change capture.png"
-   alt="pavucontrol recording change capture.png"
-   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
-   caption="pavucontrol recording change capture.png"
-%}
+<video src="https://user-images.githubusercontent.com/92641463/265543128-cd983109-d85b-42de-af2a-59519a9f92f3.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/265543128-cd983109-d85b-42de-af2a-59519a9f92f3.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+</video>
 
-This screenshot also shows the *Pulse Audio Volume Control*
-"Recording" Tab.
-In this example, the recording stream is different than
-the last example.
+The sample video shows the *Pulse Audio Volume Control*
+***Recording*** Tab.
 
-That is because the steam name
+The stream "Built-in Audio Analog Stereo"
+is selected. Notice the thick progress shows
+sound volume level changes.
+
+Then the stream name
 "Monitor of GM204 High Definition Audio
-Controller Digital Stereo (HDMI)" was clicked.
-
-Then the stream "Monitor of Built-in Audio Analog Stereo"
-was selected. Notice the thick progress bar is now populated
-with sound volume levels.
+Controller Digital Stereo (HDMI)" is selected.
 
 When you change the output device loopback to recording; 
 **YOU MUST RESTART mserve**. Otherwise the VU meters will
 merely be blank.
 
-References:
+Credits and References:
 
-- https://github.com/pippim/mserve/blob/main/src/vu_meter.py
-- https://wiki.ubuntu.com/record_system_sound
-- https://github.com/kmein/vu-meter
+- [Ubuntu Wiki - record_system_sound ⧉ 🔗](https://wiki.ubuntu.com/record_system_sound
+"Open Ubuntu Wiki in New Window"){:target="_blank"}
+- [GitHub `vu_meter.py` Source Code ⧉ 🔗](https://github.com/pippim/mserve/blob/main/src/vu_meter.py
+"Open GitHub Repository in New Window"){:target="_blank"}
+- [kmein GitHub original VU Meter Source Code ⧉ 🔗](https://github.com/kmein/vu-meter 
+"Open GitHub Repository in New Window"){:target="_blank"}
 
 ---
 
