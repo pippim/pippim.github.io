@@ -594,7 +594,8 @@ details[open] > summary {
 
 .jump-modal {
     display: none;  // Start invisible
-    position: absolute;
+    //position: absolute;
+    position: sticky;
     top: 1rem;  // From Top of screen when no page header
     //margin-top: 4rem;  // From page <header>
     //margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
@@ -604,6 +605,10 @@ details[open] > summary {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.jump-modal-text {
+    overflow: auto; /* Enable scroll if needed */
 }
 
 /* Modal Content/Box */
@@ -623,12 +628,16 @@ details[open] > summary {
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when 1rem = 16px
     border-radius: .5rem;
-    overflow: auto;
+    // overflow: auto;  // Move to .modal {} only 
     max-height: 75vh;  // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem var(--header-bg-color-secondary);
     box-shadow: 1rem 1rem .7rem var(--header-bg-color-secondary);
     max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     font-size: 1.1rem;
+}
+
+.modal {
+    overflow: auto;
 }
 
 #search-clear-input {
