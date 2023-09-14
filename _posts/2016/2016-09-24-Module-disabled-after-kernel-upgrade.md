@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,192 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-24-Module-disabled-after-kernel-upgrade.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "115,691 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-16-Transparent-background-in-a-Tkinter-window.md
 toc:          false
 navigation:   false

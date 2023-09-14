@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,023 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-Bash-script-to-sleep-at-given-CPU-temperature-~-update-for-16.04.md
 toc:          false
 navigation:   true

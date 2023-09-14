@@ -12,7 +12,7 @@ votes:        "29 "
 favorites:    
 views:        "70,263 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-Is-there-any-Widget-that-can-show-my-CPU-and-other-performances-live_.md
 toc:          false
 navigation:   false

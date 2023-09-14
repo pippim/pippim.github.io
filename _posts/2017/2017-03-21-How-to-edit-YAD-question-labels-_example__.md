@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,068 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-21-How-to-edit-YAD-question-labels-_example__.md
 toc:          false
 navigation:   false

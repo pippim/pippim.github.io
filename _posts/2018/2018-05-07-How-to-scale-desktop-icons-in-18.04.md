@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "13,833 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-07-How-to-scale-desktop-icons-in-18.04.md
 toc:          false
 navigation:   false

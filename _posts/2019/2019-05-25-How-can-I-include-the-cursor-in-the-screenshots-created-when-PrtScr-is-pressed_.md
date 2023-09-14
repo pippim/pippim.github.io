@@ -12,7 +12,7 @@ votes:        "18 "
 favorites:    
 views:        "2,387 "
 accepted:     
-uploaded:     2023-09-14 01:12:26
+uploaded:     2023-09-14 14:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-25-How-can-I-include-the-cursor-in-the-screenshots-created-when-PrtScr-is-pressed_.md
 toc:          false
 navigation:   false
