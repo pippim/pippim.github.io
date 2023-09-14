@@ -368,9 +368,8 @@ function buildJumpModal() {
 
     if (headers.length == 0) {
         html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
-        html += "<p>Use more search words that are descriptive.<br><br>\n"
-        html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
-        html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
+        html += "<p>Quick Jump (Hamburger Menu) button ineffective.<br><br>\n"
+        html += "Use the Quick Jump button on pages that have have headings.</p>\n"
         jm.innerHTML = html;
         //q.value = ""  // Test because this is what X button would do
         jm.style.display = "block";  // Turn on search headers display
@@ -388,7 +387,8 @@ function buildJumpModal() {
         hn = headers[ndx].tagName
         hyper_link = headers[ndx].id
         hyper_title = headers[ndx].innerHTML
-        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n"
+        // e.g.: <a href="#hdr5">ToS</a>
+        html += '"  <li><a href="#' + hyper_link + "'>" + hyper_title + "</a></li>\n"
     }
     html += "</ul>\n";
 
