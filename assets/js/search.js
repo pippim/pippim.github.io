@@ -362,6 +362,22 @@ jb.onclick = function (event) {
             headers_array.push(headers[hj])
         }
         console.log("h1 -> h6 count:", headers_array.length)
+        // Above prints NOTHING FOUND !!!
+
+        // parse the ToC content: https://stackoverflow.com/a/40946392/6929343
+        var list = document.querySelectorAll("h1,h2")
+        var tocArr = [], cur; // holds the structure of the ToC
+        for (var i = 0; i < list.length; i++) {
+          var e = list[i];
+          if (e.tagName == "H1") {
+            // for an h1, create a new heading entry (with a blank child list)
+            tocArr.push({text:e.textContent, children:(cur=[])});
+          } else {
+            // for an h2, add it to the current h1's child list
+            cur.push(e.textContent);
+          }
+        }
+        console.log(tocArr);
 
         /* Messes up page-header font size
         for (hi=0; hi<headers.length; hi++) {
