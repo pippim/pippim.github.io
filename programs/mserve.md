@@ -2008,7 +2008,7 @@ but only songs from the current music location.
 Below is a sample *Playlist Maintenance* window from the 
 ***Rename Playlist*** function:
 
-### Sample *Rename Playlist* Window
+## Sample *Rename Playlist* Window
 {:.no_toc}
 
 {% include image.html src="/assets/img/mserve/mserve Rename Playlist.png"
