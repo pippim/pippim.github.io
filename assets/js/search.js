@@ -345,8 +345,8 @@ jb.onclick = function (event) {
         for (hj=0; hj<headers.length; hj++) {
             if (hj<10) {
                 console.log("Adding header:", headers[hj])
-                console.log("First Fifty: '" +
-                    headers[hj].toString().substring(0,50) + "'")
+                console.log("First 100: '" +
+                    headers[hj].toString().substring(0,100) + "'")
             }
             if (!headers[hj].toString().startsWith('  id="', 2)) { continue }
             headers_array.push(headers[hj])
