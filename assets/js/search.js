@@ -350,58 +350,68 @@ jb.onclick = function (event) {
 
 function buildJumpModal() {
 
-    const headers_array = []
-    var headers = document.querySelectorAll("h1,h2,h3,h4")
-    for (ndx=0; ndx<headers.length; ndx++) {
+    const hdgArr = []  // Filtered headings
+    var headings = document.querySelectorAll("h1,h2,h3,h4")
+    for (ndx=0; ndx<headings.length; ndx++) {
         if (ndx<5) {  // Set # of debug lines to display
-            console.log("Header :", headers[ndx])
-            console.log("HTML   :", headers[ndx].innerHTML)
+            console.log("Header :", headings[ndx])
+            console.log("HTML   :", headings[ndx].innerHTML)
             console.log("1st 100: '" +
-                headers[ndx].toString().substring(0,100) + "'")
-            console.log("tagName:", headers[ndx].tagName,
-                        "  |  id:", headers[ndx].id)
-            console.log("headers[ndx].id.length:",
-                        headers[ndx].id.length)
+                headings[ndx].toString().substring(0,100) + "'")
+            console.log("tagName:", headings[ndx].tagName,
+                        "  |  id:", headings[ndx].id)
+            console.log("headings[ndx].id.length:",
+                        headings[ndx].id.length)
         }
-        if (headers[ndx].id.length=0) { continue }
-        headers_array.push(headers[ndx])
+        if (headings[ndx].id.length=0) { continue }
+        hdgArr.push(headings[ndx])
     }
-    console.log("START headers.length:", headers.length)
+    console.log("START headings.length:", headings.length)
 
-    if (headers_array.length == 0) {
+    if (hdgArr.length == 0) {
         html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
         html += "<p>Quick Jump (Hamburger Menu) button ineffective.<br><br>\n"
         html += "Use the Quick Jump button on pages that have have headings.</p>\n"
         jt.innerHTML = html;
         jm.style.display = "block";  // Turn on search headers display
         return
-    } else if (headers_array.length == 1) {
+    } else if (hdgArr.length == 1) {
         var html = "<h2>1 heading found.</h2>\n"
     } else {
-        var html = "<h2>" + headers_array.length.toString() +
+        var html = "<h2>" + hdgArr.length.toString() +
                    " headings found.</h2>\n"
     }
 
-    console.log("END headers.length:", headers_array.length)
+    console.log("END headers.length:", hdgArr.length)
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
     html += '<ul>\n'
     up0 = '</ul>'.repeat(0)
     up1 = '</ul>'.repeat(1)
     console.log("up0:", up0, "up1:", up1)
-    last_hn = headers_array[0].tagName
-    for (ndx=0; ndx<headers_array.length; ndx++) {
-        hn = headers_array[ndx].tagName
-        if (hn > last_hn) { html += '<ul>\n' }
-        if (hn < last_hn) { html += '</ul>\n' }
-        last_hn = hn
-        hyper_link = headers_array[ndx].id
-        hyper_title = headers_array[ndx].innerHTML
+    last_hn = hdgArr[0].tagName
+    last_n = 0
+    indent = "<ul>"
+    dedent = "</ul>"
+    // Could start with h2 and end in h1 or end in h4
+    for (ndx=0; ndx<hdgArr.length; ndx++) {
+        hn = hdgArr[ndx].tagName
+        var n = parseInt(hn.substring(1,1))
+        if (n > last_n) {
+            rep = n - last_n 
+            html += indent.repeat(rep)  // <ul> * levels 
+        }
+        if (n < last_n) { 
+            rep = last_n - n 
+            html += dedent.repeat(rep)  // </ul> * levels 
+        }
+        last_n = hn
+        hyper_link = hdgArr[ndx].id
+        hyper_title = hdgArr[ndx].innerHTML
         // e.g.: <a href="#hdr5">ToS</a>
         html += '  <li><a href="#' + hyper_link + '">' + hyper_title + '</a></li>\n'
     }
-    html += "</ul>\n";
-    //
+    html += dedent.repeat(last_n)  // </ul> * levels 
 
     jt.innerHTML = html  // Put TOC into modal box
     jm.style.display = "block"  // Display search headers by revealing modal
