@@ -343,8 +343,12 @@ jb.onclick = function (event) {
         const headers_array = []
         var headers = document.querySelectorAll("h1,h2,h3,h4")
         for (hj=0; hj<headers.length; hj++) {
-            if (hj<10) { console.log("Adding header:", headers[hj]) }
-            if (!headers[hj].toString().startsWith(' id="', 2)) { continue }
+            if (hj<10) {
+                console.log("Adding header:", headers[hj])
+                console.log("First Five: '" +
+                    headers[hj].toString().substring(0,5) + "'")
+            }
+            if (!headers[hj].toString().startsWith('  id="', 2)) { continue }
             headers_array.push(headers[hj])
         }
         console.log("h1 -> h4 count:", headers_array.length)
