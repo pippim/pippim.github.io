@@ -353,7 +353,7 @@ function buildJumpModal() {
     const headers_array = []
     var headers = document.querySelectorAll("h1,h2,h3,h4")
     for (ndx=0; ndx<headers.length; ndx++) {
-        if (ndx<5) {
+        if (ndx<0) {  // Set # of debug lines to display
             console.log("Header :", headers[ndx])
             console.log("HTML   :", headers[ndx].innerHTML)
             console.log("1st 100: '" +
@@ -364,14 +364,12 @@ function buildJumpModal() {
         if (headers[ndx].id.length=0) { continue }
         headers_array.push(headers[ndx])
     }
-    console.log("h1 -> h4 count:", headers_array.length)
 
     if (headers.length == 0) {
         html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
         html += "<p>Quick Jump (Hamburger Menu) button ineffective.<br><br>\n"
         html += "Use the Quick Jump button on pages that have have headings.</p>\n"
         jt.innerHTML = html;
-        //q.value = ""  // Test because this is what X button would do
         jm.style.display = "block";  // Turn on search headers display
         return
     } else if (headers.length == 1) {
@@ -382,9 +380,12 @@ function buildJumpModal() {
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
     html += '<ul>\n'
-    last_hn = "H0"
+    last_hn = headers[ndx].tagName
     for (ndx=0; ndx<headers.length; ndx++) {
         hn = headers[ndx].tagName
+        if (hn > last_hn) { html += '<ul>\n' }
+        if (hn < last_hn) { html += '</ul>\n' }
+        last_hn = hn
         hyper_link = headers[ndx].id
         hyper_title = headers[ndx].innerHTML
         // e.g.: <a href="#hdr5">ToS</a>
