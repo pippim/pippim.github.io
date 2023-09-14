@@ -1,9 +1,15 @@
 ---
 title: The Cookie Machine
-layout: program
+layout: page
 ---
 
-<!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
+<!-- Define hdr1 id with ToC and Skip navigation buttons 
+     (No "Top" or "ToS" buttons 
+
+      Sep 14/23: Use page layout because there are too many bugs 
+                 with program layout and new jump-button.
+-->
+
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
