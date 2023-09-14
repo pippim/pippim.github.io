@@ -639,7 +639,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
-### Video Highlights:
+### Encode CD Sample Video Highlights
 {:.no_toc}
 
 - This video starts *after* 1 minute is spent reading the CD disc **and**
@@ -694,7 +694,7 @@ was changed.
 Overrides appear with a new name: "Encode CD Final Confirmation".
 
 <a id="HelpEncodingAlbumOverride"></a>
-### ***Album Level Overrides*** Notes:
+### *Album Level Overrides* Notes
 {:.no_toc}
 
 - The same window can appear twice but the title changes between:
@@ -793,6 +793,12 @@ The last CD of the set doesn't say ***[Disc 3]*** nor does
 it say ***Volume 3***. It gets confusing when you are viewing
 the *Music Location Tree* window.
 
+#### Use this Function to Rename, Not the File Manager 
+
+A file manager will not rename Artists, Albums and Song Titles
+within the **mserve** SQL database. So it is important to
+use this function instead.
+
 To Rename within the *Music Location Tree* window:
 
 1. Right click on the third CD Album.
@@ -814,9 +820,9 @@ To Rename within the *Music Location Tree* window:
 
 - Cannot change name to blanks.
 - Cannot change name to an existing name.
-- Names currently playing cannot be renamed.
+- Songs currently playing cannot be renamed.
 - Special characters `/`, `?`, `:`, `<`, `>`, `_` `"`, `_` `\\`, `|` and `*`
-are changed to an underscore (`_`)
+may be changed to an underscore (`_`)
 - Pending additions or deletions to playlists must be updated before
 beginning the rename process.
 - The above error and warning messages are sent to the Information Centre
@@ -2101,7 +2107,7 @@ either button to end the countdown immediately
 screen and the Music Player window goes back to it's original
 location on the 4K TV.
 
-## Hockey TV Commercial Button Without **compiz**
+## Hockey TV Commercial Button Without `compiz`
 {:.no_toc}
 
 This video shows what you see and hear when you click 
@@ -2115,7 +2121,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
 
-**Video Highlights:**
+### Hockey TV Commercial Sample Video Highlights
 
 - On the top left is Big Screen TV with Hockey Game airing in full 
 screen mode
@@ -2258,7 +2264,7 @@ The soundcard is built into onboard Intel chipset.
 
 ---
 
-## **pavucontrol** Sound Output Loopback to Microphone
+## `pavucontrol` Sound Output Loopback to Microphone
 {:.no_toc}
 
 In order for VU Meters to work in **mserve**, The Pulse Audio
