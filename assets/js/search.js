@@ -342,17 +342,17 @@ jb.onclick = function (event) {
         jm.style.display = "block"  // Do this later after built.
         const headers_array = []
         var headers = document.querySelectorAll("h1,h2,h3,h4")
-        for (i=0; i<headers.length; i++) {
-            if (i<5) {
-                console.log("Header :", headers[i])
+        for (ndx=0; ndx<headers.length; ndx++) {
+            if (ndx<5) {
+                console.log("Header :", headers[ndx])
                 console.log("1st 100: '" +
-                    headers[i].toString().substring(0,100) + "'")
-                console.log("tagName:", headers[i].tagName,
-                            "  |  id:", headers[i].id)
+                    headers[ndx].toString().substring(0,100) + "'")
+                console.log("tagName:", headers[ndx].tagName,
+                            "  |  id:", headers[ndx].id)
             }
-            //if (!headers[i].toString().startsWith('  id="', 2)) { continue }
-            if (headers[i].id.length=0) { continue }
-            headers_array.push(headers[i])
+            //if (!headers[ndx].toString().startsWith('  id="', 2)) { continue }
+            if (headers[ndx].id.length=0) { continue }
+            headers_array.push(headers[ndx])
         }
         console.log("h1 -> h4 count:", headers_array.length)
 
