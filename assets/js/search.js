@@ -363,8 +363,10 @@ function buildJumpModal() {
             console.log("headings[ndx].id.length:",
                         headings[ndx].id.length)
         }
-        if (headings[ndx].id.length=0) { continue }
-        hdgArr.push(headings[ndx])
+        // headings without ID are page title and cookie machine
+        if (headings[ndx].id.length > 0) {
+            hdgArr.push(headings[ndx])
+        }
     }
 
     // Introduction based on heading counts
@@ -389,7 +391,8 @@ function buildJumpModal() {
     // Could start with h2 and end in h1 or end in h4, etc.
     for (ndx=0; ndx<hdgArr.length; ndx++) {
         hn = hdgArr[ndx].tagName
-        var n = parseInt(hn.substring(1,1))
+        // Use slice(), avoid substring() and substr()
+        var n = parseInt(hn.slice(1))
         if (ndx<5) {  // Set # of debug lines to display
             console.log("hn:", hn, "n:", n)
         }
