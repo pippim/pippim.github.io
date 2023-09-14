@@ -325,14 +325,10 @@ var saveBackgroundColor;  // May 18/22 - New code not working
 // Search Magnify Glass button clicked
 // Loop through all class named .page-header-search-button
 jb.onclick = function (event) {
-    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
-    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
-    //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
     //const jm = document.getElementById('jump-modal');           // Jump modal container
+    //const jc = document.getElementById('jump-modal-close');     // Jump modal close 'X'
     //const jt = document.getElementById('jump-modal-text');      // Jump modal text
-    //const m = document.getElementById('search-modal');          // Where search results appear
-    //const n = document.getElementsByClassName('page-header-search-button');
     event.stopPropagation()  // Don't let window.onclick see this click
     e.style.display = "none"  // Drop down content
     boolDropdown = false
@@ -347,9 +343,8 @@ jb.onclick = function (event) {
         const headers_array = []
         var headers = document.querySelectorAll("h1,h2,h3,h4")
         for (hj=0; hj<headers.length; hj++) {
-            if (hj<10) {
-                console.log("Adding header:", headers[hj])
-            }
+            if !hj.startsWith(' id="', 3) { continue }
+            if (hj<10) { console.log("Adding header:", headers[hj]) }
             headers_array.push(headers[hj])
         }
         console.log("h1 -> h4 count:", headers_array.length)
