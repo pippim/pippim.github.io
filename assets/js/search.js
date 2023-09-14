@@ -370,19 +370,19 @@ function buildJumpModal() {
         html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
         html += "<p>Quick Jump (Hamburger Menu) button ineffective.<br><br>\n"
         html += "Use the Quick Jump button on pages that have have headings.</p>\n"
-        jm.innerHTML = html;
+        jt.innerHTML = html;
         //q.value = ""  // Test because this is what X button would do
         jm.style.display = "block";  // Turn on search headers display
         return
     } else if (headers.length == 1) {
-        var html = "<h2>1 result found.</h2>\n"
+        var html = "<h2>1 heading found.</h2>\n"
     } else {
-        var html = "<h2>" + headers.length.toString() + " headers found.</h2>\n"
+        var html = "<h2>" + headers.length.toString() + " headings found.</h2>\n"
     }
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
-    html += '<ul class="jump-headers">\n'
-
+    html += '<ul>\n'
+    last_hn = "H0"
     for (ndx=0; ndx<headers.length; ndx++) {
         hn = headers[ndx].tagName
         hyper_link = headers[ndx].id
@@ -392,9 +392,9 @@ function buildJumpModal() {
     }
     html += "</ul>\n";
 
-    jm.innerHTML = html;             // Put TOC into modal box
-    jm.style.display = "block";      // Display search headers by revealing modal
-    //scrollToJustAbove(m)            // Give room to display headers without scrolling
+    jt.innerHTML = html  // Put TOC into modal box
+    jm.style.display = "block"  // Display search headers by revealing modal
+    //scrollToJustAbove(m)  // Give room to display headers without scrolling
 }
 
 
