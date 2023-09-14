@@ -384,8 +384,8 @@ function buildJumpModal() {
 
     // Process all headings
     last_n = 0
-    indent = "<ul>"
-    dedent = "</ul>"
+    indent = "<ul>\n"
+    dedent = "</ul>\n"
     // Could start with h2 and end in h1 or end in h4, etc.
     for (ndx=0; ndx<hdgArr.length; ndx++) {
         hn = hdgArr[ndx].tagName
@@ -401,7 +401,7 @@ function buildJumpModal() {
             rep = last_n - n 
             html += dedent.repeat(rep)  // </ul> * levels 
         }
-        last_n = hn
+        last_n = n
         hyper_link = hdgArr[ndx].id
         hyper_title = hdgArr[ndx].innerHTML
         // e.g.: <a href="#hdr5">ToS</a>
