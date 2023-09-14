@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "114 "
 accepted:     Accepted
-uploaded:     2023-09-12 15:48:27
+uploaded:     2023-09-14 01:12:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Finally-updated-laptop-from-Windows-10-to-Ubuntu-18.04_-the-keyboard-and-mouse-no-longer-works-after-getting-to-the-lock-screen.md
 toc:          false
 navigation:   false

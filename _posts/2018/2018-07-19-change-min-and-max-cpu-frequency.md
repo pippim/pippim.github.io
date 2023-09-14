@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "32,609 "
 accepted:     Accepted
-uploaded:     2023-09-12 15:48:27
+uploaded:     2023-09-14 01:12:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-change-min-and-max-cpu-frequency.md
 toc:          false
 navigation:   false

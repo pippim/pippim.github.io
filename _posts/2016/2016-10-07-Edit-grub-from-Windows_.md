@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "32,762 "
 accepted:     Accepted
-uploaded:     2023-09-12 15:48:27
+uploaded:     2023-09-14 01:12:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-07-Edit-grub-from-Windows_.md
 toc:          false
 navigation:   false
