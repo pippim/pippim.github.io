@@ -386,6 +386,9 @@ function buildJumpModal() {
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
     html += '<ul>\n'
+    up0 = '</ul>'.repeat(0)
+    up1 = '</ul>'.repeat(1)
+    console.log("up0:", up0, "up1:", up1)
     last_hn = headers_array[0].tagName
     for (ndx=0; ndx<headers_array.length; ndx++) {
         hn = headers_array[ndx].tagName
