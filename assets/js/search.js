@@ -382,15 +382,15 @@ function buildJumpModal() {
     }
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
-    html += '<ol class="jump-headers">\n'
+    html += '<ul class="jump-headers">\n'
 
     for (ndx=0; ndx<headers.length; ndx++) {
         hn = headers[ndx].tagName
         hyper_link = headers[ndx].id
         hyper_title = headers[ndx].innerHTML
-        html += "  <ul><a href='" + hyper_link + "'>" + hyper_title + "</a></ul>\n"
+        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n"
     }
-    html += "</ol>\n";
+    html += "</ul>\n";
 
     h.innerHTML = html;             // Put search headers into modal box
     jm.style.display = "block";      // Display search headers by revealing modal
