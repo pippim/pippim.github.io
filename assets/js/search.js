@@ -366,8 +366,8 @@ function buildJumpModal() {
         if (headings[ndx].id.length=0) { continue }
         hdgArr.push(headings[ndx])
     }
-    console.log("START headings.length:", headings.length)
 
+    // Introduction based on heading counts
     if (hdgArr.length == 0) {
         html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
         html += "<p>Quick Jump (Hamburger Menu) button ineffective.<br><br>\n"
@@ -382,21 +382,17 @@ function buildJumpModal() {
                    " headings found.</h2>\n"
     }
 
-    console.log("END headers.length:", hdgArr.length)
-
-    // Process all headers. Use class 'search-headers' to style purple for visited links
-    html += '<ul>\n'
-    up0 = '</ul>'.repeat(0)
-    up1 = '</ul>'.repeat(1)
-    console.log("up0:", up0, "up1:", up1)
-    last_hn = hdgArr[0].tagName
+    // Process all headings
     last_n = 0
     indent = "<ul>"
     dedent = "</ul>"
-    // Could start with h2 and end in h1 or end in h4
+    // Could start with h2 and end in h1 or end in h4, etc.
     for (ndx=0; ndx<hdgArr.length; ndx++) {
         hn = hdgArr[ndx].tagName
         var n = parseInt(hn.substring(1,1))
+        if (ndx<5) {  // Set # of debug lines to display
+            console.log("hn:", hn, "n:", n)
+        }
         if (n > last_n) {
             rep = n - last_n 
             html += indent.repeat(rep)  // <ul> * levels 
