@@ -5,9 +5,6 @@ layout: program
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons 
      (No "Top" or "ToS" buttons 
-
-      Sep 14/23: New jump button menu causing #TCM Window Button 
-                 Large Icons to not paint until button hover
 -->
 
 <a id="hdr1"></a>

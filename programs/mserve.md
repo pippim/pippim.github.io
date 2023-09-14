@@ -2279,10 +2279,11 @@ Volume Control GUI application (**pavucontrol**) is used.
    caption="pavucontrol output devices.png"
 %}
 
-This screenshot shows the *Pulse Audio Volume Control* "Output 
-Devices" Tab.
+This screenshot shows the *Pulse Audio Volume Control's* 
+***Output 
+Devices*** Tab.
 In this example, the output was changed from the first device
-to the **Built-in Audio** speakers. The changes were made from the
+to the ***Built-in Audio*** speakers. The changes were made from the
 Ubuntu 16.04 Sound System Settings panel show in the previous
 section.
 
@@ -2292,11 +2293,7 @@ is how you can confirm the active output device is selected.
 
 When the output device is changed, the recording device must
 be changed for the VU meters to display the correct output sound
-device. See the section: *Pulse Audio Volume Control Change 
-Recording Source* below.
-
-Then **mserve** must be restarted 
-for the VU meters to display the correct output sound device. 
+device. *(See the next section)*
 
 ---
 
