@@ -339,33 +339,10 @@ jb.onclick = function (event) {
 
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
-        jm.style.display = "block"  // Do this later after built.
-        const headers_array = []
-        var headers = document.querySelectorAll("h1,h2,h3,h4")
-        for (ndx=0; ndx<headers.length; ndx++) {
-            if (ndx<5) {
-                console.log("Header :", headers[ndx])
-                console.log("HTML   :", headers[ndx].innerHTML)
-                console.log("1st 100: '" +
-                    headers[ndx].toString().substring(0,100) + "'")
-                console.log("tagName:", headers[ndx].tagName,
-                            "  |  id:", headers[ndx].id)
-            }
-            if (headers[ndx].id.length=0) { continue }
-            headers_array.push(headers[ndx])
-        }
-        console.log("h1 -> h4 count:", headers_array.length)
-
-        /* Messes up page-header font size
-        for (hi=0; hi<headers.length; hi++) {
-            headers[hi].innerHTML += ' '+hi;
-        }
-        console.log("h1, h2, h3 count:", headers.length)
-        */
+        buildJumpModal()
         setContentDimmed(jm)
     }
     else {
-        //window.scrollTo({top: 0, behavior: 'smooth'});
         closeJumpModal()
     }
 }
@@ -375,43 +352,49 @@ function buildJumpModal() {
 
     const headers_array = []
     var headers = document.querySelectorAll("h1,h2,h3,h4")
-    for (hj=0; hj<headers.length; hj++) {
-        if (hj<10) { console.log("Adding header:", headers[hj]) }
-        if (!headers[hj].toString().startsWith(' id="', 2)) { continue }
-        headers_array.push(headers[hj])
+    for (ndx=0; ndx<headers.length; ndx++) {
+        if (ndx<5) {
+            console.log("Header :", headers[ndx])
+            console.log("HTML   :", headers[ndx].innerHTML)
+            console.log("1st 100: '" +
+                headers[ndx].toString().substring(0,100) + "'")
+            console.log("tagName:", headers[ndx].tagName,
+                        "  |  id:", headers[ndx].id)
+        }
+        if (headers[ndx].id.length=0) { continue }
+        headers_array.push(headers[ndx])
     }
+    console.log("h1 -> h4 count:", headers_array.length)
 
-    if (results.length == 0) {
-        html = "<h2> 🔍 &emsp; No results found!</h2>\n";
+    if (headers.length == 0) {
+        html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
         html += "<p>Use more search words that are descriptive.<br><br>\n"
         html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
         html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
         h.innerHTML = html;
         //q.value = ""  // Test because this is what X button would do
-        m.style.display = "block";  // Turn on search results display
+        jm.style.display = "block";  // Turn on search headers display
         return
-    } else if (results.length == 1) {
+    } else if (headers.length == 1) {
         var html = "<h2>1 result found.</h2>\n"
     } else {
-        var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
+        var html = "<h2>" + headers.length.toString() + " headers found.</h2>\n"
     }
 
-    // Process all results. Use class 'search-results' to style purple for visited links
-    html += '<ol class="search-results">\n'
+    // Process all headers. Use class 'search-headers' to style purple for visited links
+    html += '<ol class="jump-headers">\n'
 
-    for (var i = 0; i < results.length; i++) {
-        const [key, value] = results[i].toString().split(',');
-        // const arr = search_urls[key].split(' | ', 1);
-        hyper_link = arr[0];
-        // hyper_title = search_urls[key].substring(hyper_link.length + 3);
-        hyper_title = hyper_link  // Need to get real title
-        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n"
+    for (ndx=0; ndx<headers.length; ndx++) {
+        hn = headers[ndx].tagName
+        hyper_link = headers[ndx].id
+        hyper_title = headers[ndx].innerHTML
+        html += "  <ul><a href='" + hyper_link + "'>" + hyper_title + "</a></ul>\n"
     }
     html += "</ol>\n";
 
-    h.innerHTML = html;             // Put search results into modal box
-    m.style.display = "block";      // Display search results by revealing modal
-    scrollToJustAbove(m)            // Give room to display results without scrolling
+    h.innerHTML = html;             // Put search headers into modal box
+    jm.style.display = "block";      // Display search headers by revealing modal
+    //scrollToJustAbove(m)            // Give room to display headers without scrolling
 }
 
 
