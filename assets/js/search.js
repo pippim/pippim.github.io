@@ -360,6 +360,7 @@ jb.onclick = function (event) {
         for (hj=0; hj<headers.length; hj++) {
             console.log("Adding header:", headers[hj])
             headers_array.push(headers[hj])
+        }
         console.log("h1 -> h6 count:", headers_array.length)
 
         /* Messes up page-header font size
