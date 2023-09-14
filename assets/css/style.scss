@@ -620,8 +620,9 @@ details[open] > summary {
 .modal {
     // Resides inside search-modal.html and jump-modal.html
     // No longer used by jump.html so can be restored to previous state...
+    scroll-margin-top: 3rem; /* whatever is a nice number that gets you past the header */
     color: var(--nav-button-color);  // Oct 13/22 was header-bg-color
-    padding: 1rem 1rem 1.5rem 1rem;
+    padding: 0 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when 1rem = 16px
     border-radius: .5rem;
     overflow: auto;
