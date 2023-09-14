@@ -607,15 +607,11 @@ details[open] > summary {
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
-.jump-modal-text {
-    overflow: auto; /* Enable scroll if needed */
-}
-
 /* Modal Content/Box */
 .jump-modal-content {
     //background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    //margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -628,16 +624,12 @@ details[open] > summary {
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when 1rem = 16px
     border-radius: .5rem;
-    // overflow: auto;  // Move to .modal {} only 
+    overflow: auto;
     max-height: 75vh;  // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem var(--header-bg-color-secondary);
     box-shadow: 1rem 1rem .7rem var(--header-bg-color-secondary);
     max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     font-size: 1.1rem;
-}
-
-.modal {
-    overflow: auto;
 }
 
 #search-clear-input {
