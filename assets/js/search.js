@@ -340,7 +340,8 @@ jb.onclick = function (event) {
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
         buildJumpModal()
-        setContentDimmed(jm)
+        // setContentDimmed(jm)  // makes scrollbar disappear
+        // when buildJumpModal() runs, the dimming disappears?
     }
     else {
         closeJumpModal()
