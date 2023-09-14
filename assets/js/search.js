@@ -344,13 +344,14 @@ jb.onclick = function (event) {
         var headers = document.querySelectorAll("h1,h2,h3,h4")
         for (hj=0; hj<headers.length; hj++) {
             if (hj<10) {
-                console.log("Adding header:", headers[hj])
-                console.log("First 100: '" +
+                console.log("Header :", headers[hj])
+                console.log("1st 100: '" +
                     headers[hj].toString().substring(0,100) + "'")
                 console.log("tagName:", headers[hj].tagName)
-                console.log("id:", headers[hj].id)
+                console.log("id     :", headers[hj].id)
             }
-            if (!headers[hj].toString().startsWith('  id="', 2)) { continue }
+            //if (!headers[hj].toString().startsWith('  id="', 2)) { continue }
+            if (headers[hj].id.length=0) { continue }
             headers_array.push(headers[hj])
         }
         console.log("h1 -> h4 count:", headers_array.length)
