@@ -1,13 +1,13 @@
 ---
 title: The Cookie Machine
-layout: default
+layout: program
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons 
      (No "Top" or "ToS" buttons 
 
-      Sep 14/23: Use page layout because there are too many bugs 
-                 with program layout and new jump-button.
+      Sep 14/23: New jump button menu causing #TCM Window Button 
+                 Large Icons to not paint until button hover
 -->
 
 <a id="hdr1"></a>
@@ -579,8 +579,9 @@ document.getElementById("tcm_doc_color_scheme_picker").innerHTML = htmlColorSche
 
 # Future Plans
 
-Create your own color schemes and share them with other users around the world
-or share them with your other devices and browsers.
+The color code charts above are system generated. 
+Functions can be written to let you modify the color codes
+for each color schemes.
 
 ---
 
