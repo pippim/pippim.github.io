@@ -1,6 +1,6 @@
 ---
 title: The Cookie Machine
-layout: page
+layout: default
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons 
