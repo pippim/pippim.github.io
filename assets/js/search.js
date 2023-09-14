@@ -347,6 +347,7 @@ jb.onclick = function (event) {
                 console.log("Adding header:", headers[hj])
                 console.log("First 100: '" +
                     headers[hj].toString().substring(0,100) + "'")
+                console.log("tagName:", headers[hj].tagName)
             }
             if (!headers[hj].toString().startsWith('  id="', 2)) { continue }
             headers_array.push(headers[hj])
