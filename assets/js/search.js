@@ -345,12 +345,12 @@ jb.onclick = function (event) {
         for (ndx=0; ndx<headers.length; ndx++) {
             if (ndx<5) {
                 console.log("Header :", headers[ndx])
+                console.log("HTML   :", headers[ndx].innerHTML)
                 console.log("1st 100: '" +
                     headers[ndx].toString().substring(0,100) + "'")
                 console.log("tagName:", headers[ndx].tagName,
                             "  |  id:", headers[ndx].id)
             }
-            //if (!headers[ndx].toString().startsWith('  id="', 2)) { continue }
             if (headers[ndx].id.length=0) { continue }
             headers_array.push(headers[ndx])
         }
