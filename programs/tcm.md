@@ -546,9 +546,7 @@ Click the icon on the far left of screen to switch color scheme:
 <br><br><br>
 </div>
 
-Eventually you will be able to copy a color scheme and modify it.
-Then you can save the color scheme and send it to others or send
-it to yourself on another device.
+### Color Codes
 
 <div id="tcm_doc_color_scheme_picker"></div>
 
