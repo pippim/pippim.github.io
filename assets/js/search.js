@@ -360,10 +360,13 @@ function buildJumpModal() {
                 headers[ndx].toString().substring(0,100) + "'")
             console.log("tagName:", headers[ndx].tagName,
                         "  |  id:", headers[ndx].id)
+            console.log("headers[ndx].id.length:",
+                        headers[ndx].id.length)
         }
         if (headers[ndx].id.length=0) { continue }
         headers_array.push(headers[ndx])
     }
+    console.log("START headers.length:", headers.length)
 
     if (headers.length == 0) {
         html = "<h2> 🔍 &emsp; No headings (h1, h2, etc.) found!</h2>\n";
@@ -377,6 +380,8 @@ function buildJumpModal() {
     } else {
         var html = "<h2>" + headers.length.toString() + " headings found.</h2>\n"
     }
+
+    console.log("END headers.length:", headers.length)
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
     html += '<ul>\n'
