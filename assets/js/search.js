@@ -364,8 +364,7 @@ jb.onclick = function (event) {
 }
 
 
-// From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-function buildJumpModal {
+function buildJumpModal() {
 
     const headers_array = []
     var headers = document.querySelectorAll("h1,h2,h3,h4")
