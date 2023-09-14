@@ -514,7 +514,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-#### Sample Video Highlights
+#### Help Button Sample Video Highlights
 {:.no_toc}
 
 - The options for *File*, *Edit* and *View* dropdown menu are shown
@@ -547,7 +547,7 @@ The third pixel to the right and third pixel down set the
 skin tone when you resize the window that could yield a
 different skin tone!
 
-### Automatic Skin Color Notes:
+## Automatic Skin Color Notes
 {:.no_toc}
 
 - Windows can be resized and Album Artwork grows and shrinks accordingly.
@@ -793,15 +793,16 @@ The last CD of the set doesn't say ***[Disc 3]*** nor does
 it say ***Volume 3***. It gets confusing when you are viewing
 the *Music Location Tree* window.
 
-#### Use this Function to Rename, Not the File Manager 
+### Use this Function to Rename, Not the File Manager 
 
 A file manager will not rename Artists, Albums and Song Titles
-within the **mserve** SQL database. So it is important to
-use this function instead.
+within the **mserve** SQL database. If you rename with a file
+manager, original names will still be in the SQL database.
+So it is important to use this function instead of a file manager.
 
-To Rename within the *Music Location Tree* window:
+Call the function within the *Music Location Tree* window:
 
-1. Right click on the third CD Album.
+1. Right click on the third CD Album *(Greatest Hits of the 80's)*.
 2. Select *"Rename Album"* from the popup menu.
 3. In the dialog box enter "Greatest Hits Of The 80's [Disc 3]"
 4. Click the *"Apply"* button.
@@ -1007,7 +1008,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-##### Sample Video Highlights
+##### SQL Table Viewer Sample Video Highlights
 {:.no_toc}
 
 - The options for *File*, *Edit* and *View* dropdown menu are shown
@@ -1141,6 +1142,26 @@ as a shadow filesystem to track last modification time. Used by the
 **lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
 When working inside the `location.py` module, drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
+
+## JSON Data Files
+
+Just like pickle data files, the JSON format allows serialized 
+Python objects like lists and dictionaries to be stored in
+non-serialized format on storage devices.
+
+Unlike the pickle format, the JSON format is human-readable.
+
+You will find JSON data files whenever a location resides on an
+FTP Host Server like an Android mobile phone.
+
+These are the files you will find in the location subdirectory:
+
+- **walk_list** - lc.FNAME_WALK_LIST - Cached directory and
+filenames that dramatically speeds up **mserve** startup time from
+many minutes to a split second.
+- **size_dict** - lc.FNAME_SIZE_DICT - Filename dictionary with
+file sizes dramatically speeds up generating the *Music Location Tree*.
+
 
 ---
 
