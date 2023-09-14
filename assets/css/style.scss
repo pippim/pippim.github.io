@@ -146,7 +146,7 @@ $lavender: #E6E6FA !default; // lavender
     transition: all .3s;
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;  // Sep 14/23 was 1. Jump button effecting tcm.md
 
     &:after {
         content: '';
