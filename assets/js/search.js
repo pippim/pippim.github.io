@@ -380,7 +380,7 @@ function buildJumpModal() {
 
     // Process all headers. Use class 'search-headers' to style purple for visited links
     html += '<ul>\n'
-    last_hn = headers[ndx].tagName
+    last_hn = headers[0].tagName
     for (ndx=0; ndx<headers.length; ndx++) {
         hn = headers[ndx].tagName
         if (hn > last_hn) { html += '<ul>\n' }
