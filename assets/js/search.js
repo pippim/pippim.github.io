@@ -371,7 +371,7 @@ function buildJumpModal() {
         html += "<p>Use more search words that are descriptive.<br><br>\n"
         html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
         html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
-        h.innerHTML = html;
+        jm.innerHTML = html;
         //q.value = ""  // Test because this is what X button would do
         jm.style.display = "block";  // Turn on search headers display
         return
@@ -392,7 +392,7 @@ function buildJumpModal() {
     }
     html += "</ul>\n";
 
-    h.innerHTML = html;             // Put search headers into modal box
+    jm.innerHTML = html;             // Put TOC into modal box
     jm.style.display = "block";      // Display search headers by revealing modal
     //scrollToJustAbove(m)            // Give room to display headers without scrolling
 }
