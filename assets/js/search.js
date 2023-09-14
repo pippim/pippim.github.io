@@ -350,7 +350,8 @@ jb.onclick = function (event) {
 
 function buildJumpModal() {
 
-    const hdgArr = []  // Filtered headings
+    var hdgArr = []  // Filtered headings
+    var title = ""  // page title
     var headings = document.querySelectorAll("h1,h2,h3,h4")
     for (ndx=0; ndx<headings.length; ndx++) {
         if (ndx<5) {  // Set # of debug lines to display
@@ -366,6 +367,8 @@ function buildJumpModal() {
         // headings without ID are page title and cookie machine
         if (headings[ndx].id.length > 0) {
             hdgArr.push(headings[ndx])
+        } else if (title = "") {
+            title = headings[ndx].innerHTML
         }
     }
 
@@ -377,11 +380,8 @@ function buildJumpModal() {
         jt.innerHTML = html;
         jm.style.display = "block";  // Turn on search headers display
         return
-    } else if (hdgArr.length == 1) {
-        var html = "<h2>1 heading found.</h2>\n"
     } else {
-        var html = "<h2>" + hdgArr.length.toString() +
-                   " headings found.</h2>\n"
+        var html = "<h2>" + title + "</h2>\n"
     }
 
     // Process all headings
@@ -424,21 +424,6 @@ function closeJumpModal() {
     boolJumpModal = false
     reverseContentDimmed()  // Restore screen brightness and scrollbar
 }
-
-// From: https://stackoverflow.com/a/35376840/6929343
-// Change 'i' to 'hi' and 'j' to 'hj'
-/*
-for (hi=1; hi<=6; hi++) {
-    var headers = document.getElementsByTagName('h'+hi);
-    for (hj=0; hj<headers.length; hj++) {
-        headers[hj].className = 'h';
-    }
-}
-var headers = document.getElementsByClassName('h');
-for (hi=0; hi<headers.length; hi++) {
-    headers[hi].innerHTML += ' '+hi;
-}
-*/
 
 function setContentDimmed(elm) {
     document.body.style.overflow = "hidden"
