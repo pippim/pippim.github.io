@@ -367,7 +367,7 @@ function buildJumpModal() {
         // headings without ID are page title and cookie machine
         if (headings[ndx].id.length > 0) {
             hdgArr.push(headings[ndx])
-        } else if (title = "") {
+        } else if (title == "") {
             title = headings[ndx].innerHTML
         }
     }
