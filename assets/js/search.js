@@ -357,6 +357,7 @@ jb.onclick = function (event) {
         console.log("h1, h2, h3 count:", headers.length)
         */
         var headers = document.getElementsByClassName('h');
+        var headers = document.querySelectorAll("h1,h2,h3,h4")
         for (hj=0; hj<headers.length; hj++) {
             console.log("Adding header:", headers[hj])
             headers_array.push(headers[hj])
@@ -365,6 +366,7 @@ jb.onclick = function (event) {
         // Above prints NOTHING FOUND !!!
 
         // parse the ToC content: https://stackoverflow.com/a/40946392/6929343
+        /*
         var list = document.querySelectorAll("h1,h2")
         var tocArr = [], cur; // holds the structure of the ToC
         for (var i = 0; i < list.length; i++) {
@@ -378,6 +380,7 @@ jb.onclick = function (event) {
           }
         }
         console.log(tocArr);
+        */
 
         /* Messes up page-header font size
         for (hi=0; hi<headers.length; hi++) {
