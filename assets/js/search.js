@@ -343,28 +343,11 @@ jb.onclick = function (event) {
         const headers_array = []
         var headers = document.querySelectorAll("h1,h2,h3,h4")
         for (hj=0; hj<headers.length; hj++) {
-            if (!headers[hj].toString().startsWith(' id="', 3)) { continue }
-            headers_array.push(headers[hj])
             if (hj<10) { console.log("Adding header:", headers[hj]) }
+            if (!headers[hj].toString().startsWith(' id="', 4)) { continue }
+            headers_array.push(headers[hj])
         }
         console.log("h1 -> h4 count:", headers_array.length)
-
-        // parse the ToC content: https://stackoverflow.com/a/40946392/6929343
-        /*
-        var list = document.querySelectorAll("h1,h2")
-        var tocArr = [], cur; // holds the structure of the ToC
-        for (var i = 0; i < list.length; i++) {
-          var e = list[i];
-          if (e.tagName == "H1") {
-            // for an h1, create a new heading entry (with a blank child list)
-            tocArr.push({text:e.textContent, children:(cur=[])});
-          } else {
-            // for an h2, add it to the current h1's child list
-            cur.push(e.textContent);
-          }
-        }
-        console.log(tocArr);
-        */
 
         /* Messes up page-header font size
         for (hi=0; hi<headers.length; hi++) {
