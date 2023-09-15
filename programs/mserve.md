@@ -375,7 +375,7 @@ replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF/Rewind* buttons.
 - ***Big Number Calculator*** - 
-<a href="#sample-big-number-calculator-video">Indispensable calculator</a>
+<a href="#big-number-calculator-sample-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
 - ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
@@ -2400,7 +2400,7 @@ Megabytes and Gigabytes as Units of Measure. This is helpful so you
 don't have to enter or view numbers over 1,000. You can easily deal
 with numbers past Terabytes and Petabytes.
 It is an 
-<a href="#sample-big-number-calculator-video">Indispensable calculator</a>
+<a href="#big-number-calculator-sample-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
 - ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
@@ -2465,7 +2465,7 @@ Musicolet is a small yet powerful offline Music Player for Android,
 which organizes and plays local audio-files stored on your device. 
 
 
-## Sample *Big Number Calculator* Video
+## *Big Number Calculator* Sample Video
 
 <video src="https://user-images.githubusercontent.com/92641463/266503906-999896b9-5d03-418e-98fc-028cae900e35.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/266503906-999896b9-5d03-418e-98fc-028cae900e35.mp4"
