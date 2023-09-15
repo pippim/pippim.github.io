@@ -1,0 +1,49 @@
+    <!-- Include in program.html, default.html and post.html -->
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name linear-wipe">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
+
+      <div id="page-header-buttons">
+        <button class="color-scheme-button" ></button>
+        <a href="{{ site.baseurl }}/" class="page-header-button">⌂ Home</a>
+        <a href="/about.html" class="page-header-button">❓ About</a>
+        <a href="/answers.html" class="page-header-button">✅ Answers</a>
+        <a href="/programs.html" class="page-header-button">💻 Programs</a>
+        <a href="mailto:pippim.com@gmail.com" class="page-header-button">📧 Email</a>
+        <button class="page-header-search-button search-symbol-white page-header-button"
+          title="Search {{ site.title }} Website"
+          ><img src="{{ site.baseurl }}/assets/img/icons/search_symbol_white.png"
+                alt="" width="24" height="24">
+        </button>
+        <!-- The Cookie Machine (TCM) - Transparent Button -->
+        <button class="tcm-button"
+          title="The Cookie Machine, not-so-secret, popup, draggable window">
+        </button>
+
+      </div>
+      <div id="page-header-hamburger">
+        <button class="color-scheme-button" ></button>
+        <button id="page-header-dropdown" class="page-header-button"
+          title="Navigation buttons"
+          >&#x2630;
+        </button>
+        <button class="page-header-search-button search-symbol-white page-header-button"
+          title="Search {{ site.title }} Website"
+          ><img src="{{ site.baseurl }}/assets/img/icons/search_symbol_white.png"
+                alt="" width="24" height="24">
+        </button>
+        <button class="tcm-button" style="float: right"
+          title="The Cookie Machine, not-so-secret, popup, draggable window">
+        </button>
+        <!-- Normally hidden dropdown button list -->
+        <div id="dropdown-content">
+          <a href="{{ site.baseurl }}/" class="page-header-button">⌂ Home</a>
+          <a href="/about.html" class="page-header-button">❓ About</a>
+          <a href="/answers.html" class="page-header-button">✅ Answers</a>
+          <a href="/programs.html" class="page-header-button">💻 Programs</a>
+          <a href="mailto:pippim.com@gmail.com" class="page-header-button">📧 Email</a>
+        </div>
+      </div>
+
+    </header>
