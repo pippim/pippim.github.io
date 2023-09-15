@@ -31,7 +31,7 @@
 
     <!-- tcm & jump reside between <header> and <main> -->
     {% include tcm-draggable-window.html %}
-    <!-- TODO: Front Matter links in modal { % include jump.html %} -->
+    {% include jump.html %}
 
     <main id="content" class="main-content" role="main">
 
@@ -49,100 +49,100 @@
           >View markdown on GitHub Pages ⧉ 🔗
         </button>
 
-      <h4 id="minimal_front_matter" style="margin-top: .1rem;">
-        <style>
+        <h4 id="minimal_front_matter" style="margin-top: .1rem;">
+          <style>
             fmVar {
-                float: left;
-                clear: left;
-                width: 4.6em;
-                padding-right: .5em;
+              float: left;
+              clear: left;
+              width: 4.6em;
+              padding-right: .5em;
             }
-        </style>
+          </style>
 
-        {% if page.views and page.views != "" and page.views != nil %}
-          <fmVar>Views:</fmVar>
-            <mark>{{ page.views }}</mark>
-        {% endif %}
-        {% if page.votes and page.votes != "" and page.votes != nil %}
-           &nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>{{ page.votes }}</mark>
-        {% endif %}
-        {% if page.accepted and page.accepted != "" and page.accepted != nil %}
-           &nbsp;&nbsp; ✅&nbsp;Solution
-        {% endif %}
+          {% if page.views and page.views != "" and page.views != nil %}
+            <fmVar>Views:</fmVar>
+              <mark>{{ page.views }}</mark>
+          {% endif %}
+          {% if page.votes and page.votes != "" and page.votes != nil %}
+             &nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>{{ page.votes }}</mark>
+          {% endif %}
+          {% if page.accepted and page.accepted != "" and page.accepted != nil %}
+             &nbsp;&nbsp; ✅&nbsp;Solution
+          {% endif %}
 
-        {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
-          <br/>
-          <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
-            {% for tag in page.tags %}
-              <mark>{{ tag }}</mark>&nbsp;&nbsp;
-            {% endfor %}
-        {% endif %}
-        {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-          {% if page.type and page.type != "" and page.type != nil %}
-            {% if page.site and page.site != "" and page.site != nil %}
-              <br/>
-              <fmVar>Link:</fmVar>
-                <a href="{{ page.stack_url }}" target="_blank" title=
-                   "Read original {{ page.type }} on Stack Exchange website but, you might see subtle ads."
-                     >🔍 See Original {{ page.type }} on {{ page.site }} ⧉ 🔗</a>
+          {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
+            <br/>
+            <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
+              {% for tag in page.tags %}
+                <mark>{{ tag }}</mark>&nbsp;&nbsp;
+              {% endfor %}
+          {% endif %}
+          {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
+            {% if page.type and page.type != "" and page.type != nil %}
+              {% if page.site and page.site != "" and page.site != nil %}
+                <br/>
+                <fmVar>Link:</fmVar>
+                  <a href="{{ page.stack_url }}" target="_blank" title=
+                     "Read original {{ page.type }} on Stack Exchange website but, you might see subtle ads."
+                       >🔍 See Original {{ page.type }} on {{ page.site }} ⧉ 🔗</a>
+              {% endif %}
             {% endif %}
           {% endif %}
-        {% endif %}
-      </h4>
-      <h4 id="hidden_front_matter" style="margin-top: -1rem;">
-        {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-          <fmVar>URL:</fmVar>
-            <mark>{{ page.stack_url }}</mark>
-        {% endif %}
-        {% if page.title and page.title != "" and page.title != nil %}
-          <br/>
-          <fmVar>Title:</fmVar>
-            <mark>{{ page.title }}</mark>
-          <br/>
-        {% endif %}
-        {% if page.id and page.id != "" and page.id != nil %}
-          <fmVar>ID:</fmVar>
-            <mark>{{ page.id }}</mark>
-          <br/>
-        {% endif %}
+        </h4>
+        <h4 id="hidden_front_matter" style="margin-top: -1rem;">
+          {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
+            <fmVar>URL:</fmVar>
+              <mark>{{ page.stack_url }}</mark>
+          {% endif %}
+          {% if page.title and page.title != "" and page.title != nil %}
+            <br/>
+            <fmVar>Title:</fmVar>
+              <mark>{{ page.title }}</mark>
+            <br/>
+          {% endif %}
+          {% if page.id and page.id != "" and page.id != nil %}
+            <fmVar>ID:</fmVar>
+              <mark>{{ page.id }}</mark>
+            <br/>
+          {% endif %}
 
-        {% if page.created_date and page.created_date != "" and page.created_date != nil %}
-          <fmVar>Created:</fmVar>
-             <mark>{{ page.created_date | date: "%B %e, %Y" }}</mark>
-        {% endif %}
-        {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
-          &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>{{ page.edit_date | date: "%B %e, %Y" }}</mark>
-        {% endif %}
-        {% if page.favorites and page.favorites != "" and page.favorites != nil %}
-          &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>{{ page.favorites }}</mark>
-        {% endif %}
-        {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
-          <br/>
-          <fmVar>Upload:</fmVar>
-            <mark>{{ page.uploaded | date: "%B %e, %Y" }}</mark>
-        {% endif %}
-        {% if page.layout and page.layout != "" and page.layout != nil %}
-          &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>{{ page.layout }}</mark>
-        {% endif %}
-        {% if page.toc != "" and page.toc != nil %}
-          <br/>
-          <fmVar>TOC:</fmVar>
-            <mark>{{ page.toc }}</mark>
-        {% endif %}
-        {% if page.navigation != "" and page.navigation != nil %}
-          &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>{{ page.navigation }}</mark>
-        {% endif %}
-        {% if page.clipboard != "" and page.clipboard != nil %}
-          &nbsp;&nbsp; Copy&nbsp;to&nbsp;clipboard:&nbsp;&nbsp;<mark>{{ page.clipboard }}</mark>
-        {% endif %}
+          {% if page.created_date and page.created_date != "" and page.created_date != nil %}
+            <fmVar>Created:</fmVar>
+               <mark>{{ page.created_date | date: "%B %e, %Y" }}</mark>
+          {% endif %}
+          {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
+            &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>{{ page.edit_date | date: "%B %e, %Y" }}</mark>
+          {% endif %}
+          {% if page.favorites and page.favorites != "" and page.favorites != nil %}
+            &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>{{ page.favorites }}</mark>
+          {% endif %}
+          {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
+            <br/>
+            <fmVar>Upload:</fmVar>
+              <mark>{{ page.uploaded | date: "%B %e, %Y" }}</mark>
+          {% endif %}
+          {% if page.layout and page.layout != "" and page.layout != nil %}
+            &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>{{ page.layout }}</mark>
+          {% endif %}
+          {% if page.toc != "" and page.toc != nil %}
+            <br/>
+            <fmVar>TOC:</fmVar>
+              <mark>{{ page.toc }}</mark>
+          {% endif %}
+          {% if page.navigation != "" and page.navigation != nil %}
+            &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>{{ page.navigation }}</mark>
+          {% endif %}
+          {% if page.clipboard != "" and page.clipboard != nil %}
+            &nbsp;&nbsp; Copy&nbsp;to&nbsp;clipboard:&nbsp;&nbsp;<mark>{{ page.clipboard }}</mark>
+          {% endif %}
 
-        <script>
-          fm_button = checkCookie();
-          document.querySelector('#more_less_button').textContent = fm_button
-          showHide(fm_state);  // fm_state is a global var set by checkCookie()
-        </script>
-      </h4>
-    </div>
+          <script>
+            fm_button = checkCookie();
+            document.querySelector('#more_less_button').textContent = fm_button
+            showHide(fm_state);  // fm_state is a global var set by checkCookie()
+          </script>
+        </h4>
+      </div>
       <p> <br></p>
 
       {% include search.html %}
