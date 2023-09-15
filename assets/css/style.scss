@@ -595,17 +595,13 @@ details[open] > summary {
 
 .jump-modal {
     display: none;  // Start invisible
-    //position: absolute;
     position: sticky;
     top: 1rem;  // From Top of screen when no page header
-    //margin-top: 4rem;  // From page <header>
-    //margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
     float: right;
     margin-right: 1rem;
     z-index: 40; /* Sit on top of all */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    background-color: var(--search-bg-color);
 }
 
 /* Modal Content/Box */
