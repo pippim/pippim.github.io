@@ -28,6 +28,7 @@ var colorSchemeCayman = {
     "--header-bg-color": "#159957",
     "--header-bg-color-secondary": "#155799",
     "--section-headings-color": "#159957",
+    "--front-matter-bg-color": "#E6E6FA",
     "--body-text-color": "#606c71",
     "--bold-color": "#404c51",
     "--boldest-color": "#000000",
@@ -70,6 +71,7 @@ var colorSchemeDark = {
     "--header-bg-color": "#057937",
     "--header-bg-color-secondary": "#053779",
     "--section-headings-color": "#25a967",
+    "--front-matter-bg-color": "#666666",
     "--body-text-color": "#c0ccc1",
     "--bold-color": "#e9eee9",
     "--boldest-color": "#ffffff",
@@ -90,9 +92,9 @@ var colorSchemeDark = {
     "--kbd-color": "#fffff0"
 }
 /* Oct 9/22 - Too dark of background, so switch to Cayman colors
-    "--code-bg-color": "#13161a",
+    "--code-bg-color": "#13161a",           `CODE`
     "--code-text-color": "#b6b4b2",
-    "--kbd-background-color": "#2a2b2c",
+    "--kbd-background-color": "#2a2b2c",    <kbd>LETTERS</kbd>
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#e5ede5",
     "--kbd-box-shadow-color": "#e5ede5",
@@ -111,36 +113,22 @@ var colorSchemeDark = {
             "--body-text-color": "#c0ccc1",
 
     Aug 26/22 - Heading color brighter on dark theme:
-        "--section-headings-color": "#159957",
-        "--blockquote-text-color": "#819198",
+        "--section-headings-color": "#159957",          # h1  ## h2
+        "--blockquote-text-color": "#819198",           > quoted text
         New:
             "--section-headings-color": "#25a967",
             "--blockquote-text-color": "#a1b1b8",
             "--bold-color": "#e9ede9",
 
-    Sep 4/23 - Keyboard cayman colors:
-        "--kbd-background-color": "#fafbfc",
-        "--kbd-border-color": "#c6cbd1",
-        "--kbd-border-bottom-color": "#959da5",
-        "--kbd-box-shadow-color": "#959da5",
-        "--kbd-color": "#444d56"
-             - Keyboard dark colors:
+    Sep 4/23 - Code cayman colors:
+        "--code-bg-color": "#f3f6fa",           `CODE`
+        "--code-text-color": "#567482",
+        OLD  - Code dark colors:
         "--code-bg-color": "#d3d6da",
         "--code-text-color": "#365462",
-        "--kbd-background-color": "#002147",
-        "--kbd-border-color": "#c6cbd1",
-        "--kbd-border-bottom-color": "#959da5",
-        "--kbd-box-shadow-color": "#959da5",
-        "--kbd-color": "#fffff0"
-        New:
+        NEW  - Code dark colors:
         "--code-bg-color": "#365462",
         "--code-text-color": "#d3d6da",
-        "--kbd-background-color": "#002147",
-        "--kbd-border-color": "#c6cbd1",
-        "--kbd-border-bottom-color": "#959da5",
-        "--kbd-box-shadow-color": "#959da5",
-        X "--kbd-color": "#fffff0"
-        "--kbd-color": "#444d56"  # NO VISIBLE CHANGES
 
 
 */
@@ -253,7 +241,7 @@ function setColorScheme(scheme) {
     --boldest-color: #000000;  // Black on white screen, white on black screen
     --link-visited: #800080;  // Purple
     // $salmon: #FA8072 !default; // salmon
-    // $lavender: #E6E6FA !default; // lavender
+    // $lavender: #E6E6FA !default; // lavender USE: --front-matter-bg-color
 
     //  Copied from github/page-themes/cayman/_sass/variables.scss
     //  to /assets/_sass/variables.scss and & prefix changed to --
