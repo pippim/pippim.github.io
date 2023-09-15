@@ -812,7 +812,7 @@ Call the function within the *Music Location Tree* window:
 
 {% include image.html src="/assets/img/mserve/mserve rename Greatest Hits Of The 80's [Disc 3].png"
    alt="mserve rename Greatest Hits Of The 80's [Disc 3].png"
-   style="float: none; width: 640px; margin: 2rem; margin-left: auto; margin-right: auto;"
+   style="float: none; max-width: 640px; margin: 2rem; margin-left: auto; margin-right: auto;"
    caption="mserve rename Greatest Hits Of The 80's [Disc 3].png"
 %}
 
