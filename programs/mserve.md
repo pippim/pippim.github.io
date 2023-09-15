@@ -1421,7 +1421,7 @@ time synchronization for at least 80% of the lines:
 
 {% include image.html src="/assets/img/mserve/Basic Time Not Done.png"
    alt="Basic Time Not Done.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   style="float: none; width: 100%; max-width: 640px; margin: 2rem 0 1rem 0;"
    caption="Basic Time Not Done.png"
 %}
 
@@ -2045,7 +2045,7 @@ Below is a sample *Playlist Maintenance* window from the
 
 {% include image.html src="/assets/img/mserve/mserve Rename Playlist.png"
    alt="mserve Rename Playlist.png"
-   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   style="float: left; width: 80%; margin: 1rem 2rem 1rem 0;"
    caption="mserve Rename Playlist.png"
 %}
 
@@ -2204,7 +2204,7 @@ This image shows **mserve** volume (`ffplay`) is at 60%:
 
 {% include image.html src="/assets/img/mserve/hockey_volume.png"
    alt="hockey_volume.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   style="float: none; width: 100%; max-width: 640px; margin: 2rem 0 1rem 0;"
    caption="hockey_volume.png"
 %}
 
@@ -2243,7 +2243,7 @@ the *Edit* dropdown menu and select *Volume During TV Commercials*:
 
 {% include image.html src="/assets/img/mserve/mserve volume for tv commercials.png"
    alt="mserve volume for tv commercials.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   style="float: none; width: 100%; max-width: 640px; margin: 2rem 0 1rem 0;"
    caption="mserve volume for tv commercials.png"
 %}
 
@@ -2268,7 +2268,7 @@ be familiar with.
 
 {% include image.html src="/assets/img/mserve/Ubuntu 16.04 Sound Settings Panel.png"
    alt="Ubuntu 16.04 Sound Settings Panel.png"
-   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   style="float: left; width: 80%; margin: 1rem 2rem 1rem 0;"
    caption="Ubuntu 16.04 Sound Settings Panel.png"
 %}
 
@@ -2302,7 +2302,7 @@ Volume Control GUI application (**pavucontrol**) is used.
 
 {% include image.html src="/assets/img/mserve/pavucontrol output devices.png"
    alt="pavucontrol output devices.png"
-   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   style="float: left; width: 80%; margin: 1rem 2rem 1rem 0;"
    caption="pavucontrol output devices.png"
 %}
 
@@ -2329,7 +2329,7 @@ device. *(See the next section)*
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording tab.png"
    alt="pavucontrol recording tab.png"
-   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   style="float: left; width: 80%; margin: 1rem 2rem 1rem 0;"
    caption="pavucontrol recording tab.png"
 %}
 
