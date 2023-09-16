@@ -366,13 +366,10 @@ function buildJumpModal() {
                         headings[ndx].id.length)
         }
         // ID with "_front_matter" aren't real _layouts/post.html
-        if (headings[ndx].id.includes("_front_matter")) { continue }
+        if (headings[ndx].id.includes("_front_matter")) continue
         // headings without ID are page title and cookie machine
-        if (headings[ndx].id.length > 0) {
-            hdgArr.push(headings[ndx])
-        } else if (title == "") {
-            title = headings[ndx].innerHTML
-        }
+        if (headings[ndx].id.length > 0) hdgArr.push(headings[ndx])
+        else if (title == "") title = headings[ndx].innerHTML
     }
 
     //console.log("title:", title, "headings.length:", headings.length)
