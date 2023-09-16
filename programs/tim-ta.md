@@ -423,7 +423,7 @@ In order to allow popup windows, go to Firefox settings:
 
 {% include image.html src="/assets/img/tim-ta/pippim website allow popups.png"
    alt="Pippim website allow popups.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   style="float: none; width: 70%; max-width: 640px; margin: 2rem 0 1rem 0;"
    caption="Pippim website allow popups.png"
 %}
 
