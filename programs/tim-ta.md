@@ -8,9 +8,6 @@ layout: program
 <!-- javascript for Tim-ta -->
 <script type="text/javascript" src="/assets/js/tim-ta.js" ></script>
 
-<!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
-<a id="hdr1"></a>
-
 <div id="PaintedTable"></div>
 
 <script>
@@ -23,6 +20,45 @@ A sample project for doing Laundry appears above when you have
 no projects defined. After adding
 your own project(s), you can delete the sample project.
 </div>
+
+---
+
+<!-- Define hdr1 id. No "ToS" button -->
+<a id="hdr1"></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
+
+<div id="alarm-clock-image">
+{% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
+   alt="Tim-ta Alarm Clock Image"
+   style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
+   caption="Move mouse here for alarm simulation"
+%}
+</div>
+
+# Introduction
+
+*Tim-ta* (**Tim**ed-**ta**sks) gives a countdown timer
+where each task is always a predetermined amount of time.
+For example, when doing the laundry it might be:
+
+15 minutes and 30 seconds for the wash cycle
+
+13 minutes and 15 seconds for the rinse cycle
+
+58 minutes for the dryer
+
+With Tim-ta you arrive at the washer and dryer the exact
+second you need to be there. You'll Never miss the rinse
+cycle fabric softener to eliminate static cling. You'll
+never have wrinkled clothes from being left overnight in
+the dryer.
+
+Here are other examples where you can use Tim-ta:
+
+- Cooking food (bake, flip and bake some more)
+- Working out
+- Education class time for different topics
+- Limiting computer time then taking a break
 
 **KEY FEATURES:**
 
@@ -204,45 +240,8 @@ will be updated.
 
 <a id='hdr7'></a>
 <a id='hdr8'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
-
-<div id="alarm-clock-image">
-{% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
-   alt="Tim-ta Alarm Clock Image"
-   style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
-   caption="Move mouse here for alarm simulation"
-%}
-</div>
-
-# Introduction
-
-*Tim-ta* (**Tim**ed-**ta**sks) gives a countdown timer
-where each task is always a predetermined amount of time.
-For example, when doing the laundry it might be:
-
-15 minutes and 30 seconds for the wash cycle
-
-13 minutes and 15 seconds for the rinse cycle
-
-58 minutes for the dryer
-
-With Tim-ta you arrive at the washer and dryer the exact
-second you need to be there. You'll Never miss the rinse
-cycle fabric softener to eliminate static cling. You'll
-never have wrinkled clothes from being left overnight in
-the dryer.
-
-There are other examples where you can use Tim-ta:
-
-- Cooking food
-- Working out
-- Education class time for different topics
-- Sharing computer time between siblings
-
----
-
 <a id='hdr9'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Tim-ta Buttons
 
