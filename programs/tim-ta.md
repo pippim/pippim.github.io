@@ -8,9 +8,6 @@ layout: program
 <!-- javascript for Tim-ta -->
 <script type="text/javascript" src="/assets/js/tim-ta.js" ></script>
 
-<!-- Define hdr1 id. No "ToS" button -->
-<a id="hdr1"></a>
-
 <div id="PaintedTable"></div>
 
 <script>
@@ -28,20 +25,14 @@ your own project(s), you can delete the sample project.
 ---
 
 
-<!-- Define hdr1b id. No "ToS" button -->
-<a id="hdr1b"></a>
+<!-- Define hdr1 id. No "ToS" button -->
+<a id="hdr1"></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+<!-- Alarm clock image displays wrong place where page refreshed -->
+
+
 # Introduction
-
-<div id="alarm-clock-image" class="slide-right">
-    {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
-        alt="Tim-ta Alarm Clock Image"
-        style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
-        caption="Move mouse here for alarm simulation"
-    %}
-</div>
-
 
 ***Tim-ta*** (**Tim**ed-**ta**sks) gives a countdown timer
 where each task is always a predetermined amount of time.
@@ -87,7 +78,7 @@ Here are other examples where you can use Tim-ta:
 <!-- TABLE OF CONTENTS -->
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1b">ToS</a>  <a href="#hdr3">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
 ---
