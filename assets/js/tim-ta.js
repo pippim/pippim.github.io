@@ -33,7 +33,7 @@ function scrSetSize() {
         // Run only within popup window
         x = win.document.getElementById("ttaRunWindowId")
         t = ttaRunElm.offsetWidth  // Width in popup window slightly wider
-        pop = 18  // Silly method. Should add up size of cells 1 & 2 for cell 0
+        pop = 18  // TODO: add up size of cells 1 & 2 for cell 0 instead.
     }
 
     // Reset all progress bars to 100px to see what full length will be
@@ -1592,31 +1592,37 @@ function calcPauseTotal() {
 }
 
 /* March 24, 2023 - DEBUG startup
-FIRST sleepAndReportCoordinates() newX undefined newY: undefined newW: 661 newH: 440 lastH: 440 tim-ta.js:890:21
-LAST sleepAndReportCoordinates() newX 3870 newY: 2176 newW: 600 newH: 405 lastH: 440 Loop for 1s based i: 4 milliseconds: 49 tim-ta.js:904:17
-Last-save  setX: 3589 setY: 40 setW: 600 setH: 441 tim-ta.js:934:17
-Post-move  newX: 3870 newY: 2176 newW: 600 newH: 405 tim-ta.js:936:17
-Difference chgX: -281 chgY: -2136 chgW: 0 chgH: 36 tim-ta.js:938:17
+FIRST sleepAndReportCoordinates()
+    newX: undefined newY: undefined newW: 661 newH: 440 lastH: 440
+LAST sleepAndReportCoordinates()
+    newX: 3870 newY: 2176 newW: 600 newH: 405 lastH: 440
+    Loop for 1s based i: 4 milliseconds: 49
+Last-save  setX: 3589 setY: 40 setW: 600 setH: 441
+Post-move  newX: 3870 newY: 2176 newW: 600 newH: 405
+Difference chgX: -281 chgY: -2136 chgW: 0 chgH: 36
 
 DEBUG click dryer progress bar
-index 0 entry.seconds: 990000 entry.progress 990600 entry.remaining 0 tim-ta.js:2244:17
-Debug boolTouchedActive > i: 2 activeBarNo: 1 tim-ta.js:2080:13
-index 0 entry.seconds: 990000 entry.progress 990600 entry.remaining 0 tim-ta.js:2244:17
+index 0 entry.seconds: 990000 entry.progress: 990600 entry.remaining: 0
+Debug boolTouchedActive > i: 2 activeBarNo: 1
+index 0 entry.seconds: 990000 entry.progressL 990600 entry.remaining: 0
 
 DEBUG open override global and click + 2 times.
 The title displays "wash done" then updates time remaining for dryer.
-More than 2 seconds lost in entry.progress: 42700 increment: 52800 difference: 10100 tim-ta.js:2319:21
-More than 2 seconds lost in entry.progress: 55900 increment: 66000 difference: 10100
+More than 2 seconds lost in entry.progress: 42700 increment: 52800
+    difference: 10100
+More than 2 seconds lost in entry.progress: 55900 increment: 66000
+    difference: 10100
 
 */
 
 function getActiveTimerNo() {
+    console.log("allTimers:", allTimers)
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
         // If it hasn't started and hasn't ended it's the active timer
         console.log("index", entry.index, "entry.seconds:", entry.seconds,
-                    "entry.progress", entry.progress,
-                    "entry.remaining", entry.remaining)
+                    "entry.progress:", entry.progress,
+                    "entry.remaining:", entry.remaining)
         if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
             return entry.index + 1
         }
@@ -1766,8 +1772,9 @@ async function signalEndTask (index) {
 
 function updateRunTimer(myTable, entry, delta, fHeading) {
     // fHeading can be undefined
-    entry.progress += delta // 1000 or zero
-    entry.remaining -= delta // 1000 or zero
+    entry.progress += delta // + 1000 or zero
+    if (entry.progress > entry.seconds) entry.progress = entry.seconds
+    entry.remaining -= delta // + 1000 or zero
     if (entry.remaining < 0) entry.remaining = 0
     entry.elm.value = entry.progress.toString()
     updateRunTimerDuration(myTable, entry, delta, fHeading)
