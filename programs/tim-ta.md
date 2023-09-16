@@ -61,17 +61,17 @@ Here are other examples where you can use Tim-ta:
 - Education class time for different topics
 - Limiting computer time then taking a break
 
-**KEY FEATURES:**
+## Tim-ta Key Features
 
-- Enter new projects, or *Drag and Drop* new projects.
-- Use stock alarm sounds, or *Drag and Drop* new custom sound files.
+- Enter new projects, or ***Drag and Drop*** new projects.
+- Use stock alarm sounds, or ***Drag and Drop*** new custom sound files.
 - Share projects with other browsers, devices and users.
 - Projects stored in local storage and not a website.
 - Unlimited number of projects and project tasks.
 - Optional repeat a project's tasks multiple times in what is called a set.
 - Prompts to begin each task and each set (when more than 1).
 - Alarm sounds and messages are displayed when task timer ends.
-- Backup Tim-ta projects and tasks (Configuration) for sharing.
+- Download Tim-ta projects and tasks (*Configuration*) for sharing.
 - Upload Tim-ta Configuration from other browsers, devices or users.
 - Run project timers in a separate, smaller, pop-up window.
 - Progress bars for each task and project total time.
