@@ -202,6 +202,9 @@ will be updated.
 
 ---
 
+
+<!--  Hdr7 - Work In Progress section disabled
+
 <a id='hdr7'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
@@ -259,6 +262,11 @@ with saved popup window locations and sizes in version 1.1.
 - Fix rounded ends of progress bar. They were straight.
 - Begin fine-tuning Rouge Code Syntax Highlighting theme "Monokai Sublime" 
 
+### September 16, 2023 Update
+{:.no_toc}
+
+- System wide Jump Button (floating hamburger menu) with heading links.
+
 ## Tim-ta Version 1.0 Development History
 
 ### May 8, 2022 Update
@@ -304,8 +312,18 @@ with saved popup window locations and sizes in version 1.1.
 
 ---
 
+Hdr7 - Work In Progress section disabled.
+
+<a id='hdr7'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 <a id='hdr8'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+
+-->
+
+<a id='hdr7'></a>
+<a id='hdr8'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 <div id="alarm-clock-image">
 {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
