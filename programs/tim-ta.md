@@ -32,6 +32,8 @@ your own project(s), you can delete the sample project.
 <a id="hdr1b"></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+# Introduction
+
 <div id="alarm-clock-image" class="slide-right">
     {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
@@ -40,8 +42,6 @@ your own project(s), you can delete the sample project.
     %}
 </div>
 
-
-# Introduction
 
 ***Tim-ta*** (**Tim**ed-**ta**sks) gives a countdown timer
 where each task is always a predetermined amount of time.
