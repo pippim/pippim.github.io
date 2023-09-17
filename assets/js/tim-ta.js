@@ -30,7 +30,7 @@ function scrSetSize() {
         t = ttaElm.offsetWidth  // Use width to adjust progress bar size
         pop = 0
     } else {
-        // Run only within popup window
+        // Run inside a popup window
         x = win.document.getElementById("ttaRunWindowId")
         t = ttaRunElm.offsetWidth  // Width in popup window slightly wider
         pop = 18  // TODO: add up size of cells 1 & 2 for cell 0 instead.
@@ -52,11 +52,10 @@ function scrSetSize() {
     //for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
     for (var i=0; i<y.length; i++) y[i].style.width = pix
 
-    /*
+    /* */
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
                 "timeWidth:", timeWidth, "nameWidth:", nameWidth,
                 "calcWidth:", calcWidth)
-    */
 }
 
 window.onresize = function() {
