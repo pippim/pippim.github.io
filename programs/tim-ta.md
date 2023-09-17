@@ -269,18 +269,19 @@ and select ***Paste and Go***. This screen appears:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
-    style="float: none; width: 100%; margin: 2rem 1rem 1rem 1rem;"
+    style="float: none; width: 100%; margin: 2rem 2rem 1rem 1rem;"
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
-Click the fourth last icon:
-
-{% include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
-    alt="Tim-ta GitHub Download Icon"
-    style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
-%}
-
-The download icon appears as the fourth last icon in the screenshot.
+> Click the fourth last icon:
+> 
+> {% include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
+>     alt="Tim-ta GitHub Download Icon"
+>     style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
+> %}
+> 
+> The download icon appears as the fourth last icon in the screenshot.
+> Click th icon to start the Web Browser's Download function.
 
 ### Sample Web Browser `Edit` / `Save` Dialog Box 
 
