@@ -45,10 +45,12 @@ the sample project can be deleted.
 ***Tim-ta*** is short for "***<u>Tim</u>***ed ***<u>- ta</u>***sks".
 **Tim-ta** processes countdown timers
 where each task is always a predetermined amount of time.
-For example, when doing the laundry the times might be:
+For example, when doing the laundry the task times might be:
 
-&ensp; ◆ &ensp; 15 minutes and 30 seconds for wash cycle
-&ensp; ◆ &ensp; 13 minutes and 15 seconds for rinse cycle
+&ensp; ◆ &ensp; 15 minutes and 30 seconds for washing
+
+&ensp; ◆ &ensp; 13 minutes and 15 seconds for rinsing
+
 &ensp; ◆ &ensp; 58 minutes for the dryer
 
 With **Tim-ta** you arrive at the washer and dryer the exact
