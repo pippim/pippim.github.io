@@ -257,8 +257,8 @@ will be imported.
 
 Hover over line below and select ***Copy*** button that appears:
 
-``` html
-https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
+```
+`https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json`
 ``` 
 
 ## Sample Tim-ta work-out-1.json from GitHub 
@@ -400,12 +400,13 @@ detail line for small screen, open more buttons control box.
 
 While a Task Timer is counting down, you can click on the
 progress bar and the task timer override box appears. You
-can also click the Delta ("Δ" Override) button and the
+can also click the Delta ("Δ") ***Override*** button and the
 currently running progress bar is automatically selected.
 
 {% include image.html src="/assets/img/tim-ta/Open task override.gif"
    alt="Open task override.gif"
-   style="float: none; width: 718px; height: 464px; margin: 0px 0px 0px 20px;"
+   style="float: none; width: 718px; height: 464px; max-width: 100vw; 
+          margin: 0px 0px 0px 20px;"
 %}
 
 ---
