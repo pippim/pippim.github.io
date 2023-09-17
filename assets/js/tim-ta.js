@@ -46,7 +46,9 @@ function scrSetSize() {
     const calcWidth = t - timeWidth - nameWidth - 30  // 30 for cell spacing
 
     pix = (calcWidth < 100) ? 100 : calcWidth // 100 pixel minimum for progress bar
-    for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
+    // https://stackoverflow.com/a/44982360/6929343
+    //for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
+    for (var i=0; i<y.length; i++) y[i].style.width = pix
 
     /*
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
@@ -521,7 +523,6 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     var overrideW = setW + chgW
     var overrideH = setH + chgH
     /* For Chrome - chgX & chgY is meaningful, for Firefox it is wild
-        Last-save  setX: -555 setY: 6 setW: 437 setH: 443
         Last-save  setX: -555 setY: 6 setW: 437 setH: 443
         Post-move  newX: undefined newY: 6 newW: 421 newH: 375
         Difference chgX: NaN chgY: 0 chgW: 16 chgH: 68
