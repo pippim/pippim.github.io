@@ -16,9 +16,9 @@ layout: program
 </script>
 
 <div id="sample_laundry_div">
-A sample project for doing Laundry appears above when you have
-no projects defined. After adding
-your own project(s), you can delete the sample project.
+A sample project for doing Laundry appears above when there
+are no projects defined. After adding new project(s), 
+the sample project can be deleted.
 </div>
 
 
@@ -236,9 +236,23 @@ will be updated.
 ---
 
 <a id='hdr7'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+# Upload Tim-ta Configuration Sample Video
+
+In this section, a sample video walks you through the configuration
+upload process. An existing project from the {{ site.title }} Website
+will be imported.
+
+Copy and paste the line below into a new browser window:
+
+``` 
+https://github.com/pippim/pippim.github.io/tree/main/assets/json
+``` 
+
 <a id='hdr8'></a>
 <a id='hdr9'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Tim-ta Buttons
 
