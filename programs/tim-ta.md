@@ -42,16 +42,14 @@ the sample project can be deleted.
     %}
 </div>
 
-***Tim-ta*** is short for "**Tim**ed **- ta**sks".
+***Tim-ta*** is short for "***<u>Tim</u>***ed ***<u>- ta</u>***sks".
 **Tim-ta** processes countdown timers
 where each task is always a predetermined amount of time.
 For example, when doing the laundry the times might be:
 
-> - 15 minutes and 30 seconds for wash cycle
-> 
-> - 13 minutes and 15 seconds for rinse cycle
-> 
-> - 58 minutes for the dryer
+&ensp; ◆ &ensp; 15 minutes and 30 seconds for wash cycle
+&ensp; ◆ &ensp; 13 minutes and 15 seconds for rinse cycle
+&ensp; ◆ &ensp; 58 minutes for the dryer
 
 With **Tim-ta** you arrive at the washer and dryer the exact
 second you need to be there. You'll Never miss the rinse
