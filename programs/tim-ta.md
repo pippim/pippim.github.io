@@ -37,7 +37,7 @@ the sample project can be deleted.
 <div id="alarm-clock-image" class="slide-right">
     {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
-        style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
+        style="float: left; width: 50%; margin: 1rem;"
         caption="Move mouse here for alarm simulation"
     %}
 </div>
@@ -47,11 +47,11 @@ the sample project can be deleted.
 where each task is always a predetermined amount of time.
 For example, when doing the laundry the times might be:
 
-- 15 minutes and 30 seconds for wash cycle
-
-- 13 minutes and 15 seconds for rinse cycle
-
-- 58 minutes for the dryer
+> - 15 minutes and 30 seconds for wash cycle
+> 
+> - 13 minutes and 15 seconds for rinse cycle
+> 
+> - 58 minutes for the dryer
 
 With **Tim-ta** you arrive at the washer and dryer the exact
 second you need to be there. You'll Never miss the rinse
