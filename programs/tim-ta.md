@@ -257,11 +257,11 @@ will be imported.
 
 Hover over line below and select ***Copy*** button that appears:
 
-``` 
+``` html
 https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
 
-### Sample GitHub Tim-ta work-out-1.json 
+## Sample Tim-ta work-out-1.json from GitHub 
 
 Open a new browser window, *right-click* in the address bar
 and select ***Paste and Go*** or select ***Paste*** and press
@@ -286,7 +286,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 > The download icon appears as the fourth last icon in the screenshot.
 > Click the icon to start the Web Browser's ***Download*** function.
 
-### Sample Web Browser Download *Edit* / *Save* Dialog Box 
+## Sample Web Browser Download *Edit* / *Save* Dialog Box 
 
 When downloading files, your Web Browser will ask if you want to "*Edit*"
 the file or "*Save*/ the file.
