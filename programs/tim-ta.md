@@ -30,6 +30,7 @@ the sample project can be deleted.
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 <!-- Alarm clock image displays wrong place where page refreshed 
+-->
 
 <div id="alarm-clock-image" class="slide-right">
     { % include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
@@ -38,8 +39,6 @@ the sample project can be deleted.
         caption="Move mouse here for alarm simulation"
     %}
 </div>
-
--->
 
 # Introduction
 
@@ -287,7 +286,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 > The download icon appears as the fourth last icon in the screenshot.
 > Click the icon to start the Web Browser's ***Download*** function.
 
-### Sample Web Browser `Edit` / `Save` Dialog Box 
+### Sample Web Browser Download `Edit` / `Save` Dialog Box 
 
 When downloading a file, your Web Browser will ask if you want to `Edit`
 the file or `Save` the file.
