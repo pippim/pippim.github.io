@@ -29,16 +29,17 @@ the sample project can be deleted.
 <a id="hdr1"></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
-<!-- Alarm clock image displays wrong place where page refreshed -->
+<!-- Alarm clock image displays wrong place where page refreshed 
 
 <div id="alarm-clock-image" class="slide-right">
-    {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
+    { % include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
         style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
         caption="Move mouse here for alarm simulation"
     %}
 </div>
 
+-->
 
 # Introduction
 
