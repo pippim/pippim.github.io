@@ -32,19 +32,20 @@ the sample project can be deleted.
 <!-- Alarm clock image displays wrong place where page refreshed -->
 
 <div id="alarm-clock-image" class="slide-right">
-      {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
-         alt="Tim-ta Alarm Clock Image"
-         style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
-         caption="Move mouse here for alarm simulation"
-      %}
+    {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
+        alt="Tim-ta Alarm Clock Image"
+        style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
+        caption="Move mouse here for alarm simulation"
+    %}
 </div>
 
 
 # Introduction
 
-***Tim-ta*** (**Tim**ed-**ta**sks) gives a countdown timer
+***Tim-ta***, is short for "**Tim**ed-**ta**sks".
+*Tim-ta* processes countdown timers
 where each task is always a predetermined amount of time.
-For example, when doing the laundry it might be:
+For example, when doing the laundry the times might be:
 
 - 15 minutes and 30 seconds for wash cycle
 
@@ -246,7 +247,9 @@ will be updated.
 <a id='hdr7'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# Upload Tim-ta Configuration Sample Video
+# Upload Tim-ta Configuration Tutorial
+
+If you already have a file ready for importing, skip this section.
 
 In this section, a sample video walks you through the configuration
 upload process. An existing project from the {{ site.title }} Website
@@ -257,6 +260,8 @@ Hover over line below and select ***Copy*** button that appears:
 ``` 
 https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
+
+### Sample GitHub Tim-ta work-out-1.json 
 
 Open a new browser window, *right-click* in the address bar
 and select ***Paste and Go***. This screen appears:
@@ -269,17 +274,19 @@ and select ***Paste and Go***. This screen appears:
 
 Click the fourth last icon:
 
-
 {% include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
     alt="Tim-ta GitHub Download Icon"
-    style="float: left; width: 100px; margin: 1rem 1rem 1rem 4rem;"
+    style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
 %}
 
 The download icon appears as the fourth last icon in the screenshot.
 
+### Sample Web Browser `Edit` / `Save` Dialog Box 
+
+When downloading a file, your Web Browser will ask if you want to `Edit`
+the file or `Save` the file.
 
 Change the default from `Edit` to `Save`:
-
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
@@ -295,8 +302,23 @@ Edge, etc.) and User Settings.
 ---
 
 <a id='hdr8'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+
+# Upload Tim-ta Configuration Sample Video
+
+In this section, a sample video walks you through the configuration
+upload process. An existing project from the {{ site.title }} Website
+will be imported.
+
+In the previous section, a sample configuration called `work-out-1.json`
+was downloaded from GitHub. If you skipped that section, and do not have
+a file to upload, you will need to do that section. 
+
+---
+
+
 <a id='hdr9'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Tim-ta Buttons
 
