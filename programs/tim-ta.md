@@ -265,7 +265,8 @@ https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out
 ### Sample GitHub Tim-ta work-out-1.json 
 
 Open a new browser window, *right-click* in the address bar
-and select ***Paste and Go***. This screen appears:
+and select ***Paste and Go*** or select ***Paste*** and press
+<kbd> Enter </kbd>. The screen below will appear:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
@@ -273,16 +274,8 @@ and select ***Paste and Go***. This screen appears:
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
-
-<! -- Disable automatic image class (`img-class`)
-{ % include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
-    alt="Tim-ta GitHub Download Icon"
-    style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
-%}
--->
-
-> Click the fourth last icon:
-> 
+***Click the fourth last icon:***
+ 
 <figure
     style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
   >
@@ -292,7 +285,7 @@ and select ***Paste and Go***. This screen appears:
   />
 </figure>
 > The download icon appears as the fourth last icon in the screenshot.
-> Click the icon to start the Web Browser's Download function.
+> Click the icon to start the Web Browser's ***Download*** function.
 
 ### Sample Web Browser `Edit` / `Save` Dialog Box 
 
