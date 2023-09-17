@@ -1591,38 +1591,14 @@ function calcPauseTotal() {
     timePauseStarted = 0  // Precautionary
 }
 
-/* March 24, 2023 - DEBUG startup
-FIRST sleepAndReportCoordinates()
-    newX: undefined newY: undefined newW: 661 newH: 440 lastH: 440
-LAST sleepAndReportCoordinates()
-    newX: 3870 newY: 2176 newW: 600 newH: 405 lastH: 440
-    Loop for 1s based i: 4 milliseconds: 49
-Last-save  setX: 3589 setY: 40 setW: 600 setH: 441
-Post-move  newX: 3870 newY: 2176 newW: 600 newH: 405
-Difference chgX: -281 chgY: -2136 chgW: 0 chgH: 36
-
-DEBUG click dryer progress bar
-index 0 entry.seconds: 990000 entry.progress: 990600 entry.remaining: 0
-Debug boolTouchedActive > i: 2 activeBarNo: 1
-index 0 entry.seconds: 990000 entry.progressL 990600 entry.remaining: 0
-
-DEBUG open override global and click + 2 times.
-The title displays "wash done" then updates time remaining for dryer.
-More than 2 seconds lost in entry.progress: 42700 increment: 52800
-    difference: 10100
-More than 2 seconds lost in entry.progress: 55900 increment: 66000
-    difference: 10100
-
-*/
-
 function getActiveTimerNo() {
-    console.log("allTimers:", allTimers)
+    //console.log("allTimers:", allTimers)
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
         // If it hasn't started and hasn't ended it's the active timer
-        console.log("index", entry.index, "entry.seconds:", entry.seconds,
-                    "entry.progress:", entry.progress,
-                    "entry.remaining:", entry.remaining)
+        //console.log("index", entry.index, "entry.seconds:", entry.seconds,
+        //            "entry.progress:", entry.progress,
+        //            "entry.remaining:", entry.remaining)
         if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
             return entry.index + 1
         }
