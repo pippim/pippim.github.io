@@ -172,6 +172,14 @@ const s = document.getElementById('search-symbol');         // Mag glass beside 
 
 set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshed
 
+
+/* jump-button visible on document loading causes images out of whack
+*/
+
+window.onload = function() {
+    jb.style.display = "block"
+}
+
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
@@ -365,7 +373,7 @@ function buildJumpModal() {
             console.log("headings[ndx].id.length:",
                         headings[ndx].id.length)
         }
-        // ID with "_front_matter" aren't real _layouts/post.html
+        // ID with "_front_matter" aren't real. See: _layouts/post.html
         if (headings[ndx].id.includes("_front_matter")) continue
         // headings without ID are page title and cookie machine
         if (headings[ndx].id.length > 0) hdgArr.push(headings[ndx])
