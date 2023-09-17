@@ -269,7 +269,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
-    style="float: none; width: 100%; max-width: 640px; margin: 2rem 2rem 1rem 1rem;"
+    style="float: none; width: 100vw; margin: 2rem 2rem 1rem 1rem;"
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
