@@ -29,21 +29,21 @@ the sample project can be deleted.
 <a id="hdr1"></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+# Introduction
+
 <!-- Alarm clock image displays wrong place where page refreshed 
 -->
 
 <div id="alarm-clock-image" class="slide-right">
-    { % include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
+    {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
         style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
         caption="Move mouse here for alarm simulation"
     %}
 </div>
 
-# Introduction
-
-***Tim-ta***, is short for "**Tim**ed-**ta**sks".
-*Tim-ta* processes countdown timers
+***Tim-ta*** is short for "**Tim**ed **- ta**sks".
+**Tim-ta** processes countdown timers
 where each task is always a predetermined amount of time.
 For example, when doing the laundry the times might be:
 
@@ -53,7 +53,7 @@ For example, when doing the laundry the times might be:
 
 - 58 minutes for the dryer
 
-With Tim-ta you arrive at the washer and dryer the exact
+With **Tim-ta** you arrive at the washer and dryer the exact
 second you need to be there. You'll Never miss the rinse
 cycle fabric softener to eliminate static cling. You'll
 never have wrinkled clothes from being left overnight in
@@ -269,7 +269,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
-    style="float: none; width: 100%; margin: 2rem 2rem 1rem 1rem;"
+    style="float: none; width: 100%; max-width: 640px; margin: 2rem 2rem 1rem 1rem;"
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
@@ -295,7 +295,7 @@ Change the default from `Edit` to `Save`:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
-    style="float: none; width: 70%; max-width: 640px; margin: 2rem 1rem 1rem;"
+    style="float: none; width: 640px; margin: 2rem 1rem 1rem;"
     caption="tim-ta work-out-1 download save file.png"
 %}
 
