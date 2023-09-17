@@ -31,6 +31,14 @@ the sample project can be deleted.
 
 <!-- Alarm clock image displays wrong place where page refreshed -->
 
+<div id="alarm-clock-image" class="slide-right">
+      {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
+         alt="Tim-ta Alarm Clock Image"
+         style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
+         caption="Move mouse here for alarm simulation"
+      %}
+</div>
+
 
 # Introduction
 
@@ -282,9 +290,9 @@ Change the default from `Edit` to `Save`:
 The downloaded configuration file will appear in your `Downloads` 
 directory. The directory/folder name will vary depending on Operating
 System (Linux, Windows, Mac, etc.), Browser (Firefox, Chrome,
-Edge, etc.) and User setting.
+Edge, etc.) and User Settings.
 
-
+---
 
 <a id='hdr8'></a>
 <a id='hdr9'></a>
