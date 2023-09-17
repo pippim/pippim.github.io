@@ -244,11 +244,15 @@ In this section, a sample video walks you through the configuration
 upload process. An existing project from the {{ site.title }} Website
 will be imported.
 
-Copy and paste the line below into a new browser window:
+Hover over line below and select ***Copy*** button that appears:
 
 ``` 
-https://github.com/pippim/pippim.github.io/tree/main/assets/json
+https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
+
+Open a new browser window and select ***Paste and Go***. This screen appears:
+
+
 
 <a id='hdr8'></a>
 <a id='hdr9'></a>
