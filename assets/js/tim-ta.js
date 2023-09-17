@@ -474,8 +474,8 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         Window has just been moved and resized (together = geometry).
         A small delay is required before checking new window geometry.
     */
-    console.log("Last-save  setX:", setX, "setY:", setY,
-                "setW:", setW, "setH:", setH)
+    //console.log("Last-save  setX:", setX, "setY:", setY,
+    //            "setW:", setW, "setH:", setH)
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
     var lastH = null
@@ -486,9 +486,9 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         var [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (!isNaN(newH) && lastH == null) {
             lastH = newH  // First time for Height
-            console.log("FIRST sleepAndReportCoordinates()",
-                        "newX", newX, "newY:", newY,
-                        "newW:", newW, "newH:", newH, "lastH:", lastH)
+            //console.log("FIRST sleepAndReportCoordinates()",
+            //            "newX", newX, "newY:", newY,
+            //            "newW:", newW, "newH:", newH, "lastH:", lastH)
         }
         /*  Lag before winViewGeometry returns a variable */
         if (typeof newX == 'undefined') continue
@@ -500,10 +500,10 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         // if (setW != newW) continue  // Keep looping while Width is different
         await sleep(sleepTime)  // Extra sleep for double dipping
         let end = Date.now()
-        console.log("LAST sleepAndReportCoordinates()",
-                    "newX", newX, "newY:", newY,
-                    "newW:", newW, "newH:", newH, "lastH:", lastH,
-                    "Loop for 1s based i:", i, "milliseconds:", end - start)
+        //console.log("LAST sleepAndReportCoordinates()",
+        //            "newX", newX, "newY:", newY,
+        //            "newW:", newW, "newH:", newH, "lastH:", lastH,
+        //            "Loop for 1s based i:", i, "milliseconds:", end - start)
         break
     }
 
@@ -529,6 +529,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     var overrideX = setX + chgX
     var overrideY = setY + chgY
     winName.resizeTo(setW, overrideH)
+    /*
     if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0) {
         console.log("Last-save  setX:", setX, "setY:", setY,
                     "setW:", setW, "setH:", setH)
@@ -537,6 +538,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         console.log("Difference chgX:", chgX, "chgY:", chgY,
                     "chgW:", chgW, "chgH:", chgH)
     }
+    */
 
 }  // End of sleepAndReportCoordinates(winName, setX, setY, setW, setH)
 
@@ -1068,8 +1070,8 @@ function paintRunTimers(i) {
     else if (value == "false") runWindow = window
     /* get_dd */
     else fRunWindowAsPopup = true // Later we will set 'runWindow' variable
-    console.log("ttaProject.use_popup_window:", value,
-                "fRunWindowAsPopup:", fRunWindowAsPopup)
+    //console.log("ttaProject.use_popup_window:", value,
+    //            "fRunWindowAsPopup:", fRunWindowAsPopup)
 
 /* From: https://www.w3schools.com/howto/howto_js_progressbar.asp
 #myProgress {
