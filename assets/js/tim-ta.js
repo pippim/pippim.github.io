@@ -39,8 +39,8 @@ function scrSetSize() {
     // Reset all progress bars to 100px to see what full length will be
     y = x.getElementsByTagName("progress")  // To override styling of progress type
     // https://stackoverflow.com/a/44982360/6929343
-    //for (var i=0; i<y.length; i++) y[i].style.width = "100px"
-    for (var i=0; i<y.length; i++) y[i].style.width = "100"
+    for (var i=0; i<y.length; i++) y[i].style.width = "100px"
+    //for (var i=0; i<y.length; i++) y[i].style.width = "100"
 
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
@@ -49,8 +49,8 @@ function scrSetSize() {
 
     pix = (calcWidth < 100) ? 100 : calcWidth // 100 pixel minimum for progress bar
     // https://stackoverflow.com/a/44982360/6929343
-    //for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
-    for (var i=0; i<y.length; i++) y[i].style.width = pix
+    for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
+    //for (var i=0; i<y.length; i++) y[i].style.width = pix
 
     /* */
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
