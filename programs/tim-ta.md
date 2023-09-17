@@ -286,16 +286,16 @@ and select ***Paste and Go*** or select ***Paste*** and press
 > The download icon appears as the fourth last icon in the screenshot.
 > Click the icon to start the Web Browser's ***Download*** function.
 
-### Sample Web Browser Download `Edit` / `Save` Dialog Box 
+### Sample Web Browser Download *Edit* / *Save* Dialog Box 
 
-When downloading a file, your Web Browser will ask if you want to `Edit`
-the file or `Save` the file.
+When downloading files, your Web Browser will ask if you want to "*Edit*"
+the file or "*Save*/ the file.
 
-Change the default from `Edit` to `Save`:
+In this screen example, change the default from *Edit* to *Save*:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
-    style="float: none; width: 640px; margin: 2rem 1rem 1rem;"
+    style="float: none; width: 640px; max-width: 100vw; margin: 2rem 1rem 1rem;"
     caption="tim-ta work-out-1 download save file.png"
 %}
 
@@ -502,7 +502,7 @@ In order to allow popup windows, go to Firefox settings:
 
 {% include image.html src="/assets/img/tim-ta/pippim website allow popups.png"
    alt="Pippim website allow popups.png"
-   style="float: none; width: 70%; max-width: 640px; margin: 2rem 0 1rem 0;"
+   style="float: none; width: 720px; max-width: 100vw; margin: 2rem 0 1rem 0;"
    caption="Pippim website allow popups.png"
 %}
 
