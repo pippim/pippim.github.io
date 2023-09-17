@@ -250,11 +250,12 @@ Hover over line below and select ***Copy*** button that appears:
 https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
 
-Open a new browser window and select ***Paste and Go***. This screen appears:
+Open a new browser window, *right-click* in the address bar
+and select ***Paste and Go***. This screen appears:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
-    style="float: none; width: 100%; margin: 2rem 1rem 1rem;"
+    style="float: none; width: 100%; margin: 2rem 1rem 1rem 1rem;"
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
@@ -263,8 +264,7 @@ Click the fourth last icon:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
     alt="Tim-ta GitHub Download Icon"
-    style="float: left; width: 100px; margin: 2rem 1rem 1rem;"
-    caption="Tim-ta GitHub Download Icon"
+    style="float: left; width: 100px; margin: 1rem 1rem 1rem 4rem;"
 %}
 
 The download icon appears as the fourth last icon in the screenshot.
@@ -275,11 +275,15 @@ Change the default from `Edit` to `Save`:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
-    style="float: left; width: 50%; max-width: 640px; margin: 2rem 1rem 1rem;"
+    style="float: none; width: 70%; max-width: 640px; margin: 2rem 1rem 1rem;"
     caption="tim-ta work-out-1 download save file.png"
 %}
 
-The download icon appears as the fourth last icon in the screenshot.
+The downloaded configuration file will appear in your `Downloads` 
+directory. The directory/folder name will vary depending on Operating
+System (Linux, Windows, Mac, etc.), Browser (Firefox, Chrome,
+Edge, etc.) and User setting.
+
 
 
 <a id='hdr8'></a>
