@@ -273,13 +273,24 @@ and select ***Paste and Go***. This screen appears:
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
-> Click the fourth last icon:
-> 
-{% include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
+
+<! -- Disable automatic image class (`img-class`)
+{ % include image.html src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
     alt="Tim-ta GitHub Download Icon"
     style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
 %}
+-->
+
+> Click the fourth last icon:
 > 
+<figure
+    style="float: left; width: 100px; margin: .5rem 0 0 4rem;"
+  >
+  <img
+    src="/assets/img/tim-ta/tim-ta GitHub Download Icon.png"
+    alt="Tim-ta GitHub Download Icon"
+  />
+</figure>
 > The download icon appears as the fourth last icon in the screenshot.
 > Click the icon to start the Web Browser's Download function.
 
