@@ -429,6 +429,23 @@ As of September 18, 2023 (and for the last year),
 > 
 >    `"--code-bg-color": "#332211"`
 
+***Option 2***
+
+> The plain text color for rouge is inherited from cayman/dark code block:
+> 
+>     `"--code-text-color": "#5e9755"`
+> 
+> The cayman theme background color for code block is:
+> 
+>     `"--code-bg-color": "#eeeeee"` (off whilte, 40% reading, not distracting)
+>     `"--code-bg-color": "#f0eef0"` (can't read)
+>     `"--code-bg-color": "#bcbcbc"` (light grey, can't read)
+> 
+> The dark theme background color for code block is:
+> 
+>    `"--code-bg-color": "#332211"`
+
+
 
 ``` css
 /**
