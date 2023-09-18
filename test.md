@@ -1,5 +1,5 @@
 ---
-title: test-search.js - New close button
+title: test.md - Explore Colors
 layout: test
 ---
 
@@ -13,16 +13,13 @@ This is `/test.md` rendered as `/test.html`.
 
 It uses `/_layouts/test.html` layout file.
 
-It uses `/assets/js/test-search.js` instead of `search.js`.
+## Usage
 
-Test changes to `page-header-buttons` via include `test-page-header.html`.
-Test changes to `test-search.js` without effecting whole website.
+In `/_layouts/test.html` you can change source to
+`/assets/js/test-search.js` instead of `search.js`.
 
-After testing, copy code changes to other layouts `default.html`, `hrb.html`, 
-`post.html` and  `programs.html`
-
-Note that `_layouts/page.html` is frozen copy from when project started and
-contains Cayman Theme defaults for historical reference purposes.
+After testing, copy code changes to the `/_layouts/test.html` to the other 
+layouts `default.html`, `hrb.html`, `post.html` and  `programs.html`
 
 ---
 
