@@ -268,7 +268,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
-    style="float: none; width: 100%; max-width: 100vw; margin: 2rem 2rem 1rem 1rem;"
+    style="float: none; width: 100%; max-width: 95vw; margin: 2rem 2rem 1rem 1rem;"
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
@@ -294,7 +294,7 @@ In this screen example, change the default from *Open* to *Save*:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
-    style="float: none; width: 640px; max-width: 100vw; margin: 2rem 1rem 1rem;"
+    style="float: none; width: 640px; max-width: 95vw; margin: 2rem 1rem 1rem;"
     caption="tim-ta work-out-1 download save file.png"
 %}
 
@@ -382,7 +382,7 @@ currently running progress bar is automatically selected.
 
 {% include image.html src="/assets/img/tim-ta/Open task override.gif"
    alt="Open task override.gif"
-   style="float: none; width: 600px; max-width: 100vw; 
+   style="float: none; width: 600px; max-width: 95vw; 
           margin: 0px 0px 0px 20px;"
 %}
 
@@ -472,7 +472,7 @@ In order to allow popup windows, go to Firefox settings:
 
 {% include image.html src="/assets/img/tim-ta/pippim website allow popups.png"
    alt="Pippim website allow popups.png"
-   style="float: none; width: 720px; max-width: 100vw; margin: 2rem 0 1rem 0;"
+   style="float: none; width: 720px; max-width: 95vw; margin: 2rem 0 1rem 0;"
    caption="Pippim website allow popups.png"
 %}
 
