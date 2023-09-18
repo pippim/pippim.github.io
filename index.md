@@ -257,48 +257,6 @@ functions.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-{% include image.html src="/assets/img/cookie-clicker.png"
-   alt="Cookie image by cookie-clicker.co"
-   style="float: left; width: 40%; margin: 2em 1em 0px 0px;"
-   caption="Cookie image credit  🔗:
-      <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
-%}
-
-# Cookies
-
-There is one cookie used on the {{ site.title }} website.
-It remembers the status of the "More" or "Less" button
-for blog posts. You can disable the cookie using links below.
-
-### Disable Cookies in Chrome
-{:.no_toc}
-
-[Clear, enable, and manage cookies in Chrome ⧉ 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop 
-"How to clear cookies with Chrome Browser ⧉ 🔗"){:target="_blank"}
-
-### Disable Cookies in Firefox
-{:.no_toc}
-
-[Block websites from storing cookies in Firefox ⧉ 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox 
-"How to clear cookies with Chrome Browser ⧉ 🔗"){:target="_blank"}
-
-To protect your More/Less cookie setting (not that it would
-do a spy any good), `SameSite` policy is set to "Strict" so
-you know no one else can read it. Also it is stored on your
-local browser and not sent to any file server or the cloud.
-You can view this in the file `assets/js/post_fm.js`:
-
-``` javascript
-document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
-                    ";SameSite=Strict";
-```
-
-The above is code from line 9 of the file.
-
-The same code can be found in `/assets/js/theCookieJar.js`. Here
-a cookie is created to remember the Cookie Machine button's
-visibility on all pages.
-
 <div id="octocat-image">
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
@@ -312,8 +270,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('octocat-image').classList.add('slide-left'); 
 });
 </script>
-
----
 
 # GitHub Pages
 
@@ -354,6 +310,8 @@ becomes more complicated as you need to learn
 and [Sass/SCSS ⧉ 🔗](https://jekyllrb.com/docs/configuration/sass/ 
 "See how Sass is used in Jekyll ⧉ 🔗"){:target="_blank"}.
 
+---
+
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr5">Skip</a></div>
 
@@ -384,6 +342,8 @@ Syntax highlighted code block
 For more details see
 [GitHub Flavored Markdown ⧉ 🔗](https://guides.github.com/features/mastering-markdown/ 
 "See how GitHub converts markdown with kramdown ⧉ 🔗"){:target="_blank"}.
+
+---
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr6">Skip</a></div>
@@ -505,6 +465,8 @@ There are many open-source providers involved in the
 - **kramdown** - [converting a superset of Markdown ⧉ 🔗](https://kramdown.gettalong.org/ 
 "(sic, not Kramdown or KramDown, just kramdown) ⧉ 🔗"){:target="_blank"}
 
+---
+
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr9">Skip</a></div>
 
@@ -546,9 +508,55 @@ of HTML can beven be found in and markdown files which end in
 the `_includes` directory.
 - Javascript files are kept in `assets/js/`.
 
+---
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr10">Skip</a></div>
+
+{% include image.html src="/assets/img/cookie-clicker.png"
+   alt="Cookie image by cookie-clicker.co"
+   style="float: left; width: 40%; margin: 2em 1em 0px 0px;"
+   caption="Cookie image credit  🔗:
+      <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
+%}
+
+## Disabling Cookies
+
+There is one cookie used on the {{ site.title }} website.
+It remembers the status of the ***More*** / ***Less*** button
+for blog posts. You can disable the cookie using links below.
+
+### Disable Cookies in Chrome
+{:.no_toc}
+
+[Clear, enable, and manage cookies in Chrome ⧉ 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop 
+"How to clear cookies with Chrome Browser ⧉ 🔗"){:target="_blank"}
+
+### Disable Cookies in Firefox
+{:.no_toc}
+
+[Block websites from storing cookies in Firefox ⧉ 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox 
+"How to clear cookies with Chrome Browser ⧉ 🔗"){:target="_blank"}
+
+To protect your ***More*** / ***Less*** cookie setting (not that it would
+do a spy any good), the ***SameSite*** policy is set to ***Strict*** so
+you know no one else can read it. Also, the cookie is stored on your
+local storage and it is not sent to any file server or the cloud.
+You can view this in the file `assets/js/post_fm.js`:
+
+``` javascript
+document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
+                  ";SameSite=Strict";
+```
+
+The same code can be found in `/assets/js/theCookieJar.js`. Here
+a cookie is created to remember the Cookie Machine button's
+visibility on all pages.
+
+---
+
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## {{ site.title }} Website Directory Tree
 {:.no_toc}
@@ -568,9 +576,6 @@ for {{ site.title }} on GitHub Pages looked like this:
 .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
 </style>
 
-
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Daily Backup
 {:.no_toc}
@@ -605,6 +610,8 @@ tar -rpf "$Filename" website/sede/StackQuery
 >    ``` bash
 >    tar -rpf "$Filename" website/assets/img # Image files
 >    ````
+
+---
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr12">Skip</a></div>
