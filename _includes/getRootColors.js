@@ -2,6 +2,9 @@
         /asset/css/style.scss in all /_layouts
         test.md
         tcm-common-code.js (included in theCookieMachine.js)
+
+    Rouge colors for code blocks not set here.
+    See _layouts/test.md for details
 */
 
 // console.log("Start of /_includes/getRootColors.js")
@@ -37,8 +40,8 @@ var colorSchemeCayman = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#f3f6fa",
-    "--code-text-color": "#567482",
+    "--code-bg-color": "#365462",
+    "--code-text-color": "#d3d6da",
     "--border-color": "#dce6f0",
     "--table-border-color": "#e9ebec",
     "--hr-border-color": "#eff0f1",
@@ -130,7 +133,16 @@ var colorSchemeDark = {
         "--code-bg-color": "#365462",
         "--code-text-color": "#d3d6da",
 
+    Sep 17/23 - Code cayman colors:
+        "--code-bg-color": "#f3f6fa",
+        "--code-text-color": "#567482",
+                Code dark colors:
+        "--code-bg-color": "#365462",
+        "--code-text-color": "#d3d6da",
 
+        The "--code-text-color": "#567482" is being used by Rouge to
+        set bluish on chocolate background which can't be read in
+        Cayman theme. Use dark color in cayman.
 */
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
