@@ -40,8 +40,8 @@ var colorSchemeCayman = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#ddccdd",
-    "--code-text-color": "#29ee14",
+    "--code-bg-color": "#eeccee",
+    "--code-text-color": "#6a8759",
     "--border-color": "#dce6f0",
     "--table-border-color": "#e9ebec",
     "--hr-border-color": "#eff0f1",
@@ -83,8 +83,8 @@ var colorSchemeDark = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#CF9FFF",
     "--blockquote-text-color": "#a1b1b8",
-    "--code-bg-color": "#221122",
-    "--code-text-color": "#29ee14",
+    "--code-bg-color": "#302030",
+    "--code-text-color": "#6a8759",
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
@@ -148,11 +148,13 @@ var colorSchemeDark = {
             cayman:    "--code-bg-color": "#320a3c",
             dark:      "--code-bg-color": "#332211",
 
-    Sep 18/23 - Green: #5e9755 color with
-        light grey background on Cayman and Dark Grey background on dark.
+    Sep 18/23 - Green text color: #5e9755 color with
             cayman:  "--code-bg-color": "#ddccdd",
             dark:    "--code-bg-color": "#221122",
 
+    Sep 18/23 - Dull Green: "--code-text-color": "#6a8759"
+            cayman:  "--code-bg-color": "#eeccee",
+            dark:    "--code-bg-color": "#302030",
 
 */
 
