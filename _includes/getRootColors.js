@@ -40,7 +40,7 @@ var colorSchemeCayman = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#eeccee",
+    "--code-bg-color": "#dddddd",
     "--code-text-color": "#6a8759",
     "--border-color": "#dce6f0",
     "--table-border-color": "#e9ebec",
@@ -83,7 +83,7 @@ var colorSchemeDark = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#CF9FFF",
     "--blockquote-text-color": "#a1b1b8",
-    "--code-bg-color": "#302030",
+    "--code-bg-color": "#202020",
     "--code-text-color": "#6a8759",
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
@@ -154,7 +154,7 @@ var colorSchemeDark = {
 
     Sep 18/23 - Dull Green: "--code-text-color": "#6a8759"
             cayman:  "--code-bg-color": "#eeccee",
-            dark:    "--code-bg-color": "#302030",
+            dark:    "--code-bg-color": "#202020",
 
 */
 
