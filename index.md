@@ -478,23 +478,23 @@ There are many open-source providers involved in the
 It is important to follow these instructions to setup your site:
 [Adding a theme to your GitHub Pages site using Jekyll ⧉ 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
 "GitHub Instructions ⧉ 🔗"){:target="_blank"}.
-For example, `_layouts/default.html` probably needs to be copied from the
+For example, `/_layouts/default.html` probably needs to be copied from the
 theme website to your own website in order to make significant changes.
 
 There are many file types in the {{ site.title }} website stored at various
 locations:
 
-- A few local images are stored in `assets/img/` directory. The 
+- A few local images are stored in `/assets/img/` directory. The 
 hundreds of images in blog posts come directly from *Stack Exchange* 
-and are not stored on the `pippim.github.io` website.
+and are not stored on the `/{{ site.title }}.github.io/` website.
 - Videos (up to 10 MB) are stored as comments in the associated 
 GitHub Repository (e.g. **mserve**), and then linked as an HTML 
 image source.
 - SCSS and
 [Sass CSS ⧉ 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
 "What is the difference between SCSS and SASS?"){:target="_blank"} 
-files are stored in the `assets/css/` directory and the 
-`_sass/` directory. The `_sass/` directory can have files 
+files are stored in the `/assets/css/` directory and the 
+`/_sass/` directory. The `/_sass/` directory can have files 
 you can't see in `pippim.github.io`, because they are really stored 
 in the Cayman Theme for Jekyll, and automatically pulled from that 
 site whenever the {{ site.title }} Website is rendered.
@@ -502,13 +502,16 @@ site whenever the {{ site.title }} Website is rendered.
 - The <kbd>❓ About</kbd> page is stored in `/about.md`.
 - The <kbd>✅ Answers</kbd> page is stored in `/answers.md`. 
 Individual answers are internally known as "blog posts" and are 
-stored in the `_posts` directory with one file per answer.
+stored under the `/_posts/` directory with one file per answer.
 - The <kbd>💻 Programs</kbd> page is stored in `/programs.md`.
 - HTML encoding can be found in any file. Small bits and pieces 
 of HTML can even be found in markdown files which end in 
 `.md`. Pure HTML files (with no markdown or CSS) can be found  
 under the `/_includes/` directory.
-- Javascript files are kept in `assets/js/`.
+- Javascript files are mostly kept under the `/assets/js/` directory
+with some stored under the `/_includes/` directory.
+- Some `.md` files contain embedded Javascript which in turn generates
+HTML and CSS dynamically.
 
 ---
 
@@ -544,7 +547,7 @@ To protect your ***More*** / ***Less*** cookie setting (not that it would
 do a spy any good), the ***SameSite*** policy is set to ***Strict*** so
 you know no one else can read it. Also, the cookie is stored on your
 local storage and it is not sent to any file server or the cloud.
-You can view this in the file `assets/js/post_fm.js`:
+You can view this in the file `/assets/js/post_fm.js`:
 
 ``` javascript
 document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
