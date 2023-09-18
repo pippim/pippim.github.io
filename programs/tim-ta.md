@@ -31,9 +31,6 @@ the sample project can be deleted.
 
 # Introduction
 
-<!-- Alarm clock image displays wrong place where page refreshed 
--->
-
 <div id="alarm-clock-image" class="slide-right">
     {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
@@ -257,8 +254,8 @@ will be imported.
 
 Hover over line below and select ***Copy*** button that appears:
 
-```
-`https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json`
+``` css
+https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
 
 ## Sample Tim-ta work-out-1.json from GitHub 
@@ -286,12 +283,12 @@ and select ***Paste and Go*** or select ***Paste*** and press
 > The download icon appears as the fourth last icon in the screenshot.
 > Click the icon to start the Web Browser's ***Download*** function.
 
-## Sample Web Browser Download *Edit* / *Save* Dialog Box 
+## Sample Web Browser Download *Open* / *Save* Dialog Box 
 
-When downloading files, your Web Browser will ask if you want to "*Edit*"
+When downloading files, your Web Browser will ask if you want to "*Open*"
 the file or "*Save*/ the file.
 
-In this screen example, change the default from *Edit* to *Save*:
+In this screen example, change the default from *Open* to *Save*:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
