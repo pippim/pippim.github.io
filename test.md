@@ -400,6 +400,11 @@ myFetch()
 
 # Rouge Legend
 
+Copy the color scheme you want to use to `/_sass/github-rouge.scss`.
+
+As of September 18, 2023 (and for the last year),
+`/_sass/rouge-github-gruvbox.scss` has been copied.
+
 ``` css
 /**
  * From: https://code.gov.cz/gov-cz/about/-/blob/a1cb43f3effc4de4d270f8cca881cbf8f3ddc064/_sass/_syntax-highlighting.scss
@@ -476,7 +481,7 @@ myFetch()
 ```
 
 
-## Rouge `_sass/rouge-github.scss`
+## Rouge `_sass/rouge-github-gruvbox.scss`
 
 ``` css
 /*  https://github.com/daveyarwood/gruvbox-pygments/blob/master/gruvbox.css
