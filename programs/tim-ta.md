@@ -252,15 +252,17 @@ In this section, a sample video walks you through the configuration
 upload process. An existing project from the {{ site.title }} Website
 will be imported.
 
-Hover over line below and select ***Copy*** button that appears:
+Hover over line below and select the ***Copy*** button:
 
 ```
 https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
 
-## Sample Tim-ta work-out-1.json from GitHub 
+In the next section, the copied text will be pasted into your Web Browser.
 
-Open a new browser window, *right-click* in the address bar
+## Sample Tim-ta `work-out-1.json` Projects from GitHub 
+
+Open a new Browser Tab then, *right-click* in the address bar
 and select ***Paste and Go*** or select ***Paste*** and press
 <kbd> Enter </kbd>. The screen below will appear:
 
@@ -331,58 +333,40 @@ These are the buttons used in Tim-ta.
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#9835;</span>&emsp; Listen to sound file.
 
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23F9;</span>&emsp; Stop listening to sound file.
 
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2699;</span>&emsp; In the footer, edit configuration settings. On
 detail line for small screen, open more buttons control box.
 
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2B;</span>&emsp; Add a new project or a new task.
 
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x232B;</span>&emsp; Go back one screen or cancel operation.
 
----
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2630;</span>&emsp; Display list of projects or list of tasks.
-
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x270D;</span>&emsp; Edit a Project or Task.
 
----
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x1f5d1;</span>&emsp; Delete a Project or Task.
-
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x25b6;</span>&emsp; Run Project's Timed Tasks.
 
----
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 Δ</span>&emsp; Override currently running Task's time remaining.
 
----
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21E7;</span>&emsp; Move a Project or Task up in list.
-
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21e9;</span>&emsp; Move a Project or Task down in list.
