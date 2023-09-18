@@ -146,6 +146,11 @@ var colorSchemeDark = {
 
     Sep 18/23 - Look at Neon Green: #39FF14 color with
         light grey background on Cayman and Dark Grey background on dark.
+
+    Sep 18/23 - Look at dull green: #5e9755 color with
+        light grey background on Cayman and Dark Grey background on dark.
+
+
 */
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
