@@ -260,7 +260,7 @@ function setColorScheme(scheme) {
 
 ```
 
-# Color Codes - `rouge-github-monokai-sublime.scss`
+## Color Codes - `rouge-github-monokai-sublime.scss`
 
 <h1 style="background-color:#999999;">.highlight .gh { color: #999999; }</h1>
 <h1 style="background-color:#f6aa11;">.highlight .sr { color: #f6aa11; }</h1>
@@ -281,8 +281,6 @@ function setColorScheme(scheme) {
 <h1 style="background-color:#fbf1c7;">.highlight .pi { color: #fbf1c7; }</h1>
 <h1 style="background-color:#272822;">ALL { background-color: #272822; }</h1>
 <h1 style="background-color:#75715e;">dimgrey => '#75715e'</h1>
-
-# Test Fetch API
 
 ## Rouge List of Tokens
 
@@ -378,6 +376,8 @@ Code provided by tech support on Github.
 [Rouge `token.rb` 🔗](https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/token.rb#L75 
 "CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}
 
+### Test Fetch `rouge-ruby` (Cross-Origin Errors in Console Debug)
+
 <script>
 async function myFetch() {
     let response = await fetch('https://github.com/rouge-ruby/rouge/wiki/List-of-tokens');
@@ -413,8 +413,17 @@ As of September 18, 2023 (and for the last year),
 > 
 > The cayman theme background color for code block is:
 > 
->     `"--code-bg-color": "#aa2266"` (purple)
->     `"--code-bg-color": "#331100"` (purple)
+>     `"--code-bg-color": "#aa2266"` (ugly purple, easy to read)
+>     `"--code-bg-color": "#331100"` (nice easy to read, but dark background)
+>     `"--code-bg-color": "#ffddcc"` (ugly salmon, text hard to read)
+>     `"--code-bg-color": "#ffbbff"` (ugly bright pink, text hard to read)
+>     `"--code-bg-color": "#ffeeff"` (ugly light pink, hard to read)
+>     `"--code-bg-color": "#eeeeee"` (off whilte, 40% reading, not distracting)
+>     `"--code-bg-color": "#dddddd"` (purple tint, hard to read)  
+>     `"--code-bg-color": "#f0eef0"` (can't read)
+>     `"--code-bg-color": "#eeccee"` (ugly pink, can't read)
+>     `"--code-bg-color": "#bcbcbc"` (light grey, can't read)
+>     `"--code-bg-color": "#320a3c"` (dark purple joker tint, easy to read)
 > 
 > The dark theme background color for code block is:
 > 
