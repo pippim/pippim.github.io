@@ -30,6 +30,237 @@ contains Cayman Theme defaults for historical reference purposes.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
+# Setting Colors
+
+In `_sass` directory are:
+
+```shell
+-rw-rw-r--  1 rick rick 7056 Nov  3  2022 jekyll-theme-cayman.scss
+-rw-rw-r--  1 rick rick 4909 Oct 18  2022 rouge-github-gruvbox.scss
+-rw-rw-r--  1 rick rick 3998 Oct 17  2022 rouge-github-monokai-sublime.scss
+-rw-rw-r--  1 rick rick 3297 Oct 19  2022 rouge-github-original.scss
+-rw-rw-r--  1 rick rick 4909 Oct 18  2022 rouge-github.scss
+-rw-rw-r--  1 rick rick 3689 Oct 16  2022 rouge-github-virtua-creative.scss
+-rw-rw-r--  1 rick rick  105 Dec  5  2021 toc.scss
+
+```
+
+
+## `/assets/css/style.scss`
+
+Yellow Sun / Black Moon in `/assets/css/style.scss`:
+
+```css
+
+/* Color Scheme Picker Button in page header */
+.color-scheme-button {
+    // button rotates when clicked see tcm-common-code.js
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    margin-left: .3rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s;
+
+    //@include large  { height: 44px; width: 44px; }
+    // @include medium { height: 36px; width: 36px; }
+    //@include medium { height: 42px; width: 42px; }
+    //@include small  { height: 42px; width: 42px; }
+    height: 44px;
+    width: 44px;
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}
+
+.rotate-button {
+    // Toggle this class on/off color-scheme-button when clicked
+    transform: rotate(180deg);
+}
+```
+
+## Javascript 
+
+### `_includes/tcm-common-code.js`
+
+```javascript
+
+/*  Get all .color-scheme-button class instances `/_layouts/default.html` has
+    .color-scheme-button in two different HTML places.
+
+    Defined in `/_includes/getRootColors.js`:
+
+        currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
+        imageColorSchemeCayman =
+            "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+        imageColorSchemeDark =
+            "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+
+*/
+
+var cspButtonClasses = document.getElementsByClassName("color-scheme-button")
+
+var cspButtonClick = function() {
+    // Color Scheme Picker button was clicked on one of page header <div>s
+    this.classList.toggle('rotate-button')  // Add/remove rotate image in button
+    if (currentColorScheme == "colorSchemeCayman") {
+        currentColorScheme = "colorSchemeDark"
+        setColorScheme(colorSchemeDark)
+    }
+    else {
+        currentColorScheme = "colorSchemeCayman"
+        setColorScheme(colorSchemeCayman)
+    }
+    localStorage.setItem("colorScheme", currentColorScheme)
+    // Wait 300 ms for transition to finish then change image
+    setTimeout(function(){
+        setColorSchemeButtonImage(currentColorScheme)
+    }, 300)
+}
+
+for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
+    cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false)
+}
+
+function setColorSchemeButtonImage(schemeName) {
+    // Changing foreground image problematic. Use background image instead
+    for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
+        var elm = cspButtonClasses[ndx]
+        if (schemeName == "colorSchemeCayman") {
+            elm.style.backgroundImage = "url('" + imageColorSchemeDark + "')"
+            elm.title = "Switch {{ site.title }} Website to color scheme Dark"
+        }
+        else {
+            elm.style.backgroundImage = "url('" + imageColorSchemeCayman + "')"
+            elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
+        }
+    }
+}
+
+setColorSchemeButtonImage(currentColorScheme)
+
+// Get all .tcm-button class instances `/_layouts/default.html` has
+// .tcm-button in two different place.
+var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
+
+var tcmButtonClick = function() {
+    // TCM button was clicked on one of page header <div>s
+    document.querySelector('#tcm_window').style.cssText = `
+        display: flex;
+        flex-direction: column;
+    `;
+    // Make tcm-button class invisible
+    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+        tcmButtonClasses[ndx].style.cssText = `
+            opacity: 0.0;
+            background: transparent;
+            background-image: none;
+            border: none;
+        `;
+    }
+};
+
+for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+    tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
+}
+```
+
+### `_includes/getRootColors.js`
+
+```javascript
+
+var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
+// {{ site.url }} is required when File Save As used for off-line copy
+var imageColorSchemeCayman =
+        "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+var imageColorSchemeDark =
+        "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+
+function getCurrentColors() {
+    /*  Local storage key "colorScheme" contains our scheme name.
+        If it doesn't exist use "colorSchemeCayman" and save to new key.
+    */
+    currentColorScheme = localStorage.getItem('colorScheme')
+    if (currentColorScheme == null) {
+        localStorage.setItem("colorScheme", "colorSchemeCayman")
+        currentColorScheme = "colorSchemeCayman"
+    }
+    return (extractRootColors(currentColorScheme))
+}
+
+function extractRootColors(schemeName) {
+    // Set passed "colorScheme" of "Cayman" or "Dark"
+    var scheme = window[schemeName]  // Get scheme object from name
+    var root = ""
+    // console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
+    for (const key of Object.keys(scheme)) {
+        if (!(key.startsWith("--"))) continue  // Ignore "name"
+        root += "    " + key + ": " + scheme[key] + ";\n"
+    }
+    return root
+}
+
+getCurrentColors()  // We are done now. Rest of functions are optional
+
+/* Optional functions to control root variables */
+const browser = getBrowser()
+const environment = navigator.oscpu + " " + browser.name + " " +
+                    browser.version
+
+function getBrowser() {
+    // From: https://stackoverflow.com/a/16938481/6929343
+    var ua = navigator.userAgent, tem
+    var M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
+    if (/trident/i.test(M[1])) {
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || []
+        return {name: 'IE', version: (tem[1] || '') }
+    }
+    if (M[1]==='Chrome') {
+        tem=ua.match(/\bOPR|Edge\/(\d+)/)
+        if (tem!=null) return { name:'Opera', version:tem[1] }
+    }
+    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?']
+    if ((tem=ua.match(/version\/(\d+)/i))!=null) M.splice(1,1,tem[1])
+    return {
+        name: M[0],
+        version: M[1]
+    }
+ }
+
+function getColorCode(scheme, key) {
+    //const rootElm = document.querySelector(':root')
+    //const rs = getComputedStyle(rootElm)
+    const value = scheme[key]
+    return value
+}
+
+function setColorCode(scheme, key) {
+    const value = scheme[key]
+    if (value === null) return
+    const rootElm = document.querySelector(':root')
+    rootElm.style.setProperty(key, value);
+}
+
+function setColorScheme(scheme) {
+    // Set dark theme
+    //console.log("/_includes/getRootColors.js setColorScheme():", scheme.name)
+    currentColorScheme = scheme.name
+    //localStorage.setItem("colorScheme", "colorSchemeDark")
+    // Above is breaking system???
+    for (const key of Object.keys(scheme)) {
+        if (!(key.startsWith("--"))) continue  // Ignore "name"
+        setColorCode(scheme, key)
+    }
+}
+
+```
+
 # Color Codes - `rouge-github-monokai-sublime.scss`
 
 <h1 style="background-color:#999999;">.highlight .gh { color: #999999; }</h1>
@@ -246,7 +477,7 @@ myFetch()
 ```
 
 
-# Rouge `_sass/rouge-github.scss`
+## Rouge `_sass/rouge-github.scss`
 
 ``` css
 /*  https://github.com/daveyarwood/gruvbox-pygments/blob/master/gruvbox.css
@@ -335,7 +566,7 @@ myFetch()
 
 ```
 
-# Rouge `_sass/rouge-github-monokai-sublime.scss`
+## Rouge `_sass/rouge-github-monokai-sublime.scss`
 
 ```css
 /*  https://github.com/pages-themes/cayman/blob/master/_sass/rouge-github.scss
@@ -443,7 +674,7 @@ myFetch()
 
 <h1 style="background-color:#819198;">#819198</h1>
 <h1 style="background-color:#f3f6fa;">#f3f6fa</h1>
-<h1 style="background-color:#567482;">#567482</h1>
+<h3 style="background-color:#567482;">#567482 reported as bluish color code in rouge plain text</h3>
 <h1 style="background-color:#dce6f0;">#dce6f0</h1>
 <h1 style="background-color:#e9ebec;">#e9ebec</h1>
 <h1 style="background-color:#eff0f1;">#eff0f1</h1>
