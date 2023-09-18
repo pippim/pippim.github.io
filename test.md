@@ -9,7 +9,7 @@ layout: test
 
 # Introduction
 
-This is `test.md` rendered as `/test.html`.
+This is `/test.md` rendered as `/test.html`.
 
 It uses `/_layouts/test.html` layout file.
 
