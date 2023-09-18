@@ -333,19 +333,15 @@ These are the buttons used in Tim-ta.
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#9835;</span>&emsp; Listen to sound file.
 
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23F9;</span>&emsp; Stop listening to sound file.
-
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2699;</span>&emsp; In the footer, edit configuration settings. On
 detail line for small screen, open more buttons control box.
 
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2B;</span>&emsp; Add a new project or a new task.
-
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x232B;</span>&emsp; Go back one screen or cancel operation.
@@ -386,7 +382,7 @@ currently running progress bar is automatically selected.
 
 {% include image.html src="/assets/img/tim-ta/Open task override.gif"
    alt="Open task override.gif"
-   style="float: none; width: 718px; height: 464px; max-width: 100vw; 
+   style="float: none; width: 600px; max-width: 100vw; 
           margin: 0px 0px 0px 20px;"
 %}
 
@@ -395,22 +391,14 @@ currently running progress bar is automatically selected.
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23EE;</span>&emsp; Restart Task timer.
 
----
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 −</span>&emsp; Rewind Task timer 10 seconds.
-
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23EF;</span>&emsp; If playing, then pause. If paused, then play.
 
----
-
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 +</span>&emsp; Fast forward Task timer 10 seconds.
-
----
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23ED;</span>&emsp; Go to Task timer end.
