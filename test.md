@@ -15,8 +15,8 @@ It uses `/_layouts/test.html` layout file.
 
 It uses `/assets/js/test-search.js` instead of `search.js`.
 
-Test changes to `page-header-buttons` in `test-search.js` without 
-effecting whole website.
+Test changes to `page-header-buttons` via include `test-page-header.html`.
+Test changes to `test-search.js` without effecting whole website.
 
 After testing, copy code changes to other layouts `default.html`, `hrb.html`, 
 `post.html` and  `programs.html`
@@ -45,6 +45,8 @@ In `_sass` directory are:
 
 ```
 
+For cayman theme the default rouge color is a bluish #567482
+that appears washed out on chocolate background. 
 
 ## `/assets/css/style.scss`
 
@@ -375,7 +377,7 @@ The table below is from the
 | Generic.Lineno              | gl                    | Line numbers                                                                     |
 
 
-NEW discovered in code provided by tech support on Github.
+Code provided by tech support on Github.
 [Rouge `token.rb` 🔗](https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/token.rb#L75 
 "CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}
 
@@ -674,7 +676,7 @@ myFetch()
 
 <h1 style="background-color:#819198;">#819198</h1>
 <h1 style="background-color:#f3f6fa;">#f3f6fa</h1>
-<h3 style="background-color:#567482;">#567482 reported as bluish color code in rouge plain text</h3>
+<h2 style="background-color:#567482;">#567482 bluish color code in rouge plain text</h2>
 <h1 style="background-color:#dce6f0;">#dce6f0</h1>
 <h1 style="background-color:#e9ebec;">#e9ebec</h1>
 <h1 style="background-color:#eff0f1;">#eff0f1</h1>
@@ -686,6 +688,11 @@ myFetch()
 <h1 style="background-color:#e9ebec;">#e9ebec</h1>
 
 # Copy code
+
+This section shows how to copy code inside Rouge to the system clipboard.
+
+The original Author's old code and new code is below. However {{ site.title }}
+website had to use a totally new technique.
 
 https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
