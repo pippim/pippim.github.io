@@ -95,7 +95,7 @@ the {{ site.title }} website because it is hosted by GitHub.
 
 ---
 
-## Pippim Website on Mobile Phones
+## {{ site.title }} Website on Mobile Phones
 
 
 <video src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
@@ -125,15 +125,21 @@ But attention to detail means errors are tracked down
 and fixed.
 
 ### Color Theme
+{:.no_toc}
 
-At the top of each page, the "Sun" / "Crescent Moon" will
-spin when clicked. Click the "Sun" to use your phone outside.
-Click the "Crescent Moon" to use your phone inside. 
+The top-left of every page has the <kbd> 🌟 </kbd> ("Sun") 
+/ <kbd> 🌙 </kbd> ("Crescent Moon") toggle button. Clicking
+the toggle button changes the website color theme (for all
+{{ site.title }} browser windows) and briefly spins the icon. 
+Click the "Sun" to set the light color for using your phone outside.
+Click the "Crescent Moon" to set the dark color for using
+your phone inside. 
 
-The *Color Theme* icon is in the same place, and works the same
-way, on mobile and desktop systems.
+The *Color Theme* icon is always in the same place on all webpages. 
+It always works the same way on mobile phones and desktop systems.
 
 ### Hamburger Button
+{:.no_toc}
 
 The <kbd> ☰ </kbd> (Hamburger) button reveals Page Header Buttons that
 will not fit horizontally on a phone screen. A dropdown
@@ -141,13 +147,17 @@ menu appears with buttons arranged vertically.
 
 
 ### Search Button
+{:.no_toc}
 
-The <kbd> 🔍 </kbd> (Magnifying Glass) button opens {{ site.title }} engineered
-search engine. Search results are point-weighted with words
-appearing in the Page Titles getting more weight then the
-same word appearing in the Page Body.
+The <kbd> 🔍 </kbd> (Magnifying Glass) button opens 
+a proprietary, {{ site.title }} engineered
+search engine. Free of third-party search engine providers! 
+Search results are point-weighted with words
+appearing in the Page Titles and Headers getting more weight 
+than the same word appearing in the Page Body.
 
-Some words are intentionally removed such as "the", "error", etc.
+To reduce false-positives, some words are intentionally removed
+such as "the", "error", etc.
 
 Multiple search words are based on "or" tests. Most search 
 engines use the "and" tests.
@@ -209,8 +219,8 @@ on Stack Exchange Posts or GitHub Repos.
 Get in touch with {{ site.title }} by sending an email.
 
 <!-- Change Pippim to your contact info below -->
-- [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com
-"Send email to pippim.com@gmail.com 🔗"){:target="_blank"}
+- [📧 Send an Email to Pippim ⧉ 🔗](mailto:pippim.com@gmail.com
+"Send email to pippim.com@gmail.com ⧉ 🔗"){:target="_blank"}
 
 ### Leave a Comment / Question at The Source
 {:.no_toc}
@@ -263,14 +273,14 @@ for blog posts. You can disable the cookie using links below.
 ### Disable Cookies in Chrome
 {:.no_toc}
 
-[Clear, enable, and manage cookies in Chrome 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop 
-"How to clear cookies with Chrome Browser 🔗"){:target="_blank"}
+[Clear, enable, and manage cookies in Chrome ⧉ 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop 
+"How to clear cookies with Chrome Browser ⧉ 🔗"){:target="_blank"}
 
 ### Disable Cookies in Firefox
 {:.no_toc}
 
-[Block websites from storing cookies in Firefox 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox 
-"How to clear cookies with Chrome Browser 🔗"){:target="_blank"}
+[Block websites from storing cookies in Firefox ⧉ 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox 
+"How to clear cookies with Chrome Browser ⧉ 🔗"){:target="_blank"}
 
 To protect your More/Less cookie setting (not that it would
 do a spy any good), `SameSite` policy is set to "Strict" so
@@ -311,8 +321,8 @@ The {{ site.title }} website is hosted on **GitHub Pages**.
 You can download (or simply view) the {{ site.title }}
 website markdown files. For example, `index.md` is the markdown
 file for the page you are reading now and available
-[here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md 
-"See this page's markdown code in GitHub Pages 🔗"){:target="_blank"}.
+[here ⧉ 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md 
+"See this page's markdown code in GitHub Pages ⧉ 🔗"){:target="_blank"}.
 
 Get your own website up and running in a weekend by picking
 from a collection of website designs called themes. Then
@@ -330,19 +340,19 @@ in particular was created, you will probably want to stop reading
 here.
 
 Whenever you commit to a website repository, GitHub Pages will run
-[Jekyll 🔗](https://jekyllrb.com/ 
-"See how Jekyll rebuilds GitHub Pages websites 🔗"){:target="_blank"}
+[Jekyll ⧉ 🔗](https://jekyllrb.com/ 
+"See how Jekyll rebuilds GitHub Pages websites ⧉ 🔗"){:target="_blank"}
 to rebuild the pages in your site, from the content in your Markdown files.
 
 The {{ site.title }} website is based on the GitHub Pages Jekyll theme called
-[Cayman 🔗](https://pages-themes.github.io/cayman/ 
-"Visit the Cayman Theme for GitHub Pages website 🔗"){:target="_blank"}.
+[Cayman ⧉ 🔗](https://pages-themes.github.io/cayman/ 
+"Visit the Cayman Theme for GitHub Pages website ⧉ 🔗"){:target="_blank"}.
 Initial setup was straight forward and very quick. However adding custom buttons
 becomes more complicated as you need to learn
-[HTML 🔗](https://blog.webjeda.com/new-page-jekyll/ 
-"See how HTML is used in Jekyll 🔗"){:target="_blank"}
-and [Sass/SCSS 🔗](https://jekyllrb.com/docs/configuration/sass/ 
-"See how Sass is used in Jekyll 🔗"){:target="_blank"}.
+[HTML ⧉ 🔗](https://blog.webjeda.com/new-page-jekyll/ 
+"See how HTML is used in Jekyll ⧉ 🔗"){:target="_blank"}
+and [Sass/SCSS ⧉ 🔗](https://jekyllrb.com/docs/configuration/sass/ 
+"See how Sass is used in Jekyll ⧉ 🔗"){:target="_blank"}.
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr5">Skip</a></div>
@@ -372,8 +382,8 @@ Syntax highlighted code block
 ```
 
 For more details see
-[GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/ 
-"See how GitHub converts markdown with kramdown 🔗"){:target="_blank"}.
+[GitHub Flavored Markdown ⧉ 🔗](https://guides.github.com/features/mastering-markdown/ 
+"See how GitHub converts markdown with kramdown ⧉ 🔗"){:target="_blank"}.
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr6">Skip</a></div>
@@ -438,8 +448,8 @@ The TOC command is used in real markdown below and generates the actual TOC:
 %}
 ## Jekyll Themes
 
-There are many [GitHub Pages Jekyll Themes 🔗](https://pages.github.com/themes/ 
-"View the various GitHub Pages themes  🔗"){:target="_blank"}
+There are many [GitHub Pages Jekyll Themes ⧉ 🔗](https://pages.github.com/themes/ 
+"View the various GitHub Pages themes ⧉ 🔗"){:target="_blank"}
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
@@ -448,8 +458,8 @@ Merlot Theme was used for a week and, then it came back full circle to the
 Cayman Theme again.
 
 At first the Cayman Theme
-[didn't display the page title properly 🔗](https://github.com/pages-themes/cayman/issues/134 
-"View the issue on Cayman Theme GitHub Repository 🔗"){:target="_blank"}.
+[didn't display the page title properly ⧉ 🔗](https://github.com/pages-themes/cayman/issues/134 
+"View the issue on Cayman Theme GitHub Repository ⧉ 🔗"){:target="_blank"}.
 Consequently, the Merlot theme was used. However, problems arose
 with the Merlot banner on the left not rendering properly on small
 screens. So it was back to Cayman and after changing the theme,
@@ -465,35 +475,35 @@ to set up your first website but, don't give up."* &ensp; **You can do it!** �
 
 Your GitHub Pages site will use the layout and styles from the Jekyll
 theme you have selected in your
-[repository settings 🔗](https://github.com/pippim/pippim.github.io/settings/pages 
-"View {{ site.title }} GitHub Pages repository settings 🔗"){:target="_blank"}.
+[repository settings ⧉ 🔗](https://github.com/pippim/pippim.github.io/settings/pages 
+"View {{ site.title }} GitHub Pages repository settings ⧉ 🔗"){:target="_blank"}.
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 
 **GitHub Pages** maintains a real-time listing of
-[version numbers 🔗](https://pages.github.com/versions/ 
-"View current GitHub Pages application version numbers 🔗"){:target="_blank"}
+[version numbers** ⧉ 🔗](https://pages.github.com/versions/ 
+"View current GitHub Pages application version numbers ⧉ 🔗"){:target="_blank"}
 for Jekyll, Sass, kramdown, Rouge, etc..
 
 There are many open-source providers involved in the 
 {{ site.title }} website:
 
-- **GitHub Pages** - [Websites for you and your projects. 🔗](https://pages.github.com/ 
-"Hosted directly from your GitHub repository. Just edit, push, and your changes are live. 🔗"){:target="_blank"}
-- **Jekyll** - [Transform your plain text into static websites and blogs. 🔗](https://jekyllrb.com/ 
-"No more databases, comment moderation, or pesky updates to install—just your content. 🔗"){:target="_blank"}
-- **Liquid** - [Jekyll uses the Liquid templating language to process templates. 🔗](https://jekyllrb.com/docs/liquid/ 
-"Jekyll provides a number of useful Liquid additions to help you build your site. 🔗"){:target="_blank"}
-- **Sass** - [Sass: Syntactically Awesome Style Sheets 🔗](https://sass-lang.com/ 
-"Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 🔗"){:target="_blank"}
-- **Cayman Theme** - [Cayman is a Jekyll theme for GitHub Pages. 🔗](https://pages-themes.github.io/cayman/ 
-"Cayman is a clean, responsive theme for GitHub Pages. 🔗"){:target="_blank"}
-- **Ruby** - [dynamic, open source programming language 🔗](http://www.ruby-lang.org/en/ 
-"more powerful than Perl, and more object-oriented than Python 🔗"){:target="_blank"}
-- **Rouge** - [language syntax highlighting 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers 
-"List of all languages supported by Rouge 🔗"){:target="_blank"}
-- **kramdown** - [converting a superset of Markdown 🔗](https://kramdown.gettalong.org/ 
-"(sic, not Kramdown or KramDown, just kramdown) 🔗"){:target="_blank"}
+- **GitHub Pages** - [Websites for you and your projects. ⧉ 🔗](https://pages.github.com/ 
+"Hosted directly from your GitHub repository. Just edit, push, and your changes are live. ⧉ 🔗"){:target="_blank"}
+- **Jekyll** - [Transform your plain text into static websites and blogs. ⧉ 🔗](https://jekyllrb.com/ 
+"No more databases, comment moderation, or pesky updates to install—just your content. ⧉ 🔗"){:target="_blank"}
+- **Liquid** - [Jekyll uses the Liquid templating language to process templates. ⧉ 🔗](https://jekyllrb.com/docs/liquid/ 
+"Jekyll provides a number of useful Liquid additions to help you build your site. ⧉ 🔗"){:target="_blank"}
+- **Sass** - [Sass: Syntactically Awesome Style Sheets ⧉ 🔗](https://sass-lang.com/ 
+"Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. ⧉ 🔗"){:target="_blank"}
+- **Cayman Theme** - [Cayman is a Jekyll theme for GitHub Pages. ⧉ 🔗](https://pages-themes.github.io/cayman/ 
+"Cayman is a clean, responsive theme for GitHub Pages. ⧉ 🔗"){:target="_blank"}
+- **Ruby** - [dynamic, open source programming language ⧉ 🔗](http://www.ruby-lang.org/en/ 
+"more powerful than Perl, and more object-oriented than Python ⧉ 🔗"){:target="_blank"}
+- **Rouge** - [language syntax highlighting ⧉ 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers 
+"List of all languages supported by Rouge ⧉ 🔗"){:target="_blank"}
+- **kramdown** - [converting a superset of Markdown ⧉ 🔗](https://kramdown.gettalong.org/ 
+"(sic, not Kramdown or KramDown, just kramdown) ⧉ 🔗"){:target="_blank"}
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr9">Skip</a></div>
@@ -502,8 +512,8 @@ There are many open-source providers involved in the
 {:.no_toc}
 
 It is important to follow these instructions to setup your site:
-[Adding a theme to your GitHub Pages site using Jekyll 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-"GitHub Instructions 🔗"){:target="_blank"}.
+[Adding a theme to your GitHub Pages site using Jekyll ⧉ 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+"GitHub Instructions ⧉ 🔗"){:target="_blank"}.
 For example, `_layouts/default.html` probably needs to be copied from the
 theme website to your own website in order to make significant changes.
 
@@ -516,7 +526,7 @@ and are not stored on the `pippim.github.io` website.
 - Videos (up to 10 MB) are stored as comments in the associated 
 GitHub Repository (e.g. **mserve**), and then linked as an HTML 
 image source.
-- SCSS and [Sass CSS 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
+- SCSS and [Sass CSS ⧉ 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
 "What is the difference between SCSS and SASS?"){:target="_blank"} 
 files are mostly stored in the `assets/css/` directory. Some are 
 stored in the `_sass/` directory. The `_sass/` directory has files 
@@ -612,10 +622,10 @@ as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
 The complete `stack-to-blog.py` program can be accessed on the
-[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py 
+[Pippim Website repo ⧉ 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py 
 "View source code for stack-to-blog.py"){:target="_blank"}.
 
-The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/programs/stack.html 
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website ⧉](https://pippim.github.io/programs/stack.html 
 "Convert Stack Exchange Posts to Your Own Website"){:target="_blank"}
 for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your 
