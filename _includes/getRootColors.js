@@ -40,8 +40,8 @@ var colorSchemeCayman = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#365462",
-    "--code-text-color": "#d3d6da",
+    "--code-bg-color": "#ffddbb",
+    "--code-text-color": "#39ff14",
     "--border-color": "#dce6f0",
     "--table-border-color": "#e9ebec",
     "--hr-border-color": "#eff0f1",
@@ -83,8 +83,8 @@ var colorSchemeDark = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#CF9FFF",
     "--blockquote-text-color": "#a1b1b8",
-    "--code-bg-color": "#365462",
-    "--code-text-color": "#d3d6da",
+    "--code-bg-color": "#554433",
+    "--code-text-color": "#39ff14",
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
@@ -143,6 +143,9 @@ var colorSchemeDark = {
         The "--code-text-color": "#567482" is being used by Rouge to
         set bluish on chocolate background which can't be read in
         Cayman theme. Use dark color in cayman.
+
+    Sep 18/23 - Look at Neon Green: #39FF14 color with
+        light grey background on Cayman and Dark Grey background on dark.
 */
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
