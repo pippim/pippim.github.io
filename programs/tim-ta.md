@@ -150,7 +150,7 @@ then you will only see a solid line.</span>
 >  
 > `ffmpeg -i track01.wav -acodec mp3 track01.mp3`
 >   
-> Or use an free online conversion service.  
+> You can also use one of the free online media conversion services.  
 
 ---
 
@@ -254,7 +254,7 @@ will be imported.
 
 Hover over line below and select ***Copy*** button that appears:
 
-``` css
+```
 https://github.com/pippim/pippim.github.io/blob/main/assets/json/tim-ta-work-out-1.json
 ``` 
 
