@@ -93,8 +93,8 @@ Yellow Sun / Black Moon in `/assets/css/style.scss`:
 
 ```javascript
 
-/*  Get all .color-scheme-button class instances `/_layouts/default.html` has
-    .color-scheme-button in two different HTML places.
+/*  Get all .color-scheme-button class instances. `/_includes/page-header.html`
+    has .color-scheme-button in two different HTML places.
 
     Defined in `/_includes/getRootColors.js`:
 
@@ -113,11 +113,11 @@ var cspButtonClick = function() {
     this.classList.toggle('rotate-button')  // Add/remove rotate image in button
     if (currentColorScheme == "colorSchemeCayman") {
         currentColorScheme = "colorSchemeDark"
-        setColorScheme(colorSchemeDark)
+        setColorScheme(colorSchemeDark)  // _includes/getRootColors.js
     }
     else {
         currentColorScheme = "colorSchemeCayman"
-        setColorScheme(colorSchemeCayman)
+        setColorScheme(colorSchemeCayman)  // _includes/getRootColors.js
     }
     localStorage.setItem("colorScheme", currentColorScheme)
     // Wait 300 ms for transition to finish then change image
@@ -708,6 +708,43 @@ https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 ```html
 <!-- This is the first line of HTML comment -->
 <!-- This is the second line -->
+```
+
+## New Javascript `/assets/js/theCookieMachine.js`
+
+```javascript
+
+// COPY ROUGE CODE BLOCKS
+
+const copyButtonLabel = "Copy 📋";
+let blocks = document.querySelectorAll("div.highlight")  // Rouge second level out of three
+
+blocks.forEach((block) => {
+    // only add button if browser supports Clipboard API
+    if (navigator.clipboard) {
+        block.classList.add("rouge-code-block")
+        let copyRougeButton = document.createElement("button")
+        // Remove ', "page-header-button"' or replace with your own button styling class name
+        copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
+        copyRougeButton.innerText = copyButtonLabel
+        copyRougeButton.setAttribute('title', 'Copy code to clipboard')
+        copyRougeButton.setAttribute('aria-label', "Copy code to clipboard")
+        copyRougeButton.addEventListener("click", copyRougeCode)
+        block.appendChild(copyRougeButton)
+    }
+});
+
+async function copyRougeCode(event) {
+    const button = event.srcElement
+    const pre = button.parentElement
+    let code = pre.querySelector("code")
+    let text = code.innerText
+    await navigator.clipboard.writeText(text)
+
+    button.innerText = "Copied ✓" /* ✓ or  ✔️ ✓ */
+    setTimeout(()=> button.innerText = copyButtonLabel, 1500)
+}
+
 ```
 
 ## Old HTML
