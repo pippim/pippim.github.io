@@ -265,6 +265,8 @@ functions.
       <a href='https://github.com/logos'>github.com logos</a>"
 %}
 </div>
+<!--  Slide left only observed when refresh clicked at this point
+      or if . -->
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('octocat-image').classList.add('slide-left'); 
@@ -488,24 +490,24 @@ and are not stored on the `pippim.github.io` website.
 - Videos (up to 10 MB) are stored as comments in the associated 
 GitHub Repository (e.g. **mserve**), and then linked as an HTML 
 image source.
-- SCSS and [Sass CSS ⧉ 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
+- SCSS and
+[Sass CSS ⧉ 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
 "What is the difference between SCSS and SASS?"){:target="_blank"} 
-files are mostly stored in the `assets/css/` directory. Some are 
-stored in the `_sass/` directory. The `_sass/` directory has files 
-you can't see in `pippim.github.io` because they are really stored 
-in the Cayman Theme for Jekyll and automatically pulled from there 
-whenever website is rendered.
-- This <kbd>⌂ Home</kbd> page is stored in `index.md` file in the 
-root directory (`/`).
-- The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
-- The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. 
+files are stored in the `assets/css/` directory and the 
+`_sass/` directory. The `_sass/` directory can have files 
+you can't see in `pippim.github.io`, because they are really stored 
+in the Cayman Theme for Jekyll, and automatically pulled from that 
+site whenever the {{ site.title }} Website is rendered.
+- This <kbd>⌂ Home</kbd> page is stored in the `/index.md` file.
+- The <kbd>❓ About</kbd> page is stored in `/about.md`.
+- The <kbd>✅ Answers</kbd> page is stored in `/answers.md`. 
 Individual answers are internally known as "blog posts" and are 
 stored in the `_posts` directory with one file per answer.
-- The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
+- The <kbd>💻 Programs</kbd> page is stored in `/programs.md`.
 - HTML encoding can be found in any file. Small bits and pieces 
-of HTML can beven be found in and markdown files which end in 
-`.md`. Pure HTML files (with no markdown or CSS) can be found in 
-the `_includes` directory.
+of HTML can even be found in markdown files which end in 
+`.md`. Pure HTML files (with no markdown or CSS) can be found  
+under the `/_includes/` directory.
 - Javascript files are kept in `assets/js/`.
 
 ---
