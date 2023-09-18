@@ -40,7 +40,7 @@ var colorSchemeCayman = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#320a3c",
+    "--code-bg-color": "#ddccdd",
     "--code-text-color": "#29ee14",
     "--border-color": "#dce6f0",
     "--table-border-color": "#e9ebec",
@@ -83,7 +83,7 @@ var colorSchemeDark = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#CF9FFF",
     "--blockquote-text-color": "#a1b1b8",
-    "--code-bg-color": "#332211",
+    "--code-bg-color": "#221122",
     "--code-text-color": "#29ee14",
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
@@ -144,11 +144,14 @@ var colorSchemeDark = {
         set bluish on chocolate background which can't be read in
         Cayman theme. Use dark color in cayman.
 
-    Sep 18/23 - Look at Neon Green: #39FF14 color with
-        light grey background on Cayman and Dark Grey background on dark.
+    Sep 18/23 - Neon Green text: #39FF14 color with
+            cayman:    "--code-bg-color": "#320a3c",
+            dark:      "--code-bg-color": "#332211",
 
-    Sep 18/23 - Look at dull green: #5e9755 color with
+    Sep 18/23 - Green: #5e9755 color with
         light grey background on Cayman and Dark Grey background on dark.
+            cayman:  "--code-bg-color": "#ddccdd",
+            dark:    "--code-bg-color": "#221122",
 
 
 */
