@@ -1,7 +1,7 @@
 /*  /_includes/tcm-common-code.js code shared by:
         /assets/js/theCookieMachine.js - Draggable Modal Dialog
-        /tcm.md - The Cookie Machine documentation webpage
-        /assets/js/search.js
+        /programs/tcm.md - The Cookie Machine documentation webpage
+        /programs/stack.md - Convert Stack Exchange Posts
 
     icons from: https://www.cleanpng.com/
 */
@@ -33,8 +33,8 @@ function getCookie(cname) {
     return ""
 }
 
-/*  Get all .color-scheme-button class instances `/_layouts/default.html` has
-    .color-scheme-button in two different HTML places.
+/*  Get all .color-scheme-button class instances. `/_includes/page-header.html`
+    has .color-scheme-button in two different HTML places.
 
     Defined in `/_includes/getRootColors.js`:
 
@@ -53,11 +53,11 @@ var cspButtonClick = function() {
     this.classList.toggle('rotate-button')  // Add/remove rotate image in button
     if (currentColorScheme == "colorSchemeCayman") {
         currentColorScheme = "colorSchemeDark"
-        setColorScheme(colorSchemeDark)
+        setColorScheme(colorSchemeDark)  // _includes/getRootColors.js
     }
     else {
         currentColorScheme = "colorSchemeCayman"
-        setColorScheme(colorSchemeCayman)
+        setColorScheme(colorSchemeCayman)  // _includes/getRootColors.js
     }
     localStorage.setItem("colorScheme", currentColorScheme)
     // Wait 300 ms for transition to finish then change image
@@ -87,8 +87,8 @@ function setColorSchemeButtonImage(schemeName) {
 
 setColorSchemeButtonImage(currentColorScheme)
 
-// Get all .tcm-button class instances `/_layouts/default.html` has
-// .tcm-button in two different place.
+// Get all .tcm-button class instances. `/_includes/page-header.html`
+// has .tcm-button in two places.
 var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 
 var tcmButtonClick = function() {
@@ -706,12 +706,12 @@ function htmlColorSchemes () {
         for (const key of Object.keys(scheme)) {
             if (!(key.slice(0,2) == "--")) {
                 // Skip "name" key EG colorSchemeCayman
-                console.log("Skipping key:", key, scheme[key])
+                console.log("Skipping key:", key, "value:",scheme[key])
                 continue
             }
             if (!(scheme[key].slice(0,1) == "#")) {
                 // Skip non-color code EG "1.0" (for opacity)
-                console.log("Skipping non-color code value:", key, scheme[key])
+                console.log("Skipping non-color code key:", key, "value:", scheme[key])
                 continue
             }
             html += htmlStyleColorLine(scheme, key)
