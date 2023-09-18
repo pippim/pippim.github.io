@@ -40,7 +40,7 @@ var colorSchemeCayman = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#885577",
+    "--code-bg-color": "#aa8866",
     "--code-text-color": "#29ee14",
     "--border-color": "#dce6f0",
     "--table-border-color": "#e9ebec",
