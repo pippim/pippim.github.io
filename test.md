@@ -13,12 +13,15 @@ This is `/test.md` rendered as `/test.html`.
 
 It uses `/_layouts/test.html` layout file.
 
-Test changes to `page-header-buttons` without effecting whole website.
+It uses `/assets/js/test-search.js` instead of `search.js`.
+
+Test changes to `page-header-buttons` in `test-search.js` without 
+effecting whole website.
 
 After testing, copy code changes to other layouts `default.html`, `hrb.html`, 
 `post.html` and  `programs.html`
 
-Note that `page.html` is frozen copy from when project started and
+Note that `_layouts/page.html` is frozen copy from when project started and
 contains Cayman Theme defaults for historical reference purposes.
 
 ---
@@ -54,91 +57,91 @@ contains Cayman Theme defaults for historical reference purposes.
 ## Rouge List of Tokens
 
 The table below is from the 
-[Rouge Ruby List of Tokens 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-tokens 
+[Rouge Ruby List of Tokens ⧉ 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-tokens 
 "CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}.
 
-| ***Token name*** | ***Token shortname*** | ***Description*** |
-|-------|-------|---------|
-| Text |  | Any type of text data |
-| Text.Whitespace | w | Specially highlighted whitespace |
-| Error | err | Lexer errors |
-| Escape | esc | Escape ***(New)*** |
-| Other | x | Token for data not matched by a parser (e.g. HTML markup in PHP code)|
-| Keyword | k | Any keyword |
-| Keyword.Constant | kc | Keywords that are constants |
-| Keyword.Declaration | kd | Keywords used for variable declaration (e.g. var in javascript) |
-| Keyword.Namespace | kn | Keywords used for namespace declarations |
-| Keyword.Pseudo | kp | Keywords that aren't really keywords |
-| Keyword.Reserved | kr | Keywords which are reserved (such as end in Ruby) |
-| Keyword.Type | kt | Keywords which refer to a type id (such as int in C) |
-| Name | n | Variable/function names |
-| Name.Attribute | na | Attributes (in HTML for instance) |
-| Name.Builtin | nb | Builtin names which are available in the global namespace |
-| Name.Builtin.Pseudo | bp | Builtin names that are implicit (such as self in Ruby) |
-| Name.Class | nc | For class declaration |
-| Name.Constant | no | For constants |
-| Name.Decorator | nd | For decorators in languages such as Python or Java |
-| Name.Entity | ni | Token for entities such as &nbsp; in HTML |
-| Name.Exception | ne | Exceptions and errors (e.g. ArgumentError in Ruby) |
-| Name.Function | nf | Function names |
-| Name.Property | py | Token for properties |
-| Name.Label | nl | For label names |
-| Name.Namespace | nn | Token for namespaces |
-| Name.Other | nx | For other names |
-| Name.Tag | nt | Tag mainly for markup such as XML or HTML |
-| Name.Variable | nv | Token for variables |
-| Name.Variable.Class | vc | Token for class variables (e.g. @@var in Ruby) |
-| Name.Variable.Global | vg | For global variables (such as $LOAD_PATH in Ruby) |
-| Name.Variable.Instance | vi | Token for instance variables (such as @var in Ruby) |
-| Name.Variable.Magic | vm | Token for magic variables ***(New)*** |
-| Literal | l | Any literal (if not further defined) |
-| Literal.Date | ld | Date literals |
-| Literal.String | s | String literals |
-| Literal.String.Affix | sa | String Affix ***(New)*** |
-| Literal.String.Backtick | sb | String enclosed in backticks |
-| Literal.String.Char | sc | Token type for single characters |
-| Literal.String.Delimiter | dl | String Delimiter ***(New)*** |
-| Literal.String.Doc | sd | Documentation strings (such as in Python) |
-| Literal.String.Double | s2 | Double quoted strings |
-| Literal.String.Escape | se | Escaped sequences in strings |
-| Literal.String.Heredoc | sh | For "heredoc" strings (e.g. in Ruby) |
-| Literal.String.Interpol | si | For interpolate part in strings (e.g. in Ruby) |
-| Literal.String.Other | sx | Token type for any other strings (for example %q{foo} string constructs in Ruby) |
-| Literal.String.Regex | sr | Regular expressions literals |
-| Literal.String.Single | s1 | Single quoted strings |
-| Literal.String.Symbol | ss | Symbols (such as :foo in Ruby) |
-| Literal.Number | m | Any number literal (if not further defined) |
-| Literal.Number.Float | mf | Float numbers |
-| Literal.Number.Hex | mh | Hexadecimal numbers |
-| Literal.Number.Integer | mi | Integer literals |
-| Literal.Number.Integer.Long | il | Long integer literals |
-| Literal.Number.Oct | mo | Octal literals |
-| Literal.Number.Hex | mx | Hexadecimal literals |
-| Literal.Number.Bin | mb | Binary literals |
-| Operator | o | Operators (commonly +, -, /, *) |
-| Operator.Word | ow | Word operators (e.g. and) |
-| Punctuation | p | Punctuation which is not an operator |
-| Punctuation.Indicator | pi | Punctuation indicator ***(New)*** |
-| Comment | c | Single line comments |
-| Comment.Hashbang | ch | Hashbang comment ***(New)*** |
-| Comment.Doc | cd | Doc comment ***(New)*** |
-| Comment.Multiline | cm | Multiline comments |
-| Comment.Preproc | cp | Preprocessor comments such as <% %> in ERb |
-| Comment.PreprocFile | cpf | Preprocessor comments file ***(New)*** |
-| Comment.Single | c1 | Comments that end at the end of the line |
-| Comment.Special | cs | Special data in comments such as @license in Javadoc |
-| Generic | g | Unstyled token |
-| Generic.Deleted | gd | Token value as deleted |
-| Generic.Emph | ge | Token value as emphasized |
-| Generic.Error | gr | Token value as an error message |
-| Generic.Heading | gh | Token value as a headline |
-| Generic.Inserted | gi | Token value as inserted |
-| Generic.Output | go | Marked as a program output |
-| Generic.Prompt | gp | Marked as a command prompt |
-| Generic.Strong | gs | Mark the token value as bold (for rst lexer) |
-| Generic.Subheading | gu | Marked as a sub-headline |
-| Generic.Traceback | gt | Mark the token as a part of an error traceback |
-| Generic.Lineno | gl | Line numbers |
+| ***Token name***            | ***Token shortname*** | ***Description***                                                                |
+|-----------------------------|-----------------------|----------------------------------------------------------------------------------|
+| Text                        |                       | Any type of text data                                                            |
+| Text.Whitespace             | w                     | Specially highlighted whitespace                                                 |
+| Error                       | err                   | Lexer errors                                                                     |
+| Escape                      | esc                   | Escape ***(New)***                                                               |
+| Other                       | x                     | Token for data not matched by a parser (e.g. HTML markup in PHP code)            |
+| Keyword                     | k                     | Any keyword                                                                      |
+| Keyword.Constant            | kc                    | Keywords that are constants                                                      |
+| Keyword.Declaration         | kd                    | Keywords used for variable declaration (e.g. var in javascript)                  |
+| Keyword.Namespace           | kn                    | Keywords used for namespace declarations                                         |
+| Keyword.Pseudo              | kp                    | Keywords that aren't really keywords                                             |
+| Keyword.Reserved            | kr                    | Keywords which are reserved (such as end in Ruby)                                |
+| Keyword.Type                | kt                    | Keywords which refer to a type id (such as int in C)                             |
+| Name                        | n                     | Variable/function names                                                          |
+| Name.Attribute              | na                    | Attributes (in HTML for instance)                                                |
+| Name.Builtin                | nb                    | Builtin names which are available in the global namespace                        |
+| Name.Builtin.Pseudo         | bp                    | Builtin names that are implicit (such as self in Ruby)                           |
+| Name.Class                  | nc                    | For class declaration                                                            |
+| Name.Constant               | no                    | For constants                                                                    |
+| Name.Decorator              | nd                    | For decorators in languages such as Python or Java                               |
+| Name.Entity                 | ni                    | Token for entities such as &nbsp; in HTML                                        |
+| Name.Exception              | ne                    | Exceptions and errors (e.g. ArgumentError in Ruby)                               |
+| Name.Function               | nf                    | Function names                                                                   |
+| Name.Property               | py                    | Token for properties                                                             |
+| Name.Label                  | nl                    | For label names                                                                  |
+| Name.Namespace              | nn                    | Token for namespaces                                                             |
+| Name.Other                  | nx                    | For other names                                                                  |
+| Name.Tag                    | nt                    | Tag mainly for markup such as XML or HTML                                        |
+| Name.Variable               | nv                    | Token for variables                                                              |
+| Name.Variable.Class         | vc                    | Token for class variables (e.g. @@var in Ruby)                                   |
+| Name.Variable.Global        | vg                    | For global variables (such as $LOAD_PATH in Ruby)                                |
+| Name.Variable.Instance      | vi                    | Token for instance variables (such as @var in Ruby)                              |
+| Name.Variable.Magic         | vm                    | Token for magic variables ***(New)***                                            |
+| Literal                     | l                     | Any literal (if not further defined)                                             |
+| Literal.Date                | ld                    | Date literals                                                                    |
+| Literal.String              | s                     | String literals                                                                  |
+| Literal.String.Affix        | sa                    | String Affix ***(New)***                                                         |
+| Literal.String.Backtick     | sb                    | String enclosed in backticks                                                     |
+| Literal.String.Char         | sc                    | Token type for single characters                                                 |
+| Literal.String.Delimiter    | dl                    | String Delimiter ***(New)***                                                     |
+| Literal.String.Doc          | sd                    | Documentation strings (such as in Python)                                        |
+| Literal.String.Double       | s2                    | Double quoted strings                                                            |
+| Literal.String.Escape       | se                    | Escaped sequences in strings                                                     |
+| Literal.String.Heredoc      | sh                    | For "heredoc" strings (e.g. in Ruby)                                             |
+| Literal.String.Interpol     | si                    | For interpolate part in strings (e.g. in Ruby)                                   |
+| Literal.String.Other        | sx                    | Token type for any other strings (for example %q{foo} string constructs in Ruby) |
+| Literal.String.Regex        | sr                    | Regular expressions literals                                                     |
+| Literal.String.Single       | s1                    | Single quoted strings                                                            |
+| Literal.String.Symbol       | ss                    | Symbols (such as :foo in Ruby)                                                   |
+| Literal.Number              | m                     | Any number literal (if not further defined)                                      |
+| Literal.Number.Float        | mf                    | Float numbers                                                                    |
+| Literal.Number.Hex          | mh                    | Hexadecimal numbers                                                              |
+| Literal.Number.Integer      | mi                    | Integer literals                                                                 |
+| Literal.Number.Integer.Long | il                    | Long integer literals                                                            |
+| Literal.Number.Oct          | mo                    | Octal literals                                                                   |
+| Literal.Number.Hex          | mx                    | Hexadecimal literals                                                             |
+| Literal.Number.Bin          | mb                    | Binary literals                                                                  |
+| Operator                    | o                     | Operators (commonly +, -, /, *)                                                  |
+| Operator.Word               | ow                    | Word operators (e.g. and)                                                        |
+| Punctuation                 | p                     | Punctuation which is not an operator                                             |
+| Punctuation.Indicator       | pi                    | Punctuation indicator ***(New)***                                                |
+| Comment                     | c                     | Single line comments                                                             |
+| Comment.Hashbang            | ch                    | Hashbang comment ***(New)***                                                     |
+| Comment.Doc                 | cd                    | Doc comment ***(New)***                                                          |
+| Comment.Multiline           | cm                    | Multiline comments                                                               |
+| Comment.Preproc             | cp                    | Preprocessor comments such as <% %> in ERb                                       |
+| Comment.PreprocFile         | cpf                   | Preprocessor comments file ***(New)***                                           |
+| Comment.Single              | c1                    | Comments that end at the end of the line                                         |
+| Comment.Special             | cs                    | Special data in comments such as @license in Javadoc                             |
+| Generic                     | g                     | Unstyled token                                                                   |
+| Generic.Deleted             | gd                    | Token value as deleted                                                           |
+| Generic.Emph                | ge                    | Token value as emphasized                                                        |
+| Generic.Error               | gr                    | Token value as an error message                                                  |
+| Generic.Heading             | gh                    | Token value as a headline                                                        |
+| Generic.Inserted            | gi                    | Token value as inserted                                                          |
+| Generic.Output              | go                    | Marked as a program output                                                       |
+| Generic.Prompt              | gp                    | Marked as a command prompt                                                       |
+| Generic.Strong              | gs                    | Mark the token value as bold (for rst lexer)                                     |
+| Generic.Subheading          | gu                    | Marked as a sub-headline                                                         |
+| Generic.Traceback           | gt                    | Mark the token as a part of an error traceback                                   |
+| Generic.Lineno              | gl                    | Line numbers                                                                     |
 
 
 NEW discovered in code provided by tech support on Github.
@@ -240,6 +243,197 @@ myFetch()
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
 }
+```
+
+
+# Rouge `_sass/rouge-github.scss`
+
+``` css
+/*  https://github.com/daveyarwood/gruvbox-pygments/blob/master/gruvbox.css
+    Oct 17/22 copy from rouge-github-gruvbox.scss (backup version)
+    https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/token.rb#L75
+    Note we use Num as an alias for Literal::Number and Str as an alias for Literal::String.
+*/
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #282828; background-color: #282828; color: #ebdbb2; }
+.highlight .c { color: #928374; font-style: italic; } /* Comment */
+.highlight .err { color: #ebdbb2; } /* Error */
+.highlight .esc { color: #ebdbb2; } /* Escape */
+.highlight .g { color: #ebdbb2; } /* Generic */
+.highlight .k { color: #fe8019; } /* Keyword */
+.highlight .l { color: #ebdbb2; } /* Literal */
+.highlight .n { color: #ebdbb2; } /* Name */
+.highlight .o { color: #fe8019; } /* Operator */
+.highlight .x { color: #ebdbb2; } /* Other */
+.highlight .p { color: #ebdbb2; } /* Punctuation */
+.highlight .ch { color: #928374; font-style: italic; } /* Comment.Hashbang */
+.highlight .cm { color: #928374; font-style: italic; } /* Comment.Multiline */
+.highlight .cp { color: #8ec07c; } /* Comment.Preproc */
+.highlight .c1 { color: #928374; font-style: italic; } /* Comment.Single */
+.highlight .cs { color: #928374; font-style: italic; } /* Comment.Special */
+.highlight .gd { color: #282828; background-color: #fb4934 } /* Generic.Deleted */
+.highlight .ge { color: #83a598; text-decoration: underline; } /* Generic.Emph */
+.highlight .gr { color: #ebdbb2; font-weight: bold; background-color: #fb4934 } /* Generic.Error */
+.highlight .gh { color: #b8bb26; font-weight: bold; } /* Generic.Heading */
+.highlight .gi { color: #282828; background-color: #b8bb26 } /* Generic.Inserted */
+.highlight .go { color: #504945; } /* Generic.Output */
+.highlight .gp { color: #ebdbb2; } /* Generic.Prompt */
+.highlight .gs { color: #ebdbb2; } /* Generic.Strong */
+.highlight .gu { color: #b8bb26; font-weight: bold; } /* Generic.Subheading */
+.highlight .gt { color: #ebdbb2; font-weight: bold; background-color: #fb4934 } /* Generic.Traceback */
+.highlight .kc { color: #fe8019; } /* Keyword.Constant */
+.highlight .kd { color: #fe8019; } /* Keyword.Declaration */
+.highlight .kn { color: #fe8019; } /* Keyword.Namespace */
+.highlight .kp { color: #fe8019; } /* Keyword.Pseudo */
+.highlight .kr { color: #fe8019; } /* Keyword.Reserved */
+.highlight .kt { color: #fabd2f; } /* Keyword.Type */
+.highlight .ld { color: #ebdbb2; } /* Literal.Date */
+.highlight .m { color: #d3869b; } /* Literal.Number */
+.highlight .s { color: #b8bb26; } /* Literal.String */
+.highlight .na { color: #b8bb26; font-weight: bold; } /* Name.Attribute */
+.highlight .nb { color: #fabd2f; } /* Name.Builtin */
+.highlight .nc { color: #ebdbb2; } /* Name.Class */
+.highlight .no { color: #d3869b; } /* Name.Constant */
+.highlight .nd { color: #ebdbb2; } /* Name.Decorator */
+.highlight .ni { color: #fabd2f; } /* Name.Entity */
+.highlight .ne { color: #fb4934; } /* Name.Exception */
+.highlight .nf { color: #fabd2f; } /* Name.Function */
+.highlight .nl { color: #fb4934; } /* Name.Label */
+.highlight .nn { color: #ebdbb2; } /* Name.Namespace */
+.highlight .nx { color: #ebdbb2; } /* Name.Other */
+.highlight .py { color: #ebdbb2; } /* Name.Property */
+.highlight .nt { color: #fb4934; } /* Name.Tag */
+.highlight .nv { color: #ebdbb2; } /* Name.Variable */
+.highlight .ow { color: #fe8019; } /* Operator.Word */
+.highlight .w { color: #ebdbb2; } /* Text.Whitespace */
+.highlight .mb { color: #d3869b; } /* Literal.Number.Bin */
+.highlight .mf { color: #d3869b; } /* Literal.Number.Float */
+.highlight .mh { color: #d3869b; } /* Literal.Number.Hex */
+.highlight .mi { color: #d3869b; } /* Literal.Number.Integer */
+.highlight .mo { color: #d3869b; } /* Literal.Number.Oct */
+.highlight .sb { color: #b8bb26; } /* Literal.String.Backtick */
+.highlight .sc { color: #b8bb26; } /* Literal.String.Char */
+.highlight .sd { color: #b8bb26; } /* Literal.String.Doc */
+.highlight .s2 { color: #b8bb26; } /* Literal.String.Double */
+.highlight .se { color: #b8bb26; } /* Literal.String.Escape */
+.highlight .sh { color: #b8bb26; } /* Literal.String.Heredoc */
+.highlight .si { color: #b8bb26; } /* Literal.String.Interpol */
+.highlight .sx { color: #b8bb26; } /* Literal.String.Other */
+.highlight .sr { color: #b8bb26; } /* Literal.String.Regex */
+.highlight .s1 { color: #b8bb26; } /* Literal.String.Single */
+.highlight .ss { color: #83a598; } /* Literal.String.Symbol */
+.highlight .bp { color: #fabd2f; } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #ebdbb2; } /* Name.Variable.Class */
+.highlight .vg { color: #ebdbb2; } /* Name.Variable.Global */
+.highlight .vi { color: #ebdbb2; } /* Name.Variable.Instance */
+.highlight .il { color: #d3869b; } /* Literal.Number.Integer.Long */
+
+/* End of rouge-github-gruvbox.scss */
+
+```
+
+# Rouge `_sass/rouge-github-monokai-sublime.scss`
+
+```css
+/*  https://github.com/pages-themes/cayman/blob/master/_sass/rouge-github.scss
+    Oct 15/22 copy from rouge-github-monokai-sublime.scss (backup version)
+    // = found in original cayman theme
+    // missing = found here but not in cayman theme
+*/
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh { color: #999999; } //
+.highlight .sr { color: #f6aa11; } //
+.highlight .go { color: #888888; } //
+.highlight .gp { color: #555555; } //
+.highlight .gs {    font-weight: bold; } //
+.highlight .gu { color: #aaaaaa; } //
+.highlight .nb { color: #f6aa11; } //
+.highlight .cm { color: #5F9EA0; font-style: italic; } //
+.highlight .cp { color: #5F9EA0; } //
+.highlight .c1 { color: #5F9EA0; font-style: italic; } //
+.highlight .cs { color: #5F9EA0; font-weight: bold; font-style: italic; } //
+.highlight .c  { color: #5F9EA0; font-style: italic; } //
+.highlight .ch { color: #5F9EA0; } // missing
+.highlight .cd { color: #5F9EA0; font-style: italic; } //
+.highlight .cpf{ color: #5F9EA0; } // missing
+.highlight .err{ color: #960050; } // background ?
+.highlight .gr { color: #960050; } //
+.highlight .gt { color: #960050; } //
+.highlight .gd { color: #49483e; } // background ?
+.highlight .gi { color: #49483e; } //
+.highlight .ge { color: #49483e; font-style: italic; } //
+.highlight .kc { color: #66d9ef; font-weight: bold; } //
+.highlight .kd { color: #66d9ef; font-weight: bold; } //
+.highlight .kr { color: #66d9ef; font-weight: bold; } //
+.highlight .no { color: #66d9ef; } //
+.highlight .kt { color: #66d9ef; font-weight: bold; } //
+.highlight .mf { color: #ae81ff; } //
+.highlight .mh { color: #ae81ff; } //
+.highlight .il { color: #ae81ff; } //
+.highlight .mi { color: #ae81ff; } //
+.highlight .mo { color: #ae81ff; } //
+.highlight .m  { color: #ae81ff; } //
+.highlight .mb { color: #ae81ff; } //
+.highlight .mx { color: #ae81ff; } //
+.highlight .sc { color: #ae81ff; } //
+.highlight .se { color: #ae81ff; } //
+.highlight .ss { color: #ae81ff; } //
+.highlight .sd { color: #e6db74; } //
+.highlight .s2 { color: #e6db74; } //
+.highlight .sb { color: #e6db74; } //
+.highlight .sh { color: #e6db74; } //
+.highlight .si { color: #e6db74; } //
+.highlight .sx { color: #e6db74; } //
+.highlight .s1 { color: #e6db74; } //
+.highlight .s  { color: #e6db74; } //
+.highlight .sa { color: #e6db74; } // missing
+.highlight .dl { color: #e6db74; } // missing
+.highlight .na { color: #a6e22e; } //
+.highlight .nc { color: #a6e22e; } //
+.highlight .nd { color: #a6e22e; font-weight: bold; } //
+.highlight .ne { color: #a6e22e; font-weight: bold; } //
+.highlight .nf { color: #a6e22e; font-weight: bold; } //
+.highlight .fm { color: #a6e22e; } // missing
+.highlight .vc { color: #00cdcd; } //
+.highlight .nn { color: #00cdcd; } //
+.highlight .nl { color: #00cdcd; font-weight: bold; } //
+.highlight .ni { color: #00cdcd; font-weight: bold; } //
+.highlight .bp { color: #00cdcd; } //
+.highlight .vg { color: #00cdcd; } //
+.highlight .vi { color: #00cdcd; } //
+.highlight .nv { color: #00cdcd; } //
+.highlight .vm { color: #00cdcd; } // missing
+.highlight .w  { color: #ffffff; } //
+.highlight .n  { color: #ffffff; } // missing
+.highlight .py { color: #ffffff; } // missing
+.highlight .nx { color: #ffffff; } // missing
+.highlight .ow { color: #f92672; font-weight: bold; } //
+.highlight .nt { color: #f92672; } //
+.highlight .k  { color: #f92672; font-weight: bold; } //
+.highlight .kv { color: #f92672; font-weight: bold; } //
+.highlight .kn { color: #f92672; font-weight: bold; } //
+.highlight .kp { color: #f92672; font-weight: bold; } //
+.highlight .o  { color: #f92672; font-weight: bold; } //
+.highlight .p  { color: #fbf1c7; } // missing
+.highlight .pi { color: #fbf1c7; } // missing
+
+.highlight {
+  color: #ffffff;
+  background-color: #272822;
+  border-radius: .5rem;
+  /* Oct 15/22 - Following already in Cayman
+  margin-bottom: 30px;
+  margin-top: 27px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%; */
+}
+
+/* End of rouge-github-monokai-sublime.scss */
 ```
 
 # Miscellaneous Color Codes
