@@ -328,9 +328,46 @@ function closeSearchForm() {
     reverseContentDimmed()
 }
 
-var saveBackgroundColor;  // May 18/22 - New code not working
+// Element fades in when scrolled to 70% visible
+// From: https://stackoverflow.com/a/62979471/6929343
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7
+};
 
-// Search Magnify Glass button clicked
+function observerCallback(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // fade in observed elements that are in view
+      entry.target.classList.replace('fadeOut', 'fadeIn');
+    } else {
+      // fade out observed elements that are not in view
+      entry.target.classList.replace('fadeIn', 'fadeOut');
+    }
+  });
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+const fadeElms = document.querySelectorAll('.fade');
+fadeElms.forEach(el => observer.observe(el));
+
+// Lightning Bolt (Jump Button) appears when scrolling up/down
+// https: //stackoverflow.com/a/4620986/6929343
+var timer = null;
+window.addEventListener('scroll', function() {
+    if(timer !== null) {
+        clearTimeout(timer);
+        // begin fade in
+    }
+    timer = setTimeout(function() {
+          // begin fade out
+    }, 4500);  // button stays up 4.5 seconds
+}, false);
+
+
+// Lightning Bolt (Jump button) clicked
 // Loop through all class named .page-header-search-button
 jb.onclick = function (event) {
     //const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
