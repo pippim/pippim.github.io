@@ -99,11 +99,10 @@ the {{ site.title }} website because it is hosted by GitHub.
 ## Mobile Phone Support
 
 
-<video src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
+<video src="https://user-images.githubusercontent.com/92641463/268849032-28b64b2c-0b54-4a14-8836-8aa78a6a011c.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/268849032-28b64b2c-0b54-4a14-8836-8aa78a6a011c.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-style="float: left; width: 40% !important; margin: 1rem 2rem 1rem 0; 
-max-height:640px; height: auto !important;">
+style="float: left; width: 40%; max-width: 95vw; margin: 1rem 2rem 1rem 0;">
   </video>
 
 <!-- OLD:
@@ -114,7 +113,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 The video on the left shows what the {{ site.title }} Website 
 looks like on a typical mobile phone screen. The recording was
-made on a desktop with the browser window made narrow (675 x 1126).
+made on a desktop with the browser window made slim and tall (675 x 1259).
 
 ### Color Theme Button
 {:.no_toc}
@@ -159,8 +158,9 @@ engines use the "and" tests.
 The <kbd> ⚡ </kbd> (Lightning Bolt) button opens a
 proprietary, {{ site.title }} engineered quick jump window.
 The quick jump window allows you to quickly navigate web pages.
-The lightning bolt button floats and is always in the same spot
-on every page.
+The lightning bolt button appears whenever the page is scrolled.
+It stays in the same place for a few seconds after scrolling
+stops.
 
 ---
 
