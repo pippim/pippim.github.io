@@ -504,11 +504,20 @@ details[open] > summary {
 }
 
 .fade-in {
-    /* Fade text in over 4 seconds */
-    animation: fadeIn 4s;
+    /* Fade text in over 2 seconds */
+    animation: fadeIn 2s;
     @keyframes fadeIn {
         from { opacity: 0; }
         to   { opacity: 1; }
+    }
+}
+
+.fade-out {
+    /* Fade text out over 2 seconds */
+    animation: fadeIn 2s;
+    @keyframes fadeIn {
+        from { opacity: 1; }
+        to   { opacity: 0; }
     }
 }
 
@@ -584,7 +593,7 @@ details[open] > summary {
 
 #jump-button {  // In conjunction with class .page-header-button in HTML
     display: none;  // Invisible until document loaded to prevent image shift
-    position: sticky;
+    position: sticky;  // Made visible in /assets/js/search.js
     top: 1rem;  // From Top of screen when no page header
     margin-top: 4rem;  // From page <header>
     margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
