@@ -359,6 +359,7 @@ var timer = null
 window.addEventListener('scroll', function() {
     // begin fade in
     if (jb.classList.contains('fade-out')) {
+        jb.style.display = "block"
         jb.classList.replace('fade-out', 'fade-in')
         //console.log("FADING IN - window.addEventListener('scroll'")
     }
@@ -370,6 +371,7 @@ window.addEventListener('scroll', function() {
         // begin fade out - after 4 seconds of no scrolling
         if (jb.classList.contains('fade-in')) {
             jb.classList.replace('fade-in', 'fade-out')
+            jb.style.display = "none"
             //console.log("FADING OUT")
         }
     }, 6500)  // button stays up 4.5 seconds
