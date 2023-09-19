@@ -360,6 +360,7 @@ window.addEventListener('scroll', function() {
     // begin fade in
     if (jb.classList.contains('fade-out')) {
         jb.classList.replace('fade-out', 'fade-in')
+        console.log("jb.classList:", jb.classList)
     }
     if(timer !== null) {
         // Remove earlier generation fade-out timer
