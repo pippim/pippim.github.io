@@ -962,7 +962,8 @@ Finally, there are programs that have no `sudo apt install` capability
 such as [`pulsectl`](https://github.com/mk-fg/python-pulse-control/tree/master/pulsectl)
 that require `git pull` command followed by `cp` command.
 
-As of {{ site.refreshed }}, dependencies have to be manually
+As of {{ site.refreshed | date: "%B %e, %Y" }}, 
+dependencies have to be manually
 installed. A long term plan is to create an installation
 script that installs all dependencies automatically. In the short
 term, development has begun to identify installed versions.
