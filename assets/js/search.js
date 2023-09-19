@@ -173,12 +173,12 @@ const s = document.getElementById('search-symbol');         // Mag glass beside 
 set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshed
 
 
-/* jump-button visible on document loading causes images out of whack
-*/
-
+/*  jump-button visible on document loading causes images out of whack
+    Sep 18/23 - button now invisible until scrolling. Then fades in/out
 window.onload = function() {
     jb.style.display = "block"
 }
+*/
 
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
@@ -360,14 +360,14 @@ window.addEventListener('scroll', function() {
     if(timer !== null) {
         clearTimeout(timer)
         // begin fade in
-        if (jb.target.classList.contains('fade-out')) {
-            jb.target.classList.replace('fade-out', 'fade-in')
+        if (jb.classList.contains('fade-out')) {
+            jb.classList.replace('fade-out', 'fade-in')
         }
     }
     timer = setTimeout(function() {
         // begin fade out - after 4 seconds of no scrolling
-        if (jb.target.classList.contains('fade-in')) {
-            jb.target.classList.replace('fade-in', 'fade-out')
+        if (jb.classList.contains('fade-in')) {
+            jb.classList.replace('fade-in', 'fade-out')
         }
     }, 4500);  // button stays up 4.5 seconds
 }, false)
