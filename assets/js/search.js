@@ -347,21 +347,20 @@ fadeElms.forEach(el => observer.observe(el));
 
 /*  jump-button visible on document loading causes images out of whack
     Sep 18/23 - button now invisible until scrolling. Then fades in/out
-*/
 window.onload = function() {
     // jb.style.opacity = "0.0"  // Cannot define as part of the element
     jb.style.display = "block"  // Display none for proper page painting
 }
+*/
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
 // https: //stackoverflow.com/a/4620986/6929343
 var timer = null
-console.log("search.js STARTUP jb.classList:", jb.classList)
 window.addEventListener('scroll', function() {
     // begin fade in
     if (jb.classList.contains('fade-out')) {
         jb.classList.replace('fade-out', 'fade-in')
-        console.log("FADING IN - window.addEventListener('scroll'")
+        //console.log("FADING IN - window.addEventListener('scroll'")
     }
 
     // Remove earlier generation fade-out timer
@@ -371,7 +370,7 @@ window.addEventListener('scroll', function() {
         // begin fade out - after 4 seconds of no scrolling
         if (jb.classList.contains('fade-in')) {
             jb.classList.replace('fade-in', 'fade-out')
-            console.log("FADING OUT")
+            //console.log("FADING OUT")
         }
     }, 6500)  // button stays up 4.5 seconds
 }, false)
