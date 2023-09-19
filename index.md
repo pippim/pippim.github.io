@@ -115,16 +115,7 @@ The video on the left shows the {{ site.title }} Website
 on a typical mobile phone screen. The bottom of the video
 shows Google Chrome Debugger. 
 
-Use `<Control>` +`<Shift>` + `i` to open
-Google Chrome's debugger. Then select the **Console** tab.
-
-There are no errors in the {{ site.title }} website.
-Go to almost any website in the world and you will see
-errors. Of course {{ site.title }} isn't perfect and had errors too.
-But attention to detail means errors are tracked down
-and fixed.
-
-### Color Theme
+### Color Theme Button
 {:.no_toc}
 
 The top-left of every page has the <kbd> 🌟 </kbd> ("Sun") 
@@ -161,6 +152,15 @@ such as "the", "error", etc.
 
 Multiple search words are based on "or" tests. Most search 
 engines use the "and" tests.
+
+### Lightning Bolt Button
+{:no_toc}
+
+The <kbd> ⚡ </kbd> (Lightning Bolt) button opens a
+proprietary, {{ site.title }} engineered quick jump window.
+The quick jump window allows you to quickly navigate web pages.
+The lightning bolt button floats and is always in the same spot
+on every page.
 
 ---
 
