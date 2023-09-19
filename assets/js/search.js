@@ -356,48 +356,40 @@ var windowLoaded = false
 window.onload = function() { windowLoaded = true }
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
-var oldPageYOffset = 0  // https://stackoverflow.com/a/6453087/6929343
 // https: //stackoverflow.com/a/4620986/6929343
 var timer = null
 window.addEventListener('scroll', function() {
-    // Fake scroll event on page load is ignored:
-    if (windowLoaded) {
-        console.log("Window scrolling changed:", oldPageYOffset)
-        oldPageYOffset = window.pageYOffset
-        // begin fade in
-        if (jb.classList.contains('fade-out')) {
+    if (windowLoaded) {  // Fake scroll event on page load is ignored
+        if (jb.classList.contains('fade-out')) {  // begin fade in
             jb.style.display = "block"
             jb.classList.replace('fade-out', 'fade-in')
         }
     }
-
-    // Remove earlier generation fade-out timer
-    if (timer !== null) clearTimeout(timer)
-
+    if (timer !== null) clearTimeout(timer)  // Remove earlier generation
     timer = setTimeout(function() {
-        // begin fade out - after 4 seconds of no scrolling
-        if (jb.classList.contains('fade-in')) {
+        if (jb.classList.contains('fade-in')) {  // begin fade out
             jb.classList.replace('fade-in', 'fade-out')
             jb.style.display = "none"  // Not good, instant poof :(
-            // Fix: https://stackoverflow.com/a/17451356/6929343
-            /*
-                .fadeInOut {
-                    .transition-duration(0, 200ms);
-                    .transition-property(visibility, opacity);
-                    .transition-delay(0);
-
-                    &.hidden {
-                        visibility: hidden;
-                        .opacity(0);
-                        .transition-duration(200ms, 0);
-                        .transition-property(opacity, visibility);
-                        .transition-delay(0, 200ms);
-                    }
-                }
-            */
         }
     }, 3300)  // button stays up 3.3 seconds
 }, false)
+
+// Fix: https://stackoverflow.com/a/17451356/6929343
+/*
+    .fadeInOut {
+        .transition-duration(0, 200ms);
+        .transition-property(visibility, opacity);
+        .transition-delay(0);
+
+        &.hidden {
+            visibility: hidden;
+            .opacity(0);
+            .transition-duration(200ms, 0);
+            .transition-property(opacity, visibility);
+            .transition-delay(0, 200ms);
+        }
+    }
+*/
 
 
 // Lightning Bolt (Jump button) clicked
