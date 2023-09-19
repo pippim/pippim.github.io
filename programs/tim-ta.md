@@ -288,7 +288,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 ## Sample Web Browser Download *Open* / *Save* Dialog Box 
 
 When downloading files, your Web Browser will ask if you want to "*Open*"
-the file or "*Save*/ the file.
+the file or "*Save*" the file.
 
 In this screen example, change the default from *Open* to *Save*:
 
