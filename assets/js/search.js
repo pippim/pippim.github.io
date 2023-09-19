@@ -358,13 +358,19 @@ fadeElms.forEach(el => observer.observe(el));
 var timer = null;
 window.addEventListener('scroll', function() {
     if(timer !== null) {
-        clearTimeout(timer);
+        clearTimeout(timer)
         // begin fade in
+        if (jb.target.classList.contains('fade-out')) {
+            jb.target.classList.replace('fade-out', 'fade-in')
+        }
     }
     timer = setTimeout(function() {
-          // begin fade out
+        // begin fade out - after 4 seconds of no scrolling
+        if (jb.target.classList.contains('fade-in')) {
+            jb.target.classList.replace('fade-in', 'fade-out')
+        }
     }, 4500);  // button stays up 4.5 seconds
-}, false);
+}, false)
 
 
 // Lightning Bolt (Jump button) clicked
