@@ -357,12 +357,13 @@ fadeElms.forEach(el => observer.observe(el));
 // https: //stackoverflow.com/a/4620986/6929343
 var timer = null;
 window.addEventListener('scroll', function() {
+    // begin fade in
+    if (jb.classList.contains('fade-out')) {
+        jb.classList.replace('fade-out', 'fade-in')
+    }
     if(timer !== null) {
+        // Remove earlier generation fade-out timer
         clearTimeout(timer)
-        // begin fade in
-        if (jb.classList.contains('fade-out')) {
-            jb.classList.replace('fade-out', 'fade-in')
-        }
     }
     timer = setTimeout(function() {
         // begin fade out - after 4 seconds of no scrolling
