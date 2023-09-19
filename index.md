@@ -76,11 +76,12 @@ reference other articles.
 
 [Convert](https://pippim.github.io/programs/stack.html 
 "Convert Stack Exchange Posts to Your Own Website") 
-your popular *Stack Exchange Posts* to **your own website** 
+your popular *Stack Exchange Posts* to your own website 
 with additional features like;
 Table of Contents, Section Navigation buttons, Copy code
 blocks to clipboard and Show summary statistics. You can see
-the results by clicking the <kbd>✅ Answers</kbd> button above.
+the conversion results by clicking the 
+<kbd>✅ Answers</kbd> button above.
 
 A ***different kind*** of site search engine greets you. Others
 operate at an average speed of 2.5 MB/s (Megabytes per second)
@@ -95,7 +96,7 @@ the {{ site.title }} website because it is hosted by GitHub.
 
 ---
 
-## {{ site.title }} Website on Mobile Phones
+## Mobile Phone Support
 
 
 <video src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
@@ -111,9 +112,9 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 -->
 
-The video on the left shows the {{ site.title }} Website 
-on a typical mobile phone screen. The bottom of the video
-shows Google Chrome Debugger. 
+The video on the left shows what the {{ site.title }} Website 
+looks like on a typical mobile phone screen. The recording was
+made on a desktop with the browser window made narrow (675 x 1126).
 
 ### Color Theme Button
 {:.no_toc}
@@ -135,7 +136,6 @@ It always works the same way on mobile phones and desktop systems.
 The <kbd> ☰ </kbd> (Hamburger) button reveals Page Header Buttons that
 will not fit horizontally on a phone screen. A dropdown
 menu appears with buttons arranged vertically.
-
 
 ### Search Button
 {:.no_toc}
