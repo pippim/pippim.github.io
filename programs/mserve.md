@@ -1873,10 +1873,12 @@ Problems still exist using `curlftpfs` which hasn't been updated in
 select the *View* Dropdown Menu. Then select the *SQL Music Table* 
 option, and then the
 *Update Metadata* button. All files with `#` in the name are reported
-as `2) Other Location`. As of September 6, 2023, these songs:
+as `1) Not a music file.`. As of September 6, 2023, these songs:
 
-- Cannot be played 
-- Cannot be synced
+- Do not have their metadata automatically updated by the
+*Update Metadata* function
+- Have to be manually played for a second, to have their metadata
+updated into the **mserve** SQL database
 
 
 
