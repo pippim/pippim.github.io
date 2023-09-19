@@ -354,13 +354,19 @@ window.onload = function() {
 */
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
+var oldPageYOffset = 0  // https://stackoverflow.com/a/6453087/6929343
 // https: //stackoverflow.com/a/4620986/6929343
 var timer = null
 window.addEventListener('scroll', function() {
-    // begin fade in
-    if (jb.classList.contains('fade-out')) {
-        jb.style.display = "block"
-        jb.classList.replace('fade-out', 'fade-in')
+    // Fake scroll event on page load is ignored:
+    if (window.pageYOffset != oldPageYOffset) {
+        oldPageYOffset = window.pageYOffset
+        console.log("Window scrolling changed")
+        // begin fade in
+        if (jb.classList.contains('fade-out')) {
+            jb.style.display = "block"
+            jb.classList.replace('fade-out', 'fade-in')
+        }
     }
 
     // Remove earlier generation fade-out timer
