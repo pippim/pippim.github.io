@@ -172,14 +172,6 @@ const s = document.getElementById('search-symbol');         // Mag glass beside 
 
 set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshed
 
-
-/*  jump-button visible on document loading causes images out of whack
-    Sep 18/23 - button now invisible until scrolling. Then fades in/out
-window.onload = function() {
-    jb.style.display = "block"
-}
-*/
-
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
@@ -353,9 +345,18 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 const fadeElms = document.querySelectorAll('.fade');
 fadeElms.forEach(el => observer.observe(el));
 
+
+/*  jump-button visible on document loading causes images out of whack
+    Sep 18/23 - button now invisible until scrolling. Then fades in/out
+*/
+window.onload = function() {
+    jb.style.opacity = "0.0"
+    jb.style.display = "block"  // Display none for proper page painting
+}
+
 // Lightning Bolt (Jump Button) appears when scrolling up/down
 // https: //stackoverflow.com/a/4620986/6929343
-var timer = null;
+var timer = null
 console.log("search.js STARTUP jb.classList:", jb.classList)
 window.addEventListener('scroll', function() {
     // begin fade in
