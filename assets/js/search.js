@@ -359,20 +359,19 @@ window.onload = function() {
 var timer = null
 console.log("search.js STARTUP jb.classList:", jb.classList)
 window.addEventListener('scroll', function() {
-    var target = jb.classList
     console.log("window.addEventListener('scroll'")
     // begin fade in
-    if (target.contains('fade-out')) {
-        target = target.replace('fade-out', 'fade-in')
+    if (jb.classList.contains('fade-out')) {
+        jb.classList.replace('fade-out', 'fade-in')
     }
 
     // Remove earlier generation fade-out timer
-    if(timer !== null) clearTimeout(timer)
+    if (timer !== null) clearTimeout(timer)
 
     timer = setTimeout(function() {
         // begin fade out - after 4 seconds of no scrolling
-        if (target.contains('fade-in')) {
-            target = target.replace('fade-in', 'fade-out')
+        if (jb.classList.contains('fade-in')) {
+            jb.classList.replace('fade-in', 'fade-out')
         }
     }, 6500)  // button stays up 4.5 seconds
 }, false)
