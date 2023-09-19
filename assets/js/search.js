@@ -352,6 +352,8 @@ window.onload = function() {
     jb.style.display = "block"  // Display none for proper page painting
 }
 */
+var windowLoaded = false
+window.onload = function() { windowLoaded = true }
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
 var oldPageYOffset = 0  // https://stackoverflow.com/a/6453087/6929343
@@ -359,9 +361,9 @@ var oldPageYOffset = 0  // https://stackoverflow.com/a/6453087/6929343
 var timer = null
 window.addEventListener('scroll', function() {
     // Fake scroll event on page load is ignored:
-    if (window.pageYOffset != oldPageYOffset) {
+    if (windowLoaded) {
+        console.log("Window scrolling changed:", oldPageYOffset)
         oldPageYOffset = window.pageYOffset
-        console.log("Window scrolling changed")
         // begin fade in
         if (jb.classList.contains('fade-out')) {
             jb.style.display = "block"
