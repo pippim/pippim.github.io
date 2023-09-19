@@ -373,7 +373,7 @@ window.addEventListener('scroll', function() {
         if (jb.classList.contains('fade-in')) {
             jb.classList.replace('fade-in', 'fade-out')
         }
-    }, 4500)  // button stays up 4.5 seconds
+    }, 6500)  // button stays up 4.5 seconds
 }, false)
 
 
