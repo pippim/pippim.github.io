@@ -345,12 +345,11 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 const fadeElms = document.querySelectorAll('.fade');
 fadeElms.forEach(el => observer.observe(el));
 
-
 /*  jump-button visible on document loading causes images out of whack
     Sep 18/23 - button now invisible until scrolling. Then fades in/out
 */
 window.onload = function() {
-    jb.style.opacity = "0.0"
+    // jb.style.opacity = "0.0"  // Cannot define as part of the element
     jb.style.display = "block"  // Display none for proper page painting
 }
 
