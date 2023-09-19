@@ -10,9 +10,9 @@ created_date: 2018-06-12 15:14:03
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "4,649 "
+views:        "4,657 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-12-How-to-disable-automatic-brightness-adjustment-in-Ubuntu-14.04_.md
 toc:          false
 navigation:   false

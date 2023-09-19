@@ -10,9 +10,9 @@ created_date: 2019-04-29 23:17:43
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,635 "
+views:        "2,651 "
 accepted:     Accepted
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-29-Processor-caps-at-800Mhz.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2017-03-11 20:25:32
 edit_date:    2017-07-28 22:35:52
 votes:        "5 "
 favorites:    
-views:        "1,233,687 "
+views:        "1,234,823 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-do-I-remove-old-kernel-versions-to-clean-up-the-boot-menu_.md
 toc:          true
 navigation:   true

@@ -10,9 +10,9 @@ created_date: 2018-03-18 17:08:46
 edit_date:    2018-03-19 11:09:46
 votes:        "3 "
 favorites:    
-views:        "1,690 "
+views:        "1,702 "
 accepted:     Accepted
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window.md
 toc:          false
 navigation:   false

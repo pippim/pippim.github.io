@@ -10,9 +10,9 @@ created_date: 2018-11-05 14:58:36
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "445 "
+views:        "449 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-05-dconf-database-how-to-remove-duplicate-_-triplicates_.md
 toc:          false
 navigation:   false

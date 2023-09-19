@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1047427
 type:         Answer
 tags:         command-line bash
 created_date: 2018-06-17 19:32:44
-edit_date:    
+edit_date:    2023-09-04 18:25:16
 votes:        "4 "
 favorites:    
-views:        "7,517 "
+views:        "7,605 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-source-command-error-from-_usr_share_bash-completion_bash-completion-when-I-open-a-terminal.md
 toc:          false
 navigation:   false
@@ -57,9 +57,10 @@ Now run the script `alias-check`:
 ``` text
 bash: /home/rick/.bashrc: line 171: syntax error: unexpected end of file
 alert is aliased to `notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e 's/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//')"'
-cdd is aliased to `cd /home/rick/SERVER/#/Dump'
 cdh is aliased to `cd /home/rick'
-cdm is aliased to `cd /media/rick/ST9_Win7/Users/Person/Music/iTunes/iTunes Media/Music'
+cdo is aliased to `cd /mnt/old'
+cdt is aliased to `cd /usr/share/grub/themes/Tuxkiller2'
+
 egrep is aliased to `egrep --color=auto'
 egrep is /bin/egrep
 fgrep is aliased to `fgrep --color=auto'

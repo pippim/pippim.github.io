@@ -10,9 +10,9 @@ created_date: 2018-06-24 07:20:34
 edit_date:    2018-06-24 15:01:21
 votes:        "5 "
 favorites:    
-views:        "4,559 "
+views:        "4,598 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-24-Pin-kernel-version.md
 toc:          false
 navigation:   false

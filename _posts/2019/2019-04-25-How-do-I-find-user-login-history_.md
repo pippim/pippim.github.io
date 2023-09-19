@@ -10,9 +10,9 @@ created_date: 2019-04-25 23:27:16
 edit_date:    2019-04-25 23:51:10
 votes:        "8 "
 favorites:    
-views:        "7,074 "
+views:        "7,142 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-25-How-do-I-find-user-login-history_.md
 toc:          false
 navigation:   false

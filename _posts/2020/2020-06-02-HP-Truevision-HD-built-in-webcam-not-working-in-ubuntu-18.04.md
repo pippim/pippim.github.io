@@ -10,9 +10,9 @@ created_date: 2020-06-02 00:17:28
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "11,423 "
+views:        "11,502 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-02-HP-Truevision-HD-built-in-webcam-not-working-in-ubuntu-18.04.md
 toc:          false
 navigation:   false

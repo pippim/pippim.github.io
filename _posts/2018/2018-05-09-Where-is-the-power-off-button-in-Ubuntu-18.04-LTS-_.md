@@ -10,9 +10,9 @@ created_date: 2018-05-09 23:37:37
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "6,008 "
+views:        "6,014 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Where-is-the-power-off-button-in-Ubuntu-18.04-LTS-_.md
 toc:          false
 navigation:   false

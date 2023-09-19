@@ -10,9 +10,9 @@ created_date: 2019-04-28 17:34:04
 edit_date:    2019-04-29 12:30:42
 votes:        "14 "
 favorites:    
-views:        "8,380 "
+views:        "8,415 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-What-does-_rf_-mean-in-_rfkill__.md
 toc:          false
 navigation:   false

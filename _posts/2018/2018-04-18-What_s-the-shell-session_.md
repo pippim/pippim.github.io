@@ -10,9 +10,9 @@ created_date: 2018-04-18 10:13:44
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "9,583 "
+views:        "9,645 "
 accepted:     
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-What_s-the-shell-session_.md
 toc:          false
 navigation:   false

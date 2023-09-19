@@ -10,9 +10,9 @@ created_date: 2018-01-30 12:07:54
 edit_date:    2018-01-31 00:46:37
 votes:        "5 "
 favorites:    
-views:        "8,987 "
+views:        "9,030 "
 accepted:     Accepted
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-30-Screen-turning-off-when-idle-even-with-power-settings-disabled.md
 toc:          false
 navigation:   false

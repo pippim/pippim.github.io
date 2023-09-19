@@ -15,7 +15,7 @@
 | `mbz_get2.py`         |     143 | 2023-08-22 00:18:06 | Get musicbrainzngs artwork              |
 | `message.py`          |   1,856 | 2023-09-04 23:05:30 | Message Dialog Boxes                    |
 | `monitor.py`          |     890 | 2023-09-07 21:28:01 | Multiple Monitor Management             |
-| `mserve.py`           |  16,735 | 2023-09-12 15:43:31 | Main **mserve** Python Module           |
+| `mserve.py`           |  16,731 | 2023-09-19 12:42:58 | Main **mserve** Python Module           |
 | `mserve_config.py`    |   1,284 | 2023-09-14 03:38:20 | Dependencies Checker and Setup          |
 | `sql.py`              |   3,796 | 2023-09-10 11:34:12 | SQLite3 Interface                       |
 | `timefmt.py`          |     232 | 2023-09-03 12:48:58 | Date & Time formatting                  |
@@ -24,4 +24,4 @@
 | `vu_pulse_audio.py`   |     793 | 2023-09-12 16:36:39 | Pulse Audio Volume Controls             |
 | `webscrape.py`        |   1,408 | 2023-09-12 15:47:47 | Webscrape Lyrics from genius.com        |
 | `x11.py`              |     309 | 2023-07-12 23:14:15 | X11 window client                       |
-| ALL Modules           |  42,648 |                     |                                         |
+| ALL Modules           |  42,644 |                     |                                         |

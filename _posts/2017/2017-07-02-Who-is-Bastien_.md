@@ -10,9 +10,9 @@ created_date: 2017-07-02 20:56:37
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "1,707 "
+views:        "1,709 "
 accepted:     Accepted
-uploaded:     2023-09-14 14:30:15
+uploaded:     2023-09-19 12:47:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-02-Who-is-Bastien_.md
 toc:          false
 navigation:   false
