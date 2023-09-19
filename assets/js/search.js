@@ -312,46 +312,14 @@ window.onclick = function (event) {
 
 function closeSearchForm() {
     /* Shared between 'X' to close and click outside search query */
-    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    //const f = document.getElementById('search-form')  // Wrapper around query & close button
     f.style.display = "none"  // Close search form
     m.style.display = "none"  // Sep 2/23 - Search modal may be open
     boolSearchForm = false
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({top: 0, behavior: 'smooth'})
     reverseContentDimmed()
 }
 
-// Element fades in when scrolled to 70% visible
-// From: https://stackoverflow.com/a/62979471/6929343
-const observerOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.7
-};
-
-function observerCallback(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // fade in observed elements that are in view
-      entry.target.classList.replace('fadeOut', 'fadeIn');
-    } else {
-      // fade out observed elements that are not in view
-      entry.target.classList.replace('fadeIn', 'fadeOut');
-    }
-  });
-}
-
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-const fadeElms = document.querySelectorAll('.fade');
-fadeElms.forEach(el => observer.observe(el));
-
-/*  jump-button visible on document loading causes images out of whack
-    Sep 18/23 - button now invisible until scrolling. Then fades in/out
-window.onload = function() {
-    // jb.style.opacity = "0.0"  // Cannot define as part of the element
-    jb.style.display = "block"  // Display none for proper page painting
-}
-*/
 var windowLoaded = false
 window.onload = function() { windowLoaded = true }
 
@@ -371,7 +339,7 @@ window.addEventListener('scroll', function() {
             jb.classList.replace('fade-in', 'fade-out')
             jb.style.display = "none"  // Not good, instant poof :(
         }
-    }, 3300)  // button stays up 3.3 seconds
+    }, 4000)  // button stays visible for 4 seconds
 }, false)
 
 // Fix: https://stackoverflow.com/a/17451356/6929343
