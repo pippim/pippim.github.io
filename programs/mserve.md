@@ -1743,8 +1743,11 @@ are mounted as owned by **root**.
 The first time synchronization is run every file is `diff` checked which 
 takes considerable time. Then modification time stamps are synchronized 
 and subsequent synchronizations are 100 times faster. The first time
-it takes 1.5 hours for 4,000 songs over Wifi using `curlftpfs`. Subsequent
-synchronizations take x minutes for 4,000 songs.
+it takes 1.5 hours to synchronize 4,000 songs over Wifi using `curlftpfs`. 
+Subsequent synchronizations take 6 seconds for 4,000 songs (when there
+are no differences).
+
+### Known Problems with `curlftpfs`
 
 `curlftpfs` chokes on filenames containing `#` of `%`.
 
@@ -1767,9 +1770,8 @@ Quote below from:
 > Using that, curl will not translate them, and will target the correct 
 > filename.
 
-A future upgrade to **mserve** will deal with the `#` and `%` issues.
-In the meantime, **mserve** will report:
-*"Error: Permission denied on 'diff' check"*.
+When `curlftpfs` chokes on a file,  **mserve** transfers the file
+using `ftp` to compare the file to the current location.
 
 Occasionally time-out errors are displayed in the console like
 this:
