@@ -370,10 +370,25 @@ window.addEventListener('scroll', function() {
         // begin fade out - after 4 seconds of no scrolling
         if (jb.classList.contains('fade-in')) {
             jb.classList.replace('fade-in', 'fade-out')
-            jb.style.display = "none"  // Not good, instant :(
+            jb.style.display = "none"  // Not good, instant poof :(
             // Fix: https://stackoverflow.com/a/17451356/6929343
+            /*
+                .fadeInOut {
+                    .transition-duration(0, 200ms);
+                    .transition-property(visibility, opacity);
+                    .transition-delay(0);
+
+                    &.hidden {
+                        visibility: hidden;
+                        .opacity(0);
+                        .transition-duration(200ms, 0);
+                        .transition-property(opacity, visibility);
+                        .transition-delay(0, 200ms);
+                    }
+                }
+            */
         }
-    }, 4500)  // button stays up 4.5 seconds
+    }, 3300)  // button stays up 3.3 seconds
 }, false)
 
 
