@@ -415,7 +415,7 @@ function buildJumpModal() {
     // Introduction based on heading counts
     if (hdgArr.length == 0) {
         html = "<h3> 🔍 &emsp; No headings (h1, h2, etc.) found!</h3>\n";
-        html += "<p>Quick Jump (Hamburger Menu) button ineffective.<br><br>\n"
+        html += "<p>Quick Jump (Lightning Bolt Menu) button ineffective.<br><br>\n"
         html += "Use the Quick Jump button on pages that have have headings.</p>\n"
         jt.innerHTML = html;
         jm.style.display = "block";  // Turn on search headers display
