@@ -1,46 +1,39 @@
 #!/bin/bash
 
-# massage_tree.sh
+# ~/website/sede/massage_tree.sh
 
 # Process lines:
-#│   ├── 2021 [31 entries exceeds filelimit, not opening dir]
-#│   └── 2022
-#│       ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
-#│       ├── 2022-02-12-How-to-change-_lsblk_-sort-order_.md
-#│       ├── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
-#│       ├── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
-#│       ├── 2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
-#│       ├── 2022-02-24-stdin_-invalid-argument.md
-#│       ├── 2022-03-13-Temporarily-disable-distracting-software.md
-#│       ├── 2022-03-14-How-to-adjust-Trackpad-_Tap-Sensitivity_-without-adjusting-mouse-speed.md
-#│       └── 2022-03-20-Ubuntu-can_t-find-Wifi-Driver-on-Maestro-Laptop.md
+# │   ├── 2021 [31 entries exceeds filelimit, not opening dir]
+# │   ├── 2022
+# │   │   ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
+# │   │   ├── 2022-    "       "       "       "
+# │   │   └── 2022-03-20-Ubuntu-can_t-find-Wifi-Driver-on-Maestro-Laptop.md
+# │   └── 2023
 
-# Make "│   └── 2022 [9 entries suppressed by massage_tree.sh]"
-# Delete lines with "│       ├── 2022-"
+# Delete lines with: "─ 2022-"
+# New summary line: "│   ├── 2022 [13 entries suppressed by massage_tree.sh]"
 
 if [ ! -f "$1" ] ; then
     echo "File $1 doesn't exist"
     exit 1
 fi
 
-mapfile -t treeArray < "$1"
-newArray=()
-year2022=0
 ndx=0
 count=0
+y2022=0
+newArray=()
+mapfile -t treeArray < "$1"
 for value in "${treeArray[@]}"
 do
     if [[ $value == *"─ 2022-"* ]]; then
-        [[ $year2022 == 0 ]] && year2022=$ndx
-        ((count++))
+        [[ $y2022 == 0 ]] && y2022=$((ndx - 1))  # First "2022-" found
+        ((count++))  # How many "2022-" were found
     else
         newArray+=("$value")
     fi
     ((ndx++))
 done
-echo "massage_tree.sh - Year 2022 index: $year2022"
-newArray[$year2022]="│   └── 2022 [$count entries suppressed by massage_tree.sh]"
+
+newArray[$y2022]="│   ├── 2022 [$count entries suppressed by massage_tree.sh]"
 # 2023 needs to be done, but no posts. Total line 112 files needs 9 subtracted.
-treeArray=("${newArray[@]}")
-unset newArray
-printf "%s\n" "${treeArray[@]}" > "$1"
+printf "%s\n" "${newArray[@]}" > "$1"
