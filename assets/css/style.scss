@@ -728,8 +728,11 @@ a.search-results:visited {
     transition: all .3s ease-in-out;
 }
 
-// Shadows #line_draw in index.md
-.line-draw {  // For website_tree.txt copied from #tcmLineDraw
+// Compliments #line_draw in index.md, but doesn't work
+.line-draw pre,
+.line-draw .highlight,
+.line-draw .highlight pre,
+.line-draw {  // from: /_includes/tcm-common-code.js #tcmLineDraw
     font-family: Consolas, "Liberation Mono", Menlo, Courier,
                  "Courier New", monospace ! important;
     line-height: .55 ! important;
