@@ -728,10 +728,11 @@ a.search-results:visited {
     transition: all .3s ease-in-out;
 }
 
-.line-draw {
+// Shadows #line_draw in index.md
+.line-draw {  // For website_tree.txt copied from #tcmLineDraw
     font-family: Consolas, "Liberation Mono", Menlo, Courier,
-                 "Courier New", monospace;
-    line-height: .55;
+                 "Courier New", monospace ! important;
+    line-height: .55 ! important;
 }
 
 /* MAJOR SECTION ======== The Cookie Machine (TCM)
