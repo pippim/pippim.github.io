@@ -134,7 +134,7 @@ then you will only see a solid line.</span>
 <div id="uploadedSounds"></div>
 
 **NOTE:** 
-> The Firefox Web Browser limits localStorage to
+> The Firefox Web Browser limits `localStorage` to
 > 5MB. This doesn't allow for many custom sound files. 
 > The other web browsers have a larger quota. To increase quota
 > in Firefox, follow these steps:
