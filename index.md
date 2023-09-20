@@ -581,9 +581,9 @@ how the {{ site.title }} website is structured for deploying with
 looked like this:
 
 <div class="line-draw">
-   {% highlight text %}
-      {% include website_tree.txt %}
-   {% endhighlight %}
+{% highlight text %}
+{% include website_tree.txt %}
+{% endhighlight %}
 </div>
 
 
