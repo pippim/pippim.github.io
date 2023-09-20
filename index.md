@@ -403,13 +403,18 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-{% include image.html src="/assets/img/github pages themes.png"
-   alt="GitHub Pages Themes.png"
-   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
-   caption="Image credit 🔗:
-            <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
-               >Yale University</a>"
-%}
+# https://pages-themes.github.io/cayman/
+#
+<a href="https://pages-themes.github.io/cayman/">
+   {% include image.html src="/assets/img/github pages themes.png"
+      alt="GitHub Pages Themes.png"
+      style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
+      caption="Image credit 🔗:
+               <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
+                  >Yale University</a>"
+   %}
+</a>
+
 ## Jekyll Themes
 
 There are many [GitHub Pages Jekyll Themes ⧉ 🔗](https://pages.github.com/themes/ 
@@ -568,10 +573,11 @@ visibility on all pages.
 ## {{ site.title }} Website Directory Tree
 {:.no_toc}
 
-The directory tree will help you get a better understanding
-of the {{ site.title }} website at `pippim.github.io`. As of
+The *Website Directory Tree* illustrates
+how the {{ site.title }} website is structured for deploying with
+***GitHub Pages***. On
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
-for {{ site.title }} on GitHub Pages looked like this:
+looked like this:
 
 <div class="line-draw">
 {% highlight text %}
@@ -583,10 +589,11 @@ for {{ site.title }} on GitHub Pages looked like this:
 ## Daily Backup
 {:.no_toc}
 
-Normally you will `git pull` all the directories and files from your website
+You can `git pull` all directories and files from the
+{{ site.title }} website, stored on GitHub, 
 to your local drive. If you plan on developing locally, you probably want
 to save your daily work. This script is what {{ site.title }} uses for
-daily backup to gmail.com (in the cloud, so it should be safe):
+daily off-site backup to `gmail.com`:
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
