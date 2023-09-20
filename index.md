@@ -579,7 +579,7 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% endhighlight %}
 </div>
 <style> 
-// #line_draw.highlight pre, pre { line-height: 1 ! important; }
+#line_draw.highlight pre { line-height: 1 ! important; }
 // .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
 </style>
 
