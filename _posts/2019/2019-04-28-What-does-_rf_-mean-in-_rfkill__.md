@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "8,415 "
 accepted:     
-uploaded:     2023-09-19 23:19:20
+uploaded:     2023-09-19 23:21:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-What-does-_rf_-mean-in-_rfkill__.md
 toc:          false
 navigation:   false

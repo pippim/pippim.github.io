@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,173 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:19:20
+uploaded:     2023-09-19 23:21:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-15-Change-dynamic-wallpaper-directory-every-season.md
 toc:          false
 navigation:   true

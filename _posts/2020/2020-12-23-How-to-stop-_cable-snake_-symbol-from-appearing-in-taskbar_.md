@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "571 "
 accepted:     
-uploaded:     2023-09-19 23:19:20
+uploaded:     2023-09-19 23:21:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-23-How-to-stop-_cable-snake_-symbol-from-appearing-in-taskbar_.md
 toc:          false
 navigation:   false

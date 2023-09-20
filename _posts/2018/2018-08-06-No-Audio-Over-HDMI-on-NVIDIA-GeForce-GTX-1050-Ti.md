@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,473 "
 accepted:     
-uploaded:     2023-09-19 23:19:20
+uploaded:     2023-09-19 23:21:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-06-No-Audio-Over-HDMI-on-NVIDIA-GeForce-GTX-1050-Ti.md
 toc:          false
 navigation:   false
