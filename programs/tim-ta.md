@@ -133,7 +133,7 @@ then you will only see a solid line.</span>
 
 <div id="uploadedSounds"></div>
 
-**NOTE:** 
+***NOTE:***
 > The Firefox Web Browser limits `localStorage` to
 > 5 Megabytes (MB). That doesn't allow for many custom sound files. 
 > Other web browsers have a larger quota based on percentage of 
@@ -146,12 +146,14 @@ then you will only see a solid line.</span>
 > for 5 Megabytes.
 
 
-**WARNING:**
+***WARNING:***
 > Firefox doesn't support `.wav` files very well. It is recommended
 > you convert them to `.mp3` or similar format before uploading.
+> For example, from the console / command line, use:
 >  
 > `ffmpeg -i track01.wav -acodec mp3 track01.mp3`
->   
+>
+> The above converts filename `track01.wav` to filename `track01.mp3`.
 > You can also use one of the free online media conversion services.  
 
 ---
