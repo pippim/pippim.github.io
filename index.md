@@ -578,9 +578,10 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> 
-#line_draw.highlight pre { line-height: .55 ! important; }
-// .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
+<style>
+// None of this is working. Adding class .line-draw doesn't fix
+//#line_draw.highlight pre, pre { line-height: 1 ! important; }
+//.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
 </style>
 
 
