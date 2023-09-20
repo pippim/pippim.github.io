@@ -403,8 +403,6 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# https://pages-themes.github.io/cayman/
-#
 <a href="https://pages-themes.github.io/cayman/">
    {% include image.html src="/assets/img/github pages themes.png"
       alt="GitHub Pages Themes.png"
@@ -628,11 +626,17 @@ tar -rpf "$Filename" website/sede/StackQuery
 
 ## Convert Stack Exchange to GitHub Pages
 
-{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
-   alt="stack-to-blog.py"
-   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-   caption="Progress Display Bar used by <b>stack-to-blog.py</b>"
-%}
+<!-- Dummy div required for <a href...> to work for clicking -->
+<div>
+   <a href="programs/stack.html">
+      {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
+         alt="stack-to-blog.py"
+         style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+         caption="Progress Display Bar used by <b>stack-to-blog.py</b>"
+      %}
+   </a>
+</div>
+
 
 Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy
 as simply copying them over to GitHub Pages. The python program
