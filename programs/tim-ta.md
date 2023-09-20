@@ -135,8 +135,9 @@ then you will only see a solid line.</span>
 
 **NOTE:** 
 > The Firefox Web Browser limits `localStorage` to
-> 5MB. This doesn't allow for many custom sound files. 
-> The other web browsers have a larger quota. To increase quota
+> 5 Megabytes (MB). That doesn't allow for many custom sound files. 
+> Other web browsers have a larger quota based on percentage of 
+> total disk space, e.g. 60%. To increase the quota
 > in Firefox, follow these steps:
 >   
 > Enter `about:config` in the address bar -> search for 
