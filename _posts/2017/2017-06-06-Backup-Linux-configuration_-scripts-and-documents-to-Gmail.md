@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "5,479 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:06:29
+uploaded:     2023-09-19 23:19:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail.md
 toc:          true
 navigation:   true

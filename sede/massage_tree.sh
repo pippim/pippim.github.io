@@ -38,7 +38,7 @@ do
     fi
     ((ndx++))
 done
-# echo "Year 2022 index: $year2022"  # 44 printed.
+echo "Year 2022 index: $year2022"  # 44 printed.
 # Line below isn't updating array?
 NewArray[$year2022]="│   └── 2022 [$count entries suppressed by massage_tree.sh]"
 treeArray=("${newArray[@]}")

@@ -157,7 +157,8 @@ cp ~/website/programs/mserve_incl.md programs/
 git add programs/mserve_incl.md
 
 # Refresh stack-to-blog and rouge_languages.txt
-cp ~/website/sede/refresh.sh sede/
+cp -p ~/website/sede/refresh.sh sede/
+cp -p ~/website/sede/massage_tree.sh sede/
 cp ~/website/sede/stack-to-blog.py sede/
 cp ~/website/sede/rouge_languages.txt sede/
 git add sede/
