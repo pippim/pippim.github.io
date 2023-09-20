@@ -140,7 +140,7 @@ menu appears with buttons arranged vertically.
 {:.no_toc}
 
 The <kbd> 🔍 </kbd> (Magnifying Glass) button opens 
-a proprietary, {{ site.title }} engineered
+a proprietary, {{ site.title }} engineered,
 search engine. Free of third-party search engine providers! 
 Search results are point-weighted with words
 appearing in the Page Titles and Headers getting more weight 
@@ -156,8 +156,8 @@ engines use the "and" tests.
 {:no_toc}
 
 The <kbd> ⚡ </kbd> (Lightning Bolt) button opens a
-proprietary, {{ site.title }} engineered quick jump window.
-The quick jump window allows you to quickly navigate web pages.
+proprietary, {{ site.title }} engineered, quick jump window.
+The quick jump window allows you to quickly navigate within a web page.
 The lightning bolt button appears whenever the page is scrolled.
 It stays in the same place for a few seconds after scrolling
 stops.
@@ -573,14 +573,14 @@ of the {{ site.title }} website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
-<div id="line_draw">
+<div id="line_draw" class="line-draw">
 {% highlight text %}
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
 <style> 
-#line_draw.highlight pre, pre { line-height: 1 ! important; }
-.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
+// #line_draw.highlight pre, pre { line-height: 1 ! important; }
+// .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
 </style>
 
 
