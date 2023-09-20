@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "24,056 "
 accepted:     
-uploaded:     2023-09-19 12:47:52
+uploaded:     2023-09-19 23:02:23
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-29-Can-I-get-a-virus-by-using-_sudo-apt-get-install__.md
 toc:          false
 navigation:   false

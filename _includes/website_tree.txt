@@ -1,7 +1,30 @@
 ├── assets
 │   ├── css
 │   │   └── style.scss
-│   ├── img [23 entries exceeds filelimit, not opening dir]
+│   ├── img
+│   │   ├── hrb
+│   │   ├── icons
+│   │   ├── iothings
+│   │   ├── mserve
+│   │   ├── mt
+│   │   ├── stack
+│   │   ├── tcm
+│   │   ├── tim-ta
+│   │   ├── ask_ubuntu.png
+│   │   ├── ask ubuntu points 2018.png
+│   │   ├── Ask Ubuntu profile.png
+│   │   ├── Blog_Project-Management-101.png
+│   │   ├── cookie-clicker.png
+│   │   ├── earth-from-space.jpg
+│   │   ├── Edm Temp 2022-01-26.png
+│   │   ├── Edm temperature April 7, 2022.png
+│   │   ├── Edm Temperature December 7, 2021.png
+│   │   ├── github pages themes.png
+│   │   ├── inspectocat.jpg
+│   │   ├── jail-break-cropped.png
+│   │   ├── Octocat.png
+│   │   ├── octojekyll-opt.jpg
+│   │   └── pngwing.com.png
 │   ├── js
 │   │   ├── hrb.js
 │   │   ├── hyperlinkRecipe.js
@@ -115,4 +138,4 @@
 ├── programs.md
 └── test.md
 
-20 directories, 96 files
+28 directories, 111 files

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "65 "
 accepted:     
-uploaded:     2023-09-19 12:47:52
+uploaded:     2023-09-19 23:02:23
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-11-Pop-up-bubble-messages-for-boot-related-issues.md
 toc:          false
 navigation:   false

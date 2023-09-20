@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,558 "
 accepted:     Accepted
-uploaded:     2023-09-19 12:47:52
+uploaded:     2023-09-19 23:02:23
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-19-How-to-cycle-through-grub-background-images-every-boot.md
 toc:          false
 navigation:   false

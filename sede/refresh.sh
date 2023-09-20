@@ -128,7 +128,8 @@ cp ~/website/_includes/posts_by_tag.html _includes/
 cp ~/website/_includes/posts_by_vote.html _includes/
 
 # Add tree listing
-tree -L 3 --dirsfirst --filelimit 20 > /tmp/tree.work
+tree -L 3 --dirsfirst --filelimit 30 > /tmp/tree.work
+massage_tree.sh /tmp/tree.work  # Remove _posts/2022/9 entries
 tail -n +2 /tmp/tree.work > _includes/website_tree.txt
 rm /tmp/tree.work
 

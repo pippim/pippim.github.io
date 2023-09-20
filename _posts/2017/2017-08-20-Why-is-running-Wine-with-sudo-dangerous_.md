@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,560 "
 accepted:     
-uploaded:     2023-09-19 12:47:52
+uploaded:     2023-09-19 23:02:23
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-20-Why-is-running-Wine-with-sudo-dangerous_.md
 toc:          false
 navigation:   false
