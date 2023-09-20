@@ -573,16 +573,11 @@ of the {{ site.title }} website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
-<div id="line_draw" class="line-draw">
+<div class="line-draw">
 {% highlight text %}
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style>
-// None of this is working. Adding class .line-draw doesn't fix
-//#line_draw.highlight pre, pre { line-height: 1 ! important; }
-//.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
-</style>
 
 
 ## Daily Backup
