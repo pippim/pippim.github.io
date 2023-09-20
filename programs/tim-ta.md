@@ -139,9 +139,10 @@ then you will only see a solid line.</span>
 > The other web browsers have a larger quota. To increase quota
 > in Firefox, follow these steps:
 >   
-> Enter "about:config" in the address bar -> search for 
-> "dom.storage.default_quota" -> edit value and enter larger 
-> value (e.g. 25120) (default is 5120).
+> Enter `about:config` in the address bar -> search for 
+> `dom.storage.default_quota` -> edit value and enter larger 
+> value; e.g. `25120` for 25 Megabytes. The default is `5120`
+> for 5 Megabytes.
 
 
 **WARNING:**
