@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,603 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:02:23
+uploaded:     2023-09-19 23:06:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-22-Selected-Sound-Output-Device-Not-Persisting-Between-Reboots-in-gnome-control-center.md
 toc:          false
 navigation:   false

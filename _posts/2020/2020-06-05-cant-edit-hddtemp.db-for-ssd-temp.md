@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "229 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:02:23
+uploaded:     2023-09-19 23:06:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-cant-edit-hddtemp.db-for-ssd-temp.md
 toc:          false
 navigation:   false

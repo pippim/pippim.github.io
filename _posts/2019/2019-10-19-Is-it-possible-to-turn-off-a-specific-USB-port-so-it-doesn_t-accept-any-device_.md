@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "45,904 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:02:23
+uploaded:     2023-09-19 23:06:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-19-Is-it-possible-to-turn-off-a-specific-USB-port-so-it-doesn_t-accept-any-device_.md
 toc:          false
 navigation:   false
