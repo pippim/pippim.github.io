@@ -735,7 +735,7 @@ a.search-results:visited {
 .line-draw {  // from: /_includes/tcm-common-code.js #tcmLineDraw
     font-family: Consolas, "Liberation Mono", Menlo, Courier,
                  "Courier New", monospace ! important;
-    font-size: 1.5rem ! important;
+    // font-size: 1.5rem ! important;  // increases line spacing not font
     line-height: 1.14 ! important;
 }
 
