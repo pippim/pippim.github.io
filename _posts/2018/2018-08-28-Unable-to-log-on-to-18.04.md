@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,569 "
 accepted:     
-uploaded:     2023-09-19 23:21:49
+uploaded:     2023-09-19 23:40:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-Unable-to-log-on-to-18.04.md
 toc:          false
 navigation:   false

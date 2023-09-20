@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "2,930 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:21:49
+uploaded:     2023-09-19 23:40:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-20-How-can-I-pin-a-specific-document-so-I-can-access-it-easily-and-frequently_.md
 toc:          false
 navigation:   false

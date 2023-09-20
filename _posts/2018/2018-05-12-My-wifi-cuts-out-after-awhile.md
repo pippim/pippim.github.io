@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "846 "
 accepted:     
-uploaded:     2023-09-19 23:21:49
+uploaded:     2023-09-19 23:40:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-My-wifi-cuts-out-after-awhile.md
 toc:          false
 navigation:   false

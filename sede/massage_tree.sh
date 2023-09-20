@@ -30,7 +30,7 @@ ndx=0
 count=0
 for value in "${treeArray[@]}"
 do
-    if [[ $value == *"2022-"* ]]; then
+    if [[ $value == *"─ 2022-"* ]]; then
         [[ $year2022 == 0 ]] && year2022=$ndx
         ((count++))
     else
@@ -38,9 +38,9 @@ do
     fi
     ((ndx++))
 done
-echo "Year 2022 index: $year2022"  # 44 printed.
-# Line below isn't updating array?
-NewArray[$year2022]="│   └── 2022 [$count entries suppressed by massage_tree.sh]"
+echo "massage_tree.sh - Year 2022 index: $year2022"
+newArray[$year2022]="│   └── 2022 [$count entries suppressed by massage_tree.sh]"
+# 2023 needs to be done, but no posts. Total line 112 files needs 9 subtracted.
 treeArray=("${newArray[@]}")
 unset newArray
 printf "%s\n" "${treeArray[@]}" > "$1"

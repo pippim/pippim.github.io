@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "512 "
 accepted:     Accepted
-uploaded:     2023-09-19 23:21:49
+uploaded:     2023-09-19 23:40:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-Why-does-Gparted-leave-a-spare-used-space-after-formating-for-all-File-Systems_ntfs_fat32_ex4__.md
 toc:          false
 navigation:   false

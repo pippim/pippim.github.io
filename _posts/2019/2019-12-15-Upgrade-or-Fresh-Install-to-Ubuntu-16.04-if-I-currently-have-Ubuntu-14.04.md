@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,068 "
 accepted:     
-uploaded:     2023-09-19 23:21:49
+uploaded:     2023-09-19 23:40:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-15-Upgrade-or-Fresh-Install-to-Ubuntu-16.04-if-I-currently-have-Ubuntu-14.04.md
 toc:          false
 navigation:   false
