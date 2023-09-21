@@ -83,10 +83,10 @@ when location opened for playing or synchronization.
 as this 
 <a href="#how-to-encode-a-cd-overview">sample video</a> 
 demonstrates
-- Scrape [MusicBrainz.org 🔗](https://musicbrainz.org/ 
+- Scrape [MusicBrainz.org ⧉ 🔗](https://musicbrainz.org/ 
 "MusicBrainz for Artist / Album CD track details"){:target="_blank"} 
 for Artist / Album CD track details and artwork
-- Scrape [genius.com 🔗](https://genius.com/ 
+- Scrape [genius.com ⧉ 🔗](https://genius.com/ 
 "search song lyrics"){:target="_blank"} 
 and other websites to get song lyrics
 - Restores file's OS last access time to original if 
@@ -170,7 +170,7 @@ that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
 
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
-[mserve GitHub Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
+[mserve GitHub Repository ⧉ 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
 "View mserve Python source code"){:target="_blank"}. 
 
 Copy all 
@@ -1703,7 +1703,7 @@ synchronizing phone locations. Extra messages are printed that
 do not appear in dialog boxes or the *Information Centre*
 
 Install 
-[Wifi FTP Server 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
+[Wifi FTP Server ⧉ 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
 "Link to Google Play"){:target="_blank"} 
 from Google Play.
 
@@ -1752,7 +1752,7 @@ are no differences).
 `curlftpfs` chokes on filenames containing `#` of `%`.
 
 Quote below from:
-[JackSlateur / curlftpfs 🔗](https://github.com/JackSlateur/curlftpfs#readme 
+[JackSlateur / curlftpfs ⧉ 🔗](https://github.com/JackSlateur/curlftpfs#readme 
 "Link to GitHub"){:target="_blank"}
 
 > ***Note:***
@@ -1857,7 +1857,7 @@ sshfs. In September 2023, **mserve** switched to FTP for
 mobile phones, with local filename caching.
 
 Install 
-[Wifi FTP Server 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
+[Wifi FTP Server ⧉ 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
 "Link to Google Play"){:target="_blank"} 
 from Google Play.
 
@@ -1873,7 +1873,7 @@ Problems still exist using `curlftpfs` which hasn't been updated in
 select the *View* Dropdown Menu. Then select the *SQL Music Table* 
 option, and then the
 *Update Metadata* button. All files with `#` in the name are reported
-as `1) Not a music file`. As of September 6, 2023, these songs:
+as: *"1) Not a music file."*. These files:
 
 - Do not have their metadata automatically updated by the
 *Update Metadata* function
@@ -2462,7 +2462,7 @@ Player* window buttons are fully restored.
 you must open the location and repeat the process
 > - LRC files are not used inside **mserve** they are created for other
 music players like 
-[Musicolet 🔗](https://krosbits.in/musicolet/
+[Musicolet ⧉ 🔗](https://krosbits.in/musicolet/
 "small yet powerful offline Music Player for Android"){:target="_blank"}
 Musicolet is a small yet powerful offline Music Player for Android,
 which organizes and plays local audio-files stored on your device. 
