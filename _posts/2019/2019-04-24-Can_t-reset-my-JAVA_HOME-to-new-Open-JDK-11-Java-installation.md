@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "23,493 "
 accepted:     Accepted
-uploaded:     2023-09-20 10:45:38
+uploaded:     2023-09-20 18:34:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-Can_t-reset-my-JAVA_HOME-to-new-Open-JDK-11-Java-installation.md
 toc:          false
 navigation:   false

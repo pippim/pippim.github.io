@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,248 "
 accepted:     Accepted
-uploaded:     2023-09-20 10:45:38
+uploaded:     2023-09-20 18:34:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-06-Can_t-remove-environmental-variable-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

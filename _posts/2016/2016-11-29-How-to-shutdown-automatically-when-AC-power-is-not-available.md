@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,497 "
 accepted:     Accepted
-uploaded:     2023-09-20 10:45:38
+uploaded:     2023-09-20 18:34:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-29-How-to-shutdown-automatically-when-AC-power-is-not-available.md
 toc:          false
 navigation:   false
