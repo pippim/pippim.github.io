@@ -296,7 +296,7 @@ your storage device:
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree* window contains 
-three dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***. 
+four dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***. 
 Click on the name and the dropdown menu options appear:
 
 ### *File* Dropdown Menu
