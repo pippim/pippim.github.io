@@ -284,8 +284,11 @@ your storage device:
 > `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
 > 
 > You can also call `m` after changing to a music directory. E.G.
-> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
-> presented with all the Albums you have for ***Pink Floyd***.
+> Type: `cd ~/Music/Pink Floyd` and press <kbd> Enter </kbd>.
+> Then type: `m .` and press <kbd> Enter </kbd>. Note the `.`
+> specifies the current directory and `m` must be in your current
+> path. **mserve** will
+> open and display all the Albums for ***Pink Floyd***.
 > 
 > If you don't pass a parameter to `m` it will reload the last
 > location used and continue playing favorites from where it left off.
