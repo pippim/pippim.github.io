@@ -557,7 +557,8 @@ function scrollToJustAbove(element) {
 /* Slide Show (Carousel) functions */
 
 let slideIndex = 1
-showSlides(slideIndex)
+// https://stackoverflow.com/a/12494293/6929343
+if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
 
 // Next/previous controls
 function plusSlides(ndx) {
