@@ -321,7 +321,10 @@ function closeSearchForm() {
 }
 
 var windowLoaded = false
-window.onload = function() { windowLoaded = true }
+window.onload = function() {
+    windowLoaded = true
+    if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
+}
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
 // https: //stackoverflow.com/a/4620986/6929343
@@ -557,8 +560,6 @@ function scrollToJustAbove(element) {
 /* Slide Show (Carousel) functions */
 
 let slideIndex = 1
-// https://stackoverflow.com/a/12494293/6929343
-if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
 
 // Next/previous controls
 function plusSlides(ndx) {
