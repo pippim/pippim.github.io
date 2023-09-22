@@ -754,8 +754,7 @@ a.search-results:visited {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 64rem;  // large screen body width in cayman theme
-    max-height: 640px ! important;
+    max-width: 95vw;
     position: relative;
     margin: auto;
 }
@@ -763,6 +762,17 @@ a.search-results:visited {
 /* Hide the images by default */
 .mySlides {
     display: none;
+}
+
+/* image width and height */
+.imageSlide {
+    @include large {
+    }
+    max-width: 95vw;
+    max-height: 640px;
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
 }
 
 /* Next & previous buttons */
@@ -803,7 +813,7 @@ a.search-results:visited {
     text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* Number text (1/8 etc) */
 .number-text {
     color: #f2f2f2;
     font-size: 12px;
