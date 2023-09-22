@@ -755,6 +755,7 @@ a.search-results:visited {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
+    text-align: center;
     //margin: auto;
     margin-top: 2rem;
 }
@@ -773,7 +774,7 @@ a.search-results:visited {
     width: auto;
     height: auto;
     object-fit: scale-down;
-    text-align: center;
+    //text-align: center;
     //margin-left: auto;
     //margin-right: auto;
 }
