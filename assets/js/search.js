@@ -556,46 +556,45 @@ function scrollToJustAbove(element) {
 
 /* Slide Show (Carousel) functions */
 
-let slideIndex = 1;
+let slideIndex = 1
+showSlides(slideIndex)
 
 // Next/previous controls
 function plusSlides(ndx) {
-    showSlides(slideIndex += ndx);
+    showSlides(slideIndex += ndx)
 }
 
 // Thumbnail image controls
 function currentSlide(ndx) {
-    showSlides(slideIndex = nex);
+    showSlides(slideIndex = ndx)
 }
 
 function showSlides(ndx) {
     let z;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (ndx > slides.length) {slideIndex = 1}  // n =
-    if (ndx < 1) {slideIndex = slides.length}
+    let slides = document.getElementsByClassName("mySlides")
+    let dots = document.getElementsByClassName("dot")
+    if (ndx > slides.length) slideIndex = 1  // n =
+    if (ndx < 1) slideIndex = slides.length
     for (z = 0; z < slides.length; z++) {
-        slides[z].style.display = "none";
+        slides[z].style.display = "none"
     }
     for (z = 0; z < dots.length; z++) {
-        dots[z].className = dots[z].className.replace(" active", "");
+        dots[z].className = dots[z].className.replace(" active", "")
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    slides[slideIndex-1].style.display = "block"
+    dots[slideIndex-1].className += " active"
 }
 
-// W3 had this call above function definition so undefined
-showSlides(slideIndex);
 
 /* Search functions */
 
 function get_hits(submit_str) {
     // Build object key/value pairs of url index found and total points
-    const url_ndx_points = {};
-    const words = submit_str.split(' ');
+    const url_ndx_points = {}
+    const words = submit_str.split(' ')
 
     for (const word of words) {
-        l_word = word.toLowerCase();
+        l_word = word.toLowerCase()
         /* If word not found, subtract "es", "s", 'ed", etc and check again */
         if (!(check_word(l_word, url_ndx_points))) {
             check_root_word(l_word, url_ndx_points);
