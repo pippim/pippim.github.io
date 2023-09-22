@@ -755,7 +755,8 @@ a.search-results:visited {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    margin: auto;
+    //margin: auto;
+    margin-top: 2rem;
 }
 
 /* Hide the images by default */
@@ -772,6 +773,8 @@ a.search-results:visited {
     width: auto;
     height: auto;
     object-fit: scale-down;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Next & previous buttons */
@@ -828,7 +831,7 @@ a.search-results:visited {
     width: 15px;
     margin: 0 2px;
     background-color: #bbb;
-    border-radius: 50%;
+    border-radius: 50%;  // circle
     display: inline-block;
     transition: background-color 0.6s ease;
 }
