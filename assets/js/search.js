@@ -554,6 +554,39 @@ function scrollToJustAbove(element) {
     window.scrollTo({top: y_new, behavior: 'smooth'});
 }
 
+/* Slide Show (Carousel) functions */
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(ndx) {
+    showSlides(slideIndex += ndx);
+}
+
+// Thumbnail image controls
+function currentSlide(ndx) {
+    showSlides(slideIndex = nex);
+}
+
+function showSlides(ndx) {
+    let z;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (ndx > slides.length) {slideIndex = 1}  // n =
+    if (ndx < 1) {slideIndex = slides.length}
+    for (z = 0; z < slides.length; z++) {
+        slides[z].style.display = "none";
+    }
+    for (z = 0; z < dots.length; z++) {
+        dots[z].className = dots[z].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+/* Search functions */
+
 function get_hits(submit_str) {
     // Build object key/value pairs of url index found and total points
     const url_ndx_points = {};
