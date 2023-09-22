@@ -793,9 +793,13 @@ a.search-results:visited {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
+    user-select: none;
+}
+
+/* Position the "prev button" to the left */
+.prevSlide {
     left: 0;
     border-radius: 0 3px 3px 0;  // left arrow
-    user-select: none;
 }
 
 /* Position the "next button" to the right */
