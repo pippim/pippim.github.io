@@ -743,6 +743,7 @@ a.search-results:visited {
 }
 
 /* MAJOR SECTION ======== Slide Show (Image Carousel)
+
     Credit: https://www.w3schools.com/howto/howto_js_slideshow.asp
     Added September 21, 2023 - not sure of border-box effect yet.
     Requires slide-show.html included near top of .md file
@@ -753,8 +754,8 @@ a.search-results:visited {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 64rem;
-    max-height: 640px;
+    max-width: 64rem;  // large screen body width in cayman theme
+    max-height: 640px ! important;
     position: relative;
     margin: auto;
 }
