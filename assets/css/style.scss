@@ -773,8 +773,13 @@ a.search-results:visited {
     width: auto;
     height: auto;
     object-fit: scale-down;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    //margin-left: auto;
+    //margin-right: auto;
+}
+
+.textSlide {
+    margin-top: 2rem;  // Second push-down :(
 }
 
 /* Next & previous buttons */
