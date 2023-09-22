@@ -398,6 +398,269 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include toc.md %}
 
+## How the Slide Show (Carousel) is Generated
+{:.no_toc}
+
+The *Programs* page begins with a *Slide Show* (Carousel).
+The *Javascript* code, from `/assets/js/search.js`, is below:
+
+``` javascript
+/* Slide Show (Carousel) functions */
+
+let slideIndex = 1
+
+// Next/previous controls
+function plusSlides(ndx) {
+    showSlides(slideIndex += ndx)
+}
+
+// Thumbnail image controls
+function currentSlide(ndx) {
+    showSlides(slideIndex = ndx)
+}
+
+function showSlides(ndx) {
+    let z;
+    let slides = document.getElementsByClassName("mySlides")
+    let dots = document.getElementsByClassName("dot")
+    if (ndx > slides.length) slideIndex = 1  // n =
+    if (ndx < 1) slideIndex = slides.length
+    for (z = 0; z < slides.length; z++) {
+        slides[z].style.display = "none"
+    }
+    for (z = 0; z < dots.length; z++) {
+        dots[z].className = dots[z].className.replace(" active", "")
+    }
+    slides[slideIndex-1].style.display = "block"
+    dots[slideIndex-1].className += " active"
+}
+```
+
+The *CSS* code, from `/assets/css/style.scss`, is below:
+
+``` scss
+/* MAJOR SECTION ======== Slide Show (Image Carousel)
+
+    Credit: https://www.w3schools.com/howto/howto_js_slideshow.asp
+    Added September 21, 2023 - not sure of border-box effect yet.
+    Requires slide-show.html included near top of .md file
+    Javascript in search.js
+*/
+
+* { box-sizing: border-box; }
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    text-align: center;
+    //margin: auto;
+    margin-top: 2rem;
+}
+
+/* image width and height */
+.imageSlide {
+    @include large {
+    }
+    max-width: 90vw;
+    max-height: 300px ! important;
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    //text-align: center;
+    //margin-left: auto;
+    //margin-right: auto;
+}
+
+/* Next & previous buttons */
+.prevSlide, .nextSlide {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: green;  // was 'white' but not visible usually
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+/* Position the "prev button" to the left */
+.prevSlide {
+    left: 0;
+    border-radius: 0 3px 3px 0;  // left arrow
+}
+
+/* Position the "next button" to the right */
+.nextSlide {
+    right: 0;
+    border-radius: 3px 0 0 3px;  // right arrow
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevSlide:hover, .nextSlide:hover {
+    //background-color: rgba(0,0,0,0.8);
+    background-color: var(--boldest-color);
+}
+
+/* Caption text */
+.textSlide {
+    color: var(--boldest-color);
+    margin-top: 1rem;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    //bottom: 8px;  // putting under image?
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/8 etc) */
+.number-text {
+    color: var(--boldest-color);
+    font-size: 1rem;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;  // circle
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation - note fade-in & fade-out exist already */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+}
+```
+
+The *HTML* code, from `/_includes/slide-show.html`, is below:
+
+``` html
+<!-- include near top of .md file
+     Credit: https://www.w3schools.com/howto/howto_js_slideshow.asp
+     pkill -9 firefox && nohup firefox &
+
+-->
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="number-text">1 / 8</div>
+    <img class="imageSlide" src="/assets/img/tim-ta/alarm-clock.jpg">
+    <div class="textSlide">Project timers in your browser!</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">2 / 8</div>
+    <img class="imageSlide" src="/assets/img/hrb/HRB Example.gif">
+    <div class="textSlide">Painless Hyperlink creation</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">3 / 8</div>
+    <img class="imageSlide" src="/assets/img/tcm/TCM Window Buttons.gif">
+    <div class="textSlide">The Cookie Machine - hidden secrets</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">4 / 8</div>
+      <video
+        src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
+        data-canonical-src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
+        class="imageSlide d-block rounded-bottom-2 width-fit"
+        controls autoplay>
+      </video>
+    <div class="textSlide">cdd - Change Directory Power Tool</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">5 / 8</div>
+    <img class="imageSlide" src="/assets/img/iothings/volume change.gif">
+    <div class="textSlide">Control your TVs and Backlights</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">6 / 8</div>
+    <img class="imageSlide" src="/assets/img/stack/stack-to-blog progress display.gif">
+    <div class="textSlide">Convert Thousands of Posts to Blogs</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">7 / 8</div>
+    <img class="imageSlide" src="/assets/img/mt/mt progress bars.gif">
+    <div class="textSlide">Multi-Timer - Run alarms consecutively</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number-text">8 / 8</div>
+    <img class="imageSlide" src="/assets/img/mserve/mserve small demo.gif">
+    <div class="textSlide">mserve - Music Server that rocks!</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prevSlide" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="nextSlide" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+```
+
+To get the *Slide Show* (Carousel) in any website page, insert a
+liquid tag where you want the TOC to appear. For example on this
+page you are reading, `index.md`, is the following markdown code:
+
+``` html
+...you are reading, `index.md`, is the following markdown code:
+
+{% raw %}
+{% include slide-show.html %}
+{% endraw %}
+```
+
+The slide show command is used in real 
+markdown below and generates Slide Show (Carousel):
+
+{% include slide-show.html %}
+
 ---
 
 <a id="hdr7"></a>
