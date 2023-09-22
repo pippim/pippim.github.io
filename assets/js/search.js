@@ -324,6 +324,8 @@ var windowLoaded = false
 window.onload = function() {
     windowLoaded = true
     if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
+    let slides = document.getElementsByClassName("mySlides")
+    console.log("slides.length:", slides.length)
 }
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
@@ -340,13 +342,17 @@ window.addEventListener('scroll', function() {
     timer = setTimeout(function() {
         if (jb.classList.contains('fade-in')) {  // begin fade out
             jb.classList.replace('fade-in', 'fade-out')
-            jb.style.display = "none"  // Not good, instant poof :(
+            jb.style.display = "none"  // Instant poof, fix below
         }
     }, 4000)  // button stays visible for 4 seconds
 }, false)
 
-// Fix: https://stackoverflow.com/a/17451356/6929343
 /*
+
+    Fix: https://stackoverflow.com/a/17451356/6929343
+
+    FUTURE USE because fade out is instant with display = "none"
+
     .fadeInOut {
         .transition-duration(0, 200ms);
         .transition-property(visibility, opacity);
