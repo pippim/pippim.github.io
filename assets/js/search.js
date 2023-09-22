@@ -557,7 +557,6 @@ function scrollToJustAbove(element) {
 /* Slide Show (Carousel) functions */
 
 let slideIndex = 1;
-showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(ndx) {
@@ -584,6 +583,9 @@ function showSlides(ndx) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
+
+// W3 had this call above function definition so undefined
+showSlides(slideIndex);
 
 /* Search functions */
 
