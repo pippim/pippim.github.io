@@ -573,6 +573,7 @@ function showSlides(ndx) {
     let z;
     let slides = document.getElementsByClassName("mySlides")
     let dots = document.getElementsByClassName("dot")
+    console.log("slides.length:", slides.length, " | dots.length:", dots.length)
     if (ndx > slides.length) slideIndex = 1  // n =
     if (ndx < 1) slideIndex = slides.length
     for (z = 0; z < slides.length; z++) {
