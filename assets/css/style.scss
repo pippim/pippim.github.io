@@ -781,10 +781,6 @@ a.search-results:visited {
     //margin-right: auto;
 }
 
-.textSlide {
-    margin-top: 2rem;  // Second push-down :(
-}
-
 /* Next & previous buttons */
 .prevSlide, .nextSlide {
     cursor: pointer;
@@ -816,11 +812,12 @@ a.search-results:visited {
 
 /* Caption text */
 .textSlide {
-    color: #f2f2f2;
+    color: var(--boldest-color);
+    margin-top: 2rem;  // third time pushdown :(
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    //bottom: 8px;  // putting under image?
     width: 100%;
     text-align: center;
 }
