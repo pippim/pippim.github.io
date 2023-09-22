@@ -325,8 +325,9 @@ var windowLoaded = false
 window.onload = function() {  // This stops document.onload firing
     windowLoaded = true
     if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
-    let slides = document.getElementsByClassName("mySlides")
-    console.log("WINDOW slides.length:", slides.length)  # 0
+    //let slides = document.getElementsByClassName("mySlides")
+    //console.log("WINDOW slides.length:", slides.length)  # New error below
+    // Uncaught SyntaxError: private fields are not currently supported
 }
 
 /*
