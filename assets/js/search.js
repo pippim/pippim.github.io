@@ -325,7 +325,13 @@ window.onload = function() {
     windowLoaded = true
     if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
     let slides = document.getElementsByClassName("mySlides")
-    console.log("slides.length:", slides.length)
+    console.log("WINDOW slides.length:", slides.length)
+}
+
+document.onload = function() {
+    if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
+    let slides = document.getElementsByClassName("mySlides")
+    console.log("DOCUMENT slides.length:", slides.length)
 }
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
