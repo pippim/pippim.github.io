@@ -751,6 +751,10 @@ a.search-results:visited {
 */
 
 * { box-sizing: border-box; }
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -758,11 +762,6 @@ a.search-results:visited {
     text-align: center;
     //margin: auto;
     margin-top: 2rem;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
 }
 
 /* image width and height */
@@ -774,6 +773,9 @@ a.search-results:visited {
     width: auto;
     height: auto;
     object-fit: scale-down;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
     //text-align: center;
     //margin-left: auto;
     //margin-right: auto;
@@ -795,6 +797,7 @@ a.search-results:visited {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
+    left: 0;
     border-radius: 0 3px 3px 0;  // left arrow
     user-select: none;
 }
