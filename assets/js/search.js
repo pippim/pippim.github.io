@@ -328,7 +328,13 @@ window.onload = function() {
     console.log("WINDOW slides.length:", slides.length)
 }
 
-document.onload = function() {
+document.onload = function() {  // NOTHING APPEARS???
+    if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
+    let slides = document.getElementsByClassName("mySlides")
+    console.log("DOCUMENT slides.length:", slides.length)
+}
+
+body.onload = function() {
     if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
     let slides = document.getElementsByClassName("mySlides")
     console.log("DOCUMENT slides.length:", slides.length)
