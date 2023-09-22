@@ -321,23 +321,29 @@ function closeSearchForm() {
 }
 
 var windowLoaded = false
-window.onload = function() {
+
+window.onload = function() {  // This stops document.onload firing
     windowLoaded = true
     if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
     let slides = document.getElementsByClassName("mySlides")
-    console.log("WINDOW slides.length:", slides.length)
+    console.log("WINDOW slides.length:", slides.length)  # 0
 }
 
-document.onload = function() {  // NOTHING APPEARS???
+/*
+document.onload = function() {  // because window.onload steals job
+    windowLoaded = true
     if (document.getElementsByClassName("mySlides").length) showSlides(slideIndex)
     let slides = document.getElementsByClassName("mySlides")
-    console.log("DOCUMENT slides.length:", slides.length)
+    console.log("DOCUMENT slides.length:", slides.length)  # 0
 }
+*/
 
-body.onload = function() {
+/*
+body.onload = function() {  // This stops window.onload firing
     let slides = document.getElementsByClassName("mySlides")
-    console.log("BODY slides.length:", slides.length)
+    console.log("BODY slides.length:", slides.length)  # 0
 }
+*/
 
 // Lightning Bolt (Jump Button) appears when scrolling up/down
 // https: //stackoverflow.com/a/4620986/6929343
