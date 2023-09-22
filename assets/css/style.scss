@@ -769,7 +769,7 @@ a.search-results:visited {
     @include large {
     }
     max-width: 90vw;
-    max-height: 640px;
+    max-height: 480px ! important;
     width: auto;
     height: auto;
     object-fit: scale-down;
@@ -802,7 +802,7 @@ a.search-results:visited {
 /* On hover, add a black background color with a little bit see-through */
 .prevSlide:hover, .nextSlide:hover {
     //background-color: rgba(0,0,0,0.8);
-    background-color: var(--boldest-color)
+    background-color: var(--boldest-color);
 }
 
 /* Caption text */
