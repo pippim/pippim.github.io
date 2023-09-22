@@ -525,7 +525,8 @@ details[open] > summary {
 }
 
 .normalised:first-line {
-    // Override <input> line-height problems: https://stackoverflow.com/a/26103611/6929343
+    // Override <input> line-height problems:
+    //      https://stackoverflow.com/a/26103611/6929343
     display: inline-block;
 }
 
@@ -752,7 +753,8 @@ a.search-results:visited {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 64rem;
+    max-height: 640px;
     position: relative;
     margin: auto;
 }
