@@ -754,7 +754,6 @@ a.search-results:visited {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 95vw;
     position: relative;
     margin: auto;
 }
@@ -768,7 +767,7 @@ a.search-results:visited {
 .imageSlide {
     @include large {
     }
-    max-width: 95vw;
+    max-width: 90vw;
     max-height: 640px;
     width: auto;
     height: auto;
@@ -783,7 +782,7 @@ a.search-results:visited {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: green;  // was 'white' but not visible usually
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
