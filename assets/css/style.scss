@@ -801,7 +801,8 @@ a.search-results:visited {
 
 /* On hover, add a black background color with a little bit see-through */
 .prevSlide:hover, .nextSlide:hover {
-    background-color: rgba(0,0,0,0.8);
+    //background-color: rgba(0,0,0,0.8);
+    background-color: var(--boldest-color)
 }
 
 /* Caption text */
