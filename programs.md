@@ -3,6 +3,10 @@ title: Free Programs and Apps
 layout: default
 ---
 
+{% include slide-show.html %}
+
+---
+
 {% include toc.md %}
 
 ---
@@ -228,7 +232,7 @@ The website conversion programs can be downloaded from the
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
-Do you have a job with a fixed set of tasks and, each task always
+Do you have a project with a fixed set of tasks, and each task always
 takes the same amount of time?
 
 Then ***Multi-Timer*** will help you get the job done with no wasted time!
