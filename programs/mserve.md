@@ -1271,8 +1271,12 @@ Copy 3:
 - Click on web browser console prompt and use <kbd> Ctrl </kbd> + 
 <kbd> v </kbd> to paste.
 - Press <kbd> Enter </kbd> to run the pasted code.
+- A prompt appears asking to *Open* or *Save* the CSV file. Choose the 
+*Save* option and click <kbd> OK </kbd>.
+- The next two steps can be skipped, if you run the script provided
+in the next section.
 - Open your "Downloads" folder and rename the file `my_data.csv`
-to `<PLAYLIST NAME>.csv` where PLAYLIST NAME is the name of the
+to `<PLAYLIST NAME>.csv` where *PLAYLIST NAME* is the name of the
 playlist.
 - Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
 data directory `~/.local/share/mserve/YouTubePlaylists`. If the
@@ -1286,25 +1290,49 @@ directory doesn't exist you will have to create it first.
 
 Put the following bash / shell commands into a script you can call.
 The sample file `youPlaylistMoveCSV.sh` can be copied and renamed.
-Or put them into a function in your `~/.bashrc` resource file.
 
 ```shell
+#!/bin/bash
+#  https://www.pippim.com/programs/mserve.html#pickled-youtube-playlists
+
+#    Follow instructions and note "Copy Button" below:
+
+#        STEP 1: Use CTRL+I in web browser
+#        STEP 2: Click Button 1 to copy to clipboard "youPlayListScroll()"
+#        STEP 3: Go to web browser and use CTRL+V then Enter
+#        STEP 3A: Type "allow pasting" (without the quotes) if requested by browser
+#        STEP 3B: Wait for web browser to stop scrolling, 1 second per song
+#        STEP 4: Click Button 2 to copy to clipboard "youPlaylistCopy()"
+#        STEP 5: Go to web browser and use Ctrl+V then Enter
+#        STEP 6: Click Button 3 to copy to clipboard "youPlaylistSave()"
+#        STEP 7: Go to web browser and use Ctrl+V then Enter
+#        STEP 8: Run this bash script youPlaylistMoveCSV.sh
+#        STEP 9: Use "View Playlists", select Playlist, View Button
+
+if [ "$#" -ne 1 ]; then
+    printf 'ERROR! You must provide one and only one argument!\n' >&2
+    exit 1
+fi
+
+if [ ! -f ~/Downloads/my_data.csv ]; then
+    echo "File ~/Downloads/my_data.csv not found!"
+fi
+
 cd ~/Downloads
 mv -v my_data.csv "$1".csv
 cp -v "$1".csv ~/.local/share/mserve/YouTubePlaylists
 rm -v ~/.local/share/mserve/YouTubePlaylists/"$1".pickle
-echo "Ready for mserve: View Playlists, Select $1, then View Button"
 ```
 
 Move CSV file: 
 
 - Call the script using `script_name "<PLAYLIST NAME>"` - *It is
 important to include double quotes around your playlist name*.
-- Do ***NOT*** add `.csv` after the <PLAYLIST NAME> because, the
+- Do ***NOT*** add `.csv` after the `"<PLAYLIST NAME>"` because, the
 script automatically adds it.
 - You should already have the playlist defined with the name
-field containing: <PLAYLIST NAME> and the description field
-containing: <PLAYLIST URL LINK>.
+field containing: `<PLAYLIST NAME>` and the description field
+containing: `<PLAYLIST URL LINK>`.
 - After moving the CSV file, start **mserve**, if it isn't already
 running.
 - If the playlist hasn't been defined in **mserve** yet, first use
@@ -1318,7 +1346,7 @@ double-click it.
 <kbd> v </kbd> to paste.
 - Press <kbd> Enter </kbd> to run the pasted code.
 - Open your "Downloads" folder and rename the file `my_data.csv`
-to `<PLAYLIST NAME>.csv` where PLAYLIST NAME is the name of the
+to `<PLAYLIST NAME>.csv` where *PLAYLIST NAME* is the name of the
 playlist.
 - Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
 data directory `~/.local/share/mserve/YouTubePlaylists`. If the
