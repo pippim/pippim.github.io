@@ -1178,7 +1178,7 @@ In the other Python modules, **import location as lc** is used.
 
 The directory `~/.../mserve/YouTubePlaylists/` contains
 
-- <PLAYLIST NAME>.pickle - This file is generated the first time
+- `<PLAYLIST NAME>`.pickle - This file is generated the first time
 a YouTube Playlist is opened. It takes about 1 second per song to
 generate. The next time the playlist is opened this file is reused
 for instant display.
