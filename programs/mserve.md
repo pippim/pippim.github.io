@@ -1178,7 +1178,7 @@ In the other Python modules, **import location as lc** is used.
 
 The directory `~/.../mserve/YouTubePlaylists/` contains
 
-- <PLAYLIST_NAME>.pickle - This file is generated the first time
+- <PLAYLIST NAME>.pickle - This file is generated the first time
 a YouTube Playlist is opened. It takes about 1 second per song to
 generate. The next time the playlist is opened this file is reused
 for instant display.
@@ -1187,8 +1187,9 @@ Generating YouTube Playlists requires some manual steps:
 
 #### Copy 1
 
-Before copy 1, open playlist in browser and press <kbd> Ctrl </kbd>
-+ <kbd> i </kbd>. This will open console in Chrome or Firefox.
+Before copy 1, open playlist in browser and press <kbd> Ctrl </kbd> +
+<kbd> i </kbd>. This will open the *Console* in the *Chrome*
+and *Firefox* web browsers.
 
 ```javascript
 let goToBottom = setInterval(() => window.scrollBy(0, 400), 1000)
@@ -1271,14 +1272,61 @@ Copy 3:
 <kbd> v </kbd> to paste.
 - Press <kbd> Enter </kbd> to run the pasted code.
 - Open your "Downloads" folder and rename the file `my_data.csv`
-to `<PLAYLIST_NAME>.csv` where PLAYLIST_NAME is the name of the
+to `<PLAYLIST NAME>.csv` where PLAYLIST NAME is the name of the
 playlist.
-- Move the renamed file `<PLAYLIST_NAME>.csv` to the **mserve**
+- Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
 data directory `~/.local/share/mserve/YouTubePlaylists`. If the
 directory doesn't exist you will have to create it first.
 - Open **mserve**, *Music Location Tree*, *View* Dropdown Menu,
 *View Playlists* and select the YouTube Playlist you setup earlier.
 - Click the *View* button and the playlist will be generated.
+
+
+#### Move CSV File
+
+Put the following bash / shell commands into a script you can call.
+The sample file `youPlaylistMoveCSV.sh` can be copied and renamed.
+Or put them into a function in your `~/.bashrc` resource file.
+
+```shell
+cd ~/Downloads
+mv -v my_data.csv "$1".csv
+cp -v "$1".csv ~/.local/share/mserve/YouTubePlaylists
+rm -v ~/.local/share/mserve/YouTubePlaylists/"$1".pickle
+echo "Ready for mserve: View Playlists, Select $1, then View Button"
+```
+
+Move CSV file: 
+
+- Call the script using `script_name "<PLAYLIST NAME>"` - *It is
+important to include double quotes around your playlist name*.
+- Do ***NOT*** add `.csv` after the <PLAYLIST NAME> because, the
+script automatically adds it.
+- You should already have the playlist defined with the name
+field containing: <PLAYLIST NAME> and the description field
+containing: <PLAYLIST URL LINK>.
+- After moving the CSV file, start **mserve**, if it isn't already
+running.
+- If the playlist hasn't been defined in **mserve** yet, first use
+the *New Playlist* option under the *File* Dropdown Menu in the 
+*Music Location Tree* window. Then proceed to the next step.
+- In the *Music Location Tree* window, select the *View* Dropdown Menu.
+- Select the *View Playlists* option.
+- Highlight the appropriate playlist and click *View* button or 
+double-click it.
+- Click on web browser console prompt and use <kbd> Ctrl </kbd> + 
+<kbd> v </kbd> to paste.
+- Press <kbd> Enter </kbd> to run the pasted code.
+- Open your "Downloads" folder and rename the file `my_data.csv`
+to `<PLAYLIST NAME>.csv` where PLAYLIST NAME is the name of the
+playlist.
+- Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
+data directory `~/.local/share/mserve/YouTubePlaylists`. If the
+directory doesn't exist you will have to create it first.
+- Open **mserve**, *Music Location Tree*, *View* Dropdown Menu,
+*View Playlists* and select the YouTube Playlist you setup earlier.
+- Click the *View* button and the playlist will be generated.
+
 
 ---
 
