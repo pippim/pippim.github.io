@@ -1317,7 +1317,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 if [ ! -f ~/Downloads/my_data.csv ]; then
-    printf "ERROR! File ~/Downloads/my_data.csv not found!" >&2
+    printf "ERROR! File ~/Downloads/my_data.csv not found!\n" >&2
     exit 1
 fi
 
