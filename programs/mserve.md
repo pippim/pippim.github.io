@@ -293,6 +293,8 @@ your storage device:
 > If you don't pass a parameter to `m` it will reload the last
 > location used and continue playing favorites from where it left off.
 
+---
+
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree* window contains 
@@ -409,6 +411,7 @@ when they are clicked. The button selection only effects the
 the current Playlist.
 Other locations and playlists maintain their own button selection.
 
+---
 
 ## Right-Click Popup Menus
 
@@ -466,6 +469,7 @@ Music Table inside **mserve**.
 - ***Ignore Click*** - Close popup menu. Popup menu can also be closed
 by moving mouse out-of-menu and clicking.
 
+---
 
 ## Information Centre
 
@@ -564,6 +568,7 @@ and TV volume is turned back up to normal volume.
 - SQL is used for the music library of songs and their lyrics.
 - Webscraping lyrics is via Genius but some results are "not ideal" so seven other websites out of six have support and a menu to select all six will come soon. SQL will record history of what was scraped when, edited when, how long edit took, time indexed synchronized when, other devices (locations) updated when, which songs were updated, etc.
 
+---
 
 ## Image For Songs with No Artwork
 
@@ -628,6 +633,8 @@ date. It then grabs Album Artwork from the internet.
 
 You can paste album artwork from the clipboard which you previously
 copied from Amazon, or another website.
+
+---
 
 ## How-To Encode a CD Overview
 
@@ -735,6 +742,8 @@ does appear in Track Names.
 You need to research when the song was first released, E.G. "1985" and
 change the track.
 
+---
+
 ## Encoding Metadata Tags
 {:.no_toc}
 
@@ -782,6 +791,7 @@ can reset all files last access time when a program like *Rhythm Box* reads
 every song file and resets last access time to current time. See `sql.py`
 for examples of "fixing" stuff.
 
+---
 
 ## Renaming Artists, Albums and Song files After Encoding
 
@@ -853,6 +863,7 @@ or *View SQL Metadata* from the popup menu.
 menu and select *SQL Music Table*. Right-click on a music file and select 
 *View SQL Metadata* or *View Raw Metadata* from the popup menu.
 
+---
 
 ## Substituting Special Characters in Filenames
 {:.no_toc}
@@ -1109,6 +1120,8 @@ def open_db(LCS=None):
     loc_cursor = con.cursor()
 ```
 
+---
+
 ## Pickled Data Files
 
 The pickle data file format allows serialized Python objects
@@ -1160,6 +1173,114 @@ Within **mserve** Python scripts, **lc.FNAME** represents:
 *Note:* When working inside the `location.py` module, 
 drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
+
+### Pickled YouTube Playlists
+
+The directory `~/.../mserve/YouTubePlaylists/` contains
+
+- <PLAYLIST_NAME>.pickle - This file is generated the first time
+a YouTube Playlist is opened. It takes about 1 second per song to
+generate. The next time the playlist is opened this file is reused
+for instant display.
+
+Generating YouTube Playlists requires some manual steps:
+
+#### Copy 1
+
+Before copy 1, open playlist in browser and press <kbd> Ctrl </kbd>
++ <kbd> i </kbd>. This will open console in Chrome or Firefox.
+
+```javascript
+let goToBottom = setInterval(() => window.scrollBy(0, 400), 1000)
+```
+
+Copy 1: 
+
+- Hover mouse over code above.
+- Click the *Copy* button that appears to copy to clipboard.
+- Click on web browser console prompt and use <kbd> Ctrl </kbd> + 
+<kbd> v </kbd> to paste.
+- If you are using Firefox and have never pasted before you must
+enter "allow pasting" (without the quotes) one-time only.
+- Press <kbd> Enter </kbd> to run the pasted code.
+- Wait for all songs to scroll by and then proceed to next step
+
+*Note:* You may have to adjust window height and/or console divider
+to split window between regular browser view and console view.
+
+#### Copy 2
+
+```javascript
+ clearInterval(goToBottom)
+ console.log('\n'.repeat(50))
+
+ let arrayVideos = []
+ const links = document.querySelectorAll('a')
+ for (const link of links) {
+     if (link.id === "video-title") {
+         link.href = link.href.split('&list=')[0]
+         arrayVideos.push(link.title + ';' + link.href)
+     }
+ }
+
+ let arrayTime = []
+ const spans = document.querySelectorAll('span')
+ for (const span of spans) {
+     if (span.id === "text" &&
+     span.classList.contains('ytd-thumbnail-overlay-time-status-renderer'))
+     {
+         arrayTime.push(span.innerText.replace(/[^\d:]/g, ''))
+     }
+ }
+
+ if (arrayVideos.length === arrayTime.length) {
+     for (var i=0; i<arrayVideos.length; i++) {
+         arrayVideos[i] = arrayVideos[i] + ';' + arrayTime[i]
+         console.log(arrayVideos[i])
+     }
+ }
+```
+
+Copy 2: 
+
+- Hover mouse over code above.
+- Click the *Copy* button that appears to copy to clipboard.
+- Click on web browser console prompt and use <kbd> Ctrl </kbd> + 
+<kbd> v </kbd> to paste.
+- Press <kbd> Enter </kbd> to run the pasted code.
+
+#### Copy 3
+
+```javascript
+ let data = arrayVideos.join('\n')
+ let blob = new Blob([data], {type: 'text/csv'})
+ let elem = window.document.createElement('a')
+ elem.href = window.URL.createObjectURL(blob)
+ elem.download = 'my_data.csv'
+ document.body.appendChild(elem)
+ elem.click()
+ document.body.removeChild(elem)
+
+```
+
+Copy 3: 
+
+- Hover mouse over code above.
+- Click the *Copy* button that appears to copy to clipboard.
+- Click on web browser console prompt and use <kbd> Ctrl </kbd> + 
+<kbd> v </kbd> to paste.
+- Press <kbd> Enter </kbd> to run the pasted code.
+- Open your "Downloads" folder and rename the file `my_data.csv`
+to `<PLAYLIST_NAME>.csv` where PLAYLIST_NAME is the name of the
+playlist.
+- Move the renamed file `<PLAYLIST_NAME>.csv` to the **mserve**
+data directory `~/.local/share/mserve/YouTubePlaylists`. If the
+directory doesn't exist you will have to create it first.
+- Open **mserve**, *Music Location Tree*, *View* Dropdown Menu,
+*View Playlists* and select the YouTube Playlist you setup earlier.
+- Click the *View* button and the playlist will be generated.
+
+---
 
 ## JSON Data Files
 
