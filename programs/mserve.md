@@ -1284,6 +1284,8 @@ directory doesn't exist you will have to create it first.
 - Open **mserve**, *Music Location Tree*, *View* Dropdown Menu,
 *View Playlists* and select the YouTube Playlist you setup earlier.
 - Click the *View* button and the playlist will be generated.
+- Close the web browser window. You will need to open a new YouTube
+playlist in order to paste copied code again.
 
 
 #### Move CSV File
@@ -1310,12 +1312,13 @@ The sample file `youPlaylistMoveCSV.sh` can be copied and renamed.
 #        STEP 9: Use "View Playlists", select Playlist, View Button
 
 if [ "$#" -ne 1 ]; then
-    printf 'ERROR! You must provide one and only one argument!\n' >&2
+    printf 'ERROR! You must provide the "Playlist Name" in quotes!\n' >&2
     exit 1
 fi
 
 if [ ! -f ~/Downloads/my_data.csv ]; then
-    echo "File ~/Downloads/my_data.csv not found!"
+    printf "ERROR! File ~/Downloads/my_data.csv not found!" >&2
+    exit 1
 fi
 
 cd ~/Downloads
