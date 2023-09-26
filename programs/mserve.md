@@ -251,6 +251,9 @@ play and end in **mserve**, the Album Name and Artist
 Name are automatically expanded and collapsed to show the 
 green highlight bar.
 
+> **TIP:** *Double-click* on an Artist or Album to expand 
+> and collapse entries underneath.
+
 Songs have a checkbox which are clicked to include or exclude in
 playlists. The check box is colored solid when "checked" and is hollow
 when "unchecked". If a line appears, it indicates the Artist or Album 
@@ -2277,11 +2280,11 @@ automatically calculated as songs are selected and deselected in
 
 Five functions share the same *Playlist Maintenance* window:
 
-- Open Playlist, called from the *File* dropdown menu
-- New Playlist, called from the *File* dropdown menu
-- Rename Playlist, called from the *Edit* dropdown menu
-- Delete Playlist, called from the *Edit* dropdown menu
-- View Playlists, called from the *View* dropdown menu
+- ***Open Playlist***, called from the *File* dropdown menu
+- ***New Playlist***, called from the *File* dropdown menu
+- ***Rename Playlist***, called from the *Edit* dropdown menu
+- ***Delete Playlist***, called from the *Edit* dropdown menu
+- ***View Playlists***, called from the *View* dropdown menu
 
 ---
 
