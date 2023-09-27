@@ -1280,8 +1280,8 @@ Copy 3:
 - Press <kbd> Enter </kbd> to run the pasted code.
 - A prompt appears asking to *Open* or *Save* the CSV file. Choose the 
 *Save* option and click <kbd> OK </kbd>.
-- The next two steps can be skipped, if you run the script provided
-in the next section.
+- The next two steps can be skipped, if you run the 
+`youPlaylistMoveCSV.sh` script provided in the next section.
 - Open your "Downloads" folder and rename the file `my_data.csv`
 to `<PLAYLIST NAME>.csv` where *<PLAYLIST NAME>* is the name of the
 playlist.
@@ -1293,7 +1293,6 @@ directory doesn't exist you will have to create it first.
 - Click the *View* button and the playlist will be generated.
 - Close the web browser window. You will need to open a new YouTube
 playlist in order to paste copied code again.
-
 
 #### Move CSV File
 {:.no_toc}
@@ -1354,19 +1353,6 @@ the *New Playlist* option under the *File* Dropdown Menu in the
 - Select the *View Playlists* option.
 - Highlight the appropriate playlist and click *View* button or 
 double-click it.
-- Click on web browser console prompt and use <kbd> Ctrl </kbd> + 
-<kbd> v </kbd> to paste.
-- Press <kbd> Enter </kbd> to run the pasted code.
-- Open your "Downloads" folder and rename the file `my_data.csv`
-to `<PLAYLIST NAME>.csv` where *<PLAYLIST NAME>* is the name of the
-playlist.
-- Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
-data directory `~/.local/share/mserve/YouTubePlaylists`. If the
-directory doesn't exist you will have to create it first.
-- Open **mserve**, *Music Location Tree*, *View* Dropdown Menu,
-*View Playlists* and select the YouTube Playlist you setup earlier.
-- Click the *View* button and the playlist will be generated.
-
 
 ---
 
