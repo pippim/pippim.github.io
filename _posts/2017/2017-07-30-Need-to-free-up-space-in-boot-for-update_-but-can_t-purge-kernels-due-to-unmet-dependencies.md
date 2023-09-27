@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,098 "
 accepted:     Accepted
-uploaded:     2023-09-20 18:34:26
+uploaded:     2023-09-27 09:06:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-30-Need-to-free-up-space-in-boot-for-update_-but-can_t-purge-kernels-due-to-unmet-dependencies.md
 toc:          false
 navigation:   false

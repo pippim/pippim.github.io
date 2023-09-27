@@ -184,6 +184,7 @@ ssh
 stan
 stata
 supercollider
+svelte
 swift
 systemd
 syzlang

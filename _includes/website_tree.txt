@@ -65,6 +65,7 @@
 │   ├── posts_by_tag.html
 │   ├── posts_by_vote.html
 │   ├── search.html
+│   ├── slide-show.html
 │   ├── tcm-common-code.js
 │   ├── tcm-draggable-window.html
 │   ├── test.html
@@ -126,4 +127,4 @@
 ├── programs.md
 └── test.md
 
-28 directories, 112 files
+28 directories, 113 files
