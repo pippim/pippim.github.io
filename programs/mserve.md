@@ -1178,6 +1178,7 @@ drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
 
 ### Pickled YouTube Playlists
+{:.no_toc}
 
 The directory `~/.../mserve/YouTubePlaylists/` contains
 
@@ -1189,6 +1190,7 @@ for instant display.
 Generating YouTube Playlists requires some manual steps:
 
 #### Copy 1
+{:.no_toc}
 
 Before copy 1, open playlist in browser and press <kbd> Ctrl </kbd> +
 <kbd> i </kbd>. This will open the *Console* in the *Chrome*
@@ -1213,6 +1215,7 @@ enter "allow pasting" (without the quotes) one-time only.
 to split window between regular browser view and console view.
 
 #### Copy 2
+{:.no_toc}
 
 ```javascript
  clearInterval(goToBottom)
@@ -1254,6 +1257,7 @@ Copy 2:
 - Press <kbd> Enter </kbd> to run the pasted code.
 
 #### Copy 3
+{:.no_toc}
 
 ```javascript
  let data = arrayVideos.join('\n')
@@ -1292,6 +1296,7 @@ playlist in order to paste copied code again.
 
 
 #### Move CSV File
+{:.no_toc}
 
 Put the following bash / shell commands into a script you can call.
 The sample file `youPlaylistMoveCSV.sh` can be copied and renamed.
