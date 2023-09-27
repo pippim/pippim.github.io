@@ -1283,7 +1283,7 @@ Copy 3:
 - The next two steps can be skipped, if you run the script provided
 in the next section.
 - Open your "Downloads" folder and rename the file `my_data.csv`
-to `<PLAYLIST NAME>.csv` where *PLAYLIST NAME* is the name of the
+to `<PLAYLIST NAME>.csv` where *<PLAYLIST NAME>* is the name of the
 playlist.
 - Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
 data directory `~/.local/share/mserve/YouTubePlaylists`. If the
@@ -1337,8 +1337,9 @@ rm -v ~/.local/share/mserve/YouTubePlaylists/"$1".pickle
 
 Move CSV file: 
 
-- Call the script using `script_name "<PLAYLIST NAME>"` - *It is
-important to include double quotes around your playlist name*.
+- Call the script using `youPlaylistMoveCSV.sh "<PLAYLIST NAME>"`.
+- It is
+important to **include the double quotes** around the playlist name.
 - Do ***NOT*** add `.csv` after the `"<PLAYLIST NAME>"` because, the
 script automatically adds it.
 - You should already have the playlist defined with the name
@@ -1357,7 +1358,7 @@ double-click it.
 <kbd> v </kbd> to paste.
 - Press <kbd> Enter </kbd> to run the pasted code.
 - Open your "Downloads" folder and rename the file `my_data.csv`
-to `<PLAYLIST NAME>.csv` where *PLAYLIST NAME* is the name of the
+to `<PLAYLIST NAME>.csv` where *<PLAYLIST NAME>* is the name of the
 playlist.
 - Move the renamed file `<PLAYLIST NAME>.csv` to the **mserve**
 data directory `~/.local/share/mserve/YouTubePlaylists`. If the
