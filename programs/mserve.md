@@ -1137,8 +1137,22 @@ An abbreviation system is used for the filenames below:
 - `.../` represents the subdirectory, under your home directory,
 where your application data files are stored.
 
-Here are the data files (stored in pickle format) created under
-the `~/.../mserve`:
+For Windows:
+
+- `C:\Documents and Settings\<User>\Application Data\Local Settings\pippim\mserve`
+- `C:\Documents and Settings\<User>\Application Data\pippim\mserve`
+
+For MacOS:
+
+- `/Users/<User>/Library/Application Support/mserve`
+
+For Linux, ChromeOS, Windows Subsystem for Linux:
+
+- `/home/<User>/.local/share/mserve`
+
+
+Here are the data files (stored in pickle format) created in
+the `~/.../mserve` directory:
 
 - **last_location** - lc.FNAME_LAST_LOCATION - The last location ID 
 used. E.G. "L001", "L002", etc. August 5, 2023 Note: This will soon
