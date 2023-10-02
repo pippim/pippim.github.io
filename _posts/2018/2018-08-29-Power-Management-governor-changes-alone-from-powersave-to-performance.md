@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,983 "
 accepted:     
-uploaded:     2023-09-27 09:06:41
+uploaded:     2023-10-02 01:03:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-29-Power-Management-governor-changes-alone-from-powersave-to-performance.md
 toc:          false
 navigation:   false

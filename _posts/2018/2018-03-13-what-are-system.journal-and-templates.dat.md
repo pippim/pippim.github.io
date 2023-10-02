@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,171 "
 accepted:     Accepted
-uploaded:     2023-09-27 09:06:41
+uploaded:     2023-10-02 01:03:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-what-are-system.journal-and-templates.dat.md
 toc:          false
 navigation:   false
