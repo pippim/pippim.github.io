@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    0
 views:        "1,428 "
 accepted:     Accepted
-uploaded:     2023-10-02 01:03:53
+uploaded:     2023-10-03 15:44:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-Best-way-to-check-if-Nautilus-File-Manager-is-running_.md
 toc:          false
 navigation:   false

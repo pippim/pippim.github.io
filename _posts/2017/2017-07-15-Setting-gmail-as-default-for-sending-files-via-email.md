@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,305 "
 accepted:     Accepted
-uploaded:     2023-10-02 01:03:53
+uploaded:     2023-10-03 15:44:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-15-Setting-gmail-as-default-for-sending-files-via-email.md
 toc:          false
 navigation:   false

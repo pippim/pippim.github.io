@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "19,194 "
 accepted:     
-uploaded:     2023-10-02 01:03:53
+uploaded:     2023-10-03 15:44:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-04-Grub_-reboot-to-specific-kernel.md
 toc:          false
 navigation:   false

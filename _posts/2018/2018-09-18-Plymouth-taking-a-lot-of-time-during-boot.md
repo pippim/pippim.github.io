@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,294 "
 accepted:     
-uploaded:     2023-10-02 01:03:53
+uploaded:     2023-10-03 15:44:26
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-18-Plymouth-taking-a-lot-of-time-during-boot.md
 toc:          false
 navigation:   false
