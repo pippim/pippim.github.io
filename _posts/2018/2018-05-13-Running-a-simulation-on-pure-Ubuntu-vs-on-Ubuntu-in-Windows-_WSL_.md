@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "11,388 "
 accepted:     
-uploaded:     2023-10-03 15:44:26
+uploaded:     2023-10-07 12:52:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Running-a-simulation-on-pure-Ubuntu-vs-on-Ubuntu-in-Windows-_WSL_.md
 toc:          false
 navigation:   false
