@@ -2312,10 +2312,10 @@ Five functions share the same *Playlist Maintenance* window:
 The screen below shows LRC (Synchronized LyRiCs) playing in
 **mserve** with the YouTube window dragged overtop.
 
-{% include image.html src="src="/assets/img/mserve/mserve LRC Synchronized lyrics.png"
-   alt="mserve LRC Synchronized lyrics"
+{% include image.html src="/assets/img/mserve/mserve LRC Synchronized Lyrics.png"
+   alt="mserve LRC Synchronized Lyrics"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="mserve LRC Synchronized lyrics"
+   caption="mserve LRC Synchronized Lyrics"
 %}
 
 ---
