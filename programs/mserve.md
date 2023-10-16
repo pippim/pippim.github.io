@@ -2307,7 +2307,7 @@ Five functions share the same *Playlist Maintenance* window:
 
 ---
 
-## YouTube Playlists
+## YouTube Video with LRC Synchronized Lyrics
 
 The screen below shows LRC (Synchronized LyRiCs) playing in
 **mserve** with the YouTube window dragged overtop.
@@ -2316,6 +2316,19 @@ The screen below shows LRC (Synchronized LyRiCs) playing in
    alt="mserve LRC Synchronized Lyrics"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
    caption="mserve LRC Synchronized Lyrics"
+%}
+
+---
+
+## mserve Smart Play YouTube Playlist
+
+The screen below shows the **mserve** ***Smart Play Playlist***
+feature.
+
+{% include image.html src="/assets/img/mserve/mserve YouTube Playlist compared to YouTube.png"
+   alt="mserve YouTube Playlist compared to YouTube"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve YouTube Playlist compared to YouTube"
 %}
 
 ---
