@@ -2318,12 +2318,31 @@ The screen below shows LRC (Synchronized LyRiCs) playing in
    caption="mserve LRC Synchronized Lyrics"
 %}
 
+> ***NOTES:*** 
+> 
+> - **mserve** will save any changes to the *Time Offset* or Color 
+and used it the next time the same song is played.
+> 
+> - The *Time Offset* should only be a few seconds (in the case above
+it is `-5.0` seconds. 
+> 
+> - To create the LRC (Synchronized lyRiCs), right click on the song 
+in the playlist and select "Copy Name". Then in your web browser, 
+paste it in your address bar. Find the LRC website (E.G. *Megalobiz.com*)
+and open it. Find the best matching LRC, usually with the same or close
+duration. Then copy the LRC lines to the clipboard. Return to *mserve*,
+right click on the song and select "Paste LRC".
+> 
+> - The "Copy Name" and "Paste LRC" right-click menu options are only
+available when *Smart Play Playlist* is running.
+
+
 ---
 
 ## mserve Smart Play YouTube Playlist
 
-The screen below shows the **mserve** ***Smart Play Playlist***
-feature.
+The screen below shows the **mserve** ***Smart Play Playlist*** window with 
+a YouTube Playlist window next to it.
 
 {% include image.html src="/assets/img/mserve/mserve YouTube Playlist compared to YouTube.png"
    alt="mserve YouTube Playlist compared to YouTube"
