@@ -8,11 +8,11 @@ type:         Question
 tags:         bash scripts files cron systemd
 created_date: 2018-03-30 00:20:03
 edit_date:    2021-08-05 07:11:28
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "3,550 "
+views:        "3,740 "
 accepted:     
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-30-Are-there-file-naming-conventions-for-.cron-and-.systemd-extensions_.md
 toc:          false
 navigation:   false

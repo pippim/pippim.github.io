@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot apt grub2 kernel
 created_date: 2017-03-11 19:05:58
 edit_date:    2017-08-06 02:24:19
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "8,043 "
+views:        "8,118 "
 accepted:     Accepted
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once.md
 toc:          true
 navigation:   true

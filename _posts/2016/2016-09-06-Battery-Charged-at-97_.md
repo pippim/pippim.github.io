@@ -8,11 +8,11 @@ type:         Answer
 tags:         battery
 created_date: 2016-09-06 23:05:23
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "9,092 "
+views:        "9,155 "
 accepted:     
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Battery-Charged-at-97_.md
 toc:          false
 navigation:   false

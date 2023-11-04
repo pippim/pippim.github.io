@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash scripts
 created_date: 2016-09-19 10:51:34
 edit_date:    2019-10-25 01:57:15
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "1,637 "
+views:        "1,654 "
 accepted:     Accepted
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer_-in-text-editor-or-terminal_.md
 toc:          false
 navigation:   false

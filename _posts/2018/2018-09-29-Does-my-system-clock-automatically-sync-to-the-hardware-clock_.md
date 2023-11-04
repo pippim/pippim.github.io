@@ -8,11 +8,11 @@ type:         Answer
 tags:         time clock
 created_date: 2018-09-29 02:02:21
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "3,254 "
+views:        "3,328 "
 accepted:     Accepted
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-29-Does-my-system-clock-automatically-sync-to-the-hardware-clock_.md
 toc:          false
 navigation:   false

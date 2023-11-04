@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot grub2 hard-drive
 created_date: 2018-06-01 11:06:16
 edit_date:    2020-06-12 14:37:07
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "5,739 "
+views:        "5,844 "
 accepted:     Accepted
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-01-Remove-second-hard-drive-OS-from-grub.md
 toc:          false
 navigation:   false

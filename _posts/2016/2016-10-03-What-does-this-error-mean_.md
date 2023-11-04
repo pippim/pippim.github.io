@@ -10,9 +10,9 @@ created_date: 2016-10-03 01:33:12
 edit_date:    2016-10-04 10:13:23
 votes:        "6 "
 favorites:    
-views:        "12,833 "
+views:        "12,878 "
 accepted:     Accepted
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-What-does-this-error-mean_.md
 toc:          false
 navigation:   false

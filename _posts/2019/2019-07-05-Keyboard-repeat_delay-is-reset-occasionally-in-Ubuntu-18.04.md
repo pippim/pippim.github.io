@@ -8,11 +8,11 @@ type:         Answer
 tags:         gnome 18.04 keyboard xorg
 created_date: 2019-07-05 01:49:26
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "2,097 "
+views:        "2,117 "
 accepted:     
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-05-Keyboard-repeat_delay-is-reset-occasionally-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

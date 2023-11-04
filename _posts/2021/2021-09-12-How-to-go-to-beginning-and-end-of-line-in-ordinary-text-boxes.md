@@ -8,11 +8,11 @@ type:         Answer
 tags:         shortcut-keys
 created_date: 2021-09-12 20:41:44
 edit_date:    
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "6,175 "
+views:        "6,725 "
 accepted:     Accepted
-uploaded:     2023-10-07 12:52:52
+uploaded:     2023-11-04 11:19:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-09-12-How-to-go-to-beginning-and-end-of-line-in-ordinary-text-boxes.md
 toc:          false
 navigation:   false
