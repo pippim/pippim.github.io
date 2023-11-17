@@ -104,7 +104,7 @@
 │   ├── jekyll-theme-cayman.scss
 │   ├── normalize.scss
 │   ├── rouge-github-monokai-sublime.scss
-│   ├── 2023 [2 entries suppressed by massage_tree.sh]
+│   └── 2023 [2 entries suppressed by massage_tree.sh]
 │   ├── rouge-github.scss
 │   ├── rouge-github-virtua-creative.scss
 │   └── toc.scss

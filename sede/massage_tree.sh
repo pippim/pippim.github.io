@@ -46,5 +46,5 @@ done
 
 newArray[$y2022]="│   ├── 2022 [$c2022 entries suppressed by massage_tree.sh]"
 # Nov. 17/23 2023
-newArray[$y2023]="│   ├── 2023 [$c2023 entries suppressed by massage_tree.sh]"
+newArray[$y2023]="│   └── 2023 [$c2023 entries suppressed by massage_tree.sh]"
 printf "%s\n" "${newArray[@]}" > "$1"
