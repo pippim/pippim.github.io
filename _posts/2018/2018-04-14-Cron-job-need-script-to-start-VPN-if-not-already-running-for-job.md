@@ -10,9 +10,9 @@ created_date: 2018-04-14 19:07:26
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "799 "
+views:        "805 "
 accepted:     Accepted
-uploaded:     2023-11-04 11:19:12
+uploaded:     2023-11-17 06:08:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-14-Cron-job-need-script-to-start-VPN-if-not-already-running-for-job.md
 toc:          false
 navigation:   false

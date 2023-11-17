@@ -10,9 +10,9 @@ created_date: 2018-04-06 23:38:56
 edit_date:    2020-06-12 14:37:07
 votes:        "13 "
 favorites:    
-views:        "13,642 "
+views:        "13,671 "
 accepted:     
-uploaded:     2023-11-04 11:19:12
+uploaded:     2023-11-17 06:08:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows.md
 toc:          false
 navigation:   false
