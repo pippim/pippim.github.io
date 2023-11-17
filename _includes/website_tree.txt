@@ -91,8 +91,6 @@
 │   ├── 2021 [33 entries exceeds filelimit, not opening dir]
 │   ├── 2022 [14 entries suppressed by massage_tree.sh]
 │   └── 2023
-│       ├── 2023-11-05-Ubuntu-fan-noise-while-watching-videos.md
-│       └── 2023-11-07-Are-login-passwords-saved-on-the-machine-or-only-a-hash-version-of-the-password_.md
 ├── programs
 │   ├── hyperlink.md
 │   ├── iothings.md
@@ -106,7 +104,7 @@
 │   ├── jekyll-theme-cayman.scss
 │   ├── normalize.scss
 │   ├── rouge-github-monokai-sublime.scss
-│   ├── rouge-github-original.scss
+│   ├── 2023 [2 entries suppressed by massage_tree.sh]
 │   ├── rouge-github.scss
 │   ├── rouge-github-virtua-creative.scss
 │   └── toc.scss

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,499 "
 accepted:     
-uploaded:     2023-11-17 06:08:54
+uploaded:     2023-11-17 06:20:11
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-06-Typing-guillemets-_angle-quotes_-«»_-in-Russian-and-English-keyboards.md
 toc:          false
 navigation:   false

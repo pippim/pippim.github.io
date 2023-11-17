@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "14,403 "
 accepted:     
-uploaded:     2023-11-17 06:08:54
+uploaded:     2023-11-17 06:20:11
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-08-How-can-I-tell-which-of-these-video-devices-is-a-webcam_.md
 toc:          false
 navigation:   false
