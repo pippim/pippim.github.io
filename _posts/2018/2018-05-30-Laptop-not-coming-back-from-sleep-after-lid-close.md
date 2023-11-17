@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "808 "
 accepted:     Accepted
-uploaded:     2023-11-17 06:28:25
+uploaded:     2023-11-17 07:14:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-30-Laptop-not-coming-back-from-sleep-after-lid-close.md
 toc:          false
 navigation:   false

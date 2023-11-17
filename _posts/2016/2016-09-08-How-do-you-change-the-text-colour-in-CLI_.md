@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "642 "
 accepted:     
-uploaded:     2023-11-17 06:28:25
+uploaded:     2023-11-17 07:14:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-08-How-do-you-change-the-text-colour-in-CLI_.md
 toc:          false
 navigation:   false

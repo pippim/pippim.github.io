@@ -36,7 +36,8 @@ do
         [[ $y2022 == 0 ]] && y2022=$((ndx - 1))  # First "2022-" found
         ((c2022++))  # How many "2022-" were found
     elif [[ $value == *"─ 2023-"* ]]; then
-        [[ $y2023 == 0 ]] && y2023=$((ndx - 1))  # First "2023-" found
+        [[ $y2023 == 0 ]] && y2023=$((y2022 + 1))  # First "2023-" found
+        # Do not use ((ndx - 1)) because it points into _sass directory
         ((c2023++))  # How many "2023-" were found
     else
         newArray+=("$value")
