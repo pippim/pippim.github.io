@@ -775,9 +775,10 @@ a.search-results:visited {
     object-fit: scale-down;
     text-align: center;
     vertical-align: middle;
-    horizontal-align: middle;  // 2023-11-25 for Chrome Smartphone
+    // horizontal-align: middle;  // 2023-11-25 for Chrome Smartphone
     display: table-cell;
     //text-align: center;
+    margin: auto;  // 2023-11-25 for Chrome Smartphone
     //margin-left: auto;
     //margin-right: auto;
 }
