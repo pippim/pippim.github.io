@@ -35,6 +35,11 @@ textarea {
 // Smooth scrolling
 html { scroll-behavior: smooth; }
 
+// Figures
+figure {
+  @include small { max-height:640px; width: 100% !important; height: auto !important; }
+}
+
 //                    Pure CSS Button Hover effect
 // From: https://www.sliderrevolution.com/resources/css-button-hover-effects/
 
