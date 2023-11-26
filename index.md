@@ -398,6 +398,8 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include toc.md %}
 
+---
+
 ## How the Slide Show (Carousel) is Generated
 {:.no_toc}
 
@@ -731,7 +733,7 @@ There are many open-source providers involved in the
 "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. ⧉ 🔗"){:target="_blank"}
 - **Cayman Theme** - [Cayman is a Jekyll theme for GitHub Pages. ⧉ 🔗](https://pages-themes.github.io/cayman/ 
 "Cayman is a clean, responsive theme for GitHub Pages. ⧉ 🔗"){:target="_blank"}
-- **Ruby** - [dynamic, open source programming language ⧉ 🔗](http://www.ruby-lang.org/en/ 
+- **Ruby** - [dynamic, open source programming language ⧉ 🔗](https://www.ruby-lang.org/en/ 
 "more powerful than Perl, and more object-oriented than Python ⧉ 🔗"){:target="_blank"}
 - **Rouge** - [language syntax highlighting ⧉ 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers 
 "List of all languages supported by Rouge ⧉ 🔗"){:target="_blank"}
