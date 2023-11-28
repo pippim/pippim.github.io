@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash scripts
 created_date: 2019-07-06 17:17:00
 edit_date:    2019-07-07 17:52:17
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "5,537 "
+views:        "5,570 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Run-Bash-scripts-in-folder-all-at-the-same-time.md
 toc:          false
 navigation:   false

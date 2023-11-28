@@ -10,9 +10,9 @@ created_date: 2017-02-27 05:05:15
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,350 "
+views:        "1,357 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-27-Using-Zenity-to-maintain-configuration-file.md
 toc:          false
 navigation:   true

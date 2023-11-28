@@ -10,9 +10,9 @@ created_date: 2018-10-14 17:47:47
 edit_date:    2018-10-14 17:54:35
 votes:        "3 "
 favorites:    
-views:        "2,668 "
+views:        "2,684 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-14-Ubuntu-goes-suspended-after-login-if-lid-is-closed.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-06-10 16:02:33
 edit_date:    2018-06-10 17:38:32
 votes:        "3 "
 favorites:    
-views:        "1,146 "
+views:        "1,150 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-How-to-make-speaking-clock-_via-cron-and-festival-tts_-work-while-playing-music.md
 toc:          false
 navigation:   false

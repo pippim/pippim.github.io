@@ -10,9 +10,9 @@ created_date: 2020-01-24 20:44:31
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "872 "
+views:        "874 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-24-How-can-I-remap-caps-lock-to-caps-lock-after-unmapping-it_.md
 toc:          false
 navigation:   false

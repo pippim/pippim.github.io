@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "158 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-21-Why-does-system-say-my-hdd-is-only-26GB.md
 toc:          false
 navigation:   false

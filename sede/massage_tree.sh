@@ -30,8 +30,7 @@ c2023=0
 y2023=0
 newArray=()
 mapfile -t treeArray < "$1"
-for value in "${treeArray[@]}"
-do
+for value in "${treeArray[@]}" ; do
     if [[ $value == *"─ 2022-"* ]]; then
         [[ $y2022 == 0 ]] && y2022=$((ndx - 1))  # First "2022-" found
         ((c2022++))  # How many "2022-" were found

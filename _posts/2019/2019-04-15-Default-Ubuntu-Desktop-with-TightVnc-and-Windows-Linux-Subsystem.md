@@ -10,9 +10,9 @@ created_date: 2019-04-15 11:27:40
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "9,720 "
+views:        "9,743 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-15-Default-Ubuntu-Desktop-with-TightVnc-and-Windows-Linux-Subsystem.md
 toc:          false
 navigation:   false

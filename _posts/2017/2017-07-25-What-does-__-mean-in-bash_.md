@@ -10,9 +10,9 @@ created_date: 2017-07-25 14:44:21
 edit_date:    2022-02-11 07:31:10
 votes:        "17 "
 favorites:    
-views:        "140,121 "
+views:        "140,952 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-What-does-__-mean-in-bash_.md
 toc:          false
 navigation:   false

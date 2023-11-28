@@ -10,9 +10,9 @@ created_date: 2016-12-24 18:28:29
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "54,444 "
+views:        "54,487 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-24-How-to-clear-recently-used-files-without-using-a-terminal_.md
 toc:          false
 navigation:   false

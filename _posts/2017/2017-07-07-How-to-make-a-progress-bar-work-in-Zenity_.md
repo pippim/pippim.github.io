@@ -10,9 +10,9 @@ created_date: 2017-07-07 02:00:08
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "15,565 "
+views:        "15,633 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-07-How-to-make-a-progress-bar-work-in-Zenity_.md
 toc:          false
 navigation:   false

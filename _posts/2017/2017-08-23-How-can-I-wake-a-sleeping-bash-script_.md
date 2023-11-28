@@ -10,9 +10,9 @@ created_date: 2017-08-23 01:21:18
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "25,260 "
+views:        "25,318 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-23-How-can-I-wake-a-sleeping-bash-script_.md
 toc:          false
 navigation:   false

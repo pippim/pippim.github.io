@@ -10,9 +10,9 @@ created_date: 2018-05-16 23:20:52
 edit_date:    2018-05-24 02:07:37
 votes:        "10 "
 favorites:    
-views:        "78,874 "
+views:        "79,316 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-How-to-run-a-file-in-a-different-directory.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "723 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-can-I-stop-Ubuntu-from-freezing-up_.md
 toc:          false
 navigation:   false

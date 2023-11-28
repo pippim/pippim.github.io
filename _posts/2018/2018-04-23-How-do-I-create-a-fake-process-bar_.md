@@ -10,9 +10,9 @@ created_date: 2018-04-23 23:29:17
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "3,648 "
+views:        "3,677 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-How-do-I-create-a-fake-process-bar_.md
 toc:          false
 navigation:   false

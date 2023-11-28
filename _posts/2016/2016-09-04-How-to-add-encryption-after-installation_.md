@@ -10,9 +10,9 @@ created_date: 2016-09-04 00:23:32
 edit_date:    2016-09-04 01:31:56
 votes:        "5 "
 favorites:    
-views:        "6,933 "
+views:        "6,937 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-to-add-encryption-after-installation_.md
 toc:          false
 navigation:   false

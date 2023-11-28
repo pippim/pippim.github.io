@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation
 created_date: 2018-03-12 23:11:42
 edit_date:    2020-06-12 14:37:07
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "1,667 "
+views:        "1,711 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-How-can-I-record-cpu-_-ram-usage-on-Ubuntu_.md
 toc:          false
 navigation:   true

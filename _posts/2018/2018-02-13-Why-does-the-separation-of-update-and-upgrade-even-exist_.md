@@ -10,9 +10,9 @@ created_date: 2018-02-13 12:37:57
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,127 "
+views:        "1,144 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-13-Why-does-the-separation-of-update-and-upgrade-even-exist_.md
 toc:          false
 navigation:   false

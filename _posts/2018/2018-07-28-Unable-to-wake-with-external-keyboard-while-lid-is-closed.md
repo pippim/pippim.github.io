@@ -10,9 +10,9 @@ created_date: 2018-07-28 22:08:57
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "4,197 "
+views:        "4,218 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-28-Unable-to-wake-with-external-keyboard-while-lid-is-closed.md
 toc:          false
 navigation:   false

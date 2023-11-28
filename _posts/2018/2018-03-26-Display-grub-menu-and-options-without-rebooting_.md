@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line grub2
 created_date: 2018-03-26 04:05:58
 edit_date:    2018-05-08 00:32:11
-votes:        "21 "
+votes:        "22 "
 favorites:    
-views:        "13,939 "
+views:        "14,091 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_.md
 toc:          true
 navigation:   true

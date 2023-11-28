@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "210 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Log-in-screen-background-_on-Ubuntu-18.04_-is-not-changing-though-I-made-necessary-changes-in-necessary-files.md
 toc:          false
 navigation:   false

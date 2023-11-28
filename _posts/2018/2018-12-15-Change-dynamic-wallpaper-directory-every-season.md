@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102084
 type:         Answer
-tags:         scripts wallpaper
+tags:         scripts desktop-background
 created_date: 2018-12-15 14:24:49
 edit_date:    2022-01-06 12:14:05
 votes:        "4 "
 favorites:    
-views:        "1,216 "
+views:        "1,231 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-15-Change-dynamic-wallpaper-directory-every-season.md
 toc:          false
 navigation:   true

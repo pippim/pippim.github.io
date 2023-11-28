@@ -10,9 +10,9 @@ created_date: 2019-07-13 21:42:49
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,871 "
+views:        "1,874 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Installing-Ubuntu-with-HD-_-SSD.md
 toc:          false
 navigation:   false

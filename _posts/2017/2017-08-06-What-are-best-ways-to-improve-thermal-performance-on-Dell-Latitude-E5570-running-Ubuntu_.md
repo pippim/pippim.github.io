@@ -10,9 +10,9 @@ created_date: 2017-08-06 13:29:31
 edit_date:    2020-06-12 14:37:07
 votes:        "0 "
 favorites:    
-views:        "987 "
+views:        "988 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-What-are-best-ways-to-improve-thermal-performance-on-Dell-Latitude-E5570-running-Ubuntu_.md
 toc:          false
 navigation:   false

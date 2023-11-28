@@ -10,9 +10,9 @@ created_date: 2018-09-29 02:02:21
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "3,364 "
+views:        "3,425 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-29-Does-my-system-clock-automatically-sync-to-the-hardware-clock_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-05-11 03:09:43
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,548 "
+views:        "2,566 "
 accepted:     Accepted
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-11-CPU-governor-changes-automatically-to-_performance_-under-load.md
 toc:          false
 navigation:   false

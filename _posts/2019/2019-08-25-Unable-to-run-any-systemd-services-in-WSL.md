@@ -10,9 +10,9 @@ created_date: 2019-08-25 18:51:00
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "41,021 "
+views:        "41,423 "
 accepted:     
-uploaded:     2023-11-17 07:14:21
+uploaded:     2023-11-28 05:46:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-25-Unable-to-run-any-systemd-services-in-WSL.md
 toc:          false
 navigation:   false
