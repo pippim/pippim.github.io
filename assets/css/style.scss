@@ -417,6 +417,7 @@ details > summary {
     margin-bottom: .6em;     // some spacing between groups
     padding: 2px 6px;
     width: 35em;          // 60% no good for cell phone
+    @include small { width: 100vw; }  // fix scroll overflow
     background-color: var(--front-matter-bg-color);
     color: var(--header-bg-color);
     border: none;
@@ -474,6 +475,8 @@ details[open] > summary {
     color: white;
     text-align: center;
 }
+
+/* MAJOR SECTION ======== image animations */
 
 .slide-left {
     // https://stackoverflow.com/a/64622534/6929343
