@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818165
 type:         Answer
-tags:         file-sharing usb-storage copy
+tags:         file-sharing usb-drive copy
 created_date: 2016-08-29 10:40:46
 edit_date:    2017-04-13 12:24:53
 votes:        "3 "
 favorites:    
-views:        "2,012 "
+views:        "2,017 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-29-How-to-Prevent-users-from-copying-files-to-usb.._.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-03-23 23:35:51
 edit_date:    2020-06-12 14:37:07
 votes:        "79 "
 favorites:    
-views:        "128,420 "
+views:        "129,047 "
 accepted:     Accepted
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-What-does-NetworkManager-wait-online.service-do_.md
 toc:          false
 navigation:   false

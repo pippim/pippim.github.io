@@ -10,9 +10,9 @@ created_date: 2017-10-01 00:27:14
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "370 "
+views:        "371 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-01-How-to-extract-a-backup-from-old-1993-files-from-an-IBM-PS2_.md
 toc:          false
 navigation:   false

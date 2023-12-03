@@ -10,9 +10,9 @@ created_date: 2019-07-16 11:28:28
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "3,453 "
+views:        "3,454 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-16-sound-problem-_Ubuntu-18.04__-no-sound-after-suspend.md
 toc:          false
 navigation:   false

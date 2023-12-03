@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,601 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-02-Why-are-so-many-Linux-kernels-still-being-updated_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-12-21 11:30:12
 edit_date:    2018-12-21 11:36:47
 votes:        "6 "
 favorites:    
-views:        "1,640 "
+views:        "1,649 "
 accepted:     Accepted
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-21-How-can-I-prevent-line-wrapping-and-instead-allow-horizontal-scrolling-in-Gedit_.md
 toc:          false
 navigation:   false

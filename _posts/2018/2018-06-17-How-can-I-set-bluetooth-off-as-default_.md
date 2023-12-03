@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot bluetooth settings
 created_date: 2018-06-17 21:38:02
 edit_date:    2018-06-17 23:53:20
-votes:        "18 "
+votes:        "19 "
 favorites:    
-views:        "22,013 "
+views:        "22,052 "
 accepted:     Accepted
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-How-can-I-set-bluetooth-off-as-default_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-10-09 11:25:29
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "1,864 "
+views:        "1,874 "
 accepted:     Accepted
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-09-Best-way-to-make-Ubuntu-installation-as-lean-as-possible_.md
 toc:          false
 navigation:   false

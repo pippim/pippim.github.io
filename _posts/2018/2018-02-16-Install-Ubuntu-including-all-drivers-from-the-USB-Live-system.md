@@ -10,9 +10,9 @@ created_date: 2018-02-16 03:12:50
 edit_date:    2018-02-19 19:53:59
 votes:        "2 "
 favorites:    
-views:        "18,894 "
+views:        "18,914 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-16-Install-Ubuntu-including-all-drivers-from-the-USB-Live-system.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2022-04-15 17:50:11
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,055 "
+views:        "3,113 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-04-15-4k-resolution-for-Ubuntu-18.04.md
 toc:          false
 navigation:   false

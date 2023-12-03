@@ -10,9 +10,9 @@ created_date: 2019-11-11 04:23:12
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "391 "
+views:        "392 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-11-Cannot-install-openjdk-8-jre-successfully-On-18.04.md
 toc:          false
 navigation:   false

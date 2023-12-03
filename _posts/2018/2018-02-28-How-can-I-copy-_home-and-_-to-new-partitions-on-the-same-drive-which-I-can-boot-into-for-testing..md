@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "398 "
 accepted:     
-uploaded:     2023-11-28 05:46:08
+uploaded:     2023-12-03 08:18:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-28-How-can-I-copy-_home-and-_-to-new-partitions-on-the-same-drive-which-I-can-boot-into-for-testing..md
 toc:          false
 navigation:   false
