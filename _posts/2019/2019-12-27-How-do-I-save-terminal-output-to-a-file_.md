@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line
 created_date: 2019-12-27 01:38:52
 edit_date:    2021-12-13 01:02:51
-votes:        "23 "
+votes:        "24 "
 favorites:    
-views:        "3,777,546 "
+views:        "3,784,381 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-27-How-do-I-save-terminal-output-to-a-file_.md
 toc:          false
 navigation:   false

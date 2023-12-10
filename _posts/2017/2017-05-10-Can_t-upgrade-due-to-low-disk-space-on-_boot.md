@@ -10,9 +10,9 @@ created_date: 2017-05-10 02:54:21
 edit_date:    2017-07-28 22:26:01
 votes:        "4 "
 favorites:    
-views:        "136,845 "
+views:        "136,946 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-10-Can_t-upgrade-due-to-low-disk-space-on-_boot.md
 toc:          false
 navigation:   true

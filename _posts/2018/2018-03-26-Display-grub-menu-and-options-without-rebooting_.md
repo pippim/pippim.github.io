@@ -10,9 +10,9 @@ created_date: 2018-03-26 04:05:58
 edit_date:    2018-05-08 00:32:11
 votes:        "22 "
 favorites:    
-views:        "14,176 "
+views:        "14,258 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_.md
 toc:          true
 navigation:   true

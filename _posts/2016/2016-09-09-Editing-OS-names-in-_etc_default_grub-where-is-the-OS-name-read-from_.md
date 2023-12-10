@@ -10,9 +10,9 @@ created_date: 2016-09-09 02:29:40
 edit_date:    2016-09-09 10:55:36
 votes:        "2 "
 favorites:    
-views:        "4,586 "
+views:        "4,589 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-09-Editing-OS-names-in-_etc_default_grub-where-is-the-OS-name-read-from_.md
 toc:          false
 navigation:   false

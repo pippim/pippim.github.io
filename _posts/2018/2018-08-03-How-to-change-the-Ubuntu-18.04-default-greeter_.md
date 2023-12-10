@@ -10,9 +10,9 @@ created_date: 2018-08-03 11:20:15
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "25,681 "
+views:        "25,700 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-03-How-to-change-the-Ubuntu-18.04-default-greeter_.md
 toc:          false
 navigation:   false

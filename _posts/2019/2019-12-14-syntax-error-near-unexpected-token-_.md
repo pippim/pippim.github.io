@@ -10,9 +10,9 @@ created_date: 2019-12-14 20:01:55
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "2,459 "
+views:        "2,469 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-syntax-error-near-unexpected-token-_.md
 toc:          false
 navigation:   false

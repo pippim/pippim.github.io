@@ -10,9 +10,9 @@ created_date: 2019-11-24 00:53:55
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "16,989 "
+views:        "17,082 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-how-can-i-get-Conky-to-display-weather_.md
 toc:          false
 navigation:   false

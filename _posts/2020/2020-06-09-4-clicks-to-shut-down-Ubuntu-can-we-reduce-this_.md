@@ -10,9 +10,9 @@ created_date: 2020-06-09 23:16:55
 edit_date:    2023-03-30 17:34:47
 votes:        "2 "
 favorites:    
-views:        "20,454 "
+views:        "20,509 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu-can-we-reduce-this_.md
 toc:          true
 navigation:   true

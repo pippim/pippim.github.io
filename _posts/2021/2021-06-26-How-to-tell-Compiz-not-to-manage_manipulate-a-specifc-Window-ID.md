@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "40 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-26-How-to-tell-Compiz-not-to-manage_manipulate-a-specifc-Window-ID.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-10-30 00:37:11
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "5,289 "
+views:        "5,310 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-30-How-to-stop-Ubuntu-from-changing-numlock-state-on-boot_.md
 toc:          false
 navigation:   false

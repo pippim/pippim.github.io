@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "89 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-13-i-have-problem-when-i-install-or-update-Ubuntu.md
 toc:          false
 navigation:   false

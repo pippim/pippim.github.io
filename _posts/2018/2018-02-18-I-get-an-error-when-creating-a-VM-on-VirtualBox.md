@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "841 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-18-I-get-an-error-when-creating-a-VM-on-VirtualBox.md
 toc:          false
 navigation:   false

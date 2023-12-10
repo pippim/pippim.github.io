@@ -10,9 +10,9 @@ created_date: 2018-01-27 04:20:11
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "8,612 "
+views:        "8,640 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-27-Is-it-possible-to-update-Ubuntu-Live-USB-stick_.md
 toc:          false
 navigation:   false

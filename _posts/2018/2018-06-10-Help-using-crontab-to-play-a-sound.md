@@ -10,9 +10,9 @@ created_date: 2018-06-10 16:17:17
 edit_date:    2018-06-10 17:39:19
 votes:        "11 "
 favorites:    
-views:        "7,013 "
+views:        "7,037 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-Help-using-crontab-to-play-a-sound.md
 toc:          false
 navigation:   false

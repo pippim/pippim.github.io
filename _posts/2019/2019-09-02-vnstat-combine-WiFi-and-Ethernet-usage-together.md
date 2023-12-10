@@ -10,9 +10,9 @@ created_date: 2019-09-02 18:33:20
 edit_date:    2019-09-07 15:18:07
 votes:        "4 "
 favorites:    
-views:        "770 "
+views:        "782 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-02-vnstat-combine-WiFi-and-Ethernet-usage-together.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-12-01 16:50:36
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "9,879 "
+views:        "9,882 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-01-No-option-to-mirror-Displays-on-18.04-DELL-M3800.md
 toc:          false
 navigation:   false

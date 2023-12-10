@@ -10,9 +10,9 @@ created_date: 2017-02-04 22:20:08
 edit_date:    2017-06-26 00:44:34
 votes:        "5 "
 favorites:    
-views:        "13,011 "
+views:        "13,018 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-How-do-I-update-kernel-to-the-latest-mainline-version_.md
 toc:          false
 navigation:   false

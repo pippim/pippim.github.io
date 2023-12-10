@@ -10,9 +10,9 @@ created_date: 2018-03-17 19:24:43
 edit_date:    2018-03-17 19:31:22
 votes:        "4 "
 favorites:    
-views:        "85,346 "
+views:        "85,485 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-17-How-can-I-print-multiline-output-on-the-same-line_.md
 toc:          false
 navigation:   false

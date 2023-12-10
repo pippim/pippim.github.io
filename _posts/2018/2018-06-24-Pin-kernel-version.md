@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 kernel updates pinning
 created_date: 2018-06-24 07:20:34
 edit_date:    2018-06-24 15:01:21
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "4,756 "
+views:        "4,783 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-24-Pin-kernel-version.md
 toc:          false
 navigation:   false

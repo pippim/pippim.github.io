@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "49 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-26-How-to-tell-which-installation-guide-is-legit_.md
 toc:          false
 navigation:   false

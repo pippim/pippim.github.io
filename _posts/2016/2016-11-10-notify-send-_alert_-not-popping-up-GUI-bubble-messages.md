@@ -10,9 +10,9 @@ created_date: 2016-11-10 00:24:16
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,819 "
+views:        "1,823 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-10-notify-send-_alert_-not-popping-up-GUI-bubble-messages.md
 toc:          false
 navigation:   false

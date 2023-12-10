@@ -10,9 +10,9 @@ created_date: 2018-12-23 19:49:39
 edit_date:    2022-04-09 06:36:58
 votes:        "6 "
 favorites:    
-views:        "34,057 "
+views:        "34,072 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-Alternative-to-Dragon-NaturallySpeaking_.md
 toc:          false
 navigation:   false

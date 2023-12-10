@@ -10,9 +10,9 @@ created_date: 2018-09-25 02:19:57
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,947 "
+views:        "1,949 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-25-No-more-4K-Screen-Resolution-after-Kernel-Upgrade.md
 toc:          false
 navigation:   false

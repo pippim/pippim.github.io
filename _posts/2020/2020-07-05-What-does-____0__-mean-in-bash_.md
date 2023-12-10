@@ -10,9 +10,9 @@ created_date: 2020-07-05 00:54:24
 edit_date:    2020-07-05 11:44:22
 votes:        "5 "
 favorites:    
-views:        "2,613 "
+views:        "2,618 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-05-What-does-____0__-mean-in-bash_.md
 toc:          false
 navigation:   false

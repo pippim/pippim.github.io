@@ -5,7 +5,7 @@
 |---------------------------------------------------------------------------------------------------------------------------------------------------|--------:|:-------------------:|-----------------------------------------|
 | [`calc.py`](https://github.com/pippim/mserve/blob/main/src/calc.py "View mserve Python source code"){:target="_blank"}                            |     229 | 2023-09-08 00:47:41 | Calculator for big numbers              |
 | [`disc_get.py`](https://github.com/pippim/mserve/blob/main/src/disc_get.py "View mserve Python source code"){:target="_blank"}                    |      47 | 2023-07-16 23:16:08 | Get discid of CD                        |
-| [`encoding.py`](https://github.com/pippim/mserve/blob/main/src/encoding.py "View mserve Python source code"){:target="_blank"}                    |   4,077 | 2023-08-28 18:08:38 | Encode (Rip) CD to music files          |
+| [`encoding.py`](https://github.com/pippim/mserve/blob/main/src/encoding.py "View mserve Python source code"){:target="_blank"}                    |   4,067 | 2023-12-09 23:25:11 | Encode (Rip) CD to music files          |
 | [`external.py`](https://github.com/pippim/mserve/blob/main/src/external.py "View mserve Python source code"){:target="_blank"}                    |     617 | 2023-10-10 22:26:00 | Calls to External Programs              |
 | [`global_variables.py`](https://github.com/pippim/mserve/blob/main/src/global_variables.py "View mserve Python source code"){:target="_blank"}    |     204 | 2023-09-12 10:27:43 | Global variables shared by all modules  |
 | [`image.py`](https://github.com/pippim/mserve/blob/main/src/image.py "View mserve Python source code"){:target="_blank"}                          |   1,717 | 2023-08-22 23:25:23 | Image Processing                        |
@@ -15,7 +15,7 @@
 | [`mbz_get2.py`](https://github.com/pippim/mserve/blob/main/src/mbz_get2.py "View mserve Python source code"){:target="_blank"}                    |     143 | 2023-08-22 00:18:06 | Get musicbrainzngs artwork              |
 | [`message.py`](https://github.com/pippim/mserve/blob/main/src/message.py "View mserve Python source code"){:target="_blank"}                      |   1,856 | 2023-09-04 23:05:30 | Message Dialog Boxes                    |
 | [`monitor.py`](https://github.com/pippim/mserve/blob/main/src/monitor.py "View mserve Python source code"){:target="_blank"}                      |     890 | 2023-09-07 21:28:01 | Multiple Monitor Management             |
-| [`mserve.py`](https://github.com/pippim/mserve/blob/main/src/mserve.py "View mserve Python source code"){:target="_blank"}                        |  20,183 | 2023-12-03 08:14:39 | Main **mserve** Python Module           |
+| [`mserve.py`](https://github.com/pippim/mserve/blob/main/src/mserve.py "View mserve Python source code"){:target="_blank"}                        |  20,329 | 2023-12-09 11:02:04 | Main **mserve** Python Module           |
 | [`mserve_config.py`](https://github.com/pippim/mserve/blob/main/src/mserve_config.py "View mserve Python source code"){:target="_blank"}          |   1,291 | 2023-10-09 02:10:50 | Dependencies Checker and Setup          |
 | [`sql.py`](https://github.com/pippim/mserve/blob/main/src/sql.py "View mserve Python source code"){:target="_blank"}                              |   3,824 | 2023-09-26 08:22:43 | SQLite3 Interface                       |
 | [`timefmt.py`](https://github.com/pippim/mserve/blob/main/src/timefmt.py "View mserve Python source code"){:target="_blank"}                      |     270 | 2023-10-29 17:40:17 | Date & Time formatting                  |
@@ -24,4 +24,4 @@
 | [`vu_pulse_audio.py`](https://github.com/pippim/mserve/blob/main/src/vu_pulse_audio.py "View mserve Python source code"){:target="_blank"}        |     802 | 2023-12-03 08:03:07 | Pulse Audio Volume Controls             |
 | [`webscrape.py`](https://github.com/pippim/mserve/blob/main/src/webscrape.py "View mserve Python source code"){:target="_blank"}                  |   1,408 | 2023-09-12 15:47:47 | Webscrape Lyrics from genius.com        |
 | [`x11.py`](https://github.com/pippim/mserve/blob/main/src/x11.py "View mserve Python source code"){:target="_blank"}                              |     309 | 2023-07-12 23:14:15 | X11 window client                       |
-| ALL Modules                                                                                                                                       |  46,232 |                     |                                         |
+| ALL Modules                                                                                                                                       |  46,368 |                     |                                         |

@@ -10,9 +10,9 @@ created_date: 2019-11-24 21:15:24
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "2,870 "
+views:        "2,883 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-How-to-run-a-script-at-boot-and-then-every-30-minutes.md
 toc:          false
 navigation:   false

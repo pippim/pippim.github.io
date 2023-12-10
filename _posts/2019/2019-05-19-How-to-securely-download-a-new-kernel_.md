@@ -10,9 +10,9 @@ created_date: 2019-05-19 17:10:07
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "1,091 "
+views:        "1,095 "
 accepted:     Accepted
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-How-to-securely-download-a-new-kernel_.md
 toc:          false
 navigation:   false

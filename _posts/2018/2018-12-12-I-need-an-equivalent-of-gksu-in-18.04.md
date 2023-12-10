@@ -10,9 +10,9 @@ created_date: 2018-12-12 05:14:22
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "52,060 "
+views:        "52,108 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-10 07:30:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-I-need-an-equivalent-of-gksu-in-18.04.md
 toc:          false
 navigation:   false
