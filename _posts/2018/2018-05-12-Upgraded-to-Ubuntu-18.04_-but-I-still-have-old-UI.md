@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,279 "
 accepted:     Accepted
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Upgraded-to-Ubuntu-18.04_-but-I-still-have-old-UI.md
 toc:          false
 navigation:   false

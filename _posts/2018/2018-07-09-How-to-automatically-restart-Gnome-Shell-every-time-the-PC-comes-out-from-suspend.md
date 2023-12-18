@@ -10,9 +10,9 @@ created_date: 2018-07-09 01:51:13
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,427 "
+views:        "2,430 "
 accepted:     
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-09-How-to-automatically-restart-Gnome-Shell-every-time-the-PC-comes-out-from-suspend.md
 toc:          false
 navigation:   false

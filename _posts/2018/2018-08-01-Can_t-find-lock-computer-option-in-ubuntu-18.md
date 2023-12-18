@@ -10,9 +10,9 @@ created_date: 2018-08-01 04:25:20
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "6,550 "
+views:        "6,551 "
 accepted:     
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-Can_t-find-lock-computer-option-in-ubuntu-18.md
 toc:          false
 navigation:   false

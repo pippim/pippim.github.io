@@ -10,9 +10,9 @@ created_date: 2018-07-07 20:27:14
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "4,218 "
+views:        "4,227 "
 accepted:     
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-07-How-to-install-the-right-click-photo-resizer-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false

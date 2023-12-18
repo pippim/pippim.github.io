@@ -10,9 +10,9 @@ created_date: 2018-08-23 00:59:48
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,380 "
+views:        "2,401 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-Purpose-of-_proc_thread-self_.md
 toc:          false
 navigation:   false

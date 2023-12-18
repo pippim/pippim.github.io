@@ -10,9 +10,9 @@ created_date: 2019-07-13 21:07:07
 edit_date:    
 votes:        "10 "
 favorites:    
-views:        "127,317 "
+views:        "128,106 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Get-names-of-devices-on-the-network.md
 toc:          false
 navigation:   false

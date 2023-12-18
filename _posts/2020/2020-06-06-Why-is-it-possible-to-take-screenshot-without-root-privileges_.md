@@ -10,9 +10,9 @@ created_date: 2020-06-06 17:09:17
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,180 "
+views:        "1,185 "
 accepted:     
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-06-Why-is-it-possible-to-take-screenshot-without-root-privileges_.md
 toc:          false
 navigation:   false

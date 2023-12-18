@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "95 "
 accepted:     Accepted
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-20-Unusual-power-management-following-fresh-reinstall-of-16.10.md
 toc:          false
 navigation:   false

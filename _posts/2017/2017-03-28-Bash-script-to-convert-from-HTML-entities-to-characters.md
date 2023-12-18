@@ -10,9 +10,9 @@ created_date: 2017-03-28 01:06:23
 edit_date:    2023-07-21 09:30:37
 votes:        "16 "
 favorites:    
-views:        "65,649 "
+views:        "65,887 "
 accepted:     
-uploaded:     2023-12-03 08:18:29
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-28-Bash-script-to-convert-from-HTML-entities-to-characters.md
 toc:          false
 navigation:   false
@@ -57,4 +57,4 @@ HTMLtoText () {
 ```
 
   [1]: https://stackoverflow.com/questions/12873682/short-way-to-escape-html-in-bash
-  [2]: {% post_url /2017/2017-04-05-Code-version-control-between-local-files-and-AU-answers %}
+  [2]: https://askubuntu.com/questions/900319/code-version-control-between-local-files-and-au-answers

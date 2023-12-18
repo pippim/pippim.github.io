@@ -10,9 +10,9 @@ created_date: 2018-04-30 10:18:33
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "52,740 "
+views:        "52,741 "
 accepted:     
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-30-Is-it-a-bad-idea-to-upgrade-to-18.04-right-now_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-08-26 12:30:29
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "574 "
+views:        "575 "
 accepted:     Accepted
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-26-Install-DPKG-package-without-updating-and-upgrating-the-whole-system.md
 toc:          false
 navigation:   false

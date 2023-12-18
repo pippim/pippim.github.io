@@ -10,9 +10,9 @@ created_date: 2017-03-28 01:18:44
 edit_date:    2019-09-29 14:37:17
 votes:        "3 "
 favorites:    
-views:        "51,942 "
+views:        "51,987 "
 accepted:     
-uploaded:     2023-12-10 07:30:15
+uploaded:     2023-12-17 17:51:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-28-System-freezes-completely-with-Intel-Bay-Trail.md
 toc:          false
 navigation:   false
