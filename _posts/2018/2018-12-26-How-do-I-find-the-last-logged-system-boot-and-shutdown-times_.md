@@ -10,9 +10,9 @@ created_date: 2018-12-26 23:51:42
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "35,514 "
+views:        "35,539 "
 accepted:     
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-25 09:10:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-26-How-do-I-find-the-last-logged-system-boot-and-shutdown-times_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-11-16 01:42:38
 edit_date:    2019-11-16 05:28:28
 votes:        "1 "
 favorites:    
-views:        "4,968 "
+views:        "4,988 "
 accepted:     Accepted
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-25 09:10:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-16-How-to-automate-the-input-of-a-password_-in-a-custom-batch-file_.md
 toc:          false
 navigation:   false

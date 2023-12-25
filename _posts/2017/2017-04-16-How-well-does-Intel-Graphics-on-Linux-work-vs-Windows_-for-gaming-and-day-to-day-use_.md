@@ -10,9 +10,9 @@ created_date: 2017-04-16 20:38:22
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,635 "
+views:        "1,636 "
 accepted:     
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-25 09:10:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-16-How-well-does-Intel-Graphics-on-Linux-work-vs-Windows_-for-gaming-and-day-to-day-use_.md
 toc:          false
 navigation:   false

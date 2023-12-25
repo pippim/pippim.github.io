@@ -10,9 +10,9 @@ created_date: 2019-09-01 21:33:09
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "7,990 "
+views:        "7,996 "
 accepted:     
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-25 09:10:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-01-Trouble-with-Copy_Paste-to-a-desktop-folder.md
 toc:          false
 navigation:   false

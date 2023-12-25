@@ -8,11 +8,11 @@ type:         Answer
 tags:         dual-boot partitioning gparted
 created_date: 2018-05-01 10:34:33
 edit_date:    2018-05-01 10:52:57
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "11,654 "
+views:        "11,681 "
 accepted:     Accepted
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-25 09:10:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Can-I-safely-resize-Windows-10-system-partition-from-Ubuntu_.md
 toc:          false
 navigation:   false

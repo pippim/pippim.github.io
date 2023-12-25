@@ -10,9 +10,9 @@ created_date: 2016-08-21 20:32:10
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "1,545 "
+views:        "1,546 "
 accepted:     
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-25 09:10:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-21-How-can-I-quickly-disable-standby-lid-off-in-Ubuntu-Unity-16.04_.md
 toc:          false
 navigation:   false
