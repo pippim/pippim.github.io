@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "531 "
 accepted:     Accepted
-uploaded:     2023-12-17 17:51:33
+uploaded:     2023-12-31 11:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-24-How-to-disable-annoying-freedesktop-service-login-sound.md
 toc:          false
 navigation:   false

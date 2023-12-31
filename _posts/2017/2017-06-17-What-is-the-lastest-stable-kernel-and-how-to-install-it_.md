@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "43,406 "
 accepted:     
-uploaded:     2023-12-31 07:07:06
+uploaded:     2023-12-31 11:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-17-What-is-the-lastest-stable-kernel-and-how-to-install-it_.md
 toc:          false
 navigation:   false

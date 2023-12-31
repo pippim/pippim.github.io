@@ -284,7 +284,8 @@ FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
 FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "false"
 ACCEPTED_STRING = "✅&ensp;Solution"
-
+DEBUG_PRINT     = "1024620"         # Print debug trace on this Question
+# https://askubuntu.com/a/1024620/307523
 # Tuple for valid Rouge Languages
 rouge_languages = ()        # Valid tuple built from rouge_languages.txt
 bad_languages = []          # Bad languages found + the link. Printed at end of job
@@ -392,7 +393,6 @@ suppress_nav_bars = 0       # How many nav bars suppressed in this post?
 now = dt.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-
 def create_speed_search():
     """ Create Speed Search List
 
@@ -420,8 +420,8 @@ def create_speed_search():
             (Redirected from https://askubuntu.com/q/1026478)
 
     """
-    global ss_row_index, ss_accepted, ss_votes
-    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_both_q_and_a
+    global ss_row_index, ss_accepted, ss_votes, ss_save_blog, ss_url
+    global ss_type, ss_title, ss_full_url, ss_post_url, ss_both_q_and_a
     global percent_complete_closed
 
     #print('len(rows):', len(rows))
@@ -442,18 +442,21 @@ def create_speed_search():
         ss_both_q_and_a = False     # Part of self answered question pair?
         add_ss_entry()              # Add entry to Speed Search List
         ss_row_index += 1           # Should always match ss_index
-        percent_complete(ss_row_index, double_count, title="Build Speed Search")
+        percent_complete(ss_row_index, double_count,
+                         title="Build Speed Search")
 
     #print('len(ss_list):', len(ss_list))
     # Pass 2, set ss_save_blog and tally up answer/question totals
     for i, r in enumerate(rows):
         # Check if counterpart exists and set "ss_both_q_and_a" flag
+        get_ss_index(i)  # 2023-12-31 - Moved up
         update_both_q_and_a(r)      # TODO: Speed this up
         save = set_ss_save_blog(r)  # Also sets self-answered question flags
-        get_ss_index(i)
+        get_ss_index(i)  # 2023-12-31 - Move up causes error so keep here
         ss_save_blog = save
         update_ss()
-        percent_complete(row_count + i, double_count, title="Build Speed Search")
+        percent_complete(row_count + i, double_count,
+                         title="Build Speed Search")
 
     percent_complete_close()
     percent_complete_closed = False     # Reset for next progress display
@@ -468,8 +471,8 @@ def pack_ss_entry():
 
 def unpack_ss_entry(packed_tuple):
     """ Unpack tuple to Speed Search entry fields """
-    global ss_index, ss_row_index, ss_accepted, ss_votes
-    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_both_q_and_a
+    global ss_index, ss_row_index, ss_accepted, ss_votes, ss_save_blog
+    global ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_both_q_and_a
 
     ss_index, ss_row_index, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, \
         ss_save_blog, ss_accepted, ss_votes, ss_both_q_and_a = packed_tuple
@@ -485,21 +488,33 @@ def add_ss_entry():
     ss_list.append(t)
 
     #print('added entry t:', t) # Some debugging stuff when needed
-    if ss_url == "?https://askubuntu.com/q/1039377":  # Debugging stuff
-        print('ADDING KEY ANSWER')
-        print('ss_url:', ss_url)
-        print('ss_type:', ss_type)
+    check_debug_ss_entry('DEBUG_PRINT adding post')
+
+
+def check_debug_ss_entry(title=None):
+    """ Check if ss_entry qualifies for debug printing """
+    if ss_url == "https://askubuntu.com/q/" + DEBUG_PRINT:
+        print("")  # Bypass /r code (repeat line)
+        if title:
+            print(title)
+        print('ss_url  :', ss_url)
         print('ss_title:', ss_title)
+        print('ss_type :', ss_type, " | ss_index:", ss_index,
+              " | ss_save_blog:", ss_save_blog, " | ss_accepted:", ss_accepted)
+        print("ss_votes:", ss_votes, " | ss_both_q_and_a:", ss_both_q_and_a)
 
 
 def get_ss_index(ndx):
+    """ Get Speed Search Entry using passed ndx. """
     t = ss_list[ndx]
     unpack_ss_entry(t)
 
 
 def update_ss():
+    """ Update Speed Search Entry using saved index. """
     t = pack_ss_entry()
     ss_list[ss_index] = t
+    check_debug_ss_entry('DEBUG_PRINT update_ss()')
 
 
 def get_ss_url(search, search_type="Question"):
@@ -521,12 +536,12 @@ def get_ss_url(search, search_type="Question"):
 
 
 def get_ss_title(search, search_type="Question"):
-    """ Get ss entry in Speed Search List using Title
-    """
+    """ Get ss entry in Speed Search List using Title """
     for ndx, entry in enumerate(ss_list):
         unpack_ss_entry(entry)
         if ndx != ss_index:
-            fatal_error('ndx != ss_index: ndx=' + str(ndx) + ' ss_index=' + str(ss_index))
+            fatal_error('get_ss_title()ndx != ss_index: ndx=' + str(ndx) +
+                        ' | ss_index=' + str(ss_index))
         if search == ss_title and search_type == ss_type:
             return True
 
@@ -585,7 +600,119 @@ def set_ss_save_blog(r):
         views = 0
     total_views += views    # score is up-votes - down-votes can be negative
 
-    ''' If Accepted turned on save blog (but it might be question) '''
+    ''' If Accepted turned on save blog (but it might be question) 
+Getting 104 skipped questions asked by others. These were answered and
+accepted. They should not be skipped. 
+
+EG: https://askubuntu.com/questions/1024432/
+    password-protect-grub-menu-editing/1024620#1024620
+
+URL: https://unix.stackexchange.com/q/571712
+URL: https://stackoverflow.com/q/69967570
+URL: https://stackoverflow.com/q/71101541
+URL: https://askubuntu.com/q/968324
+URL: https://askubuntu.com/q/1394490
+URL: https://askubuntu.com/q/851051
+URL: https://askubuntu.com/q/1147993
+URL: https://stackoverflow.com/q/59437505
+URL: https://stackoverflow.com/q/64582469
+URL: https://stackoverflow.com/q/65461996
+URL: https://askubuntu.com/q/892141
+URL: https://superuser.com/q/1456859
+URL: https://askubuntu.com/q/815191
+URL: https://askubuntu.com/q/829657
+URL: https://askubuntu.com/q/845020
+URL: https://askubuntu.com/q/846297
+URL: https://askubuntu.com/q/862173
+URL: https://askubuntu.com/q/1020977
+URL: https://askubuntu.com/q/1021116
+URL: https://askubuntu.com/q/1021174
+URL: https://askubuntu.com/q/1049343
+URL: https://askubuntu.com/q/1064480
+URL: https://askubuntu.com/q/1153967
+URL: https://askubuntu.com/q/1165306
+URL: https://askubuntu.com/q/1186405
+URL: https://askubuntu.com/q/1192784
+URL: https://askubuntu.com/q/1193304
+URL: https://askubuntu.com/q/1194001
+URL: https://askubuntu.com/q/1211685
+URL: https://askubuntu.com/q/1298463
+URL: https://askubuntu.com/q/1408699
+URL: https://askubuntu.com/q/1413743
+URL: https://askubuntu.com/q/839431
+URL: https://askubuntu.com/q/852908
+URL: https://askubuntu.com/q/852915
+URL: https://askubuntu.com/q/853717
+URL: https://askubuntu.com/q/898806
+URL: https://askubuntu.com/q/1002670
+URL: https://askubuntu.com/q/1058157
+URL: https://askubuntu.com/q/1058409
+URL: https://askubuntu.com/q/1069578
+URL: https://askubuntu.com/q/1103835
+URL: https://askubuntu.com/q/1134773
+URL: https://askubuntu.com/q/1160734
+URL: https://askubuntu.com/q/1160789
+URL: https://askubuntu.com/q/1178114
+URL: https://askubuntu.com/q/1178810
+URL: https://askubuntu.com/q/1190592
+URL: https://askubuntu.com/q/1252628
+URL: https://askubuntu.com/q/1256392
+URL: https://askubuntu.com/q/1349989
+URL: https://askubuntu.com/q/1365346
+URL: https://askubuntu.com/q/840995
+URL: https://stackoverflow.com/q/63429034
+URL: https://askubuntu.com/q/858018
+URL: https://askubuntu.com/q/964097
+URL: https://askubuntu.com/q/1003726
+URL: https://askubuntu.com/q/1004713
+URL: https://askubuntu.com/q/1019376
+URL: https://askubuntu.com/q/1037199
+URL: https://askubuntu.com/q/1037217
+URL: https://askubuntu.com/q/1086562
+URL: https://askubuntu.com/q/1087720
+URL: https://askubuntu.com/q/1105656
+URL: https://askubuntu.com/q/1151306
+URL: https://askubuntu.com/q/1160849
+URL: https://askubuntu.com/q/1179873
+URL: https://askubuntu.com/q/1180445
+URL: https://askubuntu.com/q/1182535
+URL: https://askubuntu.com/q/1183623
+URL: https://askubuntu.com/q/1191405
+URL: https://askubuntu.com/q/1202642
+URL: https://askubuntu.com/q/1203691
+URL: https://askubuntu.com/q/1205502
+URL: https://askubuntu.com/q/1393684
+URL: https://askubuntu.com/q/819637
+URL: https://askubuntu.com/q/820260
+URL: https://askubuntu.com/q/833590
+URL: https://askubuntu.com/q/848423
+URL: https://askubuntu.com/q/941353
+URL: https://askubuntu.com/q/941360
+URL: https://askubuntu.com/q/943580
+URL: https://askubuntu.com/q/998121
+URL: https://askubuntu.com/q/998636
+URL: https://askubuntu.com/q/1024620
+URL: https://askubuntu.com/q/1052878
+URL: https://askubuntu.com/q/1064902
+URL: https://askubuntu.com/q/1080767
+URL: https://askubuntu.com/q/1097707
+URL: https://askubuntu.com/q/1099211
+URL: https://askubuntu.com/q/1099248
+URL: https://askubuntu.com/q/1156038
+URL: https://askubuntu.com/q/1156057
+URL: https://askubuntu.com/q/1156154
+URL: https://askubuntu.com/q/1156431
+URL: https://askubuntu.com/q/1187749
+URL: https://askubuntu.com/q/1188181
+URL: https://askubuntu.com/q/1188218
+URL: https://askubuntu.com/q/1195782
+URL: https://askubuntu.com/q/1195792
+URL: https://askubuntu.com/q/1196192
+URL: https://askubuntu.com/q/1196232
+URL: https://askubuntu.com/q/1245639
+URL: https://askubuntu.com/q/1245644
+
+    '''
     if r[TYPE] == "Answer" and r[ACCEPTED] == 'Accepted':
         accepted_count += 1
         if ACCEPTED_QUALIFIER:
@@ -1146,10 +1273,11 @@ https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/10393
         OR ANSWER IS REALLY:
 https://askubuntu.com/a/1039377/307523
 
+    EG set DEBUG_PRINT to "1039377" to force printing
     """
 
     trace = False  # Set to True to print out debugging stuff
-    if "?1039357" in http_str:      # Remove ? to turn on debugging
+    if DEBUG_PRINT in http_str:      # Remove ? to turn on debugging
         percent_complete_close()    # Turn off progress bar display
         print('')
         print("KEY QUESTION:", http_str)
@@ -1276,7 +1404,6 @@ def look_index(offset, name_index, names):
         return str_name, int(str_value)
     else:
         return None, None
-
 
 
 def add_tag_post(name_index, names, r):
@@ -2055,14 +2182,31 @@ def update_both_q_and_a(r):
     global ss_both_q_and_a
 
     if r[TYPE] == "Answer":
-        search_type = "Question"
+        other_type = "Question"
     else:
-        search_type = "Answer"
+        other_type = "Answer"
+
+    if DEBUG_PRINT in r[POST_ID]:   # Print this post?
+        percent_complete_close()    # Turn off progress bar display
+        print('')
+        print("r[TITLE]:", r[TITLE])
+        print("r[POST_ID]:", r[POST_ID], " | r[TYPE]:", r[TYPE])
+        fPrint = True
+    else:
+        fPrint = False
+    check_debug_ss_entry()
+# https://askubuntu.com/questions/1024432/password-protect-grub-menu-editing/1024620#1024620
+# https://askubuntu.com/q/1024432/307523
+# https://askubuntu.com/a/1024620/307523
+
 
     if get_ss_title(r[TITLE], search_type=r[TYPE]):
+        if fPrint:
+            print("update_both_q_and_a() read title:", r[TYPE], " | ss_index:",
+                  ss_index, " | ss_both_q_and_a:", ss_both_q_and_a)
         # Have verified we exist as we should. Now check for other half.
         our_index = ss_index
-        if get_ss_title(r[TITLE], search_type=search_type):
+        if get_ss_title(r[TITLE], search_type=other_type):
             # Flag counterpart as both Question and Answer
             ss_both_q_and_a = True
             update_ss()
@@ -2071,8 +2215,20 @@ def update_both_q_and_a(r):
             # Flag ourself as both Question and Answer
             ss_both_q_and_a = True
             update_ss()
+            if fPrint:
+                print("Successfully read title for:", other_type,
+                      " | ss_both_q_and_a:", ss_both_q_and_a)
+        else:
+            # Restore saved index to ourself
+            get_ss_index(our_index)
+            if fPrint:
+                print("Did NOT read title:", other_type,
+                      " | ss_both_q_and_a:", ss_both_q_and_a)
+
+        check_debug_ss_entry()
     else:
-        fatal_error("update_both_q_and_a(): We don't exist!")
+        fatal_error("update_both_q_and_a(): We don't exist!: " +
+                    r[TYPE])
 
 
 def check_self_answer(r):

@@ -23,5 +23,5 @@
 | [`vu_meter.py`](https://github.com/pippim/mserve/blob/main/src/vu_meter.py "View mserve Python source code"){:target="_blank"}                    |     202 | 2023-09-12 14:12:01 | VU Meter processor spawned by mserve.py |
 | [`vu_pulse_audio.py`](https://github.com/pippim/mserve/blob/main/src/vu_pulse_audio.py "View mserve Python source code"){:target="_blank"}        |     802 | 2023-12-03 08:03:07 | Pulse Audio Volume Controls             |
 | [`webscrape.py`](https://github.com/pippim/mserve/blob/main/src/webscrape.py "View mserve Python source code"){:target="_blank"}                  |   1,408 | 2023-09-12 15:47:47 | Webscrape Lyrics from genius.com        |
-| [`x11.py`](https://github.com/pippim/mserve/blob/main/src/x11.py "View mserve Python source code"){:target="_blank"}                              |     328 | 2023-12-31 06:24:53 | X11 window client                       |
-| ALL Modules                                                                                                                                       |  46,951 |                     |                                         |
+| [`x11.py`](https://github.com/pippim/mserve/blob/main/src/x11.py "View mserve Python source code"){:target="_blank"}                              |     313 | 2023-12-31 09:25:08 | X11 window client                       |
+| ALL Modules                                                                                                                                       |  46,936 |                     |                                         |

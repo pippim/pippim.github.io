@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,357 "
 accepted:     
-uploaded:     2023-12-31 07:07:06
+uploaded:     2023-12-31 11:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don_t-actually-upload-much_.md
 toc:          true
 navigation:   true
@@ -440,7 +440,7 @@ So.... full circle :(
   [2]: https://i.stack.imgur.com/2oqXi.png
   [3]: https://i.stack.imgur.com/xKq1O.png
   [4]: https://i.stack.imgur.com/PJsgg.png
-  [5]: https://askubuntu.com/questions/845013/whats-eating-all-the-ram-and-swap/845020#845020
+  [5]: {% post_url /2016/2016-11-03-What_s-eating-all-the-RAM-and-swap_ %}
   [6]: https://i.stack.imgur.com/4GhNh.gif
   [7]: https://bugzilla.kernel.org/show_bug.cgi?id=109051
 
