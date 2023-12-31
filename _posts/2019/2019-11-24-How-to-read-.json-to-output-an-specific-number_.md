@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,034 "
 accepted:     
-uploaded:     2023-12-25 09:10:35
+uploaded:     2023-12-31 07:07:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-How-to-read-.json-to-output-an-specific-number_.md
 toc:          false
 navigation:   false
