@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,478 "
 accepted:     
-uploaded:     2023-12-31 11:42:01
+uploaded:     2023-12-31 12:14:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-How-to-tell-if-Ubuntu-is-using-WiFi-or-Ethernet.md
 toc:          false
 navigation:   false

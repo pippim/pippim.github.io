@@ -2220,7 +2220,7 @@ def update_both_q_and_a(r):
                       " | ss_both_q_and_a:", ss_both_q_and_a)
         else:
             # Restore saved index to ourself
-            get_ss_index(our_index)
+            get_ss_title(r[TITLE], search_type=r[TYPE])
             if fPrint:
                 print("Did NOT read title:", other_type,
                       " | ss_both_q_and_a:", ss_both_q_and_a)
