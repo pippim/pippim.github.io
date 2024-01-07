@@ -10,9 +10,9 @@ created_date: 2018-05-15 15:17:10
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "31,432 "
+views:        "31,476 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-15-Clean-Install-of-18.04-Boots-to-Grub-Prompt.md
 toc:          false
 navigation:   false

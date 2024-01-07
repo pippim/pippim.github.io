@@ -10,9 +10,9 @@ created_date: 2020-04-05 15:17:04
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "237 "
+views:        "239 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-05-Variable-substitution-in-Linux-and-dynamically-fetch-property-from-Source-file.md
 toc:          false
 navigation:   false

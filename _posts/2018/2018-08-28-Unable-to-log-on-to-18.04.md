@@ -10,9 +10,9 @@ created_date: 2018-08-28 00:08:34
 edit_date:    2020-11-23 11:48:00
 votes:        "3 "
 favorites:    
-views:        "2,589 "
+views:        "2,590 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-Unable-to-log-on-to-18.04.md
 toc:          false
 navigation:   false

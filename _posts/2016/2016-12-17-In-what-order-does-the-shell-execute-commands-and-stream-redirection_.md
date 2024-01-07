@@ -10,9 +10,9 @@ created_date: 2016-12-17 03:18:28
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "6,936 "
+views:        "6,958 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-17-In-what-order-does-the-shell-execute-commands-and-stream-redirection_.md
 toc:          false
 navigation:   false

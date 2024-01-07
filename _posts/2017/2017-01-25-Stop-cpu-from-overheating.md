@@ -10,9 +10,9 @@ created_date: 2017-01-25 00:50:03
 edit_date:    2017-08-06 13:29:25
 votes:        "14 "
 favorites:    
-views:        "31,148 "
+views:        "31,265 "
 accepted:     Accepted
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-25-Stop-cpu-from-overheating.md
 toc:          true
 navigation:   true

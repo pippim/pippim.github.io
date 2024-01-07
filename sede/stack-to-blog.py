@@ -26,6 +26,7 @@
 #       Feb 14 2022 - WORD_SEARCH_POINTS - Weighting system where word appears
 #       Mar 14 2022 - Add hrb.md and hyperlink.md to EXTRA_SEARCH_FILES.
 #       Apr 13 2022 - Add tim-ta.md (Timed Tasks)
+#       Dec 31 2023 - Add 80 missing blog posts
 #
 # ==============================================================================
 
@@ -284,7 +285,7 @@ FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
 FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "false"
 ACCEPTED_STRING = "✅&ensp;Solution"
-DEBUG_PRINT     = "1024620"         # Print debug trace on this Question
+DEBUG_PRINT     = "9999999"         # Print debug trace on this Question
 # https://askubuntu.com/a/1024620/307523
 # Tuple for valid Rouge Languages
 rouge_languages = ()        # Valid tuple built from rouge_languages.txt
@@ -488,7 +489,7 @@ def add_ss_entry():
     ss_list.append(t)
 
     #print('added entry t:', t) # Some debugging stuff when needed
-    check_debug_ss_entry('DEBUG_PRINT adding post')
+    check_debug_ss_entry('DEBUG_PRINT adding post')  # 2023-12-31
 
 
 def check_debug_ss_entry(title=None):
@@ -2194,11 +2195,8 @@ def update_both_q_and_a(r):
         fPrint = True
     else:
         fPrint = False
-    check_debug_ss_entry()
-# https://askubuntu.com/questions/1024432/password-protect-grub-menu-editing/1024620#1024620
-# https://askubuntu.com/q/1024432/307523
-# https://askubuntu.com/a/1024620/307523
 
+    check_debug_ss_entry()
 
     if get_ss_title(r[TITLE], search_type=r[TYPE]):
         if fPrint:
@@ -2219,8 +2217,8 @@ def update_both_q_and_a(r):
                 print("Successfully read title for:", other_type,
                       " | ss_both_q_and_a:", ss_both_q_and_a)
         else:
-            # Restore saved index to ourself
-            get_ss_title(r[TITLE], search_type=r[TYPE])
+            # Restore saved index to ourself - 2023-12-31
+            get_ss_title(r[TITLE], search_type=r[TYPE])  # 2023-12-31
             if fPrint:
                 print("Did NOT read title:", other_type,
                       " | ss_both_q_and_a:", ss_both_q_and_a)

@@ -10,9 +10,9 @@ created_date: 2017-09-05 23:29:44
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
-views:        "50,280 "
+views:        "50,295 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-05-What-are-the-differences-between-Windows-Bash-and-Cygwin_.md
 toc:          false
 navigation:   false

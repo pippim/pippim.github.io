@@ -10,9 +10,9 @@ created_date: 2019-03-12 01:48:09
 edit_date:    2019-03-12 02:04:57
 votes:        "5 "
 favorites:    
-views:        "20,112 "
+views:        "20,188 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-12-How-to-reinstall-missing-kernel-modules-after-deletion_.md
 toc:          false
 navigation:   false

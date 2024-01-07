@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,569 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-After-upgrading-dual-boot-system-from-19.04-to-19.10_-unable-to-boot-into-Windows-from-grub-menu.md
 toc:          false
 navigation:   false

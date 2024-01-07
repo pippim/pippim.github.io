@@ -10,9 +10,9 @@ created_date: 2018-01-13 18:16:51
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,241 "
+views:        "1,242 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-13-Purple-Screen-of-Death-w_New-AMD-Card.md
 toc:          false
 navigation:   false

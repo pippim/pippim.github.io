@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "179 "
 accepted:     Accepted
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-31-Unable-to-boot-to-Windows-7-successfully-from-the-first-try.md
 toc:          false
 navigation:   false

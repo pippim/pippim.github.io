@@ -10,9 +10,9 @@ created_date: 2016-10-09 08:59:54
 edit_date:    2016-10-10 01:30:39
 votes:        "1 "
 favorites:    
-views:        "461 "
+views:        "464 "
 accepted:     Accepted
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-09-Run-script-defined-in-PATH-location-in-the-current-shell.md
 toc:          false
 navigation:   false

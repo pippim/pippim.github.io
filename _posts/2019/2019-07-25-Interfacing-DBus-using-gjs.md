@@ -10,9 +10,9 @@ created_date: 2019-07-25 16:45:46
 edit_date:    2019-07-25 17:38:24
 votes:        "4 "
 favorites:    
-views:        "1,009 "
+views:        "1,016 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-Interfacing-DBus-using-gjs.md
 toc:          false
 navigation:   false

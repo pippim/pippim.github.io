@@ -10,9 +10,9 @@ created_date: 2018-10-13 14:31:58
 edit_date:    2018-10-13 14:51:57
 votes:        "13 "
 favorites:    
-views:        "33,607 "
+views:        "33,956 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-13-What-is-the-meaning-of-the-output-of-the-command-_sensors__.md
 toc:          false
 navigation:   false

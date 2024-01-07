@@ -10,9 +10,9 @@ created_date: 2016-12-26 21:35:23
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "43,843 "
+views:        "43,971 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-26-Desktop-Facebook-application-for-Ubuntu.md
 toc:          false
 navigation:   false

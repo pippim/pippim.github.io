@@ -10,9 +10,9 @@ created_date: 2021-05-15 21:01:00
 edit_date:    2022-02-13 13:01:23
 votes:        "3 "
 favorites:    
-views:        "2,256 "
+views:        "2,304 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-15-How-to-improve_fix-choppy-audio-when-streaming-with-pulseaudio_.md
 toc:          true
 navigation:   true

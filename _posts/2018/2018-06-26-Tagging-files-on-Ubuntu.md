@@ -10,9 +10,9 @@ created_date: 2018-06-26 23:27:09
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "9,133 "
+views:        "9,196 "
 accepted:     
-uploaded:     2023-12-31 12:29:11
+uploaded:     2024-01-07 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-26-Tagging-files-on-Ubuntu.md
 toc:          false
 navigation:   false
