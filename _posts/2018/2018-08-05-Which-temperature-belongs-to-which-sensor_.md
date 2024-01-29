@@ -10,9 +10,9 @@ created_date: 2018-08-05 15:52:34
 edit_date:    2022-11-13 21:15:08
 votes:        "2 "
 favorites:    
-views:        "3,312 "
+views:        "3,350 "
 accepted:     
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-05-Which-temperature-belongs-to-which-sensor_.md
 toc:          false
 navigation:   false

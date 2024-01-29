@@ -10,9 +10,9 @@ created_date: 2019-12-14 00:53:25
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "139 "
+views:        "141 "
 accepted:     
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-Package-for-reporting-GUI-problem-in-Ubuntu-19.10.md
 toc:          false
 navigation:   false

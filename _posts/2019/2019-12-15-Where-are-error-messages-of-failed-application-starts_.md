@@ -10,9 +10,9 @@ created_date: 2019-12-15 02:16:50
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "950 "
+views:        "981 "
 accepted:     
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-15-Where-are-error-messages-of-failed-application-starts_.md
 toc:          false
 navigation:   false

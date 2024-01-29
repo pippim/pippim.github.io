@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line bash redirect
 created_date: 2019-10-20 16:37:44
 edit_date:    2019-10-26 17:43:08
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "47,281 "
+views:        "48,020 "
 accepted:     
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-What-does-__2-mean-in-a-shell-script_.md
 toc:          false
 navigation:   false

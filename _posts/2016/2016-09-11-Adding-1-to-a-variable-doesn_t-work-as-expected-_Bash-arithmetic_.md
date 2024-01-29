@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash
 created_date: 2016-09-11 14:38:17
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "12,727 "
+views:        "12,807 "
 accepted:     
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-Adding-1-to-a-variable-doesn_t-work-as-expected-_Bash-arithmetic_.md
 toc:          false
 navigation:   false

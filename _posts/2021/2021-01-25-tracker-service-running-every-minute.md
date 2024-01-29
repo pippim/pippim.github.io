@@ -8,11 +8,11 @@ type:         Answer
 tags:         systemd tracker
 created_date: 2021-01-25 05:00:32
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "12,048 "
+views:        "12,398 "
 accepted:     
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-25-tracker-service-running-every-minute.md
 toc:          false
 navigation:   false

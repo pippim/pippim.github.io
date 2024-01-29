@@ -10,9 +10,9 @@ created_date: 2018-10-25 22:55:05
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "919 "
+views:        "926 "
 accepted:     Accepted
-uploaded:     2024-01-07 11:15:39
+uploaded:     2024-01-28 17:32:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-25-LAN-issue-while-using-tlp.md
 toc:          false
 navigation:   false
