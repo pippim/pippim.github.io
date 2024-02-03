@@ -45,7 +45,7 @@ fi
 
 echo "=== COMMIT MESSAGE set to: '$commit_message'"
 
-cd ~/website2
+cd ~/website2 || exit
 
 echo
 echo "=== PULLING: $PWD changes to github.com"
@@ -66,6 +66,7 @@ echo
 echo "=== RETRIEVING: Rouge Syntax Highlighting Languages list"
 wget -qO languages https://raw.githubusercontent.com/rouge-ruby/rouge/master/docs/Languages.md
 
+# shellcheck disable=SC2188
 > rouge_languages.txt  # Empty old file
 
 while read -r line; do
@@ -108,6 +109,7 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
+# shellcheck disable=SC2164
 cd ~/website2
 
 echo
@@ -150,9 +152,9 @@ if [ $retVal -ne 0 ]; then
 fi
 
 # Generate mserve module listing and line counts
-cd ~/python
+cd ~/python || exit
 python mserve_config.py line_count ~/website/programs/mserve_incl.md
-cd ~/website2
+cd ~/website2 || exit
 cp ~/website/programs/mserve_incl.md programs/
 git add programs/mserve_incl.md
 
@@ -215,7 +217,7 @@ if [ $retVal -ne 0 ]; then
 fi
 
 # Change back to original directory ~/website
-cd ~/website/sede
+cd ~/website/sede || exit
 
 echo
 echo "=== COMPARE: Cayman Theme original to modified version"
