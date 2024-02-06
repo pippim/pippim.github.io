@@ -4,23 +4,6 @@ layout: default
 canonical_url: 'https://www.pippim.com/index.html'
 ---
 
-<!-- TODO:
-
-   Turn into promotion:
-
-      Slide show with pop up points:
-
-         Tim-Ta (Dancing alarm clocks - Wash DONE!, Rinse DONE!, Dryer DONE!
-         Copy Code to clipboard button
-         Super-Slim Super-Fast Search
-         Long Document Section Navigation
-         Hyperlink Recipe Baker
-         Convert external website to your own brand website
-         Bash can do GUI - Multi-Timer
-
--->
-
-
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6">ToC</a>  <a href="#hdr2">Skip</a></div>
