@@ -1,6 +1,7 @@
 ---
 title: test.md - Explore Colors
 layout: test
+canonical_url: 'https://www.pippim.com/test.html'
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->

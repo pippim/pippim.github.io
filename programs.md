@@ -1,6 +1,7 @@
 ---
 title: Free Programs and Apps
 layout: default
+canonical_url: 'https://www.pippim.com/programs.html'
 ---
 
 {% include slide-show.html %}

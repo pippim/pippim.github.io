@@ -1,6 +1,7 @@
 ---
 title: Hyperlink Recipe Baker (Diet)
 layout: hrb
+canonical_url: 'https://www.pippim.com/hrb.html'
 ---
 
 <!-- Diet version - hrb.md - No buttons, search bar, footer, TCM or notes 

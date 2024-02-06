@@ -1,6 +1,7 @@
 ---
 title: Stack Exchange Answers
 layout: default
+canonical_url: 'https://www.pippim.com/answers.html'
 ---
 
 # Answers by {{ site.title }}

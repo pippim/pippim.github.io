@@ -1,6 +1,7 @@
 ---
 title: The 5 W's of Pippim
 layout: default
+canonical_url: 'https://www.pippim.com/about.html'
 ---
 
 <div class="slide-left">
