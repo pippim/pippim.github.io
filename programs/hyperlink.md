@@ -1,6 +1,7 @@
 ---
 title: Hyperlink Recipe Baker
 layout: program
+canonical_url: 'https://www.pippim.com/programs/hyperlink.html'
 ---
 
 <!-- Full version - programs/hyperlink.md - All the bells and whistles
@@ -78,9 +79,9 @@ Voila! You are now a master baker.
 
 ## Read Clipboard Special Permissions
 
-Modern browsers will let anyone and anything write to the clipboard.
-Reading from the clipboard is a high security function requiring
-explicit permission.
+Modern browsers will let any program write to the clipboard without
+user permission. Reading from the clipboard though, is a high security
+featured requiring explicit user permission.
 
 > **Reason for high security to read the Clipboard**
 >

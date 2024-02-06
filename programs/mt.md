@@ -1,6 +1,7 @@
 ---
 title: Multi-Timer - Run Set of Alarms Consecutively
 layout: program
+canonical_url: 'https://www.pippim.com/programs/mt.html'
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->

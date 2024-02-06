@@ -1,11 +1,11 @@
 ---
 title: The Cookie Machine
 layout: program
+canonical_url: 'https://www.pippim.com/programs/tcm.html'
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons 
-     (No "Top" or "ToS" buttons 
--->
+     (No "Top" or "ToS" buttons, because already positioned there!) -->
 
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>

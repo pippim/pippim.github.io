@@ -1,6 +1,7 @@
 ---
 title: TV Remote Turns Off Five "Things"
 layout: program
+canonical_url: 'https://www.pippim.com/programs/iothings.html'
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->

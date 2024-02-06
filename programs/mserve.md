@@ -1,6 +1,7 @@
 ---
 title: Music Player with CD Encoding, Lyrics Scraping and Synchronizing
 layout: program
+canonical_url: 'https://www.pippim.com/programs/mserve.html'
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
@@ -13,7 +14,7 @@ layout: program
 animated graphics, VU meters and scrolling lyrics. Secondly, it encodes 
 CDs with track titles and artwork automatically obtained from *MusicBrainz*. 
 Finally, **mserve** automatically downloads lyrics scores from the 
-internet. Lyrics score lines can be synchronized by simply clicking 
+internet. Lyrics score lines are synchronized by simply clicking 
 each line as it is sung.
 
 Take a <a href="#hide-chronology-list-sample-video">quick peek</a> 
@@ -177,7 +178,7 @@ Copy all
 files in the GitHub `src` folder to a new directory on your machine. 
 For example, `<HOME>/mserve` for Linux, Mac, Chrome OS or 
 Windows Subsystem for Linux (WSL). Unless you are running Ubuntu 16.04
-LTS under extended security maintenance, you will have to make
+LTS under Extended Security Maintenance (ESM), you will have to make
 changes to `mserve.py` and the programs it calls. 
 
 For Windows, the installation directory would be  `<HOME>\mserve`
@@ -393,19 +394,18 @@ and where you have clicked on 80% of the lines to synchronize them.
 - ***Copy Checked To New Location*** - will copy both the LRC (`.lrc` -
 synchronized lyrics) file AND every checked song in the *Music Location
 Tree*. If there is no LRC file, the original music file is still copied.
-The new location must be empty. For locations already containing music 
+The new location must be empty. For locations already containing music, 
 the synchronize location function must be used instead. That ensures
 the correct direction for copying files. To update LRC files in locations
 already containing music, use *Open Location and Play*, then use the
 *Make LRC For Checked Songs* option.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
-**mserve**. Moves lost windows into monitor! If any applications 
-windows are off visible desktop they are
-half moved to the closest monitor. Also note 18 minutes after booting,
-you may get 4 `speech-dispatcher` jobs in pulse audio but these are
-automatically deleted if you respond `Yes` to the prompt that appears
-(only when playing music).
+**mserve**. Moves lost windows into monitor! If an application
+window is off the desktop (invisible), it is moved half way into
+the closest desktop monitor. Also note that 18 minutes after booting,
+4 `speech-dispatcher` jobs may appear in pulse audio. A dialog box
+prompt message appears and, jobs are killed if you respond `Yes`.
 
 
 ***NOTE:*** The *Enable TV Commercial Buttons* and *Enable FF/Rewind Buttons*
@@ -940,10 +940,10 @@ There are also some Bash scripts:
 
 ## Dependencies
 
-Here are the dependencies documented in `mserve.py` python program.
-You may already have them installed. Also, this list is for Ubuntu
-under version 2.7.12 and, you may have to substitute `python3` where
-it says `python`:
+Below are the dependencies documented in `mserve.py` python program.
+You may already have them installed. The list is for Ubuntu 16.04 LTS
+using Python version 2.7.12. For Python 3+ versions, substitute `python3` 
+below where it says `python`:
 
 ``` shell
     sudo apt install compiz                  # for Hockey (smooth shark move)
@@ -1380,6 +1380,11 @@ the *New Playlist* option under the *File* Dropdown Menu in the
 - Select the *View Playlists* option.
 - Highlight the appropriate playlist and click *View* button or 
 double-click it.
+
+### Processing Playlists Methods
+{:.no_toc}
+
+
 
 ---
 

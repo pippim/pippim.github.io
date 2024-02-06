@@ -1,6 +1,7 @@
 ---
 title: Tim-ta (Timed Tasks)
 layout: program
+canonical_url: 'https://www.pippim.com/programs/tim-ta.html'
 ---
 
 <!-- javascript for Tim-ta Sounds -->
@@ -154,7 +155,8 @@ then you will only see a solid line.</span>
 > `ffmpeg -i track01.wav -acodec mp3 track01.mp3`
 >
 > The above converts filename `track01.wav` to filename `track01.mp3`.
-> You can also use one of the free online media conversion services.  
+> In addition to using the console, you can also use one of the 
+> free online media conversion services.  
 
 ---
 

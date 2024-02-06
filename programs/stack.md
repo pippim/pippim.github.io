@@ -1,6 +1,7 @@
 ---
 title: Convert Stack Exchange Posts to Your Own Website
 layout: program
+canonical_url: 'https://www.pippim.com/programs/stack.html'
 ---
 
 <script>
