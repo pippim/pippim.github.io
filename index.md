@@ -1,6 +1,7 @@
 ---
 title: Welcome to Pippim
 layout: default
+canonical_url: 'https://www.pippim.com/index.html'
 ---
 
 <!-- TODO:
