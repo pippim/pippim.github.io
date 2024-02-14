@@ -10,9 +10,9 @@ created_date: 2018-02-27 15:55:48
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "5,100 "
+views:        "5,105 "
 accepted:     Accepted
-uploaded:     2024-01-28 17:32:41
+uploaded:     2024-02-14 06:19:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Nautilus-gives-a-warning-when-opened-in-the-current-directory-from-the-terminal.md
 toc:          false
 navigation:   false

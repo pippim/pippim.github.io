@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot kernel systemd-journald
 created_date: 2018-04-15 22:14:45
 edit_date:    2018-04-15 22:23:16
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "9,128 "
+views:        "9,448 "
 accepted:     
-uploaded:     2024-01-28 17:32:41
+uploaded:     2024-02-14 06:19:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-How-can-I-see-previous-history-_prior-to-this-boot_-in-journalctl_.md
 toc:          false
 navigation:   true

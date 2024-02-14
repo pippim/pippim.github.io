@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot grub2 hard-drive
 created_date: 2016-11-18 00:12:26
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "2,352 "
+views:        "2,362 "
 accepted:     
-uploaded:     2024-01-28 17:32:41
+uploaded:     2024-02-14 06:19:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-GRUB-with-two-drives-and-two-Ubuntu-distros.md
 toc:          false
 navigation:   false

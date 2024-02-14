@@ -8,11 +8,11 @@ type:         Answer
 tags:         unity nvidia xorg cpu gpu
 created_date: 2018-07-16 01:33:58
 edit_date:    2019-02-21 10:47:27
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "15,851 "
+views:        "15,914 "
 accepted:     
-uploaded:     2024-01-28 17:32:41
+uploaded:     2024-02-14 06:19:08
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-16-Force-Xorg-to-use-CPU-not-GPU.md
 toc:          false
 navigation:   false
