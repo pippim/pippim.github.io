@@ -10,9 +10,9 @@ created_date: 2016-10-12 09:21:07
 edit_date:    2021-12-08 02:56:40
 votes:        "8 "
 favorites:    
-views:        "2,520 "
+views:        "2,523 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-12-Command-line-snake-game_.md
 toc:          false
 navigation:   true

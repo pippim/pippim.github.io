@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "420 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-19-Can-I-make-a-_choice-image-list_-in-MAAS-UBUNTU_.md
 toc:          false
 navigation:   false

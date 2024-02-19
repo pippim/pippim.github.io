@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "85 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-17-How-to-switch-back-to-default-booting-process_.md
 toc:          false
 navigation:   false

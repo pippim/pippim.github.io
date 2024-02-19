@@ -8,11 +8,11 @@ type:         Answer
 tags:         upgrade kernel updates grub
 created_date: 2017-02-20 00:23:47
 edit_date:    2018-02-25 15:14:36
-votes:        "19 "
+votes:        "20 "
 favorites:    
-views:        "609,949 "
+views:        "610,216 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_.md
 toc:          false
 navigation:   false

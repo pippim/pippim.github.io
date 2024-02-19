@@ -10,9 +10,9 @@ created_date: 2016-12-15 03:10:27
 edit_date:    
 votes:        "9 "
 favorites:    
-views:        "3,193 "
+views:        "3,226 "
 accepted:     Accepted
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-How-can-I-make-stars-appear-when-I-type-sudo-password_.md
 toc:          false
 navigation:   false

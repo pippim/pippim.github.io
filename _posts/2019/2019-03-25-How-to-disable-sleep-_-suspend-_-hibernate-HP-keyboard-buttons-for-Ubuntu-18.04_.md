@@ -10,9 +10,9 @@ created_date: 2019-03-25 22:36:32
 edit_date:    2019-03-26 10:24:41
 votes:        "7 "
 favorites:    
-views:        "8,085 "
+views:        "8,107 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-25-How-to-disable-sleep-_-suspend-_-hibernate-HP-keyboard-buttons-for-Ubuntu-18.04_.md
 toc:          false
 navigation:   false

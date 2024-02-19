@@ -10,9 +10,9 @@ created_date: 2020-11-26 02:24:00
 edit_date:    2020-11-29 16:40:44
 votes:        "3 "
 favorites:    
-views:        "736,662 "
+views:        "737,908 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-11-26-How-can-I-make-a-script-that-opens-terminal-windows-and-executes-commands-in-them_.md
 toc:          false
 navigation:   false

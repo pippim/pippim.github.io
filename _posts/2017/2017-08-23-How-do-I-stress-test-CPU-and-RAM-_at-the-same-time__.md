@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation stress-testing conky
 created_date: 2017-08-23 02:53:37
 edit_date:    2017-09-05 22:13:23
-votes:        "66 "
+votes:        "67 "
 favorites:    
-views:        "141,289 "
+views:        "141,826 "
 accepted:     Accepted
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-23-How-do-I-stress-test-CPU-and-RAM-_at-the-same-time__.md
 toc:          false
 navigation:   false

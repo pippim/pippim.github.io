@@ -10,9 +10,9 @@ created_date: 2018-05-15 22:29:23
 edit_date:    
 votes:        "8 "
 favorites:    
-views:        "107,470 "
+views:        "107,562 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-15-Very-high-fan-speed-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false

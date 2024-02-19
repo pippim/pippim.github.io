@@ -10,9 +10,9 @@ created_date: 2017-02-19 16:03:46
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,693 "
+views:        "1,701 "
 accepted:     Accepted
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-19-How-to-cycle-through-grub-background-images-every-boot.md
 toc:          false
 navigation:   false

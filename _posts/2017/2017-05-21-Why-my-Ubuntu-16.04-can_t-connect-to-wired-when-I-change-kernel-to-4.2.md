@@ -10,9 +10,9 @@ created_date: 2017-05-21 14:37:37
 edit_date:    2017-05-22 15:14:28
 votes:        "2 "
 favorites:    
-views:        "1,495 "
+views:        "1,496 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Why-my-Ubuntu-16.04-can_t-connect-to-wired-when-I-change-kernel-to-4.2.md
 toc:          false
 navigation:   false

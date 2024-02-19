@@ -10,9 +10,9 @@ created_date: 2016-09-06 23:05:23
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "9,295 "
+views:        "9,298 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Battery-Charged-at-97_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-01-07 19:59:43
 edit_date:    2019-06-07 02:14:40
 votes:        "102 "
 favorites:    
-views:        "308,025 "
+views:        "308,235 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-What_s-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux_.md
 toc:          false
 navigation:   false

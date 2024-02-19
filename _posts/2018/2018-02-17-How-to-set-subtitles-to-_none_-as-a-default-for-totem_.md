@@ -10,9 +10,9 @@ created_date: 2018-02-17 22:39:09
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "2,092 "
+views:        "2,093 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-How-to-set-subtitles-to-_none_-as-a-default-for-totem_.md
 toc:          false
 navigation:   false

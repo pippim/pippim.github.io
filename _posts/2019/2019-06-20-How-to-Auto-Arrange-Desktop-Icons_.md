@@ -10,9 +10,9 @@ created_date: 2019-06-20 00:57:14
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "44,137 "
+views:        "44,176 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-How-to-Auto-Arrange-Desktop-Icons_.md
 toc:          false
 navigation:   false

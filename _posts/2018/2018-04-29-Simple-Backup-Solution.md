@@ -10,9 +10,9 @@ created_date: 2018-04-29 23:22:32
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "5,963 "
+views:        "5,979 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Simple-Backup-Solution.md
 toc:          false
 navigation:   false

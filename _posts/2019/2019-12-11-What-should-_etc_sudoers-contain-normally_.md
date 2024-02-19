@@ -10,9 +10,9 @@ created_date: 2019-12-11 11:50:36
 edit_date:    2019-12-11 12:00:58
 votes:        "1 "
 favorites:    
-views:        "536 "
+views:        "541 "
 accepted:     Accepted
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-11-What-should-_etc_sudoers-contain-normally_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2020-01-28 03:33:24
 edit_date:    2020-02-18 12:49:42
 votes:        "4 "
 favorites:    
-views:        "2,937 "
+views:        "2,942 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-28-Laptop-selectively-will_will-not-wake-up-from-suspend-on-Ubuntu-18.04.3.md
 toc:          false
 navigation:   false

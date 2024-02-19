@@ -10,9 +10,9 @@ created_date: 2018-03-18 18:13:39
 edit_date:    2018-03-18 19:07:35
 votes:        "2 "
 favorites:    
-views:        "11,738 "
+views:        "11,748 "
 accepted:     
-uploaded:     2024-02-14 06:19:08
+uploaded:     2024-02-19 10:38:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Why-don_t-Intel-microcode-updates-work-on-my-system_.md
 toc:          false
 navigation:   false
