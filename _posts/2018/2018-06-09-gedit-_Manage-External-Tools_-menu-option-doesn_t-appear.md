@@ -10,9 +10,9 @@ created_date: 2018-06-09 16:02:02
 edit_date:    2018-06-09 18:36:20
 votes:        "3 "
 favorites:    
-views:        "1,019 "
+views:        "1,023 "
 accepted:     Accepted
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-09-gedit-_Manage-External-Tools_-menu-option-doesn_t-appear.md
 toc:          false
 navigation:   false

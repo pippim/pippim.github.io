@@ -10,9 +10,9 @@ created_date: 2017-03-01 12:00:12
 edit_date:    2017-04-13 12:23:52
 votes:        "8 "
 favorites:    
-views:        "2,618 "
+views:        "2,646 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Run-a-specific-command-with-root-password-prompt-even-if-running-as-root.md
 toc:          false
 navigation:   false

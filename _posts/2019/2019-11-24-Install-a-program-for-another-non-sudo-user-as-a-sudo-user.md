@@ -10,9 +10,9 @@ created_date: 2019-11-24 23:04:47
 edit_date:    2019-11-24 23:27:46
 votes:        "2 "
 favorites:    
-views:        "4,892 "
+views:        "4,999 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-Install-a-program-for-another-non-sudo-user-as-a-sudo-user.md
 toc:          false
 navigation:   false

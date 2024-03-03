@@ -10,9 +10,9 @@ created_date: 2019-06-20 01:27:44
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "13,499 "
+views:        "13,526 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-Desktop-icons-appear-on-wrong-monitor.md
 toc:          false
 navigation:   false

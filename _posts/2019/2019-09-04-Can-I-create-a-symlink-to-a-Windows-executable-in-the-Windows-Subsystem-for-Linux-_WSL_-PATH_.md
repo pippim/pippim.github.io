@@ -10,9 +10,9 @@ created_date: 2019-09-04 21:49:51
 edit_date:    2019-09-04 23:49:17
 votes:        "6 "
 favorites:    
-views:        "9,818 "
+views:        "9,863 "
 accepted:     Accepted
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-04-Can-I-create-a-symlink-to-a-Windows-executable-in-the-Windows-Subsystem-for-Linux-_WSL_-PATH_.md
 toc:          false
 navigation:   false

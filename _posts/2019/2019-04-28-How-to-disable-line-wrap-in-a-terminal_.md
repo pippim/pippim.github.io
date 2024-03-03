@@ -10,9 +10,9 @@ created_date: 2019-04-28 01:15:29
 edit_date:    2022-02-18 17:27:07
 votes:        "30 "
 favorites:    
-views:        "131,741 "
+views:        "132,204 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-How-to-disable-line-wrap-in-a-terminal_.md
 toc:          false
 navigation:   false

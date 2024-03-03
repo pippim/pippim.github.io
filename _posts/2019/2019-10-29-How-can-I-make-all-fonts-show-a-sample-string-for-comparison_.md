@@ -10,9 +10,9 @@ created_date: 2019-10-29 01:25:19
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,384 "
+views:        "1,395 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-29-How-can-I-make-all-fonts-show-a-sample-string-for-comparison_.md
 toc:          false
 navigation:   false

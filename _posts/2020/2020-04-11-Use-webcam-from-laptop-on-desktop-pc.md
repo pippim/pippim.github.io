@@ -10,9 +10,9 @@ created_date: 2020-04-11 18:24:15
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "21,527 "
+views:        "21,664 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-11-Use-webcam-from-laptop-on-desktop-pc.md
 toc:          false
 navigation:   false

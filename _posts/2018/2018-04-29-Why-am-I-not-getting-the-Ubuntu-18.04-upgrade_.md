@@ -10,9 +10,9 @@ created_date: 2018-04-29 20:51:34
 edit_date:    2018-05-03 22:59:55
 votes:        "28 "
 favorites:    
-views:        "64,698 "
+views:        "64,869 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Why-am-I-not-getting-the-Ubuntu-18.04-upgrade_.md
 toc:          false
 navigation:   false

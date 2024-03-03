@@ -8,11 +8,11 @@ type:         Answer
 tags:         cpu 18.04 governor
 created_date: 2018-10-18 01:48:54
 edit_date:    2020-08-09 15:24:54
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "208,760 "
+views:        "210,155 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-18-Set-CPU-governor-to-performance-in-18.04.md
 toc:          false
 navigation:   false

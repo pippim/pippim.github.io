@@ -10,9 +10,9 @@ created_date: 2017-03-09 02:54:25
 edit_date:    2017-03-09 03:23:00
 votes:        "3 "
 favorites:    
-views:        "239 "
+views:        "240 "
 accepted:     Accepted
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-09-How-do-I-add-up-file-sizes-in-Bash-by-pattern-into-array-_-list_.md
 toc:          false
 navigation:   false

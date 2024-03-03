@@ -10,9 +10,9 @@ created_date: 2018-07-01 23:19:09
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "8,149 "
+views:        "8,182 "
 accepted:     
-uploaded:     2024-02-19 10:38:48
+uploaded:     2024-03-03 10:35:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-01-How-to-get-the-location-of-a-program-in-Ubuntu-terminal_.md
 toc:          false
 navigation:   false
