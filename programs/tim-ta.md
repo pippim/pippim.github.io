@@ -35,7 +35,7 @@ the sample project can be deleted.
 <div id="alarm-clock-image" class="slide-right">
     {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
-        style="float: left; width: 50%; max-width: 85vw; margin: 1rem 0 2rem 0;"
+        style="float: left; width: 50%; max-width: 95vw; margin: 1rem 1rem 2rem 0;"
         caption="Move mouse here for alarm simulation"
     %}
 </div>
