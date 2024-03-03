@@ -90,6 +90,7 @@ for Artist / Album CD track details and artwork
 - Scrape [genius.com ⧉ 🔗](https://genius.com/ 
 "search song lyrics"){:target="_blank"} 
 and other websites to get song lyrics
+- Text search function returns results with each keypress.
 - Restores file's OS last access time to original if 
 less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
