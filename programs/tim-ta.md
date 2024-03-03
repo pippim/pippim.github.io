@@ -35,7 +35,7 @@ the sample project can be deleted.
 <div id="alarm-clock-image" class="slide-right">
     {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
         alt="Tim-ta Alarm Clock Image"
-        style="float: left; width: 50%; margin: 1rem;"
+        style="float: left; width: 50%; margin: 1rem 0 0 0;"
         caption="Move mouse here for alarm simulation"
     %}
 </div>
@@ -274,7 +274,7 @@ and select ***Paste and Go*** or select ***Paste*** and press
 
 {% include image.html src="/assets/img/tim-ta/tim-ta sample workout-1.png"
     alt="Tim-ta Sample Workout-1 on GitHub"
-    style="float: none; width: 100%; max-width: 95vw; margin: 2rem 2rem 1rem 1rem;"
+    style="float: none; width: 100%; max-width: 95vw; margin: 2rem 0 1rem 0;"
     caption="Tim-ta Sample Workout-1 on GitHub"
 %}
 
@@ -388,8 +388,7 @@ currently running progress bar is automatically selected.
 
 {% include image.html src="/assets/img/tim-ta/Open task override.gif"
    alt="Open task override.gif"
-   style="float: none; width: 600px; max-width: 95vw; 
-          margin: 0px 0px 0px 20px;"
+   style="float: none; width: 600px; max-width: 95vw;"
 %}
 
 ---
