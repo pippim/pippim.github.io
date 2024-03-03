@@ -300,7 +300,7 @@ In this screen example, change the default from *Open* to *Save*:
 
 {% include image.html src="/assets/img/tim-ta/tim-ta work-out-1 download save file.png"
     alt="tim-ta work-out-1 download save file.png"
-    style="float: none; width: 640px; max-width: 90vw; margin: 2rem 2rem 1rem 2rem;"
+    style="float: none; width: 640px; max-width: 90vw; margin: 2rem 0 1rem 0;"
     caption="tim-ta work-out-1 download save file.png"
 %}
 
