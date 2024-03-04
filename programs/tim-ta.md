@@ -176,7 +176,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 <div id="stock-sound-files-area"><ul>
     <br>
-    <li><b>Alarm_01.mp3</b>&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
+    <li><b>Alarm_01.mp3</b>&emsp;<audio controls id="Alarm_01.mp3"></audio>
     </li><br>
     <li><b>Alarm_02.mp3</b>&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
     </li><br>
