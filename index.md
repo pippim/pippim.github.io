@@ -898,7 +898,7 @@ The complete `stack-to-blog.py` program can be accessed on the
 [Pippim Website repo ⧉ 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py 
 "View source code for stack-to-blog.py"){:target="_blank"}.
 
-The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website ⧉](https://pippim.github.io/programs/stack.html 
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website ⧉](https://www.pippim.github.com/programs/stack.html 
 "Convert Stack Exchange Posts to Your Own Website"){:target="_blank"}
 for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your 
