@@ -10,9 +10,9 @@ created_date: 2018-12-07 19:02:48
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "5,063 "
+views:        "5,074 "
 accepted:     Accepted
-uploaded:     2024-03-03 10:35:34
+uploaded:     2024-03-11 05:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Wrong-lsb-release-after-release-upgrade.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         kubuntu conky vnstat
 created_date: 2017-08-01 01:14:46
 edit_date:    2020-06-12 14:37:07
-votes:        "13 "
+votes:        "14 "
 favorites:    
-views:        "27,302 "
+views:        "27,375 "
 accepted:     Accepted
-uploaded:     2024-03-03 10:35:34
+uploaded:     2024-03-11 05:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-01-conky-transparent.md
 toc:          false
 navigation:   false

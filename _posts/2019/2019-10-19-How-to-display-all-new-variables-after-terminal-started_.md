@@ -10,9 +10,9 @@ created_date: 2019-10-19 01:45:34
 edit_date:    2021-03-03 20:36:15
 votes:        "2 "
 favorites:    
-views:        "883 "
+views:        "889 "
 accepted:     
-uploaded:     2024-03-03 10:35:34
+uploaded:     2024-03-11 05:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-19-How-to-display-all-new-variables-after-terminal-started_.md
 toc:          false
 navigation:   false

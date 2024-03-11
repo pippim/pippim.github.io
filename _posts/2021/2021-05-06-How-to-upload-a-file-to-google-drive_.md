@@ -7,19 +7,19 @@ stack_url:    https://askubuntu.com/q/1336610
 type:         Answer
 tags:         sync rsync google-drive grive
 created_date: 2021-05-06 21:54:15
-edit_date:    2021-05-06 22:27:08
-votes:        "2 "
+edit_date:    2024-03-05 01:15:26
+votes:        "3 "
 favorites:    
-views:        "13,760 "
+views:        "13,842 "
 accepted:     
-uploaded:     2024-03-03 10:35:34
+uploaded:     2024-03-11 05:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-06-How-to-upload-a-file-to-google-drive_.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-There is a good tutorial [here](https://towardsdatascience.com/uploading-files-to-google-drive-directly-from-the-terminal-using-curl-2b89db28bb06).
+There is a good tutorial: [Google Drive File Upload Using The Terminal](https://medium.com/@ianhutch90/google-drive-file-upload-using-the-terminal-3652ee90a6f6).
 
 To summarize the link:
 

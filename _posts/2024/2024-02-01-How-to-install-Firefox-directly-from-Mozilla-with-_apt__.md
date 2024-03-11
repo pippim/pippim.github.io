@@ -10,9 +10,9 @@ created_date: 2024-02-01 03:05:17
 edit_date:    2024-02-01 04:33:13
 votes:        "3 "
 favorites:    
-views:        "228 "
+views:        "264 "
 accepted:     
-uploaded:     2024-03-03 10:35:34
+uploaded:     2024-03-11 05:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-01-How-to-install-Firefox-directly-from-Mozilla-with-_apt__.md
 toc:          false
 navigation:   false
