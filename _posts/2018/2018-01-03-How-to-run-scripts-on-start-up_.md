@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "1,577,070 "
 accepted:     
-uploaded:     2024-03-11 05:28:40
+uploaded:     2024-03-26 20:16:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-How-to-run-scripts-on-start-up_.md
 toc:          false
 navigation:   false

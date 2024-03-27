@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "35,813 "
 accepted:     
-uploaded:     2024-03-11 05:28:40
+uploaded:     2024-03-26 20:16:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-Why-should-users-never-use-normal-sudo-to-start-graphical-applications_.md
 toc:          false
 navigation:   false

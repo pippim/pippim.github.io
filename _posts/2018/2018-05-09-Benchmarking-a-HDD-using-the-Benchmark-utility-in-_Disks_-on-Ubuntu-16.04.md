@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "18,140 "
 accepted:     Accepted
-uploaded:     2024-03-11 05:28:40
+uploaded:     2024-03-26 20:16:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Benchmarking-a-HDD-using-the-Benchmark-utility-in-_Disks_-on-Ubuntu-16.04.md
 toc:          false
 navigation:   false
