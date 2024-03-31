@@ -10,9 +10,9 @@ created_date: 2016-11-18 11:53:39
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "7,883 "
+views:        "7,938 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-GNU-grub-menu-takes-too-long-to-boot.md
 toc:          false
 navigation:   false

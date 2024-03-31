@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "261 "
 accepted:     Accepted
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Should-I-try-Ubuntu-16_10_.md
 toc:          false
 navigation:   false

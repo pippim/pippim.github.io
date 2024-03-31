@@ -10,9 +10,9 @@ created_date: 2018-05-02 23:14:32
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,342 "
+views:        "2,383 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-02-_root_-owns-some-files-in-__home_user_-should-I-be-concerned_.md
 toc:          false
 navigation:   false

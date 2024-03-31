@@ -10,9 +10,9 @@ created_date: 2017-06-17 01:15:37
 edit_date:    2017-07-04 10:09:15
 votes:        "3 "
 favorites:    
-views:        "43,457 "
+views:        "43,471 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-17-What-is-the-lastest-stable-kernel-and-how-to-install-it_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-04-22 15:41:54
 edit_date:    2019-04-22 15:48:16
 votes:        "2 "
 favorites:    
-views:        "932 "
+views:        "945 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-22-Is-there-any-shortcut-for-parent-folder-in-console_.md
 toc:          false
 navigation:   false

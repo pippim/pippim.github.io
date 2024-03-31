@@ -10,9 +10,9 @@ created_date: 2023-11-07 00:55:30
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,175 "
+views:        "1,214 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2023/2023-11-07-Are-login-passwords-saved-on-the-machine-or-only-a-hash-version-of-the-password_.md
 toc:          false
 navigation:   false

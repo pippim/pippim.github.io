@@ -8,11 +8,11 @@ type:         Answer
 tags:         mouse-pointer
 created_date: 2020-04-02 01:50:13
 edit_date:    
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "6,130 "
+views:        "6,281 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-02-Mouse-pointer-moving-by-itself.md
 toc:          false
 navigation:   false

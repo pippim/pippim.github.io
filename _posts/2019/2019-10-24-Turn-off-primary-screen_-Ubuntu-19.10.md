@@ -10,9 +10,9 @@ created_date: 2019-10-24 10:51:43
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "517 "
+views:        "518 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-24-Turn-off-primary-screen_-Ubuntu-19.10.md
 toc:          false
 navigation:   false

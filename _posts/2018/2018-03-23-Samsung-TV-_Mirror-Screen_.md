@@ -8,11 +8,11 @@ type:         Answer
 tags:         display samsung screencast smart-tv
 created_date: 2018-03-23 11:01:17
 edit_date:    2018-10-17 07:39:57
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "145,613 "
+views:        "146,994 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Samsung-TV-_Mirror-Screen_.md
 toc:          false
 navigation:   false

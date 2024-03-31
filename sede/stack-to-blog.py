@@ -27,6 +27,7 @@
 #       Mar 14 2022 - Add hrb.md and hyperlink.md to EXTRA_SEARCH_FILES.
 #       Apr 13 2022 - Add tim-ta.md (Timed Tasks)
 #       Dec 31 2023 - Add 80 missing blog posts
+#       Mar 31 2024 - SE changed "<tag><tag>..<tag>" to "|tag|tag..|tag|"
 #
 # ==============================================================================
 
@@ -1392,7 +1393,12 @@ def get_index(search, names):
 def incr_index(name_index, names):
     """ Increment value "Tag-name|9999" at passed index
     """
-    str_name, str_value = names[name_index].split('|')
+    try:
+        str_name, str_value = names[name_index].split('|')
+    except ValueError:
+        print("Cannot support tag with |:", names[name_index])
+        return  # 2024-03-31 should no longer occur
+
     names[name_index] = str_name + "|" + str(int(str_value) + 1)
 
 
@@ -1462,6 +1468,9 @@ def tally_tags():
     global total_tag_names, all_tag_counts
 
     for entry in pseudo_tag_names:
+        if "|" in entry:
+            print("Cannot support tag with |:", entry)
+            continue  # 2024-03-31 should no longer occur
         all_tag_counts += 1
         entry_ndx = get_index(entry, total_tag_names)
         if entry_ndx is None:
@@ -3473,9 +3482,14 @@ for row in rows:
 
     ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3"
         NOTE: pseudo_tag_names will be appended to this list later.
+        2024-03-31 - StackExchange now using "|tag|tag|...|tag|"
     '''
-    tags = row[TAGS].replace("><", " ")
-    tags = tags.replace("<", "").replace(">", "")
+    #tags = row[TAGS].replace("><", " ")
+    #tags = tags.replace("<", "").replace(">", "")
+    #print("\n tags: '" + tags + "'")
+    tags = row[TAGS].replace("|", " ")
+    tags = tags[1:-1]
+    #print("\n tags: '" + tags + "'")
 
     lines = row[MARKDOWN].splitlines()
     line_count = len(lines)

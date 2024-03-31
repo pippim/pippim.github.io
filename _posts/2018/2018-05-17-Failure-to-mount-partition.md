@@ -10,9 +10,9 @@ created_date: 2018-05-17 03:49:36
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "5,211 "
+views:        "5,249 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Failure-to-mount-partition.md
 toc:          false
 navigation:   false

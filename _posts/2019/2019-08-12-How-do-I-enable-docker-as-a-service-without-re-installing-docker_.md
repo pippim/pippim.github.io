@@ -10,9 +10,9 @@ created_date: 2019-08-12 00:56:36
 edit_date:    2019-08-12 11:24:48
 votes:        "5 "
 favorites:    
-views:        "11,181 "
+views:        "11,273 "
 accepted:     Accepted
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-12-How-do-I-enable-docker-as-a-service-without-re-installing-docker_.md
 toc:          false
 navigation:   false

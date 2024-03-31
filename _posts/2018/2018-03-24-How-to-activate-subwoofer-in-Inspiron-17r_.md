@@ -10,9 +10,9 @@ created_date: 2018-03-24 01:21:10
 edit_date:    2018-04-01 23:07:51
 votes:        "2 "
 favorites:    
-views:        "12,947 "
+views:        "12,955 "
 accepted:     Accepted
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-24-How-to-activate-subwoofer-in-Inspiron-17r_.md
 toc:          false
 navigation:   false

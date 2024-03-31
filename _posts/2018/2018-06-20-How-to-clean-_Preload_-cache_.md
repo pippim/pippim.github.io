@@ -10,9 +10,9 @@ created_date: 2018-06-20 22:43:55
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "4,851 "
+views:        "4,865 "
 accepted:     Accepted
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-20-How-to-clean-_Preload_-cache_.md
 toc:          false
 navigation:   false

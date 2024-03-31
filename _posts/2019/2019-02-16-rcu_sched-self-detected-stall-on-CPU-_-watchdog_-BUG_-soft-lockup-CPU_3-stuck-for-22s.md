@@ -8,11 +8,11 @@ type:         Answer
 tags:         kernel lockup watchdog scheduler
 created_date: 2019-02-16 17:25:13
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "17,501 "
+views:        "17,744 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-16-rcu_sched-self-detected-stall-on-CPU-_-watchdog_-BUG_-soft-lockup-CPU_3-stuck-for-22s.md
 toc:          false
 navigation:   false

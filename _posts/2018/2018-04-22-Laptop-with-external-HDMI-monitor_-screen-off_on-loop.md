@@ -10,9 +10,9 @@ created_date: 2018-04-22 18:45:26
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,999 "
+views:        "2,023 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Laptop-with-external-HDMI-monitor_-screen-off_on-loop.md
 toc:          false
 navigation:   false

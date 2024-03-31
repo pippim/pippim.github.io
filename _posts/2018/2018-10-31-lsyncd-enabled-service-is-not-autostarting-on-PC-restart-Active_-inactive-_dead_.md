@@ -10,9 +10,9 @@ created_date: 2018-10-31 02:52:55
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,184 "
+views:        "3,203 "
 accepted:     Accepted
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-31-lsyncd-enabled-service-is-not-autostarting-on-PC-restart-Active_-inactive-_dead_.md
 toc:          false
 navigation:   false

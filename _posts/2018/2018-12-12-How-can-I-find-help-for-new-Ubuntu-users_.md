@@ -10,9 +10,9 @@ created_date: 2018-12-12 01:01:03
 edit_date:    2024-02-06 12:29:07
 votes:        "2 "
 favorites:    
-views:        "999 "
+views:        "1,000 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-How-can-I-find-help-for-new-Ubuntu-users_.md
 toc:          false
 navigation:   false

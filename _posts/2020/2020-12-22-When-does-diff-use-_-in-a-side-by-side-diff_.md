@@ -10,9 +10,9 @@ created_date: 2020-12-22 12:52:25
 edit_date:    2022-03-22 12:22:37
 votes:        "2 "
 favorites:    
-views:        "231 "
+views:        "238 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-22-When-does-diff-use-_-in-a-side-by-side-diff_.md
 toc:          false
 navigation:   false

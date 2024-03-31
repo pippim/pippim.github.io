@@ -10,9 +10,9 @@ created_date: 2019-04-09 23:42:35
 edit_date:    2019-04-09 23:50:21
 votes:        "4 "
 favorites:    
-views:        "18,184 "
+views:        "18,367 "
 accepted:     Accepted
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-09-Cannot-mount-usb-hard-drive.md
 toc:          false
 navigation:   false

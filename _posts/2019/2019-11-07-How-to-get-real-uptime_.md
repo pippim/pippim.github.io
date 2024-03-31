@@ -10,9 +10,9 @@ created_date: 2019-11-07 02:14:38
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "2,301 "
+views:        "2,335 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-How-to-get-real-uptime_.md
 toc:          false
 navigation:   false

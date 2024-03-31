@@ -10,9 +10,9 @@ created_date: 2018-05-21 15:56:55
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,309 "
+views:        "3,333 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-Can_t-remove-old-kernels-due-to-unmet-dependencies.md
 toc:          false
 navigation:   false

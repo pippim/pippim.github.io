@@ -10,9 +10,9 @@ created_date: 2018-03-31 16:28:12
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "80,242 "
+views:        "80,886 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-can-I-change-what_s-displayed-at-a-login-shell_.md
 toc:          true
 navigation:   true

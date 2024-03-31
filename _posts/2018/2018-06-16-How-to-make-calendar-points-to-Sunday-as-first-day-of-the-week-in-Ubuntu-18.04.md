@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 gnome-shell calendar
 created_date: 2018-06-16 18:58:29
 edit_date:    2019-12-08 14:12:41
-votes:        "6 "
+votes:        "7 "
 favorites:    
-views:        "5,554 "
+views:        "5,588 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-16-How-to-make-calendar-points-to-Sunday-as-first-day-of-the-week-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

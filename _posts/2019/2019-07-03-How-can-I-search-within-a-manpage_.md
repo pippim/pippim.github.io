@@ -8,11 +8,11 @@ type:         Answer
 tags:         search manpage
 created_date: 2019-07-03 22:03:12
 edit_date:    2019-08-23 22:35:43
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "144,318 "
+views:        "145,408 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-03-How-can-I-search-within-a-manpage_.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 environment-variables gnome-session
 created_date: 2018-12-19 00:50:22
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "12,421 "
+views:        "12,488 "
 accepted:     
-uploaded:     2024-03-26 20:16:49
+uploaded:     2024-03-31 13:47:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-19-Messed-up-my-PATH-environment-variable-and-can_t-login-to-desktop.md
 toc:          false
 navigation:   false
