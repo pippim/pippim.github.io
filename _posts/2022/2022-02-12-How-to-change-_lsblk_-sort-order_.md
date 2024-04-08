@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1392599
 type:         Answer
-tags:         partitioning text-processing sort
+tags:         partitioning><text-processing><sort
 created_date: 2022-02-12 22:50:48
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,140 "
+views:        "1,150 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-12-How-to-change-_lsblk_-sort-order_.md
 toc:          false
 navigation:   false

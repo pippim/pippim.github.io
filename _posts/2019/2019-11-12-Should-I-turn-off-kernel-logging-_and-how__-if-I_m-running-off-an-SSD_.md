@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188283
 type:         Answer
-tags:         kernel kubuntu dell ssd
+tags:         kernel><kubuntu><dell><ssd
 created_date: 2019-11-12 20:34:12
 edit_date:    2020-06-12 14:37:07
 votes:        "10 "
 favorites:    
-views:        "3,791 "
+views:        "3,796 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Should-I-turn-off-kernel-logging-_and-how__-if-I_m-running-off-an-SSD_.md
 toc:          false
 navigation:   false

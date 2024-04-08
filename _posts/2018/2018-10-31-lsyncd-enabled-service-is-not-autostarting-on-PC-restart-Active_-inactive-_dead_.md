@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1088746
 type:         Answer
-tags:         server kubuntu kde systemd services
+tags:         server><kubuntu><kde><systemd><services
 created_date: 2018-10-31 02:52:55
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,203 "
+views:        "3,207 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-31-lsyncd-enabled-service-is-not-autostarting-on-PC-restart-Active_-inactive-_dead_.md
 toc:          false
 navigation:   false

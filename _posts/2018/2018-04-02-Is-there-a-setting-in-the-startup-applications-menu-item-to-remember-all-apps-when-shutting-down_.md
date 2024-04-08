@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021436
 type:         Answer
-tags:         shutdown session
+tags:         shutdown><session
 created_date: 2018-04-02 21:21:59
 edit_date:    2018-04-02 21:27:59
 votes:        "2 "
 favorites:    
-views:        "961 "
+views:        "964 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-02-Is-there-a-setting-in-the-startup-applications-menu-item-to-remember-all-apps-when-shutting-down_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159965
 type:         Answer
-tags:         nautilus 19.04
+tags:         nautilus><19.04
 created_date: 2019-07-21 17:39:24
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "1,056 "
+views:        "1,058 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Nautilus-doesn_t-remember-sorting-options-in-Ubuntu-19.04.md
 toc:          false
 navigation:   false

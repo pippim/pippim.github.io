@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159943
 type:         Answer
-tags:         16.04 suspend
+tags:         16.04><suspend
 created_date: 2019-07-21 16:26:27
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "77 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Disabling-sleep_suspend-mode-in-16.04.md
 toc:          false
 navigation:   false

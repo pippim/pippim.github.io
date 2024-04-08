@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1056431
 type:         Answer
-tags:         unity nvidia xorg cpu gpu
+tags:         unity><nvidia><xorg><cpu><gpu
 created_date: 2018-07-16 01:33:58
 edit_date:    2019-02-21 10:47:27
 votes:        "4 "
 favorites:    
-views:        "16,148 "
+views:        "16,178 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-16-Force-Xorg-to-use-CPU-not-GPU.md
 toc:          false
 navigation:   false

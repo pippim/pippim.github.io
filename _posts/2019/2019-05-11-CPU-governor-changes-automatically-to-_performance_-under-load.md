@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142294
 type:         Answer
-tags:         xubuntu performance cpu governor
+tags:         xubuntu><performance><cpu><governor
 created_date: 2019-05-11 03:09:43
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,702 "
+views:        "2,708 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-11-CPU-governor-changes-automatically-to-_performance_-under-load.md
 toc:          false
 navigation:   false

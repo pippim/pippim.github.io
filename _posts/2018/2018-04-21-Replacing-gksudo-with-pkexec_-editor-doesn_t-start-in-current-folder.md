@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026821
 type:         Answer
-tags:         gksudo pkexec
+tags:         gksudo><pkexec
 created_date: 2018-04-21 01:21:40
 edit_date:    
 votes:        "5 "
 favorites:    
 views:        "2,449 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-21-Replacing-gksudo-with-pkexec_-editor-doesn_t-start-in-current-folder.md
 toc:          false
 navigation:   false

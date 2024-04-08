@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/826750
 type:         Answer
-tags:         apt 16.04 firefox google-chrome flash
+tags:         apt><16.04><firefox><google-chrome><flash
 created_date: 2016-09-19 02:27:58
 edit_date:    2017-04-13 12:25:15
 votes:        "11 "
 favorites:    
 views:        "10,732 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-Failure-to-download-extra-data-files_-flashplugin-installer-_not-a-duplicate-question_.md
 toc:          false
 navigation:   false

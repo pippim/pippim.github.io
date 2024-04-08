@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1100218
 type:         Answer
-tags:         networking drivers 18.04 dell xps
+tags:         networking><drivers><18.04><dell><xps
 created_date: 2018-12-12 05:06:26
 edit_date:    2018-12-16 16:51:49
 votes:        "2 "
 favorites:    
 views:        "263 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-Cannot-connect-to-g_n-wifi-networks-is-my-driver-the-issue_.md
 toc:          false
 navigation:   false

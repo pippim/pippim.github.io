@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079566
 type:         Answer
-tags:         18.04 fdisk
+tags:         18.04><fdisk
 created_date: 2018-09-29 19:10:04
 edit_date:    2018-09-29 22:51:08
 votes:        "2 "
 favorites:    
 views:        "159 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-29-summary-and-restricted-output-from-fdisk-in-ubuntu-bionic-beaver.md
 toc:          false
 navigation:   false

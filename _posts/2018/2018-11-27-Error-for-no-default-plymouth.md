@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1096357
 type:         Answer
-tags:         boot plymouth
+tags:         boot><plymouth
 created_date: 2018-11-27 02:45:41
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "6,580 "
+views:        "6,594 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-Error-for-no-default-plymouth.md
 toc:          false
 navigation:   true

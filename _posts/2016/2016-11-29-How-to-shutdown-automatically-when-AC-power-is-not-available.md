@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854756
 type:         Answer
-tags:         power-management shutdown battery automation
+tags:         power-management><shutdown><battery><automation
 created_date: 2016-11-29 01:00:23
 edit_date:    2019-04-09 10:43:58
 votes:        "7 "
 favorites:    
-views:        "2,780 "
+views:        "2,795 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-29-How-to-shutdown-automatically-when-AC-power-is-not-available.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866648
 type:         Answer
-tags:         14.04 dvd
+tags:         14.04><dvd
 created_date: 2017-01-01 01:34:15
 edit_date:    2017-01-01 09:16:18
 votes:        "2 "
 favorites:    
 views:        "349 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-01-Cannot-mount-a-blank-dvd-in-ubuntu-14.04.md
 toc:          false
 navigation:   false

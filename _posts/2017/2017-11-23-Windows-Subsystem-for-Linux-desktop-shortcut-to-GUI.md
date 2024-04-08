@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/979332
 type:         Answer
-tags:         bash gui shortcuts windows-subsystem-for-linux yad
+tags:         bash><gui><shortcuts><windows-subsystem-for-linux><yad
 created_date: 2017-11-23 01:26:29
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "11,128 "
+views:        "11,130 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-23-Windows-Subsystem-for-Linux-desktop-shortcut-to-GUI.md
 toc:          false
 navigation:   false

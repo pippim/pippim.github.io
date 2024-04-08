@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187761
 type:         Answer
-tags:         gnome printing hardware
+tags:         gnome><printing><hardware
 created_date: 2019-11-10 17:02:59
 edit_date:    2019-11-10 17:12:37
 votes:        "2 "
 favorites:    
-views:        "10,093 "
+views:        "10,100 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-do-I-get-rid-of-a-ghost-printer-in-Gnome_.md
 toc:          false
 navigation:   false

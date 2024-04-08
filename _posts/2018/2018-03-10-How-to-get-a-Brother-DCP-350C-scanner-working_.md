@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1013560
 type:         Answer
-tags:         drivers scanner brother sane simplescan
+tags:         drivers><scanner><brother><sane><simplescan
 created_date: 2018-03-10 01:49:45
 edit_date:    2018-03-13 23:03:51
 votes:        "9 "
 favorites:    
-views:        "6,529 "
+views:        "6,540 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-10-How-to-get-a-Brother-DCP-350C-scanner-working_.md
 toc:          true
 navigation:   true

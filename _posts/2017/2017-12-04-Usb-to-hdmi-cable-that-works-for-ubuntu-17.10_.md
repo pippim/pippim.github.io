@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/982903
 type:         Answer
-tags:         usb 17.10 hdmi budgie
+tags:         usb><17.10><hdmi><budgie
 created_date: 2017-12-04 01:57:56
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,097 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-04-Usb-to-hdmi-cable-that-works-for-ubuntu-17.10_.md
 toc:          false
 navigation:   false

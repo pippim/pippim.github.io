@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/839431
 type:         Answer
-tags:         suspend power-management shutdown 16.10
+tags:         suspend><power-management><shutdown><16.10
 created_date: 2016-10-20 00:36:28
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "95 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-20-Unusual-power-management-following-fresh-reinstall-of-16.10.md
 toc:          false
 navigation:   false

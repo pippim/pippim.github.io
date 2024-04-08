@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1090647
 type:         Answer
-tags:         sudo vim
+tags:         sudo><vim
 created_date: 2018-11-07 00:46:21
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,824 "
+views:        "5,834 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-07-Is-Vim-safe-to-use-in-combination-with-sudo_.md
 toc:          false
 navigation:   false

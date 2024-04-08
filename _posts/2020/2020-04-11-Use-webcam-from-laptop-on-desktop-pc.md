@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1226284
 type:         Answer
-tags:         networking webcam streaming video-streaming v4l
+tags:         networking><webcam><streaming><video-streaming><v4l
 created_date: 2020-04-11 18:24:15
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "21,962 "
+views:        "22,015 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-11-Use-webcam-from-laptop-on-desktop-pc.md
 toc:          false
 navigation:   false

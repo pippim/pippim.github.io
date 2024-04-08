@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849129
 type:         Answer
-tags:         vaio sony
+tags:         vaio><sony
 created_date: 2016-11-13 22:15:58
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "671 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-13-Sony-VAIO-mute-button.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1248665
 type:         Answer
-tags:         20.04 shutdown gnome-shell
+tags:         20.04><shutdown><gnome-shell
 created_date: 2020-06-09 23:16:55
 edit_date:    2023-03-30 17:34:47
 votes:        "2 "
 favorites:    
-views:        "21,419 "
+views:        "21,477 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu-can-we-reduce-this_.md
 toc:          true
 navigation:   true

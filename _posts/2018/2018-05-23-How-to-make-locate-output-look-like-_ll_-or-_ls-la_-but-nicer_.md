@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039236
 type:         Answer
-tags:         command-line ls locate
+tags:         command-line><ls><locate
 created_date: 2018-05-23 02:45:51
 edit_date:    2022-12-30 10:05:43
 votes:        "2 "
 favorites:    
 views:        "3,357 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_.md
 toc:          false
 navigation:   false

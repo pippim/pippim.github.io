@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1009652
 type:         Answer
-tags:         drivers nvidia kernel xorg nouveau
+tags:         drivers><nvidia><kernel><xorg><nouveau
 created_date: 2018-02-25 15:49:05
 edit_date:    2018-02-25 17:28:45
 votes:        "4 "
 favorites:    
-views:        "2,887 "
+views:        "2,893 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-What-is-the-difference-between-graphics-drivers-in-the-kernel_-and-graphics-drivers-for-Xorg_.md
 toc:          false
 navigation:   false

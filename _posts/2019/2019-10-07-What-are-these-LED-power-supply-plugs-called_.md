@@ -5,14 +5,14 @@ title:        >
 site:         Electrical Engineering
 stack_url:    https://electronics.stackexchange.com/q/461935
 type:         Question
-tags:         led connector cables
+tags:         led><connector><cables
 created_date: 2019-10-07 23:35:41
 edit_date:    2022-02-15 01:33:30
 votes:        "2 "
 favorites:    
-views:        "1,494 "
+views:        "1,496 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-07-What-are-these-LED-power-supply-plugs-called_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165392
 type:         Answer
-tags:         16.04 process ubuntu-mate
+tags:         16.04><process><ubuntu-mate
 created_date: 2019-08-13 10:33:58
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "13,956 "
+views:        "13,958 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-upowerd-hogging-CPU-while-iPhone-is-connected.md
 toc:          false
 navigation:   false

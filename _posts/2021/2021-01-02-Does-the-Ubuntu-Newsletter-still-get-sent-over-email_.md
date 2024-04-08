@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1304590
 type:         Answer
-tags:         canonical community
+tags:         canonical><community
 created_date: 2021-01-02 20:06:52
 edit_date:    2021-01-24 15:29:09
 votes:        "5 "
 favorites:    
 views:        "851 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-02-Does-the-Ubuntu-Newsletter-still-get-sent-over-email_.md
 toc:          false
 navigation:   false

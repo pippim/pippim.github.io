@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159338
 type:         Answer
-tags:         drivers nic
+tags:         drivers><nic
 created_date: 2019-07-18 22:31:57
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,839 "
+views:        "2,852 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-18-I-have-a-intel-AC-8260-and-cant-find-the-drivers.md
 toc:          false
 navigation:   false

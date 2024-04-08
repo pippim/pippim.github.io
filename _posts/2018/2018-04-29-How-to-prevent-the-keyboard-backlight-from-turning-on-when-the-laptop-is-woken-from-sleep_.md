@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029549
 type:         Answer
-tags:         16.04 thinkpad keyboard-backlight
+tags:         16.04><thinkpad><keyboard-backlight
 created_date: 2018-04-29 06:18:45
 edit_date:    2020-09-14 23:22:29
 votes:        "2 "
 favorites:    
-views:        "3,843 "
+views:        "3,849 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-How-to-prevent-the-keyboard-backlight-from-turning-on-when-the-laptop-is-woken-from-sleep_.md
 toc:          false
 navigation:   false

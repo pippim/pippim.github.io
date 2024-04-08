@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821054
 type:         Answer
-tags:         internet downloads wget
+tags:         internet><downloads><wget
 created_date: 2016-09-05 02:26:03
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "11,619 "
+views:        "11,631 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Why-would-I-use-Wget-instead-of-a-browser_.md
 toc:          false
 navigation:   false

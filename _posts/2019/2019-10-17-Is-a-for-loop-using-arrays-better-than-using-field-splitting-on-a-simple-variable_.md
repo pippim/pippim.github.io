@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1181605
 type:         Answer
-tags:         bash scripts
+tags:         bash><scripts
 created_date: 2019-10-17 11:51:10
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
 views:        "1,893 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-17-Is-a-for-loop-using-arrays-better-than-using-field-splitting-on-a-simple-variable_.md
 toc:          false
 navigation:   false

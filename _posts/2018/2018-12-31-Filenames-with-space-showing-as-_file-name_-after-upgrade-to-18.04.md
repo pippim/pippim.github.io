@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1105870
 type:         Answer
-tags:         command-line 18.04 ls
+tags:         command-line><18.04><ls
 created_date: 2018-12-31 16:16:37
 edit_date:    2018-12-31 16:28:01
 votes:        "33 "
 favorites:    
 views:        "2,726 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-31-Filenames-with-space-showing-as-_file-name_-after-upgrade-to-18.04.md
 toc:          false
 navigation:   false

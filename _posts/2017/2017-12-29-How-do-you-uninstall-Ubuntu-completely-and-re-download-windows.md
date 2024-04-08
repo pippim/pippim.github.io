@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/990521
 type:         Answer
-tags:         system-installation windows uninstall ubuntu-gnome
+tags:         system-installation><windows><uninstall><ubuntu-gnome
 created_date: 2017-12-29 11:57:20
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "175 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-29-How-do-you-uninstall-Ubuntu-completely-and-re-download-windows.md
 toc:          false
 navigation:   false

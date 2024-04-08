@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1502032
 type:         Answer
-tags:         software-installation firefox deb
+tags:         software-installation><firefox><deb
 created_date: 2024-02-01 03:05:17
 edit_date:    2024-02-01 04:33:13
 votes:        "3 "
 favorites:    
-views:        "373 "
+views:        "443 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-01-How-to-install-Firefox-directly-from-Mozilla-with-_apt__.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1178690
 type:         Answer
-tags:         display xrandr
+tags:         display><xrandr
 created_date: 2019-10-04 11:03:54
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "4,066 "
+views:        "4,085 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-04-Disabling-external-monitor-with-xrandr-also-disables-laptop-screen.md
 toc:          false
 navigation:   false

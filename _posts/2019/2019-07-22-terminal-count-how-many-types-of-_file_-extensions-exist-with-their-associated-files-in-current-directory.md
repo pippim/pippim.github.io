@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160058
 type:         Answer
-tags:         command-line gnome-terminal
+tags:         command-line><gnome-terminal
 created_date: 2019-07-22 04:26:20
 edit_date:    2019-07-22 04:35:45
 votes:        "1 "
 favorites:    
-views:        "1,041 "
+views:        "1,047 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-22-terminal-count-how-many-types-of-_file_-extensions-exist-with-their-associated-files-in-current-directory.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837563
 type:         Answer
-tags:         14.04 cpu
+tags:         14.04><cpu
 created_date: 2016-10-15 18:36:33
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "7,573 "
+views:        "7,579 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-How-to-know-CPU-frequency_.md
 toc:          false
 navigation:   false

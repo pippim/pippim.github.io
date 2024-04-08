@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155773
 type:         Answer
-tags:         search manpage
+tags:         search><manpage
 created_date: 2019-07-03 22:03:12
 edit_date:    2019-08-23 22:35:43
 votes:        "6 "
 favorites:    
-views:        "145,408 "
+views:        "145,766 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-03-How-can-I-search-within-a-manpage_.md
 toc:          false
 navigation:   false

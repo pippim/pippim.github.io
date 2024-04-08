@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196819
 type:         Answer
-tags:         18.04 system-installation lenovo thinkpad firmware
+tags:         18.04><system-installation><lenovo><thinkpad><firmware
 created_date: 2019-12-17 14:01:39
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "3,891 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-17-Failing-Installation-of-Ubuntu-18.04-w_-Lenovo-Thinkpad-P73-cannot-boot-up-saying_-__Firmware-bug__-TPM-interrupt-not-working_.md
 toc:          false
 navigation:   false

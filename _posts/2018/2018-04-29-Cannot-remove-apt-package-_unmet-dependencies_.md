@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029546
 type:         Answer
-tags:         apt package-management upgrade dpkg latex
+tags:         apt><package-management><upgrade><dpkg><latex
 created_date: 2018-04-29 06:01:54
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,223 "
+views:        "3,227 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Cannot-remove-apt-package-_unmet-dependencies_.md
 toc:          false
 navigation:   false

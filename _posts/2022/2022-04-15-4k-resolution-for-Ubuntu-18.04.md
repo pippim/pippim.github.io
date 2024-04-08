@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1402688
 type:         Answer
-tags:         drivers nvidia display display-resolution hdmi
+tags:         drivers><nvidia><display><display-resolution><hdmi
 created_date: 2022-04-15 17:50:11
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,683 "
+views:        "3,711 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-04-15-4k-resolution-for-Ubuntu-18.04.md
 toc:          false
 navigation:   false

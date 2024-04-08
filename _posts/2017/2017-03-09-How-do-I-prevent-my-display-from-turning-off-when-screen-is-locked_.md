@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/891090
 type:         Answer
-tags:         power-management 16.10 lock-screen
+tags:         power-management><16.10><lock-screen
 created_date: 2017-03-09 01:54:03
 edit_date:    2018-02-21 01:02:10
 votes:        "2 "
 favorites:    
-views:        "3,289 "
+views:        "3,297 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-09-How-do-I-prevent-my-display-from-turning-off-when-screen-is-locked_.md
 toc:          false
 navigation:   false

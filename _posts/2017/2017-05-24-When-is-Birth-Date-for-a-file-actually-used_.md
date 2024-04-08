@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/918300
 type:         Question
-tags:         command-line stat
+tags:         command-line><stat
 created_date: 2017-05-24 03:01:14
 edit_date:    2017-05-24 03:59:08
 votes:        "15 "
 favorites:    
-views:        "11,508 "
+views:        "11,522 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-24-When-is-Birth-Date-for-a-file-actually-used_.md
 toc:          false
 navigation:   false

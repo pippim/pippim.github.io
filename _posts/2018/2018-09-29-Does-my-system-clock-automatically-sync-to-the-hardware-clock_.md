@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079387
 type:         Answer
-tags:         time clock
+tags:         time><clock
 created_date: 2018-09-29 02:02:21
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "3,786 "
+views:        "3,798 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-29-Does-my-system-clock-automatically-sync-to-the-hardware-clock_.md
 toc:          false
 navigation:   false

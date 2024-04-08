@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/965141
 type:         Answer
-tags:         wireless asus executable
+tags:         wireless><asus><executable
 created_date: 2017-10-15 15:51:02
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "6,307 "
+views:        "6,322 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-15-Having-to-run-command-_sudo-modprobe-brcmfmac_-every-time-I-restart-in-order-to-get-wifi-working.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/834406
 type:         Answer
-tags:         dual-boot grub2
+tags:         dual-boot><grub2
 created_date: 2016-10-07 23:32:48
 edit_date:    2017-04-13 12:23:51
 votes:        "10 "
 favorites:    
-views:        "34,292 "
+views:        "34,337 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-07-Edit-grub-from-Windows_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1053061
 type:         Answer
-tags:         virtualbox guest-additions
+tags:         virtualbox><guest-additions
 created_date: 2018-07-07 18:29:55
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "2,541,120 "
+views:        "2,545,220 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-07-How-do-I-install-Guest-Additions-in-a-VirtualBox-VM_.md
 toc:          false
 navigation:   false

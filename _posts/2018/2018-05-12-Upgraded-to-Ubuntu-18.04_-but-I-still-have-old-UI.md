@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035452
 type:         Answer
-tags:         18.04 unity gnome desktop-environments
+tags:         18.04><unity><gnome><desktop-environments
 created_date: 2018-05-12 20:34:05
 edit_date:    2020-01-06 15:58:11
 votes:        "6 "
 favorites:    
 views:        "2,291 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Upgraded-to-Ubuntu-18.04_-but-I-still-have-old-UI.md
 toc:          false
 navigation:   false

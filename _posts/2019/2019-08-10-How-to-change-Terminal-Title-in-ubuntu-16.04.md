@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1164870
 type:         Answer
-tags:         command-line bash 16.04
+tags:         command-line><bash><16.04
 created_date: 2019-08-10 23:13:16
 edit_date:    2019-08-11 00:24:52
 votes:        "3 "
 favorites:    
-views:        "37,566 "
+views:        "37,584 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-10-How-to-change-Terminal-Title-in-ubuntu-16.04.md
 toc:          false
 navigation:   false

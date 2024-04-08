@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069168
 type:         Answer
-tags:         18.04 wayland conky
+tags:         18.04><wayland><conky
 created_date: 2018-08-26 18:39:05
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "3,587 "
+views:        "3,603 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-26-Wayland-session-on-Ubuntu-18.04_-why-is-_usr_bin_Xwayland-running_.md
 toc:          false
 navigation:   false

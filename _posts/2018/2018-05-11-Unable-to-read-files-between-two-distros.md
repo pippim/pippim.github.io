@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1034746
 type:         Answer
-tags:         dual-boot partitioning mount gparted
+tags:         dual-boot><partitioning><mount><gparted
 created_date: 2018-05-11 03:31:29
 edit_date:    2018-05-12 02:22:49
 votes:        "3 "
 favorites:    
-views:        "432 "
+views:        "434 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-11-Unable-to-read-files-between-two-distros.md
 toc:          false
 navigation:   true

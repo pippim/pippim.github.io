@@ -10,9 +10,9 @@ created_date: 2018-02-23 01:08:23
 edit_date:    2020-06-12 14:37:07
 votes:        "17 "
 favorites:    
-views:        "45,868 "
+views:        "46,238 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-23-How-can-I-check-the-NVME-specs.md
 toc:          false
 navigation:   false

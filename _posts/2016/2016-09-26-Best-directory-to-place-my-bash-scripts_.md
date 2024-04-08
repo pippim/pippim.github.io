@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/830074
 type:         Question
-tags:         bash scripts
+tags:         bash><scripts
 created_date: 2016-09-26 23:08:32
 edit_date:    2018-01-04 01:17:04
 votes:        "4 "
 favorites:    
 views:        "263 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-26-Best-directory-to-place-my-bash-scripts_.md
 toc:          false
 navigation:   false

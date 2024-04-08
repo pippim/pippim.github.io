@@ -10,9 +10,9 @@ created_date: 2019-04-27 17:19:23
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,021 "
+views:        "1,024 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-grep-change-color-highlight-from-first-line-to-second-line.md
 toc:          false
 navigation:   false

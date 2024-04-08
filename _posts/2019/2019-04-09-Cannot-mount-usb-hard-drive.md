@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132581
 type:         Answer
-tags:         18.04 mount gparted exfat
+tags:         18.04><mount><gparted><exfat
 created_date: 2019-04-09 23:42:35
 edit_date:    2019-04-09 23:50:21
 votes:        "4 "
 favorites:    
-views:        "18,367 "
+views:        "18,428 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-09-Cannot-mount-usb-hard-drive.md
 toc:          false
 navigation:   false

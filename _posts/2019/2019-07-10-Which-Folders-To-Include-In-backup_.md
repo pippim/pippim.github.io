@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157150
 type:         Answer
-tags:         backup directory grub eyesome
+tags:         backup><directory grub eyesome
 created_date: 2019-07-10 01:00:27
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "45,174 "
+views:        "45,272 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-10-Which-Folders-To-Include-In-backup_.md
 toc:          false
 navigation:   false

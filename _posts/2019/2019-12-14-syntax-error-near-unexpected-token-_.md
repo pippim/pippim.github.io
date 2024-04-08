@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196192
 type:         Answer
-tags:         command-line bash
+tags:         command-line><bash
 created_date: 2019-12-14 20:01:55
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "2,574 "
+views:        "2,579 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-syntax-error-near-unexpected-token-_.md
 toc:          false
 navigation:   false

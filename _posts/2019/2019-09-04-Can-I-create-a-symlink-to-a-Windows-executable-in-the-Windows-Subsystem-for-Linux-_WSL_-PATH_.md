@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1170907
 type:         Answer
-tags:         command-line java jdk symbolic-link windows-subsystem-for-linux
+tags:         command-line><java><jdk><symbolic-link><windows-subsystem-for-linux
 created_date: 2019-09-04 21:49:51
 edit_date:    2019-09-04 23:49:17
 votes:        "6 "
 favorites:    
-views:        "9,949 "
+views:        "9,965 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-04-Can-I-create-a-symlink-to-a-Windows-executable-in-the-Windows-Subsystem-for-Linux-_WSL_-PATH_.md
 toc:          false
 navigation:   false

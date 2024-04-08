@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818005
 type:         Answer
-tags:         apt software-installation security
+tags:         apt><software-installation><security
 created_date: 2016-08-29 00:12:22
 edit_date:    2017-11-30 00:10:05
 votes:        "5 "
 favorites:    
-views:        "25,332 "
+views:        "25,396 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-29-Can-I-get-a-virus-by-using-_sudo-apt-get-install__.md
 toc:          false
 navigation:   false

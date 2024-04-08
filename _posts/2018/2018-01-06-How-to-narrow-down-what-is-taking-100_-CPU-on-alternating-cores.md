@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/992779
 type:         Question
-tags:         google-chrome cpu conky
+tags:         google-chrome><cpu conky
 created_date: 2018-01-06 00:20:02
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "703 "
+views:        "704 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-06-How-to-narrow-down-what-is-taking-100_-CPU-on-alternating-cores.md
 toc:          false
 navigation:   false

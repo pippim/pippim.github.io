@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1100220
 type:         Answer
-tags:         sudo root gksu
+tags:         sudo><root><gksu
 created_date: 2018-12-12 05:14:22
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "52,840 "
+views:        "52,884 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-I-need-an-equivalent-of-gksu-in-18.04.md
 toc:          false
 navigation:   false

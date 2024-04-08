@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032588
 type:         Answer
-tags:         software-recommendation security malware rootkit signature
+tags:         software-recommendation><security><malware><rootkit><signature
 created_date: 2018-05-06 01:44:40
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,183 "
+views:        "1,184 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-06-Signature-based-rootkit-scanner_.md
 toc:          false
 navigation:   false

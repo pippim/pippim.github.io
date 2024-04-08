@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/912370
 type:         Question
-tags:         bash files default-programs mime-type yad
+tags:         bash><files><default-programs><mime-type><yad
 created_date: 2017-05-06 01:28:22
 edit_date:    2017-05-07 00:26:33
 votes:        "2 "
 favorites:    
-views:        "1,454 "
+views:        "1,456 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-06-List-of-file-types-and-default-Ubuntu-applications-to-open-with.md
 toc:          false
 navigation:   false

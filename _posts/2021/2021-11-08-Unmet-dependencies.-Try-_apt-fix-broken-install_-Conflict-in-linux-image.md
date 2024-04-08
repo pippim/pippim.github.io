@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1374281
 type:         Answer
-tags:         apt 20.04 kernel xubuntu dpkg
+tags:         apt><20.04><kernel><xubuntu><dpkg
 created_date: 2021-11-08 12:21:01
 edit_date:    2023-06-29 05:15:00
 votes:        "6 "
 favorites:    
-views:        "8,722 "
+views:        "8,829 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-11-08-Unmet-dependencies.-Try-_apt-fix-broken-install_-Conflict-in-linux-image.md
 toc:          false
 navigation:   false

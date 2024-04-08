@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67352300
 type:         Answer
-tags:         python logging
+tags:         python><logging
 created_date: 2021-05-02 01:40:30
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "720 "
+views:        "728 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-02-Unknown-python-DEBUG-statements-appear.md
 toc:          false
 navigation:   false

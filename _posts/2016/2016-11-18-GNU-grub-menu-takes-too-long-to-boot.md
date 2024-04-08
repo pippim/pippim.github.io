@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850840
 type:         Answer
-tags:         dual-boot grub2 gnu
+tags:         dual-boot><grub2><gnu
 created_date: 2016-11-18 11:53:39
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "7,938 "
+views:        "7,954 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-GNU-grub-menu-takes-too-long-to-boot.md
 toc:          false
 navigation:   false

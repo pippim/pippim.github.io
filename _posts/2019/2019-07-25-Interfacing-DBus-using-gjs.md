@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161035
 type:         Answer
-tags:         gnome gnome-shell ubuntu-gnome dbus javascript
+tags:         gnome><gnome-shell><ubuntu-gnome><dbus><javascript
 created_date: 2019-07-25 16:45:46
 edit_date:    2019-07-25 17:38:24
 votes:        "4 "
 favorites:    
-views:        "1,051 "
+views:        "1,056 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-Interfacing-DBus-using-gjs.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1194001
 type:         Answer
-tags:         xorg multiple-monitors display-resolution xrandr scaling
+tags:         xorg><multiple-monitors><display-resolution><xrandr><scaling
 created_date: 2019-12-05 11:46:08
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "18,561 "
+views:        "18,643 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-05-Setting-monitor-scaling-to-200_-with-xrandr.md
 toc:          false
 navigation:   false

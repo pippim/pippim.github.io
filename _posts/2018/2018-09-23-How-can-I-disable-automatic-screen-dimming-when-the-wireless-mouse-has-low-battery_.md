@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1077772
 type:         Answer
-tags:         18.04 mouse power-management brightness battery
+tags:         18.04><mouse><power-management><brightness><battery
 created_date: 2018-09-23 16:56:13
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "8,052 "
+views:        "8,070 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-23-How-can-I-disable-automatic-screen-dimming-when-the-wireless-mouse-has-low-battery_.md
 toc:          false
 navigation:   false

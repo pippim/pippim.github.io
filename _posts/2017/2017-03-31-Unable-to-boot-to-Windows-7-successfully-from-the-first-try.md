@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/898806
 type:         Answer
-tags:         dual-boot grub2 windows-7 windows-10
+tags:         dual-boot><grub2><windows-7><windows-10
 created_date: 2017-03-31 10:28:18
 edit_date:    2017-04-13 12:24:27
 votes:        "1 "
 favorites:    
 views:        "179 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-31-Unable-to-boot-to-Windows-7-successfully-from-the-first-try.md
 toc:          false
 navigation:   false

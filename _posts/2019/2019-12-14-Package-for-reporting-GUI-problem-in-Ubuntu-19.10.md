@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196023
 type:         Answer
-tags:         ubuntu-gnome 19.10
+tags:         ubuntu-gnome><19.10
 created_date: 2019-12-14 00:53:25
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "141 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-Package-for-reporting-GUI-problem-in-Ubuntu-19.10.md
 toc:          false
 navigation:   false

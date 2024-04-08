@@ -1824,7 +1824,7 @@ def check_copy_code(this_index):
         else:
             # The lines[index] fenced code block ``` isn't left justified.
             # Probably within list item and copy to clipboard doesn't work.
-            print('Unable to decipher code block:', code)
+            print("Unable to decipher code block: '" + code + "'")
 
     if in_code_block or in_code_indent:
         old_in_code_block = True

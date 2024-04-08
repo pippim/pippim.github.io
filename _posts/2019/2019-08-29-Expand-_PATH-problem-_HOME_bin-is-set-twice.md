@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1169391
 type:         Answer
-tags:         command-line bash
+tags:         command-line><bash
 created_date: 2019-08-29 15:21:40
 edit_date:    2019-08-30 13:25:10
 votes:        "3 "
 favorites:    
-views:        "915 "
+views:        "919 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-29-Expand-_PATH-problem-_HOME_bin-is-set-twice.md
 toc:          false
 navigation:   false

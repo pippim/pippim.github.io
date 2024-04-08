@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1085617
 type:         Answer
-tags:         boot kubuntu mute
+tags:         boot><kubuntu><mute
 created_date: 2018-10-20 17:28:42
 edit_date:    2018-10-21 13:53:23
 votes:        "2 "
 favorites:    
-views:        "210 "
+views:        "211 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-20-How-to-mute-volume-on-every-boot-in-Kubuntu-18.04_.md
 toc:          false
 navigation:   false

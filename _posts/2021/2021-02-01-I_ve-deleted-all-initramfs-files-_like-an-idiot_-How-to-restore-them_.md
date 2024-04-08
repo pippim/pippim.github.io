@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1312597
 type:         Answer
-tags:         boot kernel initramfs grub
+tags:         boot><kernel><initramfs grub
 created_date: 2021-02-01 03:25:48
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,252 "
+views:        "2,268 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-02-01-I_ve-deleted-all-initramfs-files-_like-an-idiot_-How-to-restore-them_.md
 toc:          false
 navigation:   false

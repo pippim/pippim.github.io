@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138978
 type:         Answer
-tags:         apt 18.04 kernel lubuntu udev
+tags:         apt><18.04><kernel><lubuntu><udev
 created_date: 2019-04-28 22:04:50
 edit_date:    2019-04-28 22:12:37
 votes:        "2 "
 favorites:    
-views:        "841 "
+views:        "847 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-Overriding-a-kernel-module-blacklisting-that_s-reinstated-during-apt-full-upgrade.md
 toc:          false
 navigation:   false

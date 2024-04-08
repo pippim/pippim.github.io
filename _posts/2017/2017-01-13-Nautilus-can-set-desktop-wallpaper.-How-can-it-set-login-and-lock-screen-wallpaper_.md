@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/871313
 type:         Answer
-tags:         scripts nautilus login desktop-background lock-screen
+tags:         scripts><nautilus><login><desktop-background><lock-screen
 created_date: 2017-01-13 04:15:36
 edit_date:    2018-07-08 19:01:51
 votes:        "3 "
 favorites:    
 views:        "2,596 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1137883
 type:         Answer
-tags:         software-installation java environment-variables jdk openjdk
+tags:         software-installation><java><environment-variables><jdk><openjdk
 created_date: 2019-04-24 23:11:45
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "25,216 "
+views:        "25,277 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-Can_t-reset-my-JAVA_HOME-to-new-Open-JDK-11-Java-installation.md
 toc:          false
 navigation:   false

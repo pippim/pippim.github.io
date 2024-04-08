@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1075809
 type:         Answer
-tags:         gnome multiple-monitors nvidia-geforce
+tags:         gnome><multiple-monitors><nvidia-geforce
 created_date: 2018-09-16 17:30:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "583 "
+views:        "584 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-16-How-to-auto-execute-command-when-starting-second-monitor_.md
 toc:          false
 navigation:   false

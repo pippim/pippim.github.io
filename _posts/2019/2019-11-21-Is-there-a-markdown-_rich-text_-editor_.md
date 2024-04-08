@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1190570
 type:         Answer
-tags:         libreoffice automation text-editor github markdown
+tags:         libreoffice><automation><text-editor><github><markdown
 created_date: 2019-11-21 11:50:10
 edit_date:    2019-11-23 17:18:31
 votes:        "4 "
 favorites:    
-views:        "13,214 "
+views:        "13,267 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-21-Is-there-a-markdown-_rich-text_-editor_.md
 toc:          false
 navigation:   false

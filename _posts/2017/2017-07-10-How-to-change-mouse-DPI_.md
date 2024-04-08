@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/934636
 type:         Answer
-tags:         14.04 mouse hardware
+tags:         14.04><mouse><hardware
 created_date: 2017-07-10 02:27:44
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "43,153 "
+views:        "43,305 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-to-change-mouse-DPI_.md
 toc:          false
 navigation:   false

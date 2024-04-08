@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/853314
 type:         Answer
-tags:         16.04 fan temperature conky
+tags:         16.04><fan><temperature conky
 created_date: 2016-11-25 01:02:12
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,940 "
+views:        "2,943 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-25-What-causes-my-fan-to-run_.md
 toc:          false
 navigation:   false

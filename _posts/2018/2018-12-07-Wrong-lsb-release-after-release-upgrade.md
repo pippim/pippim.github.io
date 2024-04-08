@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099248
 type:         Answer
-tags:         apt package-management upgrade dpkg do-release-upgrade
+tags:         apt><package-management><upgrade><dpkg><do-release-upgrade
 created_date: 2018-12-07 19:02:48
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "5,103 "
+views:        "5,115 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Wrong-lsb-release-after-release-upgrade.md
 toc:          false
 navigation:   false

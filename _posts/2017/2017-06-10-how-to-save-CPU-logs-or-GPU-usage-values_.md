@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/923938
 type:         Answer
-tags:         cpu cpu-load top htop
+tags:         cpu><cpu-load><top><htop
 created_date: 2017-06-10 02:22:48
 edit_date:    2017-06-14 01:22:11
 votes:        "2 "
 favorites:    
-views:        "7,937 "
+views:        "7,961 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-10-how-to-save-CPU-logs-or-GPU-usage-values_.md
 toc:          false
 navigation:   true

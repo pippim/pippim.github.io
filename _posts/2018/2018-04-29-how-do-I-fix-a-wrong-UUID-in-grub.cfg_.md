@@ -5,14 +5,14 @@ title:        >
 site:         Super User
 stack_url:    https://superuser.com/q/1318288
 type:         Answer
-tags:         linux grub uuid
+tags:         linux><grub><uuid
 created_date: 2018-04-29 16:05:46
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "32,623 "
+views:        "32,669 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-how-do-I-fix-a-wrong-UUID-in-grub.cfg_.md
 toc:          false
 navigation:   false

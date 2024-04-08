@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/936540
 type:         Answer
-tags:         libreoffice email thunderbird empathy gmail
+tags:         libreoffice><email><thunderbird><empathy><gmail
 created_date: 2017-07-15 22:42:06
 edit_date:    2017-07-16 17:39:31
 votes:        "3 "
 favorites:    
-views:        "2,332 "
+views:        "2,333 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-15-Setting-gmail-as-default-for-sending-files-via-email.md
 toc:          false
 navigation:   false

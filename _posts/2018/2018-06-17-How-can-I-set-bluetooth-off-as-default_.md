@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047455
 type:         Answer
-tags:         boot bluetooth settings
+tags:         boot><bluetooth><settings
 created_date: 2018-06-17 21:38:02
 edit_date:    2018-06-17 23:53:20
 votes:        "19 "
 favorites:    
-views:        "22,559 "
+views:        "22,584 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-How-can-I-set-bluetooth-off-as-default_.md
 toc:          false
 navigation:   false

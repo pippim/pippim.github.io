@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1192164
 type:         Answer
-tags:         command-line power-management shutdown
+tags:         command-line><power-management><shutdown
 created_date: 2019-11-28 03:19:53
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "4,674 "
+views:        "4,709 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-28-Is-using-the-shutdown-command-to-turn-off-the-system-safe_.md
 toc:          false
 navigation:   false

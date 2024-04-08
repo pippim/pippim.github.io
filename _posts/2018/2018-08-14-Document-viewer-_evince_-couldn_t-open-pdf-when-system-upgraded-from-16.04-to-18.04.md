@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1065428
 type:         Answer
-tags:         upgrade 18.04 pdf evince
+tags:         upgrade><18.04><pdf><evince
 created_date: 2018-08-14 22:34:40
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "5,883 "
+views:        "5,890 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-14-Document-viewer-_evince_-couldn_t-open-pdf-when-system-upgraded-from-16.04-to-18.04.md
 toc:          false
 navigation:   false

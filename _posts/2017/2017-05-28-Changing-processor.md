@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/919718
 type:         Answer
-tags:         64-bit cpu
+tags:         64-bit><cpu
 created_date: 2017-05-28 13:19:25
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "93 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-28-Changing-processor.md
 toc:          false
 navigation:   false

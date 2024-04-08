@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/995572
 type:         Answer
-tags:         17.10 radeon amd-graphics vulkan grub
+tags:         17.10><radeon><amd-graphics><vulkan grub
 created_date: 2018-01-13 18:16:51
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "1,246 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-13-Purple-Screen-of-Death-w_New-AMD-Card.md
 toc:          false
 navigation:   false

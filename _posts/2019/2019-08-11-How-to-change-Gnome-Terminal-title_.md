@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1164880
 type:         Answer
-tags:         command-line gnome-terminal titlebar
+tags:         command-line><gnome-terminal><titlebar
 created_date: 2019-08-11 00:45:50
 edit_date:    2023-06-15 15:31:39
-votes:        "29 "
+votes:        "30 "
 favorites:    
-views:        "289,785 "
+views:        "290,096 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false

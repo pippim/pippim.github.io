@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/843403
 type:         Answer
-tags:         lubuntu 15.10 screen crash
+tags:         lubuntu><15.10><screen><crash
 created_date: 2016-10-30 05:54:14
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "119 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-30-Screen-crash-in-Lubuntu-and-Xubuntu-both-but-works-fine-with-Windows-Xp.md
 toc:          false
 navigation:   false

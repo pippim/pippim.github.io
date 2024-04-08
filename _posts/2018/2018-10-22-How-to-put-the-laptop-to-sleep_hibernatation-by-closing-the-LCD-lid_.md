@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1086247
 type:         Answer
-tags:         suspend laptop hibernate lid
+tags:         suspend><laptop><hibernate><lid
 created_date: 2018-10-22 22:31:21
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "1,115 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-to-put-the-laptop-to-sleep_hibernatation-by-closing-the-LCD-lid_.md
 toc:          false
 navigation:   false

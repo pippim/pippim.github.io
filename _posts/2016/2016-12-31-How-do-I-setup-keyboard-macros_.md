@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866629
 type:         Answer
-tags:         keyboard shortcut-keys
+tags:         keyboard><shortcut-keys
 created_date: 2016-12-31 23:10:06
 edit_date:    2019-12-22 04:45:08
 votes:        "24 "
 favorites:    
-views:        "53,154 "
+views:        "53,292 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-31-How-do-I-setup-keyboard-macros_.md
 toc:          false
 navigation:   false

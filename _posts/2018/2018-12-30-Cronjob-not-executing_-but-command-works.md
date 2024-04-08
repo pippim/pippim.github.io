@@ -5,14 +5,14 @@ title:        >
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/491623
 type:         Answer
-tags:         ubuntu cron
+tags:         ubuntu><cron
 created_date: 2018-12-30 17:18:04
 edit_date:    2018-12-30 17:20:41
 votes:        "2 "
 favorites:    
 views:        "514 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-30-Cronjob-not-executing_-but-command-works.md
 toc:          false
 navigation:   false

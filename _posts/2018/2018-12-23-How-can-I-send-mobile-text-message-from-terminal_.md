@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1104018
 type:         Answer
-tags:         command-line bash windows-subsystem-for-linux sms
+tags:         command-line><bash><windows-subsystem-for-linux><sms
 created_date: 2018-12-23 13:55:49
 edit_date:    2020-06-12 14:37:07
 votes:        "63 "
 favorites:    
-views:        "106,228 "
+views:        "106,407 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-How-can-I-send-mobile-text-message-from-terminal_.md
 toc:          false
 navigation:   true

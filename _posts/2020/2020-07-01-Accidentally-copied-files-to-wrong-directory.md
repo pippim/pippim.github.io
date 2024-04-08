@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1255496
 type:         Answer
-tags:         command-line sudo find rm
+tags:         command-line><sudo><find><rm
 created_date: 2020-07-01 19:33:32
 edit_date:    2020-07-02 23:01:16
 votes:        "8 "
 favorites:    
-views:        "1,705 "
+views:        "1,707 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-01-Accidentally-copied-files-to-wrong-directory.md
 toc:          false
 navigation:   false

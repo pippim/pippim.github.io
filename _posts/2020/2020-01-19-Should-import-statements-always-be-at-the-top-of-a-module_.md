@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59812974
 type:         Answer
-tags:         python optimization pep8
+tags:         python><optimization><pep8
 created_date: 2020-01-19 18:11:30
 edit_date:    2020-06-20 09:12:55
 votes:        "2 "
 favorites:    
-views:        "185,117 "
+views:        "185,404 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-19-Should-import-statements-always-be-at-the-top-of-a-module_.md
 toc:          false
 navigation:   false

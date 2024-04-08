@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1153463
 type:         Answer
-tags:         command-line syntax ksh
+tags:         command-line><syntax><ksh
 created_date: 2019-06-24 01:54:33
 edit_date:    2019-06-24 16:56:29
 votes:        "2 "
 favorites:    
-views:        "2,420 "
+views:        "2,427 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-24-Why-is-a-blank-required-between-____-and-_-e-xxx_-in-ksh_.md
 toc:          false
 navigation:   false

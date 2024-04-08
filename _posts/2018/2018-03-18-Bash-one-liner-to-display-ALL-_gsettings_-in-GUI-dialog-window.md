@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017046
 type:         Answer
-tags:         gnome bash gsettings zenity yad
+tags:         gnome><bash><gsettings><zenity><yad
 created_date: 2018-03-18 17:08:46
 edit_date:    2018-03-19 11:09:46
 votes:        "3 "
 favorites:    
-views:        "1,854 "
+views:        "1,858 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1493946
 type:         Answer
-tags:         configuration environment-variables
+tags:         configuration><environment-variables
 created_date: 2023-11-26 03:35:18
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "247 "
+views:        "252 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2023/2023-11-26-How-to-make-applications-save-dotfiles-at-a-specified-path_.md
 toc:          false
 navigation:   false

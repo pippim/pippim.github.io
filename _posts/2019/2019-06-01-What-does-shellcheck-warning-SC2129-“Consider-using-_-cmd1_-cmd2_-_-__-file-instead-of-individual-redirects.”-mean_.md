@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1147775
 type:         Question
-tags:         bash debugging output
+tags:         bash><debugging><output
 created_date: 2019-06-01 01:43:37
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "1,031 "
+views:        "1,033 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-01-What-does-shellcheck-warning-SC2129-“Consider-using-_-cmd1_-cmd2_-_-__-file-instead-of-individual-redirects.”-mean_.md
 toc:          false
 navigation:   false

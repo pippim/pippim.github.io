@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1295328
 type:         Answer
-tags:         command-line scripts services
+tags:         command-line><scripts><services
 created_date: 2020-11-26 02:24:00
 edit_date:    2020-11-29 16:40:44
 votes:        "3 "
 favorites:    
-views:        "745,038 "
+views:        "746,020 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-11-26-How-can-I-make-a-script-that-opens-terminal-windows-and-executes-commands-in-them_.md
 toc:          false
 navigation:   false

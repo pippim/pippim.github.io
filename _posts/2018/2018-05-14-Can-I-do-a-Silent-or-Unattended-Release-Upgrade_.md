@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035893
 type:         Answer
-tags:         upgrade release-management
+tags:         upgrade><release-management
 created_date: 2018-05-14 00:19:42
 edit_date:    
 votes:        "12 "
 favorites:    
-views:        "46,316 "
+views:        "46,406 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-14-Can-I-do-a-Silent-or-Unattended-Release-Upgrade_.md
 toc:          false
 navigation:   false

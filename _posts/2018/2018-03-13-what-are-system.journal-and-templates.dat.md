@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1014370
 type:         Answer
-tags:         files filesystem log
+tags:         files><filesystem><log
 created_date: 2018-03-13 01:58:22
 edit_date:    2018-03-13 02:07:20
 votes:        "0 "
 favorites:    
-views:        "1,227 "
+views:        "1,228 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-what-are-system.journal-and-templates.dat.md
 toc:          false
 navigation:   false

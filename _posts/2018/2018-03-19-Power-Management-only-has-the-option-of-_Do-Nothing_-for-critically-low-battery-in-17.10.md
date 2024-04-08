@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017269
 type:         Answer
-tags:         17.10 power-management
+tags:         17.10><power-management
 created_date: 2018-03-19 11:08:53
 edit_date:    2018-03-22 00:03:58
 votes:        "8 "
 favorites:    
-views:        "3,343 "
+views:        "3,345 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-Power-Management-only-has-the-option-of-_Do-Nothing_-for-critically-low-battery-in-17.10.md
 toc:          false
 navigation:   true

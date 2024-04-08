@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150409
 type:         Answer
-tags:         display laptop brightness xrandr alienware
+tags:         display><laptop><brightness><xrandr><alienware
 created_date: 2019-06-12 00:00:39
 edit_date:    2021-01-04 23:56:25
 votes:        "12 "
 favorites:    
-views:        "10,722 "
+views:        "10,749 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Increment-Brightness-by-value-using-xrandr.md
 toc:          false
 navigation:   false

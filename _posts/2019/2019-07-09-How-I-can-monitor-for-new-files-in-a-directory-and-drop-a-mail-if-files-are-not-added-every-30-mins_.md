@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157136
 type:         Answer
-tags:         command-line bash scripts
+tags:         command-line><bash><scripts
 created_date: 2019-07-09 23:38:56
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,010 "
+views:        "5,038 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-09-How-I-can-monitor-for-new-files-in-a-directory-and-drop-a-mail-if-files-are-not-added-every-30-mins_.md
 toc:          false
 navigation:   false

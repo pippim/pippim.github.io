@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1071418
 type:         Answer
-tags:         boot grub2 customization
+tags:         boot><grub2><customization
 created_date: 2018-09-02 16:45:25
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "21,755 "
+views:        "21,793 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-02-Adding-a-GRUB2-background-image-and-custom-font.md
 toc:          false
 navigation:   false

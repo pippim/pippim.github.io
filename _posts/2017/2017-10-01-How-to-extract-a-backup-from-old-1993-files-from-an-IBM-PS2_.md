@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/960926
 type:         Answer
-tags:         backup extract
+tags:         backup><extract
 created_date: 2017-10-01 00:27:14
 edit_date:    
 votes:        "5 "
 favorites:    
 views:        "391 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-01-How-to-extract-a-backup-from-old-1993-files-from-an-IBM-PS2_.md
 toc:          false
 navigation:   false

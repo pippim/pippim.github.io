@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/900609
 type:         Answer
-tags:         bash gui yad
+tags:         bash><gui><yad
 created_date: 2017-04-05 23:40:24
 edit_date:    2018-06-11 23:25:22
 votes:        "4 "
 favorites:    
-views:        "547 "
+views:        "548 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-05-Code-version-control-between-local-files-and-AU-answers.md
 toc:          false
 navigation:   false

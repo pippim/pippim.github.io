@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1131572
 type:         Answer
-tags:         18.04 java environment-variables
+tags:         18.04><java><environment-variables
 created_date: 2019-04-06 01:30:08
 edit_date:    2019-04-06 01:36:33
 votes:        "4 "
 favorites:    
-views:        "6,706 "
+views:        "6,725 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-06-Can_t-remove-environmental-variable-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

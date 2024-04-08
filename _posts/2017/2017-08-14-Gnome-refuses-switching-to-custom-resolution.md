@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/945993
 type:         Answer
-tags:         gnome xorg display-resolution
+tags:         gnome><xorg><display-resolution
 created_date: 2017-08-14 01:12:41
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
 views:        "932 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-14-Gnome-refuses-switching-to-custom-resolution.md
 toc:          false
 navigation:   false

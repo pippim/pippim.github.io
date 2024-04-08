@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840829
 type:         Answer
-tags:         16.04 nautilus
+tags:         16.04><nautilus
 created_date: 2016-10-23 14:15:37
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "57 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-Nautilus-hard-sorts-by-modification-date_-driving-me-insane.md
 toc:          false
 navigation:   false

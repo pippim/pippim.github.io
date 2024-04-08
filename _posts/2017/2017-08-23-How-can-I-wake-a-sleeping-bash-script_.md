@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/948852
 type:         Answer
-tags:         command-line bash
+tags:         command-line><bash
 created_date: 2017-08-23 01:21:18
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "25,721 "
+views:        "25,749 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-23-How-can-I-wake-a-sleeping-bash-script_.md
 toc:          false
 navigation:   false

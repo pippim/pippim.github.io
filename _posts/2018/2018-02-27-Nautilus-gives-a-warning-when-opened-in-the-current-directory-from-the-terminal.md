@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010327
 type:         Answer
-tags:         command-line xorg nautilus 17.10 pygi
+tags:         command-line><xorg><nautilus><17.10><pygi
 created_date: 2018-02-27 15:55:48
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "5,119 "
+views:        "5,121 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Nautilus-gives-a-warning-when-opened-in-the-current-directory-from-the-terminal.md
 toc:          false
 navigation:   false

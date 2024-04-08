@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879818
 type:         Answer
-tags:         16.04 ethernet windows-10
+tags:         16.04><ethernet><windows-10
 created_date: 2017-02-04 16:54:25
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "20,166 "
+views:        "20,194 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-Ubuntu-_dual-boot-Windows_-Ethernet-Not-Connecting_Detecting.md
 toc:          false
 navigation:   false

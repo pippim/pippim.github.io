@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1054677
 type:         Answer
-tags:         bash scripts syntax
+tags:         bash><scripts><syntax
 created_date: 2018-07-13 01:57:37
 edit_date:    2018-07-13 02:16:03
 votes:        "3 "
 favorites:    
-views:        "11,429 "
+views:        "11,449 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-13-What-is-the-point-of-the-bash-Null-operator-____-colon_.md
 toc:          false
 navigation:   false

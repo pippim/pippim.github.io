@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032510
 type:         Answer
-tags:         drivers nvidia graphics xorg
+tags:         drivers><nvidia><graphics><xorg
 created_date: 2018-05-05 19:00:49
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
 views:        "420 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-What-configuration-files-in-Ubuntu-control-the-graphics-drivers-in-a-dual-GPU-system_.md
 toc:          false
 navigation:   false

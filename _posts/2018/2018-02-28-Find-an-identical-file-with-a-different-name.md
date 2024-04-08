@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010619
 type:         Answer
-tags:         command-line files text-processing
+tags:         command-line><files><text-processing
 created_date: 2018-02-28 11:18:09
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "2,516 "
+views:        "2,523 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-28-Find-an-identical-file-with-a-different-name.md
 toc:          false
 navigation:   false

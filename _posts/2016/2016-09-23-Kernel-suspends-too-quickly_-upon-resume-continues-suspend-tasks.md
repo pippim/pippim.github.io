@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/828486
 type:         Question
-tags:         16.04 kernel suspend systemd-logind
+tags:         16.04><kernel><suspend><systemd-logind
 created_date: 2016-09-23 01:31:11
 edit_date:    2019-06-29 16:20:32
 votes:        "11 "
 favorites:    
-views:        "5,004 "
+views:        "5,006 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-23-Kernel-suspends-too-quickly_-upon-resume-continues-suspend-tasks.md
 toc:          false
 navigation:   true

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1014275
 type:         Answer
-tags:         backup cloud
+tags:         backup><cloud
 created_date: 2018-03-12 19:01:01
 edit_date:    
 votes:        "6 "
 favorites:    
 views:        "106 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-How-to-install-Ubuntu-One_.md
 toc:          false
 navigation:   false

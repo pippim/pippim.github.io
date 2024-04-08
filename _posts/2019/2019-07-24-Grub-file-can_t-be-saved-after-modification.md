@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160778
 type:         Answer
-tags:         grub2 files configuration wacom text-editor
+tags:         grub2><files><configuration><wacom><text-editor
 created_date: 2019-07-24 18:12:35
 edit_date:    2019-08-24 21:32:17
 votes:        "3 "
 favorites:    
-views:        "1,456 "
+views:        "1,466 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Grub-file-can_t-be-saved-after-modification.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162492
 type:         Answer
-tags:         command-line bash scripts
+tags:         command-line><bash><scripts
 created_date: 2019-07-31 19:47:55
 edit_date:    2019-08-01 10:56:49
 votes:        "27 "
 favorites:    
-views:        "14,318 "
+views:        "14,410 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-31-How-can-you-tell-the-version-of-Ubuntu-on-a-system-in-a-.sh-_bash_-script_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1081040
 type:         Answer
-tags:         apt package-management software-installation updates python
+tags:         apt><package-management><software-installation><updates><python
 created_date: 2018-10-05 01:19:26
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "5,119 "
+views:        "5,153 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-05-How-to-determine-which-python-modules-were-installed-with-_pip_-and-which-with-_apt__.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/815191
 type:         Answer
-tags:         boot mbr grub
+tags:         boot><mbr grub
 created_date: 2016-08-22 04:21:51
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "1,870 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-22-best-way-to-dual-boot-Ubuntu-with-windows-10_.md
 toc:          false
 navigation:   false

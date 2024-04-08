@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132068
 type:         Answer
-tags:         18.04 suspend power-management hibernate
+tags:         18.04><suspend><power-management><hibernate
 created_date: 2019-04-08 08:19:26
 edit_date:    2020-06-12 14:37:07
 votes:        "14 "
 favorites:    
-views:        "12,357 "
+views:        "12,397 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-Prevent-sleep_suspend-when-not-logged-in-to-a-specific-account.md
 toc:          false
 navigation:   false

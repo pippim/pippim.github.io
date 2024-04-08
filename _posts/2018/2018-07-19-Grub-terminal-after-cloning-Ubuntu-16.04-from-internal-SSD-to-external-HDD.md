@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1057543
 type:         Answer
-tags:         boot grub2 ssd external-hdd clone
+tags:         boot><grub2><ssd><external-hdd><clone
 created_date: 2018-07-19 11:25:33
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "2,963 "
+views:        "2,966 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-Grub-terminal-after-cloning-Ubuntu-16.04-from-internal-SSD-to-external-HDD.md
 toc:          false
 navigation:   false

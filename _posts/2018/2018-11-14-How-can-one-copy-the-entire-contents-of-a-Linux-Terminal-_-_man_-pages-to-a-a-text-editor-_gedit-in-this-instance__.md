@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1092854
 type:         Answer
-tags:         command-line copy
+tags:         command-line><copy
 created_date: 2018-11-14 12:47:16
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "12,152 "
+views:        "12,219 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-How-can-one-copy-the-entire-contents-of-a-Linux-Terminal-_-_man_-pages-to-a-a-text-editor-_gedit-in-this-instance__.md
 toc:          false
 navigation:   false

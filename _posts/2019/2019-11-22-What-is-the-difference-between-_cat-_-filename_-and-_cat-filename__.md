@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1190733
 type:         Answer
-tags:         command-line redirect cat
+tags:         command-line><redirect><cat
 created_date: 2019-11-22 00:03:29
 edit_date:    2019-12-12 01:01:10
 votes:        "14 "
 favorites:    
-views:        "14,779 "
+views:        "14,826 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-22-What-is-the-difference-between-_cat-_-filename_-and-_cat-filename__.md
 toc:          false
 navigation:   false

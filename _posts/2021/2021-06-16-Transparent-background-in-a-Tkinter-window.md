@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67994877
 type:         Answer
-tags:         python tkinter transparency
+tags:         python><tkinter><transparency
 created_date: 2021-06-16 00:19:03
 edit_date:    2021-06-16 00:36:02
 votes:        "3 "
 favorites:    
-views:        "125,759 "
+views:        "126,079 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-16-Transparent-background-in-a-Tkinter-window.md
 toc:          false
 navigation:   false

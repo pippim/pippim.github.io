@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/71403965
 type:         Answer
-tags:         php html module syntax-error
+tags:         php><html><module><syntax-error
 created_date: 2022-03-09 03:24:18
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "62,405 "
+views:        "62,651 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-03-09-SyntaxError_-__-string-literal-contains-an-unescaped-line-break.md
 toc:          false
 navigation:   false

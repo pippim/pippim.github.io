@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866851
 type:         Answer
-tags:         hard-drive ntfs format
+tags:         hard-drive><ntfs><format
 created_date: 2017-01-01 19:28:46
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "473 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-01-Reformat-data-only-drive-from-NTFS-to-whatever-Linux-likes_.md
 toc:          false
 navigation:   false

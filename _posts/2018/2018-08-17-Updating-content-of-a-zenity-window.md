@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/51887111
 type:         Answer
-tags:         linux bash shell zenity yad
+tags:         linux><bash><shell><zenity yad
 created_date: 2018-08-17 01:01:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,084 "
+views:        "5,099 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-17-Updating-content-of-a-zenity-window.md
 toc:          false
 navigation:   false

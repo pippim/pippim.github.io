@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837115
 type:         Answer
-tags:         16.04 lock-screen dbus gnome-screensaver multi-timer
+tags:         16.04><lock-screen><dbus><gnome-screensaver multi-timer
 created_date: 2016-10-14 17:35:27
 edit_date:    2022-01-09 23:07:08
 votes:        "16 "
 favorites:    
-views:        "4,107 "
+views:        "4,114 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu.md
 toc:          true
 navigation:   true

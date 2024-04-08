@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182400
 type:         Answer
-tags:         sd-card dmesg pci lspci
+tags:         sd-card><dmesg><pci><lspci
 created_date: 2019-10-20 13:16:56
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "2,105 "
+views:        "2,114 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-SD-card-insert_remove-behaviors-not-detected-until-running-lspci-command.md
 toc:          false
 navigation:   false

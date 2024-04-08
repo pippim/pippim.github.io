@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047763
 type:         Answer
-tags:         power-management performance conky vnstat
+tags:         power-management><performance conky vnstat
 created_date: 2018-06-19 02:14:50
 edit_date:    2020-10-06 13:31:29
 votes:        "67 "
 favorites:    
-views:        "164,135 "
+views:        "164,694 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-19-Setting-to-High-Performance.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Android Enthusiasts
 stack_url:    https://android.stackexchange.com/q/202708
 type:         Answer
-tags:         windows android-sdk
+tags:         windows><android-sdk
 created_date: 2018-10-14 21:15:06
 edit_date:    2020-06-10 13:47:31
 votes:        "2 "
 favorites:    
 views:        "1,805 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-14-Would-I-install-android-studio-with-2-GB-RAM.md
 toc:          false
 navigation:   false

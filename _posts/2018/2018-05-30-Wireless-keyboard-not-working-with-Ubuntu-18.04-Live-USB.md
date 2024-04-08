@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1041758
 type:         Answer
-tags:         usb keyboard mouse
+tags:         usb><keyboard><mouse
 created_date: 2018-05-30 01:40:15
 edit_date:    2022-01-02 21:31:12
 votes:        "3 "
 favorites:    
-views:        "15,114 "
+views:        "15,132 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-30-Wireless-keyboard-not-working-with-Ubuntu-18.04-Live-USB.md
 toc:          false
 navigation:   false

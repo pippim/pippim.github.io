@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038748
 type:         Answer
-tags:         kernel 17.10 dependencies
+tags:         kernel><17.10><dependencies
 created_date: 2018-05-21 15:56:55
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,333 "
+views:        "3,338 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-Can_t-remove-old-kernels-due-to-unmet-dependencies.md
 toc:          false
 navigation:   false

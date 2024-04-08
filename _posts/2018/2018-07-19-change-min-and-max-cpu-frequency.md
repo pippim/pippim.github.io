@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1057727
 type:         Answer
-tags:         18.04 cpu scaling frequency
+tags:         18.04><cpu><scaling><frequency
 created_date: 2018-07-19 23:37:41
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "34,931 "
+views:        "35,003 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-change-min-and-max-cpu-frequency.md
 toc:          false
 navigation:   false

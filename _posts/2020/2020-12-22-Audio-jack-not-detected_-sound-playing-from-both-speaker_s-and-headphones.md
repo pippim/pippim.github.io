@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1302055
 type:         Answer
-tags:         18.04 sound pulseaudio alsa
+tags:         18.04><sound><pulseaudio><alsa
 created_date: 2020-12-22 11:42:41
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "92 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-22-Audio-jack-not-detected_-sound-playing-from-both-speaker_s-and-headphones.md
 toc:          false
 navigation:   false

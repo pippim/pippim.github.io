@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1104112
 type:         Answer
-tags:         18.04 nautilus gnome-shell search yad
+tags:         18.04><nautilus><gnome-shell><search yad
 created_date: 2018-12-24 00:01:35
 edit_date:    2018-12-24 21:36:09
 votes:        "3 "
 favorites:    
-views:        "1,676 "
+views:        "1,681 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-24-Search-is-useless.-How-can-I-force-it-to-index-my-hard-drive-_2018_.md
 toc:          false
 navigation:   true

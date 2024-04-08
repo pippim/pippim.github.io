@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157949
 type:         Answer
-tags:         power-management hibernate ups nut
+tags:         power-management><hibernate><ups><nut
 created_date: 2019-07-13 01:02:51
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,030 "
+views:        "1,033 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-execute-script-on-low-UPS-power.md
 toc:          false
 navigation:   false

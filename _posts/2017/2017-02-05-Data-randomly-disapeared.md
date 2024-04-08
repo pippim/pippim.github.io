@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879951
 type:         Answer
-tags:         login files data-loss user-data conky
+tags:         login><files><data-loss><user-data conky
 created_date: 2017-02-05 00:24:23
 edit_date:    2017-04-13 12:24:26
 votes:        "3 "
 favorites:    
 views:        "35 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-05-Data-randomly-disapeared.md
 toc:          false
 navigation:   false

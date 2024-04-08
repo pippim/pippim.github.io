@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1151767
 type:         Answer
-tags:         18.04 kubuntu startup
+tags:         18.04><kubuntu><startup
 created_date: 2019-06-17 17:13:14
 edit_date:    2019-06-17 17:20:42
 votes:        "2 "
 favorites:    
-views:        "2,059 "
+views:        "2,060 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-17-Why-is-my-start-up-is-ultra-slow_.md
 toc:          false
 navigation:   false

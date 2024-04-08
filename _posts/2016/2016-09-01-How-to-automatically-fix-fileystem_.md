@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/819806
 type:         Answer
-tags:         boot filesystem
+tags:         boot><filesystem
 created_date: 2016-09-01 23:26:02
 edit_date:    2023-11-25 22:53:44
 votes:        "3 "
 favorites:    
-views:        "6,751 "
+views:        "6,766 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-01-How-to-automatically-fix-fileystem_.md
 toc:          false
 navigation:   false

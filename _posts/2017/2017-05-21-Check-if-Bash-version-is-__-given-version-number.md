@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/917419
 type:         Answer
-tags:         command-line bash scripts versions
+tags:         command-line><bash><scripts><versions
 created_date: 2017-05-21 14:06:23
 edit_date:    2019-08-05 15:28:16
 votes:        "2 "
 favorites:    
-views:        "22,478 "
+views:        "22,510 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Check-if-Bash-version-is-__-given-version-number.md
 toc:          false
 navigation:   false

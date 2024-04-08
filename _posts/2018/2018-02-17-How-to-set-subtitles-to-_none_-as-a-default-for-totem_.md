@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007209
 type:         Answer
-tags:         video totem subtitle
+tags:         video><totem><subtitle
 created_date: 2018-02-17 22:39:09
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "2,109 "
+views:        "2,111 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-How-to-set-subtitles-to-_none_-as-a-default-for-totem_.md
 toc:          false
 navigation:   false

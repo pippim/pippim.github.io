@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/824760
 type:         Answer
-tags:         apt virtualbox xubuntu dependencies disk-usage
+tags:         apt><virtualbox><xubuntu><dependencies><disk-usage
 created_date: 2016-09-14 10:27:12
 edit_date:    2017-04-13 12:23:12
 votes:        "5 "
 favorites:    
-views:        "37,127 "
+views:        "37,136 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-14-Failed-to-write-_No-space-left-on-device_.md
 toc:          false
 navigation:   false

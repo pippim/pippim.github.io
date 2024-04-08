@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/852915
 type:         Answer
-tags:         gnome icons ubuntu-gnome desktop-icons
+tags:         gnome><icons><ubuntu-gnome><desktop-icons
 created_date: 2016-11-24 00:53:54
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "6,551 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-How-do-I-globally-make-my-desktop-icons-smaller-in-Ubuntu-16.1_.md
 toc:          false
 navigation:   false

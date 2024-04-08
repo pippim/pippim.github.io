@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/864247
 type:         Answer
-tags:         grub2 plymouth initramfs
+tags:         grub2><plymouth><initramfs
 created_date: 2016-12-24 18:38:57
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "3,051 "
+views:        "3,063 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-24-Plymouth-Error-Logging.md
 toc:          false
 navigation:   false

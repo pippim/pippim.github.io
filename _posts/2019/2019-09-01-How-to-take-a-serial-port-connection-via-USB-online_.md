@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1170099
 type:         Answer
-tags:         usb uefi serial-port
+tags:         usb><uefi><serial-port
 created_date: 2019-09-01 21:21:02
 edit_date:    2019-09-01 22:23:08
 votes:        "3 "
 favorites:    
-views:        "10,526 "
+views:        "10,545 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-01-How-to-take-a-serial-port-connection-via-USB-online_.md
 toc:          false
 navigation:   false

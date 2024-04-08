@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1103835
 type:         Answer
-tags:         login security firewall automation windows-subsystem-for-linux
+tags:         login><security><firewall><automation><windows-subsystem-for-linux
 created_date: 2018-12-22 16:52:37
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "943 "
+views:        "944 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-22-Protecting-WSL-Ubuntu-and-WSL-OpenSSH-_unfiltering-port-443-correctly_-to-use-just-these_.md
 toc:          false
 navigation:   false

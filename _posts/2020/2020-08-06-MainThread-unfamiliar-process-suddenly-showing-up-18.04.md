@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1265019
 type:         Answer
-tags:         process background-process
+tags:         process><background-process
 created_date: 2020-08-06 12:44:19
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,536 "
+views:        "2,540 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-06-MainThread-unfamiliar-process-suddenly-showing-up-18.04.md
 toc:          false
 navigation:   false

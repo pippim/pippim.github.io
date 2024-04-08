@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840847
 type:         Answer
-tags:         init.d init
+tags:         init.d><init
 created_date: 2016-10-23 15:03:43
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,079 "
+views:        "2,082 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-How-to-execute-script-file-at-startup-without-using-any-commands-like-ln-s-or-any-other-to-be-executed-at-first_.md
 toc:          false
 navigation:   false

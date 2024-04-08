@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165065
 type:         Answer
-tags:         dual-boot 18.04 virtualbox live-usb
+tags:         dual-boot><18.04><virtualbox><live-usb
 created_date: 2019-08-12 01:16:59
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "268 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-12-LiLi-virtualization-fails.md
 toc:          false
 navigation:   false

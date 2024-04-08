@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/949468
 type:         Answer
-tags:         delete bleachbit
+tags:         delete><bleachbit
 created_date: 2017-08-24 14:56:49
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "5,383 "
+views:        "5,395 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-24-Can_t-delete-empty-directories-with-strange-names.md
 toc:          false
 navigation:   false

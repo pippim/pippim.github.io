@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026264
 type:         Answer
-tags:         virtualbox virtualization cloud virtual-console
+tags:         virtualbox><virtualization><cloud><virtual-console
 created_date: 2018-04-19 03:31:57
 edit_date:    2018-04-21 22:46:43
 votes:        "1 "
 favorites:    
 views:        "182 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-19-What-is-the-best-way-to-install-Ubuntu-on-cloud.md
 toc:          false
 navigation:   false

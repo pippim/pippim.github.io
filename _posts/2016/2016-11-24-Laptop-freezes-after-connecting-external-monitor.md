@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/852908
 type:         Answer
-tags:         14.04 drivers intel-graphics freeze external-monitor
+tags:         14.04><drivers><intel-graphics><freeze><external-monitor
 created_date: 2016-11-24 00:29:27
 edit_date:    2017-04-13 12:24:08
 votes:        "1 "
 favorites:    
 views:        "782 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-Laptop-freezes-after-connecting-external-monitor.md
 toc:          false
 navigation:   false

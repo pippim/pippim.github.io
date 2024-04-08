@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1014200
 type:         Answer
-tags:         17.10 conky
+tags:         17.10><conky
 created_date: 2018-03-12 15:17:34
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "7,604 "
+views:        "7,613 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-how-to-make-conky-true-transparent_.md
 toc:          false
 navigation:   false

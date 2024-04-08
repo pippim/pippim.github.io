@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195398
 type:         Answer
-tags:         fdisk disk-management loop-device
+tags:         fdisk><disk-management><loop-device
 created_date: 2019-12-11 11:36:12
 edit_date:    2020-06-12 14:37:07
 votes:        "17 "
 favorites:    
-views:        "49,973 "
+views:        "50,153 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-11-How-to-remove-_dev_loops.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/62724650
 type:         Answer
-tags:         bash grep iconic
+tags:         bash><grep iconic
 created_date: 2020-07-04 02:21:41
 edit_date:    2021-09-04 07:23:11
 votes:        "3 "
 favorites:    
-views:        "299,109 "
+views:        "299,542 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-04-Grep-characters-before-and-after-match_.md
 toc:          false
 navigation:   false

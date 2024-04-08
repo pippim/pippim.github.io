@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/841467
 type:         Answer
-tags:         hybrid integrated
+tags:         hybrid><integrated
 created_date: 2016-10-25 02:32:51
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "366 "
+views:        "367 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-25-Crashes-on-BayTrail-device.md
 toc:          false
 navigation:   false

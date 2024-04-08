@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1189665
 type:         Answer
-tags:         18.04 live-usb persistence
+tags:         18.04><live-usb><persistence
 created_date: 2019-11-18 02:40:54
 edit_date:    2019-11-18 02:55:30
 votes:        "0 "
 favorites:    
-views:        "585 "
+views:        "587 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-18-Installing-programs-on-persistent-live-disk.md
 toc:          false
 navigation:   false

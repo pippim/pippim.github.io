@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1309397
 type:         Answer
-tags:         16.04 nvidia python3 cuda tensorflow
+tags:         16.04><nvidia><python3><cuda><tensorflow
 created_date: 2021-01-20 00:28:45
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,215 "
+views:        "1,216 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-20-A-problem-when-Installing-the-Nvidia_-Cuda-on-Ubuntu-16.04_-and-with-upgrading-the-Ubuntu.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018515
 type:         Answer
-tags:         display samsung screencast smart-tv
+tags:         display><samsung><screencast><smart-tv
 created_date: 2018-03-23 11:01:17
 edit_date:    2018-10-17 07:39:57
 votes:        "9 "
 favorites:    
-views:        "146,994 "
+views:        "147,484 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Samsung-TV-_Mirror-Screen_.md
 toc:          false
 navigation:   false

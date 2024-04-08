@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165407
 type:         Answer
-tags:         command-line bash bashrc prompt ps1
+tags:         command-line><bash><bashrc><prompt><ps1
 created_date: 2019-08-13 11:32:11
 edit_date:    2019-08-13 22:55:04
 votes:        "2 "
 favorites:    
-views:        "271,835 "
+views:        "272,038 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-How-can-I-shorten-my-command-line-_bash_-prompt_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/546241
 type:         Question
-tags:         gnome desktop nautilus icons
+tags:         gnome><desktop><nautilus><icons
 created_date: 2019-10-11 02:21:53
 edit_date:    2019-10-13 14:59:50
 votes:        "2 "
 favorites:    0
-views:        "1,605 "
+views:        "1,610 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-Best-way-to-check-if-Nautilus-File-Manager-is-running_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159021
 type:         Answer
-tags:         16.04 18.04 security cron malware
+tags:         16.04><18.04><security><cron><malware
 created_date: 2019-07-17 17:19:19
 edit_date:    2019-07-18 00:35:05
 votes:        "2 "
 favorites:    
-views:        "3,267 "
+views:        "3,273 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-17-Can-we-disable-cron-services-in-desktop_.md
 toc:          false
 navigation:   false

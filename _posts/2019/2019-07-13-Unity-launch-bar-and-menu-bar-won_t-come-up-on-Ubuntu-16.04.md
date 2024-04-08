@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1158115
 type:         Answer
-tags:         unity launcher grub
+tags:         unity><launcher grub
 created_date: 2019-07-13 22:04:35
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
 views:        "159 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Unity-launch-bar-and-menu-bar-won_t-come-up-on-Ubuntu-16.04.md
 toc:          false
 navigation:   false

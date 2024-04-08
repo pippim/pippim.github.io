@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187756
 type:         Answer
-tags:         login reboot authentication
+tags:         login><reboot><authentication
 created_date: 2019-11-10 16:30:42
 edit_date:    2019-11-10 16:37:20
 votes:        "3 "
 favorites:    
-views:        "7,578 "
+views:        "7,616 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-New-message-when-rebooting-from-login-screen_-Authentication-is-required-for-rebooting-the-system-while-an-application-asked-to-inhibit-it.md
 toc:          false
 navigation:   false

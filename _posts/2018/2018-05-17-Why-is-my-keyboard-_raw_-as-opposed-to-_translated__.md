@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037199
 type:         Answer
-tags:         keyboard 18.04 xinput
+tags:         keyboard><18.04><xinput
 created_date: 2018-05-17 02:23:09
 edit_date:    2020-06-12 14:37:07
 votes:        "0 "
 favorites:    
-views:        "380 "
+views:        "381 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Why-is-my-keyboard-_raw_-as-opposed-to-_translated__.md
 toc:          false
 navigation:   false

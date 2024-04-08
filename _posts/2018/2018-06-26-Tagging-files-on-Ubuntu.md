@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1050006
 type:         Answer
-tags:         nautilus filemanager tagging
+tags:         nautilus><filemanager><tagging
 created_date: 2018-06-26 23:27:09
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "9,458 "
+views:        "9,481 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-26-Tagging-files-on-Ubuntu.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1084076
 type:         Answer
-tags:         server ftp vsftpd
+tags:         server><ftp><vsftpd
 created_date: 2018-10-15 22:08:11
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "1,328 "
+views:        "1,333 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-15-Getting-the-checksum-of-a-file-through-vsFTPd.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032562
 type:         Answer
-tags:         hard-drive backup external-hdd
+tags:         hard-drive><backup><external-hdd
 created_date: 2018-05-05 22:13:26
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "649 "
+views:        "652 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-Exact-Copy-_Backup_-of-Full-Directory-Tree-To-External-_Backup_-Drive.md
 toc:          false
 navigation:   false

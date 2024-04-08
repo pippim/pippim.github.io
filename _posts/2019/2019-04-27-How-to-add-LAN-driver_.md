@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138726
 type:         Answer
-tags:         internet ethernet lan 19.04
+tags:         internet><ethernet><lan><19.04
 created_date: 2019-04-27 21:05:35
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "4,161 "
+views:        "4,162 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-How-to-add-LAN-driver_.md
 toc:          false
 navigation:   false

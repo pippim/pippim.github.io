@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817899
 type:         Answer
-tags:         16.04 xubuntu printing brother
+tags:         16.04><xubuntu><printing><brother
 created_date: 2016-08-28 18:17:20
 edit_date:    2016-08-28 18:28:43
 votes:        "3 "
 favorites:    
 views:        "2,034 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Printer-Brother-DCP-1610W-not-working-under-Xubuntu-16.04.md
 toc:          false
 navigation:   false

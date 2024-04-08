@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840267
 type:         Answer
-tags:         suspend laptop power-management lock-screen
+tags:         suspend><laptop><power-management><lock-screen
 created_date: 2016-10-21 23:20:42
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "3,631 "
+views:        "3,635 "
 accepted:     Accepted
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-Disable-suspend-after-screen-lock.md
 toc:          false
 navigation:   false

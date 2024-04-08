@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157668
 type:         Answer
-tags:         18.04 gui gnome-shell tty
+tags:         18.04><gui><gnome-shell><tty
 created_date: 2019-07-11 22:54:48
 edit_date:    2019-07-12 01:56:22
 votes:        "15 "
 favorites:    
-views:        "45,726 "
+views:        "46,075 "
 accepted:     
-uploaded:     2024-03-31 13:47:34
+uploaded:     2024-04-08 06:23:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-11-How-to-enable_-Switch-back-to-running-GUI-from-TTY-in-18.04.md
 toc:          false
 navigation:   false
