@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,852 "
 accepted:     Accepted
-uploaded:     2024-04-08 06:23:20
+uploaded:     2024-04-08 16:06:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-18-I-have-a-intel-AC-8260-and-cant-find-the-drivers.md
 toc:          false
 navigation:   false

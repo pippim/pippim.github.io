@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "2,162 "
 accepted:     
-uploaded:     2024-04-08 06:23:20
+uploaded:     2024-04-08 16:06:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-14-Modeless_stateless-layout-language-switching-with-Caps-Lock_-again-_18.04-LTS-Bionic-Beaver_.md
 toc:          false
 navigation:   false

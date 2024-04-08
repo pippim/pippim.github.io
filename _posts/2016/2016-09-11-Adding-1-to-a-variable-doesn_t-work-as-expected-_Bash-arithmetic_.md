@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "13,039 "
 accepted:     
-uploaded:     2024-04-08 06:23:20
+uploaded:     2024-04-08 16:06:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-Adding-1-to-a-variable-doesn_t-work-as-expected-_Bash-arithmetic_.md
 toc:          false
 navigation:   false
