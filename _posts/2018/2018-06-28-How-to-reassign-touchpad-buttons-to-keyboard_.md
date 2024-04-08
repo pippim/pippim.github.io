@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1050406
 type:         Answer
-tags:         keyboard><shortcut-keys><touchpad><configuration><customization
+tags:         keyboard shortcut-keys touchpad configuration customization
 created_date: 2018-06-28 10:34:17
 edit_date:    2018-06-28 10:50:02
 votes:        "4 "
 favorites:    
 views:        "546 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-28-How-to-reassign-touchpad-buttons-to-keyboard_.md
 toc:          false
 navigation:   false

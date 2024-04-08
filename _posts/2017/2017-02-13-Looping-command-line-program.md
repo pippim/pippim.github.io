@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882768
 type:         Answer
-tags:         command-line><bash><scripts><python><java
+tags:         command-line bash scripts python java
 created_date: 2017-02-13 01:43:53
 edit_date:    2017-02-13 01:47:00
 votes:        "5 "
 favorites:    
 views:        "165 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-13-Looping-command-line-program.md
 toc:          false
 navigation:   false

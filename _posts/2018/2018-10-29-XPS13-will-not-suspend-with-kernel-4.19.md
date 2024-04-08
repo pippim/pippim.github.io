@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1088146
 type:         Answer
-tags:         18.04><kernel><suspend><xps
+tags:         18.04 kernel suspend xps
 created_date: 2018-10-29 01:37:01
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "352 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-29-XPS13-will-not-suspend-with-kernel-4.19.md
 toc:          false
 navigation:   false

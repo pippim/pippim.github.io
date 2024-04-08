@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991839
 type:         Answer
-tags:         intel><turbo-boost conky
+tags:         intel turbo-boost conky
 created_date: 2018-01-03 11:50:16
 edit_date:    2018-02-10 20:37:51
 votes:        "16 "
 favorites:    
 views:        "84,386 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-Is-Turbo-Boost-Working_.md
 toc:          false
 navigation:   false

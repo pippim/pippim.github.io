@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/861641
 type:         Answer
-tags:         drivers><bluetooth><15.10><toshiba-satellite
+tags:         drivers bluetooth 15.10 toshiba-satellite
 created_date: 2016-12-17 12:25:38
 edit_date:    2017-04-13 12:23:41
 votes:        "3 "
 favorites:    
 views:        "1,771 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-17-Bluetooth-in-Toshiba-Satellite-C845.md
 toc:          false
 navigation:   false

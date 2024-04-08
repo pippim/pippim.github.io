@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1003115
 type:         Answer
-tags:         system-installation><security
+tags:         system-installation security
 created_date: 2018-02-05 01:59:29
 edit_date:    2020-06-12 14:37:07
 votes:        "48 "
 favorites:    
 views:        "11,486 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-05-Is-it-safe-to-use-a-second-hand-laptop-after-reinstalling-ubuntu-on-it.md
 toc:          false
 navigation:   false

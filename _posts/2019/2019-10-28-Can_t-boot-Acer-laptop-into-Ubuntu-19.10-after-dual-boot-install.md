@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1184573
 type:         Answer
-tags:         dual-boot><grub2><uefi><windows-10><19.10
+tags:         dual-boot grub2 uefi windows-10 19.10
 created_date: 2019-10-28 23:25:18
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "3,348 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-28-Can_t-boot-Acer-laptop-into-Ubuntu-19.10-after-dual-boot-install.md
 toc:          false
 navigation:   false

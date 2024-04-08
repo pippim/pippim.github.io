@@ -5,14 +5,14 @@ title:        >
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/530019
 type:         Answer
-tags:         networking><wifi><raspbian
+tags:         networking wifi raspbian
 created_date: 2019-07-13 21:07:07
 edit_date:    
 votes:        "11 "
 favorites:    
 views:        "133,573 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Get-names-of-devices-on-the-network.md
 toc:          false
 navigation:   false

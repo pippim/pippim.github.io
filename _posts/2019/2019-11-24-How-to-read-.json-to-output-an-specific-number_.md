@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191386
 type:         Answer
-tags:         grep><conky><json
+tags:         grep conky json
 created_date: 2019-11-24 20:04:21
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "2,049 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-How-to-read-.json-to-output-an-specific-number_.md
 toc:          false
 navigation:   false

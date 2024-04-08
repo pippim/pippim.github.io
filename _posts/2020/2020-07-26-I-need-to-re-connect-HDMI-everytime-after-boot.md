@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1262046
 type:         Answer
-tags:         multiple-monitors><lenovo><hdmi
+tags:         multiple-monitors lenovo hdmi
 created_date: 2020-07-26 00:50:59
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,892 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-26-I-need-to-re-connect-HDMI-everytime-after-boot.md
 toc:          false
 navigation:   false

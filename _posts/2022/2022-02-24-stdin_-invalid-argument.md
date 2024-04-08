@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1394671
 type:         Answer
-tags:         boot><partitioning><20.04><grub2><uefi
+tags:         boot partitioning 20.04 grub2 uefi
 created_date: 2022-02-24 13:10:58
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "12,691 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-24-stdin_-invalid-argument.md
 toc:          false
 navigation:   false

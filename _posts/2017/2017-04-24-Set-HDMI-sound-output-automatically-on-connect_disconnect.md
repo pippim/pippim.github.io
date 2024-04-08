@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/908534
 type:         Answer
-tags:         12.04><sound><hdmi><events
+tags:         12.04 sound hdmi events
 created_date: 2017-04-24 22:54:02
 edit_date:    2020-06-12 14:37:07
 votes:        "9 "
 favorites:    
 views:        "25,966 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-24-Set-HDMI-sound-output-automatically-on-connect_disconnect.md
 toc:          false
 navigation:   false

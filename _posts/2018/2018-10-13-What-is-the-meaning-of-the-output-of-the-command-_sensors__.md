@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1083487
 type:         Answer
-tags:         cpu><temperature
+tags:         cpu temperature
 created_date: 2018-10-13 14:31:58
 edit_date:    2018-10-13 14:51:57
 votes:        "13 "
 favorites:    
 views:        "36,721 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-13-What-is-the-meaning-of-the-output-of-the-command-_sensors__.md
 toc:          false
 navigation:   false

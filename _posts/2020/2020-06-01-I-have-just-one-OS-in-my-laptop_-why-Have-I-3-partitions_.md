@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245639
 type:         Answer
-tags:         boot><partitioning><boot-partition
+tags:         boot partitioning boot-partition
 created_date: 2020-06-01 00:27:59
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "953 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-01-I-have-just-one-OS-in-my-laptop_-why-Have-I-3-partitions_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1255242
 type:         Answer
-tags:         permissions><sudo><chmod
+tags:         permissions sudo chmod
 created_date: 2020-07-01 01:48:53
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "61,471 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-01-What-if-I-accidentally-run-command-_chmod-R_-on-system-directories-___-_etc_-..._.md
 toc:          false
 navigation:   false

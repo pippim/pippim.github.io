@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840031
 type:         Answer
-tags:         power-management><shutdown><schedule
+tags:         power-management shutdown schedule
 created_date: 2016-10-21 10:45:17
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "1,284 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-How-to-find-out-if-computer-was-shut-down-at-a-given-time_.md
 toc:          false
 navigation:   false

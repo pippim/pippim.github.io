@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1140380
 type:         Answer
-tags:         suspend><hibernate><macbook
+tags:         suspend hibernate macbook
 created_date: 2019-05-03 23:34:11
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "501 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-03-Strange-suspension-issues-on-macbook-pro-Ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false

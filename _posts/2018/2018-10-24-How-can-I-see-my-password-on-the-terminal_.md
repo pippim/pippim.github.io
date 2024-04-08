@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1086715
 type:         Answer
-tags:         sudo><password
+tags:         sudo password
 created_date: 2018-10-24 11:28:15
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "38,023 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-24-How-can-I-see-my-password-on-the-terminal_.md
 toc:          false
 navigation:   false

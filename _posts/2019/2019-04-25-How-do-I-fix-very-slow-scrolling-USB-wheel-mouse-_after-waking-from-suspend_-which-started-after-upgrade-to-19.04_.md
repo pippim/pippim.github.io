@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138030
 type:         Answer
-tags:         usb><suspend><19.04><mouse-scroll
+tags:         usb suspend 19.04 mouse-scroll
 created_date: 2019-04-25 11:24:27
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
 views:        "8,342 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-25-How-do-I-fix-very-slow-scrolling-USB-wheel-mouse-_after-waking-from-suspend_-which-started-after-upgrade-to-19.04_.md
 toc:          false
 navigation:   false

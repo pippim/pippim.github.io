@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1030361
 type:         Answer
-tags:         kernel><configuration><rename
+tags:         kernel configuration rename
 created_date: 2018-05-01 00:24:37
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "1,775 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Set-custom-names-for-vmlinuz-and-initrd-so-multiple-distros-can-share-boot-directory.md
 toc:          false
 navigation:   false

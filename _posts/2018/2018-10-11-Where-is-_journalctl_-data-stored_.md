@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1083044
 type:         Answer
-tags:         log><systemd><systemd-journald
+tags:         log systemd systemd-journald
 created_date: 2018-10-11 22:31:25
 edit_date:    2021-08-02 18:46:52
 votes:        "3 "
 favorites:    
 views:        "163,712 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-11-Where-is-_journalctl_-data-stored_.md
 toc:          false
 navigation:   false

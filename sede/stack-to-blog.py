@@ -3490,6 +3490,9 @@ for row in rows:
     tags = row[TAGS].replace("|", " ")
     tags = tags[1:-1]
     #print("\n tags: '" + tags + "'")
+    ''' 2024-04-08 - StackExchange reverted back: "tag><tag><...><tag"
+    '''
+    tags = tags.replace("><", " ")
 
     lines = row[MARKDOWN].splitlines()
     line_count = len(lines)

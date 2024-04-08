@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849893
 type:         Answer
-tags:         suspend><power-management
+tags:         suspend power-management
 created_date: 2016-11-16 00:18:08
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "214 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-16-Why-does-my-laptop-suspend-after-5-minutes_.md
 toc:          false
 navigation:   false

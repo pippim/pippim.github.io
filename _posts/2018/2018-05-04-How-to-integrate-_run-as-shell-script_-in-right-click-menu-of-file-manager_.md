@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1031914
 type:         Answer
-tags:         command-line><scripts><filemanager><sh><csh
+tags:         command-line scripts filemanager sh csh
 created_date: 2018-05-04 10:09:40
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "2,221 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-How-to-integrate-_run-as-shell-script_-in-right-click-menu-of-file-manager_.md
 toc:          false
 navigation:   false

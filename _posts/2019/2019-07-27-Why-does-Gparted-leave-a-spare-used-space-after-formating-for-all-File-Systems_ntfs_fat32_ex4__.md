@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161539
 type:         Answer
-tags:         partitioning><filesystem><gparted><ntfs><ext4
+tags:         partitioning filesystem gparted ntfs ext4
 created_date: 2019-07-27 19:58:33
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "549 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-Why-does-Gparted-leave-a-spare-used-space-after-formating-for-all-File-Systems_ntfs_fat32_ex4__.md
 toc:          false
 navigation:   false

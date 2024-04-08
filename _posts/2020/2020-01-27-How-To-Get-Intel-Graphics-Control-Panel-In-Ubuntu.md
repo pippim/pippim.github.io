@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1206088
 type:         Answer
-tags:         graphics><intel-graphics><intel
+tags:         graphics intel-graphics intel
 created_date: 2020-01-27 12:47:43
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "15,396 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-27-How-To-Get-Intel-Graphics-Control-Panel-In-Ubuntu.md
 toc:          false
 navigation:   false

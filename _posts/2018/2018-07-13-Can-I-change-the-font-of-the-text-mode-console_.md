@@ -5,14 +5,14 @@ title:        >
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/455009
 type:         Answer
-tags:         console><tty><fonts
+tags:         console tty fonts
 created_date: 2018-07-13 00:09:43
 edit_date:    
 votes:        "11 "
 favorites:    
 views:        "263,532 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-13-Can-I-change-the-font-of-the-text-mode-console_.md
 toc:          false
 navigation:   false

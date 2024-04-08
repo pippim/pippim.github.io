@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008210
 type:         Answer
-tags:         16.04><boot><logs><systemd-journald
+tags:         16.04 boot logs systemd-journald
 created_date: 2018-02-21 01:24:55
 edit_date:    2019-01-16 02:50:51
 votes:        "38 "
 favorites:    
 views:        "78,940 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04_-restarts_.md
 toc:          false
 navigation:   true

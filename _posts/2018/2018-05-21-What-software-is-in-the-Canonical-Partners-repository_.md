@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038539
 type:         Answer
-tags:         repository><canonical><ubuntu-wiki
+tags:         repository canonical ubuntu-wiki
 created_date: 2018-05-21 02:11:57
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "7,326 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-What-software-is-in-the-Canonical-Partners-repository_.md
 toc:          false
 navigation:   false

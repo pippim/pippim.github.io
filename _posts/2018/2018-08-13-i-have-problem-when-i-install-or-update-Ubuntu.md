@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064902
 type:         Answer
-tags:         system-installation><upgrade><updates
+tags:         system-installation upgrade updates
 created_date: 2018-08-13 10:01:48
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "96 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-13-i-have-problem-when-i-install-or-update-Ubuntu.md
 toc:          false
 navigation:   false

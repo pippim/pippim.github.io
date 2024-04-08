@@ -5,14 +5,14 @@ title:        >
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/487470
 type:         Answer
-tags:         printing><cups><lpr
+tags:         printing cups lpr
 created_date: 2018-12-12 00:11:24
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "9,783 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-What-does-spool-mean-for-printing_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1186851
 type:         Answer
-tags:         kernel><power-management><uptime
+tags:         kernel power-management uptime
 created_date: 2019-11-07 02:37:23
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "1,129 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-What-counts-towards-uptime_.md
 toc:          false
 navigation:   false

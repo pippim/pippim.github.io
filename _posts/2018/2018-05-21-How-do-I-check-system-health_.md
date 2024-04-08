@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038711
 type:         Answer
-tags:         software-recommendation><hardware><hardware-test conky
+tags:         software-recommendation hardware hardware-test conky
 created_date: 2018-05-21 13:37:40
 edit_date:    2020-10-12 02:07:35
 votes:        "15 "
 favorites:    
 views:        "48,029 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health_.md
 toc:          false
 navigation:   false

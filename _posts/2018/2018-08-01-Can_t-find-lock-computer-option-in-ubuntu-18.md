@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1061308
 type:         Answer
-tags:         18.04><login-screen><lock-screen
+tags:         18.04 login-screen lock-screen
 created_date: 2018-08-01 04:25:20
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "6,552 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-Can_t-find-lock-computer-option-in-ubuntu-18.md
 toc:          false
 navigation:   false

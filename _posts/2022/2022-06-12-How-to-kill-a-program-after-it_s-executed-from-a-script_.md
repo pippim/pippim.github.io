@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1413743
 type:         Answer
-tags:         command-line><bash><sound><scripts
+tags:         command-line bash sound scripts
 created_date: 2022-06-12 23:30:27
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "456 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-06-12-How-to-kill-a-program-after-it_s-executed-from-a-script_.md
 toc:          false
 navigation:   false

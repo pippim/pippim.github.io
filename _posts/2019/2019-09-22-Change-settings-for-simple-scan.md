@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1175858
 type:         Answer
-tags:         settings><simplescan
+tags:         settings simplescan
 created_date: 2019-09-22 14:09:55
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "3,968 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-22-Change-settings-for-simple-scan.md
 toc:          false
 navigation:   false

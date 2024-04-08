@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/885165
 type:         Answer
-tags:         upgrade><kernel><updates grub
+tags:         upgrade kernel updates grub
 created_date: 2017-02-20 00:23:47
 edit_date:    2018-02-25 15:14:36
 votes:        "20 "
 favorites:    
 views:        "612,168 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_.md
 toc:          false
 navigation:   false

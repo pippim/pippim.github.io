@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978978
 type:         Answer
-tags:         command-line><windows-subsystem-for-linux><ascii
+tags:         command-line windows-subsystem-for-linux ascii
 created_date: 2017-11-22 03:00:29
 edit_date:    2018-04-01 17:18:58
 votes:        "7 "
 favorites:    
 views:        "5,122 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution_.md
 toc:          false
 navigation:   false

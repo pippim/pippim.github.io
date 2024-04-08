@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005438
 type:         Answer
-tags:         command-line><performance><search><grep
+tags:         command-line performance search grep
 created_date: 2018-02-12 12:08:35
 edit_date:    2018-02-17 19:12:35
 votes:        "18 "
 favorites:    
 views:        "6,058 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-12-_grep_ing-all-files-for-a-string-takes-a-long-time.md
 toc:          true
 navigation:   true

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1023474
 type:         Answer
-tags:         command-line><bash><scripts><files><find
+tags:         command-line bash scripts files find
 created_date: 2018-04-09 23:37:17
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "9,633 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-09-How-can-I-count-files-with-a-particular-extension_-and-the-directories-they-are-in_.md
 toc:          false
 navigation:   false

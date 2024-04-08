@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1086196
 type:         Answer
-tags:         command-line><cd-command
+tags:         command-line cd-command
 created_date: 2018-10-22 18:17:40
 edit_date:    2020-06-12 14:37:07
 votes:        "14 "
 favorites:    
 views:        "5,384 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-do-I-prevent-_cd_-command-from-going-to-home-directory_.md
 toc:          false
 navigation:   false

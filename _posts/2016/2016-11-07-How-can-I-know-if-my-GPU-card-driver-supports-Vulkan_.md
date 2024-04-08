@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846565
 type:         Answer
-tags:         opengl><mesa><vulkan
+tags:         opengl mesa vulkan
 created_date: 2016-11-07 10:03:42
 edit_date:    2016-11-07 10:37:51
 votes:        "1 "
 favorites:    
 views:        "95,356 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-I-know-if-my-GPU-card-driver-supports-Vulkan_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045344
 type:         Answer
-tags:         sound><cron
+tags:         sound cron
 created_date: 2018-06-10 16:17:17
 edit_date:    2018-06-10 17:39:19
 votes:        "14 "
 favorites:    
 views:        "7,417 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-Help-using-crontab-to-play-a-sound.md
 toc:          false
 navigation:   false

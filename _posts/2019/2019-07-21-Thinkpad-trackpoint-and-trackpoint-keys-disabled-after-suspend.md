@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159960
 type:         Answer
-tags:         18.04><thinkpad><trackpoint
+tags:         18.04 thinkpad trackpoint
 created_date: 2019-07-21 17:25:56
 edit_date:    2022-01-29 19:16:15
 votes:        "4 "
 favorites:    
 views:        "768 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Thinkpad-trackpoint-and-trackpoint-keys-disabled-after-suspend.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1049234
 type:         Answer
-tags:         16.04><kernel><updates><pinning
+tags:         16.04 kernel updates pinning
 created_date: 2018-06-24 07:20:34
 edit_date:    2018-06-24 15:01:21
 votes:        "6 "
 favorites:    
 views:        "5,107 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-24-Pin-kernel-version.md
 toc:          false
 navigation:   false

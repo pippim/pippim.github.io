@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849690
 type:         Answer
-tags:         command-line><bash><alias
+tags:         command-line bash alias
 created_date: 2016-11-15 11:37:47
 edit_date:    2016-11-15 12:59:57
 votes:        "2 "
 favorites:    
 views:        "144 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-15-I-am-trying-to-create-an-alias-to-run-an-application.-Is-there-away-to-bypass-creating-an-alias-just-to-change-directories_.md
 toc:          false
 navigation:   false

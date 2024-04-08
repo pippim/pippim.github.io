@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191684
 type:         Answer
-tags:         sound><suspend><pulseaudio><wakeup
+tags:         sound suspend pulseaudio wakeup
 created_date: 2019-11-25 23:32:27
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "6,755 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-No-sound-on-wake_-Dummy-Output-always-takes-over.-_pulseaudio-k_-the-fix.md
 toc:          false
 navigation:   false

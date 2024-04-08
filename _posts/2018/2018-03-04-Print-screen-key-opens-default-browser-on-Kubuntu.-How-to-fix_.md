@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1011841
 type:         Answer
-tags:         kubuntu><17.10><plasma-5><ksnapshot
+tags:         kubuntu 17.10 plasma-5 ksnapshot
 created_date: 2018-03-04 17:13:35
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "290 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-04-Print-screen-key-opens-default-browser-on-Kubuntu.-How-to-fix_.md
 toc:          false
 navigation:   false

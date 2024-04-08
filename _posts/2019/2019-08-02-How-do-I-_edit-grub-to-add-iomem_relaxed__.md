@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162794
 type:         Answer
-tags:         boot><grub2><configuration
+tags:         boot grub2 configuration
 created_date: 2019-08-02 01:32:32
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "14,443 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-02-How-do-I-_edit-grub-to-add-iomem_relaxed__.md
 toc:          false
 navigation:   false

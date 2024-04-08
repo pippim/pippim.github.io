@@ -5,14 +5,14 @@ title:        >
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/463517
 type:         Answer
-tags:         cpu><cpu-frequency
+tags:         cpu cpu-frequency
 created_date: 2018-08-19 16:08:45
 edit_date:    2018-08-19 18:34:34
 votes:        "4 "
 favorites:    
 views:        "5,469 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Get-all-available-frequency-steps.md
 toc:          false
 navigation:   false

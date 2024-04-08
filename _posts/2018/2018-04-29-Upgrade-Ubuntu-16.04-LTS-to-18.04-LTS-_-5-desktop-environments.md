@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029748
 type:         Question
-tags:         16.04><upgrade><login><desktop-environments><18.04
+tags:         16.04 upgrade login desktop-environments 18.04
 created_date: 2018-04-29 15:43:30
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "2,218 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Upgrade-Ubuntu-16.04-LTS-to-18.04-LTS-_-5-desktop-environments.md
 toc:          false
 navigation:   false

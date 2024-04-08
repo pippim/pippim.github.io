@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007491
 type:         Answer
-tags:         virtualbox><docker
+tags:         virtualbox docker
 created_date: 2018-02-18 21:28:11
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "844 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-18-I-get-an-error-when-creating-a-VM-on-VirtualBox.md
 toc:          false
 navigation:   false

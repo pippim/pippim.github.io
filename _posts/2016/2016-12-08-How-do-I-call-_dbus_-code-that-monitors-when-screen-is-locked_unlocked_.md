@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/858236
 type:         Question
-tags:         16.04><scripts><lock-screen><dbus
+tags:         16.04 scripts lock-screen dbus
 created_date: 2016-12-08 01:01:02
 edit_date:    2017-04-13 12:37:16
 votes:        "6 "
 favorites:    
 views:        "3,303 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-08-How-do-I-call-_dbus_-code-that-monitors-when-screen-is-locked_unlocked_.md
 toc:          false
 navigation:   false

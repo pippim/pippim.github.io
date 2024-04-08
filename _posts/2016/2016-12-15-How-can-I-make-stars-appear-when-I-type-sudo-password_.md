@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/860767
 type:         Answer
-tags:         command-line><sudo><password
+tags:         command-line sudo password
 created_date: 2016-12-15 03:10:27
 edit_date:    
 votes:        "9 "
 favorites:    
 views:        "3,374 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-How-can-I-make-stars-appear-when-I-type-sudo-password_.md
 toc:          false
 navigation:   false

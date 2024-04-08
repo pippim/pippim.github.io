@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162893
 type:         Answer
-tags:         directory><search><regex
+tags:         directory search regex
 created_date: 2019-08-02 11:02:09
 edit_date:    2019-08-02 11:17:57
 votes:        "4 "
 favorites:    
 views:        "697,111 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-02-How-to-search-for-all-the-files-starting-with-the-name-_ABC_-in-a-directory_.md
 toc:          false
 navigation:   false

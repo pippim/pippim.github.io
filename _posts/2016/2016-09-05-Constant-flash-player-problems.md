@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821423
 type:         Answer
-tags:         google-chrome><flash
+tags:         google-chrome flash
 created_date: 2016-09-05 22:07:21
 edit_date:    2016-09-05 22:19:15
 votes:        "4 "
 favorites:    
 views:        "1,676 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Constant-flash-player-problems.md
 toc:          false
 navigation:   false

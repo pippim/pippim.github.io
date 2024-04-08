@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820657
 type:         Answer
-tags:         16.04><package-management><updates
+tags:         16.04 package-management updates
 created_date: 2016-09-04 00:44:38
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
 views:        "728 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-can-I-stop-Ubuntu-from-freezing-up_.md
 toc:          false
 navigation:   false

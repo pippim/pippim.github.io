@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089951
 type:         Answer
-tags:         16.04><suspend><battery><hibernate><mate
+tags:         16.04 suspend battery hibernate mate
 created_date: 2018-11-04 14:05:06
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "3,074 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Hibernate_suspend-on-critical-battery-level-where-should-I-set-it-from-MATE-GUI_.md
 toc:          false
 navigation:   false

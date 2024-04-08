@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/964097
 type:         Answer
-tags:         sound><headphones><microphone><phone
+tags:         sound headphones microphone phone
 created_date: 2017-10-12 02:57:29
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "954 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-12-Can-I-use-telephone-jack-for-audio-input-and-ouptut.md
 toc:          false
 navigation:   false

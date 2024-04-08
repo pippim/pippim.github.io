@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191538
 type:         Answer
-tags:         disk><smart
+tags:         disk smart
 created_date: 2019-11-25 12:26:14
 edit_date:    
 votes:        "17 "
 favorites:    
 views:        "22,233 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-SMART-data-self-test-is-greyed-out-in-Disks_.md
 toc:          false
 navigation:   false

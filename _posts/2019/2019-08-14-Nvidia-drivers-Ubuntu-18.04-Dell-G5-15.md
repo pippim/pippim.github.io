@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165689
 type:         Answer
-tags:         drivers><18.04><nvidia
+tags:         drivers 18.04 nvidia
 created_date: 2019-08-14 11:39:33
 edit_date:    2019-08-15 11:53:15
 votes:        "2 "
 favorites:    
 views:        "4,277 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-14-Nvidia-drivers-Ubuntu-18.04-Dell-G5-15.md
 toc:          false
 navigation:   false

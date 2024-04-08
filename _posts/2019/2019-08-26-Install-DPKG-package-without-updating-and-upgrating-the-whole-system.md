@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1168622
 type:         Answer
-tags:         apt><package-management><upgrade><updates
+tags:         apt package-management upgrade updates
 created_date: 2019-08-26 12:30:29
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "611 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-26-Install-DPKG-package-without-updating-and-upgrating-the-whole-system.md
 toc:          false
 navigation:   false

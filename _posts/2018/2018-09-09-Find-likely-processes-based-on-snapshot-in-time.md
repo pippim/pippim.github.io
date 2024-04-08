@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1073700
 type:         Answer
-tags:         command-line><text-processing
+tags:         command-line text-processing
 created_date: 2018-09-09 17:15:30
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
 views:        "234 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-09-Find-likely-processes-based-on-snapshot-in-time.md
 toc:          false
 navigation:   false

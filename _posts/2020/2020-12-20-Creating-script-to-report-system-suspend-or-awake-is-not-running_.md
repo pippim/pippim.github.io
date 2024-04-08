@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1301658
 type:         Answer
-tags:         16.04><bash><suspend
+tags:         16.04 bash suspend
 created_date: 2020-12-20 19:49:43
 edit_date:    2020-12-20 21:31:38
 votes:        "4 "
 favorites:    
 views:        "193 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-20-Creating-script-to-report-system-suspend-or-awake-is-not-running_.md
 toc:          false
 navigation:   false

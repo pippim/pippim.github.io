@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159949
 type:         Answer
-tags:         18.04><bluetooth
+tags:         18.04 bluetooth
 created_date: 2019-07-21 16:48:43
 edit_date:    2019-07-22 15:35:47
 votes:        "1 "
 favorites:    
 views:        "1,154 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Bluetooth-does-not-turn-on.md
 toc:          false
 navigation:   false

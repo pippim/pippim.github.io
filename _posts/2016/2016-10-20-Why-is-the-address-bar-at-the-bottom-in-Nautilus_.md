@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/839578
 type:         Answer
-tags:         nautilus><samba><gui
+tags:         nautilus samba gui
 created_date: 2016-10-20 10:20:27
 edit_date:    2016-10-20 10:39:48
 votes:        "2 "
 favorites:    
 views:        "94 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-20-Why-is-the-address-bar-at-the-bottom-in-Nautilus_.md
 toc:          false
 navigation:   false

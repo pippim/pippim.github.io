@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1001543
 type:         Answer
-tags:         16.04><drivers><wireless><broadcom
+tags:         16.04 drivers wireless broadcom
 created_date: 2018-01-31 01:05:48
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
 views:        "986 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-31-Broadcom-Wireless-Driver-problem.-I_ve-tried-solutions-given-on-this-forum-but-I-can_t-get-it-work.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102337
 type:         Answer
-tags:         18.04><intel><cpu><cpufreq><governor
+tags:         18.04 intel cpu cpufreq governor
 created_date: 2018-12-16 15:16:15
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "5,835 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-CPU-frequency-too-high-even-with-_powersave_-governor.md
 toc:          false
 navigation:   false

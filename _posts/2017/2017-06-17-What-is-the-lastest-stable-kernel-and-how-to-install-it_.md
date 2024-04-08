@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/926287
 type:         Answer
-tags:         kernel><16.04 grub
+tags:         kernel 16.04 grub
 created_date: 2017-06-17 01:15:37
 edit_date:    2017-07-04 10:09:15
 votes:        "3 "
 favorites:    
 views:        "43,476 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-17-What-is-the-lastest-stable-kernel-and-how-to-install-it_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157128
 type:         Answer
-tags:         16.04><upgrade><updates><lts
+tags:         16.04 upgrade updates lts
 created_date: 2019-07-09 22:48:18
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "223 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-09-Should-I-now-upgrade-Ubuntu-16.04-LTS_.md
 toc:          false
 navigation:   false

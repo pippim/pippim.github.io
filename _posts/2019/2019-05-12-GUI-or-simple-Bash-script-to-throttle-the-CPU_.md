@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142671
 type:         Answer
-tags:         power-management><cpu><19.04><frequency cpuf conky yad
+tags:         power-management cpu 19.04 frequency cpuf conky yad
 created_date: 2019-05-12 17:09:10
 edit_date:    2020-06-12 14:37:07
 votes:        "10 "
 favorites:    
 views:        "11,842 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_.md
 toc:          false
 navigation:   true

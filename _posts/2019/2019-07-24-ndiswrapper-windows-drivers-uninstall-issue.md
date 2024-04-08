@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160789
 type:         Answer
-tags:         xubuntu><uninstall><ndiswrapper
+tags:         xubuntu uninstall ndiswrapper
 created_date: 2019-07-24 18:44:46
 edit_date:    2019-07-24 18:55:16
 votes:        "0 "
 favorites:    
 views:        "160 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-ndiswrapper-windows-drivers-uninstall-issue.md
 toc:          false
 navigation:   false

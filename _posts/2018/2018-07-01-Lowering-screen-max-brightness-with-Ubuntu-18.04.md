@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1051288
 type:         Answer
-tags:         18.04><laptop><screen><brightness><backlight
+tags:         18.04 laptop screen brightness backlight
 created_date: 2018-07-01 18:45:04
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,244 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-01-Lowering-screen-max-brightness-with-Ubuntu-18.04.md
 toc:          false
 navigation:   false

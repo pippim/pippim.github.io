@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/865249
 type:         Answer
-tags:         command-line><grep><ls><pipe
+tags:         command-line grep ls pipe
 created_date: 2016-12-28 04:03:46
 edit_date:    2016-12-28 19:28:10
 votes:        "6 "
 favorites:    
 views:        "2,834 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-28-Why-the-pipe-command-_l-_-grep-_1_-_-get-the-wrong-result_.md
 toc:          false
 navigation:   false

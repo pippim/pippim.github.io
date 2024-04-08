@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1158638
 type:         Answer
-tags:         18.04><sound><suspend
+tags:         18.04 sound suspend
 created_date: 2019-07-16 11:28:28
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "3,494 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-16-sound-problem-_Ubuntu-18.04__-no-sound-after-suspend.md
 toc:          false
 navigation:   false

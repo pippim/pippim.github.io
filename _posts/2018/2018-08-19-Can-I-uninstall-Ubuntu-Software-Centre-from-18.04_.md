@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1066949
 type:         Answer
-tags:         software-center><software-uninstall
+tags:         software-center software-uninstall
 created_date: 2018-08-19 20:36:39
 edit_date:    
 votes:        "5 "
 favorites:    
 views:        "2,622 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Can-I-uninstall-Ubuntu-Software-Centre-from-18.04_.md
 toc:          false
 navigation:   false

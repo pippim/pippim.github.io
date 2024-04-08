@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/995948
 type:         Answer
-tags:         16.04><keyboard><touchpad grub
+tags:         16.04 keyboard touchpad grub
 created_date: 2018-01-15 00:00:49
 edit_date:    2018-02-11 16:41:20
 votes:        "15 "
 favorites:    
 views:        "8,793 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-15-Touchpad-gestures-and-holding-keys-does-not-work.md
 toc:          true
 navigation:   true

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007213
 type:         Answer
-tags:         unity><launcher
+tags:         unity launcher
 created_date: 2018-02-17 23:00:50
 edit_date:    2018-02-18 19:12:33
 votes:        "8 "
 favorites:    
 views:        "6,707 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-Ubuntu-Menu-and-Launcher-not-showing-after-2_16_2018-update.md
 toc:          false
 navigation:   false

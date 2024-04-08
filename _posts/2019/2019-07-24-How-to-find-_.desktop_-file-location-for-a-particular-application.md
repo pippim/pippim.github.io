@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160753
 type:         Answer
-tags:         configuration><ftp><default-programs><image-viewers
+tags:         configuration ftp default-programs image-viewers
 created_date: 2019-07-24 16:22:34
 edit_date:    2023-02-01 09:14:18
 votes:        "16 "
 favorites:    
 views:        "18,289 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-to-find-_.desktop_-file-location-for-a-particular-application.md
 toc:          false
 navigation:   false

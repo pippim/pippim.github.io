@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/948181
 type:         Answer
-tags:         dual-boot><xubuntu
+tags:         dual-boot xubuntu
 created_date: 2017-08-21 00:24:42
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "176 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-21-Brand-new-desktop-randomly-powers-off.md
 toc:          false
 navigation:   false

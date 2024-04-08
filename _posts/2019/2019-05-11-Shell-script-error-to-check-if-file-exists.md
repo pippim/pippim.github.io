@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142370
 type:         Answer
-tags:         command-line><bash><scripts><xubuntu><sh
+tags:         command-line bash scripts xubuntu sh
 created_date: 2019-05-11 11:10:01
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "4,874 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-11-Shell-script-error-to-check-if-file-exists.md
 toc:          false
 navigation:   false

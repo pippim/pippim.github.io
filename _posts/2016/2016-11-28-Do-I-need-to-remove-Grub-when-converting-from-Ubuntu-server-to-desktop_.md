@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854716
 type:         Answer
-tags:         16.04><server><grub2><system-installation
+tags:         16.04 server grub2 system-installation
 created_date: 2016-11-28 22:35:37
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "64 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Do-I-need-to-remove-Grub-when-converting-from-Ubuntu-server-to-desktop_.md
 toc:          false
 navigation:   false

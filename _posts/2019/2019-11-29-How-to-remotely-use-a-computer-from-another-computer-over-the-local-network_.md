@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1192609
 type:         Answer
-tags:         networking><xorg><monitor><x11-forwarding
+tags:         networking xorg monitor x11-forwarding
 created_date: 2019-11-29 23:02:25
 edit_date:    2019-11-30 00:13:03
 votes:        "3 "
 favorites:    
 views:        "948 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-29-How-to-remotely-use-a-computer-from-another-computer-over-the-local-network_.md
 toc:          false
 navigation:   false

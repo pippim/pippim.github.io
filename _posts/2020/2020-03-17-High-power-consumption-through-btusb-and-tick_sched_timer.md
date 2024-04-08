@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1217981
 type:         Answer
-tags:         dell><power-management><battery
+tags:         dell power-management battery
 created_date: 2020-03-17 22:50:35
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "10,693 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-03-17-High-power-consumption-through-btusb-and-tick_sched_timer.md
 toc:          false
 navigation:   false

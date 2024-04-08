@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038523
 type:         Answer
-tags:         icons><power-management><battery><gnome-power-manager
+tags:         icons power-management battery gnome-power-manager
 created_date: 2018-05-20 23:54:52
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "4,344 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-20-Battery-icon-not-showing-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

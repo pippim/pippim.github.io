@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1053376
 type:         Answer
-tags:         gnome><suspend><gnome-shell
+tags:         gnome suspend gnome-shell
 created_date: 2018-07-09 01:51:13
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "2,464 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-09-How-to-automatically-restart-Gnome-Shell-every-time-the-PC-comes-out-from-suspend.md
 toc:          false
 navigation:   false

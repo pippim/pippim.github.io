@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1177476
 type:         Answer
-tags:         intel><idle grub
+tags:         intel idle grub
 created_date: 2019-09-29 14:32:55
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "73,470 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-29-How-to-set-intel_idle.max_cstate_1.md
 toc:          false
 navigation:   false

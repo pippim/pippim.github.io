@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1356262
 type:         Answer
-tags:         wireless><bluetooth><logitech
+tags:         wireless bluetooth logitech
 created_date: 2021-08-06 04:21:31
 edit_date:    
 votes:        "7 "
 favorites:    
 views:        "683 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-08-06-Weird-walkie-talkie-interference-with-Logitech-unifying-receiver.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/865633
 type:         Answer
-tags:         boot><hard-drive><gnome-disk-utility
+tags:         boot hard-drive gnome-disk-utility
 created_date: 2016-12-29 01:33:11
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,348 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-29-What-happend-to-SMART-data-_disk-selftest-option_.md
 toc:          false
 navigation:   false

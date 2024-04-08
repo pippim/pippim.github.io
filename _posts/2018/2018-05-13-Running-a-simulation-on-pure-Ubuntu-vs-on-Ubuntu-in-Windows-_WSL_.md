@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035571
 type:         Answer
-tags:         windows><windows-subsystem-for-linux><benchmarks
+tags:         windows windows-subsystem-for-linux benchmarks
 created_date: 2018-05-13 04:02:33
 edit_date:    2020-06-12 14:37:07
 votes:        "12 "
 favorites:    
 views:        "11,626 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Running-a-simulation-on-pure-Ubuntu-vs-on-Ubuntu-in-Windows-_WSL_.md
 toc:          false
 navigation:   false

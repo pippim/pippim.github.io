@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1247291
 type:         Answer
-tags:         ssd><hddtemp
+tags:         ssd hddtemp
 created_date: 2020-06-05 17:25:46
 edit_date:    2020-06-12 14:37:07
 votes:        "0 "
 favorites:    
 views:        "244 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-cant-edit-hddtemp.db-for-ssd-temp.md
 toc:          false
 navigation:   false

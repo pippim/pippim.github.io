@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1307811
 type:         Answer
-tags:         suspend><wakeup><standby
+tags:         suspend wakeup standby
 created_date: 2021-01-14 00:24:34
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "1,973 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-14-Laptop-wakes-up-seconds-after-suspend.md
 toc:          false
 navigation:   false

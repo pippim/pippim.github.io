@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005664
 type:         Answer
-tags:         16.04><graphics><mouse><screen><brightness
+tags:         16.04 graphics mouse screen brightness
 created_date: 2018-02-13 03:11:06
 edit_date:    2018-02-13 08:32:56
 votes:        "2 "
 favorites:    
 views:        "2,638 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-13-Screen-brightness-changes-when-moving-mouse-to-certain-areas-_XPS13-9379-Ubuntu_.md
 toc:          false
 navigation:   false

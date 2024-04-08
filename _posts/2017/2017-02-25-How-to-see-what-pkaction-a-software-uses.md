@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/887227
 type:         Answer
-tags:         permissions><password><gksu><policykit><visudo
+tags:         permissions password gksu policykit visudo
 created_date: 2017-02-25 17:21:57
 edit_date:    2017-04-13 12:23:38
 votes:        "2 "
 favorites:    
 views:        "1,094 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-How-to-see-what-pkaction-a-software-uses.md
 toc:          false
 navigation:   false

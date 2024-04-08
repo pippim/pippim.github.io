@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/862804
 type:         Question
-tags:         scripts><sed><tail
+tags:         scripts sed tail
 created_date: 2016-12-20 20:32:09
 edit_date:    2017-04-13 12:25:10
 votes:        "15 "
 favorites:    
 views:        "17,160 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Which-is-faster-to-delete-first-line-in-file...-sed-or-tail_.md
 toc:          false
 navigation:   false

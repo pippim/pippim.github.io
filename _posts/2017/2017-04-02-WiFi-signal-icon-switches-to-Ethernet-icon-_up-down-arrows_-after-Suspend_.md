@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/899304
 type:         Answer
-tags:         networking><16.04><wireless><suspend><ethernet
+tags:         networking 16.04 wireless suspend ethernet
 created_date: 2017-04-02 00:44:55
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
 views:        "3,179 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-02-WiFi-signal-icon-switches-to-Ethernet-icon-_up-down-arrows_-after-Suspend_.md
 toc:          false
 navigation:   false

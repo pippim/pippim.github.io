@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/981658
 type:         Answer
-tags:         16.04><suspend><ssd><nvme
+tags:         16.04 suspend ssd nvme
 created_date: 2017-11-30 01:52:04
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "6,692 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-30-Cannot-suspend-with-NVMe-M.2-SSD.md
 toc:          false
 navigation:   false

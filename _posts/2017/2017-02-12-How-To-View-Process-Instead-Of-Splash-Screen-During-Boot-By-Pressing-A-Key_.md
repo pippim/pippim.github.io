@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882472
 type:         Answer
-tags:         boot><16.04><keyboard
+tags:         boot 16.04 keyboard
 created_date: 2017-02-12 07:48:37
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "1,665 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-12-How-To-View-Process-Instead-Of-Splash-Screen-During-Boot-By-Pressing-A-Key_.md
 toc:          false
 navigation:   false

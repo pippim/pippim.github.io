@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021463
 type:         Answer
-tags:         monitoring><amd-processor><frequency><cpupower
+tags:         monitoring amd-processor frequency cpupower
 created_date: 2018-04-03 00:40:31
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "2,732 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Monitoring-CPU-freq-in-real-time.md
 toc:          false
 navigation:   false

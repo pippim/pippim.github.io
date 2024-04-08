@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155522
 type:         Answer
-tags:         kernel><gnu
+tags:         kernel gnu
 created_date: 2019-07-02 18:30:32
 edit_date:    
 votes:        "11 "
 favorites:    
 views:        "1,858 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-02-Can-I-run-Ubuntu-on-something-other-than-Linux-Kernel_.md
 toc:          false
 navigation:   false

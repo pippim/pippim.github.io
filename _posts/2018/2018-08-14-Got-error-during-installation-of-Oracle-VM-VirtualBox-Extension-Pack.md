@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1065249
 type:         Answer
-tags:         permissions><virtualbox><virtualization><root><oracle
+tags:         permissions virtualbox virtualization root oracle
 created_date: 2018-08-14 11:01:17
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "7,078 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-14-Got-error-during-installation-of-Oracle-VM-VirtualBox-Extension-Pack.md
 toc:          false
 navigation:   false

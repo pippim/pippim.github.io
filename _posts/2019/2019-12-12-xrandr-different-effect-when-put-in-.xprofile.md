@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195642
 type:         Answer
-tags:         xorg><multiple-monitors><display><xrandr
+tags:         xorg multiple-monitors display xrandr
 created_date: 2019-12-12 12:51:38
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "1,028 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-12-xrandr-different-effect-when-put-in-.xprofile.md
 toc:          false
 navigation:   false

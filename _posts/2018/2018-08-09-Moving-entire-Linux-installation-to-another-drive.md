@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064000
 type:         Answer
-tags:         backup><dd grub
+tags:         backup dd grub
 created_date: 2018-08-09 23:26:25
 edit_date:    
 votes:        "9 "
 favorites:    
 views:        "327,382 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-09-Moving-entire-Linux-installation-to-another-drive.md
 toc:          false
 navigation:   false

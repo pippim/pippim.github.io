@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/68278598
 type:         Answer
-tags:         python><share><global
+tags:         python share global
 created_date: 2021-07-07 00:05:03
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "463,439 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-07-07-Using-global-variables-between-files_.md
 toc:          false
 navigation:   false

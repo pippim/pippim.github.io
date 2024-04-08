@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1151552
 type:         Answer
-tags:         nvidia><brightness><monitor><settings><gpu
+tags:         nvidia brightness monitor settings gpu
 created_date: 2019-06-16 18:15:41
 edit_date:    2019-06-16 20:55:26
 votes:        "2 "
 favorites:    
 views:        "629 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-16-Is-there-any-way-to-make-brightness-work-on-a-HP-ENVY-15-dr0350nd_.md
 toc:          false
 navigation:   false

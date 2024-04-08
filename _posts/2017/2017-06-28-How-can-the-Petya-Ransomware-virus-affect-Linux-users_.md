@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/930083
 type:         Question
-tags:         wine><security><malware
+tags:         wine security malware
 created_date: 2017-06-28 23:09:40
 edit_date:    2017-06-29 01:47:21
 votes:        "4 "
 favorites:    
 views:        "3,586 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-28-How-can-the-Petya-Ransomware-virus-affect-Linux-users_.md
 toc:          false
 navigation:   false

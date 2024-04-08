@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1097096
 type:         Answer
-tags:         drivers><18.04><graphics><intel-graphics><thinkpad
+tags:         drivers 18.04 graphics intel-graphics thinkpad
 created_date: 2018-11-29 11:54:13
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "2,672 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-29-Video-drivers-for-Intel-onboard-graphic-in-18.04-and-thinkpad-t410.md
 toc:          false
 navigation:   false

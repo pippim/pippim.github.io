@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1012922
 type:         Question
-tags:         command-line><sudo><paths
+tags:         command-line sudo paths
 created_date: 2018-03-08 02:31:15
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "1,114 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Can-I-make-_sudo_-follow-my-path-via-CLI_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1394492
 type:         Answer
-tags:         networking><network-manager><ethernet
+tags:         networking network-manager ethernet
 created_date: 2022-02-23 12:06:22
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "678 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
 toc:          false
 navigation:   false

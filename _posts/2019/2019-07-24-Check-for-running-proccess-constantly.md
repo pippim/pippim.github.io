@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160849
 type:         Answer
-tags:         notification><process><notify-send eyesome
+tags:         notification process notify-send eyesome
 created_date: 2019-07-24 23:31:44
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "116 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Check-for-running-proccess-constantly.md
 toc:          false
 navigation:   false

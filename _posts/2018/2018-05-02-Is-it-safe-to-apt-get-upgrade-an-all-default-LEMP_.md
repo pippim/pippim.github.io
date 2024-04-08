@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1031018
 type:         Answer
-tags:         apt><upgrade><mysql><php><nginx
+tags:         apt upgrade mysql php nginx
 created_date: 2018-05-02 10:32:45
 edit_date:    2018-05-02 11:32:05
 votes:        "3 "
 favorites:    
 views:        "243 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-02-Is-it-safe-to-apt-get-upgrade-an-all-default-LEMP_.md
 toc:          false
 navigation:   false

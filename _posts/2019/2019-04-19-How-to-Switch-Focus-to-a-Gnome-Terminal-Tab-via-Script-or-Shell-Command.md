@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/55762022
 type:         Answer
-tags:         bash><ubuntu><gnome-terminal><xdotool><wmctrl
+tags:         bash ubuntu gnome-terminal xdotool wmctrl
 created_date: 2019-04-19 12:41:11
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "2,981 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-19-How-to-Switch-Focus-to-a-Gnome-Terminal-Tab-via-Script-or-Shell-Command.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1491650
 type:         Answer
-tags:         nvidia><graphics><video><fan><sensors
+tags:         nvidia graphics video fan sensors
 created_date: 2023-11-05 21:36:38
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "346 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2023/2023-11-05-Ubuntu-fan-noise-while-watching-videos.md
 toc:          false
 navigation:   false

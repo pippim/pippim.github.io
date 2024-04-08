@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1036727
 type:         Answer
-tags:         18.04><fan><fancontrol
+tags:         18.04 fan fancontrol
 created_date: 2018-05-15 22:29:23
 edit_date:    
 votes:        "8 "
 favorites:    
 views:        "108,234 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-15-Very-high-fan-speed-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991672
 type:         Answer
-tags:         startup><autostart
+tags:         startup autostart
 created_date: 2018-01-03 01:02:31
 edit_date:    2022-10-29 18:17:59
 votes:        "10 "
 favorites:    
 views:        "1,584,232 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-How-to-run-scripts-on-start-up_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1002525
 type:         Answer
-tags:         boot><kernel><systemd><systemd-journald
+tags:         boot kernel systemd systemd-journald
 created_date: 2018-02-03 01:33:54
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
 views:        "17,689 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-03-Why-does-_journalctl-list-boots_-only-show-the-current-boot_.md
 toc:          false
 navigation:   false

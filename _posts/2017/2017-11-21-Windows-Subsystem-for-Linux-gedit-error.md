@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978606
 type:         Answer
-tags:         xubuntu><xfce><gedit><windows-subsystem-for-linux
+tags:         xubuntu xfce gedit windows-subsystem-for-linux
 created_date: 2017-11-21 01:51:11
 edit_date:    
 votes:        "5 "
 favorites:    
 views:        "1,560 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-21-Windows-Subsystem-for-Linux-gedit-error.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183074
 type:         Answer
-tags:         gnome><sound><pulseaudio><gnome-control-center><19.10
+tags:         gnome sound pulseaudio gnome-control-center 19.10
 created_date: 2019-10-22 23:19:51
 edit_date:    
 votes:        "6 "
 favorites:    
 views:        "2,748 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-22-Selected-Sound-Output-Device-Not-Persisting-Between-Reboots-in-gnome-control-center.md
 toc:          false
 navigation:   false

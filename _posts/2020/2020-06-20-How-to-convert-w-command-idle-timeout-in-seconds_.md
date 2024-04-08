@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/62481189
 type:         Answer
-tags:         bash><shell
+tags:         bash shell
 created_date: 2020-06-20 03:11:31
 edit_date:    2020-06-20 17:13:16
 votes:        "1 "
 favorites:    
 views:        "389 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-20-How-to-convert-w-command-idle-timeout-in-seconds_.md
 toc:          false
 navigation:   false

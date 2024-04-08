@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/867747
 type:         Answer
-tags:         hard-drive><ssd><dd><undelete
+tags:         hard-drive ssd dd undelete
 created_date: 2017-01-04 03:17:07
 edit_date:    2017-06-25 19:26:08
 votes:        "4 "
 favorites:    
 views:        "3,391 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-04-Prevent-_dd_-from-destroying-SSD-or-HDD.md
 toc:          false
 navigation:   false

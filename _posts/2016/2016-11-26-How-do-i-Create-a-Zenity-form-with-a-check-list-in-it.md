@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/853717
 type:         Answer
-tags:         16.04><bash><zenity
+tags:         16.04 bash zenity
 created_date: 2016-11-26 02:07:07
 edit_date:    2017-04-13 12:37:16
 votes:        "1 "
 favorites:    
 views:        "14,375 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-i-Create-a-Zenity-form-with-a-check-list-in-it.md
 toc:          false
 navigation:   false

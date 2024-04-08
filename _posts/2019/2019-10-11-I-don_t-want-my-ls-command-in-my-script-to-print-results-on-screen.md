@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180236
 type:         Answer
-tags:         command-line><bash><scripts><printing
+tags:         command-line bash scripts printing
 created_date: 2019-10-11 10:50:43
 edit_date:    2019-10-11 23:01:51
 votes:        "4 "
 favorites:    
 views:        "3,574 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-I-don_t-want-my-ls-command-in-my-script-to-print-results-on-screen.md
 toc:          false
 navigation:   false

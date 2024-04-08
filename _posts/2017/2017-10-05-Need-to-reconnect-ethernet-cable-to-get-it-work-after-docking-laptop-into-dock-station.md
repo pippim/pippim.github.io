@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/962090
 type:         Answer
-tags:         networking><dell><ethernet><dockstation
+tags:         networking dell ethernet dockstation
 created_date: 2017-10-05 00:00:50
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,446 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-05-Need-to-reconnect-ethernet-cable-to-get-it-work-after-docking-laptop-into-dock-station.md
 toc:          false
 navigation:   false

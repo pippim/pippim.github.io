@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021764
 type:         Answer
-tags:         command-line><cron><email><rm
+tags:         command-line cron email rm
 created_date: 2018-04-04 01:50:29
 edit_date:    2018-08-05 17:11:21
 votes:        "6 "
 favorites:    
 views:        "36,183 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-How-do-I-set-Cron-to-send-emails_.md
 toc:          false
 navigation:   false

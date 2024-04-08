@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/39887196
 type:         Question
-tags:         assembly><mbr
+tags:         assembly mbr
 created_date: 2016-10-06 03:46:20
 edit_date:    2023-05-21 06:58:20
 votes:        "2 "
 favorites:    0
 views:        "79 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-06-Call-Grub-_MBR_-from-Linux.md
 toc:          false
 navigation:   false

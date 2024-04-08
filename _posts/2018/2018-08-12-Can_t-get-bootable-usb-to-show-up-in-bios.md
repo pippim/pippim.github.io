@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064760
 type:         Answer
-tags:         boot><18.04><live-usb
+tags:         boot 18.04 live-usb
 created_date: 2018-08-12 20:13:20
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "7,225 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Can_t-get-bootable-usb-to-show-up-in-bios.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1205502
 type:         Answer
-tags:         keyboard><shortcut-keys
+tags:         keyboard shortcut-keys
 created_date: 2020-01-24 20:44:31
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "901 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-24-How-can-I-remap-caps-lock-to-caps-lock-after-unmapping-it_.md
 toc:          false
 navigation:   false

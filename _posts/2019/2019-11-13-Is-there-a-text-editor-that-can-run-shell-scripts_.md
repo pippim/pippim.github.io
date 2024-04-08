@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188435
 type:         Answer
-tags:         scripts><text-editor
+tags:         scripts text-editor
 created_date: 2019-11-13 12:46:32
 edit_date:    2020-06-12 14:37:07
 votes:        "16 "
 favorites:    
 views:        "11,340 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-13-Is-there-a-text-editor-that-can-run-shell-scripts_.md
 toc:          false
 navigation:   false

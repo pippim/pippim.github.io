@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/831765
 type:         Answer
-tags:         16.04><suspend><shutdown><lid
+tags:         16.04 suspend shutdown lid
 created_date: 2016-09-30 23:12:23
 edit_date:    
 votes:        "6 "
 favorites:    
 views:        "6,607 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-Laptop-lid-close-doesn_t-suspend-then-the-battery-dies.md
 toc:          false
 navigation:   false

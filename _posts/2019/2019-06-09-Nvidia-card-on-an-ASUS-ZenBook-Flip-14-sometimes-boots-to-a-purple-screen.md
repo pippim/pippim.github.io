@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1149719
 type:         Answer
-tags:         boot><nvidia><login><freeze grub
+tags:         boot nvidia login freeze grub
 created_date: 2019-06-09 03:40:06
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "713 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-09-Nvidia-card-on-an-ASUS-ZenBook-Flip-14-sometimes-boots-to-a-purple-screen.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1033381
 type:         Answer
-tags:         command-line><software-recommendation><gui><system><monitoring conky
+tags:         command-line software-recommendation gui system monitoring conky
 created_date: 2018-05-08 02:27:12
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "363,706 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-What-system-monitoring-tools-are-available_.md
 toc:          false
 navigation:   false

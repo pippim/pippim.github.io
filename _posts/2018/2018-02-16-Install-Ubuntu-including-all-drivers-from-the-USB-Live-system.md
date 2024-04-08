@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1006666
 type:         Answer
-tags:         system-installation><live-usb
+tags:         system-installation live-usb
 created_date: 2018-02-16 03:12:50
 edit_date:    2018-02-19 19:53:59
 votes:        "2 "
 favorites:    
 views:        "19,374 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-16-Install-Ubuntu-including-all-drivers-from-the-USB-Live-system.md
 toc:          false
 navigation:   false

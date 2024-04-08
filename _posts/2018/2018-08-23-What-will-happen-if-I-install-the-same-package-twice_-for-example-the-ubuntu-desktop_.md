@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1068333
 type:         Answer
-tags:         apt><gui
+tags:         apt gui
 created_date: 2018-08-23 21:47:16
 edit_date:    2018-08-23 23:43:28
 votes:        "3 "
 favorites:    
 views:        "2,125 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-will-happen-if-I-install-the-same-package-twice_-for-example-the-ubuntu-desktop_.md
 toc:          false
 navigation:   false

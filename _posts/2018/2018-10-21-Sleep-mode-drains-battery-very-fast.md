@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1085901
 type:         Answer
-tags:         18.04><suspend><battery
+tags:         18.04 suspend battery
 created_date: 2018-10-21 17:30:14
 edit_date:    2018-10-21 20:25:21
 votes:        "9 "
 favorites:    
 views:        "16,584 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-21-Sleep-mode-drains-battery-very-fast.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1020887
 type:         Answer
-tags:         software-recommendation><gpu conky
+tags:         software-recommendation gpu conky
 created_date: 2018-03-31 17:44:58
 edit_date:    2019-07-08 10:35:06
 votes:        "20 "
 favorites:    
 views:        "589,455 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-measure-GPU-usage_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159563
 type:         Answer
-tags:         apt><upgrade><unattended-upgrades
+tags:         apt upgrade unattended-upgrades
 created_date: 2019-07-20 00:07:30
 edit_date:    2019-07-22 16:31:21
 votes:        "2 "
 favorites:    
 views:        "9,549 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-20-Unattended-upgrade-is-ignoring-some-packages.md
 toc:          false
 navigation:   false

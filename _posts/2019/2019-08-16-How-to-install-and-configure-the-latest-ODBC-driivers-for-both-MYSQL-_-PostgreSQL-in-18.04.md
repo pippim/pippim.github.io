@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1166294
 type:         Answer
-tags:         18.04><mysql><postgresql><odbc
+tags:         18.04 mysql postgresql odbc
 created_date: 2019-08-16 23:43:36
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "9,479 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-16-How-to-install-and-configure-the-latest-ODBC-driivers-for-both-MYSQL-_-PostgreSQL-in-18.04.md
 toc:          false
 navigation:   false

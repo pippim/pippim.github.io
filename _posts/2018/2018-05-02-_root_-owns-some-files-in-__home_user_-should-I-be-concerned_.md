@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1031303
 type:         Question
-tags:         package-management><root><home-directory><dbus><ownership
+tags:         package-management root home-directory dbus ownership
 created_date: 2018-05-02 23:14:32
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "2,393 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-02-_root_-owns-some-files-in-__home_user_-should-I-be-concerned_.md
 toc:          false
 navigation:   false

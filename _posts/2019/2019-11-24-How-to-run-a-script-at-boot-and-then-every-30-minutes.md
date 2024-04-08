@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191405
 type:         Answer
-tags:         server><scripts><cron><automation eyesome
+tags:         server scripts cron automation eyesome
 created_date: 2019-11-24 21:15:24
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
 views:        "3,189 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-How-to-run-a-script-at-boot-and-then-every-30-minutes.md
 toc:          false
 navigation:   false

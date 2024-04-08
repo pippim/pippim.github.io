@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/836291
 type:         Answer
-tags:         upgrade><lts><release-management><testing><beta
+tags:         upgrade lts release-management testing beta
 created_date: 2016-10-13 00:33:34
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "107 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-13-Acquiring-pre-releases_betas-for-unreleased-distros-for-testing.md
 toc:          false
 navigation:   false

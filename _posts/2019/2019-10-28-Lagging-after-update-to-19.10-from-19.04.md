@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1184571
 type:         Answer
-tags:         updates><graphics><19.10 grub
+tags:         updates graphics 19.10 grub
 created_date: 2019-10-28 22:57:52
 edit_date:    
 votes:        "4 "
 favorites:    
 views:        "2,287 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-28-Lagging-after-update-to-19.10-from-19.04.md
 toc:          false
 navigation:   false

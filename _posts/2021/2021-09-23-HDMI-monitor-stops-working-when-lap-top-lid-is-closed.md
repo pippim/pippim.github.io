@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1365346
 type:         Answer
-tags:         multiple-monitors><power-management><hdmi
+tags:         multiple-monitors power-management hdmi
 created_date: 2021-09-23 12:56:12
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "248 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-09-23-HDMI-monitor-stops-working-when-lap-top-lid-is-closed.md
 toc:          false
 navigation:   false

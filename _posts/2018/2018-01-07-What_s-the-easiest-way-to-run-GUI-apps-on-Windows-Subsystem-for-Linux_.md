@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993331
 type:         Answer
-tags:         gui><windows-subsystem-for-linux yad
+tags:         gui windows-subsystem-for-linux yad
 created_date: 2018-01-07 19:59:43
 edit_date:    2019-06-07 02:14:40
 votes:        "102 "
 favorites:    
 views:        "309,425 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-What_s-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux_.md
 toc:          false
 navigation:   false

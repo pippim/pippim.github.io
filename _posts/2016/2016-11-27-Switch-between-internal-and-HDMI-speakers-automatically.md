@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854079
 type:         Answer
-tags:         16.04><sound><pulseaudio><alsa><hdmi
+tags:         16.04 sound pulseaudio alsa hdmi
 created_date: 2016-11-27 02:34:12
 edit_date:    2017-02-08 00:15:52
 votes:        "9 "
 favorites:    
 views:        "11,487 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-27-Switch-between-internal-and-HDMI-speakers-automatically.md
 toc:          false
 navigation:   true

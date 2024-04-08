@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/876684
 type:         Answer
-tags:         nvidia><multiple-monitors><display><monitor
+tags:         nvidia multiple-monitors display monitor
 created_date: 2017-01-27 00:23:33
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "3,230 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-HDMI-monitor-not-detected-by-laptop-after-unplugging-and-plugging-back-in.md
 toc:          false
 navigation:   false

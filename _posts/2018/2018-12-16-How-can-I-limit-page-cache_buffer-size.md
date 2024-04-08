@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102222
 type:         Answer
-tags:         ram><swap><rsync><18.10
+tags:         ram swap rsync 18.10
 created_date: 2018-12-16 00:59:36
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,656 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-How-can-I-limit-page-cache_buffer-size.md
 toc:          false
 navigation:   false

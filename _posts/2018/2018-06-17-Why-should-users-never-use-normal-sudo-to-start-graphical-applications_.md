@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047413
 type:         Answer
-tags:         sudo><gui><gksu
+tags:         sudo gui gksu
 created_date: 2018-06-17 18:15:48
 edit_date:    2020-06-12 14:37:07
 votes:        "15 "
 favorites:    
 views:        "35,888 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-Why-should-users-never-use-normal-sudo-to-start-graphical-applications_.md
 toc:          false
 navigation:   false

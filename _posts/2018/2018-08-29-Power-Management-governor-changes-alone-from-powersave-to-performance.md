@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069961
 type:         Answer
-tags:         18.04><power-management><cpu><overheating><tlp
+tags:         18.04 power-management cpu overheating tlp
 created_date: 2018-08-29 01:17:00
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "3,036 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-29-Power-Management-governor-changes-alone-from-powersave-to-performance.md
 toc:          false
 navigation:   false

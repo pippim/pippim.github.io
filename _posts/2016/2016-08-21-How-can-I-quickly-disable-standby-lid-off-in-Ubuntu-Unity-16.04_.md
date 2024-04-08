@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/815082
 type:         Answer
-tags:         software-recommendation><suspend><power-management
+tags:         software-recommendation suspend power-management
 created_date: 2016-08-21 20:32:10
 edit_date:    
 votes:        "6 "
 favorites:    
 views:        "1,551 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-21-How-can-I-quickly-disable-standby-lid-off-in-Ubuntu-Unity-16.04_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1184884
 type:         Answer
-tags:         boot><18.04><keyboard><login-screen><numlock
+tags:         boot 18.04 keyboard login-screen numlock
 created_date: 2019-10-30 00:37:11
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "5,563 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-30-How-to-stop-Ubuntu-from-changing-numlock-state-on-boot_.md
 toc:          false
 navigation:   false

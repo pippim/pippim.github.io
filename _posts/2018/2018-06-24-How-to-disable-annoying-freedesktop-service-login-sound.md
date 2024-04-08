@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1049343
 type:         Answer
-tags:         sound><pulseaudio><notification><xmpp
+tags:         sound pulseaudio notification xmpp
 created_date: 2018-06-24 15:41:59
 edit_date:    
 votes:        "0 "
 favorites:    
 views:        "546 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-24-How-to-disable-annoying-freedesktop-service-login-sound.md
 toc:          false
 navigation:   false

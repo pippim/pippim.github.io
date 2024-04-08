@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196576
 type:         Answer
-tags:         18.04><wireless
+tags:         18.04 wireless
 created_date: 2019-12-16 16:06:48
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "994 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-16-wifi-drops-after-~12-hours_-cannot-recover-except-by-reboot.md
 toc:          false
 navigation:   false

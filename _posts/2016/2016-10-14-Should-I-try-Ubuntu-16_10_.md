@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/836937
 type:         Answer
-tags:         16.04><16.10
+tags:         16.04 16.10
 created_date: 2016-10-14 10:31:50
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "261 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Should-I-try-Ubuntu-16_10_.md
 toc:          false
 navigation:   false

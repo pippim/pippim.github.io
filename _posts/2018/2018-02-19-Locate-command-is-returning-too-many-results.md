@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007525
 type:         Question
-tags:         command-line><bash><scripts><duplicate><duplicate-files
+tags:         command-line bash scripts duplicate duplicate-files
 created_date: 2018-02-19 01:31:51
 edit_date:    2018-03-30 00:24:24
 votes:        "2 "
 favorites:    
 views:        "344 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-19-Locate-command-is-returning-too-many-results.md
 toc:          false
 navigation:   false

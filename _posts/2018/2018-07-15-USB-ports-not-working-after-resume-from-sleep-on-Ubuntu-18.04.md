@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1056420
 type:         Answer
-tags:         usb><18.04
+tags:         usb 18.04
 created_date: 2018-07-15 23:56:01
 edit_date:    2020-12-19 09:02:59
 votes:        "9 "
 favorites:    
 views:        "14,950 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-15-USB-ports-not-working-after-resume-from-sleep-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1070319
 type:         Answer
-tags:         16.04><unity><workspaces><external-monitor><thunderbolt
+tags:         16.04 unity workspaces external-monitor thunderbolt
 created_date: 2018-08-30 00:26:12
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "1,946 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-30-Windows-move-between-workspaces-when-screen-turns-off.md
 toc:          false
 navigation:   false

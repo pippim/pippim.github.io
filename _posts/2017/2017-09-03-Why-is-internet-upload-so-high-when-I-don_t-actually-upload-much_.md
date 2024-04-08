@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/952431
 type:         Answer
-tags:         networking><firefox><google-chrome><monitoring><bandwidth vnstat conky
+tags:         networking firefox google-chrome monitoring bandwidth vnstat conky
 created_date: 2017-09-03 16:51:09
 edit_date:    2018-01-07 20:55:09
 votes:        "2 "
 favorites:    
 views:        "4,547 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don_t-actually-upload-much_.md
 toc:          true
 navigation:   true

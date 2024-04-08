@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1031774
 type:         Answer
-tags:         kernel><vmware><ram><memory-usage><cache
+tags:         kernel vmware ram memory-usage cache
 created_date: 2018-05-03 23:51:15
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "549 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-03-Is-there-a-way-of-limiting-the-Kernel_s-memory-manager-to-use-only-75_-of-memory_.md
 toc:          false
 navigation:   false

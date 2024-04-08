@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1033800
 type:         Answer
-tags:         xorg><18.04><ubuntu-gnome><window-manager
+tags:         xorg 18.04 ubuntu-gnome window-manager
 created_date: 2018-05-08 23:46:30
 edit_date:    2018-05-09 11:31:48
 votes:        "2 "
 favorites:    
 views:        "11,539 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-Strange-graphics-issue-after-upgrading-to-18.04-that-affects-only-one-user-account.md
 toc:          false
 navigation:   false

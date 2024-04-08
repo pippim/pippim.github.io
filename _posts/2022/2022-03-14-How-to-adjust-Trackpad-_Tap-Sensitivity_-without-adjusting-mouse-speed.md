@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1397394
 type:         Answer
-tags:         mouse><touchpad><synaptics><multi-touch
+tags:         mouse touchpad synaptics multi-touch
 created_date: 2022-03-14 01:02:06
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "447 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-03-14-How-to-adjust-Trackpad-_Tap-Sensitivity_-without-adjusting-mouse-speed.md
 toc:          false
 navigation:   false

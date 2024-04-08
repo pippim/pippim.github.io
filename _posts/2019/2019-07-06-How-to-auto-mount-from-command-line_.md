@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1156456
 type:         Answer
-tags:         command-line><mount
+tags:         command-line mount
 created_date: 2019-07-06 20:27:02
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "46,061 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-How-to-auto-mount-from-command-line_.md
 toc:          false
 navigation:   true

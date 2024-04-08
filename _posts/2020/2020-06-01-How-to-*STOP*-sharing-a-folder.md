@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245644
 type:         Answer
-tags:         nautilus><samba><file-sharing><sharing
+tags:         nautilus samba file-sharing sharing
 created_date: 2020-06-01 01:32:39
 edit_date:    2020-06-01 01:37:56
 votes:        "1 "
 favorites:    
 views:        "4,077 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-01-How-to-*STOP*-sharing-a-folder.md
 toc:          false
 navigation:   false

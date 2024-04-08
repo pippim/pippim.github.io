@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1128496
 type:         Answer
-tags:         18.04><gnome><gedit
+tags:         18.04 gnome gedit
 created_date: 2019-03-25 10:58:13
 edit_date:    2019-07-01 18:14:53
 votes:        "4 "
 favorites:    
 views:        "4,655 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-25-How-to-clear-history-in-Gedit_-_Ubuntu-18.04_.md
 toc:          false
 navigation:   false

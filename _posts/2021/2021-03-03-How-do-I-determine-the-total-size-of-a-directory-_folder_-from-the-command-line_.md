@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1320936
 type:         Answer
-tags:         filesystem><command-line
+tags:         filesystem command-line
 created_date: 2021-03-03 21:45:02
 edit_date:    
 votes:        "3 "
 favorites:    
 views:        "1,736,631 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-03-03-How-do-I-determine-the-total-size-of-a-directory-_folder_-from-the-command-line_.md
 toc:          false
 navigation:   false

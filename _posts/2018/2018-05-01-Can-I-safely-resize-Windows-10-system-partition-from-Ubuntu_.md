@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1030518
 type:         Answer
-tags:         dual-boot><partitioning><gparted
+tags:         dual-boot partitioning gparted
 created_date: 2018-05-01 10:34:33
 edit_date:    2018-05-01 10:52:57
 votes:        "6 "
 favorites:    
 views:        "12,195 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Can-I-safely-resize-Windows-10-system-partition-from-Ubuntu_.md
 toc:          false
 navigation:   false

@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1151970
 type:         Answer
-tags:         command-line><tar><image-processing><compression><batch
+tags:         command-line tar image-processing compression batch
 created_date: 2019-06-18 11:32:51
 edit_date:    2019-06-18 23:00:33
 votes:        "1 "
 favorites:    
 views:        "337 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-18-How-to-compress-3000-images-in-batches-of-50.md
 toc:          false
 navigation:   false

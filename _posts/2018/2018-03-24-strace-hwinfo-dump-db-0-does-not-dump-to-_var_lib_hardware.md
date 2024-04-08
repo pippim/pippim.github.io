@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018828
 type:         Answer
-tags:         command-line><hardware
+tags:         command-line hardware
 created_date: 2018-03-24 11:23:40
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
 views:        "179 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-24-strace-hwinfo-dump-db-0-does-not-dump-to-_var_lib_hardware.md
 toc:          false
 navigation:   false

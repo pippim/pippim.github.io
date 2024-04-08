@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/827197
 type:         Answer
-tags:         16.04><kernel><external-monitor grub
+tags:         16.04 kernel external-monitor grub
 created_date: 2016-09-20 00:48:08
 edit_date:    
 votes:        "1 "
 favorites:    
 views:        "719 "
 accepted:     Accepted
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-20-Secondary-monitor-not-recognized-under-Ubuntu-16.04-with-kernel-4.7.4.md
 toc:          false
 navigation:   false

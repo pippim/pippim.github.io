@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035788
 type:         Answer
-tags:         icons><themes><gnome-terminal><titlebar><window-buttons
+tags:         icons themes gnome-terminal titlebar window-buttons
 created_date: 2018-05-13 17:42:40
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "3,881 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Terminal-icon-in-window-titlebar-is-stretched-out-over-window-control-buttons.md
 toc:          false
 navigation:   false

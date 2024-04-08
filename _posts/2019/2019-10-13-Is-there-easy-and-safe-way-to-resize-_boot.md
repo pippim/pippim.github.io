@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180692
 type:         Answer
-tags:         boot><server><resize
+tags:         boot server resize
 created_date: 2019-10-13 16:33:07
 edit_date:    
 votes:        "2 "
 favorites:    
 views:        "2,401 "
 accepted:     
-uploaded:     2024-04-08 16:06:13
+uploaded:     2024-04-08 16:45:36
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-Is-there-easy-and-safe-way-to-resize-_boot.md
 toc:          false
 navigation:   false
