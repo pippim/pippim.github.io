@@ -947,42 +947,59 @@ using Python version 2.7.12. For Python 3+ versions, substitute `python3`
 below where it says `python`:
 
 ``` shell
-    sudo apt install compiz                  # for Hockey (smooth shark move)
-    sudo apt install dconf-editor            # for Hockey (gsettings)
-    sudo apt install ffmpeg                  # for artwork, ffprobe and ffplay
-    sudo apt install gstreamer1.0-tools      # For encoding CDs gst-launch-1.0
-    sudo apt install kid3                    # Optional for editing metadata
-    sudo apt install pauvcontrol             # For VU Meters (sound redirect)
-    sudo apt install pqiv                    # Make transparent Shark (Hockey)
-    sudo apt install python-appdirs          # Application directory names
-    sudo apt install python-beautifulsoup    # Scrape Song lyrics
-    sudo apt install python-gi               # Gnome window functions (newer)
-    sudo apt install gir1.2-wnck-3.0         # Gnome window functions (older?)
-    # NOTE: python-wnck not tested but may work instead of gi + gir1.2-wnck-3.0
-    sudo apt install python-libdiscid        # Get CD's disc ID
-    sudo apt install python-notify2          # Popup bubble messages
-    sudo apt install python-numpy            # Installed by default in Ubuntu
-    sudo apt install python-magic            # Get file type "magic" information
-    sudo apt install python-musicbrainzngs   # Get metadata for CD
-    sudo apt install python-mutagen          # Encode and ID3 tags
-    sudo apt install python-pil              # PIL graphics routines
-    sudo apt install python-pil.imagetk      # PIL image processing
-    sudo apt install python-pyaudio          # For background job vu_meter.py
-    sudo apt install python-requests         # Get Cover Art
-    sudo apt install python-selenium         # Automated YouTube Playlist play
-    sudo apt install python-subprocess32     # To compare locations
-    sudo apt install python-simplejson       # automatically installed Ubuntu
-    sudo apt install python-tk               # Tkinter (default in Windows & Mac)
-    sudo apt install wmctrl                  # To move Kid3 or Fishing window
-    sudo apt install x11-apps                # xwd window dump (screen shot)
-    sudo apt install xclip                   # Insert clipboard
-    sudo apt install xdotool                 # To move Kid3 or Fishing window
+sudo apt install compiz                  # for Hockey (smooth shark move)
+sudo apt install dconf-editor            # for Hockey (gsettings)
+sudo apt install ffmpeg                  # for artwork, ffprobe and ffplay
+sudo apt install gstreamer1.0-tools      # For encoding CDs gst-launch-1.0
+sudo apt install kid3                    # Optional for editing metadata
+sudo apt install pauvcontrol             # For VU Meters (sound redirect)
+sudo apt install pqiv                    # Make transparent Shark (Hockey)
+sudo apt install python-appdirs          # Application directory names
+sudo apt install python-beautifulsoup    # Scrape Song lyrics
+sudo apt install python-gi               # Gnome window functions (newer)
+sudo apt install gir1.2-wnck-3.0         # Gnome window functions (older?)
+# NOTE: python-wnck not tested but may work instead of gi + gir1.2-wnck-3.0
+sudo apt install python-libdiscid        # Get CD's disc ID
+sudo apt install python-notify2          # Popup bubble messages
+sudo apt install python-numpy            # Installed by default in Ubuntu
+sudo apt install python-magic            # Get file type "magic" information
+sudo apt install python-musicbrainzngs   # Get metadata for CD
+sudo apt install python-mutagen          # Encode and ID3 tags
+sudo apt install python-pil              # PIL graphics routines
+sudo apt install python-pil.imagetk      # PIL image processing
+sudo apt install python-pyaudio          # For background job vu_meter.py
+sudo apt install python-requests         # Get Cover Art
+sudo apt install python-selenium         # Automated YouTube Playlist play
+sudo apt install python-subprocess32     # To compare locations
+sudo apt install python-simplejson       # automatically installed Ubuntu
+sudo apt install python-tk               # Tkinter (default in Windows & Mac)
+sudo apt install wmctrl                  # To move Kid3 or Fishing window
+sudo apt install x11-apps                # xwd window dump (screen shot)
+sudo apt install xclip                   # Insert clipboard
+sudo apt install xdotool                 # To move Kid3 or Fishing window
 ```
 
 Additionally, there are external repositories (PPA) that need to be
 installed.
 
 ``` shell
+
+ffmpeg & ffprobe
+============================================================================
+The versions released with Ubuntu can be 8 years old. For example, In the
+year 2024, Ubuntu 16.04 LTS ESM has ffmpeg version 2.8.17 from 2016. As of
+April 2024, stable 6.1 versions of ffmpeg and ffprobe can be found at:
+
+   https://ffmpeg.org/download.html
+
+ffmpeg version 3.1 is minimum version for "loudnorm" filter processing. The
+"loudnorm" filter is used to normalize maximum volume levels to 0 dB. You
+can install ffmpeg and ffprobe to ~/bin and keep original versions in
+/usr/bin.
+
+
+External Repositories
+============================================================================
 sudo add-apt-repository ppa:j-4321-i/ttkwidgets  # CheckboxTreeview
 # This is necessary for ttkwidgets and ttkcaldenar
 sudo apt-get update
