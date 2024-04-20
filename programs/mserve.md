@@ -1732,7 +1732,7 @@ a "mulligan". Then we click again as the music catches up.
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
 
-# Hide Chronology List Button
+# Hide/Show Chronology
 
 The *Chronology Song List* shows:
  
