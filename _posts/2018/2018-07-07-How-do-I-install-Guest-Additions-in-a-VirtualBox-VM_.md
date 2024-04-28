@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,545,220 "
 accepted:     
-uploaded:     2024-04-08 16:45:36
+uploaded:     2024-04-28 11:15:16
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-07-How-do-I-install-Guest-Additions-in-a-VirtualBox-VM_.md
 toc:          false
 navigation:   false
