@@ -10,9 +10,9 @@ created_date: 2016-11-04 19:43:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "268 "
+views:        "269 "
 accepted:     
-uploaded:     2024-04-28 11:15:16
+uploaded:     2024-05-05 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-04-Grub-lists-unknown-kernels.md
 toc:          false
 navigation:   false

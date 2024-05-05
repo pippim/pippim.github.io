@@ -8,11 +8,11 @@ type:         Answer
 tags:         fonts tty
 created_date: 2019-06-04 02:20:04
 edit_date:    
-votes:        "6 "
+votes:        "7 "
 favorites:    
-views:        "5,130 "
+views:        "5,269 "
 accepted:     Accepted
-uploaded:     2024-04-28 11:15:16
+uploaded:     2024-05-05 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-04-How-can-I-double-the-tty-font-size-on-a-3840x2160-monitor_.md
 toc:          false
 navigation:   false

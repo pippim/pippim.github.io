@@ -10,9 +10,9 @@ created_date: 2018-03-19 01:22:18
 edit_date:    2018-03-19 10:27:21
 votes:        "3 "
 favorites:    
-views:        "334 "
+views:        "336 "
 accepted:     
-uploaded:     2024-04-28 11:15:16
+uploaded:     2024-05-05 11:15:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-How-do-I-distinguish-between-a-command_-utility_-or-builtin-for-getting-documentation_.md
 toc:          false
 navigation:   false

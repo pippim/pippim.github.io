@@ -28,6 +28,7 @@
 #       Apr 13 2022 - Add tim-ta.md (Timed Tasks)
 #       Dec 31 2023 - Add 80 missing blog posts
 #       Mar 31 2024 - SE changed "<tag><tag>..<tag>" to "|tag|tag..|tag|"
+#       Apr 08 2024 - SE changed back to "<tag><tag>..<tag>"
 #
 # ==============================================================================
 
@@ -173,7 +174,9 @@ top_posts = []              # List of tuples [(views, title, our_url])
 
 ''' SE Sites to exclude from our website '''
 EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
-                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
+                 # "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
+                 # 2024-04-30 - Posted SE Data Explorer (SEDE) query crash
+                 "Sports", "Meta Stack Overflow",  # Want SEDE to appear.
                  "Medical Sciences", "Ask Ubuntu Meta"]
 
 TITLE_SEARCH_POINTS = 10.0  # ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
