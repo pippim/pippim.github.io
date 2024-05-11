@@ -2869,7 +2869,7 @@ coordinates. These are not touched by mserve.
 > 
 > `monitors.py Monitors().get_home_monitor(): x: 2261 y: 2740 w: 1300 h: 902 x2: 3561 y2: 3642` 
 > 
-> `   name: Python3` 
+> `name: Python3` 
 > 
 > `monitor.name: HDMI-0 monitor.x: 0 +y: 0  height: 1080  width: 1920 x2: 1920 y2: 1080` 
 > 
