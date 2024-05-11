@@ -2867,12 +2867,12 @@ coordinates. These are not touched by mserve.
 > 
 > - Output in console and information centre will show:
 > 
-> ```monitors.py Monitors().get_home_monitor(): x: 2261 y: 2740 w: 1300 h: 902 x2: 3561 y2: 3642 
->	name: Python3 
-> monitor.name: HDMI-0 monitor.x: 0 +y: 0  height: 1080  width: 1920 x2: 1920 y2: 1080 
-> monitor.name: DP-1-1 monitor.x: 1920 +y: 0  height: 2160  width: 3840 x2: 5760 y2: 2160 
-> monitor.name: eDP-1-1 monitor.x: 3870 +y: 2160  height: 1080  width: 1920 x2: 5790 y2: 3240 
-> closest_x: eDP-1-1 closest_y: eDP-1-1```
+>```monitors.py Monitors().get_home_monitor(): x: 2261 y: 2740 w: 1300 h: 902 x2: 3561 y2: 3642
+    name: Python3
+monitor.name: HDMI-0 monitor.x: 0 +y: 0  height: 1080  width: 1920 x2: 1920 y2: 1080
+monitor.name: DP-1-1 monitor.x: 1920 +y: 0  height: 2160  width: 3840 x2: 5760 y2: 2160
+monitor.name: eDP-1-1 monitor.x: 3870 +y: 2160  height: 1080  width: 1920 x2: 5790 y2: 3240
+closest_x: eDP-1-1 closest_y: eDP-1-1```
 > 
 > - A few lines down their is further output: 
 >  
