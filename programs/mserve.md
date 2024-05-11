@@ -2862,12 +2862,12 @@ computer.
 >
 > - System panels and windows can intentionally have negative x and y
 coordinates. These are not touched by mserve.
+> 
 > - mserve picks the closest monitor to move a window to.
 > 
 > - Output in console and information centre will show:
 > 
-> ``` shell 
-> monitors.py Monitors().get_home_monitor(): x: 2261 y: 2740 w: 1300 h: 902 x2: 3561 y2: 3642 
+> ```monitors.py Monitors().get_home_monitor(): x: 2261 y: 2740 w: 1300 h: 902 x2: 3561 y2: 3642 
 >	name: Python3 
 > monitor.name: HDMI-0 monitor.x: 0 +y: 0  height: 1080  width: 1920 x2: 1920 y2: 1080 
 > monitor.name: DP-1-1 monitor.x: 1920 +y: 0  height: 2160  width: 3840 x2: 5760 y2: 2160 
@@ -2875,8 +2875,8 @@ coordinates. These are not touched by mserve.
 > closest_x: eDP-1-1 closest_y: eDP-1-1```
 > 
 > - A few lines down their is further output: 
-> ``` shell 
-> home_mon: Monitor(number=2, name='eDP-1-1', x=3870, y=2160, width=1920, height=1080, primary=True) 
+>  
+> ```home_mon: Monitor(number=2, name='eDP-1-1', x=3870, y=2160, width=1920, height=1080, primary=True) 
 > window: Window(number=92274698L, name='Python3', x=2261, y=2740, width=1300, height=902) 
 > ERROR: Window is off screen at x + y: 2261 + 2740 x_cutoff: 5740 y_cutoff: 3190 
 >   Window(number=92274698L, name='Python3', x=2261, y=2740, width=1300, height=902) 
