@@ -2848,6 +2848,12 @@ calling `calc.py`. You may have to mark it as an executable first using
 This screenshot shows how a window can be outside a monitor's viewable
 area.
 
+Notice the window "Python3" is in the white area's bottom central 
+region. The white area is a "dead-zone" around the three monitors.
+
+A window can enter the dead-zone when a monitor is disconnected from the 
+computer.
+
 
 ### *Debug Information* Sample Screen Notes
 {:.no_toc}
@@ -2885,6 +2891,10 @@ area.
 This screenshot shows how the window named "Python3" was moved into 
 the third monitor on the lower right.
 
+The window "Python3" is no longer in the "dead-zone".
+
+The process of moving windows out of the dead-zone is run when the
+***Debug Information*** option is picked from the *Tools Dropdown Menu*
 
 ---
 
