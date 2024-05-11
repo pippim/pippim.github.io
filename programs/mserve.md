@@ -2839,10 +2839,10 @@ calling `calc.py`. You may have to mark it as an executable first using
 ## *Debug Information* Sample Screen
 
 
-{% include image.html src="/assets/img/mserve/mserve windows off monitors.png"
-   alt="mserve windows off monitors.png"
+{% include image.html src="/assets/img/mserve/mserve window off monitors.png"
+   alt="mserve window off monitors.png"
    style="float: left; width: 80%; margin: 1rem 2rem 1rem 0;"
-   caption="mserve windows off monitors.png"
+   caption="mserve window off monitors.png"
 %}
 
 This screenshot shows how a window can be outside a monitor's viewable
@@ -2876,10 +2876,10 @@ area.
 
 
 
-{% include image.html src="/assets/img/mserve/mserve fix windows off monitors.png"
-   alt="mserve fix windows off monitors.png"
+{% include image.html src="/assets/img/mserve/mserve fix window off monitors.png"
+   alt="mserve fix window off monitors.png"
    style="float: left; width: 80%; margin: 1rem 2rem 1rem 0;"
-   caption="mserve fix windows off monitors.png"
+   caption="mserve fix window off monitors.png"
 %}
 
 This screenshot shows how the window named "Python3" was moved into 
