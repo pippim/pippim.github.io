@@ -10,9 +10,9 @@ created_date: 2019-08-02 01:32:32
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "14,688 "
+views:        "14,745 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-02-How-do-I-_edit-grub-to-add-iomem_relaxed__.md
 toc:          false
 navigation:   false

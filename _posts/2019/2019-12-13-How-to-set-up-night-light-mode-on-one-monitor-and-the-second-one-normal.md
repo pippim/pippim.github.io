@@ -10,9 +10,9 @@ created_date: 2019-12-13 02:04:38
 edit_date:    2019-12-13 02:31:07
 votes:        "1 "
 favorites:    
-views:        "1,571 "
+views:        "1,575 "
 accepted:     Accepted
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-How-to-set-up-night-light-mode-on-one-monitor-and-the-second-one-normal.md
 toc:          false
 navigation:   false

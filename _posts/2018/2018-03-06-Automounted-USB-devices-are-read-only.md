@@ -10,9 +10,9 @@ created_date: 2018-03-06 03:03:28
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "76,114 "
+views:        "76,115 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-06-Automounted-USB-devices-are-read-only.md
 toc:          false
 navigation:   false

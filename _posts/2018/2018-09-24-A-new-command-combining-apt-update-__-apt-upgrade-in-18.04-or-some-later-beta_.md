@@ -10,9 +10,9 @@ created_date: 2018-09-24 01:54:17
 edit_date:    2018-09-24 01:59:18
 votes:        "3 "
 favorites:    
-views:        "5,108 "
+views:        "5,157 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-24-A-new-command-combining-apt-update-__-apt-upgrade-in-18.04-or-some-later-beta_.md
 toc:          false
 navigation:   false

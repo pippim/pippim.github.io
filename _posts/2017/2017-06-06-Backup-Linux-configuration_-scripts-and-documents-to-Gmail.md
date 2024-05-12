@@ -10,9 +10,9 @@ created_date: 2017-06-06 00:00:07
 edit_date:    2021-05-07 21:29:49
 votes:        "8 "
 favorites:    
-views:        "5,694 "
+views:        "5,701 "
 accepted:     Accepted
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail.md
 toc:          true
 navigation:   true

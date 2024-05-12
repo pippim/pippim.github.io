@@ -7,12 +7,12 @@ stack_url:    https://meta.stackexchange.com/q/399418
 type:         Question
 tags:         support status-planned data-explorer error-message jquery
 created_date: 2024-04-28 17:12:16
-edit_date:    2024-04-30 13:10:57
+edit_date:    2024-05-05 17:27:32
 votes:        "6 "
 favorites:    
-views:        "175 "
+views:        "210 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-04-28-Data-Explorer-Query-crashes-with-collation-conflict-error.md
 toc:          false
 navigation:   false
@@ -32,3 +32,16 @@ in CASE operator occurring in GROUP BY statement column 4.
 Here is the [data explorer query](https://data.stackexchange.com/stackoverflow/query/1529864/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s), last changed on December 12, 2021.
 
 How do I debug this error?
+
+---
+
+# Problem fixed
+
+A week after posting question the problem was [fixed](https://www.pippim.com/2024/04/28/Data-Explorer-Query-crashes-with-collation-conflict-error.html):
+
+[![enter image description here][1]][1]
+
+
+### Many thanks for the answers posted below!
+
+  [1]: https://i.sstatic.net/195OOXx3.png

@@ -10,9 +10,9 @@ created_date: 2024-01-31 13:13:21
 edit_date:    
 votes:        "11 "
 favorites:    
-views:        "814 "
+views:        "815 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-01-31-touch-t-errors-on-last-Sundays-of-March.md
 toc:          false
 navigation:   false

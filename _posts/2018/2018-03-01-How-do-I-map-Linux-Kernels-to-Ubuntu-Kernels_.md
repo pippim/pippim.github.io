@@ -10,9 +10,9 @@ created_date: 2018-03-01 01:01:21
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "750 "
+views:        "752 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels_.md
 toc:          false
 navigation:   false

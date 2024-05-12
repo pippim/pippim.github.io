@@ -10,9 +10,9 @@ created_date: 2022-03-14 01:02:06
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "469 "
+views:        "475 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-03-14-How-to-adjust-Trackpad-_Tap-Sensitivity_-without-adjusting-mouse-speed.md
 toc:          false
 navigation:   false

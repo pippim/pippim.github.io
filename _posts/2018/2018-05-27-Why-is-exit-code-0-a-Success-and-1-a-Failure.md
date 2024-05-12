@@ -10,9 +10,9 @@ created_date: 2018-05-27 14:37:23
 edit_date:    2018-05-27 16:04:12
 votes:        "7 "
 favorites:    
-views:        "4,231 "
+views:        "4,239 "
 accepted:     Accepted
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-27-Why-is-exit-code-0-a-Success-and-1-a-Failure.md
 toc:          false
 navigation:   false

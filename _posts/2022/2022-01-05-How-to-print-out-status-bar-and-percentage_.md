@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "294,272 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-01-05-How-to-print-out-status-bar-and-percentage_.md
 toc:          false
 navigation:   true

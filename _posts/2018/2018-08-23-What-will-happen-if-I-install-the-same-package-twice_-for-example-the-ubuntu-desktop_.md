@@ -10,9 +10,9 @@ created_date: 2018-08-23 21:47:16
 edit_date:    2018-08-23 23:43:28
 votes:        "3 "
 favorites:    
-views:        "2,150 "
+views:        "2,155 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-will-happen-if-I-install-the-same-package-twice_-for-example-the-ubuntu-desktop_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "467,232 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-07-07-Using-global-variables-between-files_.md
 toc:          false
 navigation:   false

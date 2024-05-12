@@ -10,9 +10,9 @@ created_date: 2017-02-20 00:23:47
 edit_date:    2018-02-25 15:14:36
 votes:        "20 "
 favorites:    
-views:        "613,291 "
+views:        "613,562 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_.md
 toc:          false
 navigation:   false

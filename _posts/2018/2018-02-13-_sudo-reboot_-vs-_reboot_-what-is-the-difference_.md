@@ -10,9 +10,9 @@ created_date: 2018-02-13 20:42:21
 edit_date:    
 votes:        "9 "
 favorites:    
-views:        "90,261 "
+views:        "90,474 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-13-_sudo-reboot_-vs-_reboot_-what-is-the-difference_.md
 toc:          false
 navigation:   false

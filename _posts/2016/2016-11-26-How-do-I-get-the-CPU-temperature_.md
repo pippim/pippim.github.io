@@ -8,11 +8,11 @@ type:         Answer
 tags:         hardware cpu temperature monitoring sensors conky
 created_date: 2016-11-26 22:15:04
 edit_date:    2018-10-15 10:41:04
-votes:        "154 "
+votes:        "155 "
 favorites:    
-views:        "1,788,459 "
+views:        "1,791,155 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-I-get-the-CPU-temperature_.md
 toc:          false
 navigation:   false

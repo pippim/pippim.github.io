@@ -10,9 +10,9 @@ created_date: 2018-11-13 21:18:41
 edit_date:    2018-12-29 20:58:31
 votes:        "16 "
 favorites:    
-views:        "202,733 "
+views:        "203,491 "
 accepted:     
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-13-command-_go_-not-found.md
 toc:          false
 navigation:   false

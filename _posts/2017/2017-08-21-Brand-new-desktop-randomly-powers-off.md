@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "176 "
 accepted:     Accepted
-uploaded:     2024-05-05 11:15:39
+uploaded:     2024-05-12 12:46:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-21-Brand-new-desktop-randomly-powers-off.md
 toc:          false
 navigation:   false
