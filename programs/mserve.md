@@ -2860,10 +2860,14 @@ computer.
 
 > *NOTES:*
 >
-> - System panels and windows can intentionally have negative x and y
+- System panels and windows can intentionally have negative x and y
 coordinates. These are not touched by mserve.
 > 
-> - mserve picks the closest monitor to move a window to.
+> - All invisible application windows are moved into visible area.
+> 
+> - mserve picks the closest monitor to move an invisible window to.
+> 
+> - The program; `xdotool`, is used to move invisible windows.
 > 
 > - Output in console and information centre will show:
 > 
@@ -2891,10 +2895,10 @@ coordinates. These are not touched by mserve.
 > 
 > `Adjust to coordinates: 3920 + 2740` 
 
-This screenshot shows how a window can be outside a monitor's viewable
-area.
+This screenshot shows how the window was forced back into the
+nearest monitor's viewable area.
 
-
+---
 
 {% include image.html src="/assets/img/mserve/mserve fix window off monitors.png"
    alt="mserve fix window off monitors.png"
