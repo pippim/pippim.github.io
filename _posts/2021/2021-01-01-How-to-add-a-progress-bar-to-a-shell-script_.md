@@ -10,9 +10,9 @@ created_date: 2021-01-01 18:37:26
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "528,641 "
+views:        "530,062 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-01-How-to-add-a-progress-bar-to-a-shell-script_.md
 toc:          false
 navigation:   false
@@ -150,5 +150,5 @@ This is the new line which tells `notify-send` to immediately replace last popup
 
 `volume` groups the popup bubble messages together and new messages in this group immediately replaces the previous. You can use `anything` instead of `volume`.
 
-  [1]: https://i.stack.imgur.com/gD4iz.gif
-  [2]: https://i.stack.imgur.com/yYCDw.gif
+  [1]: https://i.sstatic.net/gD4iz.gif
+  [2]: https://i.sstatic.net/yYCDw.gif

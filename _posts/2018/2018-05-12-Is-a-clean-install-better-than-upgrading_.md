@@ -10,9 +10,9 @@ created_date: 2018-05-12 15:22:51
 edit_date:    
 votes:        "13 "
 favorites:    
-views:        "49,481 "
+views:        "49,548 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Is-a-clean-install-better-than-upgrading_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-09-02 16:10:28
 edit_date:    2020-06-20 09:12:55
 votes:        "2 "
 favorites:    
-views:        "1,218 "
+views:        "1,222 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-02-Finding-countdown-timer-in-Grub-2.02-source-code.md
 toc:          false
 navigation:   false
@@ -156,4 +156,4 @@ I filed a bug report with Grub folks (July 2018) but haven't heard a thing back.
 
 
   [1]: https://www.gnu.org/software/grub/manual/grub/html_node/Obtaining-and-Building-GRUB.html
-  [3]: https://i.stack.imgur.com/poUX0.gif
+  [3]: https://i.sstatic.net/poUX0.gif

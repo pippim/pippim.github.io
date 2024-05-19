@@ -8,11 +8,11 @@ type:         Answer
 tags:         intel turbo-boost conky
 created_date: 2018-01-03 11:50:16
 edit_date:    2018-02-10 20:37:51
-votes:        "16 "
+votes:        "17 "
 favorites:    
-views:        "85,035 "
+views:        "85,164 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-Is-Turbo-Boost-Working_.md
 toc:          false
 navigation:   false

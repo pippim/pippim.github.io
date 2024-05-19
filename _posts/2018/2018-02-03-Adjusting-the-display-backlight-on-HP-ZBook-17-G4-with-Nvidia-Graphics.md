@@ -10,9 +10,9 @@ created_date: 2018-02-03 16:55:59
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "2,106 "
+views:        "2,108 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-03-Adjusting-the-display-backlight-on-HP-ZBook-17-G4-with-Nvidia-Graphics.md
 toc:          false
 navigation:   false

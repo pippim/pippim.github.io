@@ -10,9 +10,9 @@ created_date: 2022-01-05 00:33:35
 edit_date:    2022-06-29 11:37:55
 votes:        "15 "
 favorites:    
-views:        "294,272 "
+views:        "294,973 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-01-05-How-to-print-out-status-bar-and-percentage_.md
 toc:          false
 navigation:   true
@@ -128,7 +128,7 @@ The bash script would display Sony TV volume with `libnotify-bin` (pop-up bubble
 - Remove breaks between full blocks.
 - Add color support.
 
-  [1]: https://i.stack.imgur.com/rUVeM.gif
+  [1]: https://i.sstatic.net/rUVeM.gif
 
 
 <a id="hdr4"></a>

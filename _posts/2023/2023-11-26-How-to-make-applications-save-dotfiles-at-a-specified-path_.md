@@ -10,9 +10,9 @@ created_date: 2023-11-26 03:35:18
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "270 "
+views:        "273 "
 accepted:     
-uploaded:     2024-05-12 12:46:03
+uploaded:     2024-05-19 13:43:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2023/2023-11-26-How-to-make-applications-save-dotfiles-at-a-specified-path_.md
 toc:          false
 navigation:   false
