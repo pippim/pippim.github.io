@@ -10,9 +10,9 @@ created_date: 2018-07-22 15:46:43
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "2,631 "
+views:        "2,635 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-22-CPU-Frequency-is-allways-the-lowest-possible-_and-high-CPU-usage_.md
 toc:          false
 navigation:   false
@@ -81,5 +81,5 @@ Switching back to **powersave** mode CPU% utilization has spiked by 5%, but CPU 
 
   [1]: https://askubuntu.com/a/936488/307523
   [2]: {% post_url /2018/2018-06-19-Setting-to-High-Performance %}
-  [3]: https://i.stack.imgur.com/imYi5.gif
-  [4]: https://i.stack.imgur.com/q5cuK.gif
+  [3]: https://i.sstatic.net/imYi5.gif
+  [4]: https://i.sstatic.net/q5cuK.gif

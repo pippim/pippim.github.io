@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "752 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-03-LibreOffice_-See-reason-for-broken-images.md
 toc:          false
 navigation:   false
@@ -24,4 +24,4 @@ You can display **all** images that externally linked and not embedded from **on
 [![LibreOffice Edit Links.png][1]][1]
 
 
-  [1]: https://i.stack.imgur.com/Y7ZRu.png
+  [1]: https://i.sstatic.net/Y7ZRu.png

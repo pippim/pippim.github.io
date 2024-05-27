@@ -10,9 +10,9 @@ created_date: 2017-02-04 22:20:08
 edit_date:    2017-06-26 00:44:34
 votes:        "5 "
 favorites:    
-views:        "13,124 "
+views:        "13,127 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-How-do-I-update-kernel-to-the-latest-mainline-version_.md
 toc:          false
 navigation:   false
@@ -56,7 +56,7 @@ After installing the newest kernel a dozen times you will ask the question "*How
 
 
   [1]: http://kernel.ubuntu.com/~kernel-ppa/mainline/
-  [2]: https://i.stack.imgur.com/0aGxt.png
-  [3]: https://i.stack.imgur.com/BnsVG.png
+  [2]: https://i.sstatic.net/0aGxt.png
+  [3]: https://i.sstatic.net/BnsVG.png
   [4]: {% post_url /2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
   [5]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu/571360#571360

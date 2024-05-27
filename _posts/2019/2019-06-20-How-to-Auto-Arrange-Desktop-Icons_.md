@@ -10,9 +10,9 @@ created_date: 2019-06-20 00:57:14
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "44,675 "
+views:        "44,701 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-How-to-Auto-Arrange-Desktop-Icons_.md
 toc:          false
 navigation:   false
@@ -39,4 +39,4 @@ Visit the [github][1] page for **iconic** to see all the other screens, explanat
 
 
   [1]: https://github.com/WinEunuuchs2Unix/iconic
-  [2]: https://i.stack.imgur.com/Q45Pz.png
+  [2]: https://i.sstatic.net/Q45Pz.png

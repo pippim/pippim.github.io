@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "269 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-12-LiLi-virtualization-fails.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ Lili hasn't been updated in 3 years. The last supported Ubuntu Release appears t
 
 It is no surprise your request for help on Lili went unanswered...
 
-  [1]: https://i.stack.imgur.com/HjMkI.png
+  [1]: https://i.sstatic.net/HjMkI.png

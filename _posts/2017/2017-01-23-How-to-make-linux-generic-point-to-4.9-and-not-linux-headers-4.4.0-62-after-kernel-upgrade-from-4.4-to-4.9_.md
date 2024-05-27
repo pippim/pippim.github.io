@@ -10,9 +10,9 @@ created_date: 2017-01-23 02:14:16
 edit_date:    2017-04-13 12:23:21
 votes:        "2 "
 favorites:    
-views:        "4,967 "
+views:        "4,970 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-23-How-to-make-linux-generic-point-to-4.9-and-not-linux-headers-4.4.0-62-after-kernel-upgrade-from-4.4-to-4.9_.md
 toc:          false
 navigation:   false
@@ -149,5 +149,5 @@ That said I would stick to Kernel 4.9.5 which is stable and has improvements for
 
   [1]: https://www.digitalocean.com/community/questions/packages-have-been-kept-back-new-ubuntu-14-image
   [2]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu
-  [3]: https://i.stack.imgur.com/qRmNl.png
+  [3]: https://i.sstatic.net/qRmNl.png
   [4]: http://news.softpedia.com/news/ubuntu-developers-now-tracking-linux-kernel-4-10-for-ubuntu-17-04-zesty-zapus-512081.shtml

@@ -7,19 +7,19 @@ stack_url:    https://askubuntu.com/q/1025654
 type:         Answer
 tags:         16.04 networking dual-boot atheros xps
 created_date: 2018-04-16 23:42:49
-edit_date:    2019-05-04 23:53:16
+edit_date:    2024-05-22 04:13:12
 votes:        "2 "
 favorites:    
-views:        "2,361 "
+views:        "2,369 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-16-Very-Slow-upload-speed-_-Ubuntu-16.04-_-Dual-boot-_-Qualcomm-Atheros-QCA6174-802.11ac-Wireless-Network-Adapter-_168c_003e_.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-You appear to be effected by this [bug][1]. There are 68 posts of problems and suggestions. The latest one suggests to:
+You appear to be affected by [this bug][1]. There are 68 posts of problems and suggestions. The latest one suggests to:
 
 - Disable power saving
 - Use latest kernel version - I'm using 4.14.34 and have had no problems on the 4.14 chain which is LTS (Long Term Support) for 6 years.
@@ -77,4 +77,4 @@ It says:
 
   [1]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1670041
   [2]: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=36148c2bbfbe50c50206b6f61d072203c80161e0
-  [3]: https://i.stack.imgur.com/mFcB2.png
+  [3]: https://i.sstatic.net/mFcB2.png

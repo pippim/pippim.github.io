@@ -10,9 +10,9 @@ created_date: 2017-11-22 03:00:29
 edit_date:    2018-04-01 17:18:58
 votes:        "7 "
 favorites:    
-views:        "5,187 "
+views:        "5,202 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution_.md
 toc:          false
 navigation:   false
@@ -255,5 +255,5 @@ Some people like the top part of the Ubuntu Bash on Windows 10 (WSL) terminal sp
 
 
   [1]: https://github.com/nijikokun/WinScreeny
-  [2]: https://i.stack.imgur.com/Ki66O.png
+  [2]: https://i.sstatic.net/Ki66O.png
   [3]: {% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_ %}

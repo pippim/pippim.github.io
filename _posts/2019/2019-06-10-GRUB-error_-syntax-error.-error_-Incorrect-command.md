@@ -10,9 +10,9 @@ created_date: 2019-06-10 02:51:50
 edit_date:    2020-06-11 14:16:50
 votes:        "0 "
 favorites:    
-views:        "1,746 "
+views:        "1,748 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-10-GRUB-error_-syntax-error.-error_-Incorrect-command.md
 toc:          false
 navigation:   false
@@ -48,4 +48,4 @@ On some systems this annoyance can occur:
 If this happens to you, visit the link for a solution.
 
   [1]: https://help.ubuntu.com/community/Boot-Repair
-  [2]: https://i.stack.imgur.com/UXflA.png
+  [2]: https://i.sstatic.net/UXflA.png

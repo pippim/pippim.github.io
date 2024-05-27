@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,874 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-22-best-way-to-dual-boot-Ubuntu-with-windows-10_.md
 toc:          false
 navigation:   false
@@ -30,4 +30,4 @@ In the examples above two of the three drives have both Windows and Linux instal
 Oh yeah Windows 7 is broken on two of the drives...haha
 
 
-  [1]: https://i.stack.imgur.com/X2mDW.png
+  [1]: https://i.sstatic.net/X2mDW.png

@@ -10,9 +10,9 @@ created_date: 2018-08-26 18:39:05
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "3,682 "
+views:        "3,699 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-26-Wayland-session-on-Ubuntu-18.04_-why-is-_usr_bin_Xwayland-running_.md
 toc:          false
 navigation:   false
@@ -40,4 +40,4 @@ xhost +si:localuser:root
 
 
   [1]: https://wayland.freedesktop.org/xserver.html
-  [2]: https://i.stack.imgur.com/ynizp.png
+  [2]: https://i.sstatic.net/ynizp.png

@@ -10,9 +10,9 @@ created_date: 2018-05-12 20:34:05
 edit_date:    2020-01-06 15:58:11
 votes:        "6 "
 favorites:    
-views:        "2,296 "
+views:        "2,298 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Upgraded-to-Ubuntu-18.04_-but-I-still-have-old-UI.md
 toc:          false
 navigation:   false
@@ -29,4 +29,4 @@ You can try all the desktops to see which you like best but keep in mind:
 - When I tested 18.04 upgrade of 16.04 clone some of the options resulted in a purple screen with only a movable mouse cursor.
 
 
-  [1]: https://i.stack.imgur.com/gR8UO.png
+  [1]: https://i.sstatic.net/gR8UO.png

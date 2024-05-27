@@ -10,9 +10,9 @@ created_date: 2016-12-31 16:37:51
 edit_date:    2017-04-13 12:24:55
 votes:        "9 "
 favorites:    
-views:        "9,018 "
+views:        "9,037 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-31-Can-I-move-all-dotfiles-from-~-to-~_.config_.md
 toc:          false
 navigation:   false
@@ -41,4 +41,4 @@ Press <kbd>Ctrl</kbd>+<kbd>H</kbd> to toggle hidden files / directories viewing 
 
 Many thanks to commentators below ([@videonauth](https://askubuntu.com/users/522934/videonauth) and [@utf-8](https://askubuntu.com/users/195768/utf-8)) for providing information on this section.
 
-  [1]: https://i.stack.imgur.com/2RPWN.png
+  [1]: https://i.sstatic.net/2RPWN.png

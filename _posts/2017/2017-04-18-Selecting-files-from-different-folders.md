@@ -10,9 +10,9 @@ created_date: 2017-04-18 02:03:38
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "865 "
+views:        "866 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-18-Selecting-files-from-different-folders.md
 toc:          true
 navigation:   true
@@ -194,20 +194,20 @@ The defaults are to untag ALL file types.
 
 Thanks for staying awake and looking forward to your input. The next answer will post the WIP bash code.
 
-  [1]: https://i.stack.imgur.com/fiNVj.png
-  [2]: https://i.stack.imgur.com/2Iw4p.png
-  [3]: https://i.stack.imgur.com/WWJH9.png
-  [4]: https://i.stack.imgur.com/ST4yO.png
-  [5]: https://i.stack.imgur.com/umWzn.png
-  [6]: https://i.stack.imgur.com/XDLL6.png
-  [7]: https://i.stack.imgur.com/ZSomD.png
-  [8]: https://i.stack.imgur.com/qPFLF.png
-  [9]: https://i.stack.imgur.com/Tk8pf.png
-  [10]: https://i.stack.imgur.com/QZxy6.png
-  [11]: https://i.stack.imgur.com/9JPvB.png
-  [12]: https://i.stack.imgur.com/Atvwd.png
-  [13]: https://i.stack.imgur.com/sm2Wp.png
-  [14]: https://i.stack.imgur.com/jVNK9.png
+  [1]: https://i.sstatic.net/fiNVj.png
+  [2]: https://i.sstatic.net/2Iw4p.png
+  [3]: https://i.sstatic.net/WWJH9.png
+  [4]: https://i.sstatic.net/ST4yO.png
+  [5]: https://i.sstatic.net/umWzn.png
+  [6]: https://i.sstatic.net/XDLL6.png
+  [7]: https://i.sstatic.net/ZSomD.png
+  [8]: https://i.sstatic.net/qPFLF.png
+  [9]: https://i.sstatic.net/Tk8pf.png
+  [10]: https://i.sstatic.net/QZxy6.png
+  [11]: https://i.sstatic.net/9JPvB.png
+  [12]: https://i.sstatic.net/Atvwd.png
+  [13]: https://i.sstatic.net/sm2Wp.png
+  [14]: https://i.sstatic.net/jVNK9.png
 
 
 <a id="hdr9"></a>

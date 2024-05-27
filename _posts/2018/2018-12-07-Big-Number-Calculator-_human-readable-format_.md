@@ -10,9 +10,9 @@ created_date: 2018-12-07 21:12:04
 edit_date:    2023-09-08 06:57:08
 votes:        "9 "
 favorites:    
-views:        "804 "
+views:        "806 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Big-Number-Calculator-_human-readable-format_.md
 toc:          false
 navigation:   true
@@ -300,7 +300,7 @@ sudo apt install python-tk
 
 
   [1]: https://www.techinfected.net/2016/02/make-gui-calculator-in-python-windows-linux.html
-  [2]: https://i.stack.imgur.com/ooyUk.gif
+  [2]: https://i.sstatic.net/ooyUk.gif
 
 
 <a id="hdr4"></a>

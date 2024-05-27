@@ -10,9 +10,9 @@ created_date: 2016-12-20 19:13:37
 edit_date:    2017-04-13 12:24:56
 votes:        "5 "
 favorites:    
-views:        "1,639 "
+views:        "1,640 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Why-is-this-_eject_-icon-showing-next-to-my-drive_.md
 toc:          false
 navigation:   false
@@ -65,5 +65,5 @@ sr0     11:0    1 695.9M  0 rom
 In summary Nautilus gives us a nice GUI into our partitions. It's very handy on this Laptop with three drives and many partitions.
 
 
-  [1]: https://i.stack.imgur.com/v4Nn2.png
+  [1]: https://i.sstatic.net/v4Nn2.png
   [2]: {% post_url /2016/2016-10-10-How-do-I-hide-_-remove-a-partition-from-the-Nautilus-left-panel_ %}

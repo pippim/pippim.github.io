@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,500 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Why-my-Ubuntu-16.04-can_t-connect-to-wired-when-I-change-kernel-to-4.2.md
 toc:          false
 navigation:   false
@@ -59,4 +59,4 @@ These errors are likely because only `linux-image` was installed and not `linux-
 
 
   [1]: https://www.kernel.org/category/releases.html
-  [2]: https://i.stack.imgur.com/OeEh2.png
+  [2]: https://i.sstatic.net/OeEh2.png

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,048 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-22-Mistyped-_Ctrl___Alt___T_-split-existing-terminal-window.md
 toc:          false
 navigation:   false
@@ -30,4 +30,4 @@ I must have hit a different key combination as I just tried it again double chec
 As I might want to utilize this feature in the future, What key combination did I use?
 
 
-  [1]: https://i.stack.imgur.com/qEbbV.png
+  [1]: https://i.sstatic.net/qEbbV.png

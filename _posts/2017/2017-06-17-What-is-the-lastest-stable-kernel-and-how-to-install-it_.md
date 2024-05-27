@@ -10,9 +10,9 @@ created_date: 2017-06-17 01:15:37
 edit_date:    2017-07-04 10:09:15
 votes:        "3 "
 favorites:    
-views:        "43,506 "
+views:        "43,512 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-17-What-is-the-lastest-stable-kernel-and-how-to-install-it_.md
 toc:          false
 navigation:   false
@@ -56,7 +56,7 @@ After installing the newest kernel a dozen times you will ask the question "*How
 
 
   [1]: http://kernel.ubuntu.com/~kernel-ppa/mainline/
-  [2]: https://i.stack.imgur.com/0aGxt.png
-  [3]: https://i.stack.imgur.com/BnsVG.png
+  [2]: https://i.sstatic.net/0aGxt.png
+  [3]: https://i.sstatic.net/BnsVG.png
   [4]: {% post_url /2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
   [5]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu

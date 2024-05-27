@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,577 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-How-to-set-up-night-light-mode-on-one-monitor-and-the-second-one-normal.md
 toc:          false
 navigation:   false
@@ -28,5 +28,5 @@ I don't think Gnome nightlight, redshift or even Windows nightlight can do what 
 I've been using it for years and look forward to enhancing it whenever a new problem or challenge comes along.
 
   [1]: https://github.com/WinEunuuchs2Unix/eyesome
-  [2]: https://i.stack.imgur.com/Cabwul.png
-  [3]: https://i.stack.imgur.com/nX8vsl.png
+  [2]: https://i.sstatic.net/Cabwul.png
+  [3]: https://i.sstatic.net/nX8vsl.png

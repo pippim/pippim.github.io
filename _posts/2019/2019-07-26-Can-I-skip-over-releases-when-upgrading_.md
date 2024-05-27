@@ -10,9 +10,9 @@ created_date: 2019-07-26 22:59:51
 edit_date:    2019-08-04 00:32:39
 votes:        "5 "
 favorites:    
-views:        "123,682 "
+views:        "123,715 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-26-Can-I-skip-over-releases-when-upgrading_.md
 toc:          false
 navigation:   false
@@ -186,5 +186,5 @@ sudo nano /etc/apt/sources.list.d/dropbox.list
 Change disco back to bionic. Save and close the file.
 
 
-  [1]: https://i.stack.imgur.com/PnCid.png
-  [2]: https://i.stack.imgur.com/9Lzou.png
+  [1]: https://i.sstatic.net/PnCid.png
+  [2]: https://i.sstatic.net/9Lzou.png

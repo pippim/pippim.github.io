@@ -10,9 +10,9 @@ created_date: 2017-02-27 05:05:15
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,440 "
+views:        "1,441 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-27-Using-Zenity-to-maintain-configuration-file.md
 toc:          false
 navigation:   true
@@ -194,10 +194,10 @@ Visit the `eyesome` github page and download all the bash code here:
 - [Set brightness and gamma for three monitors using sunrise and sunset times from internet][2] 
 
 
-  [1]: https://i.stack.imgur.com/8RL9t.png
+  [1]: https://i.sstatic.net/8RL9t.png
   [2]: https://github.com/WinEunuuchs2Unix/eyesome
-  [3]: https://i.stack.imgur.com/EOV2y.png
-  [4]: https://i.stack.imgur.com/C5YLm.png
+  [3]: https://i.sstatic.net/EOV2y.png
+  [4]: https://i.sstatic.net/C5YLm.png
   [5]: https://askubuntu.com/users/158442/muru
 
 

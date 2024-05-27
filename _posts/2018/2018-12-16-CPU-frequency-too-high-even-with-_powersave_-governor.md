@@ -10,9 +10,9 @@ created_date: 2018-12-16 15:16:15
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "5,852 "
+views:        "5,858 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-CPU-frequency-too-high-even-with-_powersave_-governor.md
 toc:          false
 navigation:   false
@@ -123,5 +123,5 @@ sudo apt install cpufrequtils
 ```
 
 
-  [1]: https://i.stack.imgur.com/RnnCy.png
+  [1]: https://i.sstatic.net/RnnCy.png
   [2]: https://www.kernel.org/doc/html/v4.12/admin-guide/pm/intel_pstate.html

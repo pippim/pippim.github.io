@@ -10,9 +10,9 @@ created_date: 2018-01-02 11:50:18
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "3,406 "
+views:        "3,407 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-02-How-do-I-make-my-Ubuntu-Desktop-have-a-dock-at-the-bottom-and-system-utilization-widgets-on-the-side_.md
 toc:          false
 navigation:   false
@@ -48,5 +48,5 @@ Notice how Conky CPU percentage jumps from .5% at normal speed to about 5% at 60
 
   [1]: http://ubuntuhandbook.org/index.php/2016/03/ubuntu-16-04-move-unity-launcher-to-bottom/
   [2]: https://ubuntuforums.org/showthread.php?t=281865
-  [3]: https://i.stack.imgur.com/qbwY3.gif
-  [4]: https://i.stack.imgur.com/kFcfr.gif
+  [3]: https://i.sstatic.net/qbwY3.gif
+  [4]: https://i.sstatic.net/kFcfr.gif

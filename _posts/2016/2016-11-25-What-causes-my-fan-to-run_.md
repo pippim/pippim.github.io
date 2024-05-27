@@ -10,9 +10,9 @@ created_date: 2016-11-25 01:02:12
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,956 "
+views:        "2,957 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-25-What-causes-my-fan-to-run_.md
 toc:          false
 navigation:   false
@@ -54,4 +54,4 @@ sudo reboot
 
 **NOTE:** Manually installing the newest kernel requires extra steps to manually remove it in the future when it is no longer needed. Also note the newest kernel is not supported by Ubuntu and crash reports will be ignored by them. The fact the newest kernel comes from Ubuntu should not give you a false sense of security.
 
-  [1]: https://i.stack.imgur.com/QNkDx.png
+  [1]: https://i.sstatic.net/QNkDx.png

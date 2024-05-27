@@ -10,9 +10,9 @@ created_date: 2018-06-26 23:27:09
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "9,647 "
+views:        "9,675 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-26-Tagging-files-on-Ubuntu.md
 toc:          false
 navigation:   false
@@ -44,4 +44,4 @@ The bash code was posted in a separate answer below the first but revisions made
 
 
 
-  [12]: https://i.stack.imgur.com/Atvwd.png
+  [12]: https://i.sstatic.net/Atvwd.png

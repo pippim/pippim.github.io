@@ -10,9 +10,9 @@ created_date: 2021-12-06 00:24:28
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "10,141 "
+views:        "10,185 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-12-06-How-to-find-the-saved-Wifi-Password-in-Ubuntu.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-05-18 23:26:18
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "29,248 "
+views:        "29,299 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-18-Why-is-this-python-script-running-in-background-consuming-100-_-CPU_.md
 toc:          false
 navigation:   false

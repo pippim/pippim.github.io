@@ -10,9 +10,9 @@ created_date: 2019-01-04 02:51:06
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "917,221 "
+views:        "919,034 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-04-How-can-I-find-my-hardware-details_.md
 toc:          false
 navigation:   false
@@ -34,4 +34,4 @@ You can find details for doing this yourself in this answer:
 
 - [Terminal splash screen with Weather, Calendar, Time & Sysinfo?]({% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_ %})
 
-  [3]: https://i.stack.imgur.com/neTG7.png
+  [3]: https://i.sstatic.net/neTG7.png

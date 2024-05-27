@@ -10,9 +10,9 @@ created_date: 2016-09-11 15:05:35
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "26,407 "
+views:        "26,475 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-Where-are-cursor-icons-stored-on-Ubuntu-16.04_.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ The top folder isn't `user` it is `usr`. This is what shows up in my plain vanil
 
 Using Nautilus simply click on `Computer` on the left pane. Then in the main pane click `usr` then `share` then `icons`.
 
-  [1]: https://i.stack.imgur.com/AfMcC.png
+  [1]: https://i.sstatic.net/AfMcC.png

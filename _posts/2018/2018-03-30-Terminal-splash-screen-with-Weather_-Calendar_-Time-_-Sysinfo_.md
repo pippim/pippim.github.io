@@ -10,9 +10,9 @@ created_date: 2018-03-30 20:07:59
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
-views:        "19,776 "
+views:        "19,830 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_.md
 toc:          false
 navigation:   false
@@ -209,8 +209,8 @@ unset color_prompt force_color_prompt
 Note the length of the separator line coincides with width of `screenfetch` output. In this case it is 92 characters wide and `gnome-terminal` preferences are set accordingly.
 
 
-  [1]: https://i.stack.imgur.com/pl1P7.png
-  [2]: https://i.stack.imgur.com/43AWN.png
+  [1]: https://i.sstatic.net/pl1P7.png
+  [2]: https://i.sstatic.net/43AWN.png
 
 
 

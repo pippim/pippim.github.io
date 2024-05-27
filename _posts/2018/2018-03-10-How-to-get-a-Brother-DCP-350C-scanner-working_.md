@@ -10,9 +10,9 @@ created_date: 2018-03-10 01:49:45
 edit_date:    2018-03-13 23:03:51
 votes:        "9 "
 favorites:    
-views:        "6,604 "
+views:        "6,614 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-10-How-to-get-a-Brother-DCP-350C-scanner-working_.md
 toc:          true
 navigation:   true
@@ -450,23 +450,23 @@ After all the hard work we are rewarded with a scan:
 
   [1]: https://ubuntuforums.org/showthread.php?t=2246878
   [2]: http://support.brother.com/g/s/id/linux/en/download_scn.html
-  [3]: https://i.stack.imgur.com/Th21E.png
+  [3]: https://i.sstatic.net/Th21E.png
   [4]: http://support.brother.com/g/b/downloadend.aspx?c=us&lang=en&prod=mfcj410w_us&os=128&dlid=dlf006893_000&flang=4&type3=625
-  [5]: https://i.stack.imgur.com/G0IMA.png
-  [6]: https://i.stack.imgur.com/CaC4f.png
-  [7]: https://i.stack.imgur.com/JmRcW.png
-  [8]: https://i.stack.imgur.com/dFVvH.png
-  [9]: https://i.stack.imgur.com/UsMAE.png
-  [10]: https://i.stack.imgur.com/s7Cdo.png
-  [11]: https://i.stack.imgur.com/XDFBp.png
-  [12]: https://i.stack.imgur.com/nCZQv.png
+  [5]: https://i.sstatic.net/G0IMA.png
+  [6]: https://i.sstatic.net/CaC4f.png
+  [7]: https://i.sstatic.net/JmRcW.png
+  [8]: https://i.sstatic.net/dFVvH.png
+  [9]: https://i.sstatic.net/UsMAE.png
+  [10]: https://i.sstatic.net/s7Cdo.png
+  [11]: https://i.sstatic.net/XDFBp.png
+  [12]: https://i.sstatic.net/nCZQv.png
   [13]: https://askubuntu.com/questions/486699/brother-dcp-7065dn-ubuntu-14-04-64bit-can-print-to-network-printer-but-cannot
-  [14]: https://i.stack.imgur.com/M4NW7.png
-  [15]: https://i.stack.imgur.com/LMMD5.png
-  [16]: https://i.stack.imgur.com/1Hctg.png
-  [17]: https://i.stack.imgur.com/C7jh6.png
-  [18]: https://i.stack.imgur.com/8W6a6.png
-  [19]: https://i.stack.imgur.com/azNPP.gif
+  [14]: https://i.sstatic.net/M4NW7.png
+  [15]: https://i.sstatic.net/LMMD5.png
+  [16]: https://i.sstatic.net/1Hctg.png
+  [17]: https://i.sstatic.net/C7jh6.png
+  [18]: https://i.sstatic.net/8W6a6.png
+  [19]: https://i.sstatic.net/azNPP.gif
 
 
 <a id="hdr16"></a>

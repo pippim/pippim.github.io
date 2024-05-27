@@ -10,9 +10,9 @@ created_date: 2020-06-07 15:25:55
 edit_date:    2022-01-06 12:41:10
 votes:        "8 "
 favorites:    
-views:        "4,488 "
+views:        "4,491 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-07-How-to-remove-gnome-settings-from-ubuntu-20.04-with-unity-desktop_.md
 toc:          false
 navigation:   false
@@ -63,5 +63,5 @@ The article doesn't mention `ubuntu-gnome-desktop` needing to be removed. This a
 
 
   [1]: https://itectec.com/ubuntu/ubuntu-how-to-remove-gnome-desktop-environment-without-messing-unity-de-ubuntu-16-04/
-  [2]: https://i.stack.imgur.com/3vBFv.png
+  [2]: https://i.sstatic.net/3vBFv.png
   [3]: https://www.linuxbabe.com/ubuntu/install-unity-desktop-ubuntu-18-04-lts

@@ -10,9 +10,9 @@ created_date: 2017-12-16 00:08:22
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "3,784 "
+views:        "3,799 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-16-Stop-emailing-me-bad-sudo-password-attempts.md
 toc:          false
 navigation:   false
@@ -60,4 +60,4 @@ root    ALL=(ALL:ALL) ALL
 #includedir /etc/sudoers.d
 ```
 
-  [1]: https://i.stack.imgur.com/Jr883.png
+  [1]: https://i.sstatic.net/Jr883.png

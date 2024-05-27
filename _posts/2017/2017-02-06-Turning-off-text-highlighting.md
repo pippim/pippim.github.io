@@ -10,9 +10,9 @@ created_date: 2017-02-06 02:16:28
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "8,456 "
+views:        "8,467 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-06-Turning-off-text-highlighting.md
 toc:          false
 navigation:   false
@@ -65,5 +65,5 @@ In which case you can simply use `\ls -alF` for no colors:
 [![ls no colors][2]][2]
 
 
-  [1]: https://i.stack.imgur.com/V2yVs.png
-  [2]: https://i.stack.imgur.com/qX0vU.png
+  [1]: https://i.sstatic.net/V2yVs.png
+  [2]: https://i.sstatic.net/qX0vU.png

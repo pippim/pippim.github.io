@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "94 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-20-Why-is-the-address-bar-at-the-bottom-in-Nautilus_.md
 toc:          false
 navigation:   false
@@ -31,4 +31,4 @@ A tutorial to connect via SSH and `Enter Location` from new drop down menu is de
   [1]: https://feaneron.com/2015/08/21/other-locations-on-nautilus-gsoc-final-report/
   [2]: https://help.gnome.org/users/gnome-help/unstable/nautilus-connect.html.en
   [3]: https://fedoramagazine.org/files-connect-server-ssh/
-  [4]: https://i.stack.imgur.com/qwaZs.png
+  [4]: https://i.sstatic.net/qwaZs.png

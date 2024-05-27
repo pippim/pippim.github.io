@@ -10,9 +10,9 @@ created_date: 2017-02-03 01:12:04
 edit_date:    2020-06-12 14:37:07
 votes:        "25 "
 favorites:    
-views:        "189,597 "
+views:        "189,619 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-03-_W_-Possible-missing-firmware-for-module-i915_bpo_-when-updating-initramfs.md
 toc:          true
 navigation:   true
@@ -348,19 +348,19 @@ sudo apt upgrade
 
 
   [1]: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915
-  [2]: https://i.stack.imgur.com/PzEm6.png
+  [2]: https://i.sstatic.net/PzEm6.png
   [3]: https://01.org/linuxgraphics/downloads/firmware
-  [4]: https://i.stack.imgur.com/BFYtB.png
+  [4]: https://i.sstatic.net/BFYtB.png
   [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_ %}
   [6]: https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1611124
-  [7]: https://i.stack.imgur.com/9lQBJ.png
+  [7]: https://i.sstatic.net/9lQBJ.png
   [8]: https://01.org/linuxgraphics/downloads/kabylake-guc-9.14
   [9]: https://01.org/linuxgraphics/downloads/kabylake-dmc-1.01
   [10]: https://01.org/linuxgraphics/downloads/broxton-guc-8.7
   [11]: https://01.org/linuxgraphics/downloads
-  [12]: https://i.stack.imgur.com/B3uVd.png
-  [13]: https://i.stack.imgur.com/Gufe8.png
-  [14]: https://i.stack.imgur.com/jXgRV.png
+  [12]: https://i.sstatic.net/B3uVd.png
+  [13]: https://i.sstatic.net/Gufe8.png
+  [14]: https://i.sstatic.net/jXgRV.png
 
 
 

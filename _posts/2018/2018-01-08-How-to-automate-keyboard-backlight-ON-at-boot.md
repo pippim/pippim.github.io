@@ -10,9 +10,9 @@ created_date: 2018-01-08 03:41:42
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "5,284 "
+views:        "5,295 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-08-How-to-automate-keyboard-backlight-ON-at-boot.md
 toc:          false
 navigation:   false
@@ -39,6 +39,6 @@ I can't test this on my system because the Laptop's built-in keyboard and wirele
 
 You can't put `xrandr` commands in `/etc/rc.local` because it runs before a user logs in. `xrandr` commands can only be used after the user logs on.
 
-  [1]: https://i.stack.imgur.com/HynOK.png
-  [2]: https://i.stack.imgur.com/XKOCo.png
-  [3]: https://i.stack.imgur.com/Q0olP.png
+  [1]: https://i.sstatic.net/HynOK.png
+  [2]: https://i.sstatic.net/XKOCo.png
+  [3]: https://i.sstatic.net/Q0olP.png

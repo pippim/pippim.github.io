@@ -10,9 +10,9 @@ created_date: 2016-12-30 02:32:38
 edit_date:    2017-03-05 18:08:55
 votes:        "5 "
 favorites:    
-views:        "6,854 "
+views:        "6,859 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-30-How-can-I-set-up-a-password-for-the-_rm_-command_.md
 toc:          false
 navigation:   false
@@ -117,4 +117,4 @@ As Thomas Ward pointed out in another answer, if you were to do a `sudo apt-get 
 
 The script calls `logger` to record every time `rm` was manually called using the terminal. Command usage is recorded to `/var/log/syslog`.
 
-  [1]: https://i.stack.imgur.com/HvKlZ.png
+  [1]: https://i.sstatic.net/HvKlZ.png

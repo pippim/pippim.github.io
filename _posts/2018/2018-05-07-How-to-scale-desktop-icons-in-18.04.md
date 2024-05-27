@@ -10,9 +10,9 @@ created_date: 2018-05-07 10:48:46
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "13,901 "
+views:        "13,902 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-07-How-to-scale-desktop-icons-in-18.04.md
 toc:          false
 navigation:   false
@@ -55,5 +55,5 @@ unity-tweak-tool/bionic,bionic,now 0.0.7ubuntu4 all [installed]
 ```
 
 
-  [1]: https://i.stack.imgur.com/ebLJk.png
-  [2]: https://i.stack.imgur.com/VujGV.gif
+  [1]: https://i.sstatic.net/ebLJk.png
+  [2]: https://i.sstatic.net/VujGV.gif

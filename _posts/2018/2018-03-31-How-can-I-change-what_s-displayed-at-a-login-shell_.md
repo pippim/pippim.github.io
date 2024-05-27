@@ -10,9 +10,9 @@ created_date: 2018-03-31 16:28:12
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "82,543 "
+views:        "82,773 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-can-I-change-what_s-displayed-at-a-login-shell_.md
 toc:          true
 navigation:   true
@@ -304,9 +304,9 @@ Note the length of the separator line coincides with width of `screenfetch` outp
 
 
   [1]: {% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_ %}
-  [2]: https://i.stack.imgur.com/LY6hT.png
-  [3]: https://i.stack.imgur.com/pl1P7.png
-  [4]: https://i.stack.imgur.com/43AWN.png
+  [2]: https://i.sstatic.net/LY6hT.png
+  [3]: https://i.sstatic.net/pl1P7.png
+  [4]: https://i.sstatic.net/43AWN.png
 
 
 <a id="hdr7"></a>

@@ -10,9 +10,9 @@ created_date: 2018-11-01 02:49:00
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "3,764 "
+views:        "3,773 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-01-Wakes-from-suspend-immediately-when-bluetooth-device-disconnected.md
 toc:          false
 navigation:   false

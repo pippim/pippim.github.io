@@ -10,9 +10,9 @@ created_date: 2016-12-29 01:33:11
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,356 "
+views:        "1,357 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-29-What-happend-to-SMART-data-_disk-selftest-option_.md
 toc:          false
 navigation:   false
@@ -31,5 +31,5 @@ Notice the "hamburger" menu in the top right corner. Select it to get a drop dow
 
 If you require further explanation please comment below.
 
-  [1]: https://i.stack.imgur.com/lb9q5.png
-  [2]: https://i.stack.imgur.com/7Hbj5.png
+  [1]: https://i.sstatic.net/lb9q5.png
+  [2]: https://i.sstatic.net/7Hbj5.png

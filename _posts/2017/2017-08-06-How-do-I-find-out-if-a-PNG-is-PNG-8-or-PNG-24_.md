@@ -10,9 +10,9 @@ created_date: 2017-08-06 17:52:52
 edit_date:    2017-08-09 02:53:27
 votes:        "28 "
 favorites:    
-views:        "16,946 "
+views:        "16,965 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-How-do-I-find-out-if-a-PNG-is-PNG-8-or-PNG-24_.md
 toc:          false
 navigation:   false
@@ -230,8 +230,8 @@ We see there are 4 colors used which is the maximum color combinations possible 
   [1]: http://www.imagemagick.org/script/index.php
   [2]: https://superuser.com/questions/148661/how-can-i-find-out-if-a-png-file-is-24-bit-color-or-32-bit-color-on-mac-os-x/148680#148680
   [3]: https://en.wikipedia.org/wiki/Color_depth
-  [4]: https://i.stack.imgur.com/zlMvz.png
-  [5]: https://i.stack.imgur.com/i1RcR.png
-  [6]: https://i.stack.imgur.com/s0P8g.png
+  [4]: https://i.sstatic.net/zlMvz.png
+  [5]: https://i.sstatic.net/i1RcR.png
+  [6]: https://i.sstatic.net/s0P8g.png
 
 

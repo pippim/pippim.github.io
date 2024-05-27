@@ -10,9 +10,9 @@ created_date: 2017-09-05 23:29:44
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
-views:        "50,466 "
+views:        "50,472 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-05-What-are-the-differences-between-Windows-Bash-and-Cygwin_.md
 toc:          false
 navigation:   false
@@ -77,8 +77,8 @@ Cygwin supports more versions of Windows [as their website lists][8]:
   [1]: http://en.wikipedia.org/wiki/Fedora_%28operating_system%29
   [2]: http://www.tuxmachines.org/node/106669
   [3]: https://blogs.msdn.microsoft.com/commandline/2017/10/12/wsl-console-team-changes/
-  [4]: https://i.stack.imgur.com/09Ycq.gif
-  [5]: https://i.stack.imgur.com/pH9F1.gif
+  [4]: https://i.sstatic.net/09Ycq.gif
+  [5]: https://i.sstatic.net/pH9F1.gif
   [6]: https://stackoverflow.com/questions/2512892/how-to-speed-up-cygwin?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
   [7]: https://answers.microsoft.com/en-us/windows/forum/windows_10-other_settings/can-we-get-windows-linux-subsystem-in-win10-home/ba93f9ac-25de-4dc6-9652-c63b3a26e0a8?auth=1
   [8]: https://cygwin.com/faq/faq.html#faq.what.supported

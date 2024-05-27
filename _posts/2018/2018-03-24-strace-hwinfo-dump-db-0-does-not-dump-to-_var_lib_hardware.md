@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "183 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-24-strace-hwinfo-dump-db-0-does-not-dump-to-_var_lib_hardware.md
 toc:          false
 navigation:   false

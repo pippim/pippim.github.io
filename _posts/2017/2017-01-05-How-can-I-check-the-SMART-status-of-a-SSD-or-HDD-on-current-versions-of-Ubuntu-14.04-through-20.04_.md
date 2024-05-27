@@ -10,9 +10,9 @@ created_date: 2017-01-05 03:07:18
 edit_date:    2019-11-13 02:36:22
 votes:        "27 "
 favorites:    
-views:        "384,101 "
+views:        "384,957 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-05-How-can-I-check-the-SMART-status-of-a-SSD-or-HDD-on-current-versions-of-Ubuntu-14.04-through-20.04_.md
 toc:          false
 navigation:   false
@@ -91,5 +91,5 @@ percentage_used                     : 0%
 When it hits 100% it is time worry about replacing your drive. That said this drive is two years old and still at `0%`
 
   [1]: https://askubuntu.com/questions/865628/what-happend-to-smart-data-disk-selftest-option/865633?noredirect=1#comment1344034_865633
-  [2]: https://i.stack.imgur.com/lb9q5.png
-  [3]: https://i.stack.imgur.com/7Hbj5.png
+  [2]: https://i.sstatic.net/lb9q5.png
+  [3]: https://i.sstatic.net/7Hbj5.png

@@ -10,9 +10,9 @@ created_date: 2019-07-18 22:31:57
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,936 "
+views:        "2,947 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-18-I-have-a-intel-AC-8260-and-cant-find-the-drivers.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Firmware for Linux Intel WiFi drivers by card model and Kernel version are [here
 For general questions about Intel Wi-Fi on Linux, email linuxwifi@intel.com.
 
   [1]: https://www.intel.ca/content/www/ca/en/support/articles/000005511/network-and-i-o/wireless-networking.html
-  [2]: https://i.stack.imgur.com/EuQoM.png
+  [2]: https://i.sstatic.net/EuQoM.png

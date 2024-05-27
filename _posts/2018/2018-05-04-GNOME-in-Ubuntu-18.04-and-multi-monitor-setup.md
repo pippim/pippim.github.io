@@ -10,9 +10,9 @@ created_date: 2018-05-04 00:56:04
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "25,940 "
+views:        "25,942 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-GNOME-in-Ubuntu-18.04-and-multi-monitor-setup.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ After upgrading Ubuntu 16.04 LTS with Unity to Ubuntu 18.04 LTS you can switch o
 
 The good news is Unity is even better when suspending with an external monitor is attached that it was in 16.04.
 
-  [1]: https://i.stack.imgur.com/MoxHd.jpg
+  [1]: https://i.sstatic.net/MoxHd.jpg

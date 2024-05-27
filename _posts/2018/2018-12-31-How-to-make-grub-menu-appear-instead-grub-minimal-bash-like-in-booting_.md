@@ -10,9 +10,9 @@ created_date: 2018-12-31 01:35:45
 edit_date:    2022-01-20 13:10:22
 votes:        "24 "
 favorites:    
-views:        "95,035 "
+views:        "95,127 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-31-How-to-make-grub-menu-appear-instead-grub-minimal-bash-like-in-booting_.md
 toc:          false
 navigation:   false
@@ -53,4 +53,4 @@ On some systems this annoyance can occur:
 If this happens to you, visit the link for a solution.
 
   [1]: https://help.ubuntu.com/community/Boot-Repair
-  [2]: https://i.stack.imgur.com/UXflA.png
+  [2]: https://i.sstatic.net/UXflA.png

@@ -10,9 +10,9 @@ created_date: 2018-12-12 05:14:22
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "53,146 "
+views:        "53,192 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-I-need-an-equivalent-of-gksu-in-18.04.md
 toc:          false
 navigation:   false
@@ -104,4 +104,4 @@ chmod a+x ~/sgedit
 Note `~` is a shortcut for `/home/YOURNAME`.
 
 
-  [1]: https://i.stack.imgur.com/pVabr.gif
+  [1]: https://i.sstatic.net/pVabr.gif

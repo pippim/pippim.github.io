@@ -10,9 +10,9 @@ created_date: 2018-08-23 23:56:06
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "5,239 "
+views:        "5,255 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-is-the-difference-between-echo-_var-and-echo-__var_.md
 toc:          false
 navigation:   false

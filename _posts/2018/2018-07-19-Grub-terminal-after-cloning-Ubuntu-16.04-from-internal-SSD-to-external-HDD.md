@@ -10,9 +10,9 @@ created_date: 2018-07-19 11:25:33
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "3,001 "
+views:        "3,008 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-Grub-terminal-after-cloning-Ubuntu-16.04-from-internal-SSD-to-external-HDD.md
 toc:          false
 navigation:   false
@@ -24,4 +24,4 @@ You can use this script: [Backup/clone live to a new partition which can be boot
 
 [![clone-ubuntu.png][1]][1]
 
-  [1]: https://i.stack.imgur.com/MgM3p.png
+  [1]: https://i.sstatic.net/MgM3p.png

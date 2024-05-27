@@ -10,9 +10,9 @@ created_date: 2019-10-29 01:25:19
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,488 "
+views:        "1,496 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-29-How-can-I-make-all-fonts-show-a-sample-string-for-comparison_.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ There is `gnome-terminal` when you select `Edit` -> `Profile Preferences` -> `Cu
 
 However on my system it doesn't display the "E G PM" even though it head fakes you into thinking it will.
 
-  [1]: https://i.stack.imgur.com/9d9sj.png
+  [1]: https://i.sstatic.net/9d9sj.png

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "642 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-30-Gnome-Energy-Saving_-How-to-turn-of-the-watch-screen_.md
 toc:          false
 navigation:   false
@@ -36,4 +36,4 @@ The answer with the most votes states:
 Note most users say it works with 18.04, but one commented it doesn't work. It could just be s/he didn't install it correctly.
 
   [1]: https://extensions.gnome.org/extension/672/disable-screen-shield/
-  [2]: https://i.stack.imgur.com/3D1Ndm.jpg
+  [2]: https://i.sstatic.net/3D1Ndm.jpg

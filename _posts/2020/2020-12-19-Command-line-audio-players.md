@@ -10,9 +10,9 @@ created_date: 2020-12-19 23:07:00
 edit_date:    2021-03-08 11:39:49
 votes:        "3 "
 favorites:    
-views:        "55,836 "
+views:        "55,893 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-19-Command-line-audio-players.md
 toc:          false
 navigation:   true
@@ -161,8 +161,8 @@ I took these tools and am starting to develop my own GUI music player:
 [![mserve currently playing.gif][2]][2]
 
 
-  [1]: https://i.stack.imgur.com/WeDkY.gif
-  [2]: https://i.stack.imgur.com/zMdLr.gif
+  [1]: https://i.sstatic.net/WeDkY.gif
+  [2]: https://i.sstatic.net/zMdLr.gif
 
 
 <a id="hdr5"></a>

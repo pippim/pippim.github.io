@@ -10,9 +10,9 @@ created_date: 2017-03-19 01:10:27
 edit_date:    2019-02-07 01:43:56
 votes:        "8 "
 favorites:    
-views:        "7,087 "
+views:        "7,098 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true
@@ -467,9 +467,9 @@ This Q&A ([Can BASH display in systray as application indicator?][6]) describes 
 
   [1]: https://github.com/WinEunuuchs2Unix/eyesome
   [2]: https://www.timeanddate.com/
-  [3]: https://i.stack.imgur.com/4njOT.png
-  [4]: https://i.stack.imgur.com/CWjQ8.png
-  [5]: https://i.stack.imgur.com/esEG1.png
+  [3]: https://i.sstatic.net/4njOT.png
+  [4]: https://i.sstatic.net/CWjQ8.png
+  [5]: https://i.sstatic.net/esEG1.png
   [6]: {% post_url /2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_ %}
 
 

@@ -10,9 +10,9 @@ created_date: 2018-07-19 23:37:41
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "35,438 "
+views:        "35,504 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-change-min-and-max-cpu-frequency.md
 toc:          false
 navigation:   false
@@ -72,4 +72,4 @@ for x in /sys/devices/system/cpu/*/cpufreq/; do echo 1700000 | sudo tee $x/scali
 
 
   [1]: {% post_url /2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_ %}
-  [2]: https://i.stack.imgur.com/aBbiY.png
+  [2]: https://i.sstatic.net/aBbiY.png

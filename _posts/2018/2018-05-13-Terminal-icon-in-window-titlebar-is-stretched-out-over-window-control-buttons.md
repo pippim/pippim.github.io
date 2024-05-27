@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,894 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Terminal-icon-in-window-titlebar-is-stretched-out-over-window-control-buttons.md
 toc:          false
 navigation:   false

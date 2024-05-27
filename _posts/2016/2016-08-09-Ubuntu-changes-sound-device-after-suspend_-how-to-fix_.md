@@ -10,9 +10,9 @@ created_date: 2016-08-09 01:05:07
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "38,134 "
+views:        "38,146 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-09-Ubuntu-changes-sound-device-after-suspend_-how-to-fix_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2017-03-25 18:27:34
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "8,628 "
+views:        "8,629 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-How-can-I-_diff_-two-files-with-Nautilus_.md
 toc:          false
 navigation:   false
@@ -113,4 +113,4 @@ In this example we're comparing the actual script posted here in AU prior to Mar
 The `diff` command is very powerful and as such has a myriad of control parameters. Type `man diff` in the terminal for the manual pages or `info diff` for more even more command usage details.
 
 
-  [1]: https://i.stack.imgur.com/Uu7HS.png
+  [1]: https://i.sstatic.net/Uu7HS.png

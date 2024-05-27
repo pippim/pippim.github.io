@@ -10,9 +10,9 @@ created_date: 2018-04-03 00:40:31
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,786 "
+views:        "2,793 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Monitoring-CPU-freq-in-real-time.md
 toc:          false
 navigation:   false
@@ -46,5 +46,5 @@ ${color}Load Avg. 1-5-15 minutes: ${alignr}${color green}${execpi .001 (awk '{pr
 You can literally find thousands of examples and solutions on [Ubuntu Forums][2] for Conky.
 
 
-  [1]: https://i.stack.imgur.com/LmJil.gif
+  [1]: https://i.sstatic.net/LmJil.gif
   [2]: https://ubuntuforums.org/showthread.php?t=281865

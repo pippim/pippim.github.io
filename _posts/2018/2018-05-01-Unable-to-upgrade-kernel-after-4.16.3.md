@@ -10,9 +10,9 @@ created_date: 2018-05-01 01:21:40
 edit_date:    2018-10-28 15:07:06
 votes:        "10 "
 favorites:    
-views:        "19,593 "
+views:        "19,594 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Unable-to-upgrade-kernel-after-4.16.3.md
 toc:          false
 navigation:   true
@@ -269,9 +269,9 @@ Use 'sudo apt autoremove' to remove them.
   [1]: https://packages.ubuntu.com/bionic/amd64/libssl1.1/download
   [2]: http://kernel.ubuntu.com/~kernel-ppa/mainline/
   [3]: https://bugs.launchpad.net/ubuntu/+source/linux-base/+bug/1766851
-  [4]: https://i.stack.imgur.com/NWARG.png
+  [4]: https://i.sstatic.net/NWARG.png
   [5]: {% post_url /2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
-  [6]: https://i.stack.imgur.com/tZLnH.png
+  [6]: https://i.sstatic.net/tZLnH.png
 
 
 <a id="hdr3"></a>

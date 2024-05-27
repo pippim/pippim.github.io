@@ -10,9 +10,9 @@ created_date: 2017-06-06 00:00:07
 edit_date:    2021-05-07 21:29:49
 votes:        "8 "
 favorites:    
-views:        "5,717 "
+views:        "5,725 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail.md
 toc:          true
 navigation:   true
@@ -673,8 +673,8 @@ I will save the above script as `backup_email.sh` and schedule the cron job as,
 
 
   [1]: https://help.ubuntu.com/community/EmailAlerts
-  [2]: https://i.stack.imgur.com/gl693.png
-  [3]: https://i.stack.imgur.com/8QOZS.png
+  [2]: https://i.sstatic.net/gl693.png
+  [3]: https://i.sstatic.net/8QOZS.png
   [4]: https://unix.stackexchange.com/questions/24870/tar-files-only-no-directories
   [5]: https://unix.stackexchange.com/questions/167036/send-backup-by-email-with-crontab
 

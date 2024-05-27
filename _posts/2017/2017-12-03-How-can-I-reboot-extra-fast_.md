@@ -10,9 +10,9 @@ created_date: 2017-12-03 17:37:58
 edit_date:    2017-12-05 04:56:25
 votes:        "4 "
 favorites:    
-views:        "9,524 "
+views:        "9,566 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-03-How-can-I-reboot-extra-fast_.md
 toc:          true
 navigation:   true
@@ -218,7 +218,7 @@ I have to post this answer now as it's time to boot, fix, boot, fix, repeat. I h
 After getting the `cli` methods working I'll create a desktop shortcut for one-click rebooting with `sudo` password prompt. After that I'll create a desktop shortcut to a `yad` dialog box allowing you to pick from installed kernels to reboot. Similar to grub's advanced options menu.
 
   [1]: https://wiki.ubuntu.com/RapidReboot
-  [2]: https://i.stack.imgur.com/UFmGv.png
+  [2]: https://i.sstatic.net/UFmGv.png
   [3]: https://wiki.archlinux.org/index.php/kexec
   [4]: https://stackoverflow.com/questions/42790410/simplest-chainloading-a-boot-manager
 

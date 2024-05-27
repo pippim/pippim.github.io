@@ -10,9 +10,9 @@ created_date: 2018-04-28 03:00:41
 edit_date:    2020-06-12 14:37:07
 votes:        "58 "
 favorites:    
-views:        "174,684 "
+views:        "175,522 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-28-How-to-manually-mount-a-partition_.md
 toc:          false
 navigation:   false
@@ -105,4 +105,4 @@ This screen appears tailored to your unique machine environment:
 
 
   [1]: https://linuxexpresso.wordpress.com/2010/03/14/mount-partitions-in-terminal-fstab/
-  [2]: https://i.stack.imgur.com/VqpIG.png
+  [2]: https://i.sstatic.net/VqpIG.png

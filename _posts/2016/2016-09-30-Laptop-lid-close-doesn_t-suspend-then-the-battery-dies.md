@@ -10,9 +10,9 @@ created_date: 2016-09-30 23:12:23
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "6,648 "
+views:        "6,656 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-Laptop-lid-close-doesn_t-suspend-then-the-battery-dies.md
 toc:          false
 navigation:   false
@@ -66,4 +66,4 @@ sudo reboot
 Voila! everything is reversed and your system will operate as you expect.
 
 
-  [1]: https://i.stack.imgur.com/eZgVI.png
+  [1]: https://i.sstatic.net/eZgVI.png

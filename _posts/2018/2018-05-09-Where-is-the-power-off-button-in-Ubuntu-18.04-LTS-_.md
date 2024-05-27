@@ -10,9 +10,9 @@ created_date: 2018-05-09 23:37:37
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "6,096 "
+views:        "6,099 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Where-is-the-power-off-button-in-Ubuntu-18.04-LTS-_.md
 toc:          false
 navigation:   false
@@ -40,5 +40,5 @@ Also of interest is some users are not getting a chance to select an action beca
 
 
 
-  [1]: https://i.stack.imgur.com/ke4yT.jpg
-  [2]: https://i.stack.imgur.com/uB0cx.gif
+  [1]: https://i.sstatic.net/ke4yT.jpg
+  [2]: https://i.sstatic.net/uB0cx.gif

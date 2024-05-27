@@ -10,9 +10,9 @@ created_date: 2017-03-22 04:56:25
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "55,389 "
+views:        "55,580 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-22-Is-there-a-command-to-display-a-Calendar-in-the-terminal_.md
 toc:          false
 navigation:   false
@@ -34,5 +34,5 @@ Although these are GUI calendars you can still call them from the terminal. They
 Do not be concerned by the Gtk warning message. You see that a lot when running GUI programs from the terminal. eg. `gedit` and `nautilus` display similar warnings.
 
 
-  [1]: https://i.stack.imgur.com/Ojiwe.png
-  [2]: https://i.stack.imgur.com/HdFeF.png
+  [1]: https://i.sstatic.net/Ojiwe.png
+  [2]: https://i.sstatic.net/HdFeF.png

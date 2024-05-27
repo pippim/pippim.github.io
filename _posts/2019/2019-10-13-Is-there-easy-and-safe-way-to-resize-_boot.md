@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,403 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-Is-there-easy-and-safe-way-to-resize-_boot.md
 toc:          false
 navigation:   false
@@ -53,5 +53,5 @@ This is the [good answer by Pilot6][5] posted for that question:
   [1]: https://askubuntu.com/a/301147/307523
   [2]: https://askubuntu.com/questions/89710/how-do-i-free-up-more-space-in-boot
   [3]: https://askubuntu.com/q/671788/307523
-  [4]: https://i.stack.imgur.com/TVDUg.png
+  [4]: https://i.sstatic.net/TVDUg.png
   [5]: https://askubuntu.com/a/671796/307523

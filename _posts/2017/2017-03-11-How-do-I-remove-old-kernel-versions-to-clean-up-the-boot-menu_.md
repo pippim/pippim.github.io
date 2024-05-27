@@ -10,9 +10,9 @@ created_date: 2017-03-11 20:25:32
 edit_date:    2017-07-28 22:35:52
 votes:        "5 "
 favorites:    
-views:        "1,259,437 "
+views:        "1,260,193 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-do-I-remove-old-kernel-versions-to-clean-up-the-boot-menu_.md
 toc:          true
 navigation:   true
@@ -373,9 +373,9 @@ The dialog box used to display each Kernel's **Last Access Date**. This date can
 
 
   [1]: {% post_url /2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
-  [2]: https://i.stack.imgur.com/KOKWr.png
+  [2]: https://i.sstatic.net/KOKWr.png
   [3]: https://askubuntu.com/questions/841810/how-do-you-find-out-when-a-specific-kernel-version-was-last-booted
-  [4]: https://i.stack.imgur.com/CJyAf.png
+  [4]: https://i.sstatic.net/CJyAf.png
 
 
 <a id="hdr7"></a>

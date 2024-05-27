@@ -10,9 +10,9 @@ created_date: 2019-04-27 17:19:23
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,035 "
+views:        "1,039 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-grep-change-color-highlight-from-first-line-to-second-line.md
 toc:          false
 navigation:   false
@@ -92,9 +92,9 @@ Gives you this:
 - After trying all the colors I'm leading towards yellow as my favorite.
 
   [1]: https://unix.stackexchange.com/questions/106565/how-to-highlight-a-word-in-the-output-of-cat
-  [2]: https://i.stack.imgur.com/Pf2z1.png
+  [2]: https://i.sstatic.net/Pf2z1.png
   [3]: https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux#escaping-meta
   [4]: https://stackoverflow.com/questions/41446222/matching-decimal-number-in-grep
-  [5]: https://i.stack.imgur.com/XKUaj.png
+  [5]: https://i.sstatic.net/XKUaj.png
   [6]: https://www.jefftk.com/p/colored-grep
-  [7]: https://i.stack.imgur.com/NtcPY.png
+  [7]: https://i.sstatic.net/NtcPY.png

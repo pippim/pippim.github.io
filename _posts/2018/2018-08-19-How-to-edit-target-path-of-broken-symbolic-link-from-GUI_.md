@@ -10,9 +10,9 @@ created_date: 2018-08-19 04:06:00
 edit_date:    2018-08-19 14:01:57
 votes:        "4 "
 favorites:    
-views:        "2,630 "
+views:        "2,647 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-How-to-edit-target-path-of-broken-symbolic-link-from-GUI_.md
 toc:          false
 navigation:   false
@@ -156,6 +156,6 @@ chmod +x ~/.config/caja/scripts/edit-link
 ```
 
 Then we can use this script from Caja Scripts drop-down menu. 
-  [1]: https://i.stack.imgur.com/0NmbJ.png
-  [2]: https://i.stack.imgur.com/7ypms.png
+  [1]: https://i.sstatic.net/0NmbJ.png
+  [2]: https://i.sstatic.net/7ypms.png
 

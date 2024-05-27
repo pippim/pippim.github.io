@@ -10,9 +10,9 @@ created_date: 2018-11-12 23:39:10
 edit_date:    2018-11-13 00:07:32
 votes:        "2 "
 favorites:    
-views:        "676 "
+views:        "678 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-12-Downgrade-of-kernel-fails.md
 toc:          false
 navigation:   false
@@ -120,8 +120,8 @@ Booting with `3.16.60` works OK for me but I loose:
 - Support for Thunderbolt Type C DPI to HDMI converter is lost.
 - Grub overrides are needed to avoid login loop. <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd> needed to access console.
 
-  [1]: https://i.stack.imgur.com/iNqtUm.png
-  [2]: https://i.stack.imgur.com/bMazC.png
+  [1]: https://i.sstatic.net/iNqtUm.png
+  [2]: https://i.sstatic.net/bMazC.png
 
 
 

@@ -10,9 +10,9 @@ created_date: 2020-01-27 12:47:43
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "15,682 "
+views:        "15,724 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-27-How-To-Get-Intel-Graphics-Control-Panel-In-Ubuntu.md
 toc:          false
 navigation:   false
@@ -40,4 +40,4 @@ If you install the package let us know how it works out.
 
   [1]: https://ubuntuforums.org/showthread.php?t=870248
   [2]: https://dri.freedesktop.org/wiki/DriConf/
-  [3]: https://i.stack.imgur.com/Z7otl.png
+  [3]: https://i.sstatic.net/Z7otl.png

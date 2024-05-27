@@ -10,9 +10,9 @@ created_date: 2018-08-09 23:26:25
 edit_date:    
 votes:        "9 "
 favorites:    
-views:        "332,067 "
+views:        "332,892 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-09-Moving-entire-Linux-installation-to-another-drive.md
 toc:          false
 navigation:   false
@@ -29,4 +29,4 @@ The full script can be found here: [Backup/clone live to a new partition which c
 
 [![clone-ubuntu.png][1]][1]
 
-  [1]: https://i.stack.imgur.com/MgM3p.png
+  [1]: https://i.sstatic.net/MgM3p.png

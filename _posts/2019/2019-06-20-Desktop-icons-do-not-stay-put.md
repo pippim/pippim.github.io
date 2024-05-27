@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,074 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-Desktop-icons-do-not-stay-put.md
 toc:          false
 navigation:   false
@@ -39,4 +39,4 @@ Visit the [github][1] page for **iconic** to see all the other screens, explanat
 
 
   [1]: https://github.com/WinEunuuchs2Unix/iconic
-  [2]: https://i.stack.imgur.com/Q45Pz.png
+  [2]: https://i.sstatic.net/Q45Pz.png

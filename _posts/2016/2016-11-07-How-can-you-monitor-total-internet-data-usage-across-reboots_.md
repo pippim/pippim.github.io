@@ -10,9 +10,9 @@ created_date: 2016-11-07 04:50:28
 edit_date:    2023-01-17 05:28:26
 votes:        "75 "
 favorites:    
-views:        "110,520 "
+views:        "110,624 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-you-monitor-total-internet-data-usage-across-reboots_.md
 toc:          false
 navigation:   false
@@ -145,4 +145,4 @@ To save space on my narrow window, I used "G" instead of "GiB", "M" instead of "
 You may have to change `eth0` to `wlan0` or `eth1`, etc. depending on your network name reported by `ifconfig`.
 
 
-  [1]: https://i.stack.imgur.com/vDbR5.png
+  [1]: https://i.sstatic.net/vDbR5.png

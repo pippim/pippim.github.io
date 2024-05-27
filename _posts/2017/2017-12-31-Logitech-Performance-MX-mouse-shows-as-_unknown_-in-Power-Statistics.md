@@ -10,9 +10,9 @@ created_date: 2017-12-31 22:02:55
 edit_date:    2020-06-13 17:35:13
 votes:        "2 "
 favorites:    
-views:        "3,050 "
+views:        "3,052 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-31-Logitech-Performance-MX-mouse-shows-as-_unknown_-in-Power-Statistics.md
 toc:          false
 navigation:   false
@@ -102,7 +102,7 @@ I did find this new link suggesting kernel > 4.7 and upower >= 0.99.5 fixes the 
 - [Logitech MX Master (Unifying adapter) no power info](https://gitlab.freedesktop.org/upower/upower/-/issues/39)
 
   [1]: https://askubuntu.com/questions/128345/logitech-m515-does-not-work-after-upgrade-to-12-04
-  [2]: https://i.stack.imgur.com/PhoBU.png
+  [2]: https://i.sstatic.net/PhoBU.png
   [3]: https://bugs.freedesktop.org/show_bug.cgi?id=95260
-  [4]: https://i.stack.imgur.com/vjDuL.png
+  [4]: https://i.sstatic.net/vjDuL.png
   [5]: https://bbs.archlinux.org/viewtopic.php?id=154889

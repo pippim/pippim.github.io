@@ -10,9 +10,9 @@ created_date: 2018-10-18 01:48:54
 edit_date:    2020-08-09 15:24:54
 votes:        "11 "
 favorites:    
-views:        "217,677 "
+views:        "218,296 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-18-Set-CPU-governor-to-performance-in-18.04.md
 toc:          false
 navigation:   false
@@ -118,5 +118,5 @@ Your machine will probably run 10 to 15 degrees C hotter.
 You may need to remove other programs that change CPU frequency if they override your Performance settings in `/etc/rc.local`
 
 
-  [1]: https://i.stack.imgur.com/uAgQJ.gif
+  [1]: https://i.sstatic.net/uAgQJ.gif
   [2]: https://askubuntu.com/a/614390/307523

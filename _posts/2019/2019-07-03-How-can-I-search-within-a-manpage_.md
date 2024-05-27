@@ -10,9 +10,9 @@ created_date: 2019-07-03 22:03:12
 edit_date:    2019-08-23 22:35:43
 votes:        "6 "
 favorites:    
-views:        "147,825 "
+views:        "148,149 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-03-How-can-I-search-within-a-manpage_.md
 toc:          false
 navigation:   false
@@ -42,4 +42,4 @@ You sometimes need to pay attention that the internet version can sometimes have
 The advantages of internet manpages goes beyond search facility and includes superior scrolling plus easier copying to clipboard.
 
 
-  [1]: https://i.stack.imgur.com/LvSom.png
+  [1]: https://i.sstatic.net/LvSom.png

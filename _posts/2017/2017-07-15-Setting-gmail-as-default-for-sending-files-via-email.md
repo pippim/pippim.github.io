@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,337 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-15-Setting-gmail-as-default-for-sending-files-via-email.md
 toc:          false
 navigation:   false
@@ -33,4 +33,4 @@ In the example above `Gnome Gmail` has been selected as the default mail applica
 
   [1]: https://davesteele.github.io/gnome-gmail/
   [2]: https://packages.ubuntu.com/xenial/desktop-webmail
-  [3]: https://i.stack.imgur.com/wmhdd.png
+  [3]: https://i.sstatic.net/wmhdd.png

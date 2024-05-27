@@ -10,9 +10,9 @@ created_date: 2019-07-24 18:12:35
 edit_date:    2019-08-24 21:32:17
 votes:        "3 "
 favorites:    
-views:        "1,522 "
+views:        "1,534 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Grub-file-can_t-be-saved-after-modification.md
 toc:          false
 navigation:   false

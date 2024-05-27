@@ -10,9 +10,9 @@ created_date: 2017-02-09 11:58:00
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "2,830 "
+views:        "2,837 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-09-How-to-display-something-in-unity-systray-from-a-bash-script.md
 toc:          false
 navigation:   false
@@ -54,7 +54,7 @@ Here are a few examples from the ***WebUpd8*** link above:
 ```
 
 
-  [1]: https://i.stack.imgur.com/Zh8Wh.gif
+  [1]: https://i.sstatic.net/Zh8Wh.gif
   [2]: http://www.webupd8.org/2014/05/ubuntu-appindicator-that-displays-bash.html
   [3]: {% post_url /2018/2018-05-23-Set-of-countdown-timers-with-alarm %}
   [4]: {% post_url /2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %}

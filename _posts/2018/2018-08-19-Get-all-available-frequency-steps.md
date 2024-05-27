@@ -10,9 +10,9 @@ created_date: 2018-08-19 16:08:45
 edit_date:    2018-08-19 18:34:34
 votes:        "4 "
 favorites:    
-views:        "5,564 "
+views:        "5,581 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Get-all-available-frequency-steps.md
 toc:          false
 navigation:   false

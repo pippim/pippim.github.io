@@ -10,9 +10,9 @@ created_date: 2016-11-13 22:15:58
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "677 "
+views:        "679 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-13-Sony-VAIO-mute-button.md
 toc:          false
 navigation:   false
@@ -35,4 +35,4 @@ Sample screen:
 
 From now on <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd> will **mute** and **un-mute** your sound like a toggle switch. Your screen will also pop up a cool notification.
 
-  [1]: https://i.stack.imgur.com/bVU6B.png
+  [1]: https://i.sstatic.net/bVU6B.png

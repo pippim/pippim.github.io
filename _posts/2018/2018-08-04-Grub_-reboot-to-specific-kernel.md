@@ -10,9 +10,9 @@ created_date: 2018-08-04 12:12:49
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "21,941 "
+views:        "22,004 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-04-Grub_-reboot-to-specific-kernel.md
 toc:          false
 navigation:   false
@@ -44,4 +44,4 @@ sudo grub-reboot "1>6"
 You can find the bash script in this Q&A: [Display grub menu and options without rebooting?]({% post_url /2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_ %})
 
 
-  [1]: https://i.stack.imgur.com/99pqV.png
+  [1]: https://i.sstatic.net/99pqV.png

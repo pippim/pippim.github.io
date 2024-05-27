@@ -10,9 +10,9 @@ created_date: 2018-07-13 01:57:37
 edit_date:    2018-07-13 02:16:03
 votes:        "3 "
 favorites:    
-views:        "11,552 "
+views:        "11,576 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-13-What-is-the-point-of-the-bash-Null-operator-____-colon_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "163 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-Messed-up-Grub2.md
 toc:          false
 navigation:   false
@@ -47,5 +47,5 @@ On some systems this annoyance can occur:
 If this happens to you, visit the link for a solution.
 
   [1]: https://help.ubuntu.com/community/Boot-Repair
-  [2]: https://i.stack.imgur.com/UXflA.png
+  [2]: https://i.sstatic.net/UXflA.png
 

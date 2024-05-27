@@ -10,9 +10,9 @@ created_date: 2018-05-13 04:02:33
 edit_date:    2020-06-12 14:37:07
 votes:        "12 "
 favorites:    
-views:        "11,664 "
+views:        "11,673 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Running-a-simulation-on-pure-Ubuntu-vs-on-Ubuntu-in-Windows-_WSL_.md
 toc:          false
 navigation:   false
@@ -142,7 +142,7 @@ Threads fairness:
 
 **NOTE 2:** I've just installed Windows 10 Build 1803 (April 2018 Spring Creators Update AKA Redstone 4) and the screen painting is much much faster. It's now only 3 seconds instead of 5 seconds to display the Bash splash screen. The CPU benchmark is on par with Linux now.
 
-  [3]: https://i.stack.imgur.com/09Ycq.gif
-  [4]: https://i.stack.imgur.com/pH9F1.gif
+  [3]: https://i.sstatic.net/09Ycq.gif
+  [4]: https://i.sstatic.net/pH9F1.gif
 
 

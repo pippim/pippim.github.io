@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "383 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turbo-Boost-Ubuntu.md
 toc:          false
 navigation:   false
@@ -41,5 +41,5 @@ Another option is to limit your CPU frequencies to non-turbo boost speeds or eve
 
 Visit the link to copy the script or get more details.
 
-  [1]: https://i.stack.imgur.com/2lHSD.gif
+  [1]: https://i.sstatic.net/2lHSD.gif
 

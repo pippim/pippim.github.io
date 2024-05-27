@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "8,289 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-When-will-Ubuntu-18.04-get-kernel-version-5.3_.md
 toc:          false
 navigation:   false
@@ -31,4 +31,4 @@ For full instructions (and warnings) see:
 
 
   [1]: https://wiki.ubuntu.com/Kernel/LTSEnablementStack
-  [2]: https://i.stack.imgur.com/O3gVM.png
+  [2]: https://i.sstatic.net/O3gVM.png

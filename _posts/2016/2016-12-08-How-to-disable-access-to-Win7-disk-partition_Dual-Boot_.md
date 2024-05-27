@@ -10,9 +10,9 @@ created_date: 2016-12-08 00:13:27
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,660 "
+views:        "1,664 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-08-How-to-disable-access-to-Win7-disk-partition_Dual-Boot_.md
 toc:          false
 navigation:   false
@@ -42,5 +42,5 @@ Uncheck the option `Show in User Interface`.
 Click OK and enter password to apply changes. After the next reboot Nautilus won't show the partition. Note that this doesn't erase the partition or delete any data on it.
 
 
-  [1]: https://i.stack.imgur.com/e5LCU.png
-  [2]: https://i.stack.imgur.com/9zU2z.png
+  [1]: https://i.sstatic.net/e5LCU.png
+  [2]: https://i.sstatic.net/9zU2z.png

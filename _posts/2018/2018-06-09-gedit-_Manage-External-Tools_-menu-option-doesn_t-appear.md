@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,026 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-09-gedit-_Manage-External-Tools_-menu-option-doesn_t-appear.md
 toc:          false
 navigation:   false
@@ -65,5 +65,5 @@ sudo chown -cR rick:rick /home/rick
 
 and all is well now.
 
-  [1]: https://i.stack.imgur.com/pjD41.png
+  [1]: https://i.sstatic.net/pjD41.png
 

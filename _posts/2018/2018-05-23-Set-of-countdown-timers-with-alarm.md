@@ -10,9 +10,9 @@ created_date: 2018-05-23 11:14:12
 edit_date:    2023-04-25 00:19:00
 votes:        "14 "
 favorites:    
-views:        "6,074 "
+views:        "6,081 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-Set-of-countdown-timers-with-alarm.md
 toc:          true
 navigation:   true
@@ -810,10 +810,10 @@ You can have the System Tray / Application Indicator Area update with the time r
 To setup Sysmonitor Indicator see this Q&A: [In Ubuntu Unity, can I display the output of a bash script in the systray area?]({% post_url /2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_ %})
 
 
-  [1]: https://i.stack.imgur.com/4m75Y.gif
-  [2]: https://i.stack.imgur.com/mDbYLl.png
-  [3]: https://i.stack.imgur.com/pHZNHm.png
-  [4]: https://i.stack.imgur.com/Actwjm.gif
+  [1]: https://i.sstatic.net/4m75Y.gif
+  [2]: https://i.sstatic.net/mDbYLl.png
+  [3]: https://i.sstatic.net/pHZNHm.png
+  [4]: https://i.sstatic.net/Actwjm.gif
 
 
 

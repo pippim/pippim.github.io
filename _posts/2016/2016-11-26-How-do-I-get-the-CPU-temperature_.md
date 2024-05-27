@@ -10,9 +10,9 @@ created_date: 2016-11-26 22:15:04
 edit_date:    2018-10-15 10:41:04
 votes:        "156 "
 favorites:    
-views:        "1,794,193 "
+views:        "1,797,248 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-I-get-the-CPU-temperature_.md
 toc:          false
 navigation:   false
@@ -89,7 +89,7 @@ After knowing your temperature you probably want to control it better. `tlp` wor
 
 You can get a very detailed write-up with installation instructions here: [Stop cpu from overheating]({% post_url /2017/2017-01-25-Stop-cpu-from-overheating %})
 
-  [1]: https://i.stack.imgur.com/QHcG8.gif
+  [1]: https://i.sstatic.net/QHcG8.gif
 
 
 

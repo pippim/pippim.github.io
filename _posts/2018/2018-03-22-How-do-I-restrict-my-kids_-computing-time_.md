@@ -10,9 +10,9 @@ created_date: 2018-03-22 01:06:16
 edit_date:    2021-12-04 21:51:58
 votes:        "2 "
 favorites:    
-views:        "62,591 "
+views:        "62,621 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-22-How-do-I-restrict-my-kids_-computing-time_.md
 toc:          true
 navigation:   true
@@ -244,8 +244,8 @@ After the timer is running and you double click on it again the first running co
 While lock screen timer is running it records how many minutes are remaining into the file `~/.lock-screen-timer-remaining`. You can look at this file with the `watch` command or display it on Ubuntu's system tray / application indicator bar as shown at the top of this answer. To display time remaining in the notification area, follow the instructions in this Q&A: [In Ubuntu Unity, can I display the output of a bash script in the systray area?]({% post_url /2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_ %}).
 
 
-  [1]: https://i.stack.imgur.com/N0gb6.gif
-  [2]: https://i.stack.imgur.com/0jBz6.png
+  [1]: https://i.sstatic.net/N0gb6.gif
+  [2]: https://i.sstatic.net/0jBz6.png
 
 
 <a id="hdr8"></a>

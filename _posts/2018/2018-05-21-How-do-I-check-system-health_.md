@@ -10,9 +10,9 @@ created_date: 2018-05-21 13:37:40
 edit_date:    2020-10-12 02:07:35
 votes:        "15 "
 favorites:    
-views:        "48,933 "
+views:        "49,113 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health_.md
 toc:          false
 navigation:   false
@@ -91,5 +91,5 @@ To learn more about `conky` and CPU usage see: [How do I stress test CPU and RAM
 
   [1]: https://askubuntu.com/questions/343114/how-to-check-for-errors-in-ram-via-linux?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
   [2]: {% post_url /2018/2018-05-03-Is-there-a-way-of-limiting-the-Kernel_s-memory-manager-to-use-only-75_-of-memory_ %}
-  [3]: https://i.stack.imgur.com/2TQWO.gif
+  [3]: https://i.sstatic.net/2TQWO.gif
   [4]: {% post_url /2017/2017-08-23-How-do-I-stress-test-CPU-and-RAM-_at-the-same-time__ %}

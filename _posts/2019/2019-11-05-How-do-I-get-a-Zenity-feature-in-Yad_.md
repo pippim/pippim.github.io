@@ -10,9 +10,9 @@ created_date: 2019-11-05 00:17:52
 edit_date:    2019-11-05 00:22:56
 votes:        "3 "
 favorites:    
-views:        "863 "
+views:        "868 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-How-do-I-get-a-Zenity-feature-in-Yad_.md
 toc:          false
 navigation:   false
@@ -70,4 +70,4 @@ The short `.gif` clip below shows what happens when we type:
 
 
   [1]: http://smokey01.com/yad/
-  [2]: https://i.stack.imgur.com/pCVyz.gif
+  [2]: https://i.sstatic.net/pCVyz.gif

@@ -10,9 +10,9 @@ created_date: 2016-11-14 00:53:33
 edit_date:    2017-04-13 12:24:16
 votes:        "2 "
 favorites:    
-views:        "288 "
+views:        "290 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-14-How-do-I-find-all-system-files-I_ve-edited-with-_gedit__.md
 toc:          false
 navigation:   false

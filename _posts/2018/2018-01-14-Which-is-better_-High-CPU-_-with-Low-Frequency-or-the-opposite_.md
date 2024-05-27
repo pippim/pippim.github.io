@@ -10,9 +10,9 @@ created_date: 2018-01-14 03:14:21
 edit_date:    2020-06-11 14:16:50
 votes:        "4 "
 favorites:    
-views:        "2,164 "
+views:        "2,167 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-14-Which-is-better_-High-CPU-_-with-Low-Frequency-or-the-opposite_.md
 toc:          false
 navigation:   false
@@ -73,6 +73,6 @@ Is it better to have Low CPU with High Frequency or High CPU and Low Frequency?
 
 Battery use isn't really a concern as this 17" laptop doesn't go outside since it doesn't fit into the coat pocket as easily as the 5.5" 1080p smartphone. It would still be good to know if Low CPU % or Low Frequency is better for battery life?
 
-  [1]: https://i.stack.imgur.com/32XjR.gif
-  [2]: https://i.stack.imgur.com/Nrc2X.gif
-  [3]: https://i.stack.imgur.com/J3Dai.gif
+  [1]: https://i.sstatic.net/32XjR.gif
+  [2]: https://i.sstatic.net/Nrc2X.gif
+  [3]: https://i.sstatic.net/J3Dai.gif

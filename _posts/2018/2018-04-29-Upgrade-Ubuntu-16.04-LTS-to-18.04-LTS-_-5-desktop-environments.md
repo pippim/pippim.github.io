@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,218 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Upgrade-Ubuntu-16.04-LTS-to-18.04-LTS-_-5-desktop-environments.md
 toc:          false
 navigation:   false
@@ -36,5 +36,5 @@ As I'm running the test in an easily duplicated environment: [Bash script to clo
 I would first click the gear to select the Desktop environment and then enter my password. Then the software says "Invalid Password". I retype my password and click the gear icon again to discover my first choice has reset to the default and I have to select my first choice again. The second time I enter my password it is accepted. This happens on all options I tried except for "Unity" which accepted my password the first time.
 
 
-  [1]: https://i.stack.imgur.com/dNXhZ.jpg
+  [1]: https://i.sstatic.net/dNXhZ.jpg
   [2]: {% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %}

@@ -10,9 +10,9 @@ created_date: 2019-04-01 23:09:51
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "66,387 "
+views:        "66,394 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-01-Announcing-the-Stack-Exchange-Time-Machine.md
 toc:          false
 navigation:   false
@@ -24,4 +24,4 @@ You'll always find your mouse pointer:
 [![Ask Ubuntu star trail mouse pointer.gif][1]][1]
 
 
-  [1]: https://i.stack.imgur.com/9gUtn.gif
+  [1]: https://i.sstatic.net/9gUtn.gif

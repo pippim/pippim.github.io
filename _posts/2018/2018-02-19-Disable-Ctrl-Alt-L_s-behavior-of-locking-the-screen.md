@@ -10,9 +10,9 @@ created_date: 2018-02-19 17:26:48
 edit_date:    2020-06-12 14:37:07
 votes:        "9 "
 favorites:    
-views:        "13,213 "
+views:        "13,248 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-19-Disable-Ctrl-Alt-L_s-behavior-of-locking-the-screen.md
 toc:          false
 navigation:   false
@@ -44,4 +44,4 @@ Source: [https://ubuntuforums.org/showthread.php?t=2359828](https://ubuntuforums
 On my dual monitor system the lock screen no longer appears when pressing <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>L</kbd>. However the screens saver still kicks in and you have to move mouse, touch a key, etc to turn the monitors back on. Although a password is not required to unlock the screen it might be a bug.
 
 
-  [1]: https://i.stack.imgur.com/nanXH.png
+  [1]: https://i.sstatic.net/nanXH.png

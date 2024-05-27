@@ -10,9 +10,9 @@ created_date: 2019-05-25 14:56:20
 edit_date:    2019-05-31 22:29:54
 votes:        "18 "
 favorites:    
-views:        "2,628 "
+views:        "2,632 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-25-How-can-I-include-the-cursor-in-the-screenshots-created-when-PrtScr-is-pressed_.md
 toc:          false
 navigation:   false
@@ -52,4 +52,4 @@ gsettings list-recursively | sed 's/  */\n/;s/  */\n/;s/\&/\&amp;/g' | yad --lis
 ```
 
   [1]: https://www.linuxhelp.com/how-to-install-dconf-editor-on-ubuntu-18-04
-  [2]: https://i.stack.imgur.com/ygMnZ.png
+  [2]: https://i.sstatic.net/ygMnZ.png

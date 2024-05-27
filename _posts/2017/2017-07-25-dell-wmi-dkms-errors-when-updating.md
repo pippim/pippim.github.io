@@ -10,9 +10,9 @@ created_date: 2017-07-25 20:22:20
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "738 "
+views:        "741 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-dell-wmi-dkms-errors-when-updating.md
 toc:          false
 navigation:   false
@@ -74,4 +74,4 @@ If you require further details don't hesitate to ask via comment below.
 
   [1]: https://github.com/torvalds/linux/blob/master/drivers/platform/x86/dell-wmi.c
   [2]: http://cateee.net/lkddb/web-lkddb/DELL_WMI.html
-  [3]: https://i.stack.imgur.com/VrZL9.jpg
+  [3]: https://i.sstatic.net/VrZL9.jpg

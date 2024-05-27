@@ -10,9 +10,9 @@ created_date: 2018-03-31 17:44:58
 edit_date:    2019-07-08 10:35:06
 votes:        "21 "
 favorites:    
-views:        "601,024 "
+views:        "602,953 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-measure-GPU-usage_.md
 toc:          false
 navigation:   false
@@ -71,5 +71,5 @@ Different versions of the full code listing can be found in these answers:
 - [conky transparent]({% post_url /2017/2017-08-01-conky-transparent %})
 - [Setting to High Performance]({% post_url /2018/2018-06-19-Setting-to-High-Performance %})
 
-  [1]: https://i.stack.imgur.com/ZyTJ7.gif
-  [2]: https://i.stack.imgur.com/Vhi8T.gif
+  [1]: https://i.sstatic.net/ZyTJ7.gif
+  [2]: https://i.sstatic.net/Vhi8T.gif

@@ -10,9 +10,9 @@ created_date: 2017-08-04 03:30:27
 edit_date:    2021-11-15 11:54:31
 votes:        "12 "
 favorites:    
-views:        "31,354 "
+views:        "31,398 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-04-Disable-hyper-threading-in-Ubuntu.md
 toc:          true
 navigation:   true
@@ -232,7 +232,7 @@ ${color orange}${voffset 2}${hr 1}
 
 
   [1]: https://www.theregister.co.uk/2017/06/25/intel_skylake_kaby_lake_hyperthreading/
-  [2]: https://i.stack.imgur.com/M33lK.gif
+  [2]: https://i.sstatic.net/M33lK.gif
   [3]: https://askubuntu.com/users/266507/hi-angel
 
 

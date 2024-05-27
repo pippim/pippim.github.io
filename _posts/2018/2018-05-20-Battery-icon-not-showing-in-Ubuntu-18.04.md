@@ -10,9 +10,9 @@ created_date: 2018-05-20 23:54:52
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "4,352 "
+views:        "4,356 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-20-Battery-icon-not-showing-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

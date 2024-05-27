@@ -10,9 +10,9 @@ created_date: 2016-12-23 06:06:32
 edit_date:    2020-06-12 14:37:07
 votes:        "9 "
 favorites:    
-views:        "4,370 "
+views:        "4,374 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Keyboard-shortcut-to-toggle-_enable_disable_-laptop-touchpad.md
 toc:          false
 navigation:   false
@@ -113,6 +113,6 @@ For disabling touchpad this is displayed:
 
 
   [1]: https://askubuntu.com/questions/844151/enable-disable-touchpad
-  [2]: https://i.stack.imgur.com/2mWMv.png
-  [3]: https://i.stack.imgur.com/Monan.png
-  [4]: https://i.stack.imgur.com/nED9s.png
+  [2]: https://i.sstatic.net/2mWMv.png
+  [3]: https://i.sstatic.net/Monan.png
+  [4]: https://i.sstatic.net/nED9s.png

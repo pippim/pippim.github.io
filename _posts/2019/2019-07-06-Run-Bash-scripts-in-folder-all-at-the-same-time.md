@@ -10,9 +10,9 @@ created_date: 2019-07-06 17:17:00
 edit_date:    2019-07-07 17:52:17
 votes:        "10 "
 favorites:    
-views:        "5,908 "
+views:        "5,916 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Run-Bash-scripts-in-folder-all-at-the-same-time.md
 toc:          false
 navigation:   false
@@ -105,6 +105,6 @@ Above image and comments below from [Linux kernel scheduler][3]
 
 
   [1]: https://stackoverflow.com/questions/8352851/how-to-call-shell-script-from-another-shell-script
-  [2]: https://i.stack.imgur.com/O6wUu.png
+  [2]: https://i.sstatic.net/O6wUu.png
   [3]: https://helix979.github.io/jkoo/post/os-scheduler/
-  [4]: https://i.stack.imgur.com/BKbj0.png
+  [4]: https://i.sstatic.net/BKbj0.png

@@ -10,9 +10,9 @@ created_date: 2018-11-25 19:01:19
 edit_date:    2020-06-12 14:37:07
 votes:        "11 "
 favorites:    
-views:        "3,991 "
+views:        "4,004 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-25-Temporarily-switch-to-a-full-screen_-hairline-cursor.md
 toc:          false
 navigation:   false
@@ -82,10 +82,10 @@ Zoom Options Dialog is part of the [ÆGIS (Ontario) Project][12]. It is funded a
   [3]: https://wiki.ubuntu.com/Accessibility/Reviews/gnome-mag
   [4]: https://apple.stackexchange.com/questions/48515/cursor-as-full-screen-crosshairs
   [5]: https://wiki.gnome.org/Projects/GnomeShell/Magnification/ZoomOptionsDialog#Crosshairs_Switch
-  [6]: https://i.stack.imgur.com/0rmv2.png
+  [6]: https://i.sstatic.net/0rmv2.png
   [7]: http://www.bbc.co.uk/accessibility/guides/magnify/computer/linux/gnome/index.shtml
-  [8]: https://i.stack.imgur.com/sHUEd.jpg
-  [9]: https://i.stack.imgur.com/X4W7F.jpg
+  [8]: https://i.sstatic.net/sHUEd.jpg
+  [9]: https://i.sstatic.net/X4W7F.jpg
   [10]: https://help.ubuntu.com/community/Accessibility
   [11]: http://www.aegis-project.eu/index.php?option=com_content&view=article&id=209&Itemid=78
   [12]: https://aegis.idrc.ocadu.ca/

@@ -10,9 +10,9 @@ created_date: 2018-11-27 00:30:12
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "6,484 "
+views:        "6,500 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-Is-there-a-linux-equivalent-to-Mac_s-_Shake-to-Find-Cursor__.md
 toc:          false
 navigation:   false
@@ -38,4 +38,4 @@ Here's what it looks like enabled:
 [![gnome locate mouse][1]][1]
 
 
-  [1]: https://i.stack.imgur.com/xZLsN.gif
+  [1]: https://i.sstatic.net/xZLsN.gif

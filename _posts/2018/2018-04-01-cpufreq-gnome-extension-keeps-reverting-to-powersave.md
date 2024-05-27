@@ -10,9 +10,9 @@ created_date: 2018-04-01 23:20:08
 edit_date:    2018-04-02 00:43:57
 votes:        "1 "
 favorites:    
-views:        "1,205 "
+views:        "1,207 "
 accepted:     Accepted
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-cpufreq-gnome-extension-keeps-reverting-to-powersave.md
 toc:          false
 navigation:   false
@@ -85,5 +85,5 @@ I left the governor set on `performance` for 30 minutes and it worked just fine.
 
 CPU% utilization has spiked by 5%, but CPU frequency has dropped by 1500 MHz and temperature has decreased by about 10 degrees. Overall I think **powersave** mode is the best for most configurations.
 
-  [1]: https://i.stack.imgur.com/imYi5.gif
-  [2]: https://i.stack.imgur.com/q5cuK.gif
+  [1]: https://i.sstatic.net/imYi5.gif
+  [2]: https://i.sstatic.net/q5cuK.gif

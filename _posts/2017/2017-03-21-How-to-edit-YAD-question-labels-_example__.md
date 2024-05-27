@@ -10,9 +10,9 @@ created_date: 2017-03-21 23:11:34
 edit_date:    2017-04-13 12:23:38
 votes:        "2 "
 favorites:    
-views:        "3,351 "
+views:        "3,357 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-21-How-to-edit-YAD-question-labels-_example__.md
 toc:          false
 navigation:   false
@@ -93,4 +93,4 @@ done # End of while loop
 
 
   [1]: {% post_url /2017/2017-03-25-Bash-template-to-use-zenity-_or-yad_-to-insert-_-edit-_-delete-records-in-a-file-or-database %}
-  [2]: https://i.stack.imgur.com/vAWT6.png
+  [2]: https://i.sstatic.net/vAWT6.png

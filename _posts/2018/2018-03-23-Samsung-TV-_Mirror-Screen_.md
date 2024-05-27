@@ -10,9 +10,9 @@ created_date: 2018-03-23 11:01:17
 edit_date:    2018-10-17 07:39:57
 votes:        "9 "
 favorites:    
-views:        "150,205 "
+views:        "150,630 "
 accepted:     
-uploaded:     2024-05-19 13:43:13
+uploaded:     2024-05-26 21:57:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Samsung-TV-_Mirror-Screen_.md
 toc:          false
 navigation:   false
@@ -31,7 +31,7 @@ Although this is the recommended option for the OP, check your TV model first be
 
 Image:
  
-[<img src="[https://i.stack.imgur.com/aVOnF.jpg](https://i.stack.imgur.com/aVOnF.jpg)" width="125" height="180" alt="IMG: " title="">][3]
+[<img src="[https://i.sstatic.net/aVOnF.jpg](https://i.sstatic.net/aVOnF.jpg)" width="125" height="180" alt="IMG: " title="">][3]
 
 Google cast extension has been discontinued, [now is integrated][4] into Chrome/Chromium:
 
@@ -40,6 +40,6 @@ Google cast extension has been discontinued, [now is integrated][4] into Chrome/
 
   [1]: https://www.youtube.com/watch?v=_4ptucuuJPo
   [2]: https://askubuntu.com/questions/844643/google-cast-on-ubuntu-16-04?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-  [3]: https://i.stack.imgur.com/jxpfj.png
+  [3]: https://i.sstatic.net/jxpfj.png
   [4]: https://support.google.com/chromecast/answer/7249696?hl=en
-  [5]: https://i.stack.imgur.com/ctKBn.png
+  [5]: https://i.sstatic.net/ctKBn.png
