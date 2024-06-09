@@ -97,7 +97,8 @@ less than 80% of song was played
 - Cross-fading other sound sources when toggling play/pause, FF/REW,
 and during TV broadcast commercials
 - <a href="#hide-chonology-button">Show/Hide Chronology</a> 
-to balance screen real estate. 
+to balance screen real estate. The *"Chronology"* can also be 
+referred to as the *"Song Queue"* in other music players.
 
 ### Multiple Everything
 {:.no_toc}
@@ -407,10 +408,17 @@ window is off the desktop (invisible), it is moved half way into
 the closest desktop monitor. Also note that 18 minutes after booting,
 4 `speech-dispatcher` jobs may appear in pulse audio. A dialog box
 prompt message appears and, jobs are killed if you respond `Yes`.
-
+- ***Volume submenu*** - Displays the Volume submenu which contains
+options for Volume Loudness Normalization. The options are *Pulse Audio*,
+*Analyze Maximum Volume*, *Analyze 'loudnorm' Filter*,
+*Update 'loudnorm' Filter*, *Analyze New Maximum Volume*,
+and *Create New Volume Playlist*
+- ***Repair Last Access*** - Repairs the Last Access Time for music
+song files. There are some applications that scan music files and reset
+the time to the current time.
 
 ***NOTE:*** The *Enable TV Commercial Buttons* and *Enable FF/Rewind Buttons*
-dropdown menu options occupy the same space and replace each other
+dropdown menu options occupy the same menu line and replace each other
 when they are clicked. The button selection only effects the 
 the current Playlist.
 Other locations and playlists maintain their own button selection.
@@ -1794,6 +1802,20 @@ Right-click on any song in the *Chronology Song List* to:
 - Filter chronology list for songs longer than five minutes
 - Open that song in *Kid3* (Metadata Tag Editor)
 - Open that song in the File Manager (AKA *Nautilus*)
+
+### Chronology List Popup Menu Filter Options for Loudness Normalization
+
+When a Loudness Normalization Playlist is active, 
+the filter options change to:
+
+- Filter volume worse (new volume is worse than old volume)
+- Filter volume missed target (mew volume over 0.1 dB from target)
+- Filter volume met target (new volume is within 0.1 dB of target)
+
+You can redo volume normalization using the Music Location window's
+Dropdown menu and selecting: *'Tools', 'Volume', 'Analyze New Volume',
+'Right Click', 'Redo normalization'*. You do not need to run the
+*'Create Normalization Playlist'* after redoing the normalization.
 
 ---
 
