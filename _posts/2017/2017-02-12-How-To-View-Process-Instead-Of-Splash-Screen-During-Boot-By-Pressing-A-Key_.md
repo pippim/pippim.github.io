@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot 16.04 keyboard
 created_date: 2017-02-12 07:48:37
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "1,714 "
+views:        "1,734 "
 accepted:     
-uploaded:     2024-05-26 21:57:37
+uploaded:     2024-06-09 08:36:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-12-How-To-View-Process-Instead-Of-Splash-Screen-During-Boot-By-Pressing-A-Key_.md
 toc:          false
 navigation:   false

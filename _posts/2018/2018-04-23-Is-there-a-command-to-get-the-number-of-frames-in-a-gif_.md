@@ -10,9 +10,9 @@ created_date: 2018-04-23 00:29:47
 edit_date:    2020-06-12 14:37:07
 votes:        "10 "
 favorites:    
-views:        "17,777 "
+views:        "17,854 "
 accepted:     
-uploaded:     2024-05-26 21:57:37
+uploaded:     2024-06-09 08:36:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-Is-there-a-command-to-get-the-number-of-frames-in-a-gif_.md
 toc:          false
 navigation:   false

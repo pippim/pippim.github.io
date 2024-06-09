@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1187756
 type:         Answer
 tags:         login reboot authentication
 created_date: 2019-11-10 16:30:42
-edit_date:    2019-11-10 16:37:20
-votes:        "3 "
+edit_date:    2024-05-27 04:36:02
+votes:        "5 "
 favorites:    
-views:        "7,920 "
+views:        "8,012 "
 accepted:     
-uploaded:     2024-05-26 21:57:37
+uploaded:     2024-06-09 08:36:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-New-message-when-rebooting-from-login-screen_-Authentication-is-required-for-rebooting-the-system-while-an-application-asked-to-inhibit-it.md
 toc:          false
 navigation:   false
@@ -52,7 +52,9 @@ $ systemd-inhibit --list
 5 inhibitors listed.
 ```
 
-However the list doesn't change after you open a file for editing for example. You can use this instead:
+However the list isn't dynamic. For example, the list doesn't change when you open a file for editing. Editing a file will inhibit rebooting.
+
+This is how you can see inhibits due to files that need saving:
 
 ``` 
 $ dbus-send --print-reply --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.GetInhibitors
@@ -73,4 +75,4 @@ method return time=1573403241.678869 sender=:1.49 -> destination=:1.1855 serial=
    ]
 ```
 
-In the first instance there are no inhibitor locks. We edit a file in gedit and in the second instance a lock exists. However it doesn't actually tell us the name `gedit`.
+In the first `dbus` command there are no inhibitor locks. Then `gedit` is used to modify a new file. In the second `dbus` command an inhibitor exists.

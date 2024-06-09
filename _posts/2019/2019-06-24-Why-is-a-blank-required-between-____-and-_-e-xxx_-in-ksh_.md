@@ -10,9 +10,9 @@ created_date: 2019-06-24 01:54:33
 edit_date:    2019-06-24 16:56:29
 votes:        "2 "
 favorites:    
-views:        "2,452 "
+views:        "2,455 "
 accepted:     
-uploaded:     2024-05-26 21:57:37
+uploaded:     2024-06-09 08:36:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-24-Why-is-a-blank-required-between-____-and-_-e-xxx_-in-ksh_.md
 toc:          false
 navigation:   false
