@@ -10,9 +10,9 @@ created_date: 2018-07-01 18:45:04
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,253 "
+views:        "1,254 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-01-Lowering-screen-max-brightness-with-Ubuntu-18.04.md
 toc:          false
 navigation:   false

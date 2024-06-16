@@ -10,9 +10,9 @@ created_date: 2017-01-05 03:07:18
 edit_date:    2019-11-13 02:36:22
 votes:        "27 "
 favorites:    
-views:        "386,575 "
+views:        "387,314 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-05-How-can-I-check-the-SMART-status-of-a-SSD-or-HDD-on-current-versions-of-Ubuntu-14.04-through-20.04_.md
 toc:          false
 navigation:   false

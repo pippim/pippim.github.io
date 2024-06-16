@@ -10,9 +10,9 @@ created_date: 2016-08-28 18:17:20
 edit_date:    2016-08-28 18:28:43
 votes:        "3 "
 favorites:    
-views:        "2,045 "
+views:        "2,048 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Printer-Brother-DCP-1610W-not-working-under-Xubuntu-16.04.md
 toc:          false
 navigation:   false

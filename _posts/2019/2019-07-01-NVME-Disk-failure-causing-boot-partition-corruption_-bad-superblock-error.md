@@ -10,9 +10,9 @@ created_date: 2019-07-01 17:34:17
 edit_date:    2019-07-01 18:03:49
 votes:        "3 "
 favorites:    
-views:        "4,344 "
+views:        "4,365 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-NVME-Disk-failure-causing-boot-partition-corruption_-bad-superblock-error.md
 toc:          false
 navigation:   false

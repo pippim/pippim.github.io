@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,404 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-Is-there-easy-and-safe-way-to-resize-_boot.md
 toc:          false
 navigation:   false

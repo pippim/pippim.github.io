@@ -10,9 +10,9 @@ created_date: 2019-01-06 15:56:20
 edit_date:    2019-01-06 16:59:10
 votes:        "2 "
 favorites:    
-views:        "2,235 "
+views:        "2,237 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-06-Strange-LED-blinking-problem-with-USB-flash-drives-is-it-just-me_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-05-04 10:09:40
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,256 "
+views:        "2,258 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-How-to-integrate-_run-as-shell-script_-in-right-click-menu-of-file-manager_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "39 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-02-How-to-diagnose-Software-Updater-issue_-It-just-pops-up-a-window-with-no-content.md
 toc:          false
 navigation:   false

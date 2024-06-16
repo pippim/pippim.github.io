@@ -10,9 +10,9 @@ created_date: 2019-10-16 23:19:07
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "6,507 "
+views:        "6,523 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-16-Avoid-showing-cancel-button-on-dialog.md
 toc:          false
 navigation:   false

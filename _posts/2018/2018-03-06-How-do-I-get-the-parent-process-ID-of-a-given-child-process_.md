@@ -10,9 +10,9 @@ created_date: 2018-03-06 04:03:44
 edit_date:    2020-06-12 14:37:07
 votes:        "17 "
 favorites:    
-views:        "342,379 "
+views:        "343,255 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-06-How-do-I-get-the-parent-process-ID-of-a-given-child-process_.md
 toc:          false
 navigation:   false

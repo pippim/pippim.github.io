@@ -10,9 +10,9 @@ created_date: 2018-03-13 01:58:22
 edit_date:    2018-03-13 02:07:20
 votes:        "0 "
 favorites:    
-views:        "1,237 "
+views:        "1,240 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-what-are-system.journal-and-templates.dat.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-08-28 04:03:16
 edit_date:    2019-09-08 15:51:53
 votes:        "5 "
 favorites:    
-views:        "254 "
+views:        "255 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days.md
 toc:          false
 navigation:   false

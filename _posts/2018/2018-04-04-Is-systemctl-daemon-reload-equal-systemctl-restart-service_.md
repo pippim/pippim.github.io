@@ -10,9 +10,9 @@ created_date: 2018-04-04 03:26:00
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
-views:        "69,102 "
+views:        "69,300 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-Is-systemctl-daemon-reload-equal-systemctl-restart-service_.md
 toc:          false
 navigation:   false

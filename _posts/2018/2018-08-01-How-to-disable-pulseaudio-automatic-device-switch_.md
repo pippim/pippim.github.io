@@ -10,9 +10,9 @@ created_date: 2018-08-01 23:43:14
 edit_date:    2020-06-12 14:37:07
 votes:        "26 "
 favorites:    
-views:        "14,789 "
+views:        "14,829 "
 accepted:     Accepted
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-How-to-disable-pulseaudio-automatic-device-switch_.md
 toc:          false
 navigation:   false

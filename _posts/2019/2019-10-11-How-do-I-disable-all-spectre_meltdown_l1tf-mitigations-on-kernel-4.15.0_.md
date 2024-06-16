@@ -10,9 +10,9 @@ created_date: 2019-10-11 11:27:41
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,101 "
+views:        "2,107 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-How-do-I-disable-all-spectre_meltdown_l1tf-mitigations-on-kernel-4.15.0_.md
 toc:          false
 navigation:   false

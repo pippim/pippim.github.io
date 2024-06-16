@@ -10,9 +10,9 @@ created_date: 2018-04-15 22:14:45
 edit_date:    2018-04-15 22:23:16
 votes:        "10 "
 favorites:    
-views:        "12,473 "
+views:        "12,661 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-How-can-I-see-previous-history-_prior-to-this-boot_-in-journalctl_.md
 toc:          false
 navigation:   true

@@ -10,9 +10,9 @@ created_date: 2019-07-19 23:31:05
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "8,934 "
+views:        "8,969 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-19-Want-a-fully-functional-18.04-hardware-monitor.md
 toc:          false
 navigation:   false

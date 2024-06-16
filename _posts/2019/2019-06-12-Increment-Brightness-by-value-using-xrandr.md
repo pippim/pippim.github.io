@@ -10,9 +10,9 @@ created_date: 2019-06-12 00:00:39
 edit_date:    2021-01-04 23:56:25
 votes:        "13 "
 favorites:    
-views:        "10,976 "
+views:        "11,007 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Increment-Brightness-by-value-using-xrandr.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-12-27 01:38:52
 edit_date:    2021-12-13 01:02:51
 votes:        "24 "
 favorites:    
-views:        "3,953,925 "
+views:        "3,959,959 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-27-How-do-I-save-terminal-output-to-a-file_.md
 toc:          false
 navigation:   false

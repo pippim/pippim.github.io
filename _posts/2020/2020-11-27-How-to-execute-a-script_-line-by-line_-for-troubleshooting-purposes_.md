@@ -10,9 +10,9 @@ created_date: 2020-11-27 20:46:32
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,437 "
+views:        "2,469 "
 accepted:     
-uploaded:     2024-06-09 08:36:17
+uploaded:     2024-06-16 11:13:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-11-27-How-to-execute-a-script_-line-by-line_-for-troubleshooting-purposes_.md
 toc:          false
 navigation:   false
