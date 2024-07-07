@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "164 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-Messed-up-Grub2.md
 toc:          false
 navigation:   false

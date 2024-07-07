@@ -10,9 +10,9 @@ created_date: 2019-07-06 20:27:02
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "47,225 "
+views:        "47,501 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-How-to-auto-mount-from-command-line_.md
 toc:          false
 navigation:   true

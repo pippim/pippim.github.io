@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "11,555 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-Strange-graphics-issue-after-upgrading-to-18.04-that-affects-only-one-user-account.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,066 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-20-HDMI-audio-disabled-after-resuming-from-sleep.md
 toc:          false
 navigation:   false

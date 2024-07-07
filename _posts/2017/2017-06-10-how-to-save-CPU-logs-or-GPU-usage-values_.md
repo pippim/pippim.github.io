@@ -10,9 +10,9 @@ created_date: 2017-06-10 02:22:48
 edit_date:    2017-06-14 01:22:11
 votes:        "2 "
 favorites:    
-views:        "8,148 "
+views:        "8,189 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-10-how-to-save-CPU-logs-or-GPU-usage-values_.md
 toc:          false
 navigation:   true

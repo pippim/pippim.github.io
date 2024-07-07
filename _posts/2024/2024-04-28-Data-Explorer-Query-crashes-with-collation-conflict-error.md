@@ -5,14 +5,14 @@ title:        >
 site:         Meta Stack Exchange
 stack_url:    https://meta.stackexchange.com/q/399418
 type:         Question
-tags:         support status-planned data-explorer error-message jquery
+tags:         support status-completed data-explorer error-message jquery
 created_date: 2024-04-28 17:12:16
-edit_date:    2024-05-05 17:27:32
+edit_date:    2024-06-17 22:58:09
 votes:        "7 "
 favorites:    
-views:        "222 "
+views:        "246 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-04-28-Data-Explorer-Query-crashes-with-collation-conflict-error.md
 toc:          false
 navigation:   false

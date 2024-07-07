@@ -10,9 +10,9 @@ created_date: 2019-06-12 00:48:29
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "63,999 "
+views:        "64,854 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Changing-the-screen-brightness-of-the-external-screen.md
 toc:          false
 navigation:   false

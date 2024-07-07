@@ -10,9 +10,9 @@ created_date: 2018-03-30 00:20:03
 edit_date:    2021-08-05 07:11:28
 votes:        "4 "
 favorites:    
-views:        "4,926 "
+views:        "5,044 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-30-Are-there-file-naming-conventions-for-.cron-and-.systemd-extensions_.md
 toc:          false
 navigation:   false

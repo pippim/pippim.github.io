@@ -8,11 +8,11 @@ type:         Question
 tags:         command-line bash bash-history
 created_date: 2017-02-20 22:49:16
 edit_date:    2017-04-13 12:24:42
-votes:        "11 "
+votes:        "12 "
 favorites:    
-views:        "34,349 "
+views:        "34,652 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-Half-of-bash-history-is-missing.md
 toc:          false
 navigation:   false

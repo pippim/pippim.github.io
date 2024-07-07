@@ -10,9 +10,9 @@ created_date: 2019-12-12 12:51:38
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,043 "
+views:        "1,054 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-12-xrandr-different-effect-when-put-in-.xprofile.md
 toc:          false
 navigation:   false

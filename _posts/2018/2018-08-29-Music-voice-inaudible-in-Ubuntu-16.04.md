@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "252 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-29-Music-voice-inaudible-in-Ubuntu-16.04.md
 toc:          false
 navigation:   false

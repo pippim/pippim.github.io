@@ -138,6 +138,7 @@ ocaml
 ocl
 openedge
 opentype_feature_file
+p4
 pascal
 perl
 php

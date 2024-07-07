@@ -10,9 +10,9 @@ created_date: 2019-10-07 23:35:41
 edit_date:    2022-02-15 01:33:30
 votes:        "2 "
 favorites:    
-views:        "1,528 "
+views:        "1,539 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-07-What-are-these-LED-power-supply-plugs-called_.md
 toc:          false
 navigation:   false

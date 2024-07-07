@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,313 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Long-boot-times-on-18.04.md
 toc:          false
 navigation:   false

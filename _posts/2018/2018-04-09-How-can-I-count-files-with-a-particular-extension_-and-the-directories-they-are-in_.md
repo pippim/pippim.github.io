@@ -10,9 +10,9 @@ created_date: 2018-04-09 23:37:17
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "9,728 "
+views:        "9,752 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-09-How-can-I-count-files-with-a-particular-extension_-and-the-directories-they-are-in_.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         networking network-manager ethernet
 created_date: 2022-02-23 12:06:22
 edit_date:    
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "729 "
+views:        "748 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
 toc:          false
 navigation:   false

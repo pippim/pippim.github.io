@@ -10,9 +10,9 @@ created_date: 2022-02-24 13:10:58
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "13,945 "
+views:        "14,319 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-24-stdin_-invalid-argument.md
 toc:          false
 navigation:   false

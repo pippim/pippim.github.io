@@ -10,9 +10,9 @@ created_date: 2016-12-11 20:39:42
 edit_date:    2018-05-14 21:44:50
 votes:        "6 "
 favorites:    
-views:        "9,408 "
+views:        "9,412 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-to-change-the-Unity-lockscreen-wallpaper_.md
 toc:          false
 navigation:   false

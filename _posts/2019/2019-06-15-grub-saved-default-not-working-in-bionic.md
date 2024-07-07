@@ -10,9 +10,9 @@ created_date: 2019-06-15 13:30:37
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "2,353 "
+views:        "2,364 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-15-grub-saved-default-not-working-in-bionic.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-08-17 01:01:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,187 "
+views:        "5,209 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-17-Updating-content-of-a-zenity-window.md
 toc:          false
 navigation:   false

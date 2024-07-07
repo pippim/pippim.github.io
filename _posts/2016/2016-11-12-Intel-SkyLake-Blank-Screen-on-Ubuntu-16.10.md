@@ -10,9 +10,9 @@ created_date: 2016-11-12 06:28:49
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "4,793 "
+views:        "4,795 "
 accepted:     
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Intel-SkyLake-Blank-Screen-on-Ubuntu-16.10.md
 toc:          false
 navigation:   false

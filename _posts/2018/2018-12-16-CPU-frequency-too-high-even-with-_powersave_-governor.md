@@ -10,9 +10,9 @@ created_date: 2018-12-16 15:16:15
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "5,866 "
+views:        "5,882 "
 accepted:     Accepted
-uploaded:     2024-06-16 11:13:06
+uploaded:     2024-07-07 13:16:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-CPU-frequency-too-high-even-with-_powersave_-governor.md
 toc:          false
 navigation:   false
