@@ -1996,7 +1996,7 @@ Inventory Type: RAW, V1, etc.  | Reorder Point: 999 | Reorder Qty: 999 | Min Qty
 Purchasing UoM: 1 case = 12 rolls (of 20) = 240 sheets | Issuing UoM: 1 roll = 20 sheets
 Proof of temperature required? Yes/No | POT email address: xxx@xxx.com | temperature range: +/-99C to -+/-99C
 CofA required? Yes/No | Producct Insert (PI) required? Yes/No | Last PI document / revision on file: Xxxx Xxxx / yyyy-mm-dd
-Product Owner: First, Last name
+Product Owner: First, Last name | Manufacturer: https://manu.com
 
 FIFO Batches released:
 	Batch 1111 | Qty: 999 | SLED yyyy-mm-dd | STO / PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days | PO qty: 999 | Buyer: First, Last name
@@ -2013,15 +2013,20 @@ Other plants FIFO Batches:
 	Batch 3333 | Qty: 999 | SLED yyyy-mm-dd | 9999 - Vancouver
 
 Transaction History:
-	red issue | yyyymm-dd | qty | cost centre | gl account
-	red issue | yyyymm-dd | qty | cost centre | gl account
-	red issue | yyyymm-dd | qty | cost centre | gl account
-	green receipt | yyyymm-dd | qty | cost centre | gl account | where
-	green issue return | yyyymm-dd | qty | cost centre | gl account
+	red issue | yyyy-mm-dd | qty | cost centre | gl account
+	red issue | yyyy-mm-dd | qty | cost centre | gl account
+	red issue | yyyy-mm-dd | qty | cost centre | gl account
+	green receipt | yyyy-mm-dd | qty | cost centre | gl account | where
+	green issue return | yyyy-mm-dd | qty | cost centre | gl account
 
 On Order:
 	STO / PO # 999999 | qty | est arrival yyyy-mm-dd
 	STO / PO # 999999 | qty | est arrival yyyy-mm-dd
+
+Vendors:
+	BD | Catalog # 999-99 | PS Details 1.pdf | PS Details 2.pdf | PS Details 3.pdf
+	Fisher Scientifc | Catalog # 999-99 | PS Details 1.pdf
+	Cardinal Health | Catalog # 999-99 | PS Details 1.pdf | PS Details 2.pdf
 
 ```
 
