@@ -1985,7 +1985,7 @@ print('total_header_levels:       ', total_header_levels)
 
 ## Custom SAP view or report (that can be viewed or printed)
 
-``` shell
+``` cpp
 MM#: 1000109999 | Description | 4200 - Edmonton
 Inventory Type: RAW, V1, etc.  | Reorder Point: 999 | Reorder Qty: 999 | Min Qty: 999 |  Max Qty: 999 | Old MM#: 1000109999
 Purchasing UoM: 1 case = 12 rolls (of 20) = 240 sheets | Issuing UoM: 1 roll = 20 sheets
@@ -2010,8 +2010,8 @@ Transaction History:
 	red issue | yyyymm-dd | qty  | cost centre | gl account
 	red issue | yyyymm-dd | qty | cost centre | gl account
 	red issue | yyyymm-dd | qty | cost centre | gl account
-	greeen receipt | yyyymm-dd | qty | cost centre | gl account | where
-	greeen issue return | yyyymm-dd | qty | cost centre | gl account
+	green receipt | yyyymm-dd | qty | cost centre | gl account | where
+	green issue return | yyyymm-dd | qty | cost centre | gl account
 
 On Order:
 
