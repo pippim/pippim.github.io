@@ -1996,7 +1996,8 @@ Inventory Type: RAW, V1, etc.  | Reorder Point: 999 | Reorder Qty: 999 | Min Qty
 Purchasing UoM: 1 case = 12 rolls (of 20) = 240 sheets | Issuing UoM: 1 roll = 20 sheets
 Proof of temperature required? Yes/No | POT email address: xxx@xxx.com | temperature range: +/-99C to -+/-99C
 CofA required? Yes/No | Product Insert (PI) required? Yes/No | Last PI document / revision on file: Xxxx Xxxx / yyyy-mm-dd
-Internal inspection required? Yes/No | Shipment Contents? N/A/Temp controls | Product Owner: First, Last name | Manufacturer: https://manu.com
+Internal inspection required? Yes/No | Shipment Contents? N/A or Temp controls active: Yes/No | Product Owner: First, Last name 
+Manufacturer: Xxxxx | Website: https://manu.com | Criticality level: 9 | Web documentum: Xxxxx/Xxxx/Xxxx/Xxxx
 
 FIFO Batches released:
 	Batch 1111 | Qty: 999 | SLED yyyy-mm-dd | STO / PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days | PO qty: 999 | Buyer: First, Last name
