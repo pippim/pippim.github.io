@@ -1983,5 +1983,42 @@ print('all_tag_counts: {:>8,}'.format(all_tag_counts),
 print('total_header_levels:       ', total_header_levels)
 ```
 
+## Custom SAP view or report (that can be viewed or printed)
+
+``` shell
+MM#: 1000109999 | Description | 4200 - Edmonton
+Inventory Type: RAW, V1, etc.  | Reorder Point: 999 | Reorder Qty: 999 | Min Qty: 999 |  Max Qty: 999 | Old MM#: 1000109999
+Purchasing UoM: 1 case = 12 rolls (of 20) = 240 sheets | Issuing UoM: 1 roll = 20 sheets
+Proof of temperature required? Xxx | POT email address: xxx@xxx.com | temperature range: +/-99C-+/-99C
+CofA required? | Producct Insert (PI) required?  | Last PI document / revision on file: Xxxx Xxxx – yyyy-mm-dd
+FIFO Batches released:
+	Batch 1111 | Qty: 999 | SLED yyyy-mm-dd | STO / PO# 999999 | Recv: yyyy-mm-dd | lead time: 9 days|  PO qty 999 ! Buyer: First, Last name
+	Batch 2222 | Qty: 999 | SLED yyyy-mm-dd | STO / PO# 999999 | Recv: yyyy-mm-dd | lead time: 9 days|  PO qty 999 ! Buyer: First, Last name
+	Batch 3333 | Qty: 999 | SLED yyyy-mm-dd | STO / PO# 999999 | Recv: yyyy-mm-dd | lead time: 9 days|  PO qty 999 ! Buyer: First, Last name
+
+Batches quarrantine / blocked:
+	Batch 4444 | Qty: 999 | SLED yyyy-mm-dd | PO# 999999 | Recv: yyyy-mm-dd | lead time: 9 days|  PO qty 999 ! Buyer: First, Last | Status: Quarrantine
+	Batch 0000 | Qty: 999 | SLED yyyy-mm-dd | PO# 999999 | Recv: yyyy-mm-dd | lead time: 9 days|  PO qty 999 ! Buyer: First, Last | Status: Blocked
+
+Other plants FIFO Batches:
+	Batch 1111 | Qty: 999 | SLED yyyy-mm-dd | 9999 - Bramptom
+	Batch 2222 | Qty: 999 | SLED yyyy-mm-dd | 9999 - Calgary
+	Batch 3333 | Qty: 999 | SLED yyyy-mm-dd | 9999 - Vancouver
+
+Transaction History:
+
+	red issue | yyyymm-dd | qty  | cost centre | gl account
+	red issue | yyyymm-dd | qty | cost centre | gl account
+	red issue | yyyymm-dd | qty | cost centre | gl account
+	greeen receipt | yyyymm-dd | qty | cost centre | gl account | where
+	greeen issue return | yyyymm-dd | qty | cost centre | gl account
+
+On Order:
+
+	STO / PO # | qty | est arrival yyyy-mm-dd
+	STO / PO # | qty | est arrival yyyy-mm-dd
+
+```
+
 <a id="hdr35"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr34" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a></div>
