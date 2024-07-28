@@ -10,9 +10,9 @@ created_date: 2016-12-24 18:38:57
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "3,175 "
+views:        "0 "
 accepted:     Accepted
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-24-Plymouth-Error-Logging.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-10-13 00:33:34
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "110 "
+views:        "0 "
 accepted:     Accepted
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-13-Acquiring-pre-releases_betas-for-unreleased-distros-for-testing.md
 toc:          false
 navigation:   false

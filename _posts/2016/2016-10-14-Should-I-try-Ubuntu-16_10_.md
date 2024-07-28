@@ -10,9 +10,9 @@ created_date: 2016-10-14 10:31:50
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "261 "
+views:        "0 "
 accepted:     Accepted
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Should-I-try-Ubuntu-16_10_.md
 toc:          false
 navigation:   false

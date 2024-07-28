@@ -10,9 +10,9 @@ created_date: 2018-04-19 03:31:57
 edit_date:    2018-04-21 22:46:43
 votes:        "1 "
 favorites:    
-views:        "182 "
+views:        "0 "
 accepted:     Accepted
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-19-What-is-the-best-way-to-install-Ubuntu-on-cloud.md
 toc:          false
 navigation:   false

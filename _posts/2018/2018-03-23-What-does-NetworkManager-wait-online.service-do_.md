@@ -8,11 +8,11 @@ type:         Answer
 tags:         network-manager 17.10
 created_date: 2018-03-23 23:35:51
 edit_date:    2020-06-12 14:37:07
-votes:        "82 "
+votes:        "83 "
 favorites:    
-views:        "148,952 "
+views:        "0 "
 accepted:     Accepted
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-What-does-NetworkManager-wait-online.service-do_.md
 toc:          false
 navigation:   false

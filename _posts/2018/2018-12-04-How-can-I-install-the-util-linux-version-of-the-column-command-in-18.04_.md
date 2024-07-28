@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line software-installation
 created_date: 2018-12-04 02:10:58
 edit_date:    
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "10,544 "
+views:        "0 "
 accepted:     
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-04-How-can-I-install-the-util-linux-version-of-the-column-command-in-18.04_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-09-05 22:07:21
 edit_date:    2016-09-05 22:19:15
 votes:        "4 "
 favorites:    
-views:        "1,677 "
+views:        "0 "
 accepted:     
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Constant-flash-player-problems.md
 toc:          false
 navigation:   false

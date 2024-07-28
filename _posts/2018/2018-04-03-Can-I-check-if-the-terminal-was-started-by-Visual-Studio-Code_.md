@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line visual-studio-code
 created_date: 2018-04-03 10:13:51
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "4,185 "
+views:        "0 "
 accepted:     
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Can-I-check-if-the-terminal-was-started-by-Visual-Studio-Code_.md
 toc:          false
 navigation:   false

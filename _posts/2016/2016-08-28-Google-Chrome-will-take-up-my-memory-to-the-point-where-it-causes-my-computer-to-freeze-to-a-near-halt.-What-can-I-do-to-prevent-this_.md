@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 google-chrome ram memory-usage
 created_date: 2016-08-28 23:41:48
 edit_date:    2017-10-04 19:46:26
-votes:        "34 "
+votes:        "35 "
 favorites:    
-views:        "25,304 "
+views:        "0 "
 accepted:     
-uploaded:     2024-07-07 13:16:45
+uploaded:     2024-07-28 15:18:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Google-Chrome-will-take-up-my-memory-to-the-point-where-it-causes-my-computer-to-freeze-to-a-near-halt.-What-can-I-do-to-prevent-this_.md
 toc:          false
 navigation:   false
