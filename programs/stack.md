@@ -1994,7 +1994,7 @@ MM#: 1000109999 | Description | 4200 - Edmonton
 
 Inventory Type: RAW, V1, etc.  | Reorder Point: 999 | Reorder Qty: 999 | Min Qty: 999 |  Max Qty: 999 | Old MM#: 1000109999
 Purchasing UoM: 1 case = 12 rolls (of 20) = 240 sheets | Issuing UoM: 1 roll = 20 sheets
-Proof of temperature required? Yes/No | POT email address: xxx@xxx.com | temperature range: +/-99C to -+/-99C
+Proof of temperature required? Yes/No | POT email address: xxx@xxx.com | temperature range: +/-99C to +/-99C
 CofA required? Yes/No | Product Insert (PI) required? Yes/No | Last PI document / revision on file: Xxxx Xxxx / yyyy-mm-dd
 Internal inspection required? Yes/No | Shipment Contents? N/A or Temp controls active: Yes/No | Product Owner: First, Last name 
 Manufacturer: Xxxxx | Website: https://manu.com | Criticality level: 9 | Web documentum: Xxxxx/Xxxx/Xxxx/Xxxx
@@ -2005,8 +2005,8 @@ FIFO Batches released:
 	Batch 3333 | Qty: 999 | SLED yyyy-mm-dd | STO / PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days | PO qty: 999 | Buyer: First, Last name
 
 Batches quarrantine / blocked:
-	Batch 4444 | Qty: 999 | SLED yyyy-mm-dd | PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days|  PO qty 999 | Buyer: First, Last | Status: Quarrantine
-	Batch 0000 | Qty: 999 | SLED yyyy-mm-dd | PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days|  PO qty 999 | Buyer: First, Last | Status: Blocked
+	Batch 4444 | Qty: 999 | SLED yyyy-mm-dd | PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days | PO qty 999 | Buyer: First, Last | Status: Quarrantine
+	Batch 0000 | Qty: 999 | SLED yyyy-mm-dd | PO# 999999 | Recv: yyyy-mm-dd | Lead time: 9 days | PO qty 999 | Buyer: First, Last | Status: Blocked
 
 Other plants FIFO Batches:
 	Batch 1111 | Qty: 999 | SLED yyyy-mm-dd | 9999 - Bramptom
@@ -2028,7 +2028,6 @@ Vendors:
 	BD | Catalog # 999-99 | PS Details 1.pdf | PS Details 2.pdf | PS Details 3.pdf
 	Fisher Scientifc | Catalog # 999-99 | PS Details 1.pdf
 	Cardinal Health | Catalog # 999-99 | PS Details 1.pdf | PS Details 2.pdf
-
 ```
 
 <a id="hdr35"></a>
