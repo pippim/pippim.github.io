@@ -10,9 +10,9 @@ created_date: 2017-06-01 00:51:26
 edit_date:    2017-06-01 01:35:03
 votes:        "3 "
 favorites:    
-views:        "8,411 "
+views:        "8,427 "
 accepted:     
-uploaded:     2024-07-28 15:18:40
+uploaded:     2024-08-04 14:28:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-01-How-to-interpret-time-_real__-_user_-and-_sys_.md
 toc:          false
 navigation:   false

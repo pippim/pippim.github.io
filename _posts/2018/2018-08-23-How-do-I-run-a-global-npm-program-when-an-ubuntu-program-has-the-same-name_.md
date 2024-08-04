@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-07-28 15:18:40
+uploaded:     2024-08-04 14:28:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-How-do-I-run-a-global-npm-program-when-an-ubuntu-program-has-the-same-name_.md
 toc:          false
 navigation:   false
