@@ -1414,10 +1414,8 @@ def check_html_static_net(http_str):
         trace = True
         # Set the trace once, then all code below is activated
 
-    static_str = "https://i.sstatic.net/"
-    if static_str in http_str:
-        image_name = http_str[len(static_str):]
-        print("image_name:", image_name)
+    if STATIC_NET_STR in http_str:
+        image_name = http_str[len(STATIC_NET_STR):]
         return image_name
     else:
         return None
@@ -3128,10 +3126,10 @@ def set_config_code_url():
             parts = code_url.split('/')
             # html_url https://pippim.github.io derived from code_url
             html_url = "https://" + parts[4]
-            #print('html_url:', html_url)
+            print('html_url:', html_url)
             # append "../_posts/" as "/_posts"
             code_url += OUTPUT_DIR[:-1].replace("../", "/")
-            # print("code_url:", code_url)
+            print("code_url:", code_url)
 
             return
 
