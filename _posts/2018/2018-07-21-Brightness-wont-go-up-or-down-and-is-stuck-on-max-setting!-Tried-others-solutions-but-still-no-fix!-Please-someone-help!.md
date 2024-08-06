@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-04 14:28:50
+uploaded:     2024-08-06 16:55:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-21-Brightness-wont-go-up-or-down-and-is-stuck-on-max-setting!-Tried-others-solutions-but-still-no-fix!-Please-someone-help!.md
 toc:          false
 navigation:   false

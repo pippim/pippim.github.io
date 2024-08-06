@@ -29,6 +29,7 @@
 #       Dec 31 2023 - Add 80 missing blog posts
 #       Mar 31 2024 - SE changed "<tag><tag>..<tag>" to "|tag|tag..|tag|"
 #       Apr 08 2024 - SE changed back to "<tag><tag>..<tag>"
+#       Aug 06 2024 - Hot-linking disabled so store SE images locally.
 #
 # ==============================================================================
 
@@ -605,33 +606,19 @@ def set_ss_save_blog(r):
         views = 0
     total_views += views    # score is up-votes - down-votes can be negative
 
-    ''' If Accepted turned on save blog (but it might be question) 
-Getting 104 skipped questions asked by others. These were answered and
-accepted. They should not be skipped. 
+    ''' If Accepted turned on save blog. 
+        Accepted answers are getting skipped. These were answered and
+        accepted. They should not be skipped. 
 
 EG: https://askubuntu.com/questions/1024432/
     password-protect-grub-menu-editing/1024620#1024620
-
-URL: https://unix.stackexchange.com/q/571712
-URL: https://stackoverflow.com/q/69967570
-URL: https://stackoverflow.com/q/71101541
-URL: https://askubuntu.com/q/968324
-URL: https://askubuntu.com/q/1394490
-URL: https://askubuntu.com/q/851051
-URL: https://askubuntu.com/q/1147993
-URL: https://stackoverflow.com/q/59437505
-URL: https://stackoverflow.com/q/64582469
-URL: https://stackoverflow.com/q/65461996
-URL: https://askubuntu.com/q/892141
-URL: https://superuser.com/q/1456859
 URL: https://askubuntu.com/q/815191
-URL: https://askubuntu.com/q/829657
 URL: https://askubuntu.com/q/845020
-URL: https://askubuntu.com/q/846297
 URL: https://askubuntu.com/q/862173
 URL: https://askubuntu.com/q/1020977
 URL: https://askubuntu.com/q/1021116
 URL: https://askubuntu.com/q/1021174
+
 URL: https://askubuntu.com/q/1049343
 URL: https://askubuntu.com/q/1064480
 URL: https://askubuntu.com/q/1153967
@@ -1069,6 +1056,17 @@ def check_tail_links(ln):
               [1]: https://www.google.com/
               [yahoo]: https://www.yahoo.com/
 
+        2024-08-06 - Images can no longer be hot-linked. They have to be
+            stored locally on website. Look for:
+
+                [1]: https://i.sstatic.net/99999.png
+
+            If found, use `wget` to download to:
+                /assets/img/_posts/yyyy/99999.png
+
+            Then change line to read:
+                [1]: https://www.pippim.com/assets/img/_posts/yyyy/99999.png
+
     """
 
     global total_tail_links
@@ -1090,10 +1088,16 @@ def check_tail_links(ln):
     http_str = ln[h_start + 3:]
     our_url, test_str = check_html_substitute(http_str)
     if our_url is None:
-        return ln
+        # 2024-08-06 - Test for [1]: https://i.sstatic.net/99999.png
+        image_str = check_html_static_net(http_str)
+        if image_str is None:
+            return ln
+        else:
+            return ln
 
     # print('our_url:', our_url)
     total_tail_links += 1  # "[x]:  https://…"  replaced with ss_post_url
+    #found_link =
     return ln.replace(http_str, our_url)
 
 
@@ -1278,7 +1282,7 @@ https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/10393
         OR ANSWER IS REALLY:
 https://askubuntu.com/a/1039377/307523
 
-    EG set DEBUG_PRINT to "1039377" to force printing
+    TESTING: set DEBUG_PRINT to "1039377" to force printing
     """
 
     trace = False  # Set to True to print out debugging stuff
@@ -1306,7 +1310,7 @@ https://askubuntu.com/a/1039377/307523
         # Website outside of Stack Exchange
         return None, search_url
 
-    # Grab the last part of http_str split into parts divided by / (pun noted)
+    # Grab the last part of http_str split into parts separated by '/'
     fallback_part4 = None
     last_part = parts[-1]
     # split last part in half at # divider. Are they equal
@@ -1315,7 +1319,7 @@ https://askubuntu.com/a/1039377/307523
         if last_part_splits[0] == last_part_splits[1]:
             fallback_part4 = last_part_splits[0]
 
-    # Grab the last part of http_str split into parts divided by / (pun noted)
+    # Grab the last part of http_str split into parts separated by '/'
     fallback_part2 = None
     test_part2 = parts[0] + "//" + parts[2] + "/a/" + parts[4]
     if get_ss_url(test_part2, search_type="Answer"):
@@ -1382,6 +1386,37 @@ https://askubuntu.com/a/1039377/307523
 
     #print('ss_post_url:', ss_post_url)
     return ss_post_url, search_url
+
+
+def check_html_static_net(http_str):
+    """ Check if https://i.sstatic.net/99999.png' present. If so,
+        as of 2024-08-06 hot-linking is no longer allowed. Then:
+
+        Change: https://i.sstatic.net/99999.png
+            to: https://www.pippim.com/assets/img/_posts/99999.png
+
+        If posts by year required then, later
+        Change: /_posts/
+            to: /_posts/yyyy/
+
+    """
+
+    trace = False  # Set to True to print out debugging stuff
+    if DEBUG_PRINT in http_str:  # Remove ? to turn on debugging
+        percent_complete_close()  # Turn off progress bar display
+        print('')
+        print("KEY QUESTION:", http_str)
+        print('LINK:', row[LINK])
+        trace = True
+        # Set the trace once, then all code below is activated
+
+    static_str = "https://i.sstatic.net/"
+    if static_str in http_str:
+        image_name = http_str.split(static_str)[0]
+        print("image_name:", image_name)
+        return image_name
+    else:
+        return None
 
 
 def get_index(search, names):
