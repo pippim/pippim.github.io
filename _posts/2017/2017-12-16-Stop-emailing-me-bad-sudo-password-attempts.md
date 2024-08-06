@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,972 "
 accepted:     Accepted
-uploaded:     2024-08-06 16:55:00
+uploaded:     2024-08-06 16:59:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-16-Stop-emailing-me-bad-sudo-password-attempts.md
 toc:          false
 navigation:   false

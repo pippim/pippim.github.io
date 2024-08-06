@@ -196,6 +196,10 @@ EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`
 CONFIG_YML = "../_config.yml"
+# 2024-08-06 - SE switched from imgur server to static server that does
+#   not allow hot-linking. These images must be downloaded locally.
+STATIC_NET_STR = "https://i.sstatic.net/"
+
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
 html_url = None             # https://pippim.github.io derived from code_url
 
@@ -1412,7 +1416,7 @@ def check_html_static_net(http_str):
 
     static_str = "https://i.sstatic.net/"
     if static_str in http_str:
-        image_name = http_str.split(static_str)[0]
+        image_name = http_str[len(static_str):]
         print("image_name:", image_name)
         return image_name
     else:
