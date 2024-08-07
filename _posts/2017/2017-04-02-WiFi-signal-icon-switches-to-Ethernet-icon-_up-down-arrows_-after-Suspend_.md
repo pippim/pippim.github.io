@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-07 06:21:45
+uploaded:     2024-08-07 17:32:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-02-WiFi-signal-icon-switches-to-Ethernet-icon-_up-down-arrows_-after-Suspend_.md
 toc:          false
 navigation:   false

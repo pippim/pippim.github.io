@@ -67,8 +67,13 @@ import csv                  # For reading SE QueryResults.csv
 from random import randint  # To randomly process small set of CSV records
 
 # Local modules
-import website_search
+import website_search  # Search Engine
 ws = website_search.WebsiteSearch()
+
+import image  # Download SE images to ~/website2/assets/img/_posts
+''' TODO: Replace below with _config.yml front matter: posts_by_year '''
+OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
+img = image.Image(OUTPUT_BY_YEAR_DIR)
 
 """
     TO-DO
@@ -102,8 +107,6 @@ INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
 OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
-''' TODO: Replace below with _config.yml front matter: posts_by_year '''
-OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
