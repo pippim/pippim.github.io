@@ -74,16 +74,6 @@ ws = website_search.WebsiteSearch()
     TO-DO
     ============================================================================
 
-    Read lines in index.md, about.md, programs.md and parse with website_search.
-
-    Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
-
-    Create list of self-answered questions that have been accepted by yourself.
-    Use this list to override rule of including accepted answers and defer to
-    VOTE_QUALIFIER instead. Just because you accepted your own answer to your
-    own question doesn't mean it was popular in the community when it has zero
-    votes, or even worse is down voted!
-    
     ADD THESE NOTES TO NEW SHELL SCRIPT:
     
     After creating your personal access token:
@@ -198,7 +188,8 @@ EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
 CONFIG_YML = "../_config.yml"
 # 2024-08-06 - SE switched from imgur server to static server that does
 #   not allow hot-linking. These images must be downloaded locally.
-STATIC_NET_STR = "https://i.sstatic.net/"
+IMAGE_NET_STR = "https://i.sstatic.net/"  # 2024-08-06 Fix missing images
+image_files = {}  # key: "99999.png" # 1 exists, 2 used, 3 exists & used
 
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
 html_url = None             # https://pippim.github.io derived from code_url
@@ -1414,8 +1405,8 @@ def check_html_static_net(http_str):
         trace = True
         # Set the trace once, then all code below is activated
 
-    if STATIC_NET_STR in http_str:
-        image_name = http_str[len(STATIC_NET_STR):]
+    if IMAGE_NET_STR in http_str:
+        image_name = http_str[len(IMAGE_NET_STR):]
         return image_name
     else:
         return None
@@ -3649,6 +3640,9 @@ for row in rows:
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
 
+    # USAGE:
+    #     import website_search
+    #     ws = website_search.WebsiteSearch()
     # noinspection PyUnresolvedReferences
     ws.post_init(html_url + filename + ".html", row[TITLE])
     ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
