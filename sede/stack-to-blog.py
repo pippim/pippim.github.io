@@ -71,9 +71,7 @@ import website_search  # Search Engine
 ws = website_search.WebsiteSearch()
 
 import image  # Download SE images to ~/website2/assets/img/_posts
-''' TODO: Replace below with _config.yml front matter: posts_by_year '''
-OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
-img = image.Image(OUTPUT_BY_YEAR_DIR)
+img = image.Image("dummy", True)  # Reinitialized later with actual values
 
 """
     TO-DO
@@ -191,9 +189,9 @@ EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
 CONFIG_YML = "../_config.yml"
 # 2024-08-06 - SE switched from imgur server to static server that does
 #   not allow hot-linking. These images must be downloaded locally.
-IMAGE_NET_STR = "https://i.sstatic.net/"  # 2024-08-06 Fix missing images
-image_files = {}  # key: "99999.png" # 1 exists, 2 used, 3 exists & used
-
+''' TODO: Replace below with _config.yml front matter: posts_by_year '''
+OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
+IMAGE_NET_STR = "https://i.sstatic.net/"
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
 html_url = None             # https://pippim.github.io derived from code_url
 
@@ -3102,6 +3100,7 @@ def set_config_code_url():
     """
     global code_url  # https://github.com/pippim/pippim.github.io/blob/main
     global html_url  # https://pippim.github.io derived from code_url
+    global img  # Class instance
 
     if FRONT_GIT_URL is None:
         return ""  # They don't want this glorious feature! :)
@@ -3124,6 +3123,7 @@ def set_config_code_url():
             # append "../_posts/" as "/_posts"
             code_url += OUTPUT_DIR[:-1].replace("../", "/")
             print("code_url:", code_url)
+            img = image.Image(html_url, OUTPUT_BY_YEAR_DIR)
 
             return
 
@@ -3284,6 +3284,7 @@ def extra_file_as_post_init(extra):
     # print('title:', title)
     ws.post_init(final_url, title)
     ws.parse(title, TITLE_SEARCH_POINTS)
+    img.post_init(final_url, title)
 
     return all_lines
 
@@ -3640,6 +3641,9 @@ for row in rows:
     if OUTPUT_BY_YEAR_DIR:
         # /2018/2018/ becomes: /2018/
         filename = filename[5:]
+        image_year = filename[:5]
+    else:
+        image_year = ""
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
 
@@ -3650,6 +3654,7 @@ for row in rows:
     ws.post_init(html_url + filename + ".html", row[TITLE])
     ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
     ws.parse(tags, TAG_SEARCH_POINTS)
+    img.post_init(html_url + filename + ".html", row[TITLE])
     ''' Pass #2: Loop through lines to insert TOC and Navigation Bar
                  Create search dictionary words 
     '''
