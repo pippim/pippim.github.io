@@ -77,8 +77,10 @@ img = image.Image("dummy", True)  # Reinitialized later with actual values
     TO-DO
     ============================================================================
 
-    ADD THESE NOTES TO NEW SHELL SCRIPT:
+    blog post "How to install Firefox directly..." has formatting errors
+    due to code blocks inside numbered points.  
     
+    DOCUMENT ACCESS TOKEN
     After creating your personal access token:
     
 $ git config --global user.name "pippim"
@@ -98,11 +100,12 @@ Password: <type your password>
 
 """
 
-''' GLOBAL VARIABLES - To see all from terminal use:
-    grep -w '^\([_]*[A-Z]\+\)\+' stack-to-blog.py
-'''
+# noinspection Pep8CodingStyleViolationW605
+# GLOBAL VARIABLES - To see all from terminal use:
+#    grep -w '^\([_]*[A-Z]\+\)\+' stack-to-blog.py
+
 INPUT_FILE = 'QueryResults.csv'
-RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
+RANDOM_LIMIT = 0            # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
 OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
@@ -194,6 +197,7 @@ OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 IMAGE_NET_STR = "https://i.sstatic.net/"
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
 html_url = None             # https://pippim.github.io derived from code_url
+filename = ""  # Just to make pycharm happy
 
 
 ''' Initialize Global Variables '''
@@ -201,7 +205,7 @@ rows = []                   # Returned rows, less record #1 (field names)
 row_count = 0               # How many rows (Answers / Blog posts)
 random_row_nos = []         # Random row numbers exported during trail runs
 ss_list = []                # Speed search list
-ss_index = None             # Last speeed search index found
+ss_index = 0                # Last speeed search index found
 ss_row_index = None         # Row's index number in rows [] list
 ss_url = None               # SE URL
 ss_type = None              # "Question", "Answer" or "Wiki"
@@ -449,15 +453,15 @@ def create_speed_search():
 
     #print('len(ss_list):', len(ss_list))
     # Pass 2, set ss_save_blog and tally up answer/question totals
-    for i, r in enumerate(rows):
+    for ri, r in enumerate(rows):
         # Check if counterpart exists and set "ss_both_q_and_a" flag
-        get_ss_index(i)  # 2023-12-31 - Moved up
+        get_ss_index(ri)  # 2023-12-31 - Moved up
         update_both_q_and_a(r)      # TODO: Speed this up
         save = set_ss_save_blog(r)  # Also sets self-answered question flags
-        get_ss_index(i)  # 2023-12-31 - Move up causes error so keep here
+        get_ss_index(ri)  # 2023-12-31 - Move up causes error so keep here
         ss_save_blog = save
         update_ss()
-        percent_complete(row_count + i, double_count,
+        percent_complete(row_count + ri, double_count,
                          title="Build Speed Search")
 
     percent_complete_close()
@@ -582,7 +586,7 @@ def set_ss_save_blog(r):
     global question_count, answer_count, accepted_count
     global self_answer, self_accept, total_self_answer, total_self_accept
 
-    save = True          # save_blog Default until a condition turns it off
+    save = True  # save_blog Default until a condition turns it off
 
     ''' SCORE = (Up Votes - Down Votes) in string format'''
     if r[SCORE] != '':
@@ -590,7 +594,7 @@ def set_ss_save_blog(r):
     else:
         vote = 0
 
-    total_votes += vote    # score is up-votes - down-votes can be negative
+    total_votes += vote  # score is up-votes - down-votes can be negative
 
     if vote < VOTE_QUALIFIER:
         save = False   # Below up-vote requirement
@@ -1058,7 +1062,7 @@ def check_tail_links(ln):
                 [1]: https://i.sstatic.net/99999.png
 
             If found, use `wget` to download to:
-                /assets/img/_posts/yyyy/99999.png
+                ../assets/img/_posts/yyyy/99999.png
 
             Then change line to read:
                 [1]: https://www.pippim.com/assets/img/_posts/yyyy/99999.png
@@ -1078,18 +1082,26 @@ def check_tail_links(ln):
 
     # Must start with "  [xxx]: h"
     h_start = ln.find(']: h', 4)
-    if h_start == -1:
+    if h_start == -1:  # Not found?
         return ln
 
-    http_str = ln[h_start + 3:]
+    http_str = ln[h_start + 3:]  # skip over trailing 'ttp'
     our_url, test_str = check_html_substitute(http_str)
     if our_url is None:
         # 2024-08-06 - Test for [1]: https://i.sstatic.net/99999.png
         image_str = check_html_static_net(http_str)
-        if image_str is None:
-            return ln
-        else:
-            return ln
+        if image_str is not None:
+            img.add(image_str)
+            # TODO: Setup second pass to rename image_str
+            # base_filename = /yyyy/mm/dd Title
+            post_year = base_filename[:5]
+            new_url = img.images_url
+            if OUTPUT_BY_YEAR_DIR:
+                new_url += post_year
+            new_url += "/" + image_str
+            ln = ln.replace(http_str, new_url)
+            print(ln)
+        return ln
 
     # print('our_url:', our_url)
     total_tail_links += 1  # "[x]:  https://…"  replaced with ss_post_url
@@ -1397,13 +1409,13 @@ def check_html_static_net(http_str):
 
     """
 
-    trace = False  # Set to True to print out debugging stuff
+    _trace = False  # Set to True to print out debugging stuff
     if DEBUG_PRINT in http_str:  # Remove ? to turn on debugging
         percent_complete_close()  # Turn off progress bar display
         print('')
         print("KEY QUESTION:", http_str)
         print('LINK:', row[LINK])
-        trace = True
+        _trace = True
         # Set the trace once, then all code below is activated
 
     if IMAGE_NET_STR in http_str:
@@ -2938,6 +2950,7 @@ def test_fake_group(group_no, groups):
 
 # noinspection PyArgumentList
 def expand_fake_groups(group_no, groups, fake_group_count, fake_post_count):
+    """ Need docstring """
 
     html = ""   # Start with empty html
     # print("expanding group_no:", group_no)
@@ -3072,6 +3085,7 @@ def html_details_start(summary):
 
 
 def html_details_end():
+    """ Need docstring """
     if parse_block_html:
         return "\n</details>\n"
     else:
@@ -3123,7 +3137,7 @@ def set_config_code_url():
             # append "../_posts/" as "/_posts"
             code_url += OUTPUT_DIR[:-1].replace("../", "/")
             print("code_url:", code_url)
-            img = image.Image(html_url, OUTPUT_BY_YEAR_DIR)
+            #img = image.Image(html_url, OUTPUT_BY_YEAR_DIR)
 
             return
 
@@ -3221,12 +3235,12 @@ def process_extra_files():
 
         EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', ...]
 
-        html_url contains 'https://pippim.github.io'
+        html_url contains 'https://pippim.github.io' from config.yml
     """
     percent_complete_close()
     # file_count = len(EXTRA_SEARCH_FILES)
     # print('Processing', file_count, 'extra search files')
-    for i, extra in enumerate(EXTRA_SEARCH_FILES):
+    for extra in EXTRA_SEARCH_FILES:
         all_lines = extra_file_as_post_init(extra)
         in_include = False
         for ln in all_lines:
@@ -3284,7 +3298,7 @@ def extra_file_as_post_init(extra):
     # print('title:', title)
     ws.post_init(final_url, title)
     ws.parse(title, TITLE_SEARCH_POINTS)
-    img.post_init(final_url, title)
+    img.post_init(final_url, title, "")  # "" = No year
 
     return all_lines
 
@@ -3383,6 +3397,7 @@ if FRONT_URL is not None:
 
 # Test Front Matter "code_url:" from CONFIG_YML
 set_config_code_url()
+img = image.Image(html_url, OUTPUT_BY_YEAR_DIR)
 
 # Read Rouge Languages into tuple
 file = open("rouge_languages.txt", 'r')
@@ -3448,6 +3463,7 @@ create_speed_search()
 for row in rows:
 
     row_number += 1
+    percent_complete_close()  # 2024-08-09 - Allow clean debug print
     percent_complete(row_number, row_count, title="Convert Markdown")
     ''' Reset counters for each stack exchange Q&A '''
     save_blog = True        # Default until a condition turns it off
@@ -3641,7 +3657,7 @@ for row in rows:
     if OUTPUT_BY_YEAR_DIR:
         # /2018/2018/ becomes: /2018/
         filename = filename[5:]
-        image_year = filename[:5]
+        image_year = filename[1:5]
     else:
         image_year = ""
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
@@ -3651,10 +3667,13 @@ for row in rows:
     #     import website_search
     #     ws = website_search.WebsiteSearch()
     # noinspection PyUnresolvedReferences
-    ws.post_init(html_url + filename + ".html", row[TITLE])
+    html_filename = html_url + filename + ".html"
+    ws.post_init(html_filename, row[TITLE])
     ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
     ws.parse(tags, TAG_SEARCH_POINTS)
-    img.post_init(html_url + filename + ".html", row[TITLE])
+
+    img.post_init(html_filename, row[TITLE], image_year)
+
     ''' Pass #2: Loop through lines to insert TOC and Navigation Bar
                  Create search dictionary words 
     '''
@@ -3714,6 +3733,7 @@ for row in rows:
 
     qualifying_blog_count += 1
     ws.post_save()
+    img.post_save()  # Save access denied images from i.sstatic.net
     write_md(row, new_md)
     if RANDOM_LIMIT is not None:
         if PRINT_RANDOM:
@@ -3743,6 +3763,9 @@ process_extra_files()
 
 # Write out website search files: search_words.json and search_url.json
 ws.site_save()
+
+# Print totals
+img.site_save()
 
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print('')
@@ -3894,6 +3917,7 @@ for row_no, row in enumerate(rows):
                   'row_no:', row_no, 'ss_save_blog:', ss_save_blog)
         else:
             print('Answer NOT FOUND by get_ss_url')
+
 # noinspection PyArgumentList
 for index in range(1000, 1003):
     get_ss_index(index)

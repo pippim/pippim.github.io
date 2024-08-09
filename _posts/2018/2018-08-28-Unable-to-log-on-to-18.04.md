@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-Unable-to-log-on-to-18.04.md
 toc:          false
 navigation:   false
@@ -53,7 +53,7 @@ There was a bug where if you entered the password incorrectly the first time, yo
 - July 25, 2018 - [Ubuntu 18.04 on login loop, even with correct password][4]
 
 
-  [1]: https://i.sstatic.net/EG0an.jpg
+  [1]: https://pippim.github.io/assets/img/_posts/2018/EG0an.jpg
   [2]: https://bugs.launchpad.net/ubuntu/+source/gdm3/+bug/1769416
   [3]: https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1765261
   [4]: https://askubuntu.com/questions/1059458/ubuntu-18-04-on-login-loop-even-with-correct-password

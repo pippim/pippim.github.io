@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-10-Can_t-upgrade-due-to-low-disk-space-on-_boot.md
 toc:          false
 navigation:   true
@@ -215,7 +215,7 @@ The total of all kernel sizes (excluding the current running version which canno
 The dialog box used to display each Kernel's **Last Access Date**. This date can get mass overwritten for all kernels during backup or similar operations. The dialog box now shows the **Modified Date** instead.
 
 
-  [1]: https://i.sstatic.net/KOKWr.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/KOKWr.png
   [2]: https://askubuntu.com/questions/841810/how-do-you-find-out-when-a-specific-kernel-version-was-last-booted
   [3]: {% post_url /2017/2017-03-11-How-do-I-remove-old-kernel-versions-to-clean-up-the-boot-menu_ %}
 

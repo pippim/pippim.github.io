@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-i-Create-a-Zenity-form-with-a-check-list-in-it.md
 toc:          false
 navigation:   false
@@ -49,5 +49,5 @@ The `--add-entry` works on `--forms` dialog box type but not on `--list` dialog 
 **Credit for --forms** code to: ([Post on Stack Exchange][2])
 
 
-  [1]: https://i.sstatic.net/Yq6c4.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/Yq6c4.png
   [2]: https://unix.stackexchange.com/questions/103277/how-do-i-create-a-dialog-with-multiple-text-fields-using-zenity

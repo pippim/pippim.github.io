@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-How-to-get-the-GPU-info_.md
 toc:          false
 navigation:   false
@@ -93,7 +93,7 @@ screenfetch
 You'll want to put the `screenfetch` command an the bottom of your `~/.bashrc` file to have it appear every time you open the terminal.
 
 
-  [1]: https://i.sstatic.net/7eNp3.gif
-  [2]: https://i.sstatic.net/MnBGg.gif
-  [3]: https://i.sstatic.net/itFpX.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/7eNp3.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2018/MnBGg.gif
+  [3]: https://pippim.github.io/assets/img/_posts/2018/itFpX.png
   [4]: {% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_ %}

@@ -12,7 +12,7 @@ votes:        "68 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-19-Setting-to-High-Performance.md
 toc:          false
 navigation:   false
@@ -206,7 +206,7 @@ Just noticed the conky images above are top half only. The bottom half is includ
 [![enter image description here][4]][4]
 
 
-  [1]: https://i.sstatic.net/imYi5.gif
-  [2]: https://i.sstatic.net/q5cuK.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/imYi5.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2018/q5cuK.gif
   [3]: https://github.com/brndnmtthws/conky
-  [4]: https://i.sstatic.net/3WKXS.png
+  [4]: https://pippim.github.io/assets/img/_posts/2018/3WKXS.png

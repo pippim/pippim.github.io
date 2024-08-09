@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-Why-does-Ubuntu-enable-TRIM-for-certain-brands-only_.md
 toc:          false
 navigation:   false

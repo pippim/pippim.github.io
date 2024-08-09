@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-14-Is-it-possible-to-show-ip-address-on-top-bar-near-the-time_.md
 toc:          false
 navigation:   false
@@ -76,8 +76,8 @@ exit 0
 ```
 
 
-  [1]: https://i.sstatic.net/vjFpA.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/vjFpA.png
   [2]: https://unix.stackexchange.com/a/178256/200094
   [3]: http://www.webupd8.org/2014/05/ubuntu-appindicator-that-displays-bash.html
-  [4]: https://i.sstatic.net/fKUaB.png
-  [5]: https://i.sstatic.net/h22bZ.png
+  [4]: https://pippim.github.io/assets/img/_posts/2018/fKUaB.png
+  [5]: https://pippim.github.io/assets/img/_posts/2018/h22bZ.png

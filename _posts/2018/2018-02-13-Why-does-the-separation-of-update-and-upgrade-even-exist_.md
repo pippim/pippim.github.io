@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-13-Why-does-the-separation-of-update-and-upgrade-even-exist_.md
 toc:          false
 navigation:   false
@@ -50,4 +50,4 @@ Looking at the output you could decide to have a given package "pinned" or "held
 ### Without a separate `apt update` you can't see what would be upgraded!
 
   [1]: {% post_url /2018/2018-02-04-How-can-PPAs-be-removed-using-GUI_ %}
-  [2]: https://i.sstatic.net/wMJvE.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/wMJvE.png

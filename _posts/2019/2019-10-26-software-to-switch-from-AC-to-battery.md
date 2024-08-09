@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-26-software-to-switch-from-AC-to-battery.md
 toc:          false
 navigation:   false
@@ -62,6 +62,6 @@ hs100.sh status
 
 
   [1]: https://www.amazon.ca/TP-Link-Required-Anywhere-Assistant-HS105/dp/B01K1JVZOE/ref=pd_sbs_60_t_1/138-0748005-2681152?_encoding=UTF8&pd_rd_i=B01K1JVZOE&pd_rd_r=c0911e01-b46e-47fb-84d2-1d6a3a798cac&pd_rd_w=V03Ee&pd_rd_wg=h3RiF&pf_rd_p=9926bb69-42b9-46e4-b788-f665992e326d&pf_rd_r=RAHJ6ASEZ9930ZHQ79HC&psc=1&refRID=RAHJ6ASEZ9930ZHQ79HC
-  [2]: https://i.sstatic.net/kVeyk.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/kVeyk.png
   [3]: https://github.com/branning/hs100
   [4]: https://blog.georgovassilis.com/2016/05/07/controlling-the-tp-link-hs100-wi-fi-smart-plug/

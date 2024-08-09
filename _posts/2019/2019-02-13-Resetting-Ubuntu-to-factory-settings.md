@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-13-Resetting-Ubuntu-to-factory-settings.md
 toc:          false
 navigation:   false
@@ -77,6 +77,6 @@ After reinstalling, user accounts must be re-created with the same login and pas
 
 
   [1]: https://help.ubuntu.com/community/UbuntuReinstallation
-  [2]: https://i.sstatic.net/Su5Ay.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/Su5Ay.png
   [3]: https://ubuntuforums.org/showthread.php?p=11770332#post11770332
   [4]: https://www.howtogeek.com/howto/linux/create-a-bootable-ubuntu-usb-flash-drive-the-easy-way/

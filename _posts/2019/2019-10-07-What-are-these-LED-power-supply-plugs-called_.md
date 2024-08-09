@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,553 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-07-What-are-these-LED-power-supply-plugs-called_.md
 toc:          false
 navigation:   false
@@ -37,5 +37,5 @@ My goal is to buy 100 feet of speaker wire and make a 35 foot extension cable an
 A nice thin wire pair will run across the living room baseboards nicer than 14 gauge 120VAC cable.
 
 
-  [1]: https://i.sstatic.net/J6Fis.jpg
-  [2]: https://i.sstatic.net/ETpM8.jpg
+  [1]: https://pippim.github.io/assets/img/_posts/2019/J6Fis.jpg
+  [2]: https://pippim.github.io/assets/img/_posts/2019/ETpM8.jpg

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-Gnome3_-How-to-disable-_Shutdown_-button.md
 toc:          false
 navigation:   false
@@ -44,5 +44,5 @@ I don't know how to change the GUI to remove the "Shutdown" button but you can t
 
 
   [1]: https://extensions.gnome.org/extension/1346/hide-shutdown-button/
-  [2]: https://i.sstatic.net/QsrN8.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/QsrN8.png
   [3]: https://www.tecmint.com/disable-shutdown-and-reboot-commands-in-linux/

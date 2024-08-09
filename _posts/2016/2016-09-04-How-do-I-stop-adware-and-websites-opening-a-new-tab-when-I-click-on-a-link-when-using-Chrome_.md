@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-do-I-stop-adware-and-websites-opening-a-new-tab-when-I-click-on-a-link-when-using-Chrome_.md
 toc:          false
 navigation:   false
@@ -44,4 +44,4 @@ On my screen it shows as already installed but for your screen you would select 
 Should this answer require further explanation post a comment under it.
 
 
-  [1]: https://i.sstatic.net/IlrUy.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/IlrUy.png

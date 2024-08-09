@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Why-is-my-keyboard-_raw_-as-opposed-to-_translated__.md
 toc:          false
 navigation:   false
@@ -49,5 +49,5 @@ Your question focuses on the IBM PC/AT as pictured above which BTW is a very nic
 ----------
 
 
-  [1]: https://i.sstatic.net/LhTUb.jpg
+  [1]: https://pippim.github.io/assets/img/_posts/2018/LhTUb.jpg
   [2]: https://en.wikipedia.org/wiki/Scancode

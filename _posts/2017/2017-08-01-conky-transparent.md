@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-01-conky-transparent.md
 toc:          false
 navigation:   false
@@ -185,7 +185,7 @@ lo        65536 0       970      0      0 0           970      0      0      0 L
 wlp60s0    1500 0      1036      0      0 0           237      0      0      0 BMRU
 ```
 
-  [1]: https://i.sstatic.net/meM7C.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2017/meM7C.gif
   [2]: {% post_url /2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don_t-actually-upload-much_ %}
 
 

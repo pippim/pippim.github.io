@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-10-Cron-Monthly-job-works-randomly-using-_0-0-1-*-*_.md
 toc:          false
 navigation:   false
@@ -116,7 +116,7 @@ $ sudo cat /var/spool/anacron/cron.monthly
 
 The last step is to replace `20190203` with `20190201` using technique in **Update 2**.
 
-  [1]: https://i.sstatic.net/c76pC.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/c76pC.png
   [2]: https://www.linuxquestions.org/questions/linux-newbie-8/cron-monthly-not-running-everything-else-is-4175461238/
 
 

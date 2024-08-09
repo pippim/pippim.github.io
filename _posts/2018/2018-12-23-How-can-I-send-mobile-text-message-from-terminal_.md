@@ -12,7 +12,7 @@ votes:        "63 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-How-can-I-send-mobile-text-message-from-terminal_.md
 toc:          false
 navigation:   true
@@ -173,7 +173,7 @@ Nightly database update failed at procedure: AP005.
 
   [1]: https://www.reddit.com/r/linux/comments/20c58i/send_an_sms_text_message_from_the_command_line/
   [2]: https://textbelt.com/
-  [3]: https://i.sstatic.net/k9Pro.png
+  [3]: https://pippim.github.io/assets/img/_posts/2018/k9Pro.png
   [4]: https://blog.edmdesigner.com/send-email-from-linux-command-line/
 
 

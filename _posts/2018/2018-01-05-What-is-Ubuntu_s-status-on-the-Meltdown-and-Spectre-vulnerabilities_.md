@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-05-What-is-Ubuntu_s-status-on-the-Meltdown-and-Spectre-vulnerabilities_.md
 toc:          true
 navigation:   true
@@ -491,7 +491,7 @@ Now that the warning are out of the way, to install the latest mainline kernel (
   [11]: https://askubuntu.com/questions/763360/does-manual-kernel-update-affect-the-next-regular-automatic-update
   [12]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu
   [13]: {% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_ %}
-  [14]: https://i.sstatic.net/VOt2M.png
+  [14]: https://pippim.github.io/assets/img/_posts/2018/VOt2M.png
 
 
 <a id="hdr10"></a>

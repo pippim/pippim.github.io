@@ -12,7 +12,7 @@ votes:        "27 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-Nautilus-not-showing-mounted-drives-in-side-bar.md
 toc:          false
 navigation:   false
@@ -28,4 +28,4 @@ You need to bookmark them and will likely want to rename the bookmark. This GIF 
 1. From the dropdown menu click the center menu button to bookmark it.
 1. Move to the new sidebar entry and rename it from the mount name ("c" in my example) to something more meaningful ("Windows 10 SSD" in my example).
 
-  [1]: https://i.sstatic.net/NjnP9.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/NjnP9.gif

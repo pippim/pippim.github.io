@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Network-not-working-properly-after-restart-notebook-closed-lid.md
 toc:          false
 navigation:   false
@@ -42,4 +42,4 @@ $ cat /etc/systemd/logind.conf | grep LidSwitch
 
 Systemd could be suspending the laptop when not signed into Ubuntu.
 
-  [1]: https://i.sstatic.net/FuGkr.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/FuGkr.png

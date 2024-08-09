@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-17-Code-completion-for-gedit.md
 toc:          false
 navigation:   false
@@ -46,5 +46,5 @@ There are other `gedit` plug-ins active in the GIF animation above. The bottom o
 `Tool Output` at the very bottom means `external tools` is enabled. This allows you to launch commands via hot keys and see the output. Handy if for example you want to pass your file to a LINT checker or compiler.
 
   [1]: https://askubuntu.com/questions/728306/how-to-debug-c-programs-by-gedit/1082769#1082769
-  [2]: https://i.sstatic.net/ZPjaW.gif
-  [3]: https://i.sstatic.net/dmXLo.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2018/ZPjaW.gif
+  [3]: https://pippim.github.io/assets/img/_posts/2018/dmXLo.gif

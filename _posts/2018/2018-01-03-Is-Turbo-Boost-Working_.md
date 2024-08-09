@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-Is-Turbo-Boost-Working_.md
 toc:          false
 navigation:   false
@@ -128,4 +128,4 @@ $ echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 ***Notice how quickly temperature jumps 10 degrees when Turbo is turned on***
 
   [1]: https://ubuntuforums.org/showthread.php?t=281865
-  [2]: https://i.sstatic.net/eE0oo.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2018/eE0oo.gif

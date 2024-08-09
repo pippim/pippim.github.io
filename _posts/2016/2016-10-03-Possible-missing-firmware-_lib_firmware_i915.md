@@ -12,7 +12,7 @@ votes:        "158 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Possible-missing-firmware-_lib_firmware_i915.md
 toc:          true
 navigation:   true
@@ -348,19 +348,19 @@ sudo apt upgrade
 
 
   [1]: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915
-  [2]: https://i.sstatic.net/PzEm6.png
+  [2]: https://pippim.github.io/assets/img/_posts/2016/PzEm6.png
   [3]: https://01.org/linuxgraphics/downloads/firmware
-  [4]: https://i.sstatic.net/BFYtB.png
+  [4]: https://pippim.github.io/assets/img/_posts/2016/BFYtB.png
   [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_ %}
   [6]: https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1611124
-  [7]: https://i.sstatic.net/9lQBJ.png
+  [7]: https://pippim.github.io/assets/img/_posts/2016/9lQBJ.png
   [8]: https://01.org/linuxgraphics/downloads/kabylake-guc-9.14
   [9]: https://01.org/linuxgraphics/downloads/kabylake-dmc-1.01
   [10]: https://01.org/linuxgraphics/downloads/broxton-guc-8.7
   [11]: https://01.org/linuxgraphics/downloads
-  [12]: https://i.sstatic.net/B3uVd.png
-  [13]: https://i.sstatic.net/Gufe8.png
-  [14]: https://i.sstatic.net/jXgRV.png
+  [12]: https://pippim.github.io/assets/img/_posts/2016/B3uVd.png
+  [13]: https://pippim.github.io/assets/img/_posts/2016/Gufe8.png
+  [14]: https://pippim.github.io/assets/img/_posts/2016/jXgRV.png
 
 
 

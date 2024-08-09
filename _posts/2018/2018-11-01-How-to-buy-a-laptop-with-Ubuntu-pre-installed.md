@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-01-How-to-buy-a-laptop-with-Ubuntu-pre-installed.md
 toc:          false
 navigation:   false
@@ -27,4 +27,4 @@ You can buy laptops with Ubuntu pre-installed if you think that is wise:
 
 Google (search engine anyways) is your friend.
 
-  [1]: https://i.sstatic.net/z8gXC.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/z8gXC.png

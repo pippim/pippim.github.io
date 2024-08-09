@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-13-Any-way-to-check-the-clock-speed-of-my-processor_.md
 toc:          false
 navigation:   false
@@ -51,4 +51,4 @@ ${color1}All CPU ${color green}${cpu}% ${goto 131}${color1}Temp: ${color green}$
 ```
 
 
-  [1]: https://i.sstatic.net/zxBC3.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2017/zxBC3.gif

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true
@@ -284,7 +284,7 @@ For some reason I can't explain, the 'post' sleep *if* statement only works ever
   [1]: http://forum.kodi.tv/showthread.php?tid=104541&pid=1948050#pid1948050
   [2]: http://jakobsens.net/?p=770%22Kodi,%20MCE%20Remote%20and%20Ubuntu%22
   [3]: http://ubuntuforums.org/showthread.php?t=1938480&p=11940008#post11940008%22Wake%20from%20suspend%20with%20keyboard%20or%20mouse%22
-  [4]: https://i.sstatic.net/dt5Sr.png
+  [4]: https://pippim.github.io/assets/img/_posts/2018/dt5Sr.png
 
 
 

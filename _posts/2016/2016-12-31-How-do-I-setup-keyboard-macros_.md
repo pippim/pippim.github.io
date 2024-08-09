@@ -12,7 +12,7 @@ votes:        "24 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-31-How-do-I-setup-keyboard-macros_.md
 toc:          false
 navigation:   false
@@ -35,4 +35,4 @@ It installs in Launcher and the screen is pretty simple to use:
 
 
   [4]: https://saravananthirumuruganathan.wordpress.com/2010/04/14/autokey-linux-utility-for-text-substitution-hotkeys-and-desktop-automation/
-  [5]: https://i.sstatic.net/gBAgI.png
+  [5]: https://pippim.github.io/assets/img/_posts/2016/gBAgI.png

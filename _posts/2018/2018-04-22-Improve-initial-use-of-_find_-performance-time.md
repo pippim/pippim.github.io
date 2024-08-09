@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Improve-initial-use-of-_find_-performance-time.md
 toc:          false
 navigation:   true
@@ -168,9 +168,9 @@ sys     0m3.709s
 ```
 
 
-  [1]: https://i.sstatic.net/jAWh1.png
-  [2]: https://i.sstatic.net/MB2Nl.jpg
-  [3]: https://i.sstatic.net/hcAFr.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/jAWh1.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/MB2Nl.jpg
+  [3]: https://pippim.github.io/assets/img/_posts/2018/hcAFr.png
   [4]: https://superuser.com/posts/813102/edit
 
 

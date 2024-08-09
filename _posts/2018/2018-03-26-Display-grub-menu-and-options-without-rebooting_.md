@@ -12,7 +12,7 @@ votes:        "22 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_.md
 toc:          true
 navigation:   true
@@ -660,9 +660,9 @@ to something like this:
 ```
 
 
-  [1]: https://i.sstatic.net/a95hd.png
-  [2]: https://i.sstatic.net/FqPKg.png
-  [3]: https://i.sstatic.net/13sHY.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/a95hd.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/FqPKg.png
+  [3]: https://pippim.github.io/assets/img/_posts/2018/13sHY.png
 
 
 <a id="hdr11"></a>

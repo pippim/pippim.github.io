@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window.md
 toc:          false
 navigation:   false
@@ -85,6 +85,6 @@ sudo apt install dconf-tools
 
 The whole link is highly recommended reading and it covers `gsettings` in depth as well.
 
-  [1]: https://i.sstatic.net/c4Bfp.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/c4Bfp.png
   [2]: https://askubuntu.com/questions/828486/systemd-suspends-system-but-upon-resume-kernel-then-enters-sleep-and-wake-up
   [3]: https://askubuntu.com/questions/22313/what-is-dconf-what-is-its-function-and-how-do-i-use-it

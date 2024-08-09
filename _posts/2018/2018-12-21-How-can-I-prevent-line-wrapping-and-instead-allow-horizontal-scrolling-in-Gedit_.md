@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-21-How-can-I-prevent-line-wrapping-and-instead-allow-horizontal-scrolling-in-Gedit_.md
 toc:          false
 navigation:   false
@@ -39,5 +39,5 @@ If you want the setting to be permanent change your preferences. Use: `Edit` => 
 You can't access preferences if you are using `sudo -H gedit` though. You need to do this with regular user using `gedit` only. Then you can have `sudo` inherit your user preferences with a script such as this: [How can I sync my root gedit with my user gedit&#39;s preferences?](How can I sync my root gedit with my user gedit&#39;s preferences?)
 
 
-  [1]: https://i.sstatic.net/UPHVs.png
-  [2]: https://i.sstatic.net/roiojm.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/UPHVs.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/roiojm.png

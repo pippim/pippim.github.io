@@ -12,7 +12,7 @@ votes:        "23 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-01-How-to-track-the-total-network-data-in-a-month.md
 toc:          false
 navigation:   false
@@ -145,6 +145,6 @@ To save space on my narrow window I used "G" instead of "GiB", "M" instead of "M
 You may have to change `eth0` to `wlan0` or `eth1`, etc. depending on your network name reported by `ifconfig`.
 
 
-  [1]: https://i.sstatic.net/vDbR5.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/vDbR5.png
 
 <!-- dummy comment to fulfill minimum character limit -->

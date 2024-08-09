@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-can-I-scale-Windows-Individually_.md
 toc:          false
 navigation:   false
@@ -70,8 +70,8 @@ I spent a lot of time getting my settings just right for me with the laptop 3 fe
 There are other issues to consider such as icon size in Desktop and Nautilus which you can also experiment with.
 
 
-  [1]: https://i.sstatic.net/AhkJq.png
-  [2]: https://i.sstatic.net/cep7d.png
-  [3]: https://i.sstatic.net/nFW6c.png
-  [4]: https://i.sstatic.net/YSzdX.png
-  [5]: https://i.sstatic.net/EzsAT.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/AhkJq.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/cep7d.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/nFW6c.png
+  [4]: https://pippim.github.io/assets/img/_posts/2017/YSzdX.png
+  [5]: https://pippim.github.io/assets/img/_posts/2017/EzsAT.png

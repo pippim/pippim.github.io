@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Something-similar-to-GNOME_s-AlternateTab-on-Unity_.md
 toc:          false
 navigation:   false
@@ -48,5 +48,5 @@ $ grep "^Exec" /usr/share/xsessions/*
 
 Notice the last line (far right side) shows: `unity-session.target`
 
-  [1]: https://i.sstatic.net/sv4fQ.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/sv4fQ.gif
 

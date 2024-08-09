@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-How-do-I-increase-the-font-size-in-Ubuntu-18.04-LTS-for-a-HDPI-_-4K-display_.md
 toc:          false
 navigation:   false
@@ -55,5 +55,5 @@ tweak/bionic 3.02-2 amd64
 unity-tweak-tool/bionic,bionic,now 0.0.7ubuntu4 all [installed]
 ```
 
-  [1]: https://i.sstatic.net/ebLJk.png
-  [2]: https://i.sstatic.net/VujGV.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/ebLJk.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/VujGV.gif

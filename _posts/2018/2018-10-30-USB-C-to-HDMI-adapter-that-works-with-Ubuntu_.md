@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-30-USB-C-to-HDMI-adapter-that-works-with-Ubuntu_.md
 toc:          false
 navigation:   false
@@ -27,4 +27,4 @@ I did research last year for the most popular Thunderbolt to HDMI adapter I coul
 
 
   [1]: https://www.amazon.com/Adapter-CHOETECH-Thunderbolt-Compatible-MacBook/dp/B071DGKBYP/ref=sr_1_4?ie=UTF8&qid=1540896825&sr=8-4&keywords=choetech%20usb%20c%20to%20hdmi
-  [2]: https://i.sstatic.net/r2L9bm.jpg
+  [2]: https://pippim.github.io/assets/img/_posts/2018/r2L9bm.jpg

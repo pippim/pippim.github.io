@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "311 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false
@@ -108,5 +108,5 @@ There is much more to explore on the [Pippim Website](https://pippim.github.io/i
 
 Keep in mind this is brand new technology (including the site search engine) and not as elegantly documented as it can be.
 
-  [1]: https://i.sstatic.net/HFx4r.png
-  [2]: https://i.sstatic.net/2FmfX.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2022/HFx4r.png
+  [2]: https://pippim.github.io/assets/img/_posts/2022/2FmfX.gif

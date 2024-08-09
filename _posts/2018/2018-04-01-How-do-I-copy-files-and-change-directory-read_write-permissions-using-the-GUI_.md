@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-How-do-I-copy-files-and-change-directory-read_write-permissions-using-the-GUI_.md
 toc:          false
 navigation:   false
@@ -29,4 +29,4 @@ Here's a screenshot from the Developer's page:
 
 
   [1]: https://rofi.roger-ferrer.org/eiciel/
-  [2]: https://i.sstatic.net/eYknB.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/eYknB.png

@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-04-How-can-PPAs-be-removed-using-GUI_.md
 toc:          false
 navigation:   false
@@ -34,5 +34,5 @@ You should have an Internet connection before completing this operation because 
 For more details see these [Tecmint Instructions][2] with many screen shots for both adding PPAs and removing PPAs.
 
 
-  [1]: https://i.sstatic.net/wMJvE.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/wMJvE.png
   [2]: https://www.tecmint.com/add-remove-purge-ppa-in-ubuntu/

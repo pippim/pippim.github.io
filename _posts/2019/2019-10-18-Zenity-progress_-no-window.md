@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-18-Zenity-progress_-no-window.md
 toc:          false
 navigation:   false
@@ -77,4 +77,4 @@ Although the source code appears in the `.gif` you can copy and paste in your ow
 - [How do I create a fake process bar?]({% post_url /2018/2018-04-23-How-do-I-create-a-fake-process-bar_ %})
 
 
-  [1]: https://i.sstatic.net/w4HlS.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2019/w4HlS.gif

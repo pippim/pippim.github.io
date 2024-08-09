@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-how-can-i-get-Conky-to-display-weather_.md
 toc:          false
 navigation:   false
@@ -103,9 +103,9 @@ ${image /home/rick/Pictures/Weather.png -p 0,1080 -s 400x120}
 - See: [Variables in Conky][6] for more details on `${image}` command.
 
 
-  [1]: https://i.sstatic.net/EqapD.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/EqapD.png
   [2]: {% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_ %}
-  [3]: https://i.sstatic.net/tYXAo.png
+  [3]: https://pippim.github.io/assets/img/_posts/2019/tYXAo.png
   [4]: https://github.com/chubin/wttr.in
-  [5]: https://i.sstatic.net/8ovPb.png
+  [5]: https://pippim.github.io/assets/img/_posts/2019/8ovPb.png
   [6]: http://conky.sourceforge.net/variables.html

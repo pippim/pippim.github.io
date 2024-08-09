@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-Why-show-desktop-_with-alt-tab_-in-kde-renders-alternatively-two-different-things_.md
 toc:          false
 navigation:   false
@@ -60,4 +60,4 @@ The solution (which might be your original problem) could be "Large Icons" as th
 
   [1]: https://superuser.com/questions/996597/kde-plasma-alt-tab-behavior-options-most-of-them-are-missing
   [2]: https://bbs.archlinux.org/viewtopic.php?id=218308
-  [3]: https://i.sstatic.net/NgZj4.png
+  [3]: https://pippim.github.io/assets/img/_posts/2018/NgZj4.png

@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-08-When-terminal-is-opened-can-I-get-current-calendar-and-time-displayed_.md
 toc:          false
 navigation:   true
@@ -179,9 +179,9 @@ Change the last two digits to the color code you want to use. From tinkering wit
 If you find additional color codes please post a comment below or update this answer.
 
 
-  [1]: https://i.sstatic.net/nLPhV.png
-  [2]: https://i.sstatic.net/MkX4d.png
-  [3]: https://i.sstatic.net/neTG7.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/nLPhV.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/MkX4d.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/neTG7.png
 
 
 <a id="hdr6"></a>

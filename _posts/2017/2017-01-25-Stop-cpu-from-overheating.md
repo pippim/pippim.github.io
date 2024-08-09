@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-25-Stop-cpu-from-overheating.md
 toc:          true
 navigation:   true
@@ -227,7 +227,7 @@ There are lots of other utilities and cooling methodologies but this is getting 
 
   [1]: https://wiki.debian.org/thermald
   [2]: https://www.kernel.org/doc/Documentation/thermal/intel_powerclamp.txt
-  [3]: https://i.sstatic.net/TYc48.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/TYc48.png
   [4]: https://wiki.archlinux.org/index.php/TLP
   [5]: http://linuxpitstop.com/install-tlp-on-ubuntu-15-04-and-centos-7/
 

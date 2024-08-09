@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-18-Selecting-files-from-different-folders.md
 toc:          true
 navigation:   true
@@ -194,20 +194,20 @@ The defaults are to untag ALL file types.
 
 Thanks for staying awake and looking forward to your input. The next answer will post the WIP bash code.
 
-  [1]: https://i.sstatic.net/fiNVj.png
-  [2]: https://i.sstatic.net/2Iw4p.png
-  [3]: https://i.sstatic.net/WWJH9.png
-  [4]: https://i.sstatic.net/ST4yO.png
-  [5]: https://i.sstatic.net/umWzn.png
-  [6]: https://i.sstatic.net/XDLL6.png
-  [7]: https://i.sstatic.net/ZSomD.png
-  [8]: https://i.sstatic.net/qPFLF.png
-  [9]: https://i.sstatic.net/Tk8pf.png
-  [10]: https://i.sstatic.net/QZxy6.png
-  [11]: https://i.sstatic.net/9JPvB.png
-  [12]: https://i.sstatic.net/Atvwd.png
-  [13]: https://i.sstatic.net/sm2Wp.png
-  [14]: https://i.sstatic.net/jVNK9.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/fiNVj.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/2Iw4p.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/WWJH9.png
+  [4]: https://pippim.github.io/assets/img/_posts/2017/ST4yO.png
+  [5]: https://pippim.github.io/assets/img/_posts/2017/umWzn.png
+  [6]: https://pippim.github.io/assets/img/_posts/2017/XDLL6.png
+  [7]: https://pippim.github.io/assets/img/_posts/2017/ZSomD.png
+  [8]: https://pippim.github.io/assets/img/_posts/2017/qPFLF.png
+  [9]: https://pippim.github.io/assets/img/_posts/2017/Tk8pf.png
+  [10]: https://pippim.github.io/assets/img/_posts/2017/QZxy6.png
+  [11]: https://pippim.github.io/assets/img/_posts/2017/9JPvB.png
+  [12]: https://pippim.github.io/assets/img/_posts/2017/Atvwd.png
+  [13]: https://pippim.github.io/assets/img/_posts/2017/sm2Wp.png
+  [14]: https://pippim.github.io/assets/img/_posts/2017/jVNK9.png
 
 
 <a id="hdr9"></a>

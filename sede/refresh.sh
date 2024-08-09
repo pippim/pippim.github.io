@@ -3,6 +3,7 @@
 # refresh.sh
 
 # BUG: April 11, 2022 - _includes/website_tree.txt is empty!!!
+# 2024-08-09 - https://i.static.net/99999.png links broken for hot-linking
 
 # Pass commit message as first parameter (referenced as "$1")
 
@@ -110,7 +111,7 @@ if [ $retVal -ne 0 ]; then
 fi
 
 # shellcheck disable=SC2164
-cd ~/website2
+cd ~/website2  # Set current directory to website2
 
 echo
 echo "=== UPDATING: $PWD/_posts/ and /_includes/"
@@ -128,6 +129,20 @@ fi
 
 cp ~/website/_includes/posts_by_tag.html _includes/
 cp ~/website/_includes/posts_by_vote.html _includes/
+
+echo
+echo "=== UPDATING: $PWD/assets/img/_posts/"
+
+rm -rf assets/img/_posts/
+mkdir assets/img/_posts/
+cp -r ~/website/assets/img/_posts/* assets/img/_posts/
+
+git add assets/img/_posts/
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "git add assets/img/_posts/ FAILED with code: $retVal"
+    exit $retVal
+fi
 
 # Add tree listing
 tree -L 3 --dirsfirst --filelimit 30 > /tmp/tree.work

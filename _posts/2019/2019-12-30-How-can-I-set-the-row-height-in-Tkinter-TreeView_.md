@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-30-How-can-I-set-the-row-height-in-Tkinter-TreeView_.md
 toc:          false
 navigation:   false
@@ -36,4 +36,4 @@ The end result has the correct spacing (IMO) for the system font. YMMV for other
 [![wman gnome gsettings.png][1]][1]
 
 
-  [1]: https://i.sstatic.net/cBaDQ.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/cBaDQ.png

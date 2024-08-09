@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Automatic-tabulation-when-writing-code-on-Gedit_.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ You need to enable `gedit` automatic indentation. From the top bar menu select `
 
 Click the second check box "**Enable automatic Indentation**". Then when you press <kbd>Enter</kbd> at the end of a line, the next line is indented to the same level.
 
-  [1]: https://i.sstatic.net/Ny6kr.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/Ny6kr.png

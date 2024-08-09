@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-16-Avoid-showing-cancel-button-on-dialog.md
 toc:          false
 navigation:   false
@@ -84,7 +84,7 @@ Yad displays text for you to change. Zenity cannot display existing text you can
 The author of Yad and many more contributors answer your questions in [google groups](https://groups.google.com/forum/#!forum/yad-common). I've posted four or five questions about advanced functionality and usually get an answer within 24 hours. Not to mention enhancements are provided through the same channel.
 
 
-  [1]: https://i.sstatic.net/b1nrC.png
-  [2]: https://i.sstatic.net/Sd0z4.png
-  [3]: https://i.sstatic.net/fmrH9.png
-  [4]: https://i.sstatic.net/BUD7W.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/b1nrC.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/Sd0z4.png
+  [3]: https://pippim.github.io/assets/img/_posts/2019/fmrH9.png
+  [4]: https://pippim.github.io/assets/img/_posts/2019/BUD7W.png

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-06-Why-is-it-possible-to-take-screenshot-without-root-privileges_.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ What you deem a disadvantage or "security hole" is actually an advantage or "fre
 
 
 
-  [1]: https://i.sstatic.net/TV4ON.jpg
+  [1]: https://pippim.github.io/assets/img/_posts/2020/TV4ON.jpg

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-to-change-mouse-DPI_.md
 toc:          false
 navigation:   false
@@ -112,7 +112,7 @@ Special thanks to Q&A that popped up this afternoon: [Corsair M95 Gaming Mouse t
 
 
   [1]: https://www.logitech.com/en-ca/product/performance-mouse-mx
-  [2]: https://i.sstatic.net/u0n9k.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/u0n9k.png
   [3]: http://support.logitech.com/en_us/article/Set-MX-Master-mouse-sensitivity-and-pointer-speed-with-Logitech-Options?product=a0qi0000006Njj9AAC
   [4]: https://patrickmn.com/aside/lowering-gaming-mouse-sensitivity-in-ubuntu-9-10/
   [5]: https://askubuntu.com/questions/934906/corsair-m95-gaming-mouse-too-sensitive-speed-too-fast-how-to-reduce-speed/934908#934908

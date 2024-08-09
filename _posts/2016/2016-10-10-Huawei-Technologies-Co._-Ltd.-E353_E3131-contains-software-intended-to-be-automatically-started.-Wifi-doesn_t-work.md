@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-10-Huawei-Technologies-Co._-Ltd.-E353_E3131-contains-software-intended-to-be-automatically-started.-Wifi-doesn_t-work.md
 toc:          false
 navigation:   false
@@ -52,5 +52,5 @@ In order to disable auto-run of the USB (generating the error message) go to `Sy
 
 This should make the error message go away when the USB is inserted.
 
-  [1]: https://i.sstatic.net/idEdJ.png
-  [2]: https://i.sstatic.net/x0e5T.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/idEdJ.png
+  [2]: https://pippim.github.io/assets/img/_posts/2016/x0e5T.png

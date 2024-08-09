@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling_formatting.md
 toc:          true
 navigation:   true
@@ -310,14 +310,14 @@ dispatcher.executeDispatch(document, ".uno:Save", "", 0, Array())
 end sub
 ```
 
-  [1]: https://i.sstatic.net/9UmyA.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/9UmyA.png
   [2]: https://superuser.com/questions/1135850/how-do-i-run-a-libreoffice-macro-from-the-command-line-without-the-gui?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
   [3]: https://ask.libreoffice.org/en/question/11039/how-do-you-close-libreoffice-calc-from-a-macro/
   [4]: https://www.java.com/en/download/help/linux_x64_install.xml
   [5]: https://askubuntu.com/a/728153/307523
   [6]: http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html
-  [7]: https://i.sstatic.net/ZdALj.png
-  [8]: https://i.sstatic.net/KDycz.png
+  [7]: https://pippim.github.io/assets/img/_posts/2018/ZdALj.png
+  [8]: https://pippim.github.io/assets/img/_posts/2018/KDycz.png
   [9]: https://stackoverflow.com/questions/49640951/libreoffice-writer-macro-change-font-size
 
 

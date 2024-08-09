@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don_t-actually-upload-much_.md
 toc:          true
 navigation:   true
@@ -437,11 +437,11 @@ In the last couple of days I had problems using Chrome so started using Firefox 
 So.... full circle :(
 
   [1]: {% post_url /2016/2016-11-20-Any-good-application-for-data-usage-monitor_ %}
-  [2]: https://i.sstatic.net/2oqXi.png
-  [3]: https://i.sstatic.net/xKq1O.png
-  [4]: https://i.sstatic.net/PJsgg.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/2oqXi.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/xKq1O.png
+  [4]: https://pippim.github.io/assets/img/_posts/2017/PJsgg.png
   [5]: {% post_url /2016/2016-11-03-What_s-eating-all-the-RAM-and-swap_ %}
-  [6]: https://i.sstatic.net/4GhNh.gif
+  [6]: https://pippim.github.io/assets/img/_posts/2017/4GhNh.gif
   [7]: https://bugzilla.kernel.org/show_bug.cgi?id=109051
 
 

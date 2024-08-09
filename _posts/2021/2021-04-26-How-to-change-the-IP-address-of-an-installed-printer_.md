@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-04-26-How-to-change-the-IP-address-of-an-installed-printer_.md
 toc:          false
 navigation:   false
@@ -34,4 +34,4 @@ Once you know your printer’s IP address, entering it is pretty easy. Here’s 
 [![hp ip config.jpg][1]][1]
 
 
-  [1]: https://i.sstatic.net/F2XaQ.jpg
+  [1]: https://pippim.github.io/assets/img/_posts/2021/F2XaQ.jpg

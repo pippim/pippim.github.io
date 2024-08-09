@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-10-How-do-I-hide-_-remove-a-partition-from-the-Nautilus-left-panel_.md
 toc:          false
 navigation:   false
@@ -45,5 +45,5 @@ Click OK and enter password to apply changes. After the next reboot Nautilus won
 
 If you need clarification please post a comment below.
 
-  [1]: https://i.sstatic.net/e5LCU.png
-  [2]: https://i.sstatic.net/9zU2z.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/e5LCU.png
+  [2]: https://pippim.github.io/assets/img/_posts/2016/9zU2z.png

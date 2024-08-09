@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-to-change-the-Unity-lockscreen-wallpaper_.md
 toc:          false
 navigation:   false
@@ -60,4 +60,4 @@ Sample screen:
 
 
   [1]: {% post_url /2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper_ %}
-  [2]: https://i.sstatic.net/CsQ9O.png
+  [2]: https://pippim.github.io/assets/img/_posts/2016/CsQ9O.png

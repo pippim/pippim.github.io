@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-14-how-to-tell-GRUB-to-show-the-user-preferred-names-of-OS_es.-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -82,5 +82,5 @@ The images are a little skewed because I'm limited to capturing them at distorte
 [![ResizedGrub2.png][2]][2]
 
 
-  [1]: https://i.sstatic.net/tpW3p.jpg
-  [2]: https://i.sstatic.net/8AVdX.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/tpW3p.jpg
+  [2]: https://pippim.github.io/assets/img/_posts/2018/8AVdX.png

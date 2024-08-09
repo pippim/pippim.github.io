@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-26-Password-set-but-login-without-password_.md
 toc:          false
 navigation:   false
@@ -34,6 +34,6 @@ As [https://askubuntu.com/users/367990/byte-commander][2] pointed out in comment
 
 Click on the `Action` drop down menu and select `Log in without a password`
 
-  [1]: https://i.sstatic.net/PxxEl.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/PxxEl.png
   [2]: https://askubuntu.com/users/367990/byte-commander
-  [3]: https://i.sstatic.net/iN1Yf.png
+  [3]: https://pippim.github.io/assets/img/_posts/2016/iN1Yf.png

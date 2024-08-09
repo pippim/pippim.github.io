@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Weather-from-terminal.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ as illustrated in the top-voted answer. `wttr.in` also makes a great "splash" sc
 Sorry I was in Ubuntu in Windows 10 WSL for Spring 2018 updates when I captured this image. Promise I'll boot back into Ubuntu in Linux soon.
 
 
-  [1]: https://i.sstatic.net/bhjyD.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/bhjyD.png

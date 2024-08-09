@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-08-How-to-understand-frequency-in-powertop.md
 toc:          false
 navigation:   false
@@ -39,4 +39,4 @@ If you are interested you can use use a Conky display that always appear on your
 The processor speed of `1200 MHz` is misleading because it was for that second the picture was taken. It fluctuates from 1200 MHz to 2400 MHz with Intel turbo boost turned off (Intel pstate disabled in the last grub boot) and peeks to 3400 Mhz (3.4 Gigahertz) with turbo boost turned on.
 
 
-  [1]: https://i.sstatic.net/lzv7x.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/lzv7x.png

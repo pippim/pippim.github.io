@@ -12,7 +12,7 @@ votes:        "147 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-__journalctl__-are-too-large-and-slow.md
 toc:          false
 navigation:   false
@@ -121,6 +121,6 @@ reload conf:
 $ sudo systemctl restart systemd-journald
 ```
 
-  [1]: https://i.sstatic.net/o4SoS.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/o4SoS.gif
   [2]: https://www.loggly.com/ultimate-guide/managing-journal-size/
   [3]: https://www.freedesktop.org/software/systemd/man/journald.conf.html

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-28-How-to-reassign-touchpad-buttons-to-keyboard_.md
 toc:          false
 navigation:   false
@@ -40,4 +40,4 @@ Repeat process for `Right Click` but assign command as `xdotool click 3` and set
 Now you can press <kbd>F1</kbd> for left click and <kbd>F2</kbd> for right click.
 
 
-  [1]: https://i.sstatic.net/X47VJ.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/X47VJ.png

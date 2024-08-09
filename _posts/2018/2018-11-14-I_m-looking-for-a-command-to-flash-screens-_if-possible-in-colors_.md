@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-I_m-looking-for-a-command-to-flash-screens-_if-possible-in-colors_.md
 toc:          false
 navigation:   false
@@ -272,5 +272,5 @@ done
 To generate the ASCII Art you can use Figlet or Toilet. See: [When terminal is opened can I get current calendar and time displayed?]({% post_url /2017/2017-04-08-When-terminal-is-opened-can-I-get-current-calendar-and-time-displayed_ %})
 
 
-  [1]: https://i.sstatic.net/4PBfR.gif
-  [2]: https://i.sstatic.net/1fwKq.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/4PBfR.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2018/1fwKq.gif

@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-20-How-can-I-pin-a-specific-document-so-I-can-access-it-easily-and-frequently_.md
 toc:          false
 navigation:   false
@@ -38,4 +38,4 @@ A quicker method is to use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Left-Click</kbd
 
 The subtle difference is the Desktop name is no longer "Link to filename" but simply "filename".
 
-  [1]: https://i.sstatic.net/6dx9E.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/6dx9E.gif

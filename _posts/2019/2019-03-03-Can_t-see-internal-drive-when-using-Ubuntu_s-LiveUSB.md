@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-03-Can_t-see-internal-drive-when-using-Ubuntu_s-LiveUSB.md
 toc:          false
 navigation:   false
@@ -53,5 +53,5 @@ In Windows 10 click the start menu and type "`Power Options`". In the screen tha
 - Notice the check mark next to **Turn on fast startup (recommended)**. Uncheck it.
 - Note to keep **Hibernate** unchecked.
 
-  [1]: https://i.sstatic.net/JWVNV.png
-  [2]: https://i.sstatic.net/oaCxn.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/JWVNV.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/oaCxn.png

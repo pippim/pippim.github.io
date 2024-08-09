@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-How-to-securely-download-a-new-kernel_.md
 toc:          false
 navigation:   false
@@ -144,6 +144,6 @@ reboot                # reboot to grub and select new kernel on Advanced Options
 
 Note don't key in `#` comments those are for explanation purposes and machine ignores them.
 
-  [1]: https://i.sstatic.net/pKVjxl.png
-  [2]: https://i.sstatic.net/VoCKhl.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/pKVjxl.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/VoCKhl.png
   [3]: https://wiki.ubuntu.com/Kernel/MainlineBuilds#Verifying_the_mainline_build_binaries

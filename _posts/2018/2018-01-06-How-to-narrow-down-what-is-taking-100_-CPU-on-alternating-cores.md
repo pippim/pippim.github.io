@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "712 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-06-How-to-narrow-down-what-is-taking-100_-CPU-on-alternating-cores.md
 toc:          false
 navigation:   false
@@ -44,5 +44,5 @@ The process causing abnormal behaviour is `chrome` but what steps can be taken t
 
 Version 63.0.3239.132 (Official Build) (64-bit)
 
-  [1]: https://i.sstatic.net/XpTpk.gif
-  [2]: https://i.sstatic.net/9u6nf.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/XpTpk.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2018/9u6nf.gif

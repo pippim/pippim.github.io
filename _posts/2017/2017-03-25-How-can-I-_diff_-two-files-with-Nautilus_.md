@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-How-can-I-_diff_-two-files-with-Nautilus_.md
 toc:          false
 navigation:   false
@@ -113,4 +113,4 @@ In this example we're comparing the actual script posted here in AU prior to Mar
 The `diff` command is very powerful and as such has a myriad of control parameters. Type `man diff` in the terminal for the manual pages or `info diff` for more even more command usage details.
 
 
-  [1]: https://i.sstatic.net/Uu7HS.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/Uu7HS.png

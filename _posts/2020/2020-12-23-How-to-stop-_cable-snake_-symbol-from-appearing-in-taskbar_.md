@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-23-How-to-stop-_cable-snake_-symbol-from-appearing-in-taskbar_.md
 toc:          false
 navigation:   false
@@ -83,6 +83,6 @@ I've emailed the developer again on December 24, 2020 with a link to OP's proble
 - B) Is it possible to define a new cable snake icon which is 0x0 pixels such that even if it still reappears every few seconds the effect is invisible?
 
 
-  [1]: https://i.sstatic.net/FLXQK.png
+  [1]: https://pippim.github.io/assets/img/_posts/2020/FLXQK.png
   [2]: https://christian.kellner.me/
 

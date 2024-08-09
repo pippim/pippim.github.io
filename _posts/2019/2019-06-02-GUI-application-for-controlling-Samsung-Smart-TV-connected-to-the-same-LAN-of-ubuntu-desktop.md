@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-GUI-application-for-controlling-Samsung-Smart-TV-connected-to-the-same-LAN-of-ubuntu-desktop.md
 toc:          false
 navigation:   false
@@ -63,6 +63,6 @@ As mentioned in comments if you have a Samsung TV newer than 2016 you will also 
 
 
   [1]: https://github.com/Ape/samsungctl
-  [2]: https://i.sstatic.net/Ra9kN.png
-  [3]: https://i.sstatic.net/gUWo2.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2019/Ra9kN.png
+  [3]: https://pippim.github.io/assets/img/_posts/2019/gUWo2.gif
   [4]: https://github.com/websocket-client/websocket-client

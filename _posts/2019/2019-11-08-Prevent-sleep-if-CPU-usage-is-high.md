@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-08-Prevent-sleep-if-CPU-usage-is-high.md
 toc:          false
 navigation:   false
@@ -138,5 +138,5 @@ Real uptime 296,568 seconds (3 days, 10 hours, 22 minutes, 48 seconds)
 
 
   [1]: {% post_url /2019/2019-07-01-Turn-off-all-monitors-while-watching-VLC-media-on-TV %}
-  [2]: https://i.sstatic.net/Dxo3M.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/Dxo3M.png
   [3]: {% post_url /2019/2019-11-07-How-to-get-real-uptime_ %}

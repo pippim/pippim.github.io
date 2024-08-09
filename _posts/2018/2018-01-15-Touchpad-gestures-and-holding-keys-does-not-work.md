@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-15-Touchpad-gestures-and-holding-keys-does-not-work.md
 toc:          true
 navigation:   true
@@ -271,7 +271,7 @@ Most users won't need all these packages. Usually just `headers`, `image`, `imag
   [24]: https://askubuntu.com/questions/763360/does-manual-kernel-update-affect-the-next-regular-automatic-update
   [25]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu
   [26]: {% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_ %}
-  [27]: https://i.sstatic.net/VOt2M.png
+  [27]: https://pippim.github.io/assets/img/_posts/2018/VOt2M.png
 
 
 <a id="hdr9"></a>

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-Desktop-icons-appear-on-wrong-monitor.md
 toc:          false
 navigation:   false
@@ -39,4 +39,4 @@ Visit the [github][1] page for **iconic** to see all the other screens, explanat
 
 
   [1]: https://github.com/WinEunuuchs2Unix/iconic
-  [2]: https://i.sstatic.net/Q45Pz.png
+  [2]: https://pippim.github.io/assets/img/_posts/2019/Q45Pz.png

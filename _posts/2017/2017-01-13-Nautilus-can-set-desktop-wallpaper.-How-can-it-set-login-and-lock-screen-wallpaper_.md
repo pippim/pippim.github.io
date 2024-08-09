@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper_.md
 toc:          false
 navigation:   false
@@ -121,6 +121,6 @@ When the script runs you will have to enter your `sudo` password.
 Reboot and enjoy your new login wallpaper.
 
 
-  [1]: https://i.sstatic.net/ysvFg.gif
-  [2]: https://i.sstatic.net/EleRC.png
-  [3]: https://i.sstatic.net/CsQ9O.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/ysvFg.gif
+  [2]: https://pippim.github.io/assets/img/_posts/2017/EleRC.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/CsQ9O.png

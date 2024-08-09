@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-Bash-template-to-use-zenity-_or-yad_-to-insert-_-edit-_-delete-records-in-a-file-or-database.md
 toc:          false
 navigation:   true
@@ -327,9 +327,9 @@ Perhaps AskUbuntu is the wrong forum for posting this and Stack Overflow or Unix
 
 Of course I always look forward to general comments and constructive criticisms as well :)
 
-  [1]: https://i.sstatic.net/NjuE6.png
-  [2]: https://i.sstatic.net/COzPz.png
-  [3]: https://i.sstatic.net/Cmyuj.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/NjuE6.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/COzPz.png
+  [3]: https://pippim.github.io/assets/img/_posts/2017/Cmyuj.png
 
 
 <a id="hdr6"></a>

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "209 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-In-gnome-terminal-only-2-out-of-3-zoom-keys-work.md
 toc:          false
 navigation:   false
@@ -136,4 +136,4 @@ $endif
 Any clues?
 
 
-  [1]: https://i.sstatic.net/wux85l.png
+  [1]: https://pippim.github.io/assets/img/_posts/2019/wux85l.png

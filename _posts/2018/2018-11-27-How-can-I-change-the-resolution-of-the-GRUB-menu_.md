@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-How-can-I-change-the-resolution-of-the-GRUB-menu_.md
 toc:          false
 navigation:   false
@@ -70,7 +70,7 @@ sudo update-grub
 ```
 
 
-  [1]: https://i.sstatic.net/epnMf.gif
+  [1]: https://pippim.github.io/assets/img/_posts/2018/epnMf.gif
   [2]: http://blog.wxm.be/2014/08/29/increase-font-in-grub-for-high-dpi.html
 
 

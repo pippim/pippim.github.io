@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-23-Terminal-size-at-startup_.md
 toc:          false
 navigation:   false
@@ -28,5 +28,5 @@ Notice `92` columns and `30` rows. You can adjust these values to make terminal 
 [![enter image description here][2]][2]
 
 
-  [1]: https://i.sstatic.net/apINO.png
-  [2]: https://i.sstatic.net/yH0EA.png
+  [1]: https://pippim.github.io/assets/img/_posts/2020/apINO.png
+  [2]: https://pippim.github.io/assets/img/_posts/2020/yH0EA.png

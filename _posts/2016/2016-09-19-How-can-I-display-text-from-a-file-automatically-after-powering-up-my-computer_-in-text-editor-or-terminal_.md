@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer_-in-text-editor-or-terminal_.md
 toc:          false
 navigation:   false
@@ -43,7 +43,7 @@ Checking the actual file name ends in `.odt` edit the Startup Application profil
 [![ToDo List][4]][4]
 
 
-  [1]: https://i.sstatic.net/zseqym.png
-  [2]: https://i.sstatic.net/KBcwhm.png
-  [3]: https://i.sstatic.net/ScnJam.png
-  [4]: https://i.sstatic.net/4OaV6l.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/zseqym.png
+  [2]: https://pippim.github.io/assets/img/_posts/2016/KBcwhm.png
+  [3]: https://pippim.github.io/assets/img/_posts/2016/ScnJam.png
+  [4]: https://pippim.github.io/assets/img/_posts/2016/4OaV6l.png

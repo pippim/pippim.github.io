@@ -12,7 +12,7 @@ votes:        "75 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-Does-Ubuntu-have-a-_device-manager_-equivalent-for-USB-drives_.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Then typing `hardinfo` in the terminal or calling from Dash (<kbd>Alt</kbd>+<kbd
 The comments above suggest using `lspci` and `lsusb` which are what I use most often but your question asks for a Windows "device manager" equivalent.
 
 
-  [1]: https://i.sstatic.net/ab0yv.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/ab0yv.png

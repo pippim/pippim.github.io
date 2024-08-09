@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-19-Steam_-libGL-error_-No-matching-fbConfigs-or-visuals-found-libGL-error_-failed-to-load-driver_-swrast.md
 toc:          false
 navigation:   false
@@ -89,4 +89,4 @@ Here's what the `yad` window looks like in Ubuntu (in WSL it's slightly differen
 ![Lock Screen Timer][2]
 
   [1]: {% post_url /2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %}
-  [2]: https://i.sstatic.net/0jBz6.png
+  [2]: https://pippim.github.io/assets/img/_posts/2017/0jBz6.png

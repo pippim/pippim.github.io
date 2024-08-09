@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-How-do-you-uninstall-Ubuntu_.md
 toc:          false
 navigation:   false
@@ -135,6 +135,6 @@ You can find both scripts here: [Unable to read files between two distros]({% po
 
 
 
-  [1]: https://i.sstatic.net/ybyzu.png
-  [2]: https://i.sstatic.net/1QUhF.png
+  [1]: https://pippim.github.io/assets/img/_posts/2018/ybyzu.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/1QUhF.png
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-can-i-Optimize-font-for-my-UHD-Screen-in-Unity.md
 toc:          false
 navigation:   false
@@ -62,5 +62,5 @@ xrandr --dpi 144
 
 Change 144 to any number which is a multiple of 16 for best results, ie: 96, 128, 144, etc.
 
-  [1]: https://i.sstatic.net/CnV55.png
-  [2]: https://i.sstatic.net/4G1Bn.png
+  [1]: https://pippim.github.io/assets/img/_posts/2016/CnV55.png
+  [2]: https://pippim.github.io/assets/img/_posts/2016/4G1Bn.png

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "498 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-05-dconf-database-how-to-remove-duplicate-_-triplicates_.md
 toc:          false
 navigation:   false
@@ -110,7 +110,7 @@ Two of three files are dated from 2016 (Ubuntu 16.04 development time):
 ```
 
   [1]: {% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window %}
-  [2]: https://i.sstatic.net/j9qV3.png
+  [2]: https://pippim.github.io/assets/img/_posts/2018/j9qV3.png
   [3]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_ %}
   [4]: https://bugzilla.gnome.org/show_bug.cgi?id=723003#c12
 

@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-08 05:13:48
+uploaded:     2024-08-09 16:47:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Run-a-specific-command-with-root-password-prompt-even-if-running-as-root.md
 toc:          false
 navigation:   false
@@ -121,5 +121,5 @@ The script calls `logger` to record every time `rm` was manually called using th
 Taken from the answer posted at ([How can I set up a password for the &#39;rm&#39; command?][2]) and modified to demand password from root user too.
 
 
-  [1]: https://i.sstatic.net/HvKlZ.png
+  [1]: https://pippim.github.io/assets/img/_posts/2017/HvKlZ.png
   [2]: {% post_url /2016/2016-12-30-How-can-I-set-up-a-password-for-the-_rm_-command_ %}
