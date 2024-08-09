@@ -12,7 +12,7 @@ votes:        "28 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 16:47:37
+uploaded:     2024-08-09 17:46:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-How-do-I-find-out-if-a-PNG-is-PNG-8-or-PNG-24_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 16:47:37
+uploaded:     2024-08-09 17:46:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-25-Libinput_-Change-Touchpad-2-finger-and-3-finger-clicks.md
 toc:          false
 navigation:   false

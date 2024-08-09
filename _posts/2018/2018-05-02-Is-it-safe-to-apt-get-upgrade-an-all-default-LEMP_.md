@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 16:47:37
+uploaded:     2024-08-09 17:46:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-02-Is-it-safe-to-apt-get-upgrade-an-all-default-LEMP_.md
 toc:          false
 navigation:   false

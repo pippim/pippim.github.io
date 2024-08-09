@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 16:47:37
+uploaded:     2024-08-09 17:46:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Run-Bash-scripts-in-folder-all-at-the-same-time.md
 toc:          false
 navigation:   false

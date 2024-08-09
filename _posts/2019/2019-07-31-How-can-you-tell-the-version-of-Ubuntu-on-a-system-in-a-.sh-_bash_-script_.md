@@ -12,7 +12,7 @@ votes:        "27 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 16:47:37
+uploaded:     2024-08-09 17:46:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-31-How-can-you-tell-the-version-of-Ubuntu-on-a-system-in-a-.sh-_bash_-script_.md
 toc:          false
 navigation:   false

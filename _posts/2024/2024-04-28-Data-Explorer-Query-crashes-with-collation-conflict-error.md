@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "251 "
 accepted:     
-uploaded:     2024-08-09 16:47:37
+uploaded:     2024-08-09 17:46:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-04-28-Data-Explorer-Query-crashes-with-collation-conflict-error.md
 toc:          false
 navigation:   false
