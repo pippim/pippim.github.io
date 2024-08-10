@@ -12,7 +12,7 @@ votes:        "20 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_.md
 toc:          false
 navigation:   false
@@ -73,7 +73,7 @@ Voila! - you are running the latest kernel when the first option in grub boot me
 After installing the newest kernel a dozen times you will ask the question "*How do I remove older kernel versions?*" and you will find those answers here in ***Ask Ubuntu***.
 
   [1]: http://kernel.ubuntu.com/~kernel-ppa/mainline/
-  [2]: https://pippim.github.io/assets/img/_posts/2017/0aGxt.png
-  [3]: https://pippim.github.io/assets/img/_posts/2017/BnsVG.png
+  [2]: https://pippim.github.io/assets/img/posts/2017/0aGxt.png
+  [3]: https://pippim.github.io/assets/img/posts/2017/BnsVG.png
   [10]: https://askubuntu.com/questions/763360/does-manual-kernel-update-affect-the-next-regular-automatic-update
   [11]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu

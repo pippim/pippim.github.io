@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-26-Desktop-Facebook-application-for-Ubuntu.md
 toc:          false
 navigation:   false
@@ -46,8 +46,8 @@ Also using these instructions ([facebook.com - help: Facebook Messenger for Linu
 
 
   [1]: https://messengerfordesktop.com/
-  [2]: https://pippim.github.io/assets/img/_posts/2016/LBobA.png
+  [2]: https://pippim.github.io/assets/img/posts/2016/LBobA.png
   [3]: https://www.messenger.com/
-  [4]: https://pippim.github.io/assets/img/_posts/2016/F5k7Y.png
+  [4]: https://pippim.github.io/assets/img/posts/2016/F5k7Y.png
   [5]: https://www.facebook.com/help/community/question/?id=10200236345979960
-  [6]: https://pippim.github.io/assets/img/_posts/2016/XOQcW.png
+  [6]: https://pippim.github.io/assets/img/posts/2016/XOQcW.png

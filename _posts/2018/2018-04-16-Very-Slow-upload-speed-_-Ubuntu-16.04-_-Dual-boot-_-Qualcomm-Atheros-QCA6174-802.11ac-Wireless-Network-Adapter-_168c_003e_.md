@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-16-Very-Slow-upload-speed-_-Ubuntu-16.04-_-Dual-boot-_-Qualcomm-Atheros-QCA6174-802.11ac-Wireless-Network-Adapter-_168c_003e_.md
 toc:          false
 navigation:   false
@@ -77,4 +77,4 @@ It says:
 
   [1]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1670041
   [2]: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=36148c2bbfbe50c50206b6f61d072203c80161e0
-  [3]: https://pippim.github.io/assets/img/_posts/2018/mFcB2.png
+  [3]: https://pippim.github.io/assets/img/posts/2018/mFcB2.png

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-19-Installing-Intel-Graphics-in-18.04-LTS.md
 toc:          false
 navigation:   false
@@ -49,4 +49,4 @@ The Intel iGPU driver is already built into the Linux kernel. Normally you don't
 ![download screen][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/PzEm6.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/PzEm6.png

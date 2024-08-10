@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-24-What-is-the-smallest-file-size-Ubuntu-VirtualBox-image-with-a-GUI_.md
 toc:          false
 navigation:   false
@@ -35,5 +35,5 @@ So I would say the **minimum** you could get away with is **4 GB** using Lubuntu
 
 That said, my Ubuntu Unity 16.04.5 LTS installation with reams of applications installed and 3 kernel chains only takes up **9.8 GB**. Next time around I'll probably just go with this version and forgo the extra effort of learning new interfaces and applications such as File Manager and File Editor.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/nyyPw.png
-  [2]: https://pippim.github.io/assets/img/_posts/2018/LDmGt.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/nyyPw.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/LDmGt.png

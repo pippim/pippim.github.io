@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-27-CPU-on-Ubuntu-running-high.md
 toc:          false
 navigation:   false
@@ -43,4 +43,4 @@ Comparing `top` CPU% to Conky's CPU%:
 Firefox is consuming the most CPU%. In `top` it is listed at **27.8%** in Conky it is listed at **3.37%**. Taking Conky's percentage and multiplying by 8 (the number of CPUs) yields **27%**.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/8PPUK.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/8PPUK.png

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-execute-script-on-low-UPS-power.md
 toc:          false
 navigation:   false
@@ -102,7 +102,7 @@ done
 
 This is a script I would use, in your case adapt it to hibernate (I have a laptop so I never hibernate). My UPS is for window fan, not laptop which has it's own battery and is suspended when I'm at work. Technology can be used differently by different people.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/z8aMp.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/z8aMp.png
 
 
 

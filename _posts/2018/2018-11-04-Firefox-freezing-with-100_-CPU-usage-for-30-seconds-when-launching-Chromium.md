@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Firefox-freezing-with-100_-CPU-usage-for-30-seconds-when-launching-Chromium.md
 toc:          false
 navigation:   false
@@ -63,6 +63,6 @@ I'm at `2.11.94` version earlier than bug report `2.12` version. In bug report u
 
   [1]: https://bugzilla.mozilla.org/show_bug.cgi?id=1492360
   [2]: https://bugzilla.mozilla.org/show_bug.cgi?id=1495900
-  [3]: https://pippim.github.io/assets/img/_posts/2018/ZAVcsm.png
-  [4]: https://pippim.github.io/assets/img/_posts/2018/ZxnAjl.png
+  [3]: https://pippim.github.io/assets/img/posts/2018/ZAVcsm.png
+  [4]: https://pippim.github.io/assets/img/posts/2018/ZxnAjl.png
 

@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-20-Any-good-application-for-data-usage-monitor_.md
 toc:          false
 navigation:   true
@@ -189,7 +189,7 @@ To save desktop space, my narrow Conky window uses "G" instead of "GiB", "M" ins
 You may have to change `enp59s0` to `eth0`, `wlan0` or `eth1`, etc. depending on your network name reported by `ifconfig`.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/oktjX.gif
+  [1]: https://pippim.github.io/assets/img/posts/2016/oktjX.gif
 
 
 <a id="hdr8"></a>

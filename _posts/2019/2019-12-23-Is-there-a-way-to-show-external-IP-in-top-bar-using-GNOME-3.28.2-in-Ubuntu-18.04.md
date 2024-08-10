@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-23-Is-there-a-way-to-show-external-IP-in-top-bar-using-GNOME-3.28.2-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -43,4 +43,4 @@ Even though it already offers an option to display Public IP you can still write
 Indicator System Monitor is maintained by FossFreedom who is a regular visitor to Ask Ubuntu website.
 
   [1]: https://github.com/fossfreedom/indicator-sysmonitor
-  [2]: https://pippim.github.io/assets/img/_posts/2019/IlSmL.gif
+  [2]: https://pippim.github.io/assets/img/posts/2019/IlSmL.gif

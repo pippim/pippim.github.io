@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-01-No-option-to-mirror-Displays-on-18.04-DELL-M3800.md
 toc:          false
 navigation:   false
@@ -39,4 +39,4 @@ Click the gear icon next to the `Sign In` button as shown below:
 
 **Note:** Fresh 18.04 installs may need to install Unity Desktop. 16.04 Upgrades will likely have Unity in place by default. See: [How can I make Ubuntu 18.04 / 18.10 desktop use Unity (be like Ubuntu 14.04)?](How can I make Ubuntu 18.04 / 18.10 desktop use Unity (be like Ubuntu 14.04)?)
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/MoxHd.jpg
+  [1]: https://pippim.github.io/assets/img/posts/2018/MoxHd.jpg

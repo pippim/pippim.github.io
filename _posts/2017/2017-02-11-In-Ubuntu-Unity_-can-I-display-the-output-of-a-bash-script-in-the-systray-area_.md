@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_.md
 toc:          false
 navigation:   true
@@ -176,7 +176,7 @@ fi
 
   [1]: http://www.webupd8.org/2014/05/ubuntu-appindicator-that-displays-bash.html
   [2]: https://github.com/fossfreedom/indicator-sysmonitor
-  [3]: https://pippim.github.io/assets/img/_posts/2017/zdDGs.gif
+  [3]: https://pippim.github.io/assets/img/posts/2017/zdDGs.gif
   [4]: {% post_url /2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %}
   [5]: {% post_url /2018/2018-05-23-Set-of-countdown-timers-with-alarm %}
   [6]: {% post_url /2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %}

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-10-Load-average-is-high-after-adding-second-drive.md
 toc:          false
 navigation:   false
@@ -87,5 +87,5 @@ ${execpi .001 (awk '{printf "%s/", $1}' /proc/loadavg; grep -c processor /proc/c
 Of course not everyone uses conky probably only 1% of Linux users but for those out there that love Conky like me, you might find this code helpful.
 
   [1]: https://unix.stackexchange.com/questions/398520/kworker-consumes-high-cpu-for-external-hard-drive
-  [2]: https://pippim.github.io/assets/img/_posts/2019/NsixPm.png
-  [3]: https://pippim.github.io/assets/img/_posts/2019/E8AWR.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/NsixPm.png
+  [3]: https://pippim.github.io/assets/img/posts/2019/E8AWR.png

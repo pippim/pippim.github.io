@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-16-Transparent-background-in-a-Tkinter-window.md
 toc:          false
 navigation:   false
@@ -73,4 +73,4 @@ In the terminal I have to send <kbd>Control</kbd> + <kbd>C</kbd> when loading is
 
 Credit to Super User [answer](https://superuser.com/a/338369/662962).
 
-  [1]: https://pippim.github.io/assets/img/_posts/2021/jJ3oC.gif
+  [1]: https://pippim.github.io/assets/img/posts/2021/jJ3oC.gif

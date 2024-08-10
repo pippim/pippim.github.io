@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-How-do-I-globally-make-my-desktop-icons-smaller-in-Ubuntu-16.1_.md
 toc:          false
 navigation:   false
@@ -30,4 +30,4 @@ Then select `Preferences` -> `Views`. Set the icon size according to the screen 
 If your icon size is > 100% set it to 100%. If it's already 100% then obviously set it less than that.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/SI5uk.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/SI5uk.png

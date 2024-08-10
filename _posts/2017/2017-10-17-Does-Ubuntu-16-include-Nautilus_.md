@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-17-Does-Ubuntu-16-include-Nautilus_.md
 toc:          false
 navigation:   false
@@ -27,4 +27,4 @@ clipboard:    false
 
 You are using Dropbox and are asking if Ubuntu 16.04 includes Nautilus, which it does. You might be interested to learn that you can [add Dropbox to Nautilus](https://ubuntuforums.org/showthread.php?t=2332623)
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/Zo5SL.png
+  [1]: https://pippim.github.io/assets/img/posts/2017/Zo5SL.png

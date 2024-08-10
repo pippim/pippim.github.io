@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-Bash-script-to-sleep-at-given-CPU-temperature-~-update-for-16.04.md
 toc:          false
 navigation:   true
@@ -173,7 +173,7 @@ echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
   [1]: {% post_url /2017/2017-01-25-Stop-cpu-from-overheating %}
   [2]: https://wiki.debian.org/thermald
   [3]: https://www.kernel.org/doc/Documentation/thermal/intel_powerclamp.txt
-  [4]: https://pippim.github.io/assets/img/_posts/2017/TYc48.png
+  [4]: https://pippim.github.io/assets/img/posts/2017/TYc48.png
 
 
 

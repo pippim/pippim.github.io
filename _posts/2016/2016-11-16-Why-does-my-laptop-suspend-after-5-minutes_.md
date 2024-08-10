@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-16-Why-does-my-laptop-suspend-after-5-minutes_.md
 toc:          false
 navigation:   false
@@ -36,4 +36,4 @@ The value of `0` seconds on lines 1 and 3 turns the function off. The `nothing` 
 
 If problem persists there are other things in `systemd` to look at such as `xautolock` but the steps above are the most obvious ones to try first.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/WNp4E.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/WNp4E.png

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-01-Announcing-the-Stack-Exchange-Time-Machine.md
 toc:          false
 navigation:   false
@@ -24,4 +24,4 @@ You'll always find your mouse pointer:
 [![Ask Ubuntu star trail mouse pointer.gif][1]][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/9gUtn.gif
+  [1]: https://pippim.github.io/assets/img/posts/2019/9gUtn.gif

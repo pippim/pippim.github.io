@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-How-to-integrate-_run-as-shell-script_-in-right-click-menu-of-file-manager_.md
 toc:          false
 navigation:   false
@@ -119,6 +119,6 @@ When the script runs you will have to enter your `sudo` password.
 
 Reboot and enjoy your new login and lock screen wallpaper.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/EleRC.png
-  [2]: https://pippim.github.io/assets/img/_posts/2018/CsQ9O.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/EleRC.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/CsQ9O.png
   [3]: {% post_url /2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper_ %}

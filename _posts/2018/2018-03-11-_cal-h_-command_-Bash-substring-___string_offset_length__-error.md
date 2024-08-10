@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "741 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-11-_cal-h_-command_-Bash-substring-___string_offset_length__-error.md
 toc:          false
 navigation:   false
@@ -97,5 +97,5 @@ Applying fix of `cal -h` recommended below it worked fine until **Ubuntu 18.04 L
 Some are curious about the what the code does so I provided the screen shot above. Others have asked for the full code and it is available here:[How can I get this terminal splash screen?][2]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/CQZhd.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/CQZhd.png
   [2]: {% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_ %}

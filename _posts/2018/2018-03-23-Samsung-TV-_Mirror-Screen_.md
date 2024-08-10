@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Samsung-TV-_Mirror-Screen_.md
 toc:          false
 navigation:   false
@@ -40,6 +40,6 @@ Google cast extension has been discontinued, [now is integrated][4] into Chrome/
 
   [1]: https://www.youtube.com/watch?v=_4ptucuuJPo
   [2]: https://askubuntu.com/questions/844643/google-cast-on-ubuntu-16-04?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-  [3]: https://pippim.github.io/assets/img/_posts/2018/jxpfj.png
+  [3]: https://pippim.github.io/assets/img/posts/2018/jxpfj.png
   [4]: https://support.google.com/chromecast/answer/7249696?hl=en
-  [5]: https://pippim.github.io/assets/img/_posts/2018/ctKBn.png
+  [5]: https://pippim.github.io/assets/img/posts/2018/ctKBn.png

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-What-system-monitoring-tools-are-available_.md
 toc:          false
 navigation:   false
@@ -30,5 +30,5 @@ At the top of the display notice "Lock screen: 4 Minutes  Brightness: 2074". The
 For a tutorial on setting up "Indicator-Sysmonitor" see: [Can BASH display in systray as application indicator?][2]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/uvvZ6.gif
+  [1]: https://pippim.github.io/assets/img/posts/2018/uvvZ6.gif
   [2]: {% post_url /2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_ %}

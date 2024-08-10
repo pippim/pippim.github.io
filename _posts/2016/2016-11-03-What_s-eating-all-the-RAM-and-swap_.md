@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-03-What_s-eating-all-the-RAM-and-swap_.md
 toc:          false
 navigation:   false
@@ -40,6 +40,6 @@ The tool VisualVM will display Java memory usage and other information:
 You can download it from github: ([VisualVM][3])
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/tIbep.png
-  [2]: https://pippim.github.io/assets/img/_posts/2016/ySuQ6.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/tIbep.png
+  [2]: https://pippim.github.io/assets/img/posts/2016/ySuQ6.png
   [3]: https://visualvm.github.io/

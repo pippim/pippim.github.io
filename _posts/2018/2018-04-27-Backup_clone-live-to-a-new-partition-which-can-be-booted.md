@@ -12,7 +12,7 @@ votes:        "37 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted.md
 toc:          true
 navigation:   true
@@ -663,9 +663,9 @@ Of course if you want grub to use the Clone's grub menu do not do the above step
 **Edit August 26, 2018** - Use `--inplace` option with `rsync` so large files such as a 2 GB trash file are not duplicated on clone during copy process. This can lead to "out of disk space" error. Comment out `/etc/cron.d` overrides because users may want to keep or want a different directory altogether. Update instructions to use `do-release-upgrade` without `-d` flag because Ubuntu 18.04.1 LTS is now released.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/MgM3p.png
-  [2]: https://pippim.github.io/assets/img/_posts/2018/22yrE.gif
-  [3]: https://pippim.github.io/assets/img/_posts/2018/bplnH.gif
+  [1]: https://pippim.github.io/assets/img/posts/2018/MgM3p.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/22yrE.gif
+  [3]: https://pippim.github.io/assets/img/posts/2018/bplnH.gif
 
 
 

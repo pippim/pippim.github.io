@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Disabling-sleep_suspend-mode-in-16.04.md
 toc:          false
 navigation:   false
@@ -28,5 +28,5 @@ If this is set correctly chances are your screen saver is kicking in which will 
 [![Brightness & Lock.png][2]][2]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/Jt7nc.png
-  [2]: https://pippim.github.io/assets/img/_posts/2019/aUPch.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/Jt7nc.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/aUPch.png

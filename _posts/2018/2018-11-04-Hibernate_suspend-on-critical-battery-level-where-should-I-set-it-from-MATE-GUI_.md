@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Hibernate_suspend-on-critical-battery-level-where-should-I-set-it-from-MATE-GUI_.md
 toc:          false
 navigation:   false
@@ -94,5 +94,5 @@ $ gsettings list-recursively | grep plugins.power
 
 
   [1]: http://www.putdispenserhere.com/change-critical-battery-level-action-linux-mint-18-cinnamon/
-  [2]: https://pippim.github.io/assets/img/_posts/2018/3hykc.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/3hykc.png
   [3]: https://wiki.archlinux.org/index.php/MATE

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-How-do-you-find-out-which-program-is-using-too-much-memory_.md
 toc:          false
 navigation:   false
@@ -35,4 +35,4 @@ Detailed memory line shows:
 
 Conky is highly configurable and everyone's desktop looks different. You can google `conky` and get 787 thousand hits.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/SeTOv.gif
+  [1]: https://pippim.github.io/assets/img/posts/2018/SeTOv.gif

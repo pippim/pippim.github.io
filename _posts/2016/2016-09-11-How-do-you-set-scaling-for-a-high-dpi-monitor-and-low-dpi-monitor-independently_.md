@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-How-do-you-set-scaling-for-a-high-dpi-monitor-and-low-dpi-monitor-independently_.md
 toc:          false
 navigation:   false
@@ -54,6 +54,6 @@ EndSection
 
 I haven't played with this yet.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/Jh7ID.png
-  [2]: https://pippim.github.io/assets/img/_posts/2016/3hLVb.png
-  [3]: https://pippim.github.io/assets/img/_posts/2016/2utV8.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/Jh7ID.png
+  [2]: https://pippim.github.io/assets/img/posts/2016/3hLVb.png
+  [3]: https://pippim.github.io/assets/img/posts/2016/2utV8.png

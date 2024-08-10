@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-25-No-more-4K-Screen-Resolution-after-Kernel-Upgrade.md
 toc:          false
 navigation:   false
@@ -33,5 +33,5 @@ The original kernel version should still work. Then keep trying out new kernels 
 sudo apt autoremove
 ```
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/yT6o0.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/yT6o0.png
   [2]: {% post_url /2018/2018-04-07-How-to-list-GRUB_s-_menuentries_-in-command-line_ %}

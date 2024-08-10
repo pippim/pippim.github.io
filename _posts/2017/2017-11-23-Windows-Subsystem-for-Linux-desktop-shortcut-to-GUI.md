@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-23-Windows-Subsystem-for-Linux-desktop-shortcut-to-GUI.md
 toc:          false
 navigation:   false
@@ -41,4 +41,4 @@ Also note the `DISPLAY=:0` parameter accommodates calling a bash GUI script but 
 
 Click the `Change Icon` button to get a default list of icons to choose from. This is where the clock icon came from.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/kWwtS.png
+  [1]: https://pippim.github.io/assets/img/posts/2017/kWwtS.png

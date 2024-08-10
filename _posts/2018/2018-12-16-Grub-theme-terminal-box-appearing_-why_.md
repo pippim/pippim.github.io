@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-Grub-theme-terminal-box-appearing_-why_.md
 toc:          false
 navigation:   false
@@ -50,5 +50,5 @@ Insert the two `echo` lines in front of the two existing lines.
 **Important:** After you, or more often a system update, runs `sudo update-grub` the changes are lost and you will have to manually edit the file again.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/tOliY.gif
+  [1]: https://pippim.github.io/assets/img/posts/2018/tOliY.gif
   [2]: {% post_url /2016/2016-09-09-Editing-OS-names-in-_etc_default_grub-where-is-the-OS-name-read-from_ %}

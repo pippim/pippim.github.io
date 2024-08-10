@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-Make-Ubuntu_s-Night-Light-look-like-Manjaro-KDE_s-Night-Color.md
 toc:          false
 navigation:   false
@@ -115,7 +115,7 @@ Change the time appropriately. I'll look at changing the software in the next up
 Please note `eyesome` doesn't retrieve your location. You're merely keying your city name into the screen and it's stored on a configuration file on your disk. You aren't keying in your IP address or longitude / latitude like Redshift, Night Light or F.lux. BTW your city name is already known to every website you visit because they know your ISP Service Provider's city. Unless you are using a VPN of course.
 
   [1]: https://github.com/WinEunuuchs2Unix/eyesome
-  [2]: https://pippim.github.io/assets/img/_posts/2020/VpCDG.gif
-  [3]: https://pippim.github.io/assets/img/_posts/2020/VsnELl.png
-  [4]: https://pippim.github.io/assets/img/_posts/2020/q0rF6l.png
-  [5]: https://pippim.github.io/assets/img/_posts/2020/hiPhll.png
+  [2]: https://pippim.github.io/assets/img/posts/2020/VpCDG.gif
+  [3]: https://pippim.github.io/assets/img/posts/2020/VsnELl.png
+  [4]: https://pippim.github.io/assets/img/posts/2020/q0rF6l.png
+  [5]: https://pippim.github.io/assets/img/posts/2020/hiPhll.png

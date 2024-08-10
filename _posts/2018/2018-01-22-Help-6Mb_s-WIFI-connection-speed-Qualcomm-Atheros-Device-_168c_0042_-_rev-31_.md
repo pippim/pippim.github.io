@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-22-Help-6Mb_s-WIFI-connection-speed-Qualcomm-Atheros-Device-_168c_0042_-_rev-31_.md
 toc:          false
 navigation:   false
@@ -88,5 +88,5 @@ wlp60s0   unknown bit-rate information.
           Current Bit Rate=6 Mb/s
 ```
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/oyD90.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/oyD90.png
   [2]: {% post_url /2018/2018-01-15-Touchpad-gestures-and-holding-keys-does-not-work %}

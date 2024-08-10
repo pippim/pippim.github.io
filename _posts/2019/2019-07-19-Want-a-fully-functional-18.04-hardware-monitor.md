@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-19-Want-a-fully-functional-18.04-hardware-monitor.md
 toc:          false
 navigation:   false
@@ -42,4 +42,4 @@ It's come to my attention some people (or everyone?) is having problems with con
 
 I had upgraded my 16.04 to 18.04 last year and don't recall any problems with conky. That said I rarely use 18.04 and prefer the stability and comfort of 16.04.6 LTS.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/pe0Tj.gif
+  [1]: https://pippim.github.io/assets/img/posts/2019/pe0Tj.gif

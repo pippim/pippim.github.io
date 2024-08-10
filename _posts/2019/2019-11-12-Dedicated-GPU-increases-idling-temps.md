@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Dedicated-GPU-increases-idling-temps.md
 toc:          false
 navigation:   false
@@ -29,4 +29,4 @@ Even at the displayed temperatures there is no heat on the keyboard and fans (th
 
 To summarize if your situation is like above conky display there is nothing to worry about.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/hM4Ot.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/hM4Ot.png

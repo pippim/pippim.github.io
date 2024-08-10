@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-17-Different-colors-for-active_inactive-Unity-window-title-bars_.md
 toc:          false
 navigation:   true
@@ -221,8 +221,8 @@ fi
 Some windows don't allow resizing. In this case the Window will just move down to the right and then back up to the left. You still get the same visual clues which is the active window, just with different movements.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/P0EDD.gif
-  [2]: https://pippim.github.io/assets/img/_posts/2019/pNi8e.gif
+  [1]: https://pippim.github.io/assets/img/posts/2019/P0EDD.gif
+  [2]: https://pippim.github.io/assets/img/posts/2019/pNi8e.gif
 
 
 <a id="hdr5"></a>

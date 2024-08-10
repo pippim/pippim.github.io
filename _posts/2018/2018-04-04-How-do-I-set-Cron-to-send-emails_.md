@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-How-do-I-set-Cron-to-send-emails_.md
 toc:          false
 navigation:   false
@@ -40,5 +40,5 @@ There is an annoyance of getting too much mail. For example every time you misty
 
   [1]: {% post_url /2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail %}
   [2]: https://help.ubuntu.com/community/EmailAlerts
-  [3]: https://pippim.github.io/assets/img/_posts/2018/gl693.png
+  [3]: https://pippim.github.io/assets/img/posts/2018/gl693.png
   [4]: https://askubuntu.com/questions/986696/stop-emailing-me-bad-sudo-password-attempts

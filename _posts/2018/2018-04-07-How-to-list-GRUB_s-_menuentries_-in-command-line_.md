@@ -12,7 +12,7 @@ votes:        "22 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-How-to-list-GRUB_s-_menuentries_-in-command-line_.md
 toc:          true
 navigation:   true
@@ -324,7 +324,7 @@ exit 0
 
 
   [1]: {% post_url /2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_ %}
-  [2]: https://pippim.github.io/assets/img/_posts/2018/a95hd.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/a95hd.png
 
 
 <a id="hdr10"></a>

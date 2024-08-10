@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-01-PIL-Issue_-OSError_-cannot-open-resource.md
 toc:          false
 navigation:   false
@@ -71,4 +71,4 @@ And voila! I now have an image to display when there is no image to display in a
 [![No Artwork.png][1]][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2020/EJuLW.png
+  [1]: https://pippim.github.io/assets/img/posts/2020/EJuLW.png

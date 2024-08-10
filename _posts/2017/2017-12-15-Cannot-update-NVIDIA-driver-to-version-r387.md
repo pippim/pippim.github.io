@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-15-Cannot-update-NVIDIA-driver-to-version-r387.md
 toc:          false
 navigation:   false
@@ -31,4 +31,4 @@ Check the option for `387.34` and the current option for 384.98 will be unchecke
 
 **Note:** If you've manually installed nVidia bits and pieces you can run into complications requiring manual purges of older versions, etc. In that case check the Q&A database here for solutions. If a solution isn't found then post a new question.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/BMmV7.png
+  [1]: https://pippim.github.io/assets/img/posts/2017/BMmV7.png

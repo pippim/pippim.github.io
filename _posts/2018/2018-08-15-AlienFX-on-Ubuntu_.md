@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-15-AlienFX-on-Ubuntu_.md
 toc:          false
 navigation:   false
@@ -62,8 +62,8 @@ I'll try to test this on my AW17R3 soon and report back.
 
 
   [1]: https://github.com/rsm-gh/akbl
-  [2]: https://pippim.github.io/assets/img/_posts/2018/x8HRc.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/x8HRc.png
   [3]: https://github.com/bchretien/AlienFxLite
-  [4]: https://pippim.github.io/assets/img/_posts/2018/YzA20.png
+  [4]: https://pippim.github.io/assets/img/posts/2018/YzA20.png
   [5]: https://github.com/trackmastersteve/alienfx
-  [6]: https://pippim.github.io/assets/img/_posts/2018/Ic6f4.png
+  [6]: https://pippim.github.io/assets/img/posts/2018/Ic6f4.png

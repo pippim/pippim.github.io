@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-13-Where-is-the-output-from-startup-scripts-stored-in-Ubuntu-19.10_.md
 toc:          false
 navigation:   false
@@ -50,4 +50,4 @@ To those that do not know, the advantage of `/var/log/boot.log` over `journalctl
 
 
   [1]: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=791907
-  [2]: https://pippim.github.io/assets/img/_posts/2020/bRekI.png
+  [2]: https://pippim.github.io/assets/img/posts/2020/bRekI.png

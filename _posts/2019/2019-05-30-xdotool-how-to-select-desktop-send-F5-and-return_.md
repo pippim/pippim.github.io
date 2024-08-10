@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "4,304 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-30-xdotool-how-to-select-desktop-send-F5-and-return_.md
 toc:          false
 navigation:   false
@@ -75,4 +75,4 @@ This is what the screen looks like:
 
 
   [1]: https://askubuntu.com/a/1147403/307523
-  [2]: https://pippim.github.io/assets/img/_posts/2019/YcaVq.gif
+  [2]: https://pippim.github.io/assets/img/posts/2019/YcaVq.gif

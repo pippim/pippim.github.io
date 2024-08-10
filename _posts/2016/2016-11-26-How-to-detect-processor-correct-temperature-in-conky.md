@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-to-detect-processor-correct-temperature-in-conky.md
 toc:          false
 navigation:   false
@@ -67,4 +67,4 @@ The display looks like this:
 [![Conky Temperature 4.8.10][1]][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/85zjQ.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/85zjQ.png

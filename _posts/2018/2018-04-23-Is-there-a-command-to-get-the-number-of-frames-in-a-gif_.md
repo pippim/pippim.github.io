@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-Is-there-a-command-to-get-the-number-of-frames-in-a-gif_.md
 toc:          false
 navigation:   false
@@ -66,4 +66,4 @@ drop_caches.gif=>drop_caches-127.png[127] GIF 470x940 470x940+0+0 8-bit sRGB 254
 
   [1]: https://gnutips.wordpress.com/2010/08/10/view-image-file-metadata-from-the-command-line/
   [2]: https://ezgif.com/split/ezgif-3-a91fe0e517.gif
-  [3]: https://pippim.github.io/assets/img/_posts/2018/wgCVZ.png
+  [3]: https://pippim.github.io/assets/img/posts/2018/wgCVZ.png

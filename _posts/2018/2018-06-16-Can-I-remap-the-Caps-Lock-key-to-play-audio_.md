@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-16-Can-I-remap-the-Caps-Lock-key-to-play-audio_.md
 toc:          false
 navigation:   false
@@ -102,5 +102,5 @@ That should make it run every time you log in.
 
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/imuvb.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/imuvb.png
   [2]: https://unix.stackexchange.com/a/99090/200094

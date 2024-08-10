@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-11-Purple-theme-for-_Bash-On-Ubuntu-On-Windows_-for-Windows-10.md
 toc:          false
 navigation:   false
@@ -61,6 +61,6 @@ To summarize the tutorial in the first link you will need to:
 As Piotr Bartnicki notes, many people may prefer a lighter blue for directories. If you fall into this camp, put the value for slot 10 in slot 2.
 
   [1]: https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2
-  [2]: https://pippim.github.io/assets/img/_posts/2018/zfwZQ.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/zfwZQ.png
   [3]: {% post_url /2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution_ %}
-  [4]: https://pippim.github.io/assets/img/_posts/2018/Ki66O.png
+  [4]: https://pippim.github.io/assets/img/posts/2018/Ki66O.png

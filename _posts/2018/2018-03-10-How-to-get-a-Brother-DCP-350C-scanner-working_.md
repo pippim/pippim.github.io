@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-10-How-to-get-a-Brother-DCP-350C-scanner-working_.md
 toc:          true
 navigation:   true
@@ -450,23 +450,23 @@ After all the hard work we are rewarded with a scan:
 
   [1]: https://ubuntuforums.org/showthread.php?t=2246878
   [2]: http://support.brother.com/g/s/id/linux/en/download_scn.html
-  [3]: https://pippim.github.io/assets/img/_posts/2018/Th21E.png
+  [3]: https://pippim.github.io/assets/img/posts/2018/Th21E.png
   [4]: http://support.brother.com/g/b/downloadend.aspx?c=us&lang=en&prod=mfcj410w_us&os=128&dlid=dlf006893_000&flang=4&type3=625
-  [5]: https://pippim.github.io/assets/img/_posts/2018/G0IMA.png
-  [6]: https://pippim.github.io/assets/img/_posts/2018/CaC4f.png
-  [7]: https://pippim.github.io/assets/img/_posts/2018/JmRcW.png
-  [8]: https://pippim.github.io/assets/img/_posts/2018/dFVvH.png
-  [9]: https://pippim.github.io/assets/img/_posts/2018/UsMAE.png
-  [10]: https://pippim.github.io/assets/img/_posts/2018/s7Cdo.png
-  [11]: https://pippim.github.io/assets/img/_posts/2018/XDFBp.png
-  [12]: https://pippim.github.io/assets/img/_posts/2018/nCZQv.png
+  [5]: https://pippim.github.io/assets/img/posts/2018/G0IMA.png
+  [6]: https://pippim.github.io/assets/img/posts/2018/CaC4f.png
+  [7]: https://pippim.github.io/assets/img/posts/2018/JmRcW.png
+  [8]: https://pippim.github.io/assets/img/posts/2018/dFVvH.png
+  [9]: https://pippim.github.io/assets/img/posts/2018/UsMAE.png
+  [10]: https://pippim.github.io/assets/img/posts/2018/s7Cdo.png
+  [11]: https://pippim.github.io/assets/img/posts/2018/XDFBp.png
+  [12]: https://pippim.github.io/assets/img/posts/2018/nCZQv.png
   [13]: https://askubuntu.com/questions/486699/brother-dcp-7065dn-ubuntu-14-04-64bit-can-print-to-network-printer-but-cannot
-  [14]: https://pippim.github.io/assets/img/_posts/2018/M4NW7.png
-  [15]: https://pippim.github.io/assets/img/_posts/2018/LMMD5.png
-  [16]: https://pippim.github.io/assets/img/_posts/2018/1Hctg.png
-  [17]: https://pippim.github.io/assets/img/_posts/2018/C7jh6.png
-  [18]: https://pippim.github.io/assets/img/_posts/2018/8W6a6.png
-  [19]: https://pippim.github.io/assets/img/_posts/2018/azNPP.gif
+  [14]: https://pippim.github.io/assets/img/posts/2018/M4NW7.png
+  [15]: https://pippim.github.io/assets/img/posts/2018/LMMD5.png
+  [16]: https://pippim.github.io/assets/img/posts/2018/1Hctg.png
+  [17]: https://pippim.github.io/assets/img/posts/2018/C7jh6.png
+  [18]: https://pippim.github.io/assets/img/posts/2018/8W6a6.png
+  [19]: https://pippim.github.io/assets/img/posts/2018/azNPP.gif
 
 
 <a id="hdr16"></a>

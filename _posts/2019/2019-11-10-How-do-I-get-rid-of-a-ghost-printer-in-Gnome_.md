@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-do-I-get-rid-of-a-ghost-printer-in-Gnome_.md
 toc:          false
 navigation:   false
@@ -91,7 +91,7 @@ $cat /etc/cups/ppd/DCP7065DN.ppd
 $ sudo rm -f /etc/cups/ppd/DCP7065DN.ppd
 ```
   [1]: [<img src="https://i.sstatic.net/27yUb.png" alt="printer list.png">](<img src="https://i.sstatic.net/27yUb.png" alt="printer list.png">)
-  [2]: https://pippim.github.io/assets/img/_posts/2019/p6w81.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/p6w81.png
 
 
 

@@ -12,7 +12,7 @@ votes:        "29 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-Is-there-any-Widget-that-can-show-my-CPU-and-other-performances-live_.md
 toc:          false
 navigation:   false
@@ -126,4 +126,4 @@ ${color orange}${voffset 2}${hr 1}
 ${color orange}${voffset 2}${hr 1}
 ```
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/YOJ9H.gif
+  [1]: https://pippim.github.io/assets/img/posts/2018/YOJ9H.gif

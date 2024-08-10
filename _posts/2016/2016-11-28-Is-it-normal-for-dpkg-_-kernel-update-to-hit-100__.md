@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "836 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Is-it-normal-for-dpkg-_-kernel-update-to-hit-100__.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Conky screen below as reference:
 [![Kernel Update 100%][1]][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/Q3Jca.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/Q3Jca.png

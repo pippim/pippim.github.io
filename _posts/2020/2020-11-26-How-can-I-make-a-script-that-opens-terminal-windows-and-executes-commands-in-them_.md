@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-11-26-How-can-I-make-a-script-that-opens-terminal-windows-and-executes-commands-in-them_.md
 toc:          false
 navigation:   false
@@ -351,4 +351,4 @@ Note you may have to tinker with the variable `BASHRC_TIME` on your system to ma
 
 I've planned on writing this for many years but never got around to it until now.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2020/S788m.gif
+  [1]: https://pippim.github.io/assets/img/posts/2020/S788m.gif

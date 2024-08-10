@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-26-What-does-the-indicator-icon-with-three-dots-over-a-power-plug-mean-in-Ubuntu-20.04_.md
 toc:          false
 navigation:   false
@@ -73,6 +73,6 @@ For Gnome Users to prevent icons jumping back and forth the only band-aid I can 
 
 ***If*** this works, then when the `boltctl` icon appears and disappears on the left side nothing "jumps around".
 
-  [1]: https://pippim.github.io/assets/img/_posts/2020/FLXQK.png
+  [1]: https://pippim.github.io/assets/img/posts/2020/FLXQK.png
   [2]: https://christian.kellner.me/
 

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-What-does-_LOGFILE___1_-_var_log_syslog__-do_.md
 toc:          false
 navigation:   false
@@ -87,6 +87,6 @@ exit $?
 ```
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/QOC4U.png
-  [2]: https://pippim.github.io/assets/img/_posts/2019/HdWK5.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/QOC4U.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/HdWK5.png
   [3]: https://sourceforge.net/p/yad-dialog/wiki/LogViewer/

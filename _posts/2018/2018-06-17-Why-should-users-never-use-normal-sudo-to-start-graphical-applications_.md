@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-Why-should-users-never-use-normal-sudo-to-start-graphical-applications_.md
 toc:          false
 navigation:   false
@@ -73,4 +73,4 @@ To solve this I've written the script `sgedit` to inherit user preferences and a
 
 
   [1]: https://lists.ubuntu.com/archives/ubuntu-devel-discuss/2019-May/018345.html
-  [2]: https://pippim.github.io/assets/img/_posts/2018/HAqmQ.gif
+  [2]: https://pippim.github.io/assets/img/posts/2018/HAqmQ.gif

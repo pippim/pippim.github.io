@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-My-battery-is-not-charging-on-Ubuntu-18.04-while-in-use.md
 toc:          false
 navigation:   false
@@ -27,4 +27,4 @@ The battery was holding it's own but was not charging to full capacity when plug
 
 The solution was to have it turned on, unplugged and then plug it back in at 6% life left. The other part of the solution was to not suspend while it was plugged in and still charging.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/Cuq3h.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/Cuq3h.png

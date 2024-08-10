@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Is-there-any-Ubuntu-flavor-that-handles-HiDPI-consistently_.md
 toc:          false
 navigation:   false
@@ -58,5 +58,5 @@ The end result is what is important:
 [![Screen no scaling][2]][2]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/C5RnB.png
-  [2]: https://pippim.github.io/assets/img/_posts/2016/2NSdP.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/C5RnB.png
+  [2]: https://pippim.github.io/assets/img/posts/2016/2NSdP.png

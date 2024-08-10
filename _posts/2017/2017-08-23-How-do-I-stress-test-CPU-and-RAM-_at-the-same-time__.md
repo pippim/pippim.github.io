@@ -12,7 +12,7 @@ votes:        "68 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-23-How-do-I-stress-test-CPU-and-RAM-_at-the-same-time__.md
 toc:          false
 navigation:   false
@@ -47,5 +47,5 @@ Type `stress --help` for a full list of options.
 A commentator requested posting the entire conky script which I did here: [conky transparent][2]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/bJmjj.gif
+  [1]: https://pippim.github.io/assets/img/posts/2017/bJmjj.gif
   [2]: {% post_url /2017/2017-08-01-conky-transparent %}

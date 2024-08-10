@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-28-Why-the-pipe-command-_l-_-grep-_1_-_-get-the-wrong-result_.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ The `:34m` is an escape sequence for a color that doesn't paint properly. Based 
 [![color ls][1]][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/EdiMJ.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/EdiMJ.png

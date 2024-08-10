@@ -70,7 +70,7 @@ from random import randint  # To randomly process small set of CSV records
 import website_search  # Search Engine
 ws = website_search.WebsiteSearch()
 
-import image  # Download SE images to ~/website2/assets/img/_posts
+import image  # Download SE images to ~/website2/assets/img/posts
 img = image.Image("dummy", True)  # Reinitialized later with actual values
 
 """
@@ -1062,10 +1062,10 @@ def check_tail_links(ln):
                 [1]: https://i.sstatic.net/99999.png
 
             If found, use `wget` to download to:
-                ../assets/img/_posts/yyyy/99999.png
+                ../assets/img/posts/yyyy/99999.png
 
             Then change line to read:
-                [1]: https://www.pippim.com/assets/img/_posts/yyyy/99999.png
+                [1]: https://www.pippim.com/assets/img/posts/yyyy/99999.png
 
     """
 
@@ -1401,7 +1401,7 @@ def check_html_static_net(http_str):
         as of 2024-08-06 hot-linking is no longer allowed. Then:
 
         Change: https://i.sstatic.net/99999.png
-            to: https://www.pippim.com/assets/img/_posts/99999.png
+            to: https://www.pippim.com/assets/img/posts/99999.png
 
         If posts by year required then, later
         Change: /_posts/
@@ -3137,7 +3137,6 @@ def set_config_code_url():
             # append "../_posts/" as "/_posts"
             code_url += OUTPUT_DIR[:-1].replace("../", "/")
             print("code_url:", code_url)
-            #img = image.Image(html_url, OUTPUT_BY_YEAR_DIR)
 
             return
 

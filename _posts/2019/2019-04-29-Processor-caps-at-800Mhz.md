@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-29-Processor-caps-at-800Mhz.md
 toc:          false
 navigation:   false
@@ -73,4 +73,4 @@ echo 3500000 | sudo tee /sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq
 
 This will restore your CPUs to maximum speed but we still need to find out what package is setting your CPUs to 800 MHz.
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/uvime.gif
+  [1]: https://pippim.github.io/assets/img/posts/2019/uvime.gif

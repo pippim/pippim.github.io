@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-Failure-to-download-extra-data-files_-flashplugin-installer-_not-a-duplicate-question_.md
 toc:          false
 navigation:   false
@@ -64,4 +64,4 @@ PPPS I notice there are other boxes not checked off on the screenshot above and 
 
 
   [1]: https://askubuntu.com/users/159370/gunnar-hjalmarsson
-  [2]: https://pippim.github.io/assets/img/_posts/2016/Bgevc.png
+  [2]: https://pippim.github.io/assets/img/posts/2016/Bgevc.png

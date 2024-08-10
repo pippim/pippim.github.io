@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-19-Is-it-possible-to-turn-off-a-specific-USB-port-so-it-doesn_t-accept-any-device_.md
 toc:          false
 navigation:   false
@@ -28,4 +28,4 @@ It's a good idea if you want to avoid pop-up messages and file browsers every ti
 This is also more fool-proof than the software approach because software that turns off the port for data can be reversed by software that turns it back on. Or it might be reinitialized during suspend/resume or some other process you didn't foresee.
 
   [1]: https://www.amazon.com/PortaPow-3rd-Gen-Data-Blocker/dp/B00QRRZ2QM
-  [2]: https://pippim.github.io/assets/img/_posts/2019/TwNGM.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/TwNGM.png

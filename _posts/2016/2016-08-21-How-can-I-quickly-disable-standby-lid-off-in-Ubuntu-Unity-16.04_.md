@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-21-How-can-I-quickly-disable-standby-lid-off-in-Ubuntu-Unity-16.04_.md
 toc:          false
 navigation:   false
@@ -24,7 +24,7 @@ Another option would be changing from "Suspend" to "Do Nothing" in Ubuntu Settin
 [![Ubuntu Settings - Power][1]][1]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/tdxnf.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/tdxnf.png
 
 PS: This doesn't provide an indicator in the notifications area but is simpler than creating a script for new users.
 

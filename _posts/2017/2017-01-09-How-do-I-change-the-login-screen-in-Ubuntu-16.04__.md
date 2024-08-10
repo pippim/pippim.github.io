@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-09-How-do-I-change-the-login-screen-in-Ubuntu-16.04__.md
 toc:          false
 navigation:   false
@@ -65,4 +65,4 @@ I wrote a script where you can navigate to a directory / image, right click on i
 
 
   [1]: https://askubuntu.com/questions/694202/change-the-background-of-the-login-screen/694370#694370
-  [2]: https://pippim.github.io/assets/img/_posts/2017/CsQ9O.png
+  [2]: https://pippim.github.io/assets/img/posts/2017/CsQ9O.png

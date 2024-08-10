@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Why-don_t-Intel-microcode-updates-work-on-my-system_.md
 toc:          false
 navigation:   false
@@ -68,4 +68,4 @@ $ dmesg | grep -i microcode
 ```
 
   [1]: https://askubuntu.com/a/1000454/307523
-  [2]: https://pippim.github.io/assets/img/_posts/2018/1QcZZ.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/1QcZZ.png

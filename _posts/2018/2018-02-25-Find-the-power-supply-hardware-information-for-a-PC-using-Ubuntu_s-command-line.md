@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-Find-the-power-supply-hardware-information-for-a-PC-using-Ubuntu_s-command-line.md
 toc:          false
 navigation:   false
@@ -93,5 +93,5 @@ Note the amperage is specified for 12 Volt rail output. So 15A = 180 watts and 5
 
 
   [1]: https://www.cyberpowersystems.com/product/software/powerpanel-for-linux/
-  [2]: https://pippim.github.io/assets/img/_posts/2018/O09aL.jpg
+  [2]: https://pippim.github.io/assets/img/posts/2018/O09aL.jpg
   [3]: https://www.lifewire.com/computer-power-supply-wattage-832368

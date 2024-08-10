@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-13-Is-there-a-text-editor-that-can-run-shell-scripts_.md
 toc:          false
 navigation:   false
@@ -82,10 +82,10 @@ For further reading please see:
 - [How to C program in gedit - Quora][9]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/6uY6ul.png
-  [2]: https://pippim.github.io/assets/img/_posts/2019/042mbm.png
-  [4]: https://pippim.github.io/assets/img/_posts/2019/K9Xtd.gif
-  [5]: https://pippim.github.io/assets/img/_posts/2019/WikO2l.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/6uY6ul.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/042mbm.png
+  [4]: https://pippim.github.io/assets/img/posts/2019/K9Xtd.gif
+  [5]: https://pippim.github.io/assets/img/posts/2019/WikO2l.png
   [6]: https://www.howtoforge.com/tutorial/three-useful-gedit-plugins-for-programmers/
   [7]: https://www.cyberciti.biz/faq/gedit-python-c-cpp-autocomplete-plugin/
   [8]: https://yaserxp.wordpress.com/2008/09/03/5-must-have-gedit-plugins-for-programmers/

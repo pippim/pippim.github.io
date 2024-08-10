@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,530 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-gedit-put-BOLD-text-with-Yellow-Background-on-a-script-comment-line.md
 toc:          false
 navigation:   false
@@ -30,5 +30,5 @@ After accepting the answer below I used the tips to have more BOLD text with yel
 [![gedit bold text yellow background][2]][2]
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/kOVI8.png
-  [2]: https://pippim.github.io/assets/img/_posts/2016/39NAO.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/kOVI8.png
+  [2]: https://pippim.github.io/assets/img/posts/2016/39NAO.png

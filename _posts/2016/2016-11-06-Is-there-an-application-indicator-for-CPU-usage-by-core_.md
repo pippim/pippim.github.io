@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-06-Is-there-an-application-indicator-for-CPU-usage-by-core_.md
 toc:          false
 navigation:   false
@@ -39,6 +39,6 @@ ${color1}All CPU ${color green}${cpu}% ${goto 131}${color1}Temp: ${color green}$
 ${color green}$running_processes ${color1}running of ${color green}$processes ${color1}loaded processes.
 ```
 
-  [1]: https://pippim.github.io/assets/img/_posts/2016/eH0Ku.png
+  [1]: https://pippim.github.io/assets/img/posts/2016/eH0Ku.png
 
 Posting the entire conky configuration file isn't possible because it is too long and it contains too many test sections making it unprofessional. You can google conky samples and find one that appeals to you. Then you can copy and paste the above code into the one you found.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-02-Is-there-a-setting-in-the-startup-applications-menu-item-to-remember-all-apps-when-shutting-down_.md
 toc:          false
 navigation:   false
@@ -62,7 +62,7 @@ but it doesn't appear to work in Ubuntu 16.04 either.
 
 
   [1]: {% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window %}
-  [2]: https://pippim.github.io/assets/img/_posts/2018/IbmaX.png
+  [2]: https://pippim.github.io/assets/img/posts/2018/IbmaX.png
   [3]: https://packages.ubuntu.com/trusty/utils/dconf-editor
   [4]: https://askubuntu.com/a/719602/307523
-  [5]: https://pippim.github.io/assets/img/_posts/2018/HPFfO.png
+  [5]: https://pippim.github.io/assets/img/posts/2018/HPFfO.png

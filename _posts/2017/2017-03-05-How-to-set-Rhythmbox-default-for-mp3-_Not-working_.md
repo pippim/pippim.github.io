@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-05-How-to-set-Rhythmbox-default-for-mp3-_Not-working_.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Although there are similar questions and answers in Ask Ubuntu that dance around
 
 Select `Rhythmbox` as the application and click the lower right button `Set as Default`
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/2uCxs.png
+  [1]: https://pippim.github.io/assets/img/posts/2017/2uCxs.png

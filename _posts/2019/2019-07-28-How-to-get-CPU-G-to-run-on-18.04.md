@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-28-How-to-get-CPU-G-to-run-on-18.04.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Then typing `hardinfo` in the terminal or calling from Dash (<kbd>Alt</kbd>+<kbd
 You can get most if not all the information you need from `cpu-g` plus a whole lot more information on your machine.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2019/VsWzc.png
+  [1]: https://pippim.github.io/assets/img/posts/2019/VsWzc.png

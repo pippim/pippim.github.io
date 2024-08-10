@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-uninstalled-nvidia-drivers-still-showing-in-_additional-drivers_-tab.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ The additional drivers panel will always show one driver or another and you cann
 
 ^^ Another interesting quirk is it displays "Unknown:Unknown". But what it really means is "Intel:Intel Microcode".
 
-  [1]: https://pippim.github.io/assets/img/_posts/2018/Z1MOm.png
+  [1]: https://pippim.github.io/assets/img/posts/2018/Z1MOm.png

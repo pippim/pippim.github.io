@@ -131,16 +131,16 @@ cp ~/website/_includes/posts_by_tag.html _includes/
 cp ~/website/_includes/posts_by_vote.html _includes/
 
 echo
-echo "=== UPDATING: $PWD/assets/img/_posts/"
+echo "=== UPDATING: $PWD/assets/img/posts/"
 
-rm -rf assets/img/_posts/
-mkdir assets/img/_posts/
-cp -r ~/website/assets/img/_posts/* assets/img/_posts/
+rm -rf assets/img/posts/
+mkdir assets/img/posts/
+cp -r ~/website/assets/img/posts/* assets/img/posts/
 
-git add assets/img/_posts/
+git add assets/img/posts/
 retVal=$?
 if [ $retVal -ne 0 ]; then
-    echo "git add assets/img/_posts/ FAILED with code: $retVal"
+    echo "git add assets/img/posts/ FAILED with code: $retVal"
     exit $retVal
 fi
 

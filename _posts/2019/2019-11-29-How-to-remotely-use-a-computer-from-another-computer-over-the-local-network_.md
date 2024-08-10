@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-29-How-to-remotely-use-a-computer-from-another-computer-over-the-local-network_.md
 toc:          false
 navigation:   false
@@ -29,4 +29,4 @@ Here's a screenshot (one of many from the linked article) showing the built-in g
 
 
   [1]: https://www.howtogeek.com/429190/how-to-set-up-remote-desktop-on-ubuntu/
-  [2]: https://pippim.github.io/assets/img/_posts/2019/xCVtf.png
+  [2]: https://pippim.github.io/assets/img/posts/2019/xCVtf.png

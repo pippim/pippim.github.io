@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-How-to-see-what-pkaction-a-software-uses.md
 toc:          false
 navigation:   false
@@ -45,6 +45,6 @@ If you want to run without password prompt you would set the following:
 
 On a personal note I don't like repeatedly entering the password myself but will not change `gedit` to never ask for password when changing root files using `pkexec`. However I would like it to not repeatedly ask for password when running it many times in given session. You can do this with `sudo` and you can extend the period from 10 minutes to 120 minutes as I have done on my system. I would like similar functionality for policy kits.
   [1]: https://askubuntu.com/questions/383747/how-to-configure-pkexec-to-not-ask-for-password
-  [2]: https://pippim.github.io/assets/img/_posts/2017/vMGDh.png
-  [3]: https://pippim.github.io/assets/img/_posts/2017/Tn78X.png
-  [4]: https://pippim.github.io/assets/img/_posts/2017/c1EWB.png
+  [2]: https://pippim.github.io/assets/img/posts/2017/vMGDh.png
+  [3]: https://pippim.github.io/assets/img/posts/2017/Tn78X.png
+  [4]: https://pippim.github.io/assets/img/posts/2017/c1EWB.png

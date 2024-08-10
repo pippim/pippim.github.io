@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-17-How-much-is-too-many-zombies-_bad_.md
 toc:          false
 navigation:   false
@@ -68,4 +68,4 @@ If a parent process continues to create zombies, it should be fixed so that it p
 
 
   [1]: https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/
-  [2]: https://pippim.github.io/assets/img/_posts/2019/FasNG.jpg
+  [2]: https://pippim.github.io/assets/img/posts/2019/FasNG.jpg

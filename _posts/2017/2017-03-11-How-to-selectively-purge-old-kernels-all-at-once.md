@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once.md
 toc:          true
 navigation:   true
@@ -452,10 +452,10 @@ The kernel list is now sorted by Kernel Version rather than alpha-numerically.
 An additional column has been added for `/boot size`. In the graphical Zenity version the last column changes between "Real Total" and "Est. Total" (Estimated) depending on parameter 1 being passed or not.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/3gvap.png
+  [1]: https://pippim.github.io/assets/img/posts/2017/3gvap.png
   [2]: https://askubuntu.com/questions/841810/how-do-you-find-out-when-a-specific-kernel-version-was-last-booted
-  [3]: https://pippim.github.io/assets/img/_posts/2017/eYPmy.png
-  [4]: https://pippim.github.io/assets/img/_posts/2017/doq4q.png
+  [3]: https://pippim.github.io/assets/img/posts/2017/eYPmy.png
+  [4]: https://pippim.github.io/assets/img/posts/2017/doq4q.png
 
 
 <a id="hdr8"></a>

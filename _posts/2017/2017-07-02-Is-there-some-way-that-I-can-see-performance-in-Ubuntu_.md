@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-02-Is-there-some-way-that-I-can-see-performance-in-Ubuntu_.md
 toc:          false
 navigation:   false
@@ -53,6 +53,6 @@ You will find other system monitoring tools recommended in Ask Ubuntu if you do 
 Hope this helps.
 
 
-  [1]: https://pippim.github.io/assets/img/_posts/2017/COa1i.gif
+  [1]: https://pippim.github.io/assets/img/posts/2017/COa1i.gif
   [2]: https://ubuntuforums.org/showthread.php?t=281865
   [3]: https://askubuntu.com/questions/29757/what-can-replace-system-monitoring-in-the-top-gnome-panel-in-unity/35733#35733

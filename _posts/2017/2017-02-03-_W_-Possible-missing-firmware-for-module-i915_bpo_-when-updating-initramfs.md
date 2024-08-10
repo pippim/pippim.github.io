@@ -12,7 +12,7 @@ votes:        "25 "
 favorites:    
 views:        "0 "
 accepted:     
-uploaded:     2024-08-09 17:46:04
+uploaded:     2024-08-09 18:44:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-03-_W_-Possible-missing-firmware-for-module-i915_bpo_-when-updating-initramfs.md
 toc:          true
 navigation:   true
@@ -348,19 +348,19 @@ sudo apt upgrade
 
 
   [1]: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/i915
-  [2]: https://pippim.github.io/assets/img/_posts/2017/PzEm6.png
+  [2]: https://pippim.github.io/assets/img/posts/2017/PzEm6.png
   [3]: https://01.org/linuxgraphics/downloads/firmware
-  [4]: https://pippim.github.io/assets/img/_posts/2017/BFYtB.png
+  [4]: https://pippim.github.io/assets/img/posts/2017/BFYtB.png
   [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_ %}
   [6]: https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1611124
-  [7]: https://pippim.github.io/assets/img/_posts/2017/9lQBJ.png
+  [7]: https://pippim.github.io/assets/img/posts/2017/9lQBJ.png
   [8]: https://01.org/linuxgraphics/downloads/kabylake-guc-9.14
   [9]: https://01.org/linuxgraphics/downloads/kabylake-dmc-1.01
   [10]: https://01.org/linuxgraphics/downloads/broxton-guc-8.7
   [11]: https://01.org/linuxgraphics/downloads
-  [12]: https://pippim.github.io/assets/img/_posts/2017/B3uVd.png
-  [13]: https://pippim.github.io/assets/img/_posts/2017/Gufe8.png
-  [14]: https://pippim.github.io/assets/img/_posts/2017/jXgRV.png
+  [12]: https://pippim.github.io/assets/img/posts/2017/B3uVd.png
+  [13]: https://pippim.github.io/assets/img/posts/2017/Gufe8.png
+  [14]: https://pippim.github.io/assets/img/posts/2017/jXgRV.png
 
 
 
