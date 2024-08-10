@@ -1269,7 +1269,7 @@ python program performs:
     > line 2
 
     5.2. {{ site.title }} appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
-    > line 1
+    > line 1  
     > line 2
 
 6. **Note:** When parsing inside a fenced code block like <code>``` bash</code> or an indented code block (demarcated by four leading spaces), no special processing is done for block quotes discussed above, for `# Header` lines discussed below or, for hyperlinks discussed further below.
