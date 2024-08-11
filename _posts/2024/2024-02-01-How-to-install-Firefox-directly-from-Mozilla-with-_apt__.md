@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1502032
 type:         Answer
 tags:         software-installation firefox deb
 created_date: 2024-02-01 03:05:17
-edit_date:    2024-02-01 04:33:13
+edit_date:    2024-08-08 23:52:22
 votes:        "3 "
 favorites:    
 views:        "0 "
-accepted:     
-uploaded:     2024-08-09 18:44:45
+accepted:     Accepted
+uploaded:     2024-08-11 16:59:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-01-How-to-install-Firefox-directly-from-Mozilla-with-_apt__.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    false
 
 If you are using `snap` version you need to remove it first. Note an **Ask Ubuntu** post says you will [lose your bookmarks](https://askubuntu.com/a/1404401/307523):
 
-``` 
+``` shell
 sudo snap remove firefox
 ```
 
@@ -31,34 +31,40 @@ Mozilla has [instructions on their website][1] for installing the latest `.deb` 
 
 1. Create a directory to store APT repository keys if it doesn't exist:
 
+    ``` shell
+    sudo install -d -m 0755 /etc/apt/keyrings
 ``` 
-   sudo install -d -m 0755 /etc/apt/keyrings
 ```
-
+```
 2. Import the Mozilla APT repository signing key:
 
+    ``` shell
+    wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 ``` 
-   wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
-If you do not have wget installed, you can install it with: 
-
-   sudo apt-get install wget
 ```
+If you do not have `wget` installed, you can install it with: 
 
+``` shell
+sudo apt-get install wget
+````
+```
 3. The fingerprint should be 35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3. *See note below if this doesn't work.*
 
+    ``` shell
+    gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print "\n"$0"\n"}'
 ``` 
-   gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print "\n"$0"\n"}'
 ```
-
+```
 4. Next, add the Mozilla APT repository to your sources list:
 
+    ``` shell
+    echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 ``` 
-   echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 ```
-
+```
 5. Configure APT to prioritize packages from the Mozilla repository:
 
-    ``` 
+    ``` shell
     echo '
     Package: *
     Pin: origin packages.mozilla.org
@@ -69,10 +75,11 @@ If you do not have wget installed, you can install it with:
 ```
 6. Update your package list and install the Firefox .deb package:
 
+    ``` shell
+    sudo apt-get update && sudo apt-get install firefox
 ``` 
-   sudo apt-get update && sudo apt-get install firefox
+```
 ## ```
-
 
 
 ### Alternate method for Step 3.

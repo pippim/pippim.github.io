@@ -10,9 +10,9 @@ created_date: 2017-10-18 23:45:08
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "526 "
+views:        "528 "
 accepted:     Accepted
-uploaded:     2024-08-09 18:44:45
+uploaded:     2024-08-11 16:59:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-18-Any-file-manager-that-can-XOR-two-home-folders_.md
 toc:          false
 navigation:   false

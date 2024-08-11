@@ -8,11 +8,11 @@ type:         Answer
 tags:         cpu
 created_date: 2018-08-10 23:32:56
 edit_date:    2018-08-19 18:32:36
-votes:        "2 "
+votes:        "3 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 18:44:45
+uploaded:     2024-08-11 16:59:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-10-Cpufrequtils-available-frequencies.md
 toc:          false
 navigation:   false

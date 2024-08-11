@@ -8,11 +8,11 @@ type:         Answer
 tags:         directory home-directory default
 created_date: 2018-08-12 01:16:02
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
 views:        "0 "
 accepted:     Accepted
-uploaded:     2024-08-09 18:44:45
+uploaded:     2024-08-11 16:59:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-How-are-the-default-user-folders-in-the-home-created-for-a-new-user_.md
 toc:          false
 navigation:   false

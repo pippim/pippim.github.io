@@ -3462,7 +3462,7 @@ create_speed_search()
 for row in rows:
 
     row_number += 1
-    percent_complete_close()  # 2024-08-09 - Allow clean debug print
+    #percent_complete_close()  # 2024-08-09 - Allow clean debug print
     percent_complete(row_number, row_count, title="Convert Markdown")
     ''' Reset counters for each stack exchange Q&A '''
     save_blog = True        # Default until a condition turns it off
