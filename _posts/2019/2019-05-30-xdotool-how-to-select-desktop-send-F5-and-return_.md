@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "4,318 "
 accepted:     Accepted
-uploaded:     2024-08-11 16:59:15
+uploaded:     2024-08-11 19:41:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-30-xdotool-how-to-select-desktop-send-F5-and-return_.md
 toc:          false
 navigation:   false

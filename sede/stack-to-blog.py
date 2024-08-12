@@ -618,92 +618,8 @@ URL: https://askubuntu.com/q/862173
 URL: https://askubuntu.com/q/1020977
 URL: https://askubuntu.com/q/1021116
 URL: https://askubuntu.com/q/1021174
-
-URL: https://askubuntu.com/q/1049343
-URL: https://askubuntu.com/q/1064480
-URL: https://askubuntu.com/q/1153967
-URL: https://askubuntu.com/q/1165306
-URL: https://askubuntu.com/q/1186405
-URL: https://askubuntu.com/q/1192784
-URL: https://askubuntu.com/q/1193304
-URL: https://askubuntu.com/q/1194001
-URL: https://askubuntu.com/q/1211685
-URL: https://askubuntu.com/q/1298463
-URL: https://askubuntu.com/q/1408699
-URL: https://askubuntu.com/q/1413743
-URL: https://askubuntu.com/q/839431
-URL: https://askubuntu.com/q/852908
-URL: https://askubuntu.com/q/852915
-URL: https://askubuntu.com/q/853717
-URL: https://askubuntu.com/q/898806
-URL: https://askubuntu.com/q/1002670
-URL: https://askubuntu.com/q/1058157
-URL: https://askubuntu.com/q/1058409
-URL: https://askubuntu.com/q/1069578
-URL: https://askubuntu.com/q/1103835
-URL: https://askubuntu.com/q/1134773
-URL: https://askubuntu.com/q/1160734
-URL: https://askubuntu.com/q/1160789
-URL: https://askubuntu.com/q/1178114
-URL: https://askubuntu.com/q/1178810
-URL: https://askubuntu.com/q/1190592
-URL: https://askubuntu.com/q/1252628
-URL: https://askubuntu.com/q/1256392
-URL: https://askubuntu.com/q/1349989
-URL: https://askubuntu.com/q/1365346
-URL: https://askubuntu.com/q/840995
-URL: https://stackoverflow.com/q/63429034
-URL: https://askubuntu.com/q/858018
-URL: https://askubuntu.com/q/964097
-URL: https://askubuntu.com/q/1003726
-URL: https://askubuntu.com/q/1004713
-URL: https://askubuntu.com/q/1019376
-URL: https://askubuntu.com/q/1037199
-URL: https://askubuntu.com/q/1037217
-URL: https://askubuntu.com/q/1086562
-URL: https://askubuntu.com/q/1087720
-URL: https://askubuntu.com/q/1105656
-URL: https://askubuntu.com/q/1151306
-URL: https://askubuntu.com/q/1160849
-URL: https://askubuntu.com/q/1179873
-URL: https://askubuntu.com/q/1180445
-URL: https://askubuntu.com/q/1182535
-URL: https://askubuntu.com/q/1183623
-URL: https://askubuntu.com/q/1191405
-URL: https://askubuntu.com/q/1202642
-URL: https://askubuntu.com/q/1203691
-URL: https://askubuntu.com/q/1205502
-URL: https://askubuntu.com/q/1393684
-URL: https://askubuntu.com/q/819637
-URL: https://askubuntu.com/q/820260
-URL: https://askubuntu.com/q/833590
-URL: https://askubuntu.com/q/848423
-URL: https://askubuntu.com/q/941353
-URL: https://askubuntu.com/q/941360
-URL: https://askubuntu.com/q/943580
-URL: https://askubuntu.com/q/998121
-URL: https://askubuntu.com/q/998636
-URL: https://askubuntu.com/q/1024620
-URL: https://askubuntu.com/q/1052878
-URL: https://askubuntu.com/q/1064902
-URL: https://askubuntu.com/q/1080767
-URL: https://askubuntu.com/q/1097707
-URL: https://askubuntu.com/q/1099211
-URL: https://askubuntu.com/q/1099248
-URL: https://askubuntu.com/q/1156038
-URL: https://askubuntu.com/q/1156057
-URL: https://askubuntu.com/q/1156154
-URL: https://askubuntu.com/q/1156431
-URL: https://askubuntu.com/q/1187749
-URL: https://askubuntu.com/q/1188181
-URL: https://askubuntu.com/q/1188218
-URL: https://askubuntu.com/q/1195782
-URL: https://askubuntu.com/q/1195792
-URL: https://askubuntu.com/q/1196192
-URL: https://askubuntu.com/q/1196232
-URL: https://askubuntu.com/q/1245639
-URL: https://askubuntu.com/q/1245644
-
+...
+A list of 50 prints
     '''
     if r[TYPE] == "Answer" and r[ACCEPTED] == 'Accepted':
         accepted_count += 1
@@ -1100,7 +1016,7 @@ def check_tail_links(ln):
                 new_url += post_year
             new_url += "/" + image_str
             ln = ln.replace(http_str, new_url)
-            print(ln)
+            #print(ln)
         return ln
 
     # print('our_url:', our_url)
