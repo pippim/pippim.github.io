@@ -10,9 +10,9 @@ created_date: 2019-07-04 23:52:22
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "0 "
+views:        "61 "
 accepted:     Accepted
-uploaded:     2024-08-11 19:41:17
+uploaded:     2024-08-18 16:33:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-04-Ethernet-_cable-unpluged_-when-waking-up-laptop-from-sleep.md
 toc:          false
 navigation:   false

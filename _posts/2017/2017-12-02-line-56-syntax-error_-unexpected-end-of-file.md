@@ -10,9 +10,9 @@ created_date: 2017-12-02 22:53:32
 edit_date:    2017-12-05 11:22:38
 votes:        "3 "
 favorites:    
-views:        "0 "
+views:        "2,156 "
 accepted:     
-uploaded:     2024-08-11 19:41:17
+uploaded:     2024-08-18 16:33:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-02-line-56-syntax-error_-unexpected-end-of-file.md
 toc:          false
 navigation:   false

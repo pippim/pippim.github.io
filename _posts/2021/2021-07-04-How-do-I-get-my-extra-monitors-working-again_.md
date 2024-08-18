@@ -10,9 +10,9 @@ created_date: 2021-07-04 17:12:33
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "0 "
+views:        "43 "
 accepted:     Accepted
-uploaded:     2024-08-11 19:41:17
+uploaded:     2024-08-18 16:33:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-07-04-How-do-I-get-my-extra-monitors-working-again_.md
 toc:          false
 navigation:   false

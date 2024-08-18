@@ -10,9 +10,9 @@ created_date: 2018-07-19 11:25:33
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "0 "
+views:        "3,085 "
 accepted:     Accepted
-uploaded:     2024-08-11 19:41:17
+uploaded:     2024-08-18 16:33:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-Grub-terminal-after-cloning-Ubuntu-16.04-from-internal-SSD-to-external-HDD.md
 toc:          false
 navigation:   false
