@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "41,987 "
 accepted:     
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-24-How-can-I-see-my-password-on-the-terminal_.md
 toc:          false
 navigation:   false

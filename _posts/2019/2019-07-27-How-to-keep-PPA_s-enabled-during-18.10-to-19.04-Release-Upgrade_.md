@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "98 "
 accepted:     
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-How-to-keep-PPA_s-enabled-during-18.10-to-19.04-Release-Upgrade_.md
 toc:          false
 navigation:   false

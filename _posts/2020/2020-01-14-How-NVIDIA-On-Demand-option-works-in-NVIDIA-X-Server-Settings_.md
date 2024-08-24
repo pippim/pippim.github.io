@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "66,156 "
 accepted:     Accepted
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-14-How-NVIDIA-On-Demand-option-works-in-NVIDIA-X-Server-Settings_.md
 toc:          false
 navigation:   false

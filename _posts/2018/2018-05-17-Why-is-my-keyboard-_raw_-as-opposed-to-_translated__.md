@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "411 "
 accepted:     Accepted
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Why-is-my-keyboard-_raw_-as-opposed-to-_translated__.md
 toc:          false
 navigation:   false

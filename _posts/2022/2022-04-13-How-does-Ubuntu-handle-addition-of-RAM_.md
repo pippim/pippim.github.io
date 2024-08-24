@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "6,926 "
 accepted:     Accepted
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-04-13-How-does-Ubuntu-handle-addition-of-RAM_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,164 "
 accepted:     Accepted
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-03-Can_t-see-internal-drive-when-using-Ubuntu_s-LiveUSB.md
 toc:          false
 navigation:   false

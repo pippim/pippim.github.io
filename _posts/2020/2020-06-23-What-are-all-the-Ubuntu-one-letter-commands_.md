@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "5,370 "
 accepted:     Accepted
-uploaded:     2024-08-18 16:33:59
+uploaded:     2024-08-24 14:41:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-23-What-are-all-the-Ubuntu-one-letter-commands_.md
 toc:          false
 navigation:   false
