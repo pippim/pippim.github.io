@@ -412,7 +412,7 @@ prompt message appears and, jobs are killed if you respond `Yes`.
 options for Volume Loudness Normalization. The options are *Pulse Audio*,
 *Analyze Maximum Volume*, *Analyze 'loudnorm' Filter*,
 *Update 'loudnorm' Filter*, *Analyze New Maximum Volume*,
-and *Create New Volume Playlist*
+and *Create New Volume Playlist*.
 - ***Repair Last Access*** - Repairs the Last Access Time for music
 song files. There are some applications that scan music files and reset
 the time to the current time.
@@ -542,6 +542,620 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 - Tooltips gradually fade in, remain a short period, then gradually 
 fade out
 - The *Help* button is clicked and results appear
+
+
+---
+
+## *Debug Information*
+
+### Sample *Debug Information*
+{:.no_toc}
+
+``` shell
+  ######################################################
+ //////////////                            \\\\\\\\\\\\\\
+<<<<<<<<<<<<<<    mserve - Music Server     >>>>>>>>>>>>>>
+ \\\\\\\\\\\\\\                            //////////////
+  ######################################################
+                    Started: 2:15 PM
+FUSE library version: 2.9.4
+using FUSE kernel interface version 7.19
+
+global_variables.py (g) - Machine Information
+==========================================================================================
+
+g.OS_PLATFORM     : Linux-4.14.216-0414216-generic-x86_64-with-Ubuntu-16.04-xenial
+g.OS_NAME         : Linux
+g.OS_VERSION      : 4.14.216-0414216-generic
+g.OS_RELEASE      : #202101171339 SMP Sun Jan 17 13:56:04 UTC 2021
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.7 LTS
+Release:	16.04
+Codename:	xenial
+xrandr program version       1.5.1
+Server reports RandR version 1.5
+g.USER            : rick
+g.USER_ID         : 1000
+g.HOME            : /home/rick
+g.USER_CONFIG_DIR : /home/rick/.config/mserve
+g.USER_DATA_DIR   : /home/rick/.local/share/mserve
+g.MSERVE_DIR      : /home/rick/.local/share/mserve/
+g.PROGRAM_DIR     : /home/rick/python/
+g.TEMP_DIR        : /run/user/1000/
+Python Version    : 2.7.12 (default, Nov 20 2023, 15:01:59)  [GCC 5.4.0 20160609]
+Sqlite3 Version   : 3.11.0
+TK Version        : 8.6
+Pillow Version    : 3.1.2
+PIL Version       : 1.1.7
+PulseAudio Version: pulseaudio 8.0
+xdotool Version   : xdotool version 3.20150503.1
+wmctrl Version    : 1.07
+pqiv Version      : 2.2
+kid3 Version      : kid3 3.3.1
+nautilus Version  : GNOME nautilus 3.14.3
+nmap Version      : Nmap 7.01 ( https://nmap.org )
+SSH Version       : OpenSSH_7.2p2 Ubuntu-4ubuntu2.10+esm5, OpenSSL 1.0.2g  1 Mar 2016
+sshfs Version     : SSHFS version 2.5
+fusermount Version: fusermount version: 2.9.4
+wakeonlan Version : /usr/bin/wakeonlan version 0.41 calling Getopt::Std::getopts ...
+ffmpeg Version    : 7.0.1-static https://johnvansickle.com/ffmpeg/ 
+ffplay Version    : 2.8.17-0ubuntu0.1+esm7
+ffprobe Version   : 7.0.1-static https://johnvansickle.com/ffmpeg/ 
+Process ID (PID)  : 25352
+Parent's PID      : 28483
+
+mon = monitor.Monitors()
+==========================================================================================
+
+mon.screen_width x mon.screen_height: 5790 x 3240 
+
+Number of monitors - mon.monitor_count: 3
+for m in mon.monitors_list: -- self.debug_detail(' ', m):
+  Monitor(number=0, name='HDMI-0', x=0, y=0, width=1920, height=1080, primary=False)
+  Monitor(number=1, name='DP-1-1', x=1920, y=0, width=3840, height=2160, primary=False)
+  Monitor(number=2, name='eDP-1-1', x=3870, y=2160, width=1920, height=1080, primary=True)
+
+Primary Monitor - mon.primary_monitor:
+   Monitor(number=2, name='eDP-1-1', x=3870, y=2160, width=1920, height=1080, primary=True)
+
+Active Window Tuple -  active_win = mon.get_active_window():
+  active_win.number   : 75497552
+  active_win. WxH+X+Y : 1461 x 853 + 2755 x 60
+  active_win.name     : SD Card SanDisk 128GB   🎵 3,919 songs. 1,441 selected.   �
+
+Active Monitor - mon.get_active_monitor():
+   Monitor(number=1, name='DP-1-1', x=1920, y=0, width=3840, height=2160, primary=False)
+
+sys.getfilesystemencoding() UTF-8
+
+Open Windows (Wnck) - mon.get_all_windows():
+==========================================================================================
+
+Window(number=46137346L, name='conky (alien)', x=5350, y=24, width=410, height=1392)
+Window(number=65011714L, name='XdndCollectionWindowImp', x=-5890, y=-3340, width=5790, height=3240)
+Window(number=65011721L, name='unity-launcher', x=-165, y=-1156, width=65, height=1056)
+Window(number=65011742L, name='unity-panel', x=0, y=0, width=1920, height=24)
+Window(number=65011749L, name='unity-panel', x=1920, y=0, width=3840, height=24)
+Window(number=65011756L, name='unity-panel', x=3870, y=2160, width=1920, height=24)
+Window(number=65011763L, name='unity-dash', x=-1343, y=-780, width=1243, height=680)
+Window(number=65011764L, name='Hud', x=-420, y=-300, width=320, height=200)
+Window(number=62914570L, name='Desktop', x=0, y=0, width=5790, height=3240)
+Window(number=62918548L, name='L004', x=3870, y=2195, width=1369, height=628)
+Window(number=81789286L, name='mserve', x=2257, y=363, width=1300, height=902)
+Window(number=83886131L, name='Multiple Monitors Manager - mmm', x=2059, y=240, width=1447, height=838)
+Window(number=10485837L, name='mserve \xe2\x80\x93 ~/python/mserve.py', x=2718, y=622, width=1518, height=1523)
+Window(number=81792024L, name='Python1', x=2259, y=1269, width=1300, height=874)
+Window(number=81792281L, name='Python3', x=2061, y=42, width=3274, height=366)
+Window(number=10490282L, name='website \xe2\x80\x93 mserve.md', x=3938, y=823, width=1377, height=1327)
+Window(number=100663307L, name='Mozilla Firefox', x=4015, y=2253, width=1775, height=987)
+Window(number=100663338L, name='Kennedy teams up with Trump. Elensky talks down to Modi. Donbass collapsing, Ukraine stuck in Kursk - YouTube \xe2\x80\x94 Mozilla Firefox', x=0, y=0, width=1920, height=1080)
+Window(number=63181825L, name='rick Properties', x=5266, y=2372, width=516, height=476)
+Window(number=75497552L, name='SD Card SanDisk 128GB\xe2\x80\x83\xe2\x80\x83\xe2\x80\x83\xf0\x9f\x8e\xb5 3,919 songs.\xe2\x80\x831,441 selected.\xe2\x80\x83\xe2\x80\x83\xe2\x80\x83\xf0\x9f\x96\xb8 33.3 GB used.\xe2\x80\x8312.8 GB selected.\xe2\x80\x83\xe2\x80\x83\xe2\x80\x83\xe2\x98\xb0 L004 - Default Favorites - mserve', x=2755, y=60, width=1461, height=853)
+Window(number=75501105L, name='Playing Favorites - mserve', x=3605, y=358, width=1704, height=865)
+
+Saved Geometry for Windows - sql.Config.print_windows():
+==========================================================================================
+
+'Action':calculator	Window Name:Big Number Calculator Window
+	'SourceMaster':	460x248+5273+2206
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':encoding	Window Name:CD Encoding (Ripping) Window
+	'SourceMaster':	1713x738+2257+278
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':history	Window Name:Lyrics Scraping History Window (Future Use)
+	'SourceMaster':	2128x697+2060+1187
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':lcs_top	Window Name:DELETE this SQL record
+	'SourceMaster':	1268x730+3354+189
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':library	Window Name:Music Library Window (Main mserve Window)
+	'SourceMaster':	1461x785+2755+60
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':location	Window Name:DELETE this SQL record
+	'SourceMaster':	1113x756+3087+182
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':locations	Window Name:Locations Maintenance Window
+	'SourceMaster':	1239x768+4005+77
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':playlist	Window Name:Music Playing Window
+	'SourceMaster':	1704x837+3605+358
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':playlists	Window Name:Playlists Maintenance Window
+	'SourceMaster':	1413x658+2908+199
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':pls_top	Window Name:DELETE this SQL record
+	'SourceMaster':	1183x493+3144+53
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':results	Window Name:DELETE this SQL record
+	'SourceMaster':	2086x720+2180+1246
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':sql_history	Window Name:View SQL History Table Window
+	'SourceMaster':	1868x866+3050+217
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':sql_location	Window Name:View SQL Locations Table Window
+	'SourceMaster':	1920x847+3298+337
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+'Action':sql_music	Window Name:View SQL Music Table Window
+	'SourceMaster':	1871x830+2815+143
+	'SourceDetail':	saved on exit, loaded on starting
+	'Comments':	Used in conjunction with 'screen' History Record Id #
+
+TOOLTIPS - tt.line_dump()
+==========================================================================================
+
+Tooltips Line Dump - 26 Tip Dictionaries
+Tip#  Suf.  Name - Text
+====  ====  ==============================================================================
+#  1  9040  button  -  ▼ ▲ ▼ ▲  Expanding/Collapsing Information Centre  ▲ ▼ ▲ ▼ 
+            .140097342574176.140097341968464.140097341968824.140097341969040
+#  2  3120  Cancel  -  Cancel changes. Playlist remains unchanged.
+            .140097342574176.140097341968464.140097340302256.140097340303120
+#  3  2800  Apply  -  Temporarily update changes to playlist in memory.
+            .140097342574176.140097341968464.140097340302256.140097340332800
+#  4  6448  ▶  Play  -  Lift music queue window up.
+            .140097342574176.140097341968464.140097340334024.140097340346448
+#  5  7744  🗘 Refresh library  -  Scan disk for songs added and removed.
+            .140097342574176.140097341968464.140097340334024.140097340347744
+#  6  8968  🖸  Rip CD  -  Encode songs from Audio CD to music files.
+            .140097342574176.140097341968464.140097340334024.140097340348968
+#  7  0120  ⧉ Help  -  Open new window in default web browser for
+            .140097342574176.140097341968464.140097340334024.140097340350120
+#  8  0264  ✘ Close  -  Close mserve and any windows mserve opened.
+            .140097342574176.140097341968464.140097340334024.140097340470264
+#  9  9112  splash  -  Playlist: L004 - Default Favorites
+            .140097342574176.140097341968464.140097341969904.140097341969112
+# 10  7784  label  -  Speaker with diagonal line.
+            .140097342017192.140097342474360.140097338815480.140097338817784
+# 11  5192  label  -  Speaker with three waves.
+            .140097342017192.140097342474360.140097338815480.140097338815192
+# 12  5696  label  -  Volume slider active when music plays:
+            .140097342017192.140097342474360.140097338815480.140097338815696
+# 13  9096  canvas_button  -  Auto Scrolling lyrics is active.
+            .140097342017192.140097342474360.140097339859528.140097339859672.140097339859096
+# 14  9600  canvas_button  -  Lyrics line is highlighted using time index.
+            .140097342017192.140097342474360.140097339859528.140097339859672.140097339859600
+# 15  4488  canvas_button  -  Manual lyrics score scrolling is active.
+            .140097342017192.140097342474360.140097339859528.140097339859672.140097339864488
+# 16  5712  canvas_button  -  Manual lyrics score scrolling is active.
+            .140097342017192.140097342474360.140097339859528.140097339859672.140097339865712
+# 17  5352  label  -  x % time:
+            .140097342017192.140097342474360.140097339859528.140097339859672.140097339865352
+# 18  8656  canvas_button  -  Left-clicking hamburger icon displays a 
+            .140097342017192.140097342474360.140097339859528.140097339859672.140097339868656
+# 19  1176  ✘ Close  -  Close playlist but mserve stays open.
+            .140097342017192.140097339868944.140097339871176
+# 20  2496   🔀 Shuffle  -  Shuffle songs randomly.
+            .140097342017192.140097339868944.140097340472496
+# 21  5136  ⏮  Previous  -  Play previous song.
+            .140097342017192.140097339868944.140097340305136
+# 22  8128  ⏪  -10 sec  -  Rewind song 10 seconds back.
+            .140097342017192.140097339868944.140097340388128
+# 23  9208  ❚❚ Pause  -  Play music and spin artwork.
+            .140097342017192.140097339868944.140097340389208
+# 24  1152  +10 sec  ⏩  -  Fast Forward song 10 seconds ahead.
+            .140097342017192.140097339868944.140097340391152
+# 25  1088  Next  ⏭  -  Play next song in playlist.
+            .140097342017192.140097339868944.140097340441088
+# 26  4824  🖸 Hide Chronology  -  Hide the chronology playlist below
+            .140097342017192.140097339868944.140097339884824
+
+Opened Location
+==========================================================================================
+
+lcs.open_code       : L004
+lcs.open_name       : SD Card SanDisk 128GB
+lcs.open_modify_time: 1693330248.0
+lcs.open_image_path : Sandisk 128GB.png
+lcs.open_mount_point: MountPoint
+lcs.open_topdir     : /media/rick/SANDISK128/Music
+lcs.open_host       : 
+lcs.open_wakecmd    : 
+lcs.open_testcmd    : 
+lcs.open_testrep    : 0
+lcs.open_mountcmd   : 
+lcs.open_touchcmd   : 
+lcs.open_touchmin   : 0
+lcs.open_comments   : Works in phone or laptop with Standard Adapter
+lcs.open_row_id     : 4
+
+Opened Playlist
+==========================================================================================
+
+No Playlist opened
+
+Information Centre - self.info.dict[]
+==========================================================================================
+
+--- KEY ---   --- VALUE ---------------------
+
+[time]      : 1724531842.38
+[source]    : list[VALUES] on lines below.
+  File "./m", line 86, in <module>
+    main()
+
+  File "./m", line 80, in main
+    mserve.main(toplevel=splash, cwd=cwd, parameters=sys.argv)
+
+  File "/home/rick/python/mserve.py", line 23581, in main
+    MusicLocationTree(toplevel, SORTED_LIST)  # Build treeview of songs
+
+  File "/home/rick/python/mserve.py", line 1673, in __init__
+    self.load_last_selections()  # Play songs in favorites or playlists
+
+  File "/home/rick/python/mserve.py", line 8175, in load_last_selections
+    self.play_selected_list()
+
+  File "/home/rick/python/mserve.py", line 8714, in play_selected_list
+    if not self.play_one_song(resume=resume, chron_state=chron_state):
+
+  File "/home/rick/python/mserve.py", line 10174, in play_one_song
+    if not self.play_to_end():  # Play entire song unless next/prev, etc.
+
+  File "/home/rick/python/mserve.py", line 10360, in play_to_end
+    self.refresh_play_top()  # Rotate art, update vu meter after(.033)
+
+  File "/home/rick/python/mserve.py", line 10449, in refresh_play_top
+    self.play_top.update()  # Sept 20 2020 - Need for lib_top too
+
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1022, in update
+    self.tk.call('update')
+
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1540, in __call__
+    return self.func(*args)
+
+  File "/home/rick/python/mserve.py", line 5999, in show_debug
+    self.debug_output()
+
+  File "/home/rick/python/mserve.py", line 6436, in debug_output
+    collapsed=True, ms_font="TkFixedFont")
+
+[type]      : fact
+[severity]  : info
+[action]    : open
+[text]      : 
+Opened Playlist
+==========================================================================================
+
+No Playlist opened
+
+[text_start]: 
+[text_end]  : 
+[patterns]  : []
+[collapsed] : True
+[font]      : TkFixedFont
+[view_time] : 1724531842.38
+
+CURRENT SONG and COMMON VARIABLES
+==========================================================================================
+
+self.ndx   : 52  | Song iid: 1303  | 1-09 Dirty White Boy.m4a
+tree values: [u'2:15:36 PM - 21 Minutes ago', 8, u'\u2116 \u2007\u200753', u'1724530536.0', 7601167, 1, 220, 7601167, 1, 220]
+Artist iid : I08F  | Foreigner  | Album iid: I093  | No End In Sight_ The Very Best Of Foreig
+real_path  : /media/rick/SANDISK128/Music/Foreigner/No End In Sight_ The Very Best Of Foreig/1-09 Dirty White Boy.m4a
+
+self.playlist_paths[0]    : /media/rick/SANDISK128/Music/Boston/Boston_ Greatest Hits/05 Don't Look Back.m4a
+self.playlist_paths[-1]   : /media/rick/SANDISK128/Music/The Police/The Police [Disc 2]/2-14 Tea In The Sahara.m4a
+len(self.playlist_paths)  : 1441  | sys.get size of(self.playlist_paths): 13016
+
+self.saved_selections[0]  : 422  | self.saved_selections[-1]: 3392
+len(self.saved_selections): 1441  | sys.get size of(self.saved_selections): 13016
+
+self.chron_attached[] is empty.
+
+self.fake_paths[0]        : /media/rick/SANDISK128/Music/10cc/The Best of 10cc/01 Life Is A Minestrone.m4a
+self.fake_paths[-1]       : /media/rick/SANDISK128/Music/White Zombie/Best Of 90s Rock Volume 2 - 20th Century/12 More Human Than Human.m4a
+len(self.fake_paths)      : 3925  | sys.get size of(self.fake_paths): 33936
+
+self.real_paths[0]        : /media/rick/SANDISK128/Music/10cc/The Best of 10cc/01 Life Is A Minestrone.m4a
+self.real_paths[-1]       : /media/rick/SANDISK128/Music/White Zombie/Best Of 90s Rock Volume 2 - 20th Century/12 More Human Than Human.m4a
+len(self.real_paths)      : 3925  | sys.get size of(self.real_paths): 33936
+
+len(SORTED_LIST) Music Location Songs: 3925
+len(self.lib_tree.tag_has("Artist")) : 163
+len(self.lib_tree.tag_has("Album"))  : 292
+len(self.lib_tree.tag_has("Title"))  : 3919
+
+self.Xxx_ctl = FileControl() instances opened
+==========================================================================================
+
+Last file accessed - 'ffprobe' (self.play_ctl.metadata):
+--------------------------------------------------------
+
+INPUT #0 : mov,mp4,m4a,3gp,3g2,mj2, from '/media/rick/SANDISK128/Music/Foreigner/No End In Sight_ The Very Best Of Foreig/1-09 Dirty White Boy.m4a':
+MAJOR_BRAND : M4A
+MINOR_VERSION : 0
+COMPATIBLE_BRANDS : M4A mp42isom
+CREATION_TIME : 2013-04-17T13:05:41.000000Z
+TITLE : Dirty White Boy
+ARTIST : Foreigner
+COMPOSER : De La Rock
+ALBUM : No End In Sight: The Very Best Of Foreigner [Disc 1]
+GENRE : Rock
+TRACK : 9/16
+DISC : 1/2
+DATE : 1979
+COMPILATION : 0
+GAPLESS_PLAYBACK : 0
+ENCODER : iTunes 11.0.2.26
+ITUNSMPB : 00000000 00000840 00000100 0000000000944AC0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+ENCODING PARAMS : vers
+ITUNNORM : 00001E4F 00002119 0000BE96 0000C032 0001CE0A 00032E83 00007E88 00007E88 000184EF 000186BF
+ITUNES_CDDB_IDS : 16++
+UFIDHTTP : //www.cddb.com/id3/taginfo1.html: 3CD3M103Q162081439U268A8220EC3A6DCAC7C9CEC67F47D21A87CP4
+DURATION : 00:03:40.43, start: 0.047889, bitrate: 275 kb/s
+AUDIO_RATE : 44100
+BIT_RATE : (default)
+STREAM #0:0[0X1](UND) : Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 270 kb/s (default)
+CREATION_TIME(1) : 2013-04-17T13:05:41.000000Z
+VENDOR_ID : [0][0][0][0]
+STREAM #0:1[0X0] : Video: png, rgba(pc, gbr/unknown/unknown), 225x225, 90k tbr, 90k tbn (attached pic)
+
+GLOBAL VARIABLES
+==========================================================================================
+
+START_DIR  : /media/rick/SANDISK128/Music/  | START_DIR.count(os.sep): 5
+PRUNED_DIR : /media/rick/SANDISK128/Music/  | PRUNED_COUNT: 0
+TV_APP_NAME: Firefox                      | TV_MONITOR: 0
+TV_VOLUME  : 87                           | TV_MOVE_WINDOW: True
+TV_BREAK1  : 90                           | TV_WINDOW_ANCHOR: center
+TV_BREAK2  : 1080                         | TV_MOVE_WITH_COMPIZ: True
+ENCODE_DEV : True                       
+REW_FF_SECS: 10                           | REW_CUTOFF: 12
+self.get_pending_cnt_total()              : 0
+pending_apply() debug print flag DPRINT_ON: False
+global_variables.py g.DEBUG_LEVEL         : 0
+global_variables.py g.MUSIC_MIN_SIZE      : 100000
+global_variables.py g.MUSIC_FILE_TYPES    : ['.aiff', '.caf', '.flac', '.mp3'] 
+	 ['.mp4', '.m4a', '.oga', '.ogg', '.PCM', '.wav']
+global_variables.py g.MSERVE_VERSION      : 3.5.0
+
+SQL - Sqlite3 Information
+==========================================================================================
+
+SQL Sqlite3 Tables and Indices
+--------------------------------------------------------------------------- 
+
+#: 2  | Table  | Name: Music
+	CREATE TABLE Music
+		Id INTEGER PRIMARY KEY
+		OsFileName TEXT
+		OsAccessTime FLOAT
+		OsModifyTime FLOAT
+		OsChangeTime FLOAT
+		OsFileSize INT
+		ffMajor TEXT
+		ffMinor TEXT
+		ffCompatible TEXT
+		Title TEXT
+		Artist TEXT
+		Album TEXT
+		Compilation TEXT
+		AlbumArtist TEXT
+		AlbumDate TEXT
+		FirstDate TEXT
+		CreationTime TEXT
+		DiscNumber TEXT
+		TrackNumber TEXT
+		Rating TEXT
+		Genre TEXT
+		Composer TEXT
+		Comment TEXT
+		Hyperlink TEXT
+		Duration TEXT
+		Seconds FLOAT
+		GaplessPlayback TEXT
+		PlayCount INT
+		LastPlayTime FLOAT
+		LyricsScore BLOB
+		LyricsTimeIndex TEXT
+
+#: 3  | Index  | Name: OsFileNameIndex
+	CREATE UNIQUE INDEX OsFileNameIndex ON Music(OsFileName)
+
+#: 4  | Table  | Name: History
+	CREATE TABLE History
+		Id INTEGER PRIMARY KEY
+		Time FLOAT
+		MusicId INTEGER
+		User TEXT
+		Type TEXT
+		Action TEXT
+		SourceMaster TEXT
+		SourceDetail TEXT
+		Target TEXT
+		Size INT
+		Count INT
+		Seconds FLOAT
+		Comments TEXT
+		Timestamp FLOAT
+
+#: 6  | Index  | Name: MusicIdIndex
+	CREATE INDEX MusicIdIndex ON History(MusicId)
+
+#: 7  | Index  | Name: TimeIndex
+	CREATE INDEX TimeIndex ON History(Timestamp)
+
+#: 9  | Index  | Name: TypeActionIndex
+	CREATE INDEX TypeActionIndex ON History(Type, Action)
+
+#: 10  | Table  | Name: Location
+	CREATE TABLE Location
+		Id INTEGER PRIMARY KEY
+		Code TEXT
+		Name TEXT
+		ModifyTime FLOAT
+		ImagePath TEXT
+		MountPoint TEXT
+		TopDir TEXT
+		HostName TEXT
+		HostWakeupCmd TEXT
+		HostTestCmd TEXT
+		HostTestRepeat INT
+		HostMountCmd TEXT
+		HostTouchCmd TEXT
+		HostTouchMinutes INT
+		Comments TEXT
+
+#: 11  | Index  | Name: LocationCodeIndex
+	CREATE UNIQUE INDEX LocationCodeIndex ON Location(Code)
+
+
+SQL Blacklisted songs
+--------------------------------------------------- 
+
+0 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-01 Hooked on a Feeling.m4a
+1 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-02 Go All the Way.m4a
+2 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-03 Spirit in the Sky.m4a
+3 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-04 Moonage Daydream.m4a
+4 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-05 Fooled Around and Fell in Love.m4a
+5 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-06 I’m Not in Love.m4a
+6 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-07 I Want You Back.m4a
+7 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-08 Come and Get Your Love.m4a
+8 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-09 Cherry Bomb.m4a
+9 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-10 Escape (The Piña Colada Song).m4a
+10 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-11 O‐o‐h Child.m4a
+11 : Compilations/Guardians of the Galaxy, Awesome Mix, Vol. 1/1-12 Ain’t No Mountain High Enough.m4a
+12 : Compilations/Guardians of the Galaxy_ Deluxe [Disc #1 of 2]/1-12 Ain’t No Mountain High Enough.m4a
+13 : Compilations/Guardians of the Galaxy, Vol 1_ Awesome Mix, Vol. 1/1-12 Ain’t No Mountain High Enough.m4a
+14 : April Wine/The Hits/01 - Say Hello.wav
+15 : Nothing Has Changed [Disc 1]/01 Track 1.wav
+
+SQL Whitelist substitutes
+--------------------------------------------------- 
+
+0 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-01 Hooked on a Feeling.m4a
+1 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-02 Go All the Way.m4a
+2 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-03 Spirit in the Sky.m4a
+3 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-04 Moonage Daydream.m4a
+4 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-05 Fooled Around and Fell in Love.m4a
+5 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-06 I’m Not in Love.m4a
+6 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-07 I Want You Back.m4a
+7 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-08 Come and Get Your Love.m4a
+8 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-09 Cherry Bomb.m4a
+9 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-10 Escape (The Piña Colada Song).m4a
+10 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-11 O‐o‐h Child.m4a
+11 : Compilations/Guardians of the Galaxy, Vol. 1_ Awesome Mix, Vol. 1/1-12 Ain't No Mountain High Enough.m4a
+12 : None
+13 : None
+14 : April Wine/The Hits/01 Say Hello.wav
+15 : None
+
+SQL Whitelist reasons
+--------------------------------------------------- 
+
+0 : ('rename', True, 3961)
+1 : ('rename', True, 3962)
+2 : ('rename', True, 3963)
+3 : ('rename', True, 3964)
+4 : ('rename', True, 3965)
+5 : ('rename', True, 3966)
+6 : ('rename', True, 3967)
+7 : ('rename', True, 3968)
+8 : ('rename', True, 3969)
+9 : ('rename', True, 3970)
+10 : ('rename', True, 3971)
+11 : ('rename', True, 3972)
+12 : ('rename', True, 3973)
+13 : ('rename', True, 3973)
+14 : ('rename', True, 3844)
+15 : ('partial', True, 0)
+
+SQL Table Sizes
+--------------------------------------------------------------------------- 
+
+SQL Location Table 	Page Count:         3 	Size of pages:        3,072 
+			Row Count:          6 	Last Row Number:          6 
+
+SQL Music Table 	Page Count:     4,760 	Size of pages:    4,874,240 
+			Row Count:      3,972 	Last Row Number:      3,972 
+
+SQL History Table 	Page Count:     6,446 	Size of pages:    6,600,704 
+			Row Count:     29,259 	Last Row Number:     30,901 
+
+    History Rows:  |  Type='file'    |  Action='init'    |  count:    3,961
+    History Rows:  |  Type='file'    |  Action='edit'    |  count:       80
+    History Rows:  |  Type='meta'    |  Action='init'    |  count:    3,825
+    History Rows:  |  Type='meta'    |  Action='edit'    |  count:   10,422
+    History Rows:  |  Type='scrape'  |  Action='parm'    |  count:      298
+    History Rows:  |  Type='lyrics'  |  Action='scrape'  |  count:    1,549
+    History Rows:  |  Type='volume'  |  A='detect_old'   |  count:    3,950
+    History Rows:  |  Type='volume'  |  A='loudnorm_1'   |  count:      767
+    History Rows:  |  Type='volume'  |  A='loudnorm_2'   |  count:      767
+    History Rows:  |  Type='volume'  |  A='detect_new'   |  count:      767
+    History Rows:  |  Type='rename'  |  Action='Artist'  |  count:        0
+    History Rows:  |  Type='rename'  |  Action='Album'   |  count:       16
+    History Rows:  |  Type='rename'  |  Action='Title'   |  count:        1
+    History Rows:  |  Type='rename'  |  Action='Other'   |  count:       13
+    History Rows:  |  Type='delete'  |  Action='Artist'  |  count:        0
+    History Rows:  |  Type='delete'  |  Action='Album'   |  count:        0
+    History Rows:  |  Type='delete'  |  Action='Title'   |  count:       27
+    History Rows:  |  Type='delete'  |  Action='Other'   |  count:        0
+
+Pulse Audio - vu_pulse_audio.py PulseControl()
+==========================================================================================
+
+Pulse Audio - sink_input_list (sound sources)
+--------------------------------------------------- 
+
+sink: index=796L, mute=0, name=u'Simple DirectMedia Layer' ffplay
+sink: index=798L, mute=0, name=u'Kennedy teams up with Trump. Elensky talks down to Modi. Donbass collapsing, Ukraine stuck in Kursk - YouTube' Firefox
+
+Pulse Audio - sink_list (sound cards)
+--------------------------------------------------- 
+
+sink: description=u'GM204 High Definition Audio Controller Digital Stereo (HDMI)', index=0L, mute=0, name=u'alsa_output.pci-0000_01_00.1.hdmi-stereo', channels=2, volumes=[100% 100%]
+sink: description=u'Built-in Audio Analog Stereo', index=1L, mute=1, name=u'alsa_output.pci-0000_00_1f.3.analog-stereo', channels=2, volumes=[100% 100%]
+
+Pulse Audio - source_list (recording)
+--------------------------------------------------- 
+
+sink: description=u'Monitor of GM204 High Definition Audio Controller Digital Stereo (HDMI)', index=0L, mute=0, name=u'alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor', channels=2, volumes=[100% 100%]
+sink: description=u'Monitor of Built-in Audio Analog Stereo', index=1L, mute=0, name=u'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor', channels=2, volumes=[100% 100%]
+sink: description=u'Built-in Audio Analog Stereo', index=2L, mute=0, name=u'alsa_input.pci-0000_00_1f.3.analog-stereo', channels=2, volumes=[100% 100%]
+
+Pulse Audio - card_list.profile_list
+--------------------------------------------------- 
+
+[<PulseCardProfileInfo at 7f6aeb5d3290 - available=1, description=u'Digital Stereo (HDMI) Output', n_sinks=1L, n_sources=0L, name=u'output:hdmi-stereo', priority=5400L>, <PulseCardProfileInfo at 7f6aeb5d3c50 - available=1, description=u'Digital Surround 5.1 (HDMI) Output', n_sinks=1L, n_sources=0L, name=u'output:hdmi-surround', priority=300L>, <PulseCardProfileInfo at 7f6aeb5d35d0 - available=1, description=u'Off', n_sinks=0L, n_sources=0L, name=u'off', priority=0L>]
+
+Pulse Audio - pulse.server_info().default_sink_name
+--------------------------------------------------- 
+
+alsa_output.pci-0000_00_1f.3.analog-stereo
+```
 
 ---
 

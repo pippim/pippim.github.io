@@ -42,7 +42,7 @@ This video shows:
 
 1. What the GitHub Pages repo looks likes before running `refresh.sh` bash script
 2. Running `refresh.sh` script in terminal window
-3. GitHub Pages is rebuilt in less than a minute
+3. GitHub Pages is rebuilt in a few minutes
 4. View a converted Stack Exchange Post
 5. Look at the original post
 6. Return to GitHub Pages and notice the table of Contents and Navigation Bars that have been inserted because post qualifies as a long answer.
@@ -1310,7 +1310,7 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 
 These global constants are defined at the top of `stack-to-blog.py`:
 
-```python
+``` python
 OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
 OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 ```
@@ -1984,8 +1984,6 @@ print('total_header_levels:       ', total_header_levels)
 ```
 
 ## SAP Warehouse Material Dashboard
-
-Mock up on website: https://www.pippim.com/programs/stack.html#summary-totals
 
 A dashboard for Warehouse Inventory Items (Material)
 
