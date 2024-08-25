@@ -568,12 +568,6 @@ g.OS_PLATFORM     : Linux-4.14.216-0414216-generic-x86_64-with-Ubuntu-16.04-xeni
 g.OS_NAME         : Linux
 g.OS_VERSION      : 4.14.216-0414216-generic
 g.OS_RELEASE      : #202101171339 SMP Sun Jan 17 13:56:04 UTC 2021
-Distributor ID:	Ubuntu
-Description:	Ubuntu 16.04.7 LTS
-Release:	16.04
-Codename:	xenial
-xrandr program version       1.5.1
-Server reports RandR version 1.5
 g.USER            : rick
 g.USER_ID         : 1000
 g.HOME            : /home/rick
@@ -582,12 +576,20 @@ g.USER_DATA_DIR   : /home/rick/.local/share/mserve
 g.MSERVE_DIR      : /home/rick/.local/share/mserve/
 g.PROGRAM_DIR     : /home/rick/python/
 g.TEMP_DIR        : /run/user/1000/
+g.MSERVE_VERSION  : 3.5.0
+SQL PRAGMA Version: 3 
+
 Python Version    : 2.7.12 (default, Nov 20 2023, 15:01:59)  [GCC 5.4.0 20160609]
 Sqlite3 Version   : 3.11.0
 TK Version        : 8.6
 Pillow Version    : 3.1.2
 PIL Version       : 1.1.7
+
 PulseAudio Version: pulseaudio 8.0
+ffmpeg Version    : 7.0.1-static https://johnvansickle.com/ffmpeg/ 
+ffplay Version    : 2.8.17-0ubuntu0.1+esm7
+ffprobe Version   : 7.0.1-static https://johnvansickle.com/ffmpeg/ 
+
 xdotool Version   : xdotool version 3.20150503.1
 wmctrl Version    : 1.07
 pqiv Version      : 2.2
@@ -598,11 +600,13 @@ SSH Version       : OpenSSH_7.2p2 Ubuntu-4ubuntu2.10+esm5, OpenSSL 1.0.2g  1 Mar
 sshfs Version     : SSHFS version 2.5
 fusermount Version: fusermount version: 2.9.4
 wakeonlan Version : /usr/bin/wakeonlan version 0.41 calling Getopt::Std::getopts ...
-ffmpeg Version    : 7.0.1-static https://johnvansickle.com/ffmpeg/ 
-ffplay Version    : 2.8.17-0ubuntu0.1+esm7
-ffprobe Version   : 7.0.1-static https://johnvansickle.com/ffmpeg/ 
-Process ID (PID)  : 25352
-Parent's PID      : 28483
+
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.7 LTS
+Release:	16.04
+Codename:	xenial
+xrandr program version       1.5.1
+Server reports RandR version 1.5
 
 mon = monitor.Monitors()
 ==========================================================================================
@@ -1156,6 +1160,26 @@ Pulse Audio - pulse.server_info().default_sink_name
 
 alsa_output.pci-0000_00_1f.3.analog-stereo
 ```
+
+
+---
+
+## *Loudness Normalization*
+
+Five steps are used for fastest performance, best results and
+granular control:
+
+- Analyze Maximum Volume
+- Analyze 'loudnorm' Filter
+- Analyze 'loudnorm' Filter
+- Analyze New Maximum Volume
+- Create New Volume Playlist
+
+### Sample *Loudness Normalization*
+{:.no_toc}
+
+... much, much more to come ...
+
 
 ---
 
