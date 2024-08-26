@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,251 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-05-Keyboard-repeat_delay-is-reset-occasionally-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

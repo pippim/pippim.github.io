@@ -10,9 +10,9 @@ created_date: 2018-05-08 02:27:12
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "368,535 "
+views:        "368,823 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-What-system-monitoring-tools-are-available_.md
 toc:          false
 navigation:   false

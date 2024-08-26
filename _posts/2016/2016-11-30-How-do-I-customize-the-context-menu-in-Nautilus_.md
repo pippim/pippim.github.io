@@ -10,9 +10,9 @@ created_date: 2016-11-30 02:12:06
 edit_date:    2021-06-11 11:07:00
 votes:        "7 "
 favorites:    
-views:        "57,133 "
+views:        "57,209 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-30-How-do-I-customize-the-context-menu-in-Nautilus_.md
 toc:          false
 navigation:   false

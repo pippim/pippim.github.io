@@ -10,9 +10,9 @@ created_date: 2021-01-07 01:10:42
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "10,356 "
+views:        "10,365 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-07-Remember-what-files-are-opened-in-a-session-of-gedit.md
 toc:          false
 navigation:   false

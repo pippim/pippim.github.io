@@ -10,9 +10,9 @@ created_date: 2018-08-29 01:17:00
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "3,069 "
+views:        "3,071 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-29-Power-Management-governor-changes-alone-from-powersave-to-performance.md
 toc:          false
 navigation:   false

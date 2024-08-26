@@ -8,11 +8,11 @@ type:         Answer
 tags:         kernel
 created_date: 2016-10-29 14:51:48
 edit_date:    2022-01-05 17:20:13
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "42,318 "
+views:        "42,404 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-29-What-are-Kernel-Version-number-components-_w.x.yy-zzz_-called_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "636 "
 accepted:     
-uploaded:     2024-08-24 14:41:42
+uploaded:     2024-08-26 05:22:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-16-Is-there-any-way-to-make-brightness-work-on-a-HP-ENVY-15-dr0350nd_.md
 toc:          false
 navigation:   false
