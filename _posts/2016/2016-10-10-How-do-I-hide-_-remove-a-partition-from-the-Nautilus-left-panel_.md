@@ -8,11 +8,11 @@ type:         Answer
 tags:         nautilus udev luks
 created_date: 2016-10-10 00:48:42
 edit_date:    2016-10-14 01:09:17
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "13,676 "
+views:        "13,691 "
 accepted:     
-uploaded:     2024-08-26 05:22:34
+uploaded:     2024-09-01 12:09:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-10-How-do-I-hide-_-remove-a-partition-from-the-Nautilus-left-panel_.md
 toc:          false
 navigation:   false

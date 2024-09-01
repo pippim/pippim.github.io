@@ -8,11 +8,11 @@ type:         Question
 tags:         led connector cables
 created_date: 2019-10-07 23:35:41
 edit_date:    2022-02-15 01:33:30
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "1,566 "
+views:        "1,591 "
 accepted:     
-uploaded:     2024-08-26 05:22:34
+uploaded:     2024-09-01 12:09:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-07-What-are-these-LED-power-supply-plugs-called_.md
 toc:          false
 navigation:   false

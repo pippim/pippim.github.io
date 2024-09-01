@@ -606,21 +606,7 @@ def set_ss_save_blog(r):
         views = 0
     total_views += views    # score is up-votes - down-votes can be negative
 
-    ''' If Accepted turned on save blog. 
-        Accepted answers are getting skipped. These were answered and
-        accepted. They should not be skipped. 
-
-EG: https://askubuntu.com/questions/1024432/
-    password-protect-grub-menu-editing/1024620#1024620
-URL: https://askubuntu.com/q/815191
-URL: https://askubuntu.com/q/845020
-URL: https://askubuntu.com/q/862173
-URL: https://askubuntu.com/q/1020977
-URL: https://askubuntu.com/q/1021116
-URL: https://askubuntu.com/q/1021174
-...
-A list of 50 prints
-    '''
+    ''' If Accepted turned on save blog. '''
     if r[TYPE] == "Answer" and r[ACCEPTED] == 'Accepted':
         accepted_count += 1
         if ACCEPTED_QUALIFIER:

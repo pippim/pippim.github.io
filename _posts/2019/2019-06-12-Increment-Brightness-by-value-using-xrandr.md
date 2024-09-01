@@ -8,11 +8,11 @@ type:         Answer
 tags:         display laptop brightness xrandr alienware
 created_date: 2019-06-12 00:00:39
 edit_date:    2021-01-04 23:56:25
-votes:        "13 "
+votes:        "14 "
 favorites:    
-views:        "11,304 "
-accepted:     
-uploaded:     2024-08-26 05:22:34
+views:        "11,329 "
+accepted:     Accepted
+uploaded:     2024-09-01 12:09:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Increment-Brightness-by-value-using-xrandr.md
 toc:          false
 navigation:   false

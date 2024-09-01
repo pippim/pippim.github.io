@@ -10,9 +10,9 @@ created_date: 2019-10-17 03:33:05
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "65,816 "
+views:        "65,832 "
 accepted:     
-uploaded:     2024-08-26 05:22:34
+uploaded:     2024-09-01 12:09:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-17-Intel-wifi-Support-for-AX200-_Cyclone-Peak_.md
 toc:          false
 navigation:   false

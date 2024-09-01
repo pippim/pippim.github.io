@@ -10,9 +10,9 @@ created_date: 2016-12-19 05:20:10
 edit_date:    2016-12-22 22:23:27
 votes:        "1 "
 favorites:    
-views:        "2,773 "
+views:        "2,776 "
 accepted:     Accepted
-uploaded:     2024-08-26 05:22:34
+uploaded:     2024-09-01 12:09:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-19-Crontab-not-working-@reboot-with-macchanger.md
 toc:          false
 navigation:   false
