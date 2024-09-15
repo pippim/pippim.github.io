@@ -10,9 +10,9 @@ created_date: 2019-11-07 02:37:23
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,216 "
+views:        "1,224 "
 accepted:     
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-What-counts-towards-uptime_.md
 toc:          false
 navigation:   false

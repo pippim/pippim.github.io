@@ -10,9 +10,9 @@ created_date: 2019-10-20 23:18:20
 edit_date:    2019-10-24 10:57:12
 votes:        "1 "
 favorites:    
-views:        "1,984 "
+views:        "1,995 "
 accepted:     Accepted
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-Timezone-changes-do-not-persist.md
 toc:          false
 navigation:   false

@@ -2052,7 +2052,7 @@ def create_blog_filename(r):
 
     sub_dir = make_output_year_dir(r[CREATED])
 
-    # little is just a cute abbreviation for "list title"
+    # "little" is an abbreviation for "list title"
     little = list(r[TITLE])
     for i, lit in enumerate(little):
         if lit == " ":

@@ -10,9 +10,9 @@ created_date: 2019-11-22 00:03:29
 edit_date:    2019-12-12 01:01:10
 votes:        "14 "
 favorites:    
-views:        "15,852 "
+views:        "15,978 "
 accepted:     
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-22-What-is-the-difference-between-_cat-_-filename_-and-_cat-filename__.md
 toc:          false
 navigation:   false

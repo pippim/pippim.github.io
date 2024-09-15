@@ -8,11 +8,11 @@ type:         Answer
 tags:         ssd thinkpad temperature nvme
 created_date: 2020-06-05 17:29:48
 edit_date:    2020-06-12 14:37:07
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "7,993 "
+views:        "8,015 "
 accepted:     
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-How-to-get-the-temperature-using-hddtemp-for-a-Samsung-SSD_NVMe-in-Thinkpad-T480.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-11-12 04:53:19
 edit_date:    2016-11-12 05:37:35
 votes:        "2 "
 favorites:    
-views:        "30,578 "
+views:        "30,583 "
 accepted:     
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Is-there-any-Ubuntu-flavor-that-handles-HiDPI-consistently_.md
 toc:          false
 navigation:   false

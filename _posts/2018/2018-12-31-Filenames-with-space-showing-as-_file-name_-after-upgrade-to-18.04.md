@@ -10,9 +10,9 @@ created_date: 2018-12-31 16:16:37
 edit_date:    2018-12-31 16:28:01
 votes:        "33 "
 favorites:    
-views:        "2,795 "
+views:        "2,798 "
 accepted:     Accepted
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-31-Filenames-with-space-showing-as-_file-name_-after-upgrade-to-18.04.md
 toc:          false
 navigation:   false

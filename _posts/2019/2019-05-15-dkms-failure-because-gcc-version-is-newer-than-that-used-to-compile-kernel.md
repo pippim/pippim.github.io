@@ -10,9 +10,9 @@ created_date: 2019-05-15 10:57:09
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "21,285 "
+views:        "21,322 "
 accepted:     
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-15-dkms-failure-because-gcc-version-is-newer-than-that-used-to-compile-kernel.md
 toc:          false
 navigation:   false

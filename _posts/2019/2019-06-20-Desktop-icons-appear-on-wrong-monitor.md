@@ -8,11 +8,11 @@ type:         Answer
 tags:         multiple-monitors xfce monitor desktop-icons iconic
 created_date: 2019-06-20 01:27:44
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "13,841 "
+views:        "13,874 "
 accepted:     
-uploaded:     2024-09-01 12:09:02
+uploaded:     2024-09-15 11:08:07
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-Desktop-icons-appear-on-wrong-monitor.md
 toc:          false
 navigation:   false
