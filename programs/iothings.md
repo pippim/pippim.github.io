@@ -29,9 +29,9 @@ Press the power button on your computer and then:
 
 - **tvpowered** script wakes up from sleep
 - Sony TV turns on
-- Light behind Sony TV (a.k.a. Primary TV or TV #1)
+- Bias light behind Sony TV (a.k.a. Primary TV or TV #1)
 turns on
-- Light behind TCL TV (a.k.a. Google TV, Secondary TV or TV #2)
+- Bias light behind TCL TV (a.k.a. Google TV, Secondary TV or TV #2)
 turns on
 - TCL / Google TV turns on
 
@@ -39,26 +39,28 @@ Press the power button on Sony TV remote control and then:
 
 - Sony TV will be shut off (which power button does anyway)
 - TCL/Google Android TV will be shut off
-- Light behind the Sony TV will be shut off
-- Light behind the TCL / Google TV will be shut off
+- Bias light behind the Sony TV will be shut off
+- Bias light behind the TCL / Google TV will be shut off
 - Computer will be put to sleep or shutdown
 - **tvpowered** script continues when system wakes up
 
-To power off the electric lights behind the TVs, the script 
-`/etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off`
-is run. See below for details on setting up script.
 
 A variety of independent scripts are provided to make life
 convenient. 
 
 The bash script `light-tog` toggles the wall outlet power
 behind the main TV (Sony). In this case the power controls a
-lamp to provide back lighting which reduces eye strain.
+lamp to provide bias lighting which reduces eye strain.
 
 The bash script `light-tog2` toggles the wall outlet power
 behind the second TV (TCL). In this case the power controls a
-lamp to provide back lighting which reduces eye strain.
+lamp to provide bias lighting which reduces eye strain.
 
+To power off the bias lights behind the TVs, the script 
+`/etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off`
+can be run. See below for details on setting up script.
+Note the same functionality is provided by `tvpowered`
+when the system is turned off with the TV remote.
 There are five additional bash scripts to control a Sony TV screen:
 
 - `pictureoff.sh` Turns off the Sony TV screen but leaves sound on
@@ -182,7 +184,7 @@ Below is the Bash script you can copy to your system:
 # PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020.  Modified June 15, 2023.
+# DATE: June 9, 2020.  Modified January 13, 2024.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -202,26 +204,46 @@ Below is the Bash script you can copy to your system:
 #       in-line code to mainline format.
 
 #       Oct 18 2020: If WiFi disconnected we don't want to suspend.
-
 #       Dec 23 2020: After resume turn off picture with power savings.
-
 #       Dec 31 2020: Fast popping bubble messages when volume changes.
-
 #       Jan 09 2021: Improve performance and reduce system resources.
-
 #       Jan 31 2021: Switch from /tmp to /run/user/1000 (RAM).
-
 #       Mar 13 2023: New IP address 19 after power outage.
-
 #       Mar 26 2023: Change volume partial UTF-8 ticks from 4 to 8.
-
 #       Mar 28 2023: Change call to `pictureoff`
-
 #       Mar 30 2023: Google TV to sleep (TV Remote Power Off).
-
 #       May 28 2023: Turn on TVs and lights behind TVs on resume.
+#       Jun 10 2023: Use nmap to verify TCL/Google TV on-line.
+#       Jan 13 2024: Notes on TCL/Google TV debug options.
 
-#       Jun 10 2023: Use nmap to verify TCL/Google TV on-line
+#       Sep 29 2024: Create TurnGtvOn() and TurnGtvOff()
+#       Embed code - No longer requires light-tog and light-tog2 or
+#       /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
+#       Replace nmap with adb connect using timeout
+
+# TODO: Plan iotc and iotd (Internet of Things Client/Daemon) in Python that
+#       will turn devices on/off in parallel. iotc can communicate with iotd.
+#       iotd runs with sudo powers.
+
+# adb will hang if Google TV is off so use ping to see if TV is on:
+
+# $ time sudo ping 192.168.0.17 -c1 -W1
+# PING 192.168.0.17 (192.168.0.17) 56(84) bytes of data.
+# 64 bytes from 192.168.0.17: icmp_seq=1 ttl=64 time=0.696 ms
+
+# --- 192.168.0.17 ping statistics ---
+# 1 packets transmitted, 1 received, 0% packet loss, time 0ms
+# rtt min/avg/max/mdev = 0.696/0.696/0.696/0.000 ms
+
+# real	0m0.007s
+# user	0m0.000s
+# sys	0m0.006s
+
+# To prevent adb hanging, use linux timeout command:
+
+# $ timeout 0.1 adb connect 192.168.0.17
+# already connected to 192.168.0.17:5555
+
 
 # Sources:
 
@@ -233,11 +255,20 @@ Below is the Bash script you can copy to your system:
 # https://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-posix-sh
 
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
-IP=192.168.0.19     # IP address for Sony TV on LAN
-ADB_IP=192.168.0.17 # IP address for Google TV on LAN for Android Debug Bridge
+STV_IP=192.168.0.19 # IP address for Sony TV on LAN
+GTV_IP=192.168.0.17 # IP address for Google TV on LAN for Android Debug Bridge
+GTV_Online=""       # Google TV is not turned on
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
 # TCL / Goggle TV MAC address for wake on lan. No effect if TV already on.
 GTV_MAC="c0:79:82:41:2f:1f"
+# 2024-09-30 - If problems revoke USB, turn off USB debugging, click build 7 times
+# RSA key fingerprint: a7:ad:1f:82:66:16:15:eb:bc:54:85:56:ce:ad:d4:2b
+# ~/.android/adbkey.pub - holds a lot more complicated key 700+ characters
+
+# Nighttime bias lights
+SLI_IP="192.168.0.15"  # Sony TV bias light
+GLI_IP="192.168.0.20"  # TCL/Google TV bias light
+
 
 # Must have curl package.
 command -v curl >/dev/null 2>&1 || { echo >&2 \
@@ -250,14 +281,15 @@ command -v notify-send >/dev/null 2>&1 || { echo >&2 \
         exit 3; }
 
 # Must have adb (Android Debug Bridge) package
+# TODO: Test when needed and skip code if not installed
 command -v adb >/dev/null 2>&1 || { echo >&2 \
         "'adb' package required but it is not installed.  Aborting."; \
         exit 4; }
 
 # Must have nmap package
-command -v nmap >/dev/null 2>&1 || { echo >&2 \
-        "'nmap' package required but it is not installed.  Aborting."; \
-        exit 5; }
+#command -v nmap >/dev/null 2>&1 || { echo >&2 \
+#        "'nmap' package required but it is not installed.  Aborting."; \
+#        exit 5; }
 
 cURLit () {
 
@@ -278,7 +310,7 @@ cURLit () {
     Result=$(curl -s -H "Content-Type: application/json; charset=UTF-8" \
              -H "X-Auth-PSK: $PWRD" \
              --data @"$TEMP" \
-             http://$IP/sony/"$2")
+             http://$STV_IP/sony/"$2")
     # echo "Result: $Result"    # Remove leading # for debugging
     ReturnState="$?"
     # TO-DO: check $? and if non-zero pop up dialog with $TEMP contents
@@ -287,6 +319,114 @@ cURLit () {
     # Test string
 #curl -s -H "Content-Type: application/json; charset=UTF-8" -H "X-Auth-PSK: 123" --data "{ "method": "getPowerStatus", "id": 50, "params": [], "version": "1.0" }" http://192.168.0.16sony/system
 } # cURLit
+
+TurnGtvOn() {
+
+    # TODO: WORK IN PROGRESS - Just notes as of 2024-09-29
+
+# 1a) No adb (android debugging bridge) connection implies TV is turned off
+#     Takes 10 seconds when no connection
+  
+#     adb connect "192.168.0.17"
+# unable to connect to 192.168.0.17:5555
+
+# 1b) Run `nmap` to test host up
+#     Takes 3 seconds when no connection
+
+#     nmap "192.168.0.17"
+# Starting Nmap 7.01 ( https://nmap.org ) at 2024-09-29 09:45 MDT
+# Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+# Nmap done: 1 IP address (0 hosts up) scanned in 3.03 seconds
+
+
+# 2) Wake up google tv
+
+#    wakeonlan c0:79:82:41:2f:1f
+# Sending magic packet to 255.255.255.255:9 with c0:79:82:41:2f:1f
+
+# 3) Connect adb (android debugging bridge)
+
+#    adb connect "192.168.0.17"
+# already connected to 192.168.0.17:5555
+
+# 4) Run `nmap` to test host up
+#    Takes .11 seconds when there IS a connection
+
+#    nmap "192.168.0.17"
+# Starting Nmap 7.01 ( https://nmap.org ) at 2024-09-28 14:07 MDT
+# Nmap scan report for TCL.LAN (192.168.0.17)
+# Host is up (0.0065s latency).
+# Not shown: 995 closed ports
+# PORT     STATE SERVICE
+# 5555/tcp open  freeciv
+# 8008/tcp open  http
+# 8009/tcp open  ajp13
+# 8443/tcp open  https-alt
+# 9000/tcp open  cslistener
+# Nmap done: 1 IP address (1 host up) scanned in 0.11 seconds
+
+# 5) Check if screen is on - https://stackoverflow.com/a/27406141/6929343
+# If TV is turned off command hangs forever
+
+#    adb shell dumpsys power | grep "Display Power" | cut -d'=' -f2
+# Display Power: state=ON
+
+
+# 6) Send signal to turn TV on
+
+#    adb shell input keyevent 26
+
+# >>>> Now Google TV is successfully turn on
+
+
+# NOTE: adb will hang up when TV is turned off and adb server is still running:
+
+#    adb devices
+# List of devices attached
+# 192.168.0.17:5555	device
+
+#    adb shell dumpsys input_method
+# ^C
+
+#    adb shell dumpsys activity services
+# ^C
+
+#    adb kill-server && adb server
+
+#    adb devices
+# List of devices attached
+
+#    adb shell dumpsys activity services
+# error: device '(null)' not found
+
+
+    # Must have adb (Android Debug Bridge) package
+    command -v adb >/dev/null 2>&1 || { echo >&2 \
+            "'adb' package required but it is not installed.  Skipping."; \
+            return 4; }
+
+    # Must have nmap package
+    #command -v nmap >/dev/null 2>&1 || { echo >&2 \
+    #        "'nmap' package required but it is not installed.  Skipping."; \
+    #        return 5; }
+
+} # TurnGtvOn
+
+TurnGtvOff () {
+
+    # Send signal to turn TV on:
+    #    adb shell input keyevent 26
+
+    # Must have adb (Android Debug Bridge) package
+    command -v adb >/dev/null 2>&1 || { echo >&2 \
+            "'adb' package required but it is not installed.  Skipping."; \
+            return 4; }
+
+    echo adb Power off TCL / Google TV on "$GTV_IP"
+    adb shell input keyevent KEYCODE_SLEEP &  # Google TV off (remote power toggle)
+    adb disconnect              # Will reconnect on resume
+
+} # TurnGtvOff
 
 TurnSonyOn () {
 
@@ -310,7 +450,7 @@ TurnSonyOn () {
     
 } # TurnSonyOn
 
-TurnOffSony () {
+TurnSonyOff () {
 
     local Reply ReturnState
 
@@ -330,9 +470,76 @@ TurnOffSony () {
     # Reply: { "result": [], "id": 55 }
     echo ReturnState from TurnSonyOn function: "$ReturnState"
     
-} # TurnOffSony
+} # TurnSonyOff
 
-GetPowerStatus () {
+ForceLight() {
+    # $1 plugname
+    # $2 "ON" or "OFF"
+    # NOTE: hs100.sh must be installed for hs100 tp-link power plug.
+    #       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
+
+    # Must have hs100.sh
+    command -v hs100.sh >/dev/null 2>&1 || { echo >&2 \
+            "'hs100.sh' required but it is not installed.  Skipping."; \
+            return 6; }
+
+    PlugName="$1"  # Sony TV bias light or Google TV bias light
+    Force="$2"  # "ON" or "OFF"
+    TvName="$3"  # "Sony TV" or "Google TV"
+    echo Set "$TvName" Bias Light "$PlugName" to "$Force".
+    log Set "$TvName" Bias Light "$PlugName" to "$Force".
+
+    status=$(hs100.sh -i "$PlugName" check | cut -f2)
+    if [ -z "$status" ]; then
+        echo "Error: 'hs100.sh -i $PlugName check' returned null for $TvName."
+        log "Error hs100.sh 'check' returned null for IP $PlugName."
+        return 7
+    fi
+
+    if [ $status == "$Force" ] ; then
+        echo "$TvName" Bias Light "$PlugName" status is already "$status".
+        log "$TvName" Bias Light "$PlugName" status is already "$status".
+        return 0  # Nothing to do already correct state
+    fi
+
+    if [ $status == "OFF" ] ; then
+        hs100.sh -i "$PlugName" on
+    elif [ $status == "ON" ] ; then
+        hs100.sh -i "$PlugName" off
+    else
+        echo Error hs100.sh not responding check connection and IP "$PlugName".
+        log Error hs100.sh not responding check connection and IP "$PlugName".
+    fi
+
+} # ForceLight
+
+TurnLightsOn() {
+    # TODO: If sunlight == 100% return
+    ForceLight "$SLI_IP" ON "Sony TV"
+    ForceLight "$GLI_IP" ON "TCL / Google TV"
+} # TurnLightsOn
+
+TurnLightsOff() {
+    ForceLight "$SLI_IP" OFF "Sony TV"
+    ForceLight "$GLI_IP" OFF "TCL / Google TV"
+} # TurnLightsOff
+
+GtvPowerStatus () {
+    # Return 0 if power on, 1 if power off
+    local Reply
+
+    Reply=$(timeout 0.1 adb connect "$GTV_IP")
+    if [ -z "$Reply" ] ; then
+        GTV_Online=""
+        return 1  # Reply = <null> string
+    else
+        GTV_Online="host up"
+        return 0  # Reply = "already connected to 192.168.0.17:5555"
+    fi
+} # GtvPowerStatus
+
+SonyPowerStatus () {
+    # Return 0 if power on, 1 if power off
 
     local Reply ReturnState
 
@@ -358,7 +565,7 @@ GetPowerStatus () {
     # TV is turned off (standby) or no network (blank)
     return 1
     
-} # GetPowerStatus
+} # SonyPowerStatus
 
 
 GetVolume () {
@@ -468,28 +675,29 @@ TenMinuteSpam () {
 
     WaitForSignOn   # Might be called by root during boot before user signed on.
 
-    Cnt=0
+    Cnt=1
     while : ; do
 
-        if GetPowerStatus ; then
+        if SonyPowerStatus ; then
             log "TV is powered on. 'tvpowered' is now waiting for TV to power off."
             break
         else
-            echo Waking up Sony TV "$Cnt"
+            echo Waking up Sony TV - attempt number: "$Cnt"
             TurnSonyOn
 
             # Spam user every 60 seconds
-            (( $(( Cnt % 20 )) == 0 )) && \
+            (( $(( Cnt % 60 )) == 0 )) && \
                 notify-send --urgency=critical "tvpowered" \
                     -h string:x-canonical-private-synchronous:startup \
                     --icon=/usr/share/icons/gnome/48x48/devices/display.png \
                     "TV not communicating.\n Checking TV again..."
         fi
-        sleep 3
+        sleep 1  # 2024-09-29 - shorten sleep from 3 to 1 second
         (( Cnt++ ))
     done
     
-    GTV_Online=$(nmap "$ADB_IP" | grep 'host up')
+    #GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
+    GtvPowerStatus  # Set GTV_Online
     echo 'GTV_Online for Ten Minute Span Start:' "$GTV_Online"
     GetVolume
     LastVolume="$?"
@@ -498,28 +706,58 @@ TenMinuteSpam () {
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
         "Fully activated.\n System will $SCTL when TV powered off. Volume: $LastVolume $Bar"
 
-    if command -v light-tog >/dev/null 2>&1 ; then
-        echo Turning on Sony TV Light
-        light-tog                   # Turn on light behind TV 1
-    fi
-    if command -v light-tog2 >/dev/null 2>&1 ; then
-        echo Turning on TCL TV Light
-        light-tog2                  # Turn on light behind TV 2
-    fi
+    # 2024-09-29 - Deprecate light-tog and light-tog2
+    #if command -v light-tog >/dev/null 2>&1 ; then
+    #    echo Turning on Sony TV Bias Light
+    #    light-tog                   # Turn on bias light behind TV 1
+    #fi
+    #if command -v light-tog2 >/dev/null 2>&1 ; then
+    #    echo Turning on TCL TV Bias Light
+    #    light-tog2                  # Turn on bias light behind TV 2
+    #fi
+    TurnLightsOn  # Turn on Sony and Google TV's bias lights if < 100% sunlight
+
+    Cnt=1
     if command -v wakeonlan >/dev/null 2>&1 ; then
-        echo GTV_Online start value: "$GTV_Online"
         while [[ "$GTV_Online" == "" ]]; do
-            echo Waking up TCL TV
+            echo Waking up TCL/Google TV - attempt number: "$Cnt"
             wakeonlan "$GTV_MAC"        # Turn on google TV
-            GTV_Online=$(nmap "$ADB_IP" | grep 'host up')
-            # nmap takes 3 seconds to run and fail but .1 to succeed
+            #GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
+            # nmap run time takes 3 seconds fail and .1 second to succeed
+            sleep 1
+            GtvPowerStatus  # Takes .1 second using timeout adb connect
+            (( Cnt++ ))
+            if (( $Cnt >= 60 )); then
+                echo "Attempted to wakeup TCL/Google TV for 1 minute. Skipping"
+                log "Attempted to wakeup TCL/Google TV for 1 minute. Skipping"
+                break
+            fi
         done
-        GTV_Online=$(nmap "$ADB_IP" | grep 'host up')
-        echo GTV_Online end value: "$GTV_Online"
+        echo GTV_Online status: "$GTV_Online"
+        log GTV_Online status: "$GTV_Online"
+        # Reset GTV developer options switched ON:
+        # 0. Remove existing authorized adb keys on device
+        # 1. Enable developer options (click settings/build version - 7 times)
+        # 2. USB Debugging
+        # 3. Verify apps over USB
+        # 4. Mobile data always active
+        # 5. Select USB Configuration = "Charging"
+        # 6. Turn off WiFi and only use ethernet?
+        # GTV Network & Internet options switched ON:
+        # 1. Network Standby
     fi
     if command -v adb >/dev/null 2>&1 ; then
-        echo "Connecting to ADB (Android Debugging Bridge) on: $ADB_IP"
-        adb connect "$ADB_IP"  # Connect to Google TV.
+        echo "Connecting to ADB (Android Debugging Bridge) on: $GTV_IP"
+        log "Connecting to ADB (Android Debugging Bridge) on: $GTV_IP"
+        # adb connect "$GTV_IP"  # Connect to Google TV.
+        # 2024-09-29 - Already connected by GtvPowerStatus
+
+        # Below tests work but add a second or, run forever if TV is off
+        #ADB_AWAKE=$(adb shell dumpsys activity | grep mWakefulness | cut -d'=' -f2)
+        #ADB_POWER=$(adb shell dumpsys power | grep "Display Power" | cut -d'=' -f2)
+        #echo "GTV Status: ADB_AWAKE='$ADB_AWAKE' ADB_POWER='$ADB_POWER'"
+        # 2024-09-29 - Instead of KEYCODE_WAKEUP can use 26 to toggle power
+        adb shell input keyevent KEYCODE_WAKEUP &
     fi
     return 0
 
@@ -542,11 +780,11 @@ Main () {
 
     while : ; do
 
-        if ! GetPowerStatus; then
+        if ! SonyPowerStatus; then
 
             # START FROM ABOVE: 
             # This was causing 2% CPU drain with Network Manager and
-            # debus-daemon. So move from above GetPowerStatus to below.
+            # debus-daemon. So move from above SonyPowerStatus to below.
 
             # If network down then wait for it to come up. 
             #etherup=$(cat /sys/class/net/e*/carrier) # Returns 1 even disconnected
@@ -574,16 +812,22 @@ Main () {
                 echo "Unexpected Network disconnect, aborting suspend."
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
+                # /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
+
+                TurnLightsOff  # Trun off Sony and Google TVs' bias lights
+
                 if command -v adb >/dev/null 2>&1 ; then
-                    echo ADB Power off TCL / Google TV on "$ADB_IP"
-                    adb shell input keyevent 26 # Google TV off (remote off)
+                    # TODO: If TV already powered off skip step
+                    echo ADB Power off TCL / Google TV on "$GTV_IP"
+                    adb shell input keyevent KEYCODE_SLEEP  # Google TV off
+                    #adb shell input keyevent 26 # Google TV off
                     adb disconnect              # Will reconnect on resume
                 fi
 
                 echo /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
                 #echo "Turning off Sony TV just in case abnormal suspend."
-                #TurnOffSony
-                systemctl "$SCTL"               # Computer off or sleep
+                #TurnSonyOff
+                systemctl "$SCTL"               # Turn computer off or sleep
                 sleep 2  # Without sleep, TenMinuteSpam starts during suspend
 
                 # systemctl will suspend. When resuming we hit next line
@@ -631,6 +875,7 @@ Main () {
 } # Main
 
 Main "$@"
+
 ```
 
 ## Configuring Bash Script
@@ -640,11 +885,19 @@ configure for your system:
 
 ```bash
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
-IP=192.168.0.19     # IP address for Sony TV on LAN
-ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
+STV_IP=192.168.0.19 # IP address for Sony TV on LAN
+GTV_IP=192.168.0.17 # IP address for Google TV on LAN for Android Debug Bridge
+GTV_Online=""       # Google TV is not turned on
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
 # TCL / Goggle TV MAC address for wake on lan. No effect if TV already on.
 GTV_MAC="c0:79:82:41:2f:1f"
+# 2024-09-30 - If problems revoke USB, turn off USB debugging, click build 7 times
+# RSA key fingerprint: a7:ad:1f:82:66:16:15:eb:bc:54:85:56:ce:ad:d4:2b
+# ~/.android/adbkey.pub - holds a lot more complicated key 700+ characters
+
+# Nighttime bias lights
+SLI_IP="192.168.0.15"  # Sony TV bias light
+GLI_IP="192.168.0.20"  # TCL/Google TV bias light
 ```
 
 ## Automatically Start Bash Script
@@ -681,12 +934,7 @@ The following programs are required:
 - `adb` - Linux package for powering off TCL / Google TV
 - `curl` - Linux package for communicating with Sony TV
 - `libnotify-bin` - Linux package For popup messages
-
-Optionally if these programs are installed they will be run.
-
-- `light-tog` - Bash Script provided below
-- `light-tog2` - Bash Script provided below
-- `wakeonlan` - For turning on Sony TV & TCL / Google TV
+- `wakeonlan` - Linux application to wakeup TCL / Google TV
 
 ---
 
@@ -702,8 +950,8 @@ Optionally if these programs are installed they will be run.
    caption="Smart Plug Control"
 %}
 
-The `smartplug_off` bash script is called whenever the
-computer system is shutdown or suspended.
+The `smartplug_off` bash script functionality is duplicated in
+`tvpowered`when the computer system is shutdown or suspended.
 
 The script needs to be created with `sudo` powers in the
 `/etc/NetworkManager/dispatcher.d/pre-down.d/` directory.
@@ -716,7 +964,7 @@ The Network is always brought down when computer system is
 shutting down or being suspended. This makes the Network
 Manager a convenient way to shut off power to wall outlet
 smart plugs behind the TV that control the nighttime 
-back lighting. 
+bias lighting. 
 
 ## **'smartplug_off'** Bash Script
 
@@ -737,7 +985,7 @@ Below is the Bash script that needs to placed in the
 # NOTE: hs100.sh must be installed for hs100 TP-Link power plug.
 #       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
 
-PlugName="192.168.0.15"  # Sony TV backlight
+PlugName="192.168.0.15"  # Sony TV bias light
 
 status=$(hs100.sh -i "$PlugName" check | cut -f2)
 if [ $status == "OFF" ] ; then
@@ -749,7 +997,7 @@ else
 fi
 
 
-PlugName="192.168.0.17"  # Google TV backlight
+PlugName="192.168.0.17"  # Google TV bias light
 
 status=$(hs100.sh -i "$PlugName" check | cut -f2)
 if [ $status == "OFF" ] ; then
@@ -766,9 +1014,9 @@ fi
 There are two lines you need to configure to your system:
 
 ```bash
-PlugName="192.168.0.15"  # Sony TV backlight
+PlugName="192.168.0.15"  # Sony TV bias light
 ...
-PlugName="192.168.0.21"  # Google TV backlight
+PlugName="192.168.0.21"  # Google TV bias light
 ```
 
 The first **'PlugName'** is 1/3rd of the way in the file.
@@ -900,7 +1148,7 @@ Intel Core i-7 GPU using ThunderBolt 3 USB-C to HDMI converter.
 
 There are two lamps. One behind the Sony TV and one behind the 
 TCL TV. Each lamp is controlled by a Kasa TP-Link Smart Plug.
-The lamps serve as "backlights" to reduce eyestrain at night.
+The lamps serve as "bias lights" to reduce eyestrain at night.
 
 The Sony TV has a sound system with subwoofer that is used
 all the time. The Sony TV picture is only used occasionally
@@ -935,7 +1183,7 @@ TV remote is powered off. Use:
 
 - `sudo apt install abd` To install *Android Bridge Debug*
 - `adb connect 192.168.0.21` to connect TV at IP address 21.
-- `adb shell input keyevent 26` to turn off the TV.
+- `adb shell input keyevent 26` to toggle the TV on/off.
 
 The Alienware 17" laptop screen is where the file manager,
 web browser and music player playlist windows reside.
@@ -1960,7 +2208,7 @@ There is a [nVidia GTX 970M Bug Report 🔗](https://bugs.freedesktop.org/show_b
 that suggests problems may be caused by Laptop Management Package
 called `TLP`.
 
-## 'nvhda' Key Features
+## `nvhda` Key Features
 
 Due to a bug between nVidia and Linux (perhaps caused by TLP)
 there is no sound when the system is powered up.
