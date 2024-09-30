@@ -221,6 +221,8 @@ Below is the Bash script you can copy to your system:
 #       /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
 #       Replace nmap with adb connect using timeout
 
+#       Sep 30 2024: If GTV already powered off, don't try again
+
 # TODO: Plan iotc and iotd (Internet of Things Client/Daemon) in Python that
 #       will turn devices on/off in parallel. iotc can communicate with iotd.
 #       iotd runs with sudo powers.
@@ -423,7 +425,7 @@ TurnGtvOff () {
             return 4; }
 
     echo adb Power off TCL / Google TV on "$GTV_IP"
-    adb shell input keyevent KEYCODE_SLEEP &  # Google TV off (remote power toggle)
+    adb shell input keyevent KEYCODE_SLEEP  # Google TV off (remote power toggle)
     adb disconnect              # Will reconnect on resume
 
 } # TurnGtvOff
@@ -529,12 +531,14 @@ GtvPowerStatus () {
     local Reply
 
     Reply=$(timeout 0.1 adb connect "$GTV_IP")
+    GTV_Online=""
     if [ -z "$Reply" ] ; then
-        GTV_Online=""
         return 1  # Reply = <null> string
+    elif [[ $Reply == *"unable"* ]]; then
+        return 1  # Reply = "unable to connect to 192.168.0.17"
     else
         GTV_Online="host up"
-        return 0  # Reply = "already connected to 192.168.0.17:5555"
+        return 0  # Reply = "...connected to 192.168.0.17:5555"
     fi
 } # GtvPowerStatus
 
@@ -697,6 +701,9 @@ TenMinuteSpam () {
     done
     
     #GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
+    # If GTV was powered off when system went to sleep adb server still running
+    adb kill-server
+    adb start-server
     GtvPowerStatus  # Set GTV_Online
     echo 'GTV_Online for Ten Minute Span Start:' "$GTV_Online"
     GetVolume
@@ -742,13 +749,14 @@ TenMinuteSpam () {
         # 3. Verify apps over USB
         # 4. Mobile data always active
         # 5. Select USB Configuration = "Charging"
-        # 6. Turn off WiFi and only use ethernet?
+        # 6. Turn off WiFi and only use ethernet if necessary for wakeonlan
         # GTV Network & Internet options switched ON:
         # 1. Network Standby
     fi
     if command -v adb >/dev/null 2>&1 ; then
         echo "Connecting to ADB (Android Debugging Bridge) on: $GTV_IP"
         log "Connecting to ADB (Android Debugging Bridge) on: $GTV_IP"
+        GtvPowerStatus  # 2024-09-30 Repeat connect required
         # adb connect "$GTV_IP"  # Connect to Google TV.
         # 2024-09-29 - Already connected by GtvPowerStatus
 
@@ -819,9 +827,10 @@ Main () {
                 if command -v adb >/dev/null 2>&1 ; then
                     # TODO: If TV already powered off skip step
                     echo ADB Power off TCL / Google TV on "$GTV_IP"
-                    adb shell input keyevent KEYCODE_SLEEP  # Google TV off
+                    log ADB Power off TCL / Google TV on "$GTV_IP"
+                    timeout 0.1 adb shell input keyevent KEYCODE_SLEEP  # Google TV off
                     #adb shell input keyevent 26 # Google TV off
-                    adb disconnect              # Will reconnect on resume
+                    timeout 0.1 adb disconnect              # Will reconnect on resume
                 fi
 
                 echo /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
