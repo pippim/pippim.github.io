@@ -221,7 +221,8 @@ Below is the Bash script you can copy to your system:
 #       /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
 #       Replace nmap with adb connect using timeout
 
-#       Sep 30 2024: If GTV already powered off, don't try again
+#       Sep 30 2024: If GTV already powered off, don't try again. If eyesome
+#       sunlight percentage is 100 % then don't turn on bias lights.
 
 # TODO: Plan iotc and iotd (Internet of Things Client/Daemon) in Python that
 #       will turn devices on/off in parallel. iotc can communicate with iotd.
@@ -270,6 +271,7 @@ GTV_MAC="c0:79:82:41:2f:1f"
 # Nighttime bias lights
 SLI_IP="192.168.0.15"  # Sony TV bias light
 GLI_IP="192.168.0.20"  # TCL/Google TV bias light
+SunlightPercent=""     # Percentage of sunlight, requires eyesome brightness
 
 
 # Must have curl package.
@@ -515,10 +517,28 @@ ForceLight() {
 
 } # ForceLight
 
+GetSunlightPercent () {
+    # Return 0 if power on, 1 if power off
+    local Reply
+    Reply=$(cat /usr/local/bin/.eyesome-percent 2>/dev/null | cut -d' ' -f1)
+    SunlightPercent=""
+    if [ -z "$Reply" ] ; then
+        return 1  # Reply = <null> string
+    elif [[ $Reply == *"cat"* ]]; then
+        return 1  # Reply = "cat: /usr/local/bin/.eyesome-percen: No such..."
+    else
+        SunlightPercent="$Reply"
+        return 0  # Reply = "0 %" or "50 %" or "100 %", etc.
+    fi
+} # GetSunlightPercent
+
 TurnLightsOn() {
-    # TODO: If sunlight == 100% return
-    ForceLight "$SLI_IP" ON "Sony TV"
-    ForceLight "$GLI_IP" ON "TCL / Google TV"
+    # TODO: If sunlight == 100% return (( Cnt
+    GetSunlightPercent
+    if [[ -z "$SunlightPercent" ]] || (( $SunlightPercent < 100 )); then
+        ForceLight "$SLI_IP" ON "Sony TV"
+        ForceLight "$GLI_IP" ON "TCL / Google TV"
+    fi
 } # TurnLightsOn
 
 TurnLightsOff() {
@@ -934,15 +954,15 @@ REST API is required. For more details visit
 [Sony Bravia IP Control 🔗](https://pro-bravia.sony.net/develop/integrate/ip-control/index.html 
 "Sony Bravia IP Control Overview Section"){:target="_blank"}
 
-A LAN or Wi-Fi connection is required for both your TV
-and your computer.
+A LAN (ethernet) or Wi-Fi connection is required for both your Sony TV
+and your computer. A LAN connection is required for your TCL/Google TV.
 
 Linux is required and preferably the Ubuntu distribution. 
 The following programs are required:
 
 - `adb` - Linux package for powering off TCL / Google TV
 - `curl` - Linux package for communicating with Sony TV
-- `libnotify-bin` - Linux package For popup messages
+- `libnotify-bin` - Linux package for desktop notification messages
 - `wakeonlan` - Linux application to wakeup TCL / Google TV
 
 ---
