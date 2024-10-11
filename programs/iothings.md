@@ -223,6 +223,7 @@ Below is the Bash script you can copy to your system:
 
 #       Sep 30 2024: If sunlight is 100 % then don't turn on bias lights.
 #       Oct 04 2024: If GTV already powered off, don't try again.
+#       Oct 11 2024: Fix log message format
 
 # TODO: Plan iotc and iotd (Internet of Things Client/Daemon) in Python that
 #       will turn devices on/off in parallel. iotc can communicate with iotd.
@@ -303,7 +304,7 @@ cURLit () {
 
     local TEMP Result ReturnState
 
-    # Declare mathres as reference to argument 3 provided (Bash 4.3 or greater)
+    # Declare Result as reference to argument 3 provided (Bash 4.3 or greater)
     declare -n Result=$3  # ERROR: declare: `': not a valid identifier
 
     # Create temporary file in RAM for curl command
@@ -315,7 +316,14 @@ cURLit () {
              -H "X-Auth-PSK: $PWRD" \
              --data @"$TEMP" \
              http://$STV_IP/sony/"$2")
-    # echo "Result: $Result"    # Remove leading # for debugging
+    if [[ -n "$Result" ]]; then
+        # 2024-10-11 - Results appear every second and aren't useful:
+        # curl Result: {"result":[{"status":"active"}],"id":50}
+        # curl Result: {"result":[[{"target":"speaker","volume":22,"mute":false,
+        #   "maxVolume":100,"minVolume":0},{"target":"headphone","volume":15,"mute":false,
+        #   "maxVolume":100,"minVolume":0}]],"id":33}
+        :  # no-op
+    fi
     ReturnState="$?"
     # TO-DO: check $? and if non-zero pop up dialog with $TEMP contents
     rm "$TEMP"
@@ -432,14 +440,14 @@ TurnGtvOff () {
     Reply=$(timeout 1 adb shell dumpsys input_method | grep -i screenon)
 
     if ! [[ $Reply == *"true"* ]]; then
-        echo TCL / Google TV is already OFF. No reply on "$GTV_IP"
-        log TCL / Google TV is already OFF. No reply on "$GTV_IP"
+        echo "TCL / Google TV is already OFF. No reply on $GTV_IP"
+        log "TCL / Google TV is already OFF. No reply on $GTV_IP"
         return 0  # Reply = "Terminated"  (Timeout)
     fi
     # Reply = "screenOn = true"
 
-    echo adb Power off TCL / Google TV on "$GTV_IP"
-    log adb Power off TCL / Google TV on "$GTV_IP"
+    echo "adb Power off TCL / Google TV on $GTV_IP"
+    log "adb Power off TCL / Google TV on $GTV_IP"
     adb shell input keyevent KEYCODE_SLEEP  # Google TV off (remote power toggle)
     adb disconnect              # Will reconnect on resume
 
@@ -503,8 +511,8 @@ ForceLight() {
     PlugName="$1"  # Sony TV bias light or Google TV bias light
     Force="$2"  # "ON" or "OFF"
     TvName="$3"  # "Sony TV" or "Google TV"
-    echo Set "$TvName" Bias Light "$PlugName" to "$Force".
-    log Set "$TvName" Bias Light "$PlugName" to "$Force".
+    echo "Set $TvName Bias Light $PlugName to $Force."
+    log "Set $TvName Bias Light $PlugName to $Force."
 
     status=$(hs100.sh -i "$PlugName" check | cut -f2)
     if [ -z "$status" ]; then
@@ -513,19 +521,19 @@ ForceLight() {
         return 7
     fi
 
-    if [ $status == "$Force" ] ; then
-        echo "$TvName" Bias Light "$PlugName" status is already "$status".
-        log "$TvName" Bias Light "$PlugName" status is already "$status".
+    if [ "$status" == "$Force" ] ; then
+        echo "$TvName Bias Light $PlugName status is already $status."
+        log "$TvName Bias Light $PlugName status is already $status."
         return 0  # Nothing to do already correct state
     fi
 
-    if [ $status == "OFF" ] ; then
+    if [ "$status" == "OFF" ] ; then
         hs100.sh -i "$PlugName" on
-    elif [ $status == "ON" ] ; then
+    elif [ "$status" == "ON" ] ; then
         hs100.sh -i "$PlugName" off
     else
-        echo Error hs100.sh not responding check connection and IP "$PlugName".
-        log Error hs100.sh not responding check connection and IP "$PlugName".
+        echo "Error hs100.sh not responding check connection and IP $PlugName."
+        log "Error hs100.sh not responding check connection and IP $PlugName."
     fi
 
 } # ForceLight
@@ -548,7 +556,7 @@ GetSunlightPercent () {
 TurnLightsOn() {
     # TODO: If sunlight == 100% return (( Cnt
     GetSunlightPercent
-    if [[ -z "$SunlightPercent" ]] || (( $SunlightPercent < 100 )); then
+    if [[ -z "$SunlightPercent" ]] || (( SunlightPercent < 100 )); then
         ForceLight "$SLI_IP" ON "Sony TV"
         ForceLight "$GLI_IP" ON "TCL / Google TV"
     fi
@@ -568,7 +576,7 @@ GtvPoweron() {
 }
 
 GtvConnect () {
-    # Return 0 if able to connecct, 1 if unable to connect
+    # Return 0 if able to connect, 1 if unable to connect
     # Set GTV_Online "" if unable to connect, else connection message
     local Reply Cnt
 
@@ -582,14 +590,12 @@ GtvConnect () {
         return 0  # Must return true to exit forever loop
     fi
 
-
     # TWO attempts required because:
     # Sending magic packet to 255.255.255.255:9 with c0:79:82:41:2f:1f
     # GTV_Online status: connected to 192.168.0.17:5555
     # Connecting to ADB (Android Debugging Bridge) on: 192.168.0.17
     # error: device offline
 
-    
     for ((i = 0 ; i <= 1 ; i++ )) ; do
         Reply=$(timeout 0.1 adb connect "$GTV_IP")
         GTV_Online=""
@@ -663,7 +669,7 @@ GetVolume () {
     Start="${Reply:41:4}"
     Volume=${Start%,*}
 
-    return $Volume
+    return "$Volume"
 
 } # GetVolume
 
@@ -712,8 +718,7 @@ WaitForSignOn () {
     # wait until user signs on to get .Xauthority file settings.
 
     # code lifted from eyesome.sh
-    SpamOn=10       # Causes 10 iterations of 2 second sleep
-    SpamContext="Login"
+    SpamWait=1
     TotalWait=0
 
     # Wait for user to sign on then get Xserver access for xrandr calls
@@ -724,11 +729,11 @@ WaitForSignOn () {
         UserName="$(who -u | grep -F '(:0)' | head -n 1 | awk '{print $1}')"
         [[ $UserName != "" ]] && break
 
-        sleep "$SpamLength"
-        TotalWait=$(( TotalWait + SpamLength ))
+        sleep $SpamWait
+        TotalWait=$(( TotalWait + SpamWait ))
     done
 
-    if [[ $TotalWait != "0" ]] ; then
+    if [[ $TotalWait -gt 0 ]] ; then
         log "Waited $TotalWait seconds for $UserName to login."
         xhost local:root
         export XAUTHORITY="/home/$UserName/.Xauthority"
@@ -805,14 +810,14 @@ TenMinuteSpam () {
             sleep 1
             GtvConnect  # Takes .1 second using timeout adb connect
             (( Cnt++ ))
-            if (( $Cnt >= 60 )); then
+            if (( Cnt >= 60 )); then
                 echo "Attempted to wakeup TCL/Google TV for 1 minute. Skipping"
                 log "Attempted to wakeup TCL/Google TV for 1 minute. Skipping"
                 break
             fi
         done
-        echo GTV_Online status: "$GTV_Online"
-        log GTV_Online status: "$GTV_Online"
+        echo "GTV_Online status: $GTV_Online"
+        log "GTV_Online status: $GTV_Online"
         # Reset GTV developer options switched ON:
         # 0. Remove existing authorized adb keys on device
         # 1. Enable developer options (click settings/build version - 7 times)
@@ -842,7 +847,6 @@ Main () {
     echo "$0: LastVolume: $LastVolume"
 
     Cnt=0
-    FirstTime=true
     VolumeCnt=0             # TV Remote changed volume, so shorter sleep
 
     while : ; do
@@ -920,7 +924,7 @@ Main () {
             # TODO: Process VolumeCnt internally in loop instead of larger loop
         fi
 
-        if [[ $VolumeCnt > 0 ]]; then
+        if [[ $VolumeCnt -gt 0 ]]; then
             (( VolumeCnt-- ))
             SleepTime=.01
         else
@@ -928,9 +932,6 @@ Main () {
         fi
 
         sleep $SleepTime
-
-        # Next iteration
-        FirstTime=false
     done
 
     exit 0
