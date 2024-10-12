@@ -196,11 +196,11 @@ Below is the Bash script you can copy to your system:
 #       WiFi on TV instead and use Sony REST API to communicate TV status.
 
 #       Jun 11 2020: Add pop-up bubble status messages. Add dependencies.
-#       Add TenMinuteSpam. Add WaitUserSignOn. Add $SCTL constant. Convert
+#       Add Init. Add WaitUserSignOn. Add $SCTL constant. Convert
 #       in-line code to mainline format.
 
 #       Oct 03 2020: If ethernet disconnected we don't want to suspend.
-#       Add TenMinuteSpam. Add WaitUserSignOn. Add $SCTL constant. Convert
+#       Add Init. Add WaitUserSignOn. Add $SCTL constant. Convert
 #       in-line code to mainline format.
 
 #       Oct 18 2020: If WiFi disconnected we don't want to suspend.
@@ -219,15 +219,15 @@ Below is the Bash script you can copy to your system:
 #       Sep 29 2024: Create TurnGtvOn() and TurnGtvOff()
 #       Embed code - No longer requires light-tog and light-tog2 or
 #       /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
-#       Replace nmap with adb connect using timeout
+#       Replace 'nmap' with much faster: 'timeout 0.1 adb connect'
 
 #       Sep 30 2024: If sunlight is 100 % then don't turn on bias lights.
 #       Oct 04 2024: If GTV already powered off, don't try again.
 #       Oct 11 2024: Fix log message format
+#       Oct 12 2024: 'CheckGtvOn': Speed up & simply turning Google TV on.
 
-# TODO: Plan iotc and iotd (Internet of Things Client/Daemon) in Python that
-#       will turn devices on/off in parallel. iotc can communicate with iotd.
-#       iotd runs with sudo powers.
+# TODO: Create HomA (Home Automation) using Python (homa.py) that powers
+#       devices on/off in parallel. Create HomAc (client) for HomAd (daemon).
 
 # adb will hang if Google TV is off so use ping to see if TV is on:
 
@@ -424,6 +424,24 @@ TurnGtvOn() {
 
 } # TurnGtvOn
 
+CheckGtvOn () {
+    # Check if GTV is turned on
+
+    local Reply
+    log "CheckGtvOn(): Get TCL / Google TV power status on $GTV_IP"
+
+    # Is it turned on now?
+    Reply=$(timeout 1 adb shell dumpsys input_method | grep -i screenon)
+
+    if [[ $Reply == *"true"* ]]; then
+        log "CheckGtvOn(): TCL / Google TV is ON. Reply is: $Reply"
+        return 0  # Reply = "screenOn = true"
+    else
+        log "CheckGtvOn(): TCL / Google TV is OFF. Reply is: $Reply"
+        return 1  # Reply = "Terminated"  (Timeout)
+    fi
+} # CheckGtvOn
+
 TurnGtvOff () {
 
     # Send signal to turn TV on:
@@ -437,18 +455,18 @@ TurnGtvOff () {
     local Reply
 
     # Is it turned on now?
-    Reply=$(timeout 1 adb shell dumpsys input_method | grep -i screenon)
+    #Reply=$(timeout 1 adb shell dumpsys input_method | grep -i screenon)
 
-    if ! [[ $Reply == *"true"* ]]; then
-        echo "TCL / Google TV is already OFF. No reply on $GTV_IP"
-        log "TCL / Google TV is already OFF. No reply on $GTV_IP"
+    #if ! [[ $Reply == *"true"* ]]; then
+    if ! CheckGtvOn ; then
+        log "TurnGtvOff(): TCL / Google TV is already OFF. No reply on $GTV_IP"
         return 0  # Reply = "Terminated"  (Timeout)
     fi
     # Reply = "screenOn = true"
 
-    echo "adb Power off TCL / Google TV on $GTV_IP"
-    log "adb Power off TCL / Google TV on $GTV_IP"
+    log "TurnGtvOff(): Send 'adb shell input keyevent KEYCODE_SLEEP' to $GTV_IP"
     adb shell input keyevent KEYCODE_SLEEP  # Google TV off (remote power toggle)
+    log "TurnGtvOff(): Send 'adb disconnect' to $GTV_IP"
     adb disconnect              # Will reconnect on resume
 
 } # TurnGtvOff
@@ -511,18 +529,15 @@ ForceLight() {
     PlugName="$1"  # Sony TV bias light or Google TV bias light
     Force="$2"  # "ON" or "OFF"
     TvName="$3"  # "Sony TV" or "Google TV"
-    echo "Set $TvName Bias Light $PlugName to $Force."
     log "Set $TvName Bias Light $PlugName to $Force."
 
     status=$(hs100.sh -i "$PlugName" check | cut -f2)
     if [ -z "$status" ]; then
-        echo "Error: 'hs100.sh -i $PlugName check' returned null for $TvName."
         log "Error hs100.sh 'check' returned null for IP $PlugName."
         return 7
     fi
 
     if [ "$status" == "$Force" ] ; then
-        echo "$TvName Bias Light $PlugName status is already $status."
         log "$TvName Bias Light $PlugName status is already $status."
         return 0  # Nothing to do already correct state
     fi
@@ -532,7 +547,6 @@ ForceLight() {
     elif [ "$status" == "ON" ] ; then
         hs100.sh -i "$PlugName" off
     else
-        echo "Error hs100.sh not responding check connection and IP $PlugName."
         log "Error hs100.sh not responding check connection and IP $PlugName."
     fi
 
@@ -569,27 +583,47 @@ TurnLightsOff() {
 
 GtvPoweron() {
     if command -v adb >/dev/null 2>&1 ; then
-        echo "timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP &"
-        log "timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP &"
+        log "GtvPoweron(): timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP &"
         timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP &
     fi
 }
 
 GtvConnect () {
     # Return 0 if able to connect, 1 if unable to connect
-    # Set GTV_Online "" if unable to connect, else connection message
+    # Set GTV_Online "" if reply contains "error" or "unable", else connection message
+    # 2024-10-12 - Recent design was two attempts, but now with CheckGtvOn only one
+    #   attempt is needed.
     local Reply Cnt
 
+    GTV_Online=""  # Caller checks GTV_Online. If blank then not connected
+
     if command -v adb >/dev/null 2>&1 ; then
-        echo "GtvConnect(): try connecting to $GTV_IP"
-        log  "GtvConnect(): try connecting to $GTV_IP"
+        log "GtvConnect(): 'timeout 0.1 adb connect' try connecting to $GTV_IP"
     else
         GTV_Online="adb command not found"
-        echo "GtvConnect(): $GTV_Online"
-        log "GtvConnect(): $GTV_Online"
+        log "GtvConnect(): value of GTV_Online: '$GTV_Online'"
         return 0  # Must return true to exit forever loop
     fi
 
+    Reply=$(timeout 0.1 adb connect "$GTV_IP")
+    log "GtvConnect(): Reply: '$Reply'"
+
+    if [[ $Reply == *"connected"* ]] ; then
+        GTV_Online="$Reply"
+        log "GtvConnect(): success!  | Reply: $Reply"
+        return 0  # Reply = "connected to 192.168.0.17:5555"
+    fi
+
+    if [ -z "$Reply" ] ; then
+        log "GtvConnect(): failed due to no reply."
+    elif [[ $Reply == *"unable"* ]] || [[ $Reply == *"error"* ]] ; then
+        log "GtvConnect(): failed due to no reply with 'unable' or 'error'."
+    else
+        log "GtvConnect(): failed due to unknown error."
+    fi
+    return 1
+
+    # 2024-10-12 - Original two attempt loop now deprecated
     # TWO attempts required because:
     # Sending magic packet to 255.255.255.255:9 with c0:79:82:41:2f:1f
     # GTV_Online status: connected to 192.168.0.17:5555
@@ -604,15 +638,18 @@ GtvConnect () {
         elif [[ $Reply == *"unable"* ]] || [[ $Reply == *"error"* ]] ; then
             return 1  # Reply = "unable to connect..." / "error: device offline"
         elif (( i == 0 )) ; then
-            echo "GtvConnect() sleeping at i: $i Reply: $Reply"
-            # Assume success and poweron ASAP, worse case is second wakeup
-            GtvPoweron
+            log "GtvConnect(): sleeping at i: $i  | Reply: $Reply"
+            # Assume success and power on ASAP, worse case is second wakeup
+            GtvPoweron  # Send KEYCODE_WAKEUP
             sleep 0.5  # If not connected due to lag sleep before trying again
             continue
-        else
+        elif [[ $Reply == *"connected"* ]] ; then
             GTV_Online="$Reply"
-            echo "GtvConnect() success  at i: $i Reply: $Reply"
+            log "GtvConnect(): success at i: $i  | Reply: $Reply"
             return 0  # Reply = "connected to 192.168.0.17:5555"
+        else
+            log "GtvConnect(): failed at i: $i  | Reply: $Reply"
+            return 1  # Reply = "connected to 192.168.0.17:5555"
         fi
     done
 } # GtvConnect
@@ -707,7 +744,13 @@ VolumeBar () {
 
 
 log () {
-    logger --id=$$ -t "tvpowered" "$1"
+    # Echo output to screen if connected. Always output to logger.
+    if [ -t 1 ] ; then
+        local t
+        t=$(date +"%T.%3N")
+        echo "$t" "$1"
+    fi
+    logger --id=$$ -t "$t" "tvpowered" "$1"
 } # log
 
 
@@ -746,7 +789,7 @@ LastVolume=0
 CurrVolume=0
 
 
-TenMinuteSpam () {
+Init () {
 
     # If TV not powered up Spam user for 10 minutes that 'tvpowered' is running
     # and will shut down / suspend system
@@ -757,7 +800,7 @@ TenMinuteSpam () {
     while : ; do
 
         if SonyPowerStatus ; then
-            log "TV is powered on. 'tvpowered' is now waiting for TV to power off."
+            log "Sony TV is powered on. 'tvpowered' is now waiting for TV to power off."
             break
         else
             echo Waking up Sony TV - attempt number: "$Cnt"
@@ -773,14 +816,28 @@ TenMinuteSpam () {
         sleep 1  # 2024-09-29 - shorten sleep from 3 to 1 second
         (( Cnt++ ))
     done
-    
-    #GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
-    # If GTV was powered off when system went to sleep adb server still running
+
+    log ""  # cosmetic blank line
+    log "Init(): Calling TurnLightsOn() - TV Bias Lighting"
+    TurnLightsOn  # Turn on Sony and Google TV's bias lights if < 100% sunlight
+    log ""  # cosmetic blank line
+
+    # GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
+    # 2024-10-12 - nmap removed recently because it takes a long time to run
+
+    # GTV power on takes the longest time to run so turn it on last
+    # If GTV was powered off when system went to sleep adb server running on resume
     if command -v adb >/dev/null 2>&1 ; then
+        log "Init(): Calling 'adb kill-server && adb start-server'"
         adb kill-server
         adb start-server
-        GtvConnect  # Set GTV_Online
-        echo 'GTV_Online for Ten Minute Span Start:' "$GTV_Online"
+
+        log ""  # cosmetic blank line
+        log "Init(): Calling GtvConnect() prior to wakeonlan test"
+
+        GtvConnect  # Takes .1 second using timeout adb connect (2 times)
+        log "Init(): Initial value of GTV_Online: '$GTV_Online'"
+        log ""  # cosmetic blank line
     fi
     GetVolume
     LastVolume="$?"
@@ -789,35 +846,34 @@ TenMinuteSpam () {
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
         "Fully activated.\n System will $SCTL when TV powered off. Volume: $LastVolume $Bar"
 
-    # 2024-09-29 - Deprecate light-tog and light-tog2
-    #if command -v light-tog >/dev/null 2>&1 ; then
-    #    echo Turning on Sony TV Bias Light
-    #    light-tog                   # Turn on bias light behind TV 1
-    #fi
-    #if command -v light-tog2 >/dev/null 2>&1 ; then
-    #    echo Turning on TCL TV Bias Light
-    #    light-tog2                  # Turn on bias light behind TV 2
-    #fi
-    TurnLightsOn  # Turn on Sony and Google TV's bias lights if < 100% sunlight
-
     Cnt=1
     if command -v wakeonlan >/dev/null 2>&1 ; then
-        while [[ "$GTV_Online" == "" ]]; do
-            echo Waking up TCL/Google TV - attempt number: "$Cnt"
+        while [[ "$GTV_Online" != *"connected"* ]]; do
+            echo "Init(): Waking up TCL/Google TV - attempt number: $Cnt"
+            log "Init(): Waking up TCL/Google TV - attempt number: $Cnt"
             wakeonlan "$GTV_MAC"        # Turn on google TV
             #GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
             # nmap run time takes 3 seconds fail and .1 second to succeed
-            sleep 1
-            GtvConnect  # Takes .1 second using timeout adb connect
+            sleep .5
+            GtvConnect  # Takes .1 second using timeout adb connect (2 times)
             (( Cnt++ ))
             if (( Cnt >= 60 )); then
-                echo "Attempted to wakeup TCL/Google TV for 1 minute. Skipping"
-                log "Attempted to wakeup TCL/Google TV for 1 minute. Skipping"
+                log "Init(): Failed to wakeup TCL/Google TV after 1 minute. Aborting"
                 break
             fi
+            if [[ "$GTV_Online" == *"connected"* ]]; then
+                # Final 1 second check for power on status
+                if CheckGtvOn ; then
+                    break
+                else
+                    log "Init(): Final power check failed. Attempting again"
+                    log ""  # cosmetic blank line
+                    GTV_Online=""
+                fi
+            fi
         done
-        echo "GTV_Online status: $GTV_Online"
-        log "GTV_Online status: $GTV_Online"
+        log "Init(): FINAL GTV_Online status: $GTV_Online"
+        log ""  # cosmetic blank line
         # Reset GTV developer options switched ON:
         # 0. Remove existing authorized adb keys on device
         # 1. Enable developer options (click settings/build version - 7 times)
@@ -830,10 +886,10 @@ TenMinuteSpam () {
         # 1. Network Standby
     fi
 
-    GtvPoweron    
-    return 0
+    GtvPoweron  # Send KEYCODE_WAKEUP
+    return 0  # Always returns True
 
-} # TenMinuteSpam
+} # Init
 
 ###################################
 #            MAINLINE             #
@@ -841,10 +897,15 @@ TenMinuteSpam () {
 
 Main () {
 
-    echo "$0: tvpowered Initialization. Ensuring TV is powered on before starting."
-    TenMinuteSpam
-    echo "$0: Fully activated. Waiting for TV to power off and then will $SCTL."
-    echo "$0: LastVolume: $LastVolume"
+    log ""  # cosmetic blank line
+    log "$0: 'tvpowered' Initialization."
+    log "Ensuring TV is powered on before starting."
+
+    Init  # Turn on TV's and Bias Lights
+    log ""  # cosmetic blank line
+    log "$0: Fully activated."
+    log "    Waiting for TV to power off and then will $SCTL."
+    log "    Sony TV LastVolume: '$LastVolume'"
 
     Cnt=0
     VolumeCnt=0             # TV Remote changed volume, so shorter sleep
@@ -877,30 +938,35 @@ Main () {
 
             # END FROM ABOVE: If network down then wait for it to come up
 
-
             state=$(nmcli -f STATE -t g)        # Network manager takes .5 CPU
             if [[ $state == disconnected ]] ; then
-                echo "Unexpected Network disconnect, aborting suspend."
+                log "Unexpected Network disconnect, aborting suspend."
             else
+                log ""  # cosmetic blank line
                 log "TV Powered off. 'systemctl $SCTL' being called."
                 # /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
 
-                TurnLightsOff  # Trun off Sony and Google TVs' bias lights
+                log ""  # cosmetic blank line
+                TurnLightsOff  # Turn off Sony and Google TVs' bias lights
 
+                log ""  # cosmetic blank line
                 TurnGtvOff  # Turn off TCL / Google TV if it is powered on
 
                 #echo "Turning off Sony TV just in case abnormal suspend."
                 #TurnSonyOff
 
-                echo /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
-                systemctl "$SCTL"               # Turn computer off or sleep
-                sleep 2  # Without sleep, TenMinuteSpam starts during suspend
+                # echo /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
+
+                log ""  # cosmetic blank line
+                log "Calling 'systemctl $SCTL'"
+                systemctl "$SCTL"  # Turn computer off or sleep
+                sleep 5  # Without sleep, Init starts during suspend
 
                 # systemctl will suspend. When resuming we hit next line
+
+                log ""  # cosmetic blank line
                 log "System powered back up. Checking if TV powered on. '$0'."
-                echo
-                echo "System powered back up. Checking if TV powered on. '$0'."
-                TenMinuteSpam                   # Wait for network connection
+                Init  # Turn on TV's and Bias Lights
 
                 # May 28, 2023 only turn picture off during work hours
                 # pictureoff                    # Picture off energy saving
@@ -939,6 +1005,7 @@ Main () {
 } # Main
 
 Main "$@"
+
 
 ```
 
