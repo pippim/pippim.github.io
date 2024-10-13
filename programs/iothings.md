@@ -224,7 +224,8 @@ Below is the Bash script you can copy to your system:
 #       Sep 30 2024: If sunlight is 100 % then don't turn on bias lights.
 #       Oct 04 2024: If GTV already powered off, don't try again.
 #       Oct 11 2024: Fix log message format
-#       Oct 12 2024: 'CheckGtvOn': Speed up & simply turning Google TV on.
+#       Oct 12 2024: 'GtvPowerStatus': Speed up & simply turning Google TV on.
+#       Oct 13 2024: Logging optional for SonyPowerStatus() & GtvPowerStatus()
 
 # TODO: Create HomA (Home Automation) using Python (homa.py) that powers
 #       devices on/off in parallel. Create HomAc (client) for HomAd (daemon).
@@ -332,121 +333,42 @@ cURLit () {
 #curl -s -H "Content-Type: application/json; charset=UTF-8" -H "X-Auth-PSK: 123" --data "{ "method": "getPowerStatus", "id": 50, "params": [], "version": "1.0" }" http://192.168.0.16sony/system
 } # cURLit
 
-TurnGtvOn() {
-
-    # TODO: WORK IN PROGRESS - Just notes as of 2024-09-29
-
-# 1a) No adb (android debugging bridge) connection implies TV is turned off
-#     Takes 10 seconds when no connection
-  
-#     adb connect "192.168.0.17"
-# unable to connect to 192.168.0.17:5555
-
-# 1b) Run `nmap` to test host up
-#     Takes 3 seconds when no connection
-
-#     nmap "192.168.0.17"
-# Starting Nmap 7.01 ( https://nmap.org ) at 2024-09-29 09:45 MDT
-# Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
-# Nmap done: 1 IP address (0 hosts up) scanned in 3.03 seconds
-
-
-# 2) Wake up google tv
-
-#    wakeonlan c0:79:82:41:2f:1f
-# Sending magic packet to 255.255.255.255:9 with c0:79:82:41:2f:1f
-
-# 3) Connect adb (android debugging bridge)
-
-#    adb connect "192.168.0.17"
-# already connected to 192.168.0.17:5555
-
-# 4) Run `nmap` to test host up
-#    Takes .11 seconds when there IS a connection
-
-#    nmap "192.168.0.17"
-# Starting Nmap 7.01 ( https://nmap.org ) at 2024-09-28 14:07 MDT
-# Nmap scan report for TCL.LAN (192.168.0.17)
-# Host is up (0.0065s latency).
-# Not shown: 995 closed ports
-# PORT     STATE SERVICE
-# 5555/tcp open  freeciv
-# 8008/tcp open  http
-# 8009/tcp open  ajp13
-# 8443/tcp open  https-alt
-# 9000/tcp open  cslistener
-# Nmap done: 1 IP address (1 host up) scanned in 0.11 seconds
-
-# 5) Check if screen is on - https://stackoverflow.com/a/27406141/6929343
-# If TV is turned off command hangs forever
-
-#    adb shell dumpsys power | grep "Display Power" | cut -d'=' -f2
-# Display Power: state=ON
-
-
-# 6) Send signal to turn TV on
-
-#    adb shell input keyevent 26
-
-# >>>> Now Google TV is successfully turn on
-
-
-# NOTE: adb will hang up when TV is turned off and adb server is still running:
-
-#    adb devices
-# List of devices attached
-# 192.168.0.17:5555	device
-
-#    adb shell dumpsys input_method
-# ^C
-
-#    adb shell dumpsys activity services
-# ^C
-
-#    adb kill-server && adb server
-
-#    adb devices
-# List of devices attached
-
-#    adb shell dumpsys activity services
-# error: device '(null)' not found
-
-
-    # Must have adb (Android Debug Bridge) package
-    command -v adb >/dev/null 2>&1 || { echo >&2 \
-            "'adb' package required but it is not installed.  Skipping."; \
-            return 4; }
-
-    # Must have nmap package
-    #command -v nmap >/dev/null 2>&1 || { echo >&2 \
-    #        "'nmap' package required but it is not installed.  Skipping."; \
-    #        return 5; }
-
-} # TurnGtvOn
-
-CheckGtvOn () {
-    # Check if GTV is turned on
+GtvPowerStatus () {
+    # Check if GTV is turned on. Maybe spammed if checking for power off
 
     local Reply
-    log "CheckGtvOn(): Get TCL / Google TV power status on $GTV_IP"
 
-    # Is it turned on now?
+    if [[ "$1" == "loggable" ]] ; then
+        log "GtvPowerStatus(): Get TCL / Google TV power status on '$GTV_IP'"
+    fi
+
+
+    # Is it turned on now? Reply is null if timeout which occurs when device off
     Reply=$(timeout 1 adb shell dumpsys input_method | grep -i screenon)
 
     if [[ $Reply == *"true"* ]]; then
-        log "CheckGtvOn(): TCL / Google TV is ON. Reply is: '$Reply'"
+        if [[ "$1" == "loggable" ]] ; then
+            log "GtvPowerStatus(): TCL / Google TV is ON. Reply is: '$Reply'"
+        fi
         return 0  # Reply = "screenOn = true"
     else
-        log "CheckGtvOn(): TCL / Google TV is OFF. Reply is: '$Reply'"
+        if [[ "$1" == "loggable" ]] ; then
+            log "GtvPowerStatus(): TCL / Google TV is OFF. Reply is: '$Reply'"
+        fi
         return 1  # Reply = "Terminated"  (Timeout)
     fi
-} # CheckGtvOn
+} # GtvPowerStatus
+
+TurnGtvOn() {
+    # TurnGtvOn sends KEYCODE_WAKEUP as if remote control
+    if command -v adb >/dev/null 2>&1 ; then
+        log "TurnGtvOn(): Send: 'timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP' to: '$GTV_IP'"
+        timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP
+    fi
+} # TurnGtvOn
 
 TurnGtvOff () {
-
-    # Send signal to turn TV on:
-    #    adb shell input keyevent 26
-
+    # TurnGtvOff sends KEYCODE_SLEEP as if remote control
     # Must have adb (Android Debug Bridge) package
     command -v adb >/dev/null 2>&1 || { echo >&2 \
             "'adb' package required but it is not installed.  Skipping."; \
@@ -458,15 +380,15 @@ TurnGtvOff () {
     #Reply=$(timeout 1 adb shell dumpsys input_method | grep -i screenon)
 
     #if ! [[ $Reply == *"true"* ]]; then
-    if ! CheckGtvOn ; then
+    if ! GtvPowerStatus ; then
         log "TurnGtvOff(): TCL / Google TV is already OFF. No reply on: '$GTV_IP'"
         return 0  # Reply = "Terminated"  (Timeout)
     fi
     # Reply = "screenOn = true"
 
-    log "TurnGtvOff(): Send 'adb shell input keyevent KEYCODE_SLEEP' to '$GTV_IP'"
-    adb shell input keyevent KEYCODE_SLEEP  # Google TV off (remote power toggle)
-    log "TurnGtvOff(): Send 'adb disconnect' to $GTV_IP"
+    log "TurnGtvOff(): Send: 'adb shell input keyevent KEYCODE_SLEEP' to: '$GTV_IP'"
+    adb shell input keyevent KEYCODE_SLEEP  # Turn Google TV off
+    log "TurnGtvOff(): Send: 'adb disconnect' to: '$GTV_IP'"
     adb disconnect  # Will reconnect on resume
 
 } # TurnGtvOff
@@ -554,21 +476,27 @@ ForceLight() {
 
 GetSunlightPercent () {
     # Return 0 if power on, 1 if power off
-    local Reply
-    Reply=$(cat /usr/local/bin/.eyesome-percent 2>/dev/null | cut -d' ' -f1)
+    local Reply fname
+    fname="/usr/local/bin/.eyesome-percent"
+    #Reply=$(cat /usr/local/bin/.eyesome-percent 2>/dev/null | cut -d' ' -f1)
+    Reply=$(cut -d' ' -f1 < "$fname")
     SunlightPercent=""
     if [ -z "$Reply" ] ; then
+        log "GetSunlightPercent(): Error reading '$fname'"
         return 1  # Reply = <null> string
-    elif [[ $Reply == *"cat"* ]]; then
-        return 1  # Reply = "cat: /usr/local/bin/.eyesome-percen: No such..."
+    elif [[ $Reply == *"No such file"* ]]; then
+        # Reply = "bash: /usr/local/bin/.eyesome-percen: No such file or directory"
+        log "GetSunlightPercent(): Error: '$Reply'"
+        return 1
     else
+        log "GetSunlightPercent(): '$fname' percentage: '$Reply'"
         SunlightPercent="$Reply"
         return 0  # Reply = "0 %" or "50 %" or "100 %", etc.
     fi
 } # GetSunlightPercent
 
 TurnLightsOn() {
-    # TODO: If sunlight == 100% return (( Cnt
+    # Turn bias lights on if sunlight percentage < 100%
     GetSunlightPercent
     if [[ -z "$SunlightPercent" ]] || (( SunlightPercent < 100 )); then
         ForceLight "$SLI_IP" ON "Sony TV"
@@ -581,17 +509,10 @@ TurnLightsOff() {
     ForceLight "$GLI_IP" OFF "TCL / Google TV"
 } # TurnLightsOff
 
-GtvPoweron() {
-    if command -v adb >/dev/null 2>&1 ; then
-        log "GtvPoweron(): timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP &"
-        timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP &
-    fi
-}
-
 GtvConnect () {
     # Return 0 if able to connect, 1 if unable to connect
     # Set GTV_Online "" if reply contains "error" or "unable", else connection message
-    # 2024-10-12 - Recent design was two attempts, but now with CheckGtvOn only one
+    # 2024-10-12 - Recent design was two attempts, but now with GtvPowerStatus only one
     #   attempt is needed.
     local Reply Cnt
 
@@ -605,7 +526,7 @@ GtvConnect () {
         return 0  # Must return true to exit forever loop
     fi
 
-    Reply=$(timeout 0.1 adb connect "$GTV_IP")
+    Reply=$(timeout 0.1 adb connect "$GTV_IP" 2>&1)
     log "GtvConnect(): Reply: '$Reply'"
 
     if [[ $Reply == *"connected"* ]] ; then
@@ -631,7 +552,7 @@ GtvConnect () {
     # error: device offline
 
     for ((i = 0 ; i <= 1 ; i++ )) ; do
-        Reply=$(timeout 0.1 adb connect "$GTV_IP")
+        Reply=$(timeout 0.1 adb connect "$GTV_IP" 2>&1)
         GTV_Online=""
         if [ -z "$Reply" ] ; then
             return 1  # Reply = <null> string
@@ -640,7 +561,7 @@ GtvConnect () {
         elif (( i == 0 )) ; then
             log "GtvConnect(): sleeping at i: '$i'  | Reply: '$Reply'"
             # Assume success and power on ASAP, worse case is second wakeup
-            GtvPoweron  # Send KEYCODE_WAKEUP
+            TurnGtvOn  # Send KEYCODE_WAKEUP
             sleep 0.5  # If not connected due to lag sleep before trying again
             continue
         elif [[ $Reply == *"connected"* ]] ; then
@@ -674,6 +595,10 @@ SonyPowerStatus () {
     #echo "ReturnState: $ReturnState Reply: $Reply"    # Remove # for debugging
     # Reply: {"result":[{"status":"active"}],"id":50}
     #    or: {"result":[{"status":"standby"}],"id":50}
+
+    if [[ "$1" == "loggable" ]] ; then
+        log "SonyPowerStatus(): value of Reply: $Reply"  # Spams every second
+    fi
 
     # Does 'active' substring exist in TV's reply?
     [[ "${Reply#*active}" != "$Reply" ]] && return 0
@@ -746,11 +671,11 @@ VolumeBar () {
 log () {
     # Echo output to screen if connected. Always output to logger.
     if [ -t 1 ] ; then  # Connected to terminal supporting "echo" command?
-        local t
+        local ts
         ts=$(date +"%T.%3N")  # Timestamp HH:MM:SS.hhh
         echo "$ts" "$1"
     else
-        # logger has timestamp. '-t' repeats string on every line
+        # logger already has timestamp. '-t' argument repeats string on every line
         logger --id=$$ -t "tvpowered" "$1"
     fi
 } # log
@@ -799,16 +724,12 @@ Init () {
     # If TV not powered up Spam user for 10 minutes that 'tvpowered' is running
     # and will shut down / suspend system
 
+    # If GTV was powered off when system went to sleep adb server *might* running
     # Takes 3 seconds to restart adb server so do it first in the background
     if command -v adb >/dev/null 2>&1 ; then
         log "Init(): Calling 'adb kill-server && adb start-server &'"
         adb kill-server && adb start-server &
 
-        log ""  # cosmetic blank line
-        log "Init(): Calling GtvConnect() prior to wakeonlan test"
-
-        GtvConnect  # Takes .1 second using timeout adb connect (2 times)
-        log "Init(): Initial value of GTV_Online: '$GTV_Online'"
         log ""  # cosmetic blank line
     fi
 
@@ -817,7 +738,7 @@ Init () {
     Cnt=1
     while : ; do
 
-        if SonyPowerStatus ; then
+        if SonyPowerStatus loggable; then
             log "Sony TV is powered on. 'tvpowered' is now waiting for TV to power off."
             break
         else
@@ -851,8 +772,11 @@ Init () {
         "Fully activated.\n System will $SCTL when TV powered off. Volume: $LastVolume $Bar"
 
     # GTV power on takes the longest time to run so turn it on last
-    # If GTV was powered off when system went to sleep adb server running on resume
     Cnt=1
+    Max=60
+    GTV_Online=""
+    log "Init(): $Max times: wakeonlan, GtvConnect(), GtvPowerOn(), GtvPowerStatus()"
+    log ""  # cosmetic blank line
     if command -v wakeonlan >/dev/null 2>&1 ; then
         while [[ "$GTV_Online" != *"connected"* ]]; do
             log "Init(): Waking up TCL/Google TV - attempt number: $Cnt"
@@ -861,16 +785,16 @@ Init () {
             # nmap run time takes 3 seconds fail and .1 second to succeed
             sleep .5
             if GtvConnect ; then  # 'timeout .1 adb connect'
-              GtvPoweron  # 'adb shell input keyevent KEYCODE_WAKEUP'
+              TurnGtvOn  # 'adb shell input keyevent KEYCODE_WAKEUP'
             fi
             (( Cnt++ ))
-            if (( Cnt >= 60 )); then
-                log "Init(): Failed to wakeup TCL/Google TV after 1 minute. Aborting"
+            if (( Cnt > Max )); then
+                log "Init(): Failed to wakeup TCL/Google TV after $Max attempts. Aborting"
                 break
             fi
             if [[ "$GTV_Online" == *"connected"* ]]; then
                 # Final 1 second check for power on status
-                if CheckGtvOn ; then
+                if GtvPowerStatus loggable ; then
                     break
                 else
                     log "Init(): Final power check failed. Attempting again"
@@ -882,16 +806,15 @@ Init () {
         log ""  # cosmetic blank line
         log "Init(): FINAL value of GTV_Online: '$GTV_Online'"
         log ""  # cosmetic blank line
-        # Reset GTV developer options switched ON:
-        # 0. Remove existing authorized adb keys on device
-        # 1. Enable developer options (click settings/build version - 7 times)
-        # 2. USB Debugging
-        # 3. Verify apps over USB
-        # 4. Mobile data always active
-        # 5. Select USB Configuration = "Charging"
-        # 6. Turn off WiFi and only use ethernet if necessary for wakeonlan
-        # GTV Network & Internet options switched ON:
-        # 1. Network Standby
+        # If adb stops working, reset TV's developer options:
+        # 1. Remove existing authorized adb keys on device
+        # 2. Enable developer options (click settings/build version - 7 times)
+        # 3. Enter Developer Options and turn on 'USB Debugging'
+        # 4. Turn on 'Verify apps over USB'
+        # 5. Turn on 'Mobile data always active'
+        # 6. Select 'USB Configuration' = "Charging"
+        # 7. wakeonlan requires ethernet. It maybe necessary to turn off WiFi
+        # 8. First time TV will prompt to confirm computer access and always allow
     fi
 
     return 0  # Always returns True
@@ -919,7 +842,8 @@ Main () {
 
     while : ; do
 
-        if ! SonyPowerStatus; then
+        # Wait forever for TV to power off. Don't output to log every second
+        if ! SonyPowerStatus no_log; then
 
             # START FROM ABOVE: 
             # This was causing 2% CPU drain with Network Manager and
