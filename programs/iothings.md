@@ -226,6 +226,7 @@ Below is the Bash script you can copy to your system:
 #       Oct 11 2024: Fix log message format
 #       Oct 12 2024: 'GtvPowerStatus': Speed up & simply turning Google TV on.
 #       Oct 13 2024: Logging optional for SonyPowerStatus() & GtvPowerStatus()
+#       Oct 17 2024: Check sunlight percentage last when eyesome up-to-date.
 
 # TODO: Create HomA (Home Automation) using Python (homa.py) that powers
 #       devices on/off in parallel. Create HomAc (client) for HomAd (daemon).
@@ -362,7 +363,7 @@ GtvPowerStatus () {
 TurnGtvOn() {
     # TurnGtvOn sends KEYCODE_WAKEUP as if remote control
     if command -v adb >/dev/null 2>&1 ; then
-        log "TurnGtvOn(): Send: 'timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP' to: '$GTV_IP'"
+        log "TurnGtvOn(): 'timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP'"
         timeout 0.1 adb shell input keyevent KEYCODE_WAKEUP
     fi
 } # TurnGtvOn
@@ -386,9 +387,9 @@ TurnGtvOff () {
     fi
     # Reply = "screenOn = true"
 
-    log "TurnGtvOff(): Send: 'adb shell input keyevent KEYCODE_SLEEP' to: '$GTV_IP'"
+    log "TurnGtvOff(): 'adb shell input keyevent KEYCODE_SLEEP'"
     adb shell input keyevent KEYCODE_SLEEP  # Turn Google TV off
-    log "TurnGtvOff(): Send: 'adb disconnect' to: '$GTV_IP'"
+    log "TurnGtvOff(): 'adb disconnect'"
     adb disconnect  # Will reconnect on resume
 
 } # TurnGtvOff
@@ -757,9 +758,6 @@ Init () {
     done
 
     log ""  # cosmetic blank line
-    log "Init(): Calling TurnLightsOn() - TV Bias Lighting"
-    TurnLightsOn  # Turn on Sony and Google TV's bias lights if < 100% sunlight
-    log ""  # cosmetic blank line
 
     # GTV_Online=$(nmap "$GTV_IP" | grep 'host up')
     # 2024-10-12 - nmap removed recently because it takes a long time to run
@@ -805,17 +803,22 @@ Init () {
         done
         log ""  # cosmetic blank line
         log "Init(): FINAL value of GTV_Online: '$GTV_Online'"
-        log ""  # cosmetic blank line
-        # If adb stops working, reset TV's developer options:
+
+        # First time and if adb stops working, set TV's developer options:
         # 1. Remove existing authorized adb keys on device
         # 2. Enable developer options (click settings/build version - 7 times)
         # 3. Enter Developer Options and turn on 'USB Debugging'
         # 4. Turn on 'Verify apps over USB'
         # 5. Turn on 'Mobile data always active'
         # 6. Select 'USB Configuration' = "Charging"
-        # 7. wakeonlan requires ethernet. It maybe necessary to turn off WiFi
+        # 7. wakeonlan requires ethernet. It might be necessary to turn off WiFi
         # 8. First time TV will prompt to confirm computer access and always allow
     fi
+
+    # Do last so eyesome has chance to update sunlight percentage
+    log ""  # cosmetic blank line
+    log "Init(): Calling TurnLightsOn() - TV Bias Lighting"
+    TurnLightsOn  # Turn on Sony and Google TV's bias lights if < 100% sunlight
 
     return 0  # Always returns True
 
