@@ -64,6 +64,7 @@ Python Module in **mserve** and automatically changes when the
 {:.no_toc}
 
 - Album Artwork animations and VU Meters during playback
+- Album Artwork alternate hi-resolution images automatically displayed 
 - Album Artwork at pixel 3,3 coordinates, sets a <a 
 href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
 during song playback (resizing window can result in different 
@@ -1214,9 +1215,30 @@ Click when commercials start and the TV volume is turned down to 25%.
 **mserve** playlist resumes play. When countdown ends the music pauses 
 and TV volume is turned back up to normal volume.
 - Shuffle button resorts the selected songs in the playlist.
-- Playlists are currently stored in pickle format but plans are to convert to SQL. Also, SQL search engine is planned.
-- SQL is used for the music library of songs and their lyrics.
-- Webscraping lyrics is via Genius but some results are "not ideal" so seven other websites out of six have support and a menu to select all six will come soon. SQL will record history of what was scraped when, edited when, how long edit took, time indexed synchronized when, other devices (locations) updated when, which songs were updated, etc.
+- Webscraping lyrics is via Genius but some results are "not ideal"
+so seven other websites out of six have support and a menu to select
+all six will come soon. SQL will record history of what was scraped
+when, edited when, how long edit took, time indexed synchronized when,
+other devices (locations) updated when, which songs were updated, etc.
+
+---
+
+## Hi-Resolution Substitute Artwork
+
+Some albums may have artwork for 2" screens at a resolution of
+225x225 pixels or even less. For playing these albums on larger
+screens, substitute artwork can be dropped into the album folder.
+
+Album artwork extensions can use `.jpg`, `.jpeg` or `.png` formats.
+
+The filename must be `ArtworkAlbum.xxx` where `xxx` is a supported
+extension.
+
+The album artwork is NOT applied to the song files. The album artwork
+is merely substituted when a song is played.
+
+Future plans will allow further substitution for a given song rather
+than all tracks on the album.
 
 ---
 
@@ -1803,6 +1825,9 @@ The pickle data file format allows serialized Python objects
 such as variables, lists and dictionaries to be stored in
 non-serialized format on storage devices.
 
+***NOTE:*** As of December 15, 2024, most pickle data files 
+have been abandoned and SQL is used instead.
+
 An abbreviation system is used for the filenames below:
 
 - `~/` represents your home directory.
@@ -1828,9 +1853,11 @@ the `~/.../mserve` directory:
 - **last_location** - lc.FNAME_LAST_LOCATION - The last location ID 
 used. E.G. "L001", "L002", etc. August 5, 2023 Note: This will soon
 be replaced by SQL History Table row Type='location', Action='last'.
+December 15, 2024 Note: This file is no longer used.
 - **locations** - lc.FNAME_LOCATIONS - All available locations and 
 their control settings. August 5, 2023 Note: This will soon
-be replaced by SQL Location Table. 
+be replaced by SQL Location Table. December 15, 2024 Note: This file
+is no longer used.
 - **library.db** - lc.FNAME_LIBRARY - *This is not in pickle format.*
 It is an sqlite3 database with Music Table and History Table.
 
@@ -1842,7 +1869,7 @@ and whether or not they are open (down triangle / chevron) or closed
 (left pointing triangle / chevron) in the *Music Location Tree* window.
 - **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
 songs checked (have the blue square) in the *Music Location Tree* window. 
-Sorted in playlist order.
+Sorted in playlist order. December 15, 2024 Note: This file is no longer used.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
 was shutdown.  August 5, 2023 Note: This is superseded by 
@@ -1851,6 +1878,8 @@ SQL History Table Row Type='resume', Action=<LOCATION CODE>.
 changes to music files' last modification time.  **mserve** uses this file
 as a shadow filesystem to track last modification time. Used by the 
 *Synchronize Location* function.
+- **size_dict** - Size dictionary for Smartphones. Same purpose as above. 
+- **walk_list** - Directory tree for Smartphones. Same purpose as above. 
 
 Within **mserve** Python scripts, **lc.FNAME** represents:
 
