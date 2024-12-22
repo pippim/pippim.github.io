@@ -10,9 +10,9 @@ created_date: 2019-12-13 00:38:18
 edit_date:    2019-12-16 15:19:43
 votes:        "2 "
 favorites:    
-views:        "9,128 "
+views:        "9,501 "
 accepted:     
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-Gnome3_-How-to-disable-_Shutdown_-button.md
 toc:          false
 navigation:   false

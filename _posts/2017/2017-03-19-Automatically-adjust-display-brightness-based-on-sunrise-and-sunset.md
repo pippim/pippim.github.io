@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/894470
 type:         Answer
-tags:         display laptop brightness backlight eyesome conky
+tags:         display laptop brightness backlight eyesome conky multi-timer
 created_date: 2017-03-19 01:10:27
-edit_date:    2019-02-07 01:43:56
+edit_date:    2024-09-30 16:06:18
 votes:        "8 "
 favorites:    
-views:        "7,249 "
+views:        "7,448 "
 accepted:     Accepted
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true
@@ -431,28 +431,35 @@ The systray indicator is setup using this code:
 ``` bash
 #!/bin/bash
 
+# UPDT: May 30 2018 - Cohesion with new multi-timer and old lock-screen-timer.
+#       July 6 2020 - New eyesome sunlight percentage.
+
 if [ -f ~/.lock-screen-timer-remaining ]; then
     text-spinner
     Spinner=$(cat ~/.last-text-spinner) # read last text spinner used
-    Minutes=$(cat ~/.lock-screen-timer-remaining)
-    systray=" $Spinner Lock screen in: $Minutes"
+    String=$(cat ~/.lock-screen-timer-remaining)
+    systray="$Spinner  $String"
 else
-    systray=" Lock screen: OFF"
+    systray=""
 fi
 
-if [ -f /tmp/display-current-brightness ]; then
-    Brightness=$(cat /tmp/display-current-brightness)
-    systray="$systray Brightness: $Brightness"
+if [ -f /usr/local/bin/.eyesome-percent ]; then
+    Brightness=$(cat /usr/local/bin/.eyesome-percent)
+    systray="$systray  eyesome: $Brightness"
 else
-    systray="$systray Brightness: OFF"
+    systray="$systray  eyesome: OFF"
 fi
 
+# Below for AU answer: https://askubuntu.com/questions/1024866/is-it-possible-to-show-ip-address-on-top-bar-near-the-time
+# default_interface=$(route -n | awk '$1 == "0.0.0.0" {print $8; exit}')
+# ip_address=$(ifconfig "$default_interface" | awk 'sub(/.* inet addr:/, "") {print $1}')
+# systray="$systray  $ip_address"
+        
 echo "$systray" # sysmon-indidicator will put echo string into systray for us.
 
 exit 0
 ```
-
-This Q&A ([Can BASH display in systray as application indicator?][6]) describes how to setup indicator-sysmonitor.
+This Q&A ([In Ubuntu Unity, can I display the output of a bash script in the systray area?][6]) describes how to setup indicator-sysmonitor.
 
 
 <a id="hdr11"></a>

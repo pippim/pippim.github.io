@@ -10,9 +10,9 @@ created_date: 2016-10-03 23:49:01
 edit_date:    2017-04-13 12:24:08
 votes:        "3 "
 favorites:    
-views:        "750 "
+views:        "764 "
 accepted:     Accepted
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Can-line-draw-characters-_or-colors_-be-added-to-a-Bash-file-list-menu_.md
 toc:          false
 navigation:   true

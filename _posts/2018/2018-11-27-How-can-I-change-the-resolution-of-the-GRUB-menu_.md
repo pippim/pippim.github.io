@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot grub2 display-resolution 18.10
 created_date: 2018-11-27 02:33:21
 edit_date:    2020-06-12 14:37:07
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "39,556 "
+views:        "41,341 "
 accepted:     
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-How-can-I-change-the-resolution-of-the-GRUB-menu_.md
 toc:          false
 navigation:   false

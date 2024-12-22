@@ -8,11 +8,11 @@ type:         Answer
 tags:         hard-drive ssd sata optical conky
 created_date: 2019-07-10 10:59:53
 edit_date:    2019-07-10 23:38:21
-votes:        "5 "
+votes:        "4 "
 favorites:    
-views:        "1,300 "
+views:        "1,311 "
 accepted:     
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-10-Load-average-is-high-after-adding-second-drive.md
 toc:          false
 navigation:   false

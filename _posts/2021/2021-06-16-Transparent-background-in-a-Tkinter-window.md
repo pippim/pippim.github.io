@@ -7,12 +7,12 @@ stack_url:    https://stackoverflow.com/q/67994877
 type:         Answer
 tags:         python tkinter transparency
 created_date: 2021-06-16 00:19:03
-edit_date:    2021-06-16 00:36:02
-votes:        "3 "
+edit_date:    2024-11-02 14:45:35
+votes:        "5 "
 favorites:    
-views:        "132,589 "
+views:        "135,817 "
 accepted:     
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-16-Transparent-background-in-a-Tkinter-window.md
 toc:          false
 navigation:   false
@@ -25,24 +25,6 @@ The "Linux Way" seems to be installing another package:
 
 ``` bash
 $ sudo apt install pqiv
-
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following NEW packages will be installed:
-  pqiv
-0 upgraded, 1 newly installed, 0 to remove and 11 not upgraded.
-Need to get 34.6 kB of archives.
-After this operation, 136 kB of additional disk space will be used.
-Get:1 http://ca.archive.ubuntu.com/ubuntu xenial/universe amd64 pqiv amd64 2.2-1 [34.6 kB]
-Fetched 34.6 kB in 0s (96.0 kB/s)
-Selecting previously unselected package pqiv.
-(Reading database ... 442035 files and directories currently installed.)
-Preparing to unpack .../archives/pqiv_2.2-1_amd64.deb ...
-Unpacking pqiv (2.2-1) ...
-Processing triggers for man-db (2.7.5-1) ...
-Processing triggers for mime-support (3.59ubuntu1) ...
-Setting up pqiv (2.2-1) ...
 ```
 
 But as I've had to install `xdotool` and other packages for my application what's another one right? Plus it will make the docker folks happy :)

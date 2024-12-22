@@ -8,11 +8,11 @@ type:         Answer
 tags:         grub2 bash upgrade backup clone
 created_date: 2018-04-27 03:53:41
 edit_date:    2020-06-12 14:37:07
-votes:        "37 "
+votes:        "38 "
 favorites:    
-views:        "21,063 "
+views:        "21,476 "
 accepted:     Accepted
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted.md
 toc:          true
 navigation:   true

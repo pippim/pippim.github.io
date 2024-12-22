@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line password sudo root
 created_date: 2018-05-17 00:12:01
 edit_date:    
-votes:        "11 "
+votes:        "12 "
 favorites:    
-views:        "1,099,586 "
+views:        "1,141,704 "
 accepted:     
-uploaded:     2024-09-15 11:08:07
+uploaded:     2024-12-22 11:32:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Execute-sudo-without-Password_.md
 toc:          false
 navigation:   false

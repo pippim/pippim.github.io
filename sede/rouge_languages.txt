@@ -97,6 +97,7 @@ javascript
 jinja
 jsl
 json
+json5
 json-doc
 jsonnet
 jsp
@@ -122,6 +123,7 @@ mathematica
 matlab
 meson
 minizinc
+mojo
 moonscript
 mosel
 msgtrans
