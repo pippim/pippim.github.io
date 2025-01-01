@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "117 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-24-Wall-broadcast-message-in-terminal-to-desktop-popup-message_.md
 toc:          false
 navigation:   false

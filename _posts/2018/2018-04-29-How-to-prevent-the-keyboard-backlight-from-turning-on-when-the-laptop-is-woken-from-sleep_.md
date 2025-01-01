@@ -10,9 +10,9 @@ created_date: 2018-04-29 06:18:45
 edit_date:    2020-09-14 23:22:29
 votes:        "2 "
 favorites:    
-views:        "4,025 "
+views:        "4,031 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-How-to-prevent-the-keyboard-backlight-from-turning-on-when-the-laptop-is-woken-from-sleep_.md
 toc:          false
 navigation:   false

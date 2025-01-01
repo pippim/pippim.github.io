@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "190 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-14-Is-there-graphical-backup-software-that-is-not-prone-to-consistency-problems_.md
 toc:          false
 navigation:   false

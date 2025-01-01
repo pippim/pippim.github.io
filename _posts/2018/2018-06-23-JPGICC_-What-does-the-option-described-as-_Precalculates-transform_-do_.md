@@ -10,9 +10,9 @@ created_date: 2018-06-23 16:00:02
 edit_date:    2020-10-03 13:23:54
 votes:        "2 "
 favorites:    
-views:        "171 "
+views:        "172 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-23-JPGICC_-What-does-the-option-described-as-_Precalculates-transform_-do_.md
 toc:          false
 navigation:   false
@@ -62,4 +62,5 @@ See the API reference for a more detailed discussion of the flags.
 
 
   [1]: https://sourceforge.net/p/lcms/mailman/message/29597867/
-  [2]: https://www.littlecms.com/LittleCMS2.11%20tutorial.pdf
+  [2]: http://www.littlecms.com/LittleCMS2.9%20tutorial.pdf
+ 

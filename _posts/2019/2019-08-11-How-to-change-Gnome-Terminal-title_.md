@@ -10,9 +10,9 @@ created_date: 2019-08-11 00:45:50
 edit_date:    2024-09-24 12:03:36
 votes:        "32 "
 favorites:    
-views:        "300,959 "
+views:        "301,139 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-07-10 01:00:27
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "49,395 "
+views:        "49,505 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-10-Which-Folders-To-Include-In-backup_.md
 toc:          false
 navigation:   false

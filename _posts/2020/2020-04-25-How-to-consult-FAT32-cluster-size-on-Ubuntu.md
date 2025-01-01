@@ -10,9 +10,9 @@ created_date: 2020-04-25 22:52:55
 edit_date:    2020-04-25 23:29:42
 votes:        "4 "
 favorites:    
-views:        "11,375 "
+views:        "11,431 "
 accepted:     Accepted
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-25-How-to-consult-FAT32-cluster-size-on-Ubuntu.md
 toc:          false
 navigation:   false

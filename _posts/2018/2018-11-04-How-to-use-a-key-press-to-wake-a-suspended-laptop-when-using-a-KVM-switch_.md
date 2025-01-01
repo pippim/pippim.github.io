@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1089840
 type:         Answer
 tags:         laptop wakeup lid kvm-switch
 created_date: 2018-11-04 00:33:56
-edit_date:    2018-11-04 15:41:57
+edit_date:    2024-12-22 18:22:13
 votes:        "4 "
 favorites:    
-views:        "6,549 "
+views:        "6,568 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true
@@ -138,7 +138,7 @@ One problem with this approach is that if the USB port the IR device is plugged 
 
 # Original Answer Below
 
-This question has three answers that may work for you: [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro))
+This question has three answers that may work for you: [Wake up from suspend using USB device](Wake up from suspend using USB device)
 
 
 ----------

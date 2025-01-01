@@ -10,9 +10,9 @@ created_date: 2019-10-04 11:03:54
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "4,816 "
+views:        "4,838 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-04-Disabling-external-monitor-with-xrandr-also-disables-laptop-screen.md
 toc:          false
 navigation:   false

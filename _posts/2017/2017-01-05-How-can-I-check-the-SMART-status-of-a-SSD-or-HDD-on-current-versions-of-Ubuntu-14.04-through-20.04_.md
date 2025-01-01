@@ -8,11 +8,11 @@ type:         Answer
 tags:         hard-drive ssd smart
 created_date: 2017-01-05 03:07:18
 edit_date:    2019-11-13 02:36:22
-votes:        "27 "
+votes:        "28 "
 favorites:    
-views:        "407,912 "
+views:        "408,722 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-05-How-can-I-check-the-SMART-status-of-a-SSD-or-HDD-on-current-versions-of-Ubuntu-14.04-through-20.04_.md
 toc:          false
 navigation:   false

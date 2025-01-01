@@ -10,9 +10,9 @@ created_date: 2018-06-16 23:09:24
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "1,920 "
+views:        "1,923 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-16-Can-I-remap-the-Caps-Lock-key-to-play-audio_.md
 toc:          false
 navigation:   false

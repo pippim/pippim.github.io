@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "332 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false
@@ -80,7 +80,7 @@ More elaborate instructions with screenshots are documented on the [Pippim Websi
 
 ### Platform
 
-The website runs on any modern Browser (so Internet Explorer is not supported). 
+The website runs on any modern Browser except Internet Explorer. 
 
 The python programs to convert Stack Exchange to GitHub Pages will not run on an Android or Apple Smart Phone. Only Linux, Windows and Mac. You can change your website with a Smart Phone though.
 

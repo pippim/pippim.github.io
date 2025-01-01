@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "98 "
 accepted:     Accepted
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-28-Freeze-after-computer-suspends-for-the-first-time-in-a-session.md
 toc:          false
 navigation:   false

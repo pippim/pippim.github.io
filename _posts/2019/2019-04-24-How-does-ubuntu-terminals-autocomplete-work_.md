@@ -10,9 +10,9 @@ created_date: 2019-04-24 02:55:56
 edit_date:    2022-05-16 04:19:19
 votes:        "2 "
 favorites:    
-views:        "1,845 "
+views:        "1,850 "
 accepted:     
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-How-does-ubuntu-terminals-autocomplete-work_.md
 toc:          false
 navigation:   false

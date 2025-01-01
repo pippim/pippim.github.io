@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "123 "
 accepted:     Accepted
-uploaded:     2024-12-22 11:32:00
+uploaded:     2025-01-01 04:48:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-30-Screen-crash-in-Lubuntu-and-Xubuntu-both-but-works-fine-with-Windows-Xp.md
 toc:          false
 navigation:   false
