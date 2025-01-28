@@ -10,9 +10,9 @@ created_date: 2022-02-23 12:06:22
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "846 "
+views:        "870 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
 toc:          false
 navigation:   false

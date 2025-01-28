@@ -10,9 +10,9 @@ created_date: 2018-06-17 21:38:02
 edit_date:    2018-06-17 23:53:20
 votes:        "19 "
 favorites:    
-views:        "23,376 "
+views:        "23,429 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-How-can-I-set-bluetooth-off-as-default_.md
 toc:          false
 navigation:   false

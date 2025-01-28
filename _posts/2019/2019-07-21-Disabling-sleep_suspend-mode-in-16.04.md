@@ -10,9 +10,9 @@ created_date: 2019-07-21 16:26:27
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "91 "
+views:        "93 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Disabling-sleep_suspend-mode-in-16.04.md
 toc:          false
 navigation:   false

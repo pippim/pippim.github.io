@@ -10,9 +10,9 @@ created_date: 2019-07-12 23:03:28
 edit_date:    2019-07-13 17:28:04
 votes:        "3 "
 favorites:    
-views:        "4,452 "
+views:        "4,488 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-12-How-do-I-increase-the-font-size-for-a-specific-application-in-Ubuntu-18.04-running-Gnome_.md
 toc:          false
 navigation:   false

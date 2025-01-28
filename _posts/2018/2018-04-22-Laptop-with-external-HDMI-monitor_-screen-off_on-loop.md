@@ -10,9 +10,9 @@ created_date: 2018-04-22 18:45:26
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "2,146 "
+views:        "2,164 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Laptop-with-external-HDMI-monitor_-screen-off_on-loop.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Your screen will still lock after inactivity but the password prompt will stay u
 Not the perfect solution but hopefully one that addresses your security concerns without the annoying loop.
 
 
-  [1]: {% post_url /2017/2017-03-09- %}
+  [1]: {% post_url /2017/2017-03-09-How-do-I-prevent-my-display-from-turning-off-when-screen-is-locked_ %}

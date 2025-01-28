@@ -10,9 +10,9 @@ created_date: 2019-12-20 01:38:40
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "33,428 "
+views:        "33,632 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-20-How-come-the-locate-command-doesn_t-find-obvious-files_.md
 toc:          false
 navigation:   false

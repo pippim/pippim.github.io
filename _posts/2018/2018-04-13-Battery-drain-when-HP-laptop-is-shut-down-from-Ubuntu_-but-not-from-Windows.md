@@ -10,9 +10,9 @@ created_date: 2018-04-13 02:05:19
 edit_date:    2018-04-18 23:47:20
 votes:        "6 "
 favorites:    
-views:        "4,684 "
+views:        "4,692 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-13-Battery-drain-when-HP-laptop-is-shut-down-from-Ubuntu_-but-not-from-Windows.md
 toc:          false
 navigation:   false

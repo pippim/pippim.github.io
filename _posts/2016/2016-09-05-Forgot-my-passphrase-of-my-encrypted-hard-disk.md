@@ -10,9 +10,9 @@ created_date: 2016-09-05 06:09:24
 edit_date:    2016-09-05 13:47:43
 votes:        "4 "
 favorites:    
-views:        "3,756 "
+views:        "3,794 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Forgot-my-passphrase-of-my-encrypted-hard-disk.md
 toc:          false
 navigation:   false

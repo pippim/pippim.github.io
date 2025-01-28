@@ -10,9 +10,9 @@ created_date: 2018-05-05 23:53:09
 edit_date:    2018-05-12 01:20:28
 votes:        "4 "
 favorites:    
-views:        "7,024 "
+views:        "7,034 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-No-sound-in-Ubuntu-18.04-after-rebooting-from-windows-10.md
 toc:          false
 navigation:   false

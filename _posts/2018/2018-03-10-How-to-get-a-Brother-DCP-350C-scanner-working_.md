@@ -10,9 +10,9 @@ created_date: 2018-03-10 01:49:45
 edit_date:    2018-03-13 23:03:51
 votes:        "9 "
 favorites:    
-views:        "6,837 "
+views:        "6,863 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-10-How-to-get-a-Brother-DCP-350C-scanner-working_.md
 toc:          true
 navigation:   true

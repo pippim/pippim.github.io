@@ -10,9 +10,9 @@ created_date: 2018-02-27 00:23:41
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "2,904 "
+views:        "2,954 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Intercept-shutdown-call-and-run-script-to-allow-or-prevent-shutdown.md
 toc:          false
 navigation:   false

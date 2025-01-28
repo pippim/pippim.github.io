@@ -10,9 +10,9 @@ created_date: 2018-12-12 00:11:24
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "10,343 "
+views:        "10,398 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-What-does-spool-mean-for-printing_.md
 toc:          false
 navigation:   false

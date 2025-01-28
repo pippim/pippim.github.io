@@ -10,9 +10,9 @@ created_date: 2019-11-04 01:59:26
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "22,957 "
+views:        "23,125 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-04-Is-it-possible-to-list-only-the-filename-and-size-for-each-file-in-a-directory-using-only-options-found-in-the-ls-utility_.md
 toc:          false
 navigation:   false

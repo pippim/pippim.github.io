@@ -10,9 +10,9 @@ created_date: 2019-07-03 11:28:17
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "2,340 "
+views:        "2,347 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-03-Intel-microcode-package-upgrade-in-ubuntu-18.04-leads-to-unbootable-system.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-06-19 02:14:50
 edit_date:    2020-10-06 13:31:29
 votes:        "68 "
 favorites:    
-views:        "187,876 "
+views:        "190,226 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-19-Setting-to-High-Performance.md
 toc:          false
 navigation:   false

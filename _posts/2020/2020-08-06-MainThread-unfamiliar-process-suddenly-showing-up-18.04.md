@@ -10,9 +10,9 @@ created_date: 2020-08-06 12:44:19
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,801 "
+views:        "2,824 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-06-MainThread-unfamiliar-process-suddenly-showing-up-18.04.md
 toc:          false
 navigation:   false

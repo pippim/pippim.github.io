@@ -10,9 +10,9 @@ created_date: 2018-05-08 11:48:30
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "10,224 "
+views:        "10,259 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-Why-can_t-I-cd-to-a-quoted-tilde-__~___.md
 toc:          false
 navigation:   false

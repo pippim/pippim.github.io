@@ -10,9 +10,9 @@ created_date: 2019-09-23 23:45:11
 edit_date:    2019-09-24 00:57:03
 votes:        "2 "
 favorites:    
-views:        "7,092 "
+views:        "7,203 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-23-I-cannot-open-gnome-terminal-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false

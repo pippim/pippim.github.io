@@ -10,9 +10,9 @@ created_date: 2018-04-29 18:14:34
 edit_date:    2018-05-07 23:29:11
 votes:        "7 "
 favorites:    
-views:        "323,064 "
+views:        "323,490 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Enable-fractional-scaling-for-Ubuntu-18.04.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-11-08 01:46:13
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "4,248 "
+views:        "4,281 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-08-Prevent-sleep-if-CPU-usage-is-high.md
 toc:          false
 navigation:   false

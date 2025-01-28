@@ -10,9 +10,9 @@ created_date: 2019-03-25 10:58:13
 edit_date:    2019-07-01 18:14:53
 votes:        "4 "
 favorites:    
-views:        "5,148 "
+views:        "5,207 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-25-How-to-clear-history-in-Gedit_-_Ubuntu-18.04_.md
 toc:          false
 navigation:   false

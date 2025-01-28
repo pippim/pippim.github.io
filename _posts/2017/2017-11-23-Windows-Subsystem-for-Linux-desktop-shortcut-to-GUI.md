@@ -10,9 +10,9 @@ created_date: 2017-11-23 01:26:29
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "11,209 "
+views:        "11,233 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-23-Windows-Subsystem-for-Linux-desktop-shortcut-to-GUI.md
 toc:          false
 navigation:   false

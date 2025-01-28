@@ -10,9 +10,9 @@ created_date: 2016-09-30 23:12:23
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "6,827 "
+views:        "6,858 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-Laptop-lid-close-doesn_t-suspend-then-the-battery-dies.md
 toc:          false
 navigation:   false

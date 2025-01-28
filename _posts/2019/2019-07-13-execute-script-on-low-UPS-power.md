@@ -10,9 +10,9 @@ created_date: 2019-07-13 01:02:51
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,109 "
+views:        "1,117 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-execute-script-on-low-UPS-power.md
 toc:          false
 navigation:   false

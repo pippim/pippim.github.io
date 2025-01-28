@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line bash process
 created_date: 2018-03-06 04:03:44
 edit_date:    2020-06-12 14:37:07
-votes:        "17 "
+votes:        "18 "
 favorites:    
-views:        "365,882 "
+views:        "368,680 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-06-How-do-I-get-the-parent-process-ID-of-a-given-child-process_.md
 toc:          false
 navigation:   false

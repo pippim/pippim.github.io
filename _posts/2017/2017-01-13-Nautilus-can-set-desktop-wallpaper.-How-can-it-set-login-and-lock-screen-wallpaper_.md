@@ -10,9 +10,9 @@ created_date: 2017-01-13 04:15:36
 edit_date:    2018-07-08 19:01:51
 votes:        "3 "
 favorites:    
-views:        "2,618 "
+views:        "2,620 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper_.md
 toc:          false
 navigation:   false

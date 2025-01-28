@@ -8,11 +8,11 @@ type:         Answer
 tags:         upgrade system-installation grub
 created_date: 2018-05-12 15:22:51
 edit_date:    
-votes:        "13 "
+votes:        "14 "
 favorites:    
-views:        "51,642 "
+views:        "51,857 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Is-a-clean-install-better-than-upgrading_.md
 toc:          false
 navigation:   false

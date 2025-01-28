@@ -10,9 +10,9 @@ created_date: 2017-08-06 13:29:31
 edit_date:    2020-06-12 14:37:07
 votes:        "0 "
 favorites:    
-views:        "1,047 "
+views:        "1,053 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-What-are-best-ways-to-improve-thermal-performance-on-Dell-Latitude-E5570-running-Ubuntu_.md
 toc:          false
 navigation:   false
@@ -34,7 +34,7 @@ Each laptop model can require different "tweaking" for CPU frequency, Turbo Boos
 - [Stop cpu from overheating]({% post_url /2017/2017-01-25-Stop-cpu-from-overheating %})
 - [Laptop running hot under ubuntu](Laptop running hot under ubuntu)
 - [What causes my fan to run?]({% post_url /2016/2016-11-25-What-causes-my-fan-to-run_ %})
-- []({% post_url /2016/2016-11-24- %})
+- [No version of Ubuntu can be installed with any Skylake 6th generation Intel processor]({% post_url /2016/2016-11-24-No-version-of-Ubuntu-can-be-installed-with-any-Skylake-6th-generation-Intel-processor %})
 
 # Which is the best link?
 

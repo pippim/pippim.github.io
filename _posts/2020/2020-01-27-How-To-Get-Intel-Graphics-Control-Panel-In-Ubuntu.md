@@ -10,9 +10,9 @@ created_date: 2020-01-27 12:47:43
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "16,832 "
+views:        "16,969 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-27-How-To-Get-Intel-Graphics-Control-Panel-In-Ubuntu.md
 toc:          false
 navigation:   false

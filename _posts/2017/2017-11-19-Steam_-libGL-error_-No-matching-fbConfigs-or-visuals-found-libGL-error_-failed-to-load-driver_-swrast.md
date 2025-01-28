@@ -10,9 +10,9 @@ created_date: 2017-11-19 17:26:41
 edit_date:    2023-07-12 03:26:27
 votes:        "17 "
 favorites:    
-views:        "205,718 "
+views:        "206,274 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-19-Steam_-libGL-error_-No-matching-fbConfigs-or-visuals-found-libGL-error_-failed-to-load-driver_-swrast.md
 toc:          false
 navigation:   false

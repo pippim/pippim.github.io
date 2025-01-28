@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "195 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-uninstalled-nvidia-drivers-still-showing-in-_additional-drivers_-tab.md
 toc:          false
 navigation:   false

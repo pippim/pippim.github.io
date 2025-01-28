@@ -8,11 +8,11 @@ type:         Answer
 tags:         grub2
 created_date: 2017-04-16 14:44:45
 edit_date:    2017-04-20 22:30:38
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "2,957 "
+views:        "2,961 "
 accepted:     
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-16-Unable-to-reduce-Grub-boot-delay.md
 toc:          false
 navigation:   false

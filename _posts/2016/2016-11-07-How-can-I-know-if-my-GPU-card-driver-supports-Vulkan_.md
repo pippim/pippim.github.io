@@ -10,9 +10,9 @@ created_date: 2016-11-07 10:03:42
 edit_date:    2016-11-07 10:37:51
 votes:        "1 "
 favorites:    
-views:        "119,839 "
+views:        "123,754 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-I-know-if-my-GPU-card-driver-supports-Vulkan_.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Question
 tags:         command-line bash redirect
 created_date: 2019-08-27 00:51:14
 edit_date:    2019-08-28 04:23:58
-votes:        "17 "
+votes:        "18 "
 favorites:    
-views:        "7,313 "
+views:        "7,344 "
 accepted:     Accepted
-uploaded:     2025-01-01 04:48:59
+uploaded:     2025-01-28 05:54:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-27-How-to-pass-2__dev_null-as-a-variable_.md
 toc:          false
 navigation:   false
