@@ -12,7 +12,7 @@ votes:        "30 "
 favorites:    
 views:        "27,280 "
 accepted:     Accepted
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-How-to-use-_xrandr-gamma_-for-Gnome-_Night-Light_-like-usage_.md
 toc:          false
 navigation:   false

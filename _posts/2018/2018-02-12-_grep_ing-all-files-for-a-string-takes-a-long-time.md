@@ -12,7 +12,7 @@ votes:        "18 "
 favorites:    
 views:        "6,449 "
 accepted:     Accepted
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-12-_grep_ing-all-files-for-a-string-takes-a-long-time.md
 toc:          true
 navigation:   true

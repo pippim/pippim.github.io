@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "10,547 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-03-How-can-I-reboot-extra-fast_.md
 toc:          true
 navigation:   true

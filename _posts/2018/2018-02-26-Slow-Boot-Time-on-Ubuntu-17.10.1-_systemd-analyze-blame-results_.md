@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "4,894 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-26-Slow-Boot-Time-on-Ubuntu-17.10.1-_systemd-analyze-blame-results_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "10,474 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-09-how-to-take-whole-ubuntu-16.04-system-backup-into-external-hard-disk.md
 toc:          false
 navigation:   false

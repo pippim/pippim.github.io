@@ -92,9 +92,8 @@
 │   ├── 2021 [36 entries exceeds filelimit, not opening dir]
 │   ├── 2022 [14 entries suppressed by massage_tree.sh]
 │   ├── 2023 [3 entries suppressed by massage_tree.sh]
-│   └── 2024 [8 entries suppressed by massage_tree.sh]
-│   └── 2025
-│       └── 2025-01-05-Many-_Unknown_-devices-in-Bluetooth-settings-tab_-keep-growing-over-time.md
+│   ├── 2024 [8 entries suppressed by massage_tree.sh]
+│   └── 2025 [1 entries suppressed by massage_tree.sh]
 ├── programs
 │   ├── hyperlink.md
 │   ├── iothings.md

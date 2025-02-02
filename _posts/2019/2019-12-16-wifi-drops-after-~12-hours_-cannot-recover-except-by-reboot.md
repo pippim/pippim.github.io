@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,083 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-16-wifi-drops-after-~12-hours_-cannot-recover-except-by-reboot.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "40,635 "
 accepted:     Accepted
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-10-How-to-check-_via-software_-if-my-usb-3.1gen2-Type-C-port-supports-Thunderbolt3_.md
 toc:          true
 navigation:   true

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "854 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-18-tput-does-not-try-_dev_tty-___.md
 toc:          false
 navigation:   false

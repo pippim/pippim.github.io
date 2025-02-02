@@ -37,6 +37,8 @@ c2023=0
 y2023=0
 c2024=0
 y2024=0
+c2025=0
+y2025=0
 newArray=()
 mapfile -t treeArray < "$1"
 for value in "${treeArray[@]}" ; do
@@ -51,6 +53,10 @@ for value in "${treeArray[@]}" ; do
         [[ $y2024 == 0 ]] && y2024=$((y2023 + 1))  # First "2024-" found
         # Do not use ((ndx - 1)) because it points into _sass directory
         ((c2024++))  # How many "2024-" were found
+    elif [[ $value == *"─ 2025-"* ]]; then
+        [[ $y2025 == 0 ]] && y2025=$((y2024 + 1))  # First "2025-" found
+        # Do not use ((ndx - 1)) because it points into _sass directory
+        ((c2025++))  # How many "2025-" were found
     else
         newArray+=("$value")
     fi
@@ -61,5 +67,7 @@ newArray[$y2022]="│   ├── 2022 [$c2022 entries suppressed by massage_tre
 # Nov. 17/23 2023
 newArray[$y2023]="│   ├── 2023 [$c2023 entries suppressed by massage_tree.sh]"
 # Feb. 19/24 2024
-newArray[$y2024]="│   └── 2024 [$c2024 entries suppressed by massage_tree.sh]"
+newArray[$y2024]="│   ├── 2024 [$c2024 entries suppressed by massage_tree.sh]"
+# Feb. 01/25 2025
+newArray[$y2025]="│   └── 2025 [$c2025 entries suppressed by massage_tree.sh]"
 printf "%s\n" "${newArray[@]}" > "$1"

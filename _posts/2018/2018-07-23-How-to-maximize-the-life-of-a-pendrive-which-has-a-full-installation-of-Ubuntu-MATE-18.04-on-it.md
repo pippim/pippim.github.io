@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "6,227 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-23-How-to-maximize-the-life-of-a-pendrive-which-has-a-full-installation-of-Ubuntu-MATE-18.04-on-it.md
 toc:          false
 navigation:   false

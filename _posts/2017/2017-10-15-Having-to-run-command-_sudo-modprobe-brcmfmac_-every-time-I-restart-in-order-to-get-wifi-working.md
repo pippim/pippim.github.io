@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,884 "
 accepted:     Accepted
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-15-Having-to-run-command-_sudo-modprobe-brcmfmac_-every-time-I-restart-in-order-to-get-wifi-working.md
 toc:          false
 navigation:   false

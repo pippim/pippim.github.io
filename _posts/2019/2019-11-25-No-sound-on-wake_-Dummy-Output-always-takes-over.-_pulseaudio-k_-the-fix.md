@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "7,964 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-No-sound-on-wake_-Dummy-Output-always-takes-over.-_pulseaudio-k_-the-fix.md
 toc:          false
 navigation:   false

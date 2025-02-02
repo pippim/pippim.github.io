@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "828 "
 accepted:     Accepted
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-11-powernow_k8-on-Lubuntu-18.04-is-flooding-my-kernel-log-with-CPU-frequency-errors.md
 toc:          false
 navigation:   false

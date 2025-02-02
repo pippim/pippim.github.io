@@ -12,7 +12,7 @@ votes:        "68 "
 favorites:    
 views:        "164,449 "
 accepted:     Accepted
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-23-How-do-I-stress-test-CPU-and-RAM-_at-the-same-time__.md
 toc:          false
 navigation:   false

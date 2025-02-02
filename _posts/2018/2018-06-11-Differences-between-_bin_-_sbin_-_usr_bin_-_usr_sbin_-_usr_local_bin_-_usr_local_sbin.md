@@ -12,7 +12,7 @@ votes:        "52 "
 favorites:    
 views:        "400,054 "
 accepted:     
-uploaded:     2025-01-28 05:54:29
+uploaded:     2025-02-01 17:53:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-11-Differences-between-_bin_-_sbin_-_usr_bin_-_usr_sbin_-_usr_local_bin_-_usr_local_sbin.md
 toc:          false
 navigation:   false
