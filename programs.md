@@ -127,6 +127,28 @@ self-documenting app. &emsp;&emsp;
 
 ---
 
+<a id="HomA"></a>
+## ***HomA*** (Home Automation)
+
+<!-- id link above to click from Ask Ubuntu answer -->
+<div>
+   <a href="https://askubuntu.com/a/1276376/307523">
+
+      <video src="https://private-user-images.githubusercontent.com/92641463/408811640-67621c4d-65eb-4cc9-9202-a6c4e0a23ae0.mp4"
+      data-canonical-src="https://private-user-images.githubusercontent.com/92641463/408811640-67621c4d-65eb-4cc9-9202-a6c4e0a23ae0.mp4"
+      controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+      style="float: left; width: 75% !important; margin: 1rem 2rem 1rem 0; 
+      max-height:640px; height: auto !important;">
+        </video>
+   </a>
+</div>
+
+<font size = "5">Automatically discover network devices and control them.</font>
+
+<a href="programs/homa.html" style="font-size: 20px;">Read More...</a>  
+
+---
+
 <a id="cdd"></a>
 ## `cdd` - a Change Directory (`cd`) Power Tool
 
