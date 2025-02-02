@@ -143,7 +143,12 @@ self-documenting app. &emsp;&emsp;
    </a>
 </div>
 
-<font size = "5">Automatically discover network devices and control them.</font>
+<font size = "5">Automatically discover network devices connected
+via LAN, WiFi or Bluetooth.</font>
+
+Turn devices on or off. Set Bluetooth LED light strip colors.
+Automatically turn off all device when suspending. Automatically
+turn them back on when resuming.
 
 <a href="programs/homa.html" style="font-size: 20px;">Read More...</a>  
 
