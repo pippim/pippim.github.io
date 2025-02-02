@@ -134,8 +134,8 @@ self-documenting app. &emsp;&emsp;
 <div>
    <a href="https://askubuntu.com/a/1276376/307523">
 
-      <video src="https://private-user-images.githubusercontent.com/92641463/408811640-67621c4d-65eb-4cc9-9202-a6c4e0a23ae0.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzg0NDkxMTcsIm5iZiI6MTczODQ0ODgxNywicGF0aCI6Ii85MjY0MTQ2My80MDg4MTE2NDAtNjc2MjFjNGQtNjVlYi00Y2M5LTkyMDItYTZjNGUwYTIzYWUwLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjAxVDIyMjY1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEzZjk0YTJhZDU0MjFkM2M0ZTBmMzQ4NDE3MmVkNTU2ZjhhNDViODMyODA1NDUxNjYyNWZlYjdkMDllZmZmM2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.PlkaTSs5mzztJEhl46JRi9KEuEjff8TzUAnjvypZSBQ"
-      data-canonical-src="https://private-user-images.githubusercontent.com/92641463/408811640-67621c4d-65eb-4cc9-9202-a6c4e0a23ae0.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzg0NDkxMTcsIm5iZiI6MTczODQ0ODgxNywicGF0aCI6Ii85MjY0MTQ2My80MDg4MTE2NDAtNjc2MjFjNGQtNjVlYi00Y2M5LTkyMDItYTZjNGUwYTIzYWUwLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjAxVDIyMjY1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEzZjk0YTJhZDU0MjFkM2M0ZTBmMzQ4NDE3MmVkNTU2ZjhhNDViODMyODA1NDUxNjYyNWZlYjdkMDllZmZmM2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.PlkaTSs5mzztJEhl46JRi9KEuEjff8TzUAnjvypZSBQ"
+      <video src="/assets/img/HomA/HomA Breathing stats.mp4"
+      data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
       controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
       style="float: left; width: 75% !important; margin: 1rem 2rem 1rem 0; 
       max-height:640px; height: auto !important;">
