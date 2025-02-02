@@ -17,8 +17,8 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - Smart plugs (ideally controlling Bias Lights behind TVs)
 - Bluetooth LED light strips
 
-<video src="https://private-user-images.githubusercontent.com/92641463/408811640-67621c4d-65eb-4cc9-9202-a6c4e0a23ae0.mp4"
-data-canonical-src="https://private-user-images.githubusercontent.com/92641463/408811640-67621c4d-65eb-4cc9-9202-a6c4e0a23ae0.mp4"
+<video src="/assets/img/HomA/HomA Breathing stats.mp4"
+data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
