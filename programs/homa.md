@@ -23,6 +23,31 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
+***NOTE:*** After clicking play on video, move the mouse off the video
+in order to see the color changing button bar in **HomA**.
+
+
+| Field                  | Description                                                    |
+|------------------------|----------------------------------------------------------------|
+| Dimmest value          | Lowest LED value used is 4. Range is 0 to 255.                 |
+| Brightest value        | Highest LED value used is 30. Range is 0 to 255.               |
+| Dimmest hold seconds   | Number of seconds to hold lowest value used is 1.5 seconds.    |
+| Brightest hold seconds | Number of seconds to hold brightest value used is 0.5 seconds. |
+| Breathe duration       | How much time is spent moving from dimmest to brightest.       |
+| Step duration          | How much time is spent on each color change. Value 0.275.      |
+| Step count             | Calculated by Breathe duration (6.0) / Step duration (0.275)   |
+| Step value             | Calculated by Breathe duration (6.0) / Step count (21)         |
+| Red                    | Current red value of LED. 0 = Off.                             |
+| Green                  | Current green value of LED. 0 = Off.                           |
+| Blue                   | Current blue value of LED. 0 = Off.                            |
+| Sunlight % boost       | Range 0% (nighttime) to 100% (full sunlight). Controlled by    |
+|                        | GNOME Nightlight or Pippim Eyesome. Percentage boosts the      |
+|                        | dimmest and brightest values of the LEDs but doesn't increase  |
+|                        | the number of steps so step values will be boosted.            |
+| Set LED Color          | Time spent setting LED colors.                                 |
+| Set LED Sleep          | After setting LED color, how much time sleeping before next.   |
+
+
 
 ## Under Construction
 {:.no_toc}
