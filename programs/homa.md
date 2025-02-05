@@ -27,29 +27,28 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 in order to see the color changing button bar in **HomA**.
 
 
-| Field                  | Description                                                    |
-|------------------------|----------------------------------------------------------------|
-| Dimmest value          | Lowest LED value used is 4. Range is 0 to 255.                 |
-| Brightest value        | Highest LED value used is 30. Range is 0 to 255.               |
-| Dimmest hold seconds   | Number of seconds to hold dimmest value used is 1.5 seconds.   |
-| Brightest hold seconds | Number of seconds to hold brightest value used is 0.5 seconds. |
-| Breathe duration       | How much time is spent moving from dimmest to brightest.       |
-| Step duration          | How much time is spent on each color change. Value 0.275.      |
-| Step count             | Calculated by Breathe duration (6.0) / Step duration (0.275)   |
-| Step value             | Calculated by Breathe duration (6.0) / Step count (21)         |
-| Red                    | Current red value of LED. 0 = Off.                             |
-| Green                  | Current green value of LED. 0 = Off.                           |
-| Blue                   | Current blue value of LED. 0 = Off.                            |
-| Sunlight % boost       | Range 0% (nighttime) to 100% (full sunlight). Controlled by    |
-|                        | GNOME Nightlight or Pippim Eyesome. Percentage boosts the      |
-|                        | dimmest and brightest values of the LEDs. It doesn't increase  |
-|                        | the number of steps so step values are boosted instead.        |
-| Set LED Color          | Time spent setting LED colors.                                 |
-| Set LED Sleep          | After setting LED color, how much time sleeping before next.   |
-| Regular Refresh        | This refresh allows screen updating and mouse input.           |
-| Fast Refresh           | This refresh appears to "freeze" HomA but keeps CPU use low.   |
-| LED Failures           | How many times Bluetooth lost communication for 1 second.      |
-| MAX_FAIL               | How many sequential LED failures until Breathing quits.        |
+| Field                  | Description                                                                                                                                                                         |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dimmest value          | Lowest LED value used is 4. Range is 0 to 255.                                                                                                                                      |
+| Brightest value        | Highest LED value used is 30. Range is 0 to 255.                                                                                                                                    |
+| Dimmest hold seconds   | Number of seconds to hold dimmest value used is 1.5 seconds.                                                                                                                        |
+| Brightest hold seconds | Number of seconds to hold brightest value used is 0.5 seconds.                                                                                                                      |
+| Breathe duration       | How much time is spent moving from dimmest to brightest.                                                                                                                            |
+| Step duration          | How much time is spent on each color change. Value 0.275.                                                                                                                           |
+| Step count             | Calculated by Breathe duration (6.0) / Step duration (0.275)                                                                                                                        |
+| Step value             | Calculated by Breathe duration (6.0) / Step count (21)                                                                                                                              |
+| Red                    | Current red value of LED. 0 = Off.                                                                                                                                                  |
+| Green                  | Current green value of LED. 0 = Off.                                                                                                                                                |
+| Blue                   | Current blue value of LED. 0 = Off.                                                                                                                                                 |
+| Sunlight % boost       | Range 0% (nighttime) to 100% (full sunlight). Controlled by<br>GNOME Nightlight or Pippim Eyesome. Percentage boosts the<br>the number of steps so step values are boosted instead. |
+| Set LED Color          | Time spent setting LED colors.                                                                                                                                                      |
+| Set LED Sleep          | After setting LED color, how much time sleeping before next.                                                                                                                        |
+| Regular Refresh        | This refresh allows screen updating and mouse input.                                                                                                                                |
+| Fast Refresh           | This refresh appears to "freeze" HomA but keeps CPU use low.                                                                                                                        |
+| LED Failures           | How many times Bluetooth lost communication for 1 second.                                                                                                                           |
+| MAX_FAIL               | How many sequential LED failures until Breathing quits.                                                                                                                             |
+
+---
 
 The first five fields are parameters you can control:
 
@@ -61,6 +60,7 @@ The first five fields are parameters you can control:
 | Brightest hold seconds | `tops` value is 0.5. Abbreviation is for "top seconds".        |
 | Breathe duration       | `span` value is 6.0. Longer span allows gradual color change.  |
 | Step duration          | `step` value is 0.275. Longer step allows regular refresh.     |
+
 
 ```python
 def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5):
