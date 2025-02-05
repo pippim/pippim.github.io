@@ -40,7 +40,7 @@ in order to see the color changing button bar in **HomA**.
 | Red                    | Current red value of LED. 0 = Off.                                                                                                                                                  |
 | Green                  | Current green value of LED. 0 = Off.                                                                                                                                                |
 | Blue                   | Current blue value of LED. 0 = Off.                                                                                                                                                 |
-| Sunlight % boost       | Range 0% (nighttime) to 100% (full sunlight). Controlled by<br>GNOME Nightlight or Pippim Eyesome. Percentage boosts the<br>the number of steps so step values are boosted instead. |
+| Sunlight Percentage    | Range 0% (nighttime) to 100% (full sunlight). Controlled by<br>GNOME Nightlight or Pippim Eyesome. Percentage boosts the<br>the number of steps so step values are boosted instead. |
 | Set LED Color          | Time spent setting LED colors.                                                                                                                                                      |
 | Set LED Sleep          | After setting LED color, how much time sleeping before next.                                                                                                                        |
 | Regular Refresh        | This refresh allows screen updating and mouse input.                                                                                                                                |
@@ -61,8 +61,10 @@ The first five fields are parameters you can control:
 | Breathe duration       | `span` value is 6.0. Longer span allows gradual color change.  |
 | Step duration          | `step` value is 0.275. Longer step allows regular refresh.     |
 
+<br><br><!-- Next line sucked into table -->
 
 ```python
+# homa.py - BluetoothLedLightStrip(DeviceCommonSelf) class - breathColors() method:
 def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5):
 ```
 
