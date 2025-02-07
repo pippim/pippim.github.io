@@ -221,7 +221,7 @@ pop-up menu appears:
 
 {% include image.html src="/assets/img/HomA/Right-click menu Bluetooth LED.png"
    alt="Right-click menu Bluetooth LED"
-   style="float: right; width: 50%; margin: .5rem 2rem 1rem 2rem;"
+   style="float: right; width: 100%; margin: .5rem 2rem 1rem 2rem;"
    caption="Right-click menu Bluetooth LED.png"
 %}
 
