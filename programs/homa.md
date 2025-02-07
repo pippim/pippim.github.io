@@ -265,27 +265,63 @@ fade out
 ## Preferences
 {:.no_toc}
 
-**HomA** Preferences:
+Preference fields that are greyed out are read-only and cannot be changed.
 
-| Dictionary Key   | Description                                                   |
+**HomA** Preferences Tabs:
+
+| Sony TV          | Description                                                   |
 |------------------|---------------------------------------------------------------|
-| TITLE            | Name of the Song                                              |
-| ARTIST           | Name of band or solo artist                                   |
-| ALBUM_ARTIST     | Same as ARTIST except for Compilations then "Various Artists" |
-| ALBUM            | Name of the Album                                             |
-| COPYRIGHT        | Date the Album (not the song) was released                    |
-| DISC             | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
-| TRACK_NUMBER     | E.G. When 12 tracks, first track "1/12", last track "12/12"   |
-| DATE             | Song's first release date in YYYY format. NOT the Album Date! |
-| GENRE            | E.G. "Rock", "Soundtrack", "Country", etc.                    |
-| CREATION_TIME    | Date and time music file created (encoded)                    |
-| COMPOSER         | When not specified, defaults to ARTIST                        |
-| COMMENT          | One line comment                                              |
-| COMPILATION      | When value is "1", folder is /Compilations/<ALBUM>            |
-| GAPLESS_PLAYBACK | "0" = Off, "1" = On. However, **HomA** doesn't support it.  |
-| ENCODER          | E.G. "HomA 3.4.3" or "iTunes 11.4.0.18"                     |
-| DISCID           | CDDB Free Disc ID                                             |
-| MUSICBRAINZ_DISC | MusicBrainz Disc ID                                           |
+| SONY_PWD         | Sony TV REST API Password. Default "123".                     |
+| CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
+| KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
+
+| Goggle TV        | Description                                                   |
+|------------------|---------------------------------------------------------------|
+| ADB_CON_TIME     | ADB connection time. Default "0.3".                           |
+| ADB_PWR_TIME     | ADB power on / power off time. Default "2.0".                 |
+| ADB_KEY_TIME     | ADB remote control keycode wait time. Default "5.0".          |
+| ADB_MAGIC_TIME   | Wake-on-lan command wait time. Default is "0.2".              |
+| TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
+| BLE_LS           | Bluetooth Low Energy LED Light Strip type code value is "40"  |
+
+| Smart Plug       | Description                                                |
+|------------------|------------------------------------------------------------|
+| PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
+| HS1_SP           | Smart Plug type code. Static value is "10"                 |
+
+| Miscellaneous       | Description                                                        |
+|---------------------|--------------------------------------------------------------------|
+| LED_LIGHTS_MAC      | MAC Address of Bluetooth LED Light Strip. Must be entered.         |
+| LED_LIGHTS_STARTUP  | On HomA startup Lights are turned on ("1") or off ("0").           |
+| LED_LIGHTS_COLOR    | Last used color when "Set Bluetooth LED Color" was applied.        |
+| BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.                    |
+| TIMER_SEC           | Seconds to run "Tools", "Timer". Default "600" (ten minutes).      |
+| TIMER_ALARM         | `.wav` filename to play when timer ends. Default "Alarm_01.wav".   |
+| SENSOR_CHECK        | How often the `sensors` command is run. Defaults to 1 second.      |
+| SENSOR_LOG          | How often to log sensor values. Default "3600" every hour.         |
+| FAN_GRANULAR        | Log sensor override when fan speed changes > x. Default "200" RPM. |
+
+| Power                | Description                                                          |
+|----------------------|----------------------------------------------------------------------|
+| CONFIG_FNAME         | Configuration filename. Static value is "config.json"                |
+| DEVICES_FNAME        | Previously discovered network devices. Static value "devices.json".  |
+| VIEW_ORDER_FNAME     | Saved order network devices are display in. Value "view_order.json". |
+| REFRESH_MS           | How many milliseconds screen is refreshed. Default "16" ms.          |
+| REDISCOVERY_SECONDS  | How often new network devices are checked. Default "60" seconds.     |
+| RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
+| RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
+
+| Computer            | Description                                                        |
+|---------------------|--------------------------------------------------------------------|
+| DESKTOP             | Desktop computer (anything not a laptop) type code is "100".       |
+| LAPTOP_B            | Laptop Base ("brains") CPU, GPU, Fans, USB, etc. Type code "110".  |
+| LAPTOP_D            | Laptop Display type code. Static value is "120".                   |
+| SUDO_PASSWORD       | Saved sudo password in encrypted format. Used occasionally.        |
+| BACKLIGHT_NAME      | Automatically obtained from `/sys/class/backlight`.                |
+| BACKLIGHT_ON        | Value for laptop display backlight on. Default is "0".             |
+| BACKLIGHT_OFF       | Value for laptop display backlight off. Default is "4".            |
+| POWER_OFF_CMD_LIST  | Command and arguments to suspend. Default `systemctl suspend`.     |
+| POWER_OFF_EXCL_LIST | Devices HomA doesn't need to power on/off during resume/suspend.   |
 
 
 # Python Modules Dashboard
@@ -317,6 +353,7 @@ values (Red, Green and Blue) communicated to the LED Light Strips via
 the computer's Bluetooth adapter.
 
 ## Sample Breathing Statistics Video
+{:.no_toc}
 
 <video src="/assets/img/HomA/HomA Breathing stats.mp4"
 data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
@@ -324,11 +361,15 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-***NOTE:*** After clicking play on video, move the mouse off the video
-in order to see the color changing button bar in **HomA**.
+***NOTE:*** After clicking play, move the mouse off the video
+in order to see the color changing button bar at the bottom of the video.
 
+---
 
-| Field                  | Description                                                                                                                                                                               |
+### View Breathing Statistics Window Fields
+{:.no_toc}
+
+| Window Field           | Description                                                                                                                                                                               |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Dimmest value          | Lowest LED value used is 4. Range is 0 to 255.                                                                                                                                            |
 | Brightest value        | Highest LED value used is 30. Range is 0 to 255.                                                                                                                                          |
@@ -348,6 +389,8 @@ in order to see the color changing button bar in **HomA**.
 | Fast Refresh           | This refresh appears to "freeze" HomA but keeps CPU use low.                                                                                                                              |
 | LED Failures           | How many times Bluetooth lost communication for 1 second.                                                                                                                                 |
 | MAX_FAIL               | How many sequential LED failures until Breathing quits.                                                                                                                                   |
+
+<br><br><!-- Next line sucked into table -->
 
 ---
 
