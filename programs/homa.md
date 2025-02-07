@@ -93,6 +93,17 @@ or `<HOME>\HomA\homa-indicator.py` for Windows. As of August 30, 2023,
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
+# Menus
+
+There are two types of menus in **HomA**:
+
+- Dropdown Menus at the top of the window: *File*, *Edit*, *View* and *Tools*.
+- Right-click Popup Menus. Use the mouse right button to click on any network 
+device and a popup menu will appear. General menu options for all devices are: 
+*Turn On*, *Turn Off*, *Move device Up* (the display order), 
+*Move device Down*&nbsp;(the display order) and *Close menu*. Specific Devices 
+such as *Sony TV* and *Bluetooth LED* have extra right-click popup menu options.
+
 ## Dropdown Menus
 
 The top-left corner of *HomA's* window contains 
@@ -237,7 +248,7 @@ clicking anywhere outside the menu area.
 
 ---
 
-## *Music Location Tree* Help Button
+# **HomA** Help Buttons
 
 **HomA** windows contain "Help" buttons that:
 
@@ -245,7 +256,7 @@ clicking anywhere outside the menu area.
 - Open this web page
 - Navigate down to the appropriate section on the web page
 
-### Help Button Sample Video
+## Help Button Sample Video
 {:.no_toc}
 
 <video src="https://user-images.githubusercontent.com/92641463/264478542-c9d7f483-3774-44b4-9bac-cf5f9b048034.mp4"
@@ -254,7 +265,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-#### Help Button Sample Video Highlights
+### Help Button Sample Video Highlights
 {:.no_toc}
 
 - The options for *File*, *Edit* and *View* dropdown menu are shown
@@ -262,7 +273,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 - Tooltips for buttons appear after a short delay
 - Tooltips gradually fade in, remain a short period, then gradually 
 fade out
-- The *Help* button is clicked and results appear
+- The *Help* button is clicked and results appear in a new browser window.
 
 ---
 
