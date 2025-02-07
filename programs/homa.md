@@ -210,7 +210,20 @@ reused on the next boot so you don't have to reenter it.
 ## Right-Click Popup Menus
 
 In the Network Devices view, you can move the mouse over a device
-and right click for a context-sensitive popup menu. 
+and right click for a context-sensitive popup menu.
+
+### Sample Right-Click Popup Menu
+{:.no_toc}
+
+When you right-click on a Bluetooth LED Light Strip device a
+pop-up menu appears:
+
+
+{% include image.html src="/assets/img/HomA/Right-click menu Bluetooth LED.png"
+   alt="Right-click menu Bluetooth LED"
+   style="float: right; width: 50%; margin: .5rem 2rem 1rem 2rem;"
+   caption="Right-click menu Bluetooth LED.png"
+%}
 
 ### Sony Bravia Professional Display TV 
 {:.no_toc}
