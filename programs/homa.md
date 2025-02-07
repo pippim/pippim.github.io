@@ -284,13 +284,13 @@ fade out
 
 To *Rediscover Now*, access the Dropdown Menus at the top of the screen. Select:
 
-- "File" menu with mouse or <kbd>Alt</bkd> + <kbd>F</bkd>
-- "Rediscover now" with mouse or <kbd>R</bkd>
+- "File" menu with mouse or <kbd>Alt</bkd> + <kbd>F</kbd>
+- "Rediscover now" with mouse or <kbd>R</kbd>
 
 ## Sample Rediscover Now Video
 
-<video src="/assets/img/HomA/HomA Rediscover now.mp4"
-data-canonical-src="/assets/img/HomA/HomA Rediscover now.mp4"
+<video src="/assets/img/HomA/HomA Rediscover Now.mp4"
+data-canonical-src="/assets/img/HomA/HomA Rediscover Now.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
@@ -312,8 +312,8 @@ in green. The power status is checked and set to:
 
 To edit Preferences access the Dropdown Menus at the top of the screen. Select:
 
-- "Edit" menu with mouse or <kbd>Alt</bkd> + <kbd>E</bkd>
-- "Preferences" with mouse or <kbd>P</bkd>
+- "Edit" menu with mouse or <kbd>Alt</kbd> + <kbd>E</kbd>
+- "Preferences" with mouse or <kbd>P</kbd>
 
 ## Sample Edit Preferences Notebook
 {:.no_toc}
@@ -404,7 +404,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
 | RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
 
-**HomA** Preferences Notebook *Computer* tab:
+### **HomA** Preferences Notebook *Computer* tab:
 
 | Computer            | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
