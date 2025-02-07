@@ -261,14 +261,26 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 fade out
 - The *Help* button is clicked and results appear
 
+---
 
-## Edit Preferences
-{:.no_toc}
+# Edit Preferences
 
 To edit Preferences access the Dropdown Menus at the top of the screen. Select:
 
 - "Edit" menu
 - "Preferences"
+
+## Sample Edit Preferences Notebook
+{:.no_toc}
+
+{% include image.html src="/assets/img/HomA/HomA Sample Edit Preferences Notebook.png"
+   alt="HomA Sample Edit Preferences Notebook"
+   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
+   caption="HomA Sample Edit Preferences Notebook.png"
+%}
+
+## **HomA** Preferences Notebook Tabs
+{:.no_toc}
 
 ***NOTES:***
 
