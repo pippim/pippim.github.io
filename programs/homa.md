@@ -39,7 +39,7 @@ Ubuntu 16.04 LTS ECM/Plus and Python 2.7.12.
 > 
 > - You *"should"* be able to toggle between Pyhon 2.7.x and 
 Python 3.x by changing the *"shebang"* at the top of each `.py`. 
-Currently, **HomA** *"should"* run with the default Python version.
+Currently, **HomA** *"should"* run with the default Python version. 
 Testing on Python 3.x will begin prior to next major **HomA** upgrade.
 > 
 > - Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
@@ -262,18 +262,47 @@ fade out
 - The *Help* button is clicked and results appear
 
 
-## Preferences
+## Edit Preferences
 {:.no_toc}
 
-Preference fields that are greyed out are read-only and cannot be changed.
+To edit Preferences access the Dropdown Menus at the top of the screen. Select:
 
-**HomA** Preferences Tabs:
+- "Edit" menu
+- "Preferences"
+
+***NOTES:***
+
+> 
+> - The *Preferences* Notebook is divided into multiple tabs. Click  
+on a specific tab to edit the fields. 
+> 
+> - Fields are validated based on type. For example, you cannot enter 
+the letter "a" into a numeric field.
+> 
+> - Fields that are greyed out are read-only. You cannot enter data 
+into these fields.
+> 
+> - Wait times like `CURL_TIME` is how long to wait before deciding a
+command failed. For example every network device must be tested to see 
+if it is a Sony TV. The REST API response time is very fast. So only 
+`0.2` seconds is required to wait. If the network device doesn't reply 
+suitably, **HomA** knows the device isn't a Sony TV. 
+> 
+> - Every Network Device is assigned a unique type code that **HomA** 
+uses internally. "10" = TP-Link/Kasa Smart Plug, "20" = Sony TV, 
+"30" = TCL / Google Android TV. "40" = Bluetooth Low Energy (BLE) 
+LED Light Strip. "100" = Desktop Computer. "110" = Laptop base. 
+"120" = Laptop Display. 
+
+**HomA** Preferences Notebook *Sony TV* tab:
 
 | Sony TV          | Description                                                   |
 |------------------|---------------------------------------------------------------|
 | SONY_PWD         | Sony TV REST API Password. Default "123".                     |
 | CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
 | KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
+
+**HomA** Preferences Notebook *Google TV* tab:
 
 | Goggle TV        | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -284,10 +313,14 @@ Preference fields that are greyed out are read-only and cannot be changed.
 | TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
 | BLE_LS           | Bluetooth Low Energy LED Light Strip type code value is "40"  |
 
+**HomA** Preferences Notebook *Smart Plug* tab:
+
 | Smart Plug       | Description                                                |
 |------------------|------------------------------------------------------------|
 | PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
 | HS1_SP           | Smart Plug type code. Static value is "10"                 |
+
+**HomA** Preferences Notebook *Miscellaneous* tab:
 
 | Miscellaneous       | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
@@ -301,6 +334,8 @@ Preference fields that are greyed out are read-only and cannot be changed.
 | SENSOR_LOG          | How often to log sensor values. Default "3600" every hour.         |
 | FAN_GRANULAR        | Log sensor override when fan speed changes > x. Default "200" RPM. |
 
+**HomA** Preferences Notebook Sony TV tab:
+
 | Power                | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
 | CONFIG_FNAME         | Configuration filename. Static value is "config.json"                |
@@ -310,6 +345,8 @@ Preference fields that are greyed out are read-only and cannot be changed.
 | REDISCOVERY_SECONDS  | How often new network devices are checked. Default "60" seconds.     |
 | RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
 | RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
+
+**HomA** Preferences Notebook *Computer* tab:
 
 | Computer            | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
