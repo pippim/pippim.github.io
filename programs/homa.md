@@ -100,7 +100,7 @@ There are two types of menus in **HomA**:
 - Dropdown Menus at the top of the window: *File*, *Edit*, *View* and *Tools*.
 - Right-click Popup Menus. Use the mouse right button to click on any network 
 device and a popup menu will appear. General menu options for all devices are: 
-*Turn On*, *Turn Off*, *Move device Up* (the display order), 
+*Turn On*, *Turn Off*, *Move device Up*&nbsp;(the display order), 
 *Move device Down*&nbsp;(the display order) and *Close menu*. Specific Devices 
 such as *Sony TV* and *Bluetooth LED* have extra right-click popup menu options.
 
@@ -280,12 +280,40 @@ fade out
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
+# Rediscover Now
+
+To *Rediscover Now*, access the Dropdown Menus at the top of the screen. Select:
+
+- "File" menu with mouse or <kbd>Alt</bkd> + <kbd>F</bkd>
+- "Rediscover now" with mouse or <kbd>R</bkd>
+
+## Sample Rediscover Now Video
+
+<video src="/assets/img/HomA/HomA Rediscover now.mp4"
+data-canonical-src="/assets/img/HomA/HomA Rediscover now.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+The above video shows how the *Rediscover Now* feature is activated with the mouse.
+The network searched by IP address and each matching device in *HomA* is highlighted
+in green. The power status is checked and set to:
+
+- "On" if the device is powered on.
+- "Off" if the device is powered off but, still connected to the network.
+- "?" if communication is lost with the device.
+
+---
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
 # Edit Preferences
 
 To edit Preferences access the Dropdown Menus at the top of the screen. Select:
 
-- "Edit" menu
-- "Preferences"
+- "Edit" menu with mouse or <kbd>Alt</bkd> + <kbd>E</bkd>
+- "Preferences" with mouse or <kbd>P</bkd>
 
 ## Sample Edit Preferences Notebook
 {:.no_toc}
@@ -324,7 +352,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 "100"&nbsp;=&nbsp;Desktop Computer. "110"&nbsp;=&nbsp;Laptop base. 
 "120"&nbsp;=&nbsp;Laptop Display. 
 
-**HomA** Preferences Notebook *Sony TV* tab:
+### **HomA** Preferences Notebook *Sony TV* tab:
 
 | Sony TV          | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -332,7 +360,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
 | KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
 
-**HomA** Preferences Notebook *Google TV* tab:
+### **HomA** Preferences Notebook *Google TV* tab:
 
 | Goggle TV        | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -343,14 +371,14 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
 | BLE_LS           | Bluetooth Low Energy LED Light Strip type code value is "40"  |
 
-**HomA** Preferences Notebook *Smart Plug* tab:
+### **HomA** Preferences Notebook *Smart Plug* tab:
 
 | Smart Plug       | Description                                                |
 |------------------|------------------------------------------------------------|
 | PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
 | HS1_SP           | Smart Plug type code. Static value is "10"                 |
 
-**HomA** Preferences Notebook *Miscellaneous* tab:
+### **HomA** Preferences Notebook *Miscellaneous* tab:
 
 | Miscellaneous       | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
@@ -364,7 +392,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | SENSOR_LOG          | How often to log sensor values. Default "3600" every hour.         |
 | FAN_GRANULAR        | Log sensor override when fan speed changes > x. Default "200" RPM. |
 
-**HomA** Preferences Notebook Sony TV tab:
+### **HomA** Preferences Notebook Sony TV tab:
 
 | Power                | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
@@ -390,24 +418,17 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | POWER_OFF_CMD_LIST  | Command and arguments to suspend. Default `systemctl suspend`.     |
 | POWER_OFF_EXCL_LIST | Devices HomA doesn't need to power on/off during resume/suspend.   |
 
+The `POWER_OFF_EXCL_LIST` field contains three type codes for devices that do not need
+to be powered off. These devices are powered down automatically during system suspend:
 
-# Python Modules Dashboard
-
-This dashboard is autogenerated when the website is refreshed.
-There are more dashboards in 
-[The Cookie Machine ⧉](https://www.pippim.com/programs/tcm.html#cloud-button
-"TCM has Dashboards for Storage"){:target="_blank"} 
-for global {{ site.title }} Website maintenance.
-
-*Table was updated {{ site.refreshed | date: "%B %e, %Y" }}.*
-The table is autogenerated when 
-[`refresh.sh` ⧉ 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh
-"View refresh.sh source code (Bash Script) on GitHub"){:target="_blank"}
+- `100` for Desktop computer
+- `110` for Laptop base
+- `120` for Laptop display
 
 ---
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 
 # View Bluetooth LED Breathing Colors Statistics
@@ -476,15 +497,6 @@ The first five fields are parameters you can control:
 
 def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5):
 ```
-
----
-
----
-
----
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 ---
 
