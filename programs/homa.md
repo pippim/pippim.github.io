@@ -17,58 +17,6 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - Smart plugs (ideally controlling Bias Lights behind TVs)
 - Bluetooth LED light strips
 
-<video src="/assets/img/HomA/HomA Breathing stats.mp4"
-data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-style="max-height:640px; width: 100% !important; height: auto !important;">
-  </video>
-
-***NOTE:*** After clicking play on video, move the mouse off the video
-in order to see the color changing button bar in **HomA**.
-
-
-| Field                  | Description                                                                                                                                                                               |
-|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dimmest value          | Lowest LED value used is 4. Range is 0 to 255.                                                                                                                                            |
-| Brightest value        | Highest LED value used is 30. Range is 0 to 255.                                                                                                                                          |
-| Dimmest hold seconds   | Number of seconds to hold dimmest value used is 1.5 seconds.                                                                                                                              |
-| Brightest hold seconds | Number of seconds to hold brightest value used is 0.5 seconds.                                                                                                                            |
-| Breathe duration       | How much time is spent moving from dimmest to brightest.                                                                                                                                  |
-| Step duration          | How much time is spent on each color change. Value 0.275.                                                                                                                                 |
-| Step count             | Calculated by Breathe duration (6.0) / Step duration (0.275)                                                                                                                              |
-| Step value             | Calculated by Breathe duration (6.0) / Step count (21)                                                                                                                                    |
-| Red                    | Current red value of LED. 0 = Off.                                                                                                                                                        |
-| Green                  | Current green value of LED. 0 = Off.                                                                                                                                                      |
-| Blue                   | Current blue value of LED. 0 = Off.                                                                                                                                                       |
-| Sunlight Percentage    | Range 0% (nighttime) to 100% (full sunlight). Controlled by<br>GNOME Nightlight or Pippim Eyesome. Percentage boosts the<br>the dimmest and brightest values but not the number of steps. |
-| Set LED Color          | Time spent setting LED colors.                                                                                                                                                            |
-| Set LED Sleep          | After setting LED color, how much time sleeping before next.                                                                                                                              |
-| Regular Refresh        | This refresh allows screen updating and mouse input.                                                                                                                                      |
-| Fast Refresh           | This refresh appears to "freeze" HomA but keeps CPU use low.                                                                                                                              |
-| LED Failures           | How many times Bluetooth lost communication for 1 second.                                                                                                                                 |
-| MAX_FAIL               | How many sequential LED failures until Breathing quits.                                                                                                                                   |
-
----
-
-The first five fields are parameters you can control:
-
-| Field                  | Internal argument name                                         |
-|------------------------|----------------------------------------------------------------|
-| Dimmest value          | `low` value is 4. If too low light will be off.                |
-| Brightest value        | `high` value is 30. Max is 255 but is way to bright.           |
-| Dimmest hold seconds   | `bots` value is 1.5. Abbreviation is for "bottom seconds".     |
-| Brightest hold seconds | `tops` value is 0.5. Abbreviation is for "top seconds".        |
-| Breathe duration       | `span` value is 6.0. Longer span allows gradual color change.  |
-| Step duration          | `step` value is 0.275. Longer step allows regular refresh.     |
-
-<br><br><!-- Next line sucked into table -->
-
-```python
-# homa.py - BluetoothLedLightStrip(DeviceCommonSelf) class - breathColors() method:
-
-def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5):
-```
-
 ## Under Construction
 {:.no_toc}
 
@@ -139,9 +87,6 @@ or `<HOME>\HomA\homa-indicator.py` for Windows. As of August 30, 2023,
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
-
----
-playing favorites from where it left off.
 
 ---
 
@@ -221,7 +166,7 @@ pop-up menu appears:
 
 {% include image.html src="/assets/img/HomA/Right-click menu Bluetooth LED.png"
    alt="Right-click menu Bluetooth LED"
-   style="float: right; width: 100%; margin: .5rem 2rem 1rem 2rem;"
+   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
    caption="Right-click menu Bluetooth LED.png"
 %}
 
@@ -360,6 +305,153 @@ calls
 There are also some Bash scripts:
 
 ---
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+
+
+# View Bluetooth LED Breathing Colors Statistics
+
+The ***View Breathing Statistics*** window displays in realtime the color
+values (Red, Green and Blue) communicated to the LED Light Strips via
+the computer's Bluetooth adapter.
+
+## Sample Breathing Statistics Video
+
+<video src="/assets/img/HomA/HomA Breathing stats.mp4"
+data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+***NOTE:*** After clicking play on video, move the mouse off the video
+in order to see the color changing button bar in **HomA**.
+
+
+| Field                  | Description                                                                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dimmest value          | Lowest LED value used is 4. Range is 0 to 255.                                                                                                                                            |
+| Brightest value        | Highest LED value used is 30. Range is 0 to 255.                                                                                                                                          |
+| Dimmest hold seconds   | Number of seconds to hold dimmest value used is 1.5 seconds.                                                                                                                              |
+| Brightest hold seconds | Number of seconds to hold brightest value used is 0.5 seconds.                                                                                                                            |
+| Breathe duration       | How much time is spent moving from dimmest to brightest.                                                                                                                                  |
+| Step duration          | How much time is spent on each color change. Value 0.275.                                                                                                                                 |
+| Step count             | Calculated by Breathe duration (6.0) / Step duration (0.275)                                                                                                                              |
+| Step value             | Calculated by Breathe duration (6.0) / Step count (21)                                                                                                                                    |
+| Red                    | Current red value of LED. 0 = Off.                                                                                                                                                        |
+| Green                  | Current green value of LED. 0 = Off.                                                                                                                                                      |
+| Blue                   | Current blue value of LED. 0 = Off.                                                                                                                                                       |
+| Sunlight Percentage    | Range 0% (nighttime) to 100% (full sunlight). Controlled by<br>GNOME Nightlight or Pippim Eyesome. Percentage boosts the<br>the dimmest and brightest values but not the number of steps. |
+| Set LED Color          | Time spent setting LED colors.                                                                                                                                                            |
+| Set LED Sleep          | After setting LED color, how much time sleeping before next.                                                                                                                              |
+| Regular Refresh        | This refresh allows screen updating and mouse input.                                                                                                                                      |
+| Fast Refresh           | This refresh appears to "freeze" HomA but keeps CPU use low.                                                                                                                              |
+| LED Failures           | How many times Bluetooth lost communication for 1 second.                                                                                                                                 |
+| MAX_FAIL               | How many sequential LED failures until Breathing quits.                                                                                                                                   |
+
+---
+
+The first five fields are parameters you can control:
+
+| Field                  | Internal argument name                                         |
+|------------------------|----------------------------------------------------------------|
+| Dimmest value          | `low` value is 4. If too low light will be off.                |
+| Brightest value        | `high` value is 30. Max is 255 but is way to bright.           |
+| Dimmest hold seconds   | `bots` value is 1.5. Abbreviation is for "bottom seconds".     |
+| Brightest hold seconds | `tops` value is 0.5. Abbreviation is for "top seconds".        |
+| Breathe duration       | `span` value is 6.0. Longer span allows gradual color change.  |
+| Step duration          | `step` value is 0.275. Longer step allows regular refresh.     |
+
+<br><br><!-- Next line sucked into table -->
+
+```python
+# homa.py - BluetoothLedLightStrip(DeviceCommonSelf) class - breathColors() method:
+
+def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5):
+```
+
+---
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+
+---
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
+---
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+
+---
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+---
+
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+
+---
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+
+---
+
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
+
+---
+
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
+
+---
+
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+
+---
+
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
+
+---
+
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
+
+---
+
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
+
+---
+
+<a id="hdr16"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr17">Skip</a></div>
+
+---
+
+<a id="hdr17"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr16">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr18">Skip</a></div>
+
+---
+
+<a id="hdr18"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr19">Skip</a></div>
+
+---
+
+<a id="hdr19"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr20">Skip</a></div>
+
+---
+
 
 <!-- Foot section doesn't have "skip" button -->
 <a id="hdr20"></a>
