@@ -4,6 +4,7 @@ layout: program
 canonical_url: 'https://www.pippim.com/programs/homa.html'
 ---
 
+<a id="Introduction"></a>
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
@@ -284,8 +285,11 @@ fade out
 
 To *Rediscover Now*, access the Dropdown Menus at the top of the screen. Select:
 
-- "File" menu with mouse or <kbd>Alt</bkd> + <kbd>F</kbd>
+- "File" menu with mouse or <kbd>Alt</kbd> + <kbd>F</kbd>
 - "Rediscover now" with mouse or <kbd>R</kbd>
+
+Rediscovery is automatically run every minute. However you can run it manually
+at anytime using this function.
 
 ## Sample Rediscover Now Video
 
@@ -310,7 +314,7 @@ in green. The power status is checked and set to:
 
 # Edit Preferences
 
-To edit Preferences access the Dropdown Menus at the top of the screen. Select:
+To edit Preferences, access the Dropdown Menus at the top of the screen. Select:
 
 - "Edit" menu with mouse or <kbd>Alt</kbd> + <kbd>E</kbd>
 - "Preferences" with mouse or <kbd>P</kbd>
@@ -324,7 +328,7 @@ To edit Preferences access the Dropdown Menus at the top of the screen. Select:
    caption="HomA Sample Edit Preferences Notebook.png"
 %}
 
-## **HomA** Preferences Notebook Tabs
+## Preferences Notebook Tabs
 {:.no_toc}
 
 ***NOTES:***
@@ -352,7 +356,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 "100"&nbsp;=&nbsp;Desktop Computer. "110"&nbsp;=&nbsp;Laptop base. 
 "120"&nbsp;=&nbsp;Laptop Display. 
 
-### **HomA** Preferences Notebook *Sony TV* tab:
+### Preferences Notebook *Sony TV* tab:
 
 | Sony TV          | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -360,7 +364,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
 | KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
 
-### **HomA** Preferences Notebook *Google TV* tab:
+### Preferences Notebook *Google TV* tab:
 
 | Goggle TV        | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -371,14 +375,14 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
 | BLE_LS           | Bluetooth Low Energy LED Light Strip type code value is "40"  |
 
-### **HomA** Preferences Notebook *Smart Plug* tab:
+### Preferences Notebook *Smart Plug* tab:
 
 | Smart Plug       | Description                                                |
 |------------------|------------------------------------------------------------|
 | PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
 | HS1_SP           | Smart Plug type code. Static value is "10"                 |
 
-### **HomA** Preferences Notebook *Miscellaneous* tab:
+### Preferences Notebook *Miscellaneous* tab:
 
 | Miscellaneous       | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
@@ -392,7 +396,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | SENSOR_LOG          | How often to log sensor values. Default "3600" every hour.         |
 | FAN_GRANULAR        | Log sensor override when fan speed changes > x. Default "200" RPM. |
 
-### **HomA** Preferences Notebook Sony TV tab:
+### Preferences Notebook Sony TV tab:
 
 | Power                | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
@@ -404,7 +408,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
 | RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
 
-### **HomA** Preferences Notebook *Computer* tab:
+### Preferences Notebook *Computer* tab:
 
 | Computer            | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
