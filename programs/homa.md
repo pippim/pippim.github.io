@@ -309,6 +309,7 @@ in green. The power status is checked and set to:
 
 ---
 
+<a id="EditPreferences"></a>
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
@@ -347,7 +348,8 @@ into these fields.
 command failed. For example, every network device must be tested to see 
 if it is a Sony TV. The REST API response time is very fast. So only 
 `0.2` seconds is required to wait. If the network device doesn't reply 
-suitably, **HomA** knows the device isn't a Sony TV. 
+appropriately after `0.2` seconds, **HomA** knows the device isn't a Sony TV. 
+If the timeout is longer, HomA takes longer to discover all the network devices.
 > 
 > - Every Network Device is assigned a unique type code that **HomA** 
 uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug, 
