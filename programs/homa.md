@@ -382,7 +382,6 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | ADB_KEY_TIME     | ADB remote control keycode wait time. Default "5.0".          |
 | ADB_MAGIC_TIME   | Wake-on-lan command wait time. Default is "0.2".              |
 | TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
-| BLE_LS           | Bluetooth Low Energy LED Light Strip type code value is "40"  |
 
 <a id="EditPreferencesSmart_Plug"></a>
 ### Preferences Notebook *Smart Plug* tab:
@@ -392,25 +391,32 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
 | HS1_SP           | Smart Plug type code. Static value is "10"                 |
 
+<a id="EditPreferencesLED_Lights"></a>
+### Preferences Notebook *LED Lights* tab:
+
+| LED Lights          | Description                                                    |
+|---------------------|----------------------------------------------------------------|
+| LED_LIGHTS_MAC      | MAC Address of Bluetooth LED Light Strip. Must be entered.     |
+| LED_LIGHTS_STARTUP  | On HomA startup Lights are turned on ("1") or off ("0").       |
+| LED_LIGHTS_COLOR    | Last used color when "Set Bluetooth LED Color" was applied.    |
+| BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.                |
+| BLE_LS              | Bluetooth Low Energy LED Light Strip type code value is "40"   |
+
 <a id="EditPreferencesMiscellaneous"></a>
 ### Preferences Notebook *Miscellaneous* tab:
 
-| Miscellaneous       | Description                                                        |
-|---------------------|--------------------------------------------------------------------|
-| LED_LIGHTS_MAC      | MAC Address of Bluetooth LED Light Strip. Must be entered.         |
-| LED_LIGHTS_STARTUP  | On HomA startup Lights are turned on ("1") or off ("0").           |
-| LED_LIGHTS_COLOR    | Last used color when "Set Bluetooth LED Color" was applied.        |
-| BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.                    |
-| TIMER_SEC           | Seconds to run "Tools", "Timer". Default "600" (ten minutes).      |
-| TIMER_ALARM         | `.wav` filename to play when timer ends. Default "Alarm_01.wav".   |
-| SENSOR_CHECK        | How often the `sensors` command is run. Defaults to 1 second.      |
-| SENSOR_LOG          | How often to log sensor values. Default "3600" every hour.         |
-| FAN_GRANULAR        | Log sensor override when fan speed changes > x. Default "200" RPM. |
+| Miscellaneous  | Description                                                        |
+|----------------|--------------------------------------------------------------------|
+| TIMER_SEC      | Seconds to run "Tools", "Timer". Default "600" (ten minutes).      |
+| TIMER_ALARM    | `.wav` filename to play when timer ends. Default "Alarm_01.wav".   |
+| SENSOR_CHECK   | How often the `sensors` command is run. Defaults to 1 second.      |
+| SENSOR_LOG     | How often to log sensor values. Default "3600" every hour.         |
+| FAN_GRANULAR   | Log sensor override when fan speed changes > x. Default "200" RPM. |
 
-<a id="EditPreferencesPower"></a>
-### Preferences Notebook Power tab:
+<a id="EditPreferencesRefresh"></a>
+### Preferences Notebook Refresh tab:
 
-| Power                | Description                                                          |
+| Refresh              | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
 | CONFIG_FNAME         | Configuration filename. Static value is "config.json"                |
 | DEVICES_FNAME        | Previously discovered network devices. Static value "devices.json".  |
@@ -428,7 +434,6 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | DESKTOP             | Desktop computer (anything not a laptop) type code is "100".       |
 | LAPTOP_B            | Laptop Base ("brains") CPU, GPU, Fans, USB, etc. Type code "110".  |
 | LAPTOP_D            | Laptop Display type code. Static value is "120".                   |
-| SUDO_PASSWORD       | Saved sudo password in encrypted format. Used occasionally.        |
 | BACKLIGHT_NAME      | Automatically obtained from `/sys/class/backlight`.                |
 | BACKLIGHT_ON        | Value for laptop display backlight on. Default is "0".             |
 | BACKLIGHT_OFF       | Value for laptop display backlight off. Default is "4".            |
