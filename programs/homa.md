@@ -314,7 +314,7 @@ in green. The power status is checked and set to:
 ---
 
 <a id="EditPreferences"></a>
-<!-- ^ Define EditPreferences help button -->
+<!-- ^ Define Edit Preferences Notebook help button -->
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
@@ -325,14 +325,13 @@ To edit Preferences, access the Dropdown Menus at the top of the screen. Select:
 - "Edit" menu with mouse or <kbd>Alt</kbd> + <kbd>E</kbd>
 - "Preferences" with mouse or <kbd>P</kbd>
 
-## Sample Edit Preferences Notebook
+## Sample Edit Preferences Notebook Video
 {:.no_toc}
-
-{% include image.html src="/assets/img/HomA/HomA Sample Edit Preferences Notebook.png"
-   alt="HomA Sample Edit Preferences Notebook"
-   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
-   caption="HomA Sample Edit Preferences Notebook.png"
-%}
+<video src="/assets/img/HomA/HomA Edit Preferences.mp4"
+data-canonical-src="/assets/img/HomA/HomA Edit Preferences.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
 
 ## Preferences Notebook Tabs
 {:.no_toc}
@@ -364,6 +363,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 "120"&nbsp;=&nbsp;Laptop Display. 
 
 <a id="EditPreferencesSony_TV"></a>
+<!-- ^ Define Edit Preferences Notebook Sony TV Tab help button -->
 ### Preferences Notebook *Sony TV* tab:
 
 | Sony TV          | Description                                                   |
@@ -414,7 +414,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | FAN_GRANULAR   | Log sensor override when fan speed changes > x. Default "200" RPM. |
 
 <a id="EditPreferencesRefresh"></a>
-### Preferences Notebook Refresh tab:
+### Preferences Notebook *Refresh* tab:
 
 | Refresh              | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
