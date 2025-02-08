@@ -14,9 +14,13 @@ canonical_url: 'https://www.pippim.com/programs/homa.html'
 **HomA** (Home Automation) automatically searches LAN, WiFi and Bluetooth.
 It allows you to turn devices on and off from your computer. Devices such as:
 
-- Televisions
-- Smart plugs (ideally controlling Bias Lights behind TVs)
-- Bluetooth LED light strips
+- Sony Bravia KDL Televisions / Professional Displays using REST API
+- TCL Google Android TVs using ADB (Android Debugging Bridge)
+- TP-Link / Kasa WiFi Smart plugs (great for controlling Bias Lights behind TVs)
+- Happy Lighting Bluetooth Low Energy (BLE) LED light strips
+- Power on/off laptop displays
+- Suspend computer and power off all devices above
+- When resuming, power on all devices above
 
 ## Under Construction
 {:.no_toc}
@@ -310,6 +314,7 @@ in green. The power status is checked and set to:
 ---
 
 <a id="EditPreferences"></a>
+<!-- ^ Define EditPreferences help button -->
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
