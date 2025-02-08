@@ -363,6 +363,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 "100"&nbsp;=&nbsp;Desktop Computer. "110"&nbsp;=&nbsp;Laptop base. 
 "120"&nbsp;=&nbsp;Laptop Display. 
 
+<a id="EditPreferencesSony_TV"></a>
 ### Preferences Notebook *Sony TV* tab:
 
 | Sony TV          | Description                                                   |
@@ -371,6 +372,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
 | KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
 
+<a id="EditPreferencesGoogle_TV"></a>
 ### Preferences Notebook *Google TV* tab:
 
 | Goggle TV        | Description                                                   |
@@ -382,6 +384,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
 | BLE_LS           | Bluetooth Low Energy LED Light Strip type code value is "40"  |
 
+<a id="EditPreferencesSmart_Plug"></a>
 ### Preferences Notebook *Smart Plug* tab:
 
 | Smart Plug       | Description                                                |
@@ -389,6 +392,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
 | HS1_SP           | Smart Plug type code. Static value is "10"                 |
 
+<a id="EditPreferencesMiscellaneous"></a>
 ### Preferences Notebook *Miscellaneous* tab:
 
 | Miscellaneous       | Description                                                        |
@@ -403,7 +407,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | SENSOR_LOG          | How often to log sensor values. Default "3600" every hour.         |
 | FAN_GRANULAR        | Log sensor override when fan speed changes > x. Default "200" RPM. |
 
-### Preferences Notebook Sony TV tab:
+<a id="EditPreferencesPower"></a>
+### Preferences Notebook Power tab:
 
 | Power                | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
@@ -415,6 +420,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
 | RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
 
+<a id="EditPreferencesComputer"></a>
 ### Preferences Notebook *Computer* tab:
 
 | Computer            | Description                                                        |
