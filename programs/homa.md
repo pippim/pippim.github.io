@@ -36,6 +36,37 @@ manually downloading files from GitHub and installing any
 missing dependencies with `apt get install` in Debian/Ubuntu
 or `pip install` on other Operating Systems.
 
+Requirements include:
+
+- ***Linux*** or compatible Apple, Google Chrome OS, WSL
+- ***Bluez tools*** (kernel version not GNOME desktop version) includes 
+`hcitool`, `hciconfig` and `gatt` commands.
+- `trionesControl` (already included in HomA subdirectory)
+- `gatttool` (already included in HomA subdirectory)
+- `ttkwidgets` (already included in HomA subdirectory)
+- `adb` (Android Debugging Bridge for Google TV on LAN or WiFi)
+- `wakeonlan` Wakeup Google TV on LAN
+- `curl` (internet downloading tool required for Sony REST API on LAN or WiFi)
+- `xdotool` (required for moving windows)
+- `arp` (Address Resolution Protocol tool) should be on all machines
+- `getent` to access `/etc/hosts`
+- `ip` command to get address names for Ethernet and WiFi
+- `xrandr` X11 windowing system
+- `hostnamectl` - Get the system hostname
+- `gsettings` If GNOME Night Light is being used
+- `sensors` to display Dell CPU and GPU temperature and fan speeds
+- `nmap` Network mapping tool
+- `hs100.sh` TP-Link / Kasa WiFi Smart Plug controller (already 
+included in HomA subdirectory)
+- `nc` — arbitrary TCP and UDP connections and listens
+- `rfkill` - tool for enabling and disabling wireless devices
+- `ifconfig` and `iwconfig` internet configuration tools
+- Miscellaneous builtin Linux commands: `od`, `base64`, `shasum`, `ls`, 
+`grep`, `sort`, `uniq`, `ps`, `aplay` (may not be builtin), `ps` and `cut`
+- A web browser like Firefox, Chrome or Edge is required for Help buttons
+- `systemctl` or similar method to suspend the computer
+
+For expanded sunrise/sunset brightness control you can use *Pippim Eyesome*.
 
 > ***IMPORTANT NOTES:*** 
 > 
@@ -69,7 +100,8 @@ changes to `homa.py` and the programs it calls.
 
 For Windows, the installation directory would be  `<HOME>\HomA`
 As of {{ site.refreshed | date: "%B %e, %Y" }}
-**HomA** will not run under Windows without modification.
+**HomA** will not run under Windows without modification. It may
+work in Windows Subsystem for Linux with little or no modification.
 
 `homa.py` is called with `m` from the command line or a 
 desktop shortcut. It is recommended you start using **HomA**
@@ -83,8 +115,7 @@ to **HomA** from the taskbar of any monitor.
 You can call them with `/path/to/homa-indicator.py` or `/path/to/homa.py` 
 from the command line. If you followed the installation tip 
 above, it would be `<HOME>/HomA/homa-indicator.py` for Linux-like machines, 
-or `<HOME>\HomA\homa-indicator.py` for Windows. As of August 30, 2023, 
-**HomA** will not run under Windows without modification.
+or `<HOME>\HomA\homa-indicator.py` for Windows.
 
 ---
 
@@ -160,7 +191,7 @@ This option is greyed out (inaccessible) when not breathing colors.
 
 - ***Big Number Calculator*** - 
 <a href="#big-number-calculator-sample-video">Indispensable calculator</a>
-for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
+for large numbers using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
 - ***Timer 600 seconds*** - Run a timer and display large digit countdown.
 Alarm sounds when timer ends. "600 seconds" changed in Preferences.
@@ -198,7 +229,7 @@ When you click on a Sony Bravia Professional Display TV,
 {:.no_toc}
 
 - ***Picture On*** - If you had turned display off, turn it back on.
-- ***Picture Off*** -  Turn display off but leave audio active.
+- ***Picture Off*** - Turn display off but leave audio active.
 - ***Turn On*** - If you had turned TV off, turn it back on.
 - ***Turn Off*** - Turn off the TV.
 - ***Move Up*** - Move device up the Network Devices view.
@@ -326,15 +357,17 @@ To edit Preferences, access the Dropdown Menus at the top of the screen. Select:
 - "Preferences" with mouse or <kbd>P</kbd>
 
 ## Sample Edit Preferences Notebook Video
-{:.no_toc}
+
 <video src="/assets/img/HomA/HomA Edit Preferences.mp4"
 data-canonical-src="/assets/img/HomA/HomA Edit Preferences.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
+The above video walks through all the tabs in the *Edit Preferences* notebook.
+The fields in each tab are documented in the sections below.
+
 ## Preferences Notebook Tabs
-{:.no_toc}
 
 ***NOTES:***
 
@@ -365,6 +398,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 <a id="EditPreferencesSony_TV"></a>
 <!-- ^ Define Edit Preferences Notebook Sony TV Tab help button -->
 ### Preferences Notebook *Sony TV* tab:
+{:.no_toc}
 
 | Sony TV          | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -374,6 +408,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 <a id="EditPreferencesGoogle_TV"></a>
 ### Preferences Notebook *Google TV* tab:
+{:.no_toc}
 
 | Goggle TV        | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -385,6 +420,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 <a id="EditPreferencesSmart_Plug"></a>
 ### Preferences Notebook *Smart Plug* tab:
+{:.no_toc}
 
 | Smart Plug       | Description                                                |
 |------------------|------------------------------------------------------------|
@@ -393,6 +429,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 <a id="EditPreferencesLED_Lights"></a>
 ### Preferences Notebook *LED Lights* tab:
+{:.no_toc}
 
 | LED Lights          | Description                                                    |
 |---------------------|----------------------------------------------------------------|
@@ -404,6 +441,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 <a id="EditPreferencesMiscellaneous"></a>
 ### Preferences Notebook *Miscellaneous* tab:
+{:.no_toc}
 
 | Miscellaneous  | Description                                                        |
 |----------------|--------------------------------------------------------------------|
@@ -415,6 +453,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 <a id="EditPreferencesRefresh"></a>
 ### Preferences Notebook *Refresh* tab:
+{:.no_toc}
 
 | Refresh              | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
@@ -428,6 +467,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 <a id="EditPreferencesComputer"></a>
 ### Preferences Notebook *Computer* tab:
+{:.no_toc}
 
 | Computer            | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
