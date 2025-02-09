@@ -22,100 +22,24 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - Suspend computer and power off all devices above
 - When resuming, power on all devices above
 
-## Under Construction
-{:.no_toc}
+## Extra features
 
-{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
-   alt="Under Construction.png"
-   style="float: right; width: 50%; margin: .5rem 2rem 1rem 2rem;"
-   caption="Under Construction.png"
-%}
-
-**HomA** is still under construction. Installation requires
-manually downloading files from GitHub and installing any
-missing dependencies with `apt get install` in Debian/Ubuntu
-or `pip install` on other Operating Systems.
-
-Requirements include:
-
-- ***Linux*** or compatible Apple, Google Chrome OS, WSL
-- ***Bluez tools*** (kernel version not GNOME desktop version) includes 
-`hcitool`, `hciconfig` and `gatt` commands.
-- `trionesControl` (already included in HomA subdirectory)
-- `gatttool` (already included in HomA subdirectory)
-- `ttkwidgets` (already included in HomA subdirectory)
-- `adb` (Android Debugging Bridge for Google TV on LAN or WiFi)
-- `wakeonlan` Wakeup Google TV on LAN
-- `curl` (internet downloading tool required for Sony REST API on LAN or WiFi)
-- `xdotool` (required for moving windows)
-- `arp` (Address Resolution Protocol tool) should be on all machines
-- `getent` to access `/etc/hosts`
-- `ip` command to get address names for Ethernet and WiFi
-- `xrandr` X11 windowing system
-- `hostnamectl` - Get the system hostname
-- `gsettings` If GNOME Night Light is being used
-- `sensors` to display Dell CPU and GPU temperature and fan speeds
-- `nmap` Network mapping tool
-- `hs100.sh` TP-Link / Kasa WiFi Smart Plug controller (already 
-included in HomA subdirectory)
-- `nc` — arbitrary TCP and UDP connections and listens
-- `rfkill` - tool for enabling and disabling wireless devices
-- `ifconfig` and `iwconfig` internet configuration tools
-- Miscellaneous builtin Linux commands: `od`, `base64`, `shasum`, `ls`, 
-`grep`, `sort`, `uniq`, `ps`, `aplay` (may not be builtin), `ps` and `cut`
-- A web browser like Firefox, Chrome or Edge is required for Help buttons
-- `systemctl` or similar method to suspend the computer
-
-For expanded sunrise/sunset brightness control you can use *Pippim Eyesome*.
-
-> ***IMPORTANT NOTES:*** 
-> 
-> - **HomA** was primarily tested with Linux, specifically 
-Ubuntu 16.04 LTS ECM/Plus and Python 2.7.12.
-> 
-> - You *"should"* be able to toggle between Pyhon 2.7.x and 
-Python 3.x by changing the *"shebang"* at the top of each `.py`. 
-Currently, **HomA** *"should"* run with the default Python version. 
-Testing on Python 3.x will begin prior to next major **HomA** upgrade.
-> 
-> - Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
-in year 2025. A "lite" Ubuntu 16.04 version running Unity may be 
-created as some sort of virtual machine. It's already been announced 
-that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
-
-
-## **HomA** Installation
-
-**HomA** (Home Automation) is written in Python.
-The main program is called `homa.py` and can be found in the 
-[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src/homa.py 
-"View HomA Python source code"){:target="_blank"}. 
-
-Copy all the files (including the subdirectories) 
-in the GitHub `src` folder to a new directory on your computer. 
-For example, `<HOME>/HomA` for Linux, Mac, Chrome OS or 
-Windows Subsystem for Linux (WSL). Unless you are running Ubuntu 16.04
-LTS under Extended Security Maintenance (ESM), you may have to make
-changes to `homa.py` and the programs it calls. 
-
-For Windows, the installation directory would be  `<HOME>\HomA`
-As of {{ site.refreshed | date: "%B %e, %Y" }}
-**HomA** will not run under Windows without modification. It may
-work in Windows Subsystem for Linux with little or no modification.
-
-`homa.py` is called with `m` from the command line or a 
-desktop shortcut. It is recommended you start using **HomA**
-from the command line to see any error messages that might
-appear.
-
-`homa-indicator.py` is a Python script that allows access 
-to **HomA** from the taskbar of any monitor.
-
-`homa-indicator.py` and `homa.py` do not need to be added to your path.
-You can call them with `/path/to/homa-indicator.py` or `/path/to/homa.py` 
-from the command line. If you followed the installation tip 
-above, it would be `<HOME>/HomA/homa-indicator.py` for Linux-like machines, 
-or `<HOME>\HomA\homa-indicator.py` for Windows.
+- LED Light Strip "breathing colors" varies colors and brightness levels
+- Turn Sony TV picture off but leave on sound for listening to music or podcasts
+- Disable automatic turning on of TV bias lights during daytime 
+- Automatically rediscover new network devices every minute
+- Communicate with devices using MAC Address lookup into IP address
+- Big number calculator with TeraByte, GigaByte, MegaByte units of measure
+- Large digit countdown timer with alarm
+- View Bluetooth devices and reset Bluetooth features
+- Command timeouts to eliminate wasted time waiting for negative response
+- Command event viewer of error messages, return codes and run times
+- View Breathing Color Statistics to fine-tune color changes and times
+- Floating sub windows that move when main window is moved
+- Message dialog boxes stay on top and cannot be "buried" under windows
+- Open source application written in Python with Tkinter user interface
+- Help buttons open web browser and this webpage. Page navigation
+with context-sensitive positioning 
 
 ---
 
@@ -212,7 +136,6 @@ and right click for a context-sensitive popup menu.
 
 When you right-click on a Bluetooth LED Light Strip device a
 pop-up menu appears:
-
 
 {% include image.html src="/assets/img/HomA/Right-click menu Bluetooth LED.png"
    alt="Right-click menu Bluetooth LED"
@@ -565,6 +488,106 @@ def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5
 
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+# Installation
+
+Installing **HomA** (`homa.py` and `homa-indicator.py`) requires extra steps
+to install other programs that **HomA** calls.
+
+**HomA** (Home Automation) is written in Python.
+The main program is called `homa.py` and can be found in the 
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src/homa.py 
+"View HomA Python source code"){:target="_blank"}. 
+
+Copy all the files (including the subdirectories) 
+in the GitHub `src` folder to a new directory on your computer. 
+For example, `<HOME>/HomA` for Linux, Mac, Chrome OS or 
+Windows Subsystem for Linux (WSL). Unless you are running Ubuntu 16.04
+LTS under Extended Security Maintenance (ESM), you may have to make
+changes to `homa.py` and the programs it calls. 
+
+For Windows, the installation directory would be `<HOME>\HomA`.
+As of {{ site.refreshed | date: "%B %e, %Y" }}
+**HomA** will not run under Windows without modification. It may
+work in Windows Subsystem for Linux with little or no modification.
+
+`homa.py` is called by `homa-indicator.py` from the systray / taskbar 
+/ application indicator bar. It is recommended you start using **HomA**
+from the command line initially, to see any error messages that might
+appear. For example, an error message may appear for missing dependency.
+
+`homa-indicator.py` allows access 
+to **HomA** from the taskbar of any monitor.
+
+`homa-indicator.py` and `homa.py` do not need to be in your path.
+You can call them from the command line using `/path/to/homa-indicator.py` 
+or `/path/to/homa.py` respectively. If you followed the installation tip 
+above, you would type: `<HOME>/HomA/homa-indicator.py` for Linux-like machines, 
+or `<HOME>\HomA\homa-indicator.py` for Windows.
+
+## Under Construction
+{:.no_toc}
+
+{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
+   alt="Under Construction.png"
+   style="float: right; width: 50%; margin: .5rem 2rem 1rem 2rem;"
+   caption="Under Construction.png"
+%}
+
+**HomA** is still under construction. Installation requires
+manually downloading files from GitHub and installing any
+missing dependencies with `apt get install` in Debian/Ubuntu
+or `pip install` on other Operating Systems.
+
+Requirements include:
+
+- ***Linux*** or compatible Apple, Google Chrome OS, WSL
+- ***Bluez tools*** (kernel version not GNOME desktop version) which
+provides `hcitool`, `hciconfig` and `gatt` commands.
+- `trionesControl` (already included in HomA subdirectory)
+- `gatttool` (already included in HomA subdirectory)
+- `ttkwidgets` (already included in HomA subdirectory)
+- `adb` (Android Debugging Bridge for Google TV on Ethernet or WiFi)
+- `wakeonlan` — Wakeup Google TV over Ethernet
+- `curl` (internet downloading tool required for Sony REST API 
+over Ethernet or WiFi)
+- `xdotool` (required for moving windows)
+- `arp` (Address Resolution Protocol tool) should be on all machines
+- `getent` — to access `/etc/hosts` (network device name, alias, 
+IP address and optional MAC address)
+- `ip` command to get address names for Ethernet and WiFi
+- `xrandr` — X11 windowing system
+- `hostnamectl` — Get the system hostname
+- `gsettings` — to test if GNOME Night Light is being used
+- `sensors` — to display Dell CPU and GPU temperature and fan speeds
+- `nmap` Network mapping tool
+- `hs100.sh` TP-Link / Kasa WiFi Smart Plug controller (already 
+included in HomA subdirectory)
+- `nc` — arbitrary TCP and UDP connections and listens
+- `rfkill` — tool for enabling and disabling wireless devices
+- `ifconfig` and `iwconfig` internet configuration tools
+- Miscellaneous builtin Linux commands — `od`, `base64`, `shasum`, `ls`, 
+`grep`, `sort`, `uniq`, `ps`, `aplay` (may not be builtin), `ps` and `cut`
+- A web browser like Firefox, Chrome or Edge is required for Help buttons
+- `systemctl` or similar method to suspend the computer
+
+For expanded sunrise/sunset brightness control you can use *Pippim Eyesome*.
+
+> ***IMPORTANT NOTES:*** 
+> 
+> - **HomA** was primarily tested with Linux, specifically 
+Ubuntu 16.04 LTS ECM/Plus and Python 2.7.12.
+> 
+> - You *"should"* be able to toggle between Pyhon 2.7.x and 
+Python 3.x by changing the *"shebang"* at the top of each `.py`. 
+Currently, **HomA** *"should"* run with the default Python version. 
+Testing on Python 3.x will begin prior to next major **HomA** upgrade.
+> 
+> - Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
+in year 2025. A "lite" Ubuntu 16.04 version running Unity may be 
+created as some sort of virtual machine. It's already been announced 
+that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
+
 
 ---
 
