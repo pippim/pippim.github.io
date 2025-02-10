@@ -40,6 +40,7 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - Open source application written in Python with Tkinter user interface
 - Help buttons open web browser and this webpage. Page navigation
 with context-sensitive positioning 
+- Single version works in Python 2.7.12+ (including Python 3.x)
 
 ---
 
@@ -491,9 +492,6 @@ def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5
 
 # Installation
 
-Installing **HomA** (`homa.py` and `homa-indicator.py`) requires extra steps
-to install other programs that **HomA** calls.
-
 **HomA** (Home Automation) is written in Python.
 The main program is called `homa.py` and can be found in the 
 [HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src/homa.py 
@@ -525,6 +523,10 @@ or `/path/to/homa.py` respectively. If you followed the installation tip
 above, you would type: `<HOME>/HomA/homa-indicator.py` for Linux-like machines, 
 or `<HOME>\HomA\homa-indicator.py` for Windows.
 
+Installing **HomA** (`homa.py` and `homa-indicator.py`) requires extra steps
+to install other programs that **HomA** calls. These dependencies are listed
+in the next section.
+
 ## Under Construction
 {:.no_toc}
 
@@ -545,7 +547,9 @@ Requirements include:
 - ***Bluez tools*** (kernel version not GNOME desktop version) which
 provides `hcitool`, `hciconfig` and `gatt` commands.
 - `trionesControl` (already included in HomA subdirectory)
-- `gatttool` (already included in HomA subdirectory)
+- `gatttool` (already included in HomA subdirectory). It calls `serial` 
+python module which must be installed separately. `python-serial` or 
+`python3-serial` debian package in Ubuntu.
 - `ttkwidgets` (already included in HomA subdirectory)
 - `adb` (Android Debugging Bridge for Google TV on Ethernet or WiFi)
 - `wakeonlan` — Wakeup Google TV over Ethernet
@@ -575,18 +579,14 @@ For expanded sunrise/sunset brightness control you can use *Pippim Eyesome*.
 
 > ***IMPORTANT NOTES:*** 
 > 
-> - **HomA** was primarily tested with Linux, specifically 
-Ubuntu 16.04 LTS ECM/Plus and Python 2.7.12.
+> - **HomA** was tested with Linux, specifically 
+Ubuntu 16.04 LTS ECM/Plus using Python 2.7.12 and Python 3.5.
 > 
-> - You *"should"* be able to toggle between Pyhon 2.7.x and 
-Python 3.x by changing the *"shebang"* at the top of each `.py`. 
-Currently, **HomA** *"should"* run with the default Python version. 
-Testing on Python 3.x will begin prior to next major **HomA** upgrade.
-> 
-> - Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
-in year 2025. A "lite" Ubuntu 16.04 version running Unity may be 
-created as some sort of virtual machine. It's already been announced 
-that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
+> - You can toggle between Pyhon 2.7.x and 
+Python 3.x by changing the *"shebang"*. 
+The first line of `homa.py` and `homa-indicator.py` contain the 
+*"shebang"* of `#!/usr/bin/env python` to run the default python.
+You can change `python` to `python2` or `python3` to override. 
 
 
 ---
