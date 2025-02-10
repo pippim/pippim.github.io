@@ -10,9 +10,9 @@ created_date: 2016-09-26 23:08:32
 edit_date:    2018-01-04 01:17:04
 votes:        "4 "
 favorites:    
-views:        "268 "
+views:        "269 "
 accepted:     
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-26-Best-directory-to-place-my-bash-scripts_.md
 toc:          false
 navigation:   false

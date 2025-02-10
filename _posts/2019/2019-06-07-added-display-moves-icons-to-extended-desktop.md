@@ -10,9 +10,9 @@ created_date: 2019-06-07 02:41:27
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,604 "
+views:        "2,613 "
 accepted:     
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-07-added-display-moves-icons-to-extended-desktop.md
 toc:          false
 navigation:   false

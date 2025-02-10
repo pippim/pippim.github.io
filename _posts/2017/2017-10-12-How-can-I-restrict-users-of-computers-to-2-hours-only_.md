@@ -10,9 +10,9 @@ created_date: 2017-10-12 11:43:21
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "370 "
+views:        "372 "
 accepted:     Accepted
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-12-How-can-I-restrict-users-of-computers-to-2-hours-only_.md
 toc:          false
 navigation:   false

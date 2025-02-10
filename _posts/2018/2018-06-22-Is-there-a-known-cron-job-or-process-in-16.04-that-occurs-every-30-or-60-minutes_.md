@@ -10,9 +10,9 @@ created_date: 2018-06-22 02:37:21
 edit_date:    2018-06-22 10:40:12
 votes:        "3 "
 favorites:    
-views:        "273 "
+views:        "275 "
 accepted:     
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-22-Is-there-a-known-cron-job-or-process-in-16.04-that-occurs-every-30-or-60-minutes_.md
 toc:          false
 navigation:   false

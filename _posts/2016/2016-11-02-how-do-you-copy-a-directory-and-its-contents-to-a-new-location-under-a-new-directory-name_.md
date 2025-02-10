@@ -10,9 +10,9 @@ created_date: 2016-11-02 22:34:46
 edit_date:    2016-11-02 23:07:13
 votes:        "5 "
 favorites:    
-views:        "696,791 "
+views:        "699,168 "
 accepted:     
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-02-how-do-you-copy-a-directory-and-its-contents-to-a-new-location-under-a-new-directory-name_.md
 toc:          false
 navigation:   false

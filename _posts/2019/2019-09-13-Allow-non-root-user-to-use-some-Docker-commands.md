@@ -10,9 +10,9 @@ created_date: 2019-09-13 21:50:40
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "19,223 "
+views:        "19,366 "
 accepted:     
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-13-Allow-non-root-user-to-use-some-Docker-commands.md
 toc:          false
 navigation:   false

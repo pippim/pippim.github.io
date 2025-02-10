@@ -10,9 +10,9 @@ created_date: 2025-01-05 22:43:33
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "509 "
+views:        "516 "
 accepted:     Accepted
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2025/2025-01-05-Many-_Unknown_-devices-in-Bluetooth-settings-tab_-keep-growing-over-time.md
 toc:          false
 navigation:   false

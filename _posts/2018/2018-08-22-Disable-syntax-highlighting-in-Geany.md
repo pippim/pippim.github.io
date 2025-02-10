@@ -10,9 +10,9 @@ created_date: 2018-08-22 00:31:55
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "830 "
+views:        "832 "
 accepted:     
-uploaded:     2025-02-01 17:53:02
+uploaded:     2025-02-10 14:32:12
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-22-Disable-syntax-highlighting-in-Geany.md
 toc:          false
 navigation:   false
