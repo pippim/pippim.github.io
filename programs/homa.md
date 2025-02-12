@@ -234,12 +234,15 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 - The main window is dragged and the *View Breathing Statistics* child window 
 is dragged along with it. The child window forces itself overtop of the parent.
 - The mouse hovers over button bar at bottom of child window. 
-- Tooltips for buttons appear after a short delay
-- Tooltips gradually fade in, remain a short period, then gradually. 
-fade out
+- Button Tooltips appear after a short delay.
+- Tooltips gradually fade in, remain a short period, then gradually fade out.
 - The *Help* button is clicked and this webpage appears in a new browser window.
 - The video above is played. 
-- The webpage is scrolled and "jumped" to different sections. 
+- The webpage is scrolled.
+- The "Copy" button is used to copy source code to the system clipboard.
+- Lightning bolt - "jumps" to different sections.
+- Section heading jump buttons are selected.
+- The child window is closed and the main window is fully visible.
 
 ---
 
@@ -271,6 +274,136 @@ in green. The power status is checked and set to:
 - "On" if the device is powered on.
 - "Off" if the device is powered off but, still connected to the network.
 - "?" if communication is lost with the device.
+
+
+---
+
+## How Network Devices are discovered
+
+Most Network Devices are discovered using `arp -a`, `getent hosts`, 
+`ip addr` and `hostnamectl status`. The exception is a Bluetooth device 
+where you need to specify
+the MAC address. Another exception is your computer which is already
+running *HomA* in the first place.
+
+---
+
+### `arp -a` Capabilities
+
+The program `arp` is found on all machines and operating systems. When
+you type `arp -a` at the command line you will see:
+
+```shell
+SONY.Light     (192.168.0.15) at 50:d4:f7:eb:41:35 [ether] on enp59s0
+Hitronhub.home (192.168.0.1)  at a8:4e:3f:82:98:b2 [ether] on enp59s0
+SONY.LAN       (192.168.0.19) at ac:9b:0a:df:3f:d9 [ether] on enp59s0
+TCL.LAN        (192.168.0.17) at c0:79:82:41:2f:1f [ether] on enp59s0
+TCL.Light      (192.168.0.20) at 50:d4:f7:eb:46:7c [ether] on enp59s0
+```
+
+***NOTE:*** extra spacing inserted above for readability.
+
+The fields on each `arp` line (in order of appearance) are:
+
+- Host name, E.G. "SONY.light"
+- IP Address, E.G. "(192.168.0.15)"
+- MAC Address, E.G. "50:d4:f7:eb:41:35"
+- Network Adapter name, E.G. "enp59s0"
+
+---
+
+### `getent hosts` Capabilities
+
+The program `getent` is a Linux command that reads the file
+`/etc/hosts`. When you type `getent hosts` at the command line 
+you will see:
+
+```shell
+127.0.0.1       localhost
+127.0.1.1       Alien
+192.168.0.1     Hitronhub.home Admin                          a8:4e:3f:82:98:b2
+192.168.0.10    Alien          AW 17R3 WiFi                   9c:b6:d0:10:37:f7
+192.168.0.12    Alien          AW 17R3 Ethernet               28:f1:0e:2a:1a:ed
+192.168.0.11    Phone          Moto E4 Plus                   fc:d4:36:ea:82:36
+192.168.0.13    Dell           Inspiron 17R-SE-7720 Ethernet  5c:f9:dd:5c:9c:53
+192.168.0.14    Dell           Inspiron 17R-SE-7720 WiFi      60:6c:66:86:de:bd
+192.168.0.15    SONY.Light     hs100 Sony TV Bias Light       50:d4:f7:eb:41:35
+192.168.0.16    SONY.WiFi      Sony Bravia KDL TV WiFi        18:4f:32:8d:aa:97
+192.168.0.17    TCL.LAN        TCL / Google TV Ethernet       c0:79:82:41:2f:1f
+192.168.0.18    TCL.WiFi       TCL / Google TV WiFi           fc:d4:36:ea:82:36
+192.168.0.19    SONY.LAN       Sony Bravia KDL TV Ethernet    ac:9b:0a:df:3f:d9
+192.168.0.20    TCL.Light      hs100 TCL TV Bias Light        50:d4:f7:eb:46:7c
+192.168.0.21    TCL.LAN2       amazon-54d22a1a9.hitronhub     98:28:a6:ba:76:f6
+192.168.0.22    F3_Pro         Umidigi F3 Pro 5G              46:f0:89:36:f5:1d
+192.168.0.254   Router.Login   Hitron Technology              00:05:ca:00:00:09
+```
+
+***NOTE:*** extra spacing inserted above for readability.
+
+The fields on each `arp` line (in order of appearance) are:
+
+- IP Address, E.G. "192.168.0.15"
+- Host name, E.G. "SONY.light"
+- Alias, E.G. "hs100 Sony TV Bias Light"
+- MAC Address, E.G. "50:d4:f7:eb:41:35"
+
+The ***MAC Address*** is not in the "normal" `/etc/hosts` file. It is required
+for you to add it in order to allow *HomA* to link rows in the file to `arp` output.
+
+
+---
+
+### `ip addr` Capabilities
+
+The program `ip` is found on all machines and operating systems. When
+you type `ip addr` at the command line you will see:
+
+```shell
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: enp59s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 28:f1:0e:2a:1a:ed brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.12/24 brd 192.168.0.255 scope global dynamic enp59s0
+       valid_lft 594184sec preferred_lft 594184sec
+    inet6 fe80::2af1:eff:fe2a:1aed/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlp60s0: <BROADCAST,MULTICAST> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 9c:b6:d0:10:37:f7 brd ff:ff:ff:ff:ff:ff
+
+```
+
+*HomA* looks at relevant lines in `ip addr`:
+
+- "enp59s0:" - The Ethernet Adapter name
+- "link/ether 28:f1:0e:2a:1a:ed" - The Ethernet Adapter's MAC Address
+- "wlp60s0:" - The WiFi Adapter name
+- "link/ether 9c:b6:d0:10:37:f7" - The WiFi Adapter's MAC Address
+
+
+
+---
+
+### `hostnamectl status` Capabilities
+
+When you type `hostnamectl status` at the command line you will see:
+
+```shell
+   Static hostname: alien
+   Pretty hostname: Dell AW17R3
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: 1ff17e6df1874fb3b2a75e669fa978f1
+           Boot ID: 562af12a56c640faa3e74c465277267d
+  Operating System: Ubuntu 16.04.7 LTS
+            Kernel: Linux 4.14.216-0414216-generic
+      Architecture: x86-64
+```
+
+*HomA* only looks at one line in `hostnamectl status`:
+
+- "Chassis:" - E.G. "laptop". Laptops and computers offer different options in *HomA*
 
 ---
 
