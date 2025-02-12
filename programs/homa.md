@@ -429,19 +429,14 @@ The above video walks through all the tabs in the *Edit Preferences* notebook.
 The fields in each tab are documented in the sections below.
 
 Bonus footage shows how the Sensors and Devices views are toggled with the
-bottom of the window:
+button at the bottom of the window:
 
 ![Sensors](/assets/img/HomA/flame.png){: 
-style="float: left; margin: 0 2rem 0 0;" width="20%" }
-
+style="float: left; margin: 0 2rem 0 0;" width="10%" }
 Sensors<br clear="left"/>
-
 ![Devices](/assets/img/HomA/wifi.png){: 
-style="float: left; margin: 0 2rem 0 0;" width="20%" }
-
+style="float: left; margin: 0 2rem 0 0;" width="10%" }<br clear="left"/>
 Devices<br clear="left"/>
-
-
 
 
 ## Preferences Notebook Tabs
