@@ -433,10 +433,11 @@ button at the bottom of the window:
 
 ![Sensors](/assets/img/HomA/flame.png){: 
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
-Sensors<br clear="left"/>
+<font size="5">Sensors</font><br clear="left"/>
+
 ![Devices](/assets/img/HomA/wifi.png){: 
-style="float: left; margin: 0 2rem 0 0;" width="10%" }<br clear="left"/>
-Devices<br clear="left"/>
+style="float: left; margin: 0 2rem 0 0;" width="10%" }
+<font size="5">Devices</font><br clear="left"/>
 
 
 ## Preferences Notebook Tabs
