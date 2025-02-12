@@ -433,6 +433,20 @@ bottom of the window:
 
 <img> Sensors and <img> Devices
 
+![Sensors](/assets/img/HomA/flame.png){: 
+style="float: left; margin: 0 2rem 0 0;" width="20%" }
+
+Sensors
+
+![Devices](/assets/img/wifi.png){: 
+style="float: left; margin: 0 2rem 0 0;" width="20%" }
+
+Devices
+<br clear="left"/>
+
+
+
+
 ## Preferences Notebook Tabs
 
 ***NOTES:***
