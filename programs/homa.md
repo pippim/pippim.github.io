@@ -371,17 +371,15 @@ you type `ip addr` at the command line you will see:
        valid_lft forever preferred_lft forever
 3: wlp60s0: <BROADCAST,MULTICAST> mtu 1500 qdisc mq state DOWN group default qlen 1000
     link/ether 9c:b6:d0:10:37:f7 brd ff:ff:ff:ff:ff:ff
-
 ```
 
 *HomA* looks at relevant lines in `ip addr`:
 
 - "enp59s0:" - The Ethernet Adapter name
 - "link/ether 28:f1:0e:2a:1a:ed" - The Ethernet Adapter's MAC Address
+- "inet 192.168.0.12/24" - The Ethernet Adapter's IP Address
 - "wlp60s0:" - The WiFi Adapter name
 - "link/ether 9c:b6:d0:10:37:f7" - The WiFi Adapter's MAC Address
-
-
 
 ---
 
@@ -421,14 +419,19 @@ To edit Preferences, access the Dropdown Menus at the top of the screen. Select:
 
 ## Sample Edit Preferences Notebook Video
 
-<video src="/assets/img/HomA/HomA Edit Preferences.mp4"
-data-canonical-src="/assets/img/HomA/HomA Edit Preferences.mp4"
+<video src="/assets/img/HomA/HomA Edit Preferences Video.mp4"
+data-canonical-src="/assets/img/HomA/HomA Edit Preferences Video.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
 The above video walks through all the tabs in the *Edit Preferences* notebook.
 The fields in each tab are documented in the sections below.
+
+Bonus footage shows how the Sensors and Devices views are toggled with the
+bottom of the window:
+
+<img> Sensors and <img> Devices
 
 ## Preferences Notebook Tabs
 
