@@ -431,13 +431,15 @@ The fields in each tab are documented in the sections below.
 Bonus footage shows how the Sensors and Devices views are toggled with the
 button at the bottom of the window:
 
+https://stackoverflow.com/a/24960728/6929343
+
 ![Sensors](/assets/img/HomA/flame.png){: 
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
-<font size="5">Sensors</font><br clear="left"/>
+<font size="5"><br>Sensors</font><br clear="left"/>
 
 ![Devices](/assets/img/HomA/wifi.png){: 
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
-<font size="5">Devices</font><br clear="left"/>
+<font size="5"><br>Devices</font><br clear="left"/>
 
 
 ## Preferences Notebook Tabs
