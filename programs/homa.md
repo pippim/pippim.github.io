@@ -19,27 +19,28 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - TP-Link / Kasa WiFi Smart plugs (great for controlling Bias Lights behind TVs)
 - Happy Lighting Bluetooth Low Energy (BLE) LED light strips
 - Power on/off laptop displays
-- Suspend computer and power off all devices above
-- When resuming, power on all devices above
+- Suspend computer and automatically power off all devices above
+- When resuming, automatically power on all devices above
 
 ## Extra features
 
-- LED Light Strip "breathing colors" varies colors and brightness levels
+- LED Light Strip "breathing colors" feature varies colors and brightness levels
 - Turn Sony TV picture off but leave on sound for listening to music or podcasts
 - Disable automatic turning on of TV bias lights during daytime 
 - Automatically rediscover new network devices every minute
-- Communicate with devices using MAC Address lookup into IP address
+- Communicate with devices using static MAC address to find dynamic IP address
 - Big number calculator with TeraByte, GigaByte, MegaByte units of measure
 - Large digit countdown timer with alarm
 - View Bluetooth devices and reset Bluetooth features
 - Command timeouts to eliminate wasted time waiting for negative response
 - Command event viewer of error messages, return codes and run times
 - View Breathing Color Statistics to fine-tune color changes and times
-- Floating sub windows that move when main window is moved
+- Floating sub windows that raise to top and move when main window is dragged
 - Message dialog boxes stay on top and cannot be "buried" under windows
+- Fading in/out tooltips appear when mouse hovers over buttons and labels 
 - Open source application written in Python with Tkinter user interface
-- Help buttons open web browser and this webpage. Page navigation
-with context-sensitive positioning 
+- Help buttons open web browser and this webpage. Then the page automatically 
+scrolls to the appropriate section 
 - Single version works in Python 2.7.12+ (including Python 3.x)
 
 ---
@@ -219,21 +220,26 @@ clicking anywhere outside the menu area.
 ## Help Button Sample Video
 {:.no_toc}
 
-<video src="https://user-images.githubusercontent.com/92641463/264478542-c9d7f483-3774-44b4-9bac-cf5f9b048034.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/264478542-c9d7f483-3774-44b4-9bac-cf5f9b048034.mp4"
+
+<video src="/assets/img/HomA/HomA View Breathing Stats Help Button.mp4"
+data-canonical-src="/assets/img/HomA/HomA View Breathing Stats Help Button.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
+
 ### Help Button Sample Video Highlights
 {:.no_toc}
 
-- The options for *File*, *Edit* and *View* dropdown menu are shown
-- The mouse hovers over button bar at bottom of window 
+- The main window is dragged and the *View Breathing Statistics* child window 
+is dragged along with it. The child window forces itself overtop of the parent.
+- The mouse hovers over button bar at bottom of child window. 
 - Tooltips for buttons appear after a short delay
-- Tooltips gradually fade in, remain a short period, then gradually 
+- Tooltips gradually fade in, remain a short period, then gradually. 
 fade out
-- The *Help* button is clicked and results appear in a new browser window.
+- The *Help* button is clicked and this webpage appears in a new browser window.
+- The video above is played. 
+- The webpage is scrolled and "jumped" to different sections. 
 
 ---
 
