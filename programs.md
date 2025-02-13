@@ -150,8 +150,8 @@ Turn devices on and off. Set Bluetooth LED light strip colors.
 Automatically turn off all device when suspending. Automatically
 turn all devices back on when resuming from suspend.
 
-<a href="programs/homa.html" style="font-size: 20px;">Read More...</a>  
-
+<a href="programs/homa.html" style="font-size: 20px;">
+See videos and learn about HomA...</a>  &emsp;&emsp;  
 [HomA source code on GitHub 🔗](https://github.com/pippim/HomA){:target="_blank"}
 
 ---
