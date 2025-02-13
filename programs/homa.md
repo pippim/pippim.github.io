@@ -136,8 +136,7 @@ and right click for a context-sensitive popup menu.
 ### Sample Right-Click Popup Menu
 {:.no_toc}
 
-When you right-click on a Bluetooth LED Light Strip device a
-pop-up menu appears:
+Here is a sample screenshot of right-clicking on a Bluetooth LED Light Strip:
 
 {% include image.html src="/assets/img/HomA/Right-click menu Bluetooth LED.png"
    alt="Right-click menu Bluetooth LED"
@@ -148,10 +147,8 @@ pop-up menu appears:
 ### Sony Bravia Professional Display TV 
 {:.no_toc}
 
-When you click on a Sony Bravia Professional Display TV, 
-
-#### Menu Options:
-{:.no_toc}
+When you click on a Sony Bravia Professional Display TV,
+the following menu options appear:
 
 - ***Picture On*** - If you had turned display off, turn it back on.
 - ***Picture Off*** - Turn display off but leave audio active.
@@ -165,10 +162,8 @@ clicking anywhere outside the menu area.
 ### Google Android TV 
 {:.no_toc}
 
-When you click on a Google Android TV, 
-
-#### Menu Options:
-{:.no_toc}
+When you click on a Google Android TV,
+the following menu options appear:
 
 - ***Turn On*** - If you had turned TV off, turn it back on.
 - ***Turn Off*** - Turn off the TV.
@@ -181,9 +176,7 @@ clicking anywhere outside the menu area.
 {:.no_toc}
 
 When you right-click on a Bluetooth LED Light Strip, 
-
-#### Menu Options:
-{:.no_toc}
+the following menu options appear:
 
 - ***Set Bluetooth LED color*** - Set color and brightness. Remembers
 your last selection.
