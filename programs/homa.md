@@ -144,34 +144,6 @@ Here is a sample screenshot of right-clicking on a Bluetooth LED Light Strip:
    caption="Right-click menu Bluetooth LED.png"
 %}
 
-### Sony Bravia Professional Display TV 
-{:.no_toc}
-
-When you click on a Sony Bravia Professional Display TV,
-the following menu options appear:
-
-- ***Picture On*** - If you had turned display off, turn it back on.
-- ***Picture Off*** - Turn display off but leave audio active.
-- ***Turn On*** - If you had turned TV off, turn it back on.
-- ***Turn Off*** - Turn off the TV.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
-- ***Close menu*** - Closes the menu. You can also close the menu by
-clicking anywhere outside the menu area.
-
-### Google Android TV 
-{:.no_toc}
-
-When you click on a Google Android TV,
-the following menu options appear:
-
-- ***Turn On*** - If you had turned TV off, turn it back on.
-- ***Turn Off*** - Turn off the TV.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
-- ***Close menu*** - Closes the menu. You can also close the menu by
-clicking anywhere outside the menu area.
-
 ### Bluetooth LED Light Strip 
 {:.no_toc}
 
@@ -195,6 +167,60 @@ Light Strip. The MAC address must be entered into Preferences to control
 your LED Light Strip.
 - ***Turn On*** - Turn on the Bluetooth LED Light Strip.
 - ***Turn Off*** - Turn off the Bluetooth LED Light Strip.
+- ***Move Up*** - Move device up the Network Devices view.
+- ***Move Down*** - Move device down the Network Devices view.
+- ***Close menu*** - Closes the menu. You can also close the menu by
+clicking anywhere outside the menu area.
+
+### Sony Bravia Professional Display TV 
+{:.no_toc}
+
+When you right-click on a Sony Bravia Professional Display TV,
+the following menu options appear:
+
+- ***Picture On*** - If you had turned the display off, turn it back on.
+- ***Picture Off*** - Turn the display off but leave audio active.
+- ***Turn On*** - If you had turned the TV off, turn it back on.
+- ***Turn Off*** - Turn off the TV.
+- ***Move Up*** - Move device up the Network Devices view.
+- ***Move Down*** - Move device down the Network Devices view.
+- ***Close menu*** - Closes the menu. You can also close the menu by
+clicking anywhere outside the menu area.
+
+### Google Android TV 
+{:.no_toc}
+
+When you right-click on a Google Android TV,
+the following menu options appear:
+
+- ***Turn On*** - If you had turned the TV off, turn it back on.
+- ***Turn Off*** - Turn off the TV.
+- ***Move Up*** - Move device up the Network Devices view.
+- ***Move Down*** - Move device down the Network Devices view.
+- ***Close menu*** - Closes the menu. You can also close the menu by
+clicking anywhere outside the menu area.
+
+### Laptop Display 
+{:.no_toc}
+
+When you right-click on a Laptop Display,
+the following menu options appear:
+
+- ***Turn On*** - If you had turned the display off, turn it back on.
+- ***Turn Off*** - Turn off the display. Requires sudo password.
+- ***Move Up*** - Move device up the Network Devices view.
+- ***Move Down*** - Move device down the Network Devices view.
+- ***Close menu*** - Closes the menu. You can also close the menu by
+clicking anywhere outside the menu area.
+
+### Laptop Base or Computer 
+{:.no_toc}
+
+When you right-click on a Laptop Base or your computer,
+the following menu options appear:
+
+- ***Turn On*** - This option is greyed out because your computer is on.
+- ***Turn Off*** - Turn off the the computer. This invokes a suspend.
 - ***Move Up*** - Move device up the Network Devices view.
 - ***Move Down*** - Move device down the Network Devices view.
 - ***Close menu*** - Closes the menu. You can also close the menu by
@@ -426,14 +452,11 @@ button at the bottom of the window:
 <br><br>
 ![Sensors](/assets/img/HomA/flame.png){: 
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
-<font size="7">Sensors</font><br clear="left"/>
+<font size="6">Sensors</font><br clear="left"/>
 <br><br>
 ![Devices](/assets/img/HomA/wifi.png){: 
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
-<font size="7">Devices</font><br clear="left"/>
-
-<br><br>
-2025-02-12 Button format TODO: https://stackoverflow.com/a/24960728/6929343
+<font size="6">Devices</font><br clear="left"/>
 
 
 ## Preferences Notebook Tabs
