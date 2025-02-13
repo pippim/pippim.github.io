@@ -22,7 +22,7 @@ canonical_url: 'https://www.pippim.com/programs.html'
    </a>
 </div>
 
-## Tim-ta (Timed Tasks) App - Run Set of Alarms Consecutively
+## ***Tim-ta*** (Timed Tasks) App - Run Set of Alarms Consecutively
 
 ***Tim-ta*** runs in your browser. 
 There are no programs to install!
@@ -58,6 +58,35 @@ Some examples where you can use Tim-ta:
 <a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
 self-documenting app. &emsp;&emsp; 
 [View ⧉ 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"} GitHub source code.
+
+---
+
+<a id="HomA"></a>
+## ***HomA*** (Home Automation)
+
+<!-- id link above video allows click to open webpage -->
+<div>
+   <a href="programs/homa.html">
+
+      <video src="/assets/img/HomA/HomA Breathing stats.mp4"
+      data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
+      controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+      style="float: left; width: 75% !important; margin: 1rem 2rem 1rem 0; 
+      max-height:640px; height: auto !important;">
+        </video>
+   </a>
+</div>
+
+<font size = "5">Automatically discover network devices connected
+via LAN, WiFi or Bluetooth.</font>
+
+Turn devices on and off. Set Bluetooth LED light strip colors.
+Automatically turn off all device when suspending. Automatically
+turn all devices back on when resuming from suspend.
+
+<a href="programs/homa.html" style="font-size: 20px;">
+See videos and learn about HomA...</a>  &emsp;&emsp;  [HomA source code on GitHub 🔗]
+(https://github.com/pippim/HomA){:target="_blank"}
 
 ---
 
@@ -124,35 +153,6 @@ about six months to complete.
 <a href="programs/tcm.html" style="font-size: 20px;">Run</a>
 self-documenting app. &emsp;&emsp; 
 [View ⧉ 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"} GitHub source code.
-
----
-
-<a id="HomA"></a>
-## ***HomA*** (Home Automation)
-
-<!-- id link above allows click to open webpage -->
-<div>
-   <a href="programs/homa.html">
-
-      <video src="/assets/img/HomA/HomA Breathing stats.mp4"
-      data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
-      controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-      style="float: left; width: 75% !important; margin: 1rem 2rem 1rem 0; 
-      max-height:640px; height: auto !important;">
-        </video>
-   </a>
-</div>
-
-<font size = "5">Automatically discover network devices connected
-via LAN, WiFi or Bluetooth.</font>
-
-Turn devices on and off. Set Bluetooth LED light strip colors.
-Automatically turn off all device when suspending. Automatically
-turn all devices back on when resuming from suspend.
-
-<a href="programs/homa.html" style="font-size: 20px;">
-See videos and learn about HomA...</a>  &emsp;&emsp;  
-[HomA source code on GitHub 🔗](https://github.com/pippim/HomA){:target="_blank"}
 
 ---
 
