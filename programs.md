@@ -130,9 +130,9 @@ self-documenting app. &emsp;&emsp;
 <a id="HomA"></a>
 ## ***HomA*** (Home Automation)
 
-<!-- id link above to click from Ask Ubuntu answer -->
+<!-- id link above allows click to open webpage -->
 <div>
-   <a href="https://askubuntu.com/a/1276376/307523">
+   <a href="programs/homa.html">
 
       <video src="/assets/img/HomA/HomA Breathing stats.mp4"
       data-canonical-src="/assets/img/HomA/HomA Breathing stats.mp4"
@@ -146,11 +146,13 @@ self-documenting app. &emsp;&emsp;
 <font size = "5">Automatically discover network devices connected
 via LAN, WiFi or Bluetooth.</font>
 
-Turn devices on or off. Set Bluetooth LED light strip colors.
+Turn devices on and off. Set Bluetooth LED light strip colors.
 Automatically turn off all device when suspending. Automatically
-turn them back on when resuming.
+turn all devices back on when resuming from suspend.
 
 <a href="programs/homa.html" style="font-size: 20px;">Read More...</a>  
+
+[HomA source code on GitHub 🔗](https://github.com/pippim/HomA){:target="_blank"}
 
 ---
 
