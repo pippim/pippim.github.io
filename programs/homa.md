@@ -841,7 +841,7 @@ Task Bar. There are no optional parameters when calling it. Simply type:
 
 `/home/<USER>/HomA/homa-indicator.py`
 
-Then Right click on the icon in the system tray icon shown below:
+Using your mouse, right-click on the icon in the system tray as shown below:
 
 <video src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
 data-canonical-src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
@@ -855,6 +855,31 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+
+# How to Use ***HomA*** From the System Tray
+
+The program `homa-indicator.py` is an "Application Indicator" that runs
+in the System Tray a.k.a. the Taskbar.
+
+Here is a video showing ***HomA*** already running in one monitor, being
+moved to another monitor:
+
+<video src="/assets/img/HomA/HomA Indicator switch monitor.mp4"
+data-canonical-src="/assets/img/HomA/HomA Indicator switch monitor.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+The ability to call ***HomA*** from any monitor is paramount, because you can
+use ***HomA*** to turn off a monitor it is running on. To turn the monitor
+back on, you must be able to call ***HomA*** from another monitor.
+
+The video shows how the ***HomA*** main window is moved, and then the child
+window ***View Breathing Statistics*** is moved overtop. Child windows are
+automatically moved when the main window is moved. When you try to click on
+the main window, any child windows are automatically moved overtop. This
+includes message dialog boxes that might otherwise be "buried" under the
+main window.
 
 ---
 
