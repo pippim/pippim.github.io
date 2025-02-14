@@ -24,7 +24,9 @@ It allows you to turn devices on and off from your computer. Devices such as:
 
 ## Extra features
 
+- The same *HomA* version works in both Python 2.7.12+ and Python 3.5+
 - LED Light Strip "breathing colors" feature varies colors and brightness levels
+- View Breathing Color Statistics to fine-tune color changes and times
 - Turn Sony TV picture off but leave on sound for listening to music or podcasts
 - Disable automatic turning on of TV bias lights during daytime 
 - Automatically rediscover new network devices every minute
@@ -34,14 +36,12 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - View Bluetooth devices and reset Bluetooth features
 - Command timeouts to eliminate wasted time waiting for negative response
 - Command event viewer of error messages, return codes and run times
-- View Breathing Color Statistics to fine-tune color changes and times
 - Floating sub windows that raise to top and move when main window is dragged
 - Message dialog boxes stay on top and cannot be "buried" under windows
 - Fading in/out tooltips appear when mouse hovers over buttons and labels 
 - Open source application written in Python with Tkinter user interface
 - Help buttons open web browser and this webpage. Then the page automatically 
 scrolls to the appropriate section 
-- Single version works in Python 2.7.12+ (including Python 3.x)
 
 ---
 
@@ -63,12 +63,12 @@ There are two types of menus in **HomA**:
 - Right-click Popup Menus. Use the mouse right button to click on any network 
 device and a popup menu will appear. General menu options for all devices are: 
 *Turn On*, *Turn Off*, *Move device Up*&nbsp;(the display order), 
-*Move device Down*&nbsp;(the display order) and *Close menu*. Specific Devices 
-such as *Sony TV* and *Bluetooth LED* have extra right-click popup menu options.
+*Move device Down*&nbsp;(the display order) and *Close menu*. Some devices 
+such as a *Sony TV* and a *Bluetooth LED* have extra right-click popup menu options.
 
 ## Dropdown Menus
 
-The top-left corner of *HomA's* window contains 
+The top-left corner of *HomA's* main window contains 
 four dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***. 
 Click on the name and the dropdown menu options appear:
 
@@ -82,7 +82,8 @@ out) until a Playlist is opened.
 - ***Rediscover now*** - Rediscovery happens every minute but you can force
 immediate rediscovery with this option.
 - ***Minimize*** - Duplicates the `Minimize` button at the bottom of the 
-window. The **HomA** window is minimized with this option. 
+window. The **HomA** window is minimized with this option. `xdotool` and 
+`wmctrl` must be installed to enable this option. 
 - ***Suspend*** - Duplicates the `Suspend` button at the bottom of the 
 window. All devices are powered off and the computer suspends. 
 - ***Exit*** - **HomA** shuts down.
@@ -309,8 +310,8 @@ running *HomA* in the first place.
 
 ### `arp -a` Capabilities
 
-The program `arp` is found on all machines and operating systems. When
-you type `arp -a` at the command line you will see:
+If you type `arp -a` at the command line you will your network devices.
+For example:
 
 ```shell
 SONY.Light     (192.168.0.15) at 50:d4:f7:eb:41:35 [ether] on enp59s0
@@ -335,7 +336,7 @@ The fields on each `arp` line (in order of appearance) are:
 
 The program `getent` is a Linux command that reads the file
 `/etc/hosts`. When you type `getent hosts` at the command line 
-you will see:
+you will see something like this:
 
 ```shell
 127.0.0.1       localhost
@@ -374,8 +375,10 @@ for you to add it in order to allow *HomA* to link rows in the file to `arp` out
 
 ### `ip addr` Capabilities
 
-The program `ip` is found on all machines and operating systems. When
-you type `ip addr` at the command line you will see:
+The program `ip` will show / manipulate routing, devices, 
+policy routing and tunnels. When
+you type `ip addr` at the command line you will see
+something like this:
 
 ```shell
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -404,7 +407,8 @@ you type `ip addr` at the command line you will see:
 
 ### `hostnamectl status` Capabilities
 
-When you type `hostnamectl status` at the command line you will see:
+When you type `hostnamectl status` at the command line you will see
+something like this:
 
 ```shell
    Static hostname: alien
@@ -480,7 +484,7 @@ if it is a Sony TV. The REST API response time is very fast. So only
 appropriately after `0.2` seconds, **HomA** knows the device isn't a Sony TV. 
 If the timeout is longer, HomA takes longer to discover all the network devices.
 > 
-> - Every Network Device is assigned a unique type code that **HomA** 
+> - Every Network Device is assigned a type code that **HomA** 
 uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug, 
 "20"&nbsp;=&nbsp;Sony TV, "30"&nbsp;=&nbsp;TCL / Google Android TV. 
 "40"&nbsp;=&nbsp;Bluetooth Low Energy (BLE) LED Light Strip. 
@@ -630,9 +634,12 @@ in order to see the color changing button bar at the bottom of the video.
 | LED Failures           | How many times Bluetooth lost communication for 1 second.                                                                                                                                 |
 | MAX_FAIL               | How many sequential LED failures until Breathing quits.                                                                                                                                   |
 
-<br><br><!-- Next line sucked into table -->
+<br><!-- Next line sucked into table -->
 
 ---
+
+### Breathing Statistics Control Parameters
+{:.no_toc}
 
 The first five fields are parameters you can control:
 
@@ -761,6 +768,86 @@ You can change `python` to `python2` or `python3` to override.
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+
+# How to Start ***HomA***
+
+You can start `homa.py` from the command line, from a desktop icon or
+start it from `homa-indicator.py`.
+
+In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA`.
+Where `<USER>` is your User Id.
+
+## Starting ***HomA*** From the Command Line 
+
+If *HomA* is not in your path, change to the directory where *HomA* is installed:
+
+`cd /home/<USER>/HomA`
+
+Then type `homa.py` and press <kbd>Enter</kbd>:
+
+``` shell
+$ homa.py
+
+  ######################################################
+ //////////////                            \\\\\\\\\\\\\\
+<<<<<<<<<<<<<<    HomA - Home Automation    >>>>>>>>>>>>>>
+ \\\\\\\\\\\\\\                            //////////////
+  ######################################################
+                    Started: 8:08 AM
+
+= = = = = System Monitor Processor Temps & Fans = = = = =
+ Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time  
+-------- | ---------------- | ---------------- | --------
+    6.78 | +70.0°C 3000 RPM | +71.0°C 2800 RPM |  8:08 AM
+   33.01 | +71.0°C 3300 RPM | +71.0°C 2800 RPM |  8:09 AM
+   36.04 | +69.0°C 3400 RPM | +72.0°C 3100 RPM |  8:09 AM
+  483.66 | +76.0°C 3400 RPM | +77.0°C 3500 RPM |  8:16 AM
+  486.68 | +75.0°C 3700 RPM | +77.0°C 3800 RPM |  8:16 AM
+  490.72 | +74.0°C 4000 RPM | +77.0°C 3800 RPM |  8:16 AM
+ 1334.04 | +79.0°C 4100 RPM | +79.0°C 4200 RPM |  8:30 AM
+ 1338.24 | +78.0°C 4400 RPM | +79.0°C 4300 RPM |  8:30 AM
+ 2360.85 | +76.0°C 4600 RPM | +78.0°C 4600 RPM |  8:48 AM
+ 2364.58 | +75.0°C 4800 RPM | +78.0°C 5000 RPM |  8:48 AM
+ 2370.39 | +77.0°C 5200 RPM | +77.0°C 5000 RPM |  8:48 AM
+```
+
+When `homa.py` is called with no parameters there are minimal lines printed.
+Notice the sensors for processor temperature (CPU & GPU) and fan speed for
+each processor is printed.
+
+### `homa.py` Command Line Parameters
+
+Optional parameters (A.K.A. arguments) can be passed to `homa.py`:
+
+| Parameter | Usage                                                         |
+|-----------|---------------------------------------------------------------|
+| -s        | `-s` invokes silent mode. Nothing will print to the console.  |
+| -f        | `-f` invokes fast mode. Network discovery is delayed.         |
+| -v        | `-v` invokes verbose mode. Method names are printed.          |
+| -vv       | `-vv` Extra verbosity. Command names are printed.             |
+| -vvv      | `-vvv` Super verbosity. Results of every command are printed. |
+
+When `homa-indicator.py` calls `homa.py` it uses the parameters `-s -f`.
+
+If `homa.py` is not performing as expected, use `-v`, `-vv` or `-vvv` in that
+order to narrow down the problem.
+
+---
+
+### Starting ***HomA*** using `homa-indicator.py`
+
+`homa-indicator.py` is an "Application Indicator" that sits in the System Tray /
+Task Bar. There are no optional parameters when calling it. Simply type:
+
+`/home/<USER>/HomA/homa-indicator.py`
+
+Then Right click on the icon in the system tray:
+
+<video src="/assets/img/HomA/HomA How to start HomA from App Indicator Video.mp4"
+data-canonical-src="/assets/img/HomA/HomA How to start HomA from App Indicator Video.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
 
 ---
 
