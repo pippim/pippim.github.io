@@ -841,13 +841,15 @@ Task Bar. There are no optional parameters when calling it. Simply type:
 
 `/home/<USER>/HomA/homa-indicator.py`
 
-Then Right click on the icon in the system tray:
+Then Right click on the icon in the system tray icon shown below:
 
-<video src="/assets/img/HomA/HomA How to start HomA from App Indicator Video.mp4"
-data-canonical-src="/assets/img/HomA/HomA How to start HomA from App Indicator Video.mp4"
+<video src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
+data-canonical-src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
+
+<br><br>
 
 ---
 
