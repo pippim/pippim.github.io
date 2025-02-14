@@ -856,12 +856,12 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
-# How to Use ***HomA*** From the System Tray
+# How to Open ***HomA*** From the System Tray
 
 The program `homa-indicator.py` is an "Application Indicator" that runs
 in the System Tray a.k.a. the Taskbar.
 
-Here is a video showing ***HomA*** already running in one monitor, being
+Here is a video showing ***HomA***, already running in one monitor, being
 moved to another monitor:
 
 <video src="/assets/img/HomA/HomA Indicator switch monitor.mp4"
@@ -880,6 +880,18 @@ automatically moved when the main window is moved. When you try to click on
 the main window, any child windows are automatically moved overtop. This
 includes message dialog boxes that might otherwise be "buried" under the
 main window.
+
+## Specifying Where ***HomA*** Opens When Called From the System Tray
+
+When you call ***HomA*** from the System Tray it's position is 
+controlled by the following line in `homa-indicator-py`:
+
+```python
+MOVE_WINDOW_RIGHT_ADJUST = -40  # Move Window Top Right Adjustment
+```
+
+The right edge of the ***HomA*** window is the current mouse position 
+plus the adjustment offset.
 
 ---
 
