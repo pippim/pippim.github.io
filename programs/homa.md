@@ -527,13 +527,14 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 ### Preferences Notebook *LED Lights* tab:
 {:.no_toc}
 
-| LED Lights          | Description                                                    |
-|---------------------|----------------------------------------------------------------|
-| LED_LIGHTS_MAC      | MAC Address of Bluetooth LED Light Strip. Must be entered.     |
-| LED_LIGHTS_STARTUP  | On HomA startup Lights are turned on ("1") or off ("0").       |
-| LED_LIGHTS_COLOR    | Last used color when "Set Bluetooth LED Color" was applied.    |
-| BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.                |
-| BLE_LS              | Bluetooth Low Energy LED Light Strip type code value is "40"   |
+| LED Lights          | Description                                                                                                                         |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| LED_LIGHTS_MAC      | MAC Address of Bluetooth LED Light Strip. Must be entered.                                                                          |
+| LED_LIGHTS_STARTUP  | On HomA startup Lights are turned on ("1") or off ("0").                                                                            |
+| LED_LIGHTS_COLOR    | Last used color when "Set Bluetooth LED Color" was applied.                                                                         |
+| LED_RED+GREEN_ADJ   | When Red and Green are mixed together, boost red by 50%.\nNecessary for Happy Lighting where mix was olive green instead of yellow. |
+| BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.                                                                                     |
+| BLE_LS              | Bluetooth Low Energy LED Light Strip type code value is "40"                                                                        |
 
 <a id="EditPreferencesMiscellaneous"></a>
 ### Preferences Notebook *Miscellaneous* tab:
@@ -834,7 +835,7 @@ order to narrow down the problem.
 
 ---
 
-### Starting ***HomA*** using `homa-indicator.py`
+## Starting ***HomA*** using `homa-indicator.py`
 
 `homa-indicator.py` is an "Application Indicator" that sits in the System Tray /
 Task Bar. There are no optional parameters when calling it. Simply type:
@@ -881,17 +882,20 @@ the main window, any child windows are automatically moved overtop. This
 includes message dialog boxes that might otherwise be "buried" under the
 main window.
 
-## Specifying Where ***HomA*** Opens When Called From the System Tray
+---
 
-When you call ***HomA*** from the System Tray it's position is 
-controlled by the following line in `homa-indicator-py`:
+## Where ***HomA*** Opens When Called From the System Tray
+
+When you call ***HomA*** from the System Tray, its position is 
+controlled by the following line in `homa-indicator.py`:
 
 ```python
 MOVE_WINDOW_RIGHT_ADJUST = -40  # Move Window Top Right Adjustment
 ```
 
 The right edge of the ***HomA*** window is the current mouse position 
-plus the adjustment offset.
+plus the adjustment offset. The value shown is `-40` so the right edge
+will be 40 pixels to the left of the current mouse position.
 
 ---
 
