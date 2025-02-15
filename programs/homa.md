@@ -491,6 +491,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 "100"&nbsp;=&nbsp;Desktop Computer. "110"&nbsp;=&nbsp;Laptop base. 
 "120"&nbsp;=&nbsp;Laptop Display. 
 
+---
+
 <a id="EditPreferencesSony_TV"></a>
 <!-- ^ Define Edit Preferences Notebook Sony TV Tab help button -->
 ### Preferences Notebook *Sony TV* tab:
@@ -501,6 +503,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | SONY_PWD         | Sony TV REST API Password. Default "123".                     |
 | CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
 | KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
+
+---
 
 <a id="EditPreferencesGoogle_TV"></a>
 ### Preferences Notebook *Google TV* tab:
@@ -514,6 +518,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | ADB_MAGIC_TIME   | Wake-on-lan command wait time. Default is "0.2".              |
 | TCL_TV           | TCL / Google Android TV type code. Static value is "30".      |
 
+---
+
 <a id="EditPreferencesSmart_Plug"></a>
 ### Preferences Notebook *Smart Plug* tab:
 {:.no_toc}
@@ -522,6 +528,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 |------------------|------------------------------------------------------------|
 | PLUG_TIME        | TP-Link/Kasa Smart Plug wait time. Default is "2.0"        |
 | HS1_SP           | Smart Plug type code. Static value is "10"                 |
+
+---
 
 <a id="EditPreferencesLED_Lights"></a>
 ### Preferences Notebook *LED Lights* tab:
@@ -536,6 +544,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.<br>Longer scan time may reveal more devices.                                    |
 | BLE_LS              | Bluetooth Low Energy LED Light Strip type code value is "40".<br>Value used internally by *HomA* and cannot be changed.         |
 
+---
+
 <a id="EditPreferencesMiscellaneous"></a>
 ### Preferences Notebook *Miscellaneous* tab:
 {:.no_toc}
@@ -547,6 +557,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | SENSOR_CHECK   | How often the `sensors` command is run. Defaults to 1 second.      |
 | SENSOR_LOG     | How often to log sensor values. Default "3600" every hour.         |
 | FAN_GRANULAR   | Log sensor override when fan speed changes > x. Default "200" RPM. |
+
+---
 
 <a id="EditPreferencesRefresh"></a>
 ### Preferences Notebook *Refresh* tab:
@@ -561,6 +573,8 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | REDISCOVERY_SECONDS  | How often new network devices are checked. Default "60" seconds.     |
 | RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
 | RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
+
+---
 
 <a id="EditPreferencesComputer"></a>
 ### Preferences Notebook *Computer* tab:
@@ -828,7 +842,7 @@ Optional parameters (A.K.A. arguments) can be passed to `homa.py`:
 | -vv       | `-vv` Extra verbosity. Command names are printed.             |
 | -vvv      | `-vvv` Super verbosity. Results of every command are printed. |
 
-When `homa-indicator.py` calls `homa.py` it uses the parameters `-s -f`.
+When `homa-indicator.py` calls `homa.py`, it uses the parameters `-s -f`.
 
 If `homa.py` is not performing as expected, use `-v`, `-vv` or `-vvv` in that
 order to narrow down the problem.
@@ -842,14 +856,18 @@ Task Bar. There are no optional parameters when calling it. Simply type:
 
 `/home/<USER>/HomA/homa-indicator.py`
 
-Using your mouse, right-click on the icon in the system tray as shown below:
+Using your mouse, right-click on the icon in the system tray 
+as the video below shows:
 
 <video src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
 data-canonical-src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+autoplay loop muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
+The `eyesome` option only appears when *Pippim's Eyesome* is active.
+
+The `quit` option removes *HomA Indicator* from the system tray / taskbar.
 <br><br>
 
 ---
