@@ -181,8 +181,8 @@ TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
 WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
 # All saved posts are indexed for searching but, add files below too:
 EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
-                      '../programs/hyperlink.md', '../index.md',
-                      '../programs/iothings.md', '../programs/HomA.md',
+                      '../programs/hyperlink.md', '../programs/homa.md',
+                      '../index.md', '../programs/iothings.md',
                       '../programs/mserve.md', '../programs/mt.md',
                       '../programs.md', '../programs/stack.md',
                       '../programs/tcm.md', '../programs/tim-ta.md']

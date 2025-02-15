@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,304 "
 accepted:     
-uploaded:     2025-02-15 10:53:31
+uploaded:     2025-02-15 10:55:11
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-HDMI-monitor-not-detected-by-laptop-after-unplugging-and-plugging-back-in.md
 toc:          false
 navigation:   false

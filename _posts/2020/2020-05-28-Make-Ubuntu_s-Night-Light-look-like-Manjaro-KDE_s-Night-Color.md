@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,453 "
 accepted:     Accepted
-uploaded:     2025-02-15 10:53:31
+uploaded:     2025-02-15 10:55:11
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-Make-Ubuntu_s-Night-Light-look-like-Manjaro-KDE_s-Night-Color.md
 toc:          false
 navigation:   false
