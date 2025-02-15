@@ -24,28 +24,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 # Introduction
 
-Welcome to {{ site.title }}'s website powered by GitHub.
+Welcome to {{ site.title }}'s website where you can free
+open source applications.
 
 [Tim-ta](https://pippim.github.io/programs/tim-ta.html 
 "Create and run timers for Laundry, Workouts, Breaks etc.") 
 runs inside your browser. Use it for project timers:
 
-<!-- Image next to bullets suck the bullets into image
-- Doing Laundry
-- Repetitive Workout Sets<br>
-- Coffee and Lunch Breaks<br>
-<div style="left: 2rem;">
-   <ul>
-      <li> Doing Laundry </li>
-      <li> Repetitive Workout Sets </li>
-      <li> Coffee and Lunch Breaks </li>
-   </ul>
-</div>
--->
+<!-- Cannot use regular bullets sucked into image -->
 
 &ensp; ◆ &ensp; Doing Laundry<br>
 &ensp; ◆ &ensp; Repetitive Workout Sets<br>
 &ensp; ◆ &ensp; Coffee and Lunch Breaks<br>
+
+Pick from stock alarm sounds and upload your own sounds.
+Backup your ***Tim-ta*** projects and transfer them to other
+browsers, other devices or other users. Import projects from
+other Users or Devices.
+
+[HomA - Home Automation](https://pippim.github.io/programs/homa.html 
+"Control Network Devices") 
+searches your LAN, WiFi and Bluetooth devices:
+
+&ensp; ◆ &ensp; Turn televisions off and on<br>
+&ensp; ◆ &ensp; Turn lights off and on<br>
+&ensp; ◆ &ensp; Breathe colors for LED light strips<br>
+&ensp; ◆ &ensp; Turn everything off during suspend<br>
+&ensp; ◆ &ensp; Turn everything on during resume<br>
 
 Pick from stock alarm sounds and upload your own sounds.
 Backup your ***Tim-ta*** projects and transfer them to other
