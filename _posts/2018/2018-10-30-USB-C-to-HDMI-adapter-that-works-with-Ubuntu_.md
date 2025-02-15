@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "18,016 "
 accepted:     
-uploaded:     2025-02-15 10:55:11
+uploaded:     2025-02-15 14:36:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-30-USB-C-to-HDMI-adapter-that-works-with-Ubuntu_.md
 toc:          false
 navigation:   false

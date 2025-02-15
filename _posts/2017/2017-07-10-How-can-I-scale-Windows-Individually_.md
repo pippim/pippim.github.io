@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,470 "
 accepted:     Accepted
-uploaded:     2025-02-15 10:55:11
+uploaded:     2025-02-15 14:36:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-can-I-scale-Windows-Individually_.md
 toc:          false
 navigation:   false

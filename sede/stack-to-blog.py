@@ -180,12 +180,12 @@ TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
 # List depending on: Line  H1   H2   H3   H4    H5   H6
 WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
 # All saved posts are indexed for searching but, add files below too:
-EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
-                      '../programs/hyperlink.md', '../programs/homa.md',
-                      '../index.md', '../programs/iothings.md',
-                      '../programs/mserve.md', '../programs/mt.md',
-                      '../programs.md', '../programs/stack.md',
-                      '../programs/tcm.md', '../programs/tim-ta.md']
+EXTRA_SEARCH_FILES = [
+    '../about.md', '../answers.md', '../hrb.md', '../index.md', '../programs.md',
+    '../programs/homa.md', '../programs/hyperlink.md', '../programs/iothings.md',
+    '../programs/mserve.md', '../programs/mt.md', '../programs/stack.md',
+    '../programs/tcm.md', '../programs/tim-ta.md'
+]
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`

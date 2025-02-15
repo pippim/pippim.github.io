@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,604 "
 accepted:     
-uploaded:     2025-02-15 10:55:11
+uploaded:     2025-02-15 14:36:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-03-How-can-I-change-the-keybindings-in-Nautilus_.md
 toc:          false
 navigation:   false
