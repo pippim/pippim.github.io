@@ -862,7 +862,7 @@ as the video below shows:
 <video src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
 data-canonical-src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
 autoplay loop muted="muted" class="d-block rounded-bottom-2 width-fit"
-style="max-height:640px; width: 100% !important; height: auto !important;">
+style="max-height:320px; width: 50% !important; height: auto !important;">
   </video>
 
 The `eyesome` option only appears when *Pippim's Eyesome* is active.
