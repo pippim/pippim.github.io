@@ -52,10 +52,7 @@ searches your LAN, WiFi and Bluetooth devices:
 &ensp; ◆ &ensp; Turn everything off during suspend<br>
 &ensp; ◆ &ensp; Turn everything on during resume<br>
 
-Pick from stock alarm sounds and upload your own sounds.
-Backup your ***Tim-ta*** projects and transfer them to other
-browsers, other devices or other users. Import projects from
-other Users or Devices.
+Written in easy to understand Python language. All source code is free.  
 
 [Hyperlink Recipe Baker](https://pippim.github.io/programs/hyperlink.html 
 "Generate hyperlinks for markdown or HTML") 
