@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "25,780 "
 accepted:     
-uploaded:     2025-02-10 14:32:12
+uploaded:     2025-02-15 10:53:31
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-How-do-I-install-MS-SQL-for-ubuntu-18.04-LTS_.md
 toc:          false
 navigation:   false

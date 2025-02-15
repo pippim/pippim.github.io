@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "16,537 "
 accepted:     
-uploaded:     2025-02-10 14:32:12
+uploaded:     2025-02-15 10:53:31
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-25-tracker-service-running-every-minute.md
 toc:          false
 navigation:   false
