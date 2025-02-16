@@ -700,17 +700,18 @@ Here is a sample window that appears:
    caption="HomA - View Bluetooth Devices.png"
 %}
 
-The device name `QHM-T095` is highlighted in yellow and the MAC address you
-need to enter is highlighted in red.
+The device name `QHM-T095` is highlighted in yellow and the MAC address
+is highlighted in red. For devices to appear in the window, they MUST BE
+powered on.
 
 The highlighting appears after **HomA** knows the MAC address for your
 Bluetooth LED Light Strip. If the MAC address hasn't been entered into
 **HomA**, via the *Edit Preferences* feature, there is NO highlighting.
 
 After the device name, E.G. `QHM-T095`, appears the number of times the 
-device was discovered, E.G. `(4)`.
+device was discovered. E.G. `(4)` means the device was discovered 4 times.
 
-The discovery period defaults to 10 seconds. Over that time, the a given
+The discovery period defaults to 10 seconds. Over that period, a given
 device can be discovered many times.
 
 Do not be surprised if there are many device names you don't recognize.
