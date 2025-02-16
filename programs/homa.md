@@ -128,6 +128,7 @@ reused on the next **HomA** restart so you don't have to reenter it.
 
 ---
 
+<a id="HelpRightClickMenu"></a>
 ## Right-Click Popup Menus
 
 In the Network Devices view, you can move the mouse over a device
@@ -144,6 +145,7 @@ Here is a sample screenshot of right-clicking on a Bluetooth LED Light Strip:
    caption="Right-click menu Bluetooth LED.png"
 %}
 
+<a id="HelpRightClickBluetooth"></a>
 ### Bluetooth LED Light Strip
 {:.no_toc}
 
@@ -172,6 +174,7 @@ your LED Light Strip.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
+<a id="HelpRightClickSonyTV"></a>
 ### Sony Bravia Professional Display TV
 {:.no_toc}
 
@@ -187,6 +190,7 @@ the following menu options appear:
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
+<a id="HelpRightClickGoogleTV"></a>
 ### Google Android TV
 {:.no_toc}
 
@@ -200,6 +204,7 @@ the following menu options appear:
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
+<a id="HelpRightClickLaptopDisplay"></a>
 ### Laptop Display
 {:.no_toc}
 
@@ -213,6 +218,7 @@ the following menu options appear:
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
+<a id="HelpRightClickComputer"></a>
 ### Laptop Base or Computer
 {:.no_toc}
 
