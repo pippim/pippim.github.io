@@ -692,10 +692,10 @@ menu.
 
 Here is a sample window that appears:
 
-{% include image.html src="/assets/img/HomA/HomA View Bluetooth Devices.png"
-   alt="HomA View Bluetooth Devices"
+{% include image.html src="/assets/img/HomA/HomA - View Bluetooth Devices.png"
+   alt="HomA - View Bluetooth Devices"
    style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
-   caption="HomA View Bluetooth Devices.png"
+   caption="HomA - View Bluetooth Devices.png"
 %}
 
 The device name `QHM-T095` is highlighted in yellow and the MAC address you
@@ -712,12 +712,30 @@ the *Edit Preferences* feature:
    caption="HomA Enter Bluetooth LED MAC Address.png"
 %}
 
-## Use Happy Lighting to Discover LED MAC Address
+## Use Happy Lighting to Discover LED Device Name
 
 Using your smartphone Happy Lighting app you can also see the Bluetooth LED
-Light Strip device name and MAC address:
+Light Strip device name:
 
+{% include image.html src="/assets/img/HomA/HomA Happy Lighting Device.png"
+   alt="HomA Happy Lighting Device"
+   style="float: left; width: 50%; margin: .5rem 2rem 1rem 10rem;"
+   caption="HomA Happy Lighting Device.png"
+%}
 
+The *Happy Lighting* smartphone app works with many common Bluetooth
+Smart LED Light Strips.
+
+For the App to work, **HomA** cannot be running and connected to the
+LED Light Strip using Bluetooth.
+
+In the App, selected the icon with three green horizontal lines. Then
+click "My Device".
+
+In this screenshot, the device name is `QHM-T095`.
+
+After running the *Happy Lighting* App, exit it so it doesn't conflict
+with **HomA** operations.
 
 ---
 
