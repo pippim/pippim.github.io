@@ -688,33 +688,40 @@ enter the MAC address using *Edit Preferences*. In order to discover the MAC
 address use the *View Bluetooth Devices* feature found on the *View* dropdown
 menu.
 
+---
+
 ## Sample View Bluetooth Devices Window
 
 Here is a sample window that appears:
 
 {% include image.html src="/assets/img/HomA/HomA - View Bluetooth Devices.png"
    alt="HomA - View Bluetooth Devices"
-   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
+   style="float: left; width: 75%; margin: .5rem 2rem 1rem 10rem;"
    caption="HomA - View Bluetooth Devices.png"
 %}
 
 The device name `QHM-T095` is highlighted in yellow and the MAC address you
 need to enter is highlighted in red.
 
-## Enter Bluetooth LED MAC Address
+The highlighting appears after **HomA** knows the MAC address for your
+Bluetooth LED Light Strip. If the MAC address hasn't been entered into
+**HomA**, via the *Edit Preferences* feature, there is NO highlighting.
 
-You need to enter the discovered Bluetooth LED MAC address into **HomA** using
-the *Edit Preferences* feature:
+After the device name, E.G. `QHM-T095`, appears the number of times the 
+device was discovered, E.G. `(4)`.
 
-{% include image.html src="/assets/img/HomA/HomA Enter Bluetooth LED MAC Address.png"
-   alt="HomA Enter Bluetooth LED MAC Address"
-   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
-   caption="HomA Enter Bluetooth LED MAC Address.png"
-%}
+The discovery period defaults to 10 seconds. Over that time, the a given
+device can be discovered many times.
+
+Do not be surprised if there are many device names you don't recognize.
+These devices belong to your neighbor(s) or passerby's. For example,
+someone passing by could have Bluetooth Earbuds or a Bluetooth Smartwatch.
+
+---
 
 ## Use Happy Lighting to Discover LED Device Name
 
-Using your smartphone Happy Lighting app you can also see the Bluetooth LED
+The smartphone Happy Lighting App can display the Bluetooth LED
 Light Strip device name:
 
 {% include image.html src="/assets/img/HomA/HomA Happy Lighting Device.png"
@@ -736,6 +743,23 @@ In this screenshot, the device name is `QHM-T095`.
 
 After running the *Happy Lighting* App, exit it so it doesn't conflict
 with **HomA** operations.
+
+---
+
+## Enter Bluetooth LED MAC Address in ***HomA***
+
+You need to enter the discovered Bluetooth LED MAC address into **HomA** using
+the *Edit Preferences* feature:
+
+{% include image.html src="/assets/img/HomA/HomA Enter Bluetooth LED MAC Address.png"
+   alt="HomA Enter Bluetooth LED MAC Address"
+   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
+   caption="HomA Enter Bluetooth LED MAC Address.png"
+%}
+
+After entering the MAC address you can select the *File* dropdown menu
+option *Rediscover Now*. The Bluetooth LED Light Strips should be added
+to the bottom of the Network Devices view. If not, restart **HomA**.
 
 ---
 
