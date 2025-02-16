@@ -677,8 +677,52 @@ def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5
 
 ---
 
+<a id="ViewBluetoothDevices"></a>
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+# View Bluetooth Devices
+
+In order to control Bluetooth Low Energy (BLE) LED Light Strips, you need to
+enter the MAC address using *Edit Preferences*. In order to discover the MAC
+address use the *View Bluetooth Devices* feature found on the *View* dropdown
+menu.
+
+## Sample View Bluetooth Devices Window
+
+Here is a sample window that appears:
+
+{% include image.html src="/assets/img/HomA/HomA View Bluetooth Devices.png"
+   alt="HomA View Bluetooth Devices"
+   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
+   caption="HomA View Bluetooth Devices.png"
+%}
+
+The device name `QHM-T095` is highlighted in yellow and the MAC address you
+need to enter is highlighted in red.
+
+## Enter Bluetooth LED MAC Address
+
+You need to enter the discovered Bluetooth LED MAC address into **HomA** using
+the *Edit Preferences* feature:
+
+{% include image.html src="/assets/img/HomA/HomA Enter Bluetooth LED MAC Address.png"
+   alt="HomA Enter Bluetooth LED MAC Address"
+   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
+   caption="HomA Enter Bluetooth LED MAC Address.png"
+%}
+
+## Use Happy Lighting to Discover LED MAC Address
+
+Using your smartphone Happy Lighting app you can also see the Bluetooth LED
+Light Strip device name and MAC address:
+
+
+
+---
+
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 # Installation
 
@@ -781,8 +825,8 @@ You can change `python` to `python2` or `python3` to override.
 
 ---
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # How to Start ***HomA***
 
@@ -878,8 +922,8 @@ This doesn't close the *HomA* application if already opened.
 
 ---
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 # How to Open ***HomA*** From the System Tray
 
@@ -920,11 +964,6 @@ MOVE_WINDOW_RIGHT_ADJUST = -40  # Move Window Top Right Adjustment
 The right edge of the ***HomA*** window is the current mouse position
 plus the adjustment offset. The value shown is `-40` so the right edge
 will be 40 pixels to the left of the current mouse position.
-
----
-
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ---
 
@@ -973,7 +1012,12 @@ will be 40 pixels to the left of the current mouse position.
 
 ---
 
+<a id="hdr20"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr19">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr21">Skip</a></div>
+
+---
+
 
 <!-- Foot section doesn't have "skip" button -->
-<a id="hdr20"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr19">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr21"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr20">ToS</a>  <a href="#hdr2">ToC</a></div>
