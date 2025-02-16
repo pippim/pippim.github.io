@@ -28,7 +28,7 @@ the sample project can be deleted.
 
 <!-- Define hdr1 id. No "ToS" button -->
 <a id="hdr1"></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 # Introduction
 
@@ -90,8 +90,8 @@ Here are other examples where you can use Tim-ta:
 
 ---
 
-<a id='hdr3'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # Upload Custom Sound Files
 
@@ -178,9 +178,9 @@ These are Tim-ta stock sound files you can use when a timer task ends:
     <br>
     <li><b>Alarm_01.mp3</b>&emsp;<audio controls id="Alarm_01.mp3"></audio>
     </li><br>
-    <li><b>Alarm_02.mp3</b>&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
+    <li><b>Alarm_02.mp3</b>&emsp;<audio controls id="Alarm_02.mp3"></audio>
     </li><br>
-    <li><b>Alarm_03.mp3</b>&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
+    <li><b>Alarm_03.mp3</b>&emsp;<audio controls id="Alarm_03.mp3"></audio>
     </li>
     <!-- June 12/22: Non-display filenames no longer distributed (in localStorage) -->
     <audio id="Alarm_01.mp3"></audio>
@@ -190,9 +190,9 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 ---
 
-<a id='hdr6'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
-<a id='Download'></a>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id="Download"></a>
 
 # Download Tim-ta Configuration
 
@@ -208,7 +208,7 @@ the file to an email message to yourself to serve as a backup.
 
 ---
 
-<a id='Upload'></a>
+<a id="Upload"></a>
 # Upload Tim-ta Configuration
 
 Upload TIm-ta Configuration to Local Storage. New Projects
@@ -247,8 +247,8 @@ will be updated.
 
 ---
 
-<a id='hdr7'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 # Upload Tim-ta Configuration Tutorial
 
@@ -311,8 +311,8 @@ Edge, etc.) and User Settings.
 
 ---
 
-<a id='hdr8'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 # Upload Tim-ta Configuration Sample Video
 
@@ -327,8 +327,8 @@ a file to upload, you will need to do that section.
 ---
 
 
-<a id='hdr9'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Tim-ta Buttons
 
@@ -375,8 +375,8 @@ detail line for small screen, open more buttons control box.
 
 ---
 
-<a id='hdr10'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Timer Countdown Override Buttons
 {:.no_toc}
@@ -410,8 +410,8 @@ currently running progress bar is automatically selected.
 
 ---
 
-<a id='hdr11'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 # Tim-ta Configuration Kept in Local Storage
 
@@ -459,7 +459,7 @@ to open "***Developer Tools***"
 ---
 
 <a id="hdr12"></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
 # Running Project Timers in a Popup Window
 
