@@ -1,5 +1,5 @@
 ---
-title: Home Automation
+title: HomA - Home Automation
 layout: program
 canonical_url: 'https://www.pippim.com/programs/homa.html'
 ---
@@ -11,7 +11,7 @@ canonical_url: 'https://www.pippim.com/programs/homa.html'
 
 # Introduction
 
-**HomA** (Home Automation) automatically searches LAN, WiFi and Bluetooth.
+**HomA** (**Hom**e **A**utomation) automatically searches LAN, WiFi and Bluetooth.
 It allows you to turn devices on and off from your computer. Devices such as:
 
 - Sony Bravia KDL Televisions / Professional Displays using REST API
@@ -24,11 +24,12 @@ It allows you to turn devices on and off from your computer. Devices such as:
 
 ## Extra features
 
+- Open source application written in Python with Tkinter user interface
 - The same *HomA* version works in both Python 2.7.12+ and Python 3.5+
 - LED Light Strip "breathing colors" feature varies colors and brightness levels
 - View Breathing Color Statistics to fine-tune color changes and times
 - Turn Sony TV picture off but leave on sound for listening to music or podcasts
-- Disable automatic turning on of TV bias lights during daytime 
+- Automatically turn on TV bias lights only during nighttime
 - Automatically rediscover new network devices every minute
 - Communicate with devices using static MAC address to find dynamic IP address
 - Big number calculator with TeraByte, GigaByte, MegaByte units of measure
@@ -38,10 +39,9 @@ It allows you to turn devices on and off from your computer. Devices such as:
 - Command event viewer of error messages, return codes and run times
 - Floating sub windows that raise to top and move when main window is dragged
 - Message dialog boxes stay on top and cannot be "buried" under windows
-- Fading in/out tooltips appear when mouse hovers over buttons and labels 
-- Open source application written in Python with Tkinter user interface
-- Help buttons open web browser and this webpage. Then the page automatically 
-scrolls to the appropriate section 
+- Fading in/out tooltips appear when mouse hovers over buttons and labels
+- Help buttons open web browser and this webpage. Then the page automatically
+scrolls to the appropriate section
 
 ---
 
@@ -53,23 +53,23 @@ scrolls to the appropriate section
 ---
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # Menus
 
 There are two types of menus in **HomA**:
 
 - Dropdown Menus at the top of the window: *File*, *Edit*, *View* and *Tools*.
-- Right-click Popup Menus. Use the mouse right button to click on any network 
-device and a popup menu will appear. General menu options for all devices are: 
-*Turn On*, *Turn Off*, *Move device Up*&nbsp;(the display order), 
-*Move device Down*&nbsp;(the display order) and *Close menu*. Some devices 
+- Right-click Popup Menus. Use the mouse right button to click on any network
+device and a popup menu will appear. General menu options for all devices are:
+*Turn On*, *Turn Off*, *Move device Up*&nbsp;(the display order),
+*Move device Down*&nbsp;(the display order) and *Close menu*. Some devices
 such as a *Sony TV* and a *Bluetooth LED* have extra right-click popup menu options.
 
 ## Dropdown Menus
 
-The top-left corner of *HomA's* main window contains 
-four dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***. 
+The top-left corner of *HomA's* main window contains
+four dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***.
 Click on the name and the dropdown menu options appear:
 
 ### *File* Dropdown Menu
@@ -81,29 +81,29 @@ out) until a Playlist is opened.
 
 - ***Rediscover now*** - Rediscovery happens every minute but you can force
 immediate rediscovery with this option.
-- ***Minimize*** - Duplicates the `Minimize` button at the bottom of the 
-window. The **HomA** window is minimized with this option. `xdotool` and 
-`wmctrl` must be installed to enable this option. 
-- ***Suspend*** - Duplicates the `Suspend` button at the bottom of the 
-window. All devices are powered off and the computer suspends. 
+- ***Minimize*** - Duplicates the `Minimize` button at the bottom of the
+window. The **HomA** window is minimized with this option. `xdotool` and
+`wmctrl` must be installed to enable this option.
+- ***Suspend*** - Duplicates the `Suspend` button at the bottom of the
+window. All devices are powered off and the computer suspends.
 - ***Exit*** - **HomA** shuts down.
 
 ### *Edit* Dropdown Menu
 {:.no_toc}
 
-- ***Preferences*** - Settings to control **HomA** operation. 
+- ***Preferences*** - Settings to control **HomA** operation.
 
 ### *View* Dropdown Menu
 {:.no_toc}
 
-- ***Sensors*** - Displays CPU and GPU temperature and fan speeds. The 
-network devices view is closed. 
-- ***Nnetwork devices*** - Displays Network devices and status. The 
-sensors view is closed. 
+- ***Sensors*** - Displays CPU and GPU temperature and fan speeds. The
+network devices view is closed.
+- ***Nnetwork devices*** - Displays Network devices and status. The
+sensors view is closed.
 - ***Bluetooth devices*** - Displays all bluetooth devices (including your
 neighbours or people walking by your location). Helpful to identify your
 Bluetooth LED Light Strips. Provides option to "kill" abandoned gatttool
-jobs and/or jobs taking more than 10% of a CPU single core. 
+jobs and/or jobs taking more than 10% of a CPU single core.
 - ***Discovery timings*** - Display how long it takes to communicate with
 devices to tweak Preference time-outs.
 - ***Discovery errors*** - Display errors communicating with
@@ -116,16 +116,15 @@ This option is greyed out (inaccessible) when not breathing colors.
 ### *Tools* Dropdown Menu
 {:.no_toc}
 
-- ***Big Number Calculator*** - 
-<a href="#big-number-calculator-sample-video">Indispensable calculator</a>
-for large numbers using **MB** (Megabytes), **GB** (Gigabytes), 
+- ***Big Number Calculator*** - Calculator with units of measure
+for large numbers using **MB** (Megabytes), **GB** (Gigabytes),
 **TB** (Terabytes), etc.
 - ***Timer 600 seconds*** - Run a timer and display large digit countdown.
 Alarm sounds when timer ends. "600 seconds" changed in Preferences.
 - ***Forget sudo password*** - If you had entered your sudo password
 to control laptop display or reset Bluetooth you can use this option to
 "forget" the password. That said, it is automatically encrypted and
-reused on the next boot so you don't have to reenter it.
+reused on the next **HomA** restart so you don't have to reenter it.
 
 ---
 
@@ -145,10 +144,10 @@ Here is a sample screenshot of right-clicking on a Bluetooth LED Light Strip:
    caption="Right-click menu Bluetooth LED.png"
 %}
 
-### Bluetooth LED Light Strip 
+### Bluetooth LED Light Strip
 {:.no_toc}
 
-When you right-click on a Bluetooth LED Light Strip, 
+When you right-click on a Bluetooth LED Light Strip,
 the following menu options appear:
 
 - ***Set Bluetooth LED color*** - Set color and brightness. Remembers
@@ -157,7 +156,7 @@ your last selection.
 - ***Breathing colors*** - Cycle colors between Red, Red & Green, Green,
 Green & Blue, Blue and Blue & Red. Breathe in (make brighter) and Breathe
 out (make dimmer) for each color combination.
-- ***View Breathing Statistics*** - While Bluetooth LED lights are 
+- ***View Breathing Statistics*** - While Bluetooth LED lights are
 "breathing colors", display statistics to help tweak Preference settings.
 This option is greyed out (inaccessible) when not breathing colors.
 - ***Reset Bluetooth*** - Use this from time to time if your computer's
@@ -173,7 +172,7 @@ your LED Light Strip.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
-### Sony Bravia Professional Display TV 
+### Sony Bravia Professional Display TV
 {:.no_toc}
 
 When you right-click on a Sony Bravia Professional Display TV,
@@ -188,7 +187,7 @@ the following menu options appear:
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
-### Google Android TV 
+### Google Android TV
 {:.no_toc}
 
 When you right-click on a Google Android TV,
@@ -201,7 +200,7 @@ the following menu options appear:
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
-### Laptop Display 
+### Laptop Display
 {:.no_toc}
 
 When you right-click on a Laptop Display,
@@ -214,7 +213,7 @@ the following menu options appear:
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
-### Laptop Base or Computer 
+### Laptop Base or Computer
 {:.no_toc}
 
 When you right-click on a Laptop Base or your computer,
@@ -251,13 +250,13 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 ### Help Button Sample Video Highlights
 {:.no_toc}
 
-- The main window is dragged and the *View Breathing Statistics* child window 
+- The main window is dragged and the *View Breathing Statistics* child window
 is dragged along with it. The child window forces itself overtop of the parent.
-- The mouse hovers over button bar at bottom of child window. 
+- The mouse hovers over button bar at bottom of child window.
 - Button Tooltips appear after a short delay.
 - Tooltips gradually fade in, remain a short period, then gradually fade out.
 - The *Help* button is clicked and this webpage appears in a new browser window.
-- The video above is played. 
+- The video above is played.
 - The webpage is scrolled.
 - The "Copy" button is used to copy source code to the system clipboard.
 - Lightning bolt - "jumps" to different sections.
@@ -300,8 +299,8 @@ in green. The power status is checked and set to:
 
 ## How Network Devices are discovered
 
-Most Network Devices are discovered using `arp -a`, `getent hosts`, 
-`ip addr` and `hostnamectl status`. The exception is a Bluetooth device 
+Most Network Devices are discovered using `arp -a`, `getent hosts`,
+`ip addr` and `hostnamectl status`. The exception is a Bluetooth device
 where you need to specify
 the MAC address. Another exception is your computer which is already
 running *HomA* in the first place.
@@ -335,7 +334,7 @@ The fields on each `arp` line (in order of appearance) are:
 ### `getent hosts` Capabilities
 
 The program `getent` is a Linux command that reads the file
-`/etc/hosts`. When you type `getent hosts` at the command line 
+`/etc/hosts`. When you type `getent hosts` at the command line
 you will see something like this:
 
 ```shell
@@ -367,15 +366,16 @@ The fields on each `arp` line (in order of appearance) are:
 - Alias, E.G. "hs100 Sony TV Bias Light"
 - MAC Address, E.G. "50:d4:f7:eb:41:35"
 
-The ***MAC Address*** is not in the "normal" `/etc/hosts` file. It is required
-for you to add it in order to allow *HomA* to link rows in the file to `arp` output.
+The ***MAC Address*** is not in the typical `/etc/hosts` file. It is required
+for you to add it in order to allow *HomA* to link rows to `arp` output
+and override dynamic IP addresses.
 
 
 ---
 
 ### `ip addr` Capabilities
 
-The program `ip` will show / manipulate routing, devices, 
+The program `ip` will show / manipulate routing, devices,
 policy routing and tunnels. When
 you type `ip addr` at the command line you will see
 something like this:
@@ -389,7 +389,7 @@ something like this:
     link/ether 28:f1:0e:2a:1a:ed brd ff:ff:ff:ff:ff:ff
     inet 192.168.0.12/24 brd 192.168.0.255 scope global dynamic enp59s0
        valid_lft 594184sec preferred_lft 594184sec
-    inet6 fe80::2af1:eff:fe2a:1aed/64 scope link 
+    inet6 fe80::2af1:eff:fe2a:1aed/64 scope link
        valid_lft forever preferred_lft forever
 3: wlp60s0: <BROADCAST,MULTICAST> mtu 1500 qdisc mq state DOWN group default qlen 1000
     link/ether 9c:b6:d0:10:37:f7 brd ff:ff:ff:ff:ff:ff
@@ -454,11 +454,11 @@ The fields in each tab are documented in the sections below.
 Bonus footage shows how the Sensors and Devices views are toggled with the
 button at the bottom of the window:
 <br><br>
-![Sensors](/assets/img/HomA/flame.png){: 
+![Sensors](/assets/img/HomA/flame.png){:
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
 <font size="6">Sensors</font><br clear="left"/>
 <br><br>
-![Devices](/assets/img/HomA/wifi.png){: 
+![Devices](/assets/img/HomA/wifi.png){:
 style="float: left; margin: 0 2rem 0 0;" width="10%" }
 <font size="6">Devices</font><br clear="left"/>
 
@@ -467,29 +467,29 @@ style="float: left; margin: 0 2rem 0 0;" width="10%" }
 
 ***NOTES:***
 
-> 
-> - The *Preferences* Notebook is divided into multiple tabs. Click 
-on a specific tab to edit the fields. 
-> 
-> - Fields are validated based on type. For example, you cannot enter 
+>
+> - The *Preferences* Notebook is divided into multiple tabs. Click
+on a specific tab to edit the fields.
+>
+> - Fields are validated based on type. For example, you cannot enter
 the letter "a" into a numeric field.
-> 
-> - Fields that are greyed out are read-only. You cannot enter data 
+>
+> - Fields that are greyed out are read-only. You cannot enter data
 into these fields.
-> 
+>
 > - Wait times like `CURL_TIME` is how long to wait before deciding a
-command failed. For example, every network device must be tested to see 
-if it is a Sony TV. The REST API response time is very fast. So only 
-`0.2` seconds is required to wait. If the network device doesn't reply 
-appropriately after `0.2` seconds, **HomA** knows the device isn't a Sony TV. 
+command failed. For example, every network device must be tested to see
+if it is a Sony TV. The REST API response time is very fast. So only
+`0.2` seconds is required to wait. If the network device doesn't reply
+appropriately after `0.2` seconds, **HomA** knows the device isn't a Sony TV.
 If the timeout is longer, HomA takes longer to discover all the network devices.
-> 
-> - Every Network Device is assigned a type code that **HomA** 
-uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug, 
-"20"&nbsp;=&nbsp;Sony TV, "30"&nbsp;=&nbsp;TCL / Google Android TV. 
-"40"&nbsp;=&nbsp;Bluetooth Low Energy (BLE) LED Light Strip. 
-"100"&nbsp;=&nbsp;Desktop Computer. "110"&nbsp;=&nbsp;Laptop base. 
-"120"&nbsp;=&nbsp;Laptop Display. 
+>
+> - Every Network Device is assigned a type code that **HomA**
+uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
+"20"&nbsp;=&nbsp;Sony TV, "30"&nbsp;=&nbsp;TCL / Google Android TV.
+"40"&nbsp;=&nbsp;Bluetooth Low Energy (BLE) LED Light Strip.
+"100"&nbsp;=&nbsp;Desktop Computer. "110"&nbsp;=&nbsp;Laptop base.
+"120"&nbsp;=&nbsp;Laptop Display.
 
 ---
 
@@ -683,34 +683,34 @@ def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5
 # Installation
 
 **HomA** (Home Automation) is written in Python.
-The main program is called `homa.py` and can be found in the 
-[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src/homa.py 
-"View HomA Python source code"){:target="_blank"}. 
+The main program is called `homa.py` and can be found in the
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src/homa.py
+"View HomA Python source code"){:target="_blank"}.
 
-Copy all the files (including the subdirectories) 
-in the GitHub `src` folder to a new directory on your computer. 
-For example, `<HOME>/HomA` for Linux, Mac, Chrome OS or 
+Copy all the files (including the subdirectories)
+in the GitHub `src` folder to a new directory on your computer.
+For example, `<HOME>/HomA` for Linux, Mac, Chrome OS or
 Windows Subsystem for Linux (WSL). Unless you are running Ubuntu 16.04
 LTS under Extended Security Maintenance (ESM), you may have to make
-changes to `homa.py` and the programs it calls. 
+changes to `homa.py` and the programs it calls.
 
 For Windows, the installation directory would be `<HOME>\HomA`.
 As of {{ site.refreshed | date: "%B %e, %Y" }}
 **HomA** will not run under Windows without modification. It may
 work in Windows Subsystem for Linux with little or no modification.
 
-`homa.py` is called by `homa-indicator.py` from the systray / taskbar 
+`homa.py` is called by `homa-indicator.py` from the systray / taskbar
 / application indicator bar. It is recommended you start using **HomA**
 from the command line initially, to see any error messages that might
 appear. For example, an error message may appear for missing dependency.
 
-`homa-indicator.py` allows access 
+`homa-indicator.py` allows access
 to **HomA** from the taskbar of any monitor.
 
 `homa-indicator.py` and `homa.py` do not need to be in your path.
-You can call them from the command line using `/path/to/homa-indicator.py` 
-or `/path/to/homa.py` respectively. If you followed the installation tip 
-above, you would type: `<HOME>/HomA/homa-indicator.py` for Linux-like machines, 
+You can call them from the command line using `/path/to/homa-indicator.py`
+or `/path/to/homa.py` respectively. If you followed the installation tip
+above, you would type: `<HOME>/HomA/homa-indicator.py` for Linux-like machines,
 or `<HOME>\HomA\homa-indicator.py` for Windows.
 
 Installing **HomA** (`homa.py` and `homa-indicator.py`) requires extra steps
@@ -737,17 +737,17 @@ Requirements include:
 - ***Bluez tools*** (kernel version not GNOME desktop version) which
 provides `hcitool`, `hciconfig` and `gatt` commands.
 - `trionesControl` (already included in HomA subdirectory)
-- `gatttool` (already included in HomA subdirectory). It calls `serial` 
-python module which must be installed separately. `python-serial` or 
+- `gatttool` (already included in HomA subdirectory). It calls `serial`
+python module which must be installed separately. `python-serial` or
 `python3-serial` debian package in Ubuntu.
 - `ttkwidgets` (already included in HomA subdirectory)
 - `adb` (Android Debugging Bridge for Google TV on Ethernet or WiFi)
 - `wakeonlan` — Wakeup Google TV over Ethernet
-- `curl` (internet downloading tool required for Sony REST API 
+- `curl` (internet downloading tool required for Sony REST API
 over Ethernet or WiFi)
 - `xdotool` (required for moving windows)
 - `arp` (Address Resolution Protocol tool) should be on all machines
-- `getent` — to access `/etc/hosts` (network device name, alias, 
+- `getent` — to access `/etc/hosts` (network device name, alias,
 IP address and optional MAC address)
 - `ip` command to get address names for Ethernet and WiFi
 - `xrandr` — X11 windowing system
@@ -755,28 +755,28 @@ IP address and optional MAC address)
 - `gsettings` — to test if GNOME Night Light is being used
 - `sensors` — to display Dell CPU and GPU temperature and fan speeds
 - `nmap` Network mapping tool
-- `hs100.sh` TP-Link / Kasa WiFi Smart Plug controller (already 
+- `hs100.sh` TP-Link / Kasa WiFi Smart Plug controller (already
 included in HomA subdirectory)
 - `nc` — arbitrary TCP and UDP connections and listens
 - `rfkill` — tool for enabling and disabling wireless devices
 - `ifconfig` and `iwconfig` internet configuration tools
-- Miscellaneous builtin Linux commands — `od`, `base64`, `shasum`, `ls`, 
+- Miscellaneous builtin Linux commands — `od`, `base64`, `shasum`, `ls`,
 `grep`, `sort`, `uniq`, `ps`, `aplay` (may not be builtin), `ps` and `cut`
 - A web browser like Firefox, Chrome or Edge is required for Help buttons
 - `systemctl` or similar method to suspend the computer
 
 For expanded sunrise/sunset brightness control you can use *Pippim Eyesome*.
 
-> ***IMPORTANT NOTES:*** 
-> 
-> - **HomA** was tested with Linux, specifically 
+> ***IMPORTANT NOTES:***
+>
+> - **HomA** was tested with Linux, specifically
 Ubuntu 16.04 LTS ECM/Plus using Python 2.7.12 and Python 3.5.
-> 
-> - You can toggle between Pyhon 2.7.x and 
-Python 3.x by changing the *"shebang"*. 
-The first line of `homa.py` and `homa-indicator.py` contain the 
+>
+> - You can toggle between Pyhon 2.7.x and
+Python 3.x by changing the *"shebang"*.
+The first line of `homa.py` and `homa-indicator.py` contain the
 *"shebang"* of `#!/usr/bin/env python` to run the default python.
-You can change `python` to `python2` or `python3` to override. 
+You can change `python` to `python2` or `python3` to override.
 
 
 ---
@@ -792,7 +792,7 @@ start it from `homa-indicator.py`.
 In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA`.
 Where `<USER>` is your User Id.
 
-## Starting ***HomA*** From the Command Line 
+## Starting ***HomA*** From the Command Line
 
 If *HomA* is not in your path, change to the directory where *HomA* is installed:
 
@@ -811,7 +811,7 @@ $ homa.py
                     Started: 8:08 AM
 
 = = = = = System Monitor Processor Temps & Fans = = = = =
- Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time  
+ Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time
 -------- | ---------------- | ---------------- | --------
     6.78 | +70.0°C 3000 RPM | +71.0°C 2800 RPM |  8:08 AM
    33.01 | +71.0°C 3300 RPM | +71.0°C 2800 RPM |  8:09 AM
@@ -856,7 +856,7 @@ Task Bar. There are no optional parameters when calling it. Simply type:
 
 `/home/<USER>/HomA/homa-indicator.py`
 
-Using your mouse, right-click on the icon in the system tray 
+Using your mouse, left-click or right-click on the icon in the system tray
 as the video below shows:
 
 <video src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
@@ -865,9 +865,15 @@ autoplay loop muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:320px; width: 50% !important; height: auto !important;">
   </video>
 
+
+The `HomA` option opens the *HomA* application at the mouse position. If
+*HomA* is already running, it's window is moved to the mouse position.
+
 The `eyesome` option only appears when *Pippim's Eyesome* is active.
+When selected, *Eyesome Setup* opens at the mouse position.
 
 The `quit` option removes *HomA Indicator* from the system tray / taskbar.
+This doesn't close the *HomA* application if already opened.
 <br><br>
 
 ---
@@ -904,14 +910,14 @@ main window.
 
 ## Where ***HomA*** Opens When Called From the System Tray
 
-When you call ***HomA*** from the System Tray, its position is 
+When you call ***HomA*** from the System Tray, its position is
 controlled by the following line in `homa-indicator.py`:
 
 ```python
 MOVE_WINDOW_RIGHT_ADJUST = -40  # Move Window Top Right Adjustment
 ```
 
-The right edge of the ***HomA*** window is the current mouse position 
+The right edge of the ***HomA*** window is the current mouse position
 plus the adjustment offset. The value shown is `-40` so the right edge
 will be 40 pixels to the left of the current mouse position.
 
