@@ -134,6 +134,19 @@ reused on the next **HomA** restart so you don't have to reenter it.
 In the Network Devices view, you can move the mouse over a device
 and right click for a context-sensitive popup menu.
 
+All devices have these menu options:
+
+- *Turn On* - turn on the device
+- *Turn Off* - turn off the device
+- *Move device Up* - move the device up in the display order
+- *Move device Down* - Move the device down the display order
+- *Help* - Open a new browser window and navigate to this webpage
+- *Close menu* - Close the popup menu. The same result achieved 
+by moving mouse out of the menu and left-clicking.
+ 
+Some devices such as a *Sony TV* and a *Bluetooth LED* have extra 
+right-click popup menu options.
+
 ### Sample Right-Click Popup Menu
 {:.no_toc}
 
@@ -154,9 +167,9 @@ the following menu options appear:
 
 - ***Set Bluetooth LED color*** - Set color and brightness. Remembers
 your last selection.
-- ***Nighttime*** - Set nighttime color.
-- ***Breathing colors*** - Cycle colors between Red, Red & Green, Green,
-Green & Blue, Blue and Blue & Red. Breathe in (make brighter) and Breathe
+- ***Nighttime brightness*** - Set LED light strip for nighttime brightness.
+- ***Breathing colors*** - Cycle colors between Red, Red + Green, Green,
+Green + Blue, Blue and Blue + Red. Breathe in (make brighter) and Breathe
 out (make dimmer) for each color combination.
 - ***View Breathing Statistics*** - While Bluetooth LED lights are
 "breathing colors", display statistics to help tweak Preference settings.
