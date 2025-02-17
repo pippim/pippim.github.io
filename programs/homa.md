@@ -798,12 +798,16 @@ to the bottom of the Network Devices view. If not, restart **HomA**.
 
 **HomA** (Home Automation) is written in Python.
 The main program is called `homa.py` and can be found in the
-[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src 
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main 
 "View HomA Python source code"){:target="_blank"}.
 
-Copy all the files (including the subdirectories)
-in the GitHub `src` folder to a new directory on your computer.
-For example, `<HOME>/HomA` for Linux.
+Click the above link and then click the green code button shown below:
+
+{% include image.html src="/assets/img/HomA/HomA - Download ZIP.png"
+   alt="HomA - Download ZIP"
+   style="float: right; width: 90%; margin: .5rem 2rem 1rem 10rem;"
+   caption="HomA - Download ZIP.png"
+%}
 
 `homa.py` is called by `homa-indicator.py` from the system tray / taskbar
 / application indicator bar. It is recommended you start using **HomA**
