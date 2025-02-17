@@ -796,8 +796,7 @@ to the bottom of the Network Devices view. If not, restart **HomA**.
 
 # Installation
 
-**HomA** (Home Automation) is written in Python.
-The main program is called `homa.py` and can be found in the
+**HomA** (Home Automation) is found in the
 [HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main 
 "View HomA Python source code"){:target="_blank"}.
 
@@ -809,22 +808,33 @@ Click the above link and then click the green code button shown below:
    caption="HomA - Download ZIP.png"
 %}
 
-`homa.py` is called by `homa-indicator.py` from the system tray / taskbar
-/ application indicator bar. It is recommended you start using **HomA**
-from the command line initially, to see any error messages that might
-appear. For example, an error message may appear for missing dependency.
+- Select the **Download ZIP** option
+- Extract the archive to your home directory
 
-`homa-indicator.py` allows access
-to **HomA** from the taskbar of any monitor.
+Open a terminal window and type:
 
-`homa-indicator.py` and `homa.py` do not need to be in your path.
-You can call them from the command line using `/path/to/homa-indicator.py`
-or `/path/to/homa.py` respectively. If you followed the installation tip
-above, you would type: `<HOME>/HomA/homa-indicator.py`.
+``` shell
+HomA-main/src/homa-indicator.py &
+HomA-main/src/homa.py
+```
 
-Installing **HomA** (`homa.py` and `homa-indicator.py`) requires extra steps
-to install other programs that **HomA** calls. These dependencies are listed
-in the next section.
+The first command runs **HomA Indicator** in the System Tray / Task Bar
+as a background job. When you close the terminal, **HomA Indicator**
+will disappear from the System Tray. Later, you can add **HomA Indicator**
+to your auto start programs in Ubuntu. Then it will be automatically
+started when you log in.
+
+The second command runs **HomA** main window. Although you can run it
+from the System Tray, it is recommended the first few times you use **HomA**
+in the terminal so you can see any unusual error messages.
+
+For example, if you see something like "module serial not found", type:
+
+`sudo apt install python3-serial`.
+
+If you are on Ubuntu 16.04 it would be `python-serial` (without the `3`).
+
+Read more about installing dependencies in the next section.
 
 ## Under Construction
 {:.no_toc}
