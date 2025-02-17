@@ -171,7 +171,7 @@ your last selection.
 - ***Breathing colors*** - Cycle colors between Red, Red + Green, Green,
 Green + Blue, Blue and Blue + Red. Breathe in (make brighter) and Breathe
 out (make dimmer) for each color combination.
-- ***View Breathing Statistics*** - While Bluetooth LED lights are
+- ***View Breathing Statistics*** - Whilst Bluetooth LED lights are
 "breathing colors", display statistics to help tweak Preference settings.
 This option is greyed out (inaccessible) when not breathing colors.
 - ***Reset Bluetooth*** - Use this from time to time if your computer's
@@ -289,13 +289,21 @@ is dragged along with it. The child window forces itself overtop of the parent.
 
 # Rediscover Now
 
-To *Rediscover Now*, access the Dropdown Menus at the top of the screen. Select:
+*Rediscover Now* is accessed from the Dropdown Menus at the top of the screen. Select:
 
 - "File" menu with mouse or <kbd>Alt</kbd> + <kbd>F</kbd>
 - "Rediscover now" with mouse or <kbd>R</kbd>
 
-Rediscovery is automatically run every minute. However you can run it manually
-at anytime using this function.
+Rediscovery is automatically run every minute. However, you can run it immediately
+using *Rediscover Now*.
+
+If you use your TV remote to turn the TV on or off, **HomA** will not register
+the fact for a minute. To force **HomA** to see the power state change, run
+*Rediscover Now*.
+
+If you connect a new device to your network, **HomA** will not register it
+for a minute. To force **HomA** to see the new device immediately, run
+*Rediscover Now*.
 
 ## Sample Rediscover Now Video
 
@@ -311,7 +319,7 @@ in green. The power status is checked and set to:
 
 - "On" if the device is powered on.
 - "Off" if the device is powered off but, still connected to the network.
-- "?" if communication is lost with the device.
+- "?" if communication is lost with the device. E.G. TV is unplugged from the LAN.
 
 
 ---
@@ -790,22 +798,14 @@ to the bottom of the Network Devices view. If not, restart **HomA**.
 
 **HomA** (Home Automation) is written in Python.
 The main program is called `homa.py` and can be found in the
-[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src/homa.py
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main/src 
 "View HomA Python source code"){:target="_blank"}.
 
 Copy all the files (including the subdirectories)
 in the GitHub `src` folder to a new directory on your computer.
-For example, `<HOME>/HomA` for Linux, Mac, Chrome OS or
-Windows Subsystem for Linux (WSL). Unless you are running Ubuntu 16.04
-LTS under Extended Security Maintenance (ESM), you may have to make
-changes to `homa.py` and the programs it calls.
+For example, `<HOME>/HomA` for Linux.
 
-For Windows, the installation directory would be `<HOME>\HomA`.
-As of {{ site.refreshed | date: "%B %e, %Y" }}
-**HomA** will not run under Windows without modification. It may
-work in Windows Subsystem for Linux with little or no modification.
-
-`homa.py` is called by `homa-indicator.py` from the systray / taskbar
+`homa.py` is called by `homa-indicator.py` from the system tray / taskbar
 / application indicator bar. It is recommended you start using **HomA**
 from the command line initially, to see any error messages that might
 appear. For example, an error message may appear for missing dependency.
@@ -816,8 +816,7 @@ to **HomA** from the taskbar of any monitor.
 `homa-indicator.py` and `homa.py` do not need to be in your path.
 You can call them from the command line using `/path/to/homa-indicator.py`
 or `/path/to/homa.py` respectively. If you followed the installation tip
-above, you would type: `<HOME>/HomA/homa-indicator.py` for Linux-like machines,
-or `<HOME>\HomA\homa-indicator.py` for Windows.
+above, you would type: `<HOME>/HomA/homa-indicator.py`.
 
 Installing **HomA** (`homa.py` and `homa-indicator.py`) requires extra steps
 to install other programs that **HomA** calls. These dependencies are listed
@@ -871,7 +870,7 @@ included in HomA subdirectory)
 - A web browser like Firefox, Chrome or Edge is required for Help buttons
 - `systemctl` or similar method to suspend the computer
 
-For expanded sunrise/sunset brightness control you can use *Pippim Eyesome*.
+For granular sunrise/sunset brightness control you can use *Pippim Eyesome*.
 
 > ***IMPORTANT NOTES:***
 >
