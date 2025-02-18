@@ -814,15 +814,17 @@ Click the above link and then click the green code button shown below:
 Open a terminal window and type:
 
 ``` shell
-HomA-main/src/homa-indicator.py &
-HomA-main/src/homa.py
+/home/<USER>/HomA-main/src/homa-indicator.py &
+/home/<USER>/HomA-main/src/homa.py
 ```
+
+***WHERE:*** `<USER>` is your username.
 
 The first command runs **HomA Indicator** in the System Tray / Task Bar
 as a background job. When you close the terminal, **HomA Indicator**
 will disappear from the System Tray. Later, you can add **HomA Indicator**
-to your auto start programs in Ubuntu. Then it will be automatically
-started when you log in.
+to your *Startup Applications Preferences* in Ubuntu. Then it will be 
+automatically started after you log in.
 
 The second command runs **HomA** main window. Although you can run it
 from the System Tray, it is recommended the first few times you use **HomA**
@@ -896,7 +898,18 @@ Python 3.x by changing the *"shebang"*.
 The first line of `homa.py` and `homa-indicator.py` contain the
 *"shebang"* of `#!/usr/bin/env python` to run the default python.
 You can change `python` to `python2` or `python3` to override.
-
+>
+> - Changes can be made daily to **HomA**. As such it is probably 
+a good idea to keep the default path of `/home/<USER>/HomA-main/src` 
+for the **HomA** program files. This way updating to the current 
+version is easier.
+> 
+> - If you discover an error in **HomA**, or have a question, or 
+have a suggestion, use the ***Issues*** Tab in the 
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main 
+"View HomA Python source code"){:target="_blank"}. 
+Then click the ***New Issue*** button.
+> 
 
 ---
 
