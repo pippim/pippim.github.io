@@ -923,7 +923,7 @@ Then click the ***New Issue*** button.
 # How to Start ***HomA***
 
 You can start `homa.py` from the command line, from a desktop icon or
-start it from `<nobr>homa-indicator.py</nobr>`.
+start it from <nobr>`homa-indicator.py`<nobr>.
 
 In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
