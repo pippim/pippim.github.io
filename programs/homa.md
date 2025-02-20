@@ -814,6 +814,9 @@ Click the above link and then click the green code button shown below:
 
 Open a terminal window and type these two commands:
 
+<!-- Could use non-breaking hyphen &#8209; in 'homa-indicator' which
+     becomes 'homa&#8209;indicator' -->
+
 ``` shell
 /home/<USER>/HomA-main/src/homa-indicator.py &
 /home/<USER>/HomA-main/src/homa.py
@@ -920,7 +923,7 @@ Then click the ***New Issue*** button.
 # How to Start ***HomA***
 
 You can start `homa.py` from the command line, from a desktop icon or
-start it from `homa-indicator.py`.
+start it from `<nobr>homa-indicator.py</nobr>`.
 
 In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
