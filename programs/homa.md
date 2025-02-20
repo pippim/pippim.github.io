@@ -811,7 +811,7 @@ Click the above link and then click the green code button shown below:
 - Select the **Download ZIP** option
 - Extract the archive to your home directory
 
-Open a terminal window and type:
+Open a terminal window and type these two commands:
 
 ``` shell
 /home/<USER>/HomA-main/src/homa-indicator.py &
@@ -824,10 +824,10 @@ The first command runs **HomA Indicator** in the System Tray / Task Bar
 as a background job. When you close the terminal, **HomA Indicator**
 will disappear from the System Tray. Later, you can add **HomA Indicator**
 to your *Startup Applications Preferences* in Ubuntu. Then it will be 
-automatically started after you log in.
+automatically started after you log in and stay there until you log out.
 
-The second command runs **HomA** main window. Although you can run it
-from the System Tray, it is recommended the first few times you use **HomA**
+The second command runs **HomA**. Although you can run **HomA** via the
+**HomA Indicator**, it is recommended the first few times you use **HomA**
 in the terminal so you can see any unusual error messages.
 
 For example, if you see something like "module serial not found", type:
@@ -907,7 +907,7 @@ version is easier.
 > - If you discover an error in **HomA**, or have a question, or 
 have a suggestion, use the ***Issues*** Tab in the 
 [HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main 
-"View HomA Python source code"){:target="_blank"}. 
+"HomA GitHub Repository"){:target="_blank"}. 
 Then click the ***New Issue*** button.
 > 
 
@@ -921,14 +921,14 @@ Then click the ***New Issue*** button.
 You can start `homa.py` from the command line, from a desktop icon or
 start it from `homa-indicator.py`.
 
-In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA`.
+In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
 
 ## Starting ***HomA*** From the Command Line
 
 If *HomA* is not in your path, change to the directory where *HomA* is installed:
 
-`cd /home/<USER>/HomA`
+`cd /home/<USER>/HomA-main/src`
 
 Then type `homa.py` and press <kbd>Enter</kbd>:
 
@@ -940,27 +940,20 @@ $ homa.py
 <<<<<<<<<<<<<<    HomA - Home Automation    >>>>>>>>>>>>>>
  \\\\\\\\\\\\\\                            //////////////
   ######################################################
-                    Started: 8:08 AM
+                    Started: 4:18 PM
 
 = = = = = System Monitor Processor Temps & Fans = = = = =
- Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time
+ Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time  
 -------- | ---------------- | ---------------- | --------
-    6.78 | +70.0°C 3000 RPM | +71.0°C 2800 RPM |  8:08 AM
-   33.01 | +71.0°C 3300 RPM | +71.0°C 2800 RPM |  8:09 AM
-   36.04 | +69.0°C 3400 RPM | +72.0°C 3100 RPM |  8:09 AM
-  483.66 | +76.0°C 3400 RPM | +77.0°C 3500 RPM |  8:16 AM
-  486.68 | +75.0°C 3700 RPM | +77.0°C 3800 RPM |  8:16 AM
-  490.72 | +74.0°C 4000 RPM | +77.0°C 3800 RPM |  8:16 AM
- 1334.04 | +79.0°C 4100 RPM | +79.0°C 4200 RPM |  8:30 AM
- 1338.24 | +78.0°C 4400 RPM | +79.0°C 4300 RPM |  8:30 AM
- 2360.85 | +76.0°C 4600 RPM | +78.0°C 4600 RPM |  8:48 AM
- 2364.58 | +75.0°C 4800 RPM | +78.0°C 5000 RPM |  8:48 AM
- 2370.39 | +77.0°C 5200 RPM | +77.0°C 5000 RPM |  8:48 AM
+    7.67 |  75.0°C 4500 RPM |  77.0°C 4300 RPM |  4:18 PM
+ 3608.15 |  70.0°C 4500 RPM |  74.0°C 4300 RPM |  5:18 PM
+ 7208.30 |  75.0°C 4500 RPM |  77.0°C 4300 RPM |  6:18 PM
 ```
 
 When `homa.py` is called with no parameters there are minimal lines printed.
 Notice the sensors for processor temperature (CPU & GPU) and fan speed for
-each processor is printed.
+each processor is printed. In this case YouTube videos were being viewed and
+no super-intensive CPU java functions were running using pycharm. 
 
 ### `homa.py` Command Line Parameters
 
@@ -986,7 +979,7 @@ order to narrow down the problem.
 `homa-indicator.py` is an "Application Indicator" that sits in the System Tray /
 Task Bar. There are no optional parameters when calling it. Simply type:
 
-`/home/<USER>/HomA/homa-indicator.py`
+`/home/<USER>/HomA-main/src/homa-indicator.py`
 
 Using your mouse, left-click or right-click on the icon in the system tray
 as the video below shows:
