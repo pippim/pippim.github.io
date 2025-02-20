@@ -305,6 +305,7 @@ If you connect a new device to your network, **HomA** will not register it
 for a minute. To force **HomA** to see the new device immediately, run
 *Rediscover Now*.
 
+<a id="HelpNetworkDevices"></a>
 ## Sample Rediscover Now Video
 
 <video src="/assets/img/HomA/HomA Rediscover Now.mp4"
@@ -932,6 +933,7 @@ If *HomA* is not in your path, change to the directory where *HomA* is installed
 
 Then type `homa.py` and press <kbd>Enter</kbd>:
 
+<a id="HelpSensors"></a>
 ``` shell
 $ homa.py
 
@@ -948,12 +950,23 @@ $ homa.py
     7.67 |  75.0°C 4500 RPM |  77.0°C 4300 RPM |  4:18 PM
  3608.15 |  70.0°C 4500 RPM |  74.0°C 4300 RPM |  5:18 PM
  7208.30 |  75.0°C 4500 RPM |  77.0°C 4300 RPM |  6:18 PM
+ 9003.52 |  95.0°C 4700 RPM |  82.0°C 4600 RPM |  6:48 PM
+ 9005.66 |  86.0°C 5000 RPM |  81.0°C 4800 RPM |  6:48 PM
+ 9933.77 |  75.0°C 5300 RPM |  75.0°C 5000 RPM |  7:04 PM
 ```
 
 When `homa.py` is called with no parameters there are minimal lines printed.
 Notice the sensors for processor temperature (CPU & GPU) and fan speed for
 each processor is printed. In this case YouTube videos were being viewed and
 no super-intensive CPU java functions were running using pycharm. 
+
+Sensors are always logged each hour as seen at 4:18 PM, 5:15 PM and 6:18 PM. 
+Sensors are also logged when fan speed changes by more than 200 RPM as shown at:
+
+- 6:48 PM: GPU fan speed changes from 4300 RPM to 4600 RPM
+- 6:48 PM: CPU fan speed changes from 4700 RPM to 5000 RPM
+- 7:04 PM: CPU fan speed changes from 5000 RPM to 5300 RPM
+
 
 ### `homa.py` Command Line Parameters
 
