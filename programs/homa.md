@@ -1083,10 +1083,54 @@ will be 40 pixels to the left of the current mouse position.
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
+# Custom Images
+
+If you grab an image for your device and it is in `.webp` format you have
+to convert it to `.jpeg` or `.png` format for **HomA** to display it.
+
+For example, you have a file called `hitron CGNM-2250.webp` and there are
+no `.webp` image converters on your machine:
+
+``` shell
+$ sudo apt install webp
+
+The following additional packages will be installed:
+  freeglut3
+The following NEW packages will be installed:
+  freeglut3 webp
+0 upgraded, 2 newly installed, 0 to remove and 2 not upgraded.
+Need to get 135 kB of archives.
+After this operation, 521 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+
+$ dwebp "hitron CGNM-2250.webp" -o "hitron CGNM-2250.png"
+
+Decoded hitron CGNM-2250.webp. Dimensions: 1000 x 750 . Format: lossy. Now saving...
+Saved file hitron CGNM-2250.png
+
+```
+
+***Credit:*** https://stackoverflow.com/a/70641330/6929343
+
 ---
 
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+
+# Router Modems
+
+There are five types of modems including cable modems, telephone modems, 
+satellite modems, dial modem and digital subscriber line. What is the 
+purpose of a modem? The primary purpose of a modem is to facilitate the 
+connection between a computer or network and an Internet service provider 
+(ISP).Jan 23, 2025
+
+
+{% include image.html src="/assets/img/HomA/hitron CGNM-2250.png"
+   alt="hitron CGNM-2250.png"
+   style="float: right; width: 50%; margin: .5rem 2rem 1rem 2rem;"
+   caption="Hitron Cable Modem Router CGNM-2250"
+%}
 
 ---
 
