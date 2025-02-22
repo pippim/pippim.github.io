@@ -815,7 +815,20 @@ Click the above link and then click the green code button shown below:
 Open a terminal window and type these two commands:
 
 <!-- Could use non-breaking hyphen &#8209; in 'homa-indicator' which
-     becomes 'homa&#8209;indicator' -->
+     becomes 'homa&#8209;indicator' 
+
+Better https://stackoverflow.com/a/40721949/6929343:
+
+<span class="propernoun">V. V. Putin</span>
+
+and in CSS you would define
+
+.propernoun {
+  white-space: nowrap;
+}
+
+
+-->
 
 ``` shell
 /home/<USER>/HomA-main/src/homa-indicator.py &
@@ -923,7 +936,7 @@ Then click the ***New Issue*** button.
 # How to Start ***HomA***
 
 You can start `homa.py` from the command line, from a desktop icon or
-start it from <nobr>`homa-indicator.py`<nobr>.
+start it from `homa-indicator.py`.
 
 In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
@@ -959,13 +972,11 @@ $ homa.py
 ```
 
 When `homa.py` is called with no parameters there are minimal lines printed.
-Notice the sensors for processor temperature (CPU & GPU) and fan speed for
-each processor is printed. In this case YouTube videos were being viewed and
-no super-intensive CPU java functions were running using pycharm. 
+The sensors for processor temperature (CPU & GPU) and fan speed for
+each processor is printed. Sensors are always logged each hour and whenever 
+a fan speed changes by more than 200 RPM:
 
-Sensors are always logged each hour as seen at 4:18 PM, 5:15 PM and 6:18 PM. 
-Sensors are also logged when fan speed changes by more than 200 RPM as shown at:
-
+- 4:18 PM, 5:18 PM and 6:18 PM the fan speeds are consistent
 - 6:48 PM: GPU fan speed changes from 4300 RPM to 4600 RPM
 - 6:48 PM: CPU fan speed changes from 4700 RPM to 5000 RPM
 - 7:04 PM: CPU fan speed changes from 5000 RPM to 5300 RPM
