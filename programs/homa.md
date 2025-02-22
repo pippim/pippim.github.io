@@ -337,25 +337,30 @@ running *HomA* in the first place.
 
 ### `arp -a` Capabilities
 
-If you type `arp -a` at the command line you will your network devices.
+If you type `arp -a` at the command line your network devices are displayed. 
 For example:
 
 ```shell
+$ arp -a
+
 SONY.Light     (192.168.0.15) at 50:d4:f7:eb:41:35 [ether] on enp59s0
 Hitronhub.home (192.168.0.1)  at a8:4e:3f:82:98:b2 [ether] on enp59s0
 SONY.LAN       (192.168.0.19) at ac:9b:0a:df:3f:d9 [ether] on enp59s0
 TCL.LAN        (192.168.0.17) at c0:79:82:41:2f:1f [ether] on enp59s0
+F3_Pro         (192.168.0.22) at 00:fe:1e:2a:5b:eb [ether] on enp59s0
 TCL.Light      (192.168.0.20) at 50:d4:f7:eb:46:7c [ether] on enp59s0
 ```
 
-***NOTE:*** extra spacing inserted above for readability.
+***NOTE:***&nbsp;&nbsp;Lines above have spaces inserted between 
+fields for column alignment.
 
 The fields on each `arp` line (in order of appearance) are:
 
-- Host name, E.G. "SONY.light"
-- IP Address, E.G. "(192.168.0.15)"
-- MAC Address, E.G. "50:d4:f7:eb:41:35"
-- Network Adapter name, E.G. "enp59s0"
+- Hostname, E.G. `SONY.Light`
+- IP Address, E.G. `192.168.0.15`
+- MAC Address, E.G. `50:d4:f7:eb:41:35`
+- Computer's Network Adapter name, E.G. `enp59s0` (Ethernet Adapter). 
+Note that hostname `Sony.Light` itself is a TP-Link Smart Plug on Wifi.
 
 ---
 
@@ -974,9 +979,9 @@ $ homa.py
 When `homa.py` is called with no parameters there are minimal lines printed.
 The sensors for processor temperature (CPU & GPU) and fan speed for
 each processor is printed. Sensors are always logged each hour and whenever 
-a fan speed changes by more than 200 RPM:
+a fan's speed changes by more than 200 RPM:
 
-- 4:18 PM, 5:18 PM and 6:18 PM the fan speeds are consistent
+- 4:18 PM, 5:18 PM and 6:18 PM: the fan speeds are consistent
 - 6:48 PM: GPU fan speed changes from 4300 RPM to 4600 RPM
 - 6:48 PM: CPU fan speed changes from 4700 RPM to 5000 RPM
 - 7:04 PM: CPU fan speed changes from 5000 RPM to 5300 RPM
