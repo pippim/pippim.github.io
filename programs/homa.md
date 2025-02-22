@@ -1151,24 +1151,29 @@ your system will be unable to connect to the internet unless you manually
 configure network settings directly in the system's network interface 
 configuration files.
 
-Key points about stopping NetworkManager:
+### Key points about stopping NetworkManager:
 
-    No automatic connections:
-    You will need to manually configure network interfaces and connections using the system's traditional network configuration files, like /etc/network/interfaces. 
+#### No automatic connections:
 
-No network discovery:
+You will need to manually configure network interfaces and connections using 
+the system's traditional network configuration files, like 
+`/etc/network/interfaces.` 
+
+#### No network discovery:
 
 Network Manager actively searches for available networks, so stopping it 
 prevents your system from automatically detecting nearby Wi-Fi networks. 
 
-Potential for manual configuration complexity:
+#### Potential for manual configuration complexity:
 
 Depending on your network setup, manually configuring network settings 
 can be a more complex process compared to using Network Manager. 
 
-How to stop NetworkManager:
+#### How to stop NetworkManager:
 
-    Command: sudo systemctl stop NetworkManager 
+Command: `sudo systemctl stop NetworkManager`
+
+To start NetworkManager.service, replace `stop` with `start`
 
 
 
