@@ -1137,6 +1137,41 @@ connection between a computer or network and an Internet service provider
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
 
+## Turn Off Router
+
+Turning off the router doesn't physically power it off. It merely disconnects your
+computer from the router.
+
+When you stop the "NetworkManager.service" on a Linux system, your computer 
+will lose its ability to automatically manage network connections, meaning you 
+will not be able to connect to Wi-Fi or wired networks through the graphical 
+user interface or standard network management tools as Network Manager handles 
+the discovery, connection, and configuration of network interfaces; essentially, 
+your system will be unable to connect to the internet unless you manually 
+configure network settings directly in the system's network interface 
+configuration files.
+
+Key points about stopping NetworkManager:
+
+    No automatic connections:
+    You will need to manually configure network interfaces and connections using the system's traditional network configuration files, like /etc/network/interfaces. 
+
+No network discovery:
+
+Network Manager actively searches for available networks, so stopping it 
+prevents your system from automatically detecting nearby Wi-Fi networks. 
+
+Potential for manual configuration complexity:
+
+Depending on your network setup, manually configuring network settings 
+can be a more complex process compared to using Network Manager. 
+
+How to stop NetworkManager:
+
+    Command: sudo systemctl stop NetworkManager 
+
+
+
 ---
 
 <a id="hdr14"></a>
