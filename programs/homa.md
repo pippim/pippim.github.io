@@ -333,15 +333,15 @@ in green. The power status is checked and set to:
 
 ## How Network Devices are discovered
 
-Most Network Devices are discovered using `arp -a`, `getent hosts`,
-`ip addr` and `hostnamectl status`. The exception is a Bluetooth device
-where you need to specify
-the MAC address. Another exception is your computer which is already
-running *HomA* in the first place.
+Most Network Devices are discovered using the commands `arp`, `getent`,
+`ip` and `hostnamectl`. The exception is a Bluetooth device
+where you need to tell **HomA** what 
+the MAC address is. Another exception is your computer which is already
+running **HomA** in the first place.
 
 ---
 
-### `arp -a` Capabilities
+### `arp` Capabilities
 
 If you type `arp -a` at the command line your network devices are displayed.
 For example:
@@ -370,11 +370,11 @@ Note that hostname `Sony.Light` itself is a TP-Link Smart Plug on Wifi.
 
 ---
 
-### `getent hosts` Capabilities
+### `getent` Capabilities
 
-The program `getent` is a Linux command that reads the file
-`/etc/hosts`. When you type `getent hosts` at the command line
-you will see something like this:
+The program `getent` is a Linux command that reads configuration files.
+When you type `getent hosts` at the command line it reads the configuration
+file `/etc/hosts`. It will display something like this:
 
 ```shell
 127.0.0.1       localhost
@@ -412,24 +412,18 @@ and override dynamic IP addresses.
 
 ---
 
-### `ip addr` Capabilities
+### `ip` Capabilities
 
 The program `ip` will show / manipulate routing, devices,
 policy routing and tunnels. When
-you type `ip addr` at the command line you will see
+you type `ip a show dynamic` at the command line you will see
 something like this:
 
 ```shell
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
 2: enp59s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 28:f1:0e:2a:1a:ed brd ff:ff:ff:ff:ff:ff
     inet 192.168.0.12/24 brd 192.168.0.255 scope global dynamic enp59s0
-       valid_lft 594184sec preferred_lft 594184sec
-    inet6 fe80::2af1:eff:fe2a:1aed/64 scope link
-       valid_lft forever preferred_lft forever
+       valid_lft 590289sec preferred_lft 590289sec
 3: wlp60s0: <BROADCAST,MULTICAST> mtu 1500 qdisc mq state DOWN group default qlen 1000
     link/ether 9c:b6:d0:10:37:f7 brd ff:ff:ff:ff:ff:ff
 ```
@@ -444,7 +438,7 @@ something like this:
 
 ---
 
-### `hostnamectl status` Capabilities
+### `hostnamectl` Capabilities
 
 When you type `hostnamectl status` at the command line you will see
 something like this:
@@ -695,7 +689,7 @@ in order to see the color changing button bar at the bottom of the video.
 ### Breathing Statistics Control Parameters
 {:.no_toc}
 
-The first five fields are parameters you can control:
+The first six screen fields are program parameters you can change:
 
 | Field                  | Internal argument name                                         |
 |------------------------|----------------------------------------------------------------|
@@ -731,7 +725,8 @@ menu.
 
 ## Sample View Bluetooth Devices Window
 
-Here is a sample window that appears:
+Here is a sample window that appears when you run the *View Bluetooth Devices*
+feature:
 
 {% include image.html src="/assets/img/HomA/HomA - View Bluetooth Devices.png"
    alt="HomA - View Bluetooth Devices"
@@ -786,7 +781,7 @@ with **HomA** operations.
 
 ---
 
-## Enter Bluetooth LED MAC Address in ***HomA***
+## Enter Bluetooth LED MAC Address in **HomA**
 
 You need to enter the discovered Bluetooth LED MAC address into **HomA** using
 the *Edit Preferences* feature:
@@ -850,9 +845,12 @@ and in CSS you would define
 
 The first command runs **HomA Indicator** in the System Tray / Task Bar
 as a background job. When you close the terminal, **HomA Indicator**
-will disappear from the System Tray. Later, you can add **HomA Indicator**
-to your *Startup Applications Preferences* in Ubuntu. Then it will be
-automatically started after you log in and stay there until you log out.
+will disappear from the System Tray. 
+
+***TIP:***
+> Add **HomA Indicator** to your *Startup Applications Preferences* 
+in Ubuntu. Then it will start automatically when you log in and stay 
+in the System Tray until you log out.
 
 The second command runs **HomA**. Although you can run **HomA** via the
 **HomA Indicator**, it is recommended the first few times you use **HomA**
@@ -944,7 +942,7 @@ Then click the ***New Issue*** button.
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
-# How to Start ***HomA***
+# How to Start **HomA**
 
 You can start `homa.py` from the command line, from a desktop icon or
 start it from `homa-indicator.py`.
@@ -952,7 +950,7 @@ start it from `homa-indicator.py`.
 In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
 
-## Starting ***HomA*** From the Command Line
+## Starting **HomA** From the Command Line
 
 If *HomA* is not in your path, change to the directory where *HomA* is installed:
 
@@ -1012,7 +1010,7 @@ order to narrow down the problem.
 
 ---
 
-## Starting ***HomA*** using `homa-indicator.py`
+## Starting **HomA** using `homa-indicator.py`
 
 `homa-indicator.py` is an "Application Indicator" that sits in the System Tray /
 Task Bar. There are no optional parameters when calling it. Simply type:
@@ -1044,12 +1042,12 @@ This doesn't close the *HomA* application if already opened.
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
-# How to Open ***HomA*** From the System Tray
+# How to Open **HomA** From the System Tray
 
 The program `homa-indicator.py` is an "Application Indicator" that runs
 in the System Tray a.k.a. the Taskbar.
 
-Here is a video showing ***HomA***, already running in one monitor, being
+Here is a video showing **HomA**, already running in one monitor, being
 moved to another monitor:
 
 <video src="/assets/img/HomA/HomA Indicator switch monitor.mp4"
@@ -1058,11 +1056,11 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-The ability to call ***HomA*** from any monitor is paramount, because you can
-use ***HomA*** to turn off a monitor it is running on. To turn the monitor
-back on, you must be able to call ***HomA*** from another monitor.
+The ability to call **HomA** from any monitor is paramount, because you can
+use **HomA** to turn off a monitor it is running on. To turn the monitor
+back on, you must be able to call **HomA** from another monitor.
 
-The video shows how the ***HomA*** main window is moved, and then the child
+The video shows how the **HomA** main window is moved, and then the child
 window ***View Breathing Statistics*** is moved overtop. Child windows are
 automatically moved when the main window is moved. When you try to click on
 the main window, any child windows are automatically moved overtop. This
@@ -1071,16 +1069,16 @@ main window.
 
 ---
 
-## Where ***HomA*** Opens When Called From the System Tray
+## Where **HomA** Opens When Called From the System Tray
 
-When you call ***HomA*** from the System Tray, its position is
+When you call **HomA** from the System Tray, its position is
 controlled by the following line in `homa-indicator.py`:
 
 ```python
 MOVE_WINDOW_RIGHT_ADJUST = -40  # Move Window Top Right Adjustment
 ```
 
-The right edge of the ***HomA*** window is the current mouse position
+The right edge of the **HomA** window is the current mouse position
 plus the adjustment offset. The value shown is `-40` so the right edge
 will be 40 pixels to the left of the current mouse position.
 
