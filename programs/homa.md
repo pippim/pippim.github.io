@@ -129,6 +129,9 @@ reused on the next **HomA** restart so you don't have to reenter it.
 ---
 
 <a id="HelpRightClickMenu"></a>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+
 ## Right-Click Popup Menus
 
 In the Network Devices view, you can move the mouse over a device
@@ -140,11 +143,11 @@ All devices have these menu options:
 - *Turn Off* - turn off the device
 - *Move device Up* - move the device up in the display order
 - *Move device Down* - Move the device down the display order
-- *Help* - Open a new browser window and navigate to this webpage
-- *Close menu* - Close the popup menu. The same result achieved 
+- *Help* - Open a new browser window and navigate to appropriate section in this webpage
+- *Close menu* - Close the popup menu. The same result achieved
 by moving mouse out of the menu and left-clicking.
- 
-Some devices such as a *Sony TV* and a *Bluetooth LED* have extra 
+
+Some devices such as a *Sony TV* and a *Bluetooth LED* have extra
 right-click popup menu options.
 
 ### Sample Right-Click Popup Menu
@@ -247,6 +250,9 @@ clicking anywhere outside the menu area.
 
 ---
 
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
 # **HomA** Help Buttons
 
 **HomA** windows contain "Help" buttons that:
@@ -284,8 +290,8 @@ is dragged along with it. The child window forces itself overtop of the parent.
 
 ---
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # Rediscover Now
 
@@ -337,7 +343,7 @@ running *HomA* in the first place.
 
 ### `arp -a` Capabilities
 
-If you type `arp -a` at the command line your network devices are displayed. 
+If you type `arp -a` at the command line your network devices are displayed.
 For example:
 
 ```shell
@@ -351,7 +357,7 @@ F3_Pro         (192.168.0.22) at 00:fe:1e:2a:5b:eb [ether] on enp59s0
 TCL.Light      (192.168.0.20) at 50:d4:f7:eb:46:7c [ether] on enp59s0
 ```
 
-***NOTE:***&nbsp;&nbsp;Lines above have spaces inserted between 
+***NOTE:***&nbsp;&nbsp;Lines above have spaces inserted between
 fields for column alignment.
 
 The fields on each `arp` line (in order of appearance) are:
@@ -359,7 +365,7 @@ The fields on each `arp` line (in order of appearance) are:
 - Hostname, E.G. `SONY.Light`
 - IP Address, E.G. `192.168.0.15`
 - MAC Address, E.G. `50:d4:f7:eb:41:35`
-- Computer's Network Adapter name, E.G. `enp59s0` (Ethernet Adapter). 
+- Computer's Network Adapter name, E.G. `enp59s0` (Ethernet Adapter).
 Note that hostname `Sony.Light` itself is a TP-Link Smart Plug on Wifi.
 
 ---
@@ -463,8 +469,8 @@ something like this:
 
 <a id="EditPreferences"></a>
 <!-- ^ Define Edit Preferences Notebook help button -->
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 # Edit Preferences
 
@@ -634,8 +640,8 @@ to be powered off. These devices are powered down automatically during system su
 ---
 
 <a id="ViewBreathingStats"></a>
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 
 # View Bluetooth LED Breathing Colors Statistics
@@ -711,8 +717,8 @@ def breatheColors(self, low=4, high=30, span=6.0, step=0.275, bots=1.5, tops=0.5
 ---
 
 <a id="ViewBluetoothDevices"></a>
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # View Bluetooth Devices
 
@@ -741,7 +747,7 @@ The highlighting appears after **HomA** knows the MAC address for your
 Bluetooth LED Light Strip. If the MAC address hasn't been entered into
 **HomA**, via the *Edit Preferences* feature, there is NO highlighting.
 
-After the device name, E.G. `QHM-T095`, appears the number of times the 
+After the device name, E.G. `QHM-T095`, appears the number of times the
 device was discovered. E.G. `(4)` means the device was discovered 4 times.
 
 The discovery period defaults to 10 seconds. Over that period, a given
@@ -797,13 +803,13 @@ to the bottom of the Network Devices view. If not, restart **HomA**.
 
 ---
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 # Installation
 
 **HomA** (Home Automation) is found in the
-[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main 
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main
 "View HomA Python source code"){:target="_blank"}.
 
 Click the above link and then click the green code button shown below:
@@ -820,7 +826,7 @@ Click the above link and then click the green code button shown below:
 Open a terminal window and type these two commands:
 
 <!-- Could use non-breaking hyphen &#8209; in 'homa-indicator' which
-     becomes 'homa&#8209;indicator' 
+     becomes 'homa&#8209;indicator'
 
 Better https://stackoverflow.com/a/40721949/6929343:
 
@@ -845,7 +851,7 @@ and in CSS you would define
 The first command runs **HomA Indicator** in the System Tray / Task Bar
 as a background job. When you close the terminal, **HomA Indicator**
 will disappear from the System Tray. Later, you can add **HomA Indicator**
-to your *Startup Applications Preferences* in Ubuntu. Then it will be 
+to your *Startup Applications Preferences* in Ubuntu. Then it will be
 automatically started after you log in and stay there until you log out.
 
 The second command runs **HomA**. Although you can run **HomA** via the
@@ -921,22 +927,22 @@ The first line of `homa.py` and `homa-indicator.py` contain the
 *"shebang"* of `#!/usr/bin/env python` to run the default python.
 You can change `python` to `python2` or `python3` to override.
 >
-> - Changes can be made daily to **HomA**. As such it is probably 
-a good idea to keep the default path of `/home/<USER>/HomA-main/src` 
-for the **HomA** program files. This way updating to the current 
+> - Changes can be made daily to **HomA**. As such it is probably
+a good idea to keep the default path of `/home/<USER>/HomA-main/src`
+for the **HomA** program files. This way updating to the current
 version is easier.
-> 
-> - If you discover an error in **HomA**, or have a question, or 
-have a suggestion, use the ***Issues*** Tab in the 
-[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main 
-"HomA GitHub Repository"){:target="_blank"}. 
+>
+> - If you discover an error in **HomA**, or have a question, or
+have a suggestion, use the ***Issues*** Tab in the
+[HomA GitHub Repository ⧉ 🔗](https://github.com/pippim/HomA/blob/main
+"HomA GitHub Repository"){:target="_blank"}.
 Then click the ***New Issue*** button.
-> 
+>
 
 ---
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 # How to Start ***HomA***
 
@@ -966,7 +972,7 @@ $ homa.py
                     Started: 4:18 PM
 
 = = = = = System Monitor Processor Temps & Fans = = = = =
- Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time  
+ Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time
 -------- | ---------------- | ---------------- | --------
     7.67 |  75.0°C 4500 RPM |  77.0°C 4300 RPM |  4:18 PM
  3608.15 |  70.0°C 4500 RPM |  74.0°C 4300 RPM |  5:18 PM
@@ -978,7 +984,7 @@ $ homa.py
 
 When `homa.py` is called with no parameters there are minimal lines printed.
 The sensors for processor temperature (CPU & GPU) and fan speed for
-each processor is printed. Sensors are always logged each hour and whenever 
+each processor is printed. Sensors are always logged each hour and whenever
 a fan's speed changes by more than 200 RPM:
 
 - 4:18 PM, 5:18 PM and 6:18 PM: the fan speeds are consistent
@@ -1035,8 +1041,8 @@ This doesn't close the *HomA* application if already opened.
 
 ---
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
 # How to Open ***HomA*** From the System Tray
 
@@ -1080,8 +1086,8 @@ will be 40 pixels to the left of the current mouse position.
 
 ---
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
 
 # Custom Images
 
@@ -1114,15 +1120,15 @@ Saved file hitron CGNM-2250.png
 
 ---
 
-<a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
 
 # Router Modems
 
-There are five types of modems including cable modems, telephone modems, 
-satellite modems, dial modem and digital subscriber line. What is the 
-purpose of a modem? The primary purpose of a modem is to facilitate the 
-connection between a computer or network and an Internet service provider 
+There are five types of modems including cable modems, telephone modems,
+satellite modems, dial modem and digital subscriber line. What is the
+purpose of a modem? The primary purpose of a modem is to facilitate the
+connection between a computer or network and an Internet service provider
 (ISP).Jan 23, 2025
 
 
@@ -1134,40 +1140,40 @@ connection between a computer or network and an Internet service provider
 
 ---
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
 
 ## Turn Off Router
 
 Turning off the router doesn't physically power it off. It merely disconnects your
 computer from the router.
 
-When you stop the "NetworkManager.service" on a Linux system, your computer 
-will lose its ability to automatically manage network connections, meaning you 
-will not be able to connect to Wi-Fi or wired networks through the graphical 
-user interface or standard network management tools as Network Manager handles 
-the discovery, connection, and configuration of network interfaces; essentially, 
-your system will be unable to connect to the internet unless you manually 
-configure network settings directly in the system's network interface 
+When you stop the "NetworkManager.service" on a Linux system, your computer
+will lose its ability to automatically manage network connections, meaning you
+will not be able to connect to Wi-Fi or wired networks through the graphical
+user interface or standard network management tools as Network Manager handles
+the discovery, connection, and configuration of network interfaces; essentially,
+your system will be unable to connect to the internet unless you manually
+configure network settings directly in the system's network interface
 configuration files.
 
 ### Key points about stopping NetworkManager:
 
 #### No automatic connections:
 
-You will need to manually configure network interfaces and connections using 
-the system's traditional network configuration files, like 
-`/etc/network/interfaces.` 
+You will need to manually configure network interfaces and connections using
+the system's traditional network configuration files, like
+`/etc/network/interfaces.`
 
 #### No network discovery:
 
-Network Manager actively searches for available networks, so stopping it 
-prevents your system from automatically detecting nearby Wi-Fi networks. 
+Network Manager actively searches for available networks, so stopping it
+prevents your system from automatically detecting nearby Wi-Fi networks.
 
 #### Potential for manual configuration complexity:
 
-Depending on your network setup, manually configuring network settings 
-can be a more complex process compared to using Network Manager. 
+Depending on your network setup, manually configuring network settings
+can be a more complex process compared to using Network Manager.
 
 #### How to stop NetworkManager:
 
@@ -1176,16 +1182,6 @@ Command: `sudo systemctl stop NetworkManager`
 To start NetworkManager.service, replace `stop` with `start`
 
 
-
----
-
-<a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
-
----
-
-<a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
 
 ---
 
@@ -1214,7 +1210,17 @@ To start NetworkManager.service, replace `stop` with `start`
 
 ---
 
+<a id="hdr21"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr20">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr22">Skip</a></div>
+
+---
+
+<a id="hdr22"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr21">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr23">Skip</a></div>
+
+---
+
 
 <!-- Foot section doesn't have "skip" button -->
-<a id="hdr21"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr20">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr23"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr22">ToS</a>  <a href="#hdr2">ToC</a></div>
