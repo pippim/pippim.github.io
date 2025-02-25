@@ -856,11 +856,15 @@ The second command runs **HomA**. Although you can run **HomA** via the
 **HomA Indicator**, it is recommended the first few times you use **HomA**
 in the terminal so you can see any unusual error messages.
 
-For example, if you see something like "module serial not found", type:
+For example, if you see an error like:
 
-`sudo apt install python3-serial`.
+`ImportError: No module named 'serial'`
 
-If you are on Ubuntu 16.04 it would be `python-serial` (without the `3`).
+Then you need to install `serial` using:
+
+`sudo apt install python3-serial`
+
+If you are running Python 2.7.12+, drop the `3` and use `python-serial`.
 
 Read more about installing dependencies in the next section.
 
