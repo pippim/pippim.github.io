@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot grub2 partitioning nvme
 created_date: 2019-07-01 17:34:17
 edit_date:    2019-07-01 18:03:49
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "5,210 "
+views:        "5,289 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-NVME-Disk-failure-causing-boot-partition-corruption_-bad-superblock-error.md
 toc:          false
 navigation:   false

@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1248665
 type:         Answer
 tags:         20.04 shutdown gnome-shell
 created_date: 2020-06-09 23:16:55
-edit_date:    2023-03-30 17:34:47
+edit_date:    2025-02-10 22:05:25
 votes:        "2 "
 favorites:    
-views:        "24,007 "
+views:        "24,124 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu-can-we-reduce-this_.md
 toc:          true
 navigation:   true
@@ -22,6 +22,22 @@ clipboard:    false
 
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
+
+# HomA (Home Automation)
+
+As of February 10, 2025, [HomA](https://www.pippim.com/programs/homa.html) was released to replace `tvpowered` bash script below. HomA is written in python and automatically discovers the same devices that you must hard code into `tvpowered` below. Additionally HomA supports Bluetooth Low Energy (BLE) LED Light Strips and automatically shuts them off when system is suspended.
+
+
+
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
+
+{% include toc.md %}
+
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # Sony TV remote suspends laptop
 
@@ -50,14 +66,8 @@ Please note this **only works with Sony Bravia TVs**.
 
 
 
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
-
-{% include toc.md %}
-
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 ## Overview
 
@@ -92,8 +102,8 @@ Jun 11 18:12:26 tvpowered[31672]: TV is powered on. 'tvpowered' is now waiting f
 
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 ## `tvpowered` script
 
@@ -117,8 +127,8 @@ PWRD=123            # Password for Sony TV IP Connect
 ```
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 ## `tvpowered` complete bash script
 
@@ -490,8 +500,8 @@ Main "$@"
 ----------
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 ## Summary
 
@@ -511,10 +521,10 @@ I was inspired by OP's question and never realized how cumbersome and time-consu
 ---
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-## Bonus - Turn of Light Behind TV
+## Bonus - Turn off Light Behind TV
 
 For nighttime viewing, there is a light behind the TV. Whenever the laptop goes to sleep, it first shuts off the light.
 
@@ -550,6 +560,6 @@ fi
   [1]: https://pippim.github.io/assets/img/posts/2020/2CVMx.gif
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a></div>
 

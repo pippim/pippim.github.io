@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069939
 type:         Answer
-tags:         bash java environment-variables bashrc
+tags:         bash java environment-variables bashrc .profile
 created_date: 2018-08-28 23:01:05
 edit_date:    2018-09-30 14:43:51
 votes:        "4 "
 favorites:    
-views:        "10,854 "
+views:        "10,905 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-Where-is-my-PATH-variable-being-set_.md
 toc:          false
 navigation:   false

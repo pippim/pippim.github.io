@@ -10,9 +10,9 @@ created_date: 2019-07-10 10:59:53
 edit_date:    2019-07-10 23:38:21
 votes:        "4 "
 favorites:    
-views:        "1,314 "
+views:        "1,316 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-10-Load-average-is-high-after-adding-second-drive.md
 toc:          false
 navigation:   false

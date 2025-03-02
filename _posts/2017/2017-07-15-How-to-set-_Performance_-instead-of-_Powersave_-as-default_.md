@@ -10,9 +10,9 @@ created_date: 2017-07-15 17:54:43
 edit_date:    2020-08-09 15:24:45
 votes:        "31 "
 favorites:    
-views:        "67,252 "
+views:        "67,453 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-15-How-to-set-_Performance_-instead-of-_Powersave_-as-default_.md
 toc:          false
 navigation:   false

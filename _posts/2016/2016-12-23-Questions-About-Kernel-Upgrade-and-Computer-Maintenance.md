@@ -10,9 +10,9 @@ created_date: 2016-12-23 16:06:16
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "142 "
+views:        "143 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Questions-About-Kernel-Upgrade-and-Computer-Maintenance.md
 toc:          false
 navigation:   false

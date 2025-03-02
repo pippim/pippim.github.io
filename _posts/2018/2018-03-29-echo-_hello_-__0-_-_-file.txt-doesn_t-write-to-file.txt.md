@@ -10,9 +10,9 @@ created_date: 2018-03-29 00:23:08
 edit_date:    2018-03-29 03:58:47
 votes:        "2 "
 favorites:    
-views:        "20,763 "
+views:        "20,902 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-29-echo-_hello_-__0-_-_-file.txt-doesn_t-write-to-file.txt.md
 toc:          false
 navigation:   false

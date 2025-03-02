@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820651
 type:         Answer
-tags:         encryption
+tags:         encryption .desktop
 created_date: 2016-09-04 00:23:32
 edit_date:    2016-09-04 01:31:56
 votes:        "5 "
 favorites:    
-views:        "6,986 "
+views:        "6,990 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-to-add-encryption-after-installation_.md
 toc:          false
 navigation:   false

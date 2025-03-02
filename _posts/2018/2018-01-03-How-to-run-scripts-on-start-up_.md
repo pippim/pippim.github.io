@@ -8,11 +8,11 @@ type:         Answer
 tags:         startup autostart
 created_date: 2018-01-03 01:02:31
 edit_date:    2022-10-29 18:17:59
-votes:        "12 "
+votes:        "13 "
 favorites:    
-views:        "1,655,271 "
+views:        "1,659,216 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-How-to-run-scripts-on-start-up_.md
 toc:          false
 navigation:   false

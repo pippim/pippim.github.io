@@ -10,9 +10,9 @@ created_date: 2019-12-13 01:14:37
 edit_date:    2019-12-13 11:33:02
 votes:        "2 "
 favorites:    
-views:        "25,362 "
+views:        "25,516 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-What-is-gvfsd-metadata_.md
 toc:          false
 navigation:   false

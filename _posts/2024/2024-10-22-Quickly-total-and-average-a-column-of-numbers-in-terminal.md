@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1530791
 type:         Answer
 tags:         command-line text-processing
 created_date: 2024-10-22 02:06:45
-edit_date:    2024-11-16 15:57:49
-votes:        "5 "
+edit_date:    2025-02-21 01:54:49
+votes:        "4 "
 favorites:    
-views:        "854 "
+views:        "896 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-10-22-Quickly-total-and-average-a-column-of-numbers-in-terminal.md
 toc:          false
 navigation:   false
@@ -109,6 +109,43 @@ There are other great answers specifically tailored to the question but are not 
 The `n` python program still works without any tweaking of `awk` print positions. Additionally, for myself anyway, `awk` is frankly *awkward* to remember the syntax and arguments. Making a script and constantly revising it based on column position doesn't speed up the workflow.
 
 
+---
+
+## 5. `homa.py` as of February 20, 2025
+
+Here is what `homa.py` CLI output looks like today:
+
+``` shell
+$ homa.py
+
+  ######################################################
+ //////////////                            \\\\\\\\\\\\\\
+<<<<<<<<<<<<<<    HomA - Home Automation    >>>>>>>>>>>>>>
+ \\\\\\\\\\\\\\                            //////////////
+  ######################################################
+                    Started: 4:06 PM
+
+= = = = = System Monitor Processor Temps & Fans = = = = =
+ Seconds | CPU Temp Fan RPM | GPU Temp Fan RPM |   Time  
+-------- | ---------------- | ---------------- | --------
+   10.45 |  78.0°C 5200 RPM |  78.0°C 5000 RPM |  4:06 PM
+ 1102.53 |  69.0°C 5000 RPM |  72.0°C 4600 RPM |  4:24 PM
+ 1105.02 |  68.0°C 4900 RPM |  72.0°C 4300 RPM |  4:24 PM
+ 1108.47 |  68.0°C 4600 RPM |  72.0°C 4300 RPM |  4:25 PM
+ 4708.54 |  69.0°C 4500 RPM |  70.0°C 4300 RPM |  5:25 PM
+ 8309.39 |  69.0°C 4500 RPM |  73.0°C 4300 RPM |  6:25 PM
+ 8514.30 |  87.0°C 4800 RPM |  82.0°C 4600 RPM |  6:28 PM
+ 8516.54 |  85.0°C 5000 RPM |  82.0°C 4900 RPM |  6:28 PM
+```
+
+The advantage of `n` is you can select any column and tally the results. There are many great answers on how `awk` can tally the last column, or with a few minor script changes you can instruct `awk` to look at a different column. The spirit of this self-answered question though was to promote `n` to copy and paste any column without any programming changes.
+
+Here is a snippet of the `homa.py` GUI for those that are still reading this far:
+
+[![HomA rediscover now][4]][4]
+
+
   [1]: https://pippim.github.io/assets/img/posts/2024/UmZ1kQXE.png
   [2]: https://pippim.github.io/assets/img/posts/2024/lQKxfrA9.png
   [3]: https://pippim.github.io/assets/img/posts/2024/AfKHiY8J.png
+  [4]: https://pippim.github.io/assets/img/posts/2024/65LFa46B.gif

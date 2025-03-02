@@ -10,9 +10,9 @@ created_date: 2019-07-24 18:44:46
 edit_date:    2019-07-24 18:55:16
 votes:        "0 "
 favorites:    
-views:        "163 "
+views:        "164 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-ndiswrapper-windows-drivers-uninstall-issue.md
 toc:          false
 navigation:   false

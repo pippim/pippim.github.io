@@ -10,9 +10,9 @@ created_date: 2016-08-14 00:11:41
 edit_date:    2016-09-19 21:38:21
 votes:        "13 "
 favorites:    
-views:        "69,155 "
+views:        "69,170 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-14-No-launcher-and-menu-bar-on-ubuntu-16.04.md
 toc:          false
 navigation:   false

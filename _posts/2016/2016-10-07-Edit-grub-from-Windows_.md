@@ -8,11 +8,11 @@ type:         Answer
 tags:         dual-boot grub2
 created_date: 2016-10-07 23:32:48
 edit_date:    2017-04-13 12:23:51
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "36,323 "
+views:        "36,454 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-07-Edit-grub-from-Windows_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-10-12 02:46:45
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "945 "
+views:        "948 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-12-Ubuntu-Server-16.04-unusual-crontab-entry.md
 toc:          false
 navigation:   false

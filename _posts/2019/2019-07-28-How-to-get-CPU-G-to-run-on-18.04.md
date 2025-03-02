@@ -10,9 +10,9 @@ created_date: 2019-07-28 17:57:25
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "6,600 "
+views:        "6,612 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-28-How-to-get-CPU-G-to-run-on-18.04.md
 toc:          false
 navigation:   false

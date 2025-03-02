@@ -10,9 +10,9 @@ created_date: 2019-12-05 11:46:08
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "22,135 "
+views:        "22,495 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-05-Setting-monitor-scaling-to-200_-with-xrandr.md
 toc:          false
 navigation:   false

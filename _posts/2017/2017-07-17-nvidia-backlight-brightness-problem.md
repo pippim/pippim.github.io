@@ -10,9 +10,9 @@ created_date: 2017-07-17 23:26:12
 edit_date:    2020-06-12 14:37:07
 votes:        "14 "
 favorites:    
-views:        "23,503 "
+views:        "23,555 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-17-nvidia-backlight-brightness-problem.md
 toc:          false
 navigation:   false

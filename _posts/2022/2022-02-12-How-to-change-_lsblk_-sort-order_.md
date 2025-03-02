@@ -10,9 +10,9 @@ created_date: 2022-02-12 22:50:48
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,643 "
+views:        "1,672 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-12-How-to-change-_lsblk_-sort-order_.md
 toc:          false
 navigation:   false

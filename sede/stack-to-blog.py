@@ -30,6 +30,7 @@
 #       Mar 31 2024 - SE changed "<tag><tag>..<tag>" to "|tag|tag..|tag|"
 #       Apr 08 2024 - SE changed back to "<tag><tag>..<tag>"
 #       Aug 06 2024 - Hot-linking disabled so store SE images locally.
+#       Feb 15 2025 - Add homa.md to search words
 #
 # ==============================================================================
 

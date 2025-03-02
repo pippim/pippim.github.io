@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "285 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-How-can-I-identify-an-empty-window_.md
 toc:          false
 navigation:   false

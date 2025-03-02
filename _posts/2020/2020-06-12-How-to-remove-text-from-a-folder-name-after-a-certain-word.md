@@ -10,9 +10,9 @@ created_date: 2020-06-12 22:53:33
 edit_date:    2020-06-13 00:07:23
 votes:        "1 "
 favorites:    
-views:        "489 "
+views:        "492 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-12-How-to-remove-text-from-a-folder-name-after-a-certain-word.md
 toc:          false
 navigation:   false

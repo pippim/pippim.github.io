@@ -10,9 +10,9 @@ created_date: 2018-04-16 23:42:49
 edit_date:    2024-05-22 04:13:12
 votes:        "2 "
 favorites:    
-views:        "2,424 "
+views:        "2,426 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-16-Very-Slow-upload-speed-_-Ubuntu-16.04-_-Dual-boot-_-Qualcomm-Atheros-QCA6174-802.11ac-Wireless-Network-Adapter-_168c_003e_.md
 toc:          false
 navigation:   false

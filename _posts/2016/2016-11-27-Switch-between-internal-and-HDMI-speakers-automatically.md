@@ -10,9 +10,9 @@ created_date: 2016-11-27 02:34:12
 edit_date:    2017-02-08 00:15:52
 votes:        "9 "
 favorites:    
-views:        "11,615 "
+views:        "11,624 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-27-Switch-between-internal-and-HDMI-speakers-automatically.md
 toc:          false
 navigation:   true

@@ -10,9 +10,9 @@ created_date: 2019-04-26 11:24:14
 edit_date:    2019-04-27 17:53:11
 votes:        "6 "
 favorites:    
-views:        "6,402 "
+views:        "6,431 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-26-Only-one-line-in-script-output.md
 toc:          false
 navigation:   false

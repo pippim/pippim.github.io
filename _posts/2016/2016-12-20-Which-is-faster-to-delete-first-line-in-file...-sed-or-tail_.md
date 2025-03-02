@@ -10,9 +10,9 @@ created_date: 2016-12-20 20:32:09
 edit_date:    2017-04-13 12:25:10
 votes:        "15 "
 favorites:    
-views:        "17,940 "
+views:        "17,994 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Which-is-faster-to-delete-first-line-in-file...-sed-or-tail_.md
 toc:          false
 navigation:   false

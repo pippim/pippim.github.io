@@ -10,9 +10,9 @@ created_date: 2019-05-10 11:26:56
 edit_date:    2019-05-11 15:38:28
 votes:        "10 "
 favorites:    
-views:        "6,757 "
+views:        "6,761 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-10-Can-_sudo-apt-get-remove-_write__-destroy-my-Ubuntu_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2017-05-21 14:06:23
 edit_date:    2019-08-05 15:28:16
 votes:        "2 "
 favorites:    
-views:        "23,931 "
+views:        "24,004 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Check-if-Bash-version-is-__-given-version-number.md
 toc:          false
 navigation:   false

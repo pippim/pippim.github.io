@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,006 "
 accepted:     Accepted
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-31-Broadcom-Wireless-Driver-problem.-I_ve-tried-solutions-given-on-this-forum-but-I-can_t-get-it-work.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-08-13 10:33:58
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "14,013 "
+views:        "14,014 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-upowerd-hogging-CPU-while-iPhone-is-connected.md
 toc:          false
 navigation:   false

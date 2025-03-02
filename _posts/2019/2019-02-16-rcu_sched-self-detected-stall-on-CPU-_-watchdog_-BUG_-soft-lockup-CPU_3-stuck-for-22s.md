@@ -10,9 +10,9 @@ created_date: 2019-02-16 17:25:13
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "21,009 "
+views:        "21,150 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-16-rcu_sched-self-detected-stall-on-CPU-_-watchdog_-BUG_-soft-lockup-CPU_3-stuck-for-22s.md
 toc:          false
 navigation:   false

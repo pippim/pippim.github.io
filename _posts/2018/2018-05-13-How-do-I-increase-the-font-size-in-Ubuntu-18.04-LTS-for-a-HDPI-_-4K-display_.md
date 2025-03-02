@@ -10,9 +10,9 @@ created_date: 2018-05-13 01:36:42
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "47,377 "
+views:        "47,416 "
 accepted:     
-uploaded:     2025-02-15 14:36:50
+uploaded:     2025-03-02 16:33:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-How-do-I-increase-the-font-size-in-Ubuntu-18.04-LTS-for-a-HDPI-_-4K-display_.md
 toc:          false
 navigation:   false
