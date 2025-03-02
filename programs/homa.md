@@ -948,10 +948,11 @@ Then click the ***New Issue*** button.
 
 # How to Start **HomA**
 
-You can start `homa.py` from the command line, from a desktop icon or
-start it from `homa-indicator.py`.
+You can start ***HomA*** (`homa.py`) from the command line (a.k.a. the "Terminal"
+or the "CLI"). You can also start ***HomA*** from ***HomA Indicator***
+(`homa-indicator.py`).
 
-In this section, the examples assume *HomA* was installed to `/home/<USER>/HomA-main`.
+The examples below assume that *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
 
 ## Starting **HomA** From the Command Line
@@ -960,7 +961,7 @@ If *HomA* is not in your path, change to the directory where *HomA* is installed
 
 `cd /home/<USER>/HomA-main/src`
 
-Then type `homa.py` and press <kbd>Enter</kbd>:
+Then type `homa.py` and press <kbd>Enter</kbd>. Your terminal will look like this:
 
 <a id="HelpSensors"></a>
 ``` shell
@@ -997,32 +998,34 @@ a fan's speed changes by more than 200 RPM:
 
 ### `homa.py` Command Line Parameters
 
-Optional parameters (A.K.A. arguments) can be passed to `homa.py`:
+Optional parameters (a.k.a. "arguments") can be passed to `homa.py`:
 
-| Parameter | Usage                                                         |
-|-----------|---------------------------------------------------------------|
-| -s        | `-s` invokes silent mode. Nothing will print to the console.  |
-| -f        | `-f` invokes fast mode. Network discovery is delayed.         |
-| -v        | `-v` invokes verbose mode. Method names are printed.          |
-| -vv       | `-vv` Extra verbosity. Command names are printed.             |
-| -vvv      | `-vvv` Super verbosity. Results of every command are printed. |
+| Parameter | Usage                                                  |
+|-----------|--------------------------------------------------------|
+| `-s`      | Silent mode. Nothing prints to the console.            |
+| `-f`      | Fast mode. Network discovery is delayed for 1 minute.  |
+| `-v`      | Verbose mode. Method names are printed.                |
+| `-vv`     | Extra verbosity. Command names are printed.            |
+| `-vvv`    | Super verbosity. Results of every command are printed. |
 
 When `homa-indicator.py` calls `homa.py`, it uses the parameters `-s -f`.
 
-If `homa.py` is not performing as expected, use `-v`, `-vv` or `-vvv` in that
-order to narrow down the problem.
+If **HomA** is not performing as expected, run it from the command line 
+and, use `homa.py -v` or, `homa.py -vv` or, `homa.py -vvv`, in that order, 
+to narrow down the problem.
 
 ---
 
-## Starting **HomA** using `homa-indicator.py`
+## Starting **HomA** using **HomA Indicator**
 
-`homa-indicator.py` is an "Application Indicator" that sits in the System Tray /
-Task Bar. There are no optional parameters when calling it. Simply type:
+***HomA Indicator*** (`homa-indicator.py`) is an "Application Indicator" 
+that sits in the System Tray / Task Bar. There are no optional parameters 
+when calling it. Simply type:
 
 `/home/<USER>/HomA-main/src/homa-indicator.py`
 
-Using your mouse, left-click or right-click on the icon in the system tray
-as the video below shows:
+Then, using your mouse, left-click or right-click on the **HomA Indicator**
+icon in the system tray as the video below shows:
 
 <video src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
 data-canonical-src="/assets/img/HomA/HomA - Start from App Indicator.mp4"
@@ -1031,14 +1034,14 @@ style="max-height:320px; width: 50% !important; height: auto !important;">
   </video>
 
 
-The `HomA` option opens the *HomA* application at the mouse position. If
-*HomA* is already running, it's window is moved to the mouse position.
+The *HomA* option opens the **HomA** application at the mouse position. If
+**HomA** is already running, it's window is moved to the mouse position.
 
-The `eyesome` option only appears when *Pippim's Eyesome* is active.
-When selected, *Eyesome Setup* opens at the mouse position.
+The *eyesome* option only appears when **Pippim's Eyesome** is active.
+When selected, **Eyesome Setup** opens at the mouse position.
 
-The `quit` option removes *HomA Indicator* from the system tray / taskbar.
-This doesn't close the *HomA* application if already opened.
+The *quit* option removes **HomA Indicator** from the system tray / taskbar.
+This doesn't close the **HomA** application if it is already running.
 <br><br>
 
 ---
