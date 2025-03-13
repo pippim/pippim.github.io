@@ -10,9 +10,9 @@ created_date: 2018-10-27 11:24:43
 edit_date:    2018-10-27 14:56:37
 votes:        "1 "
 favorites:    
-views:        "1,213 "
+views:        "1,217 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-27-Replugging-network-cable-doesn_t-reconnect.md
 toc:          false
 navigation:   false

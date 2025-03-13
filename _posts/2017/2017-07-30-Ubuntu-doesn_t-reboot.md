@@ -10,9 +10,9 @@ created_date: 2017-07-30 22:45:19
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,341 "
+views:        "1,343 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-30-Ubuntu-doesn_t-reboot.md
 toc:          false
 navigation:   false

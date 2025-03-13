@@ -10,9 +10,9 @@ created_date: 2019-12-30 11:59:50
 edit_date:    2019-12-30 12:19:51
 votes:        "7 "
 favorites:    
-views:        "20,809 "
+views:        "20,868 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-30-How-can-I-set-the-row-height-in-Tkinter-TreeView_.md
 toc:          false
 navigation:   false

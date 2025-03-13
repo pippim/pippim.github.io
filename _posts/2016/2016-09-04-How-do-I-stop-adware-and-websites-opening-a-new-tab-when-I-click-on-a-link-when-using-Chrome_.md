@@ -10,9 +10,9 @@ created_date: 2016-09-04 20:14:12
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "7,834 "
+views:        "7,856 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-do-I-stop-adware-and-websites-opening-a-new-tab-when-I-click-on-a-link-when-using-Chrome_.md
 toc:          false
 navigation:   false

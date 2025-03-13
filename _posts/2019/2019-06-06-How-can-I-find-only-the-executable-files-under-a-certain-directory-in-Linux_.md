@@ -10,9 +10,9 @@ created_date: 2019-06-06 00:08:27
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "318,271 "
+views:        "318,451 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-06-How-can-I-find-only-the-executable-files-under-a-certain-directory-in-Linux_.md
 toc:          false
 navigation:   false

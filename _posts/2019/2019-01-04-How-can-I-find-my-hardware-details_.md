@@ -10,9 +10,9 @@ created_date: 2019-01-04 02:51:06
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "983,201 "
+views:        "984,803 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-04-How-can-I-find-my-hardware-details_.md
 toc:          false
 navigation:   false

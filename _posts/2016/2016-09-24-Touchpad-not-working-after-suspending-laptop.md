@@ -10,9 +10,9 @@ created_date: 2016-09-24 01:23:55
 edit_date:    2016-09-24 02:26:03
 votes:        "21 "
 favorites:    
-views:        "58,147 "
+views:        "58,197 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-24-Touchpad-not-working-after-suspending-laptop.md
 toc:          false
 navigation:   false

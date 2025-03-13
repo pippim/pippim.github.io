@@ -10,9 +10,9 @@ created_date: 2019-11-15 01:01:04
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,233 "
+views:        "2,242 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Adding-new-sudo-insults.md
 toc:          false
 navigation:   false

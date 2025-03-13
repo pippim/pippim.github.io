@@ -10,9 +10,9 @@ created_date: 2018-03-04 17:13:35
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "397 "
+views:        "403 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-04-Print-screen-key-opens-default-browser-on-Kubuntu.-How-to-fix_.md
 toc:          false
 navigation:   false

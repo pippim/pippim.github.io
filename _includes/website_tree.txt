@@ -94,7 +94,7 @@
 │   ├── 2022 [14 entries suppressed by massage_tree.sh]
 │   ├── 2023 [3 entries suppressed by massage_tree.sh]
 │   ├── 2024 [8 entries suppressed by massage_tree.sh]
-│   └── 2025 [3 entries suppressed by massage_tree.sh]
+│   └── 2025 [4 entries suppressed by massage_tree.sh]
 ├── programs
 │   ├── homa.md
 │   ├── hyperlink.md
@@ -132,4 +132,4 @@
 ├── programs.md
 └── test.md
 
-32 directories, 129 files
+32 directories, 130 files

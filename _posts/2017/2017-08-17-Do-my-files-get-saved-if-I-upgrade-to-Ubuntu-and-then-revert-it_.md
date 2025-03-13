@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "106 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-17-Do-my-files-get-saved-if-I-upgrade-to-Ubuntu-and-then-revert-it_.md
 toc:          false
 navigation:   false

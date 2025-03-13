@@ -10,9 +10,9 @@ created_date: 2017-07-26 13:57:39
 edit_date:    2017-07-26 14:33:42
 votes:        "3 "
 favorites:    
-views:        "1,588 "
+views:        "1,590 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-26-Samsung-SSD-850-Pro-slow-speed.md
 toc:          false
 navigation:   false

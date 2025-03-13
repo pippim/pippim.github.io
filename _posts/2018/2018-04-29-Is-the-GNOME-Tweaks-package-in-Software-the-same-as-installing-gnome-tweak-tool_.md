@@ -10,9 +10,9 @@ created_date: 2018-04-29 19:27:13
 edit_date:    2019-09-16 11:03:56
 votes:        "8 "
 favorites:    
-views:        "22,415 "
+views:        "22,440 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Is-the-GNOME-Tweaks-package-in-Software-the-same-as-installing-gnome-tweak-tool_.md
 toc:          false
 navigation:   false

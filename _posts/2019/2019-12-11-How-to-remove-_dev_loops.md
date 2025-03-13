@@ -10,9 +10,9 @@ created_date: 2019-12-11 11:36:12
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
-views:        "58,197 "
+views:        "58,343 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-11-How-to-remove-_dev_loops.md
 toc:          false
 navigation:   false

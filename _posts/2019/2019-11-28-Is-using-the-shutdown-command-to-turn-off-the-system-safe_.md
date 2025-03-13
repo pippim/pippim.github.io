@@ -10,9 +10,9 @@ created_date: 2019-11-28 03:19:53
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "6,553 "
+views:        "6,654 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-28-Is-using-the-shutdown-command-to-turn-off-the-system-safe_.md
 toc:          false
 navigation:   false

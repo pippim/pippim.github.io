@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,900 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-23-How-to-make-gnome-screenshot-select-area-to-grab-after-a-specified-delay.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2024-10-22 02:06:45
 edit_date:    2025-02-21 01:54:49
 votes:        "4 "
 favorites:    
-views:        "896 "
+views:        "903 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-10-22-Quickly-total-and-average-a-column-of-numbers-in-terminal.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-08-29 11:00:36
 edit_date:    
 votes:        "-1 "
 favorites:    
-views:        "911 "
+views:        "912 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-29-Screen-brightness-stuck-at-maximum.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-04-30 23:23:17
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,079 "
+views:        "5,080 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-30-How-to-securely-upgrade-Ubuntu-from-16.04-to-18.04.md
 toc:          false
 navigation:   false

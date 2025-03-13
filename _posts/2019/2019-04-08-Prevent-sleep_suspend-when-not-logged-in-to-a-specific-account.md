@@ -10,9 +10,9 @@ created_date: 2019-04-08 08:19:26
 edit_date:    2020-06-12 14:37:07
 votes:        "15 "
 favorites:    
-views:        "14,287 "
+views:        "14,322 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-Prevent-sleep_suspend-when-not-logged-in-to-a-specific-account.md
 toc:          false
 navigation:   false

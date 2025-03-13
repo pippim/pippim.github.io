@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "979 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-22-Protecting-WSL-Ubuntu-and-WSL-OpenSSH-_unfiltering-port-443-correctly_-to-use-just-these_.md
 toc:          false
 navigation:   false

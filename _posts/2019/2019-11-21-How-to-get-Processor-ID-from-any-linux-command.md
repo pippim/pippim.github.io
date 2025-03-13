@@ -10,9 +10,9 @@ created_date: 2019-11-21 13:32:40
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "1,889 "
+views:        "1,908 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-21-How-to-get-Processor-ID-from-any-linux-command.md
 toc:          false
 navigation:   false

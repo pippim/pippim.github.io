@@ -10,9 +10,9 @@ created_date: 2019-09-22 14:09:55
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "4,550 "
+views:        "4,564 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-22-Change-settings-for-simple-scan.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2017-03-28 01:06:23
 edit_date:    2023-07-21 09:30:37
 votes:        "16 "
 favorites:    
-views:        "70,582 "
+views:        "70,652 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-28-Bash-script-to-convert-from-HTML-entities-to-characters.md
 toc:          false
 navigation:   false

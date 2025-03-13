@@ -10,9 +10,9 @@ created_date: 2018-05-16 03:43:47
 edit_date:    2019-07-23 02:48:35
 votes:        "27 "
 favorites:    
-views:        "26,018 "
+views:        "26,059 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-Nautilus-not-showing-mounted-drives-in-side-bar.md
 toc:          false
 navigation:   false

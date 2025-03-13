@@ -10,9 +10,9 @@ created_date: 2016-10-21 10:45:17
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,624 "
+views:        "1,630 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-How-to-find-out-if-computer-was-shut-down-at-a-given-time_.md
 toc:          false
 navigation:   false

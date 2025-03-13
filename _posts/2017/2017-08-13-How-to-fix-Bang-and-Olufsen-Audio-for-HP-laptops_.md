@@ -10,9 +10,9 @@ created_date: 2017-08-13 23:37:45
 edit_date:    2021-01-07 00:31:36
 votes:        "4 "
 favorites:    
-views:        "45,812 "
+views:        "45,906 "
 accepted:     
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-13-How-to-fix-Bang-and-Olufsen-Audio-for-HP-laptops_.md
 toc:          false
 navigation:   false

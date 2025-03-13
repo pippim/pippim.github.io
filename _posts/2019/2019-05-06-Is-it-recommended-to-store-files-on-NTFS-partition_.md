@@ -10,9 +10,9 @@ created_date: 2019-05-06 11:29:28
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,199 "
+views:        "1,206 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-06-Is-it-recommended-to-store-files-on-NTFS-partition_.md
 toc:          false
 navigation:   false

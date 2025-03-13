@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "308 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-08-05-How-to-get-SE-sstatic-images-for-my-website.md
 toc:          false
 navigation:   false

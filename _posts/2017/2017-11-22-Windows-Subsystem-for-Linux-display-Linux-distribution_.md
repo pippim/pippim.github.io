@@ -10,9 +10,9 @@ created_date: 2017-11-22 03:00:29
 edit_date:    2018-04-01 17:18:58
 votes:        "7 "
 favorites:    
-views:        "5,522 "
+views:        "5,533 "
 accepted:     Accepted
-uploaded:     2025-03-02 16:33:53
+uploaded:     2025-03-13 15:35:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution_.md
 toc:          false
 navigation:   false
