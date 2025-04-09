@@ -12,7 +12,7 @@ canonical_url: 'https://www.pippim.com/programs/homa.html'
 # Introduction
 
 **HomA** (**Hom**e **A**utomation) automatically searches LAN, WiFi and Bluetooth.
-It allows you to turn devices on and off from your computer. Devices such as:
+It allows you to control the following devices from your computer:
 
 - Sony Bravia KDL Televisions / Professional Displays using REST API
 - TCL Google Android TVs using ADB (Android Debugging Bridge)
@@ -24,8 +24,8 @@ It allows you to turn devices on and off from your computer. Devices such as:
 
 ## Extra features
 
-- Open source application written in Python with Tkinter user interface
-- The same *HomA* version works in both Python 2.7.12+ and Python 3.5+
+- Open source application written in Python with Tkinter GUI
+- Single *HomA* version works in both Python 2.7.12+ and Python 3.5+
 - LED Light Strip "breathing colors" feature varies colors and brightness levels
 - View Breathing Color Statistics to fine-tune color changes and times
 - Turn Sony TV picture off but leave on sound for listening to music or podcasts
@@ -143,6 +143,7 @@ All devices have these menu options:
 - *Turn Off* - turn off the device
 - *Move device Up* - move the device up in the display order
 - *Move device Down* - Move the device down the display order
+- *Forget device* - Remove device from display
 - *Help* - Open a new browser window and navigate to appropriate section in this webpage
 - *Close menu* - Close the popup menu. The same result achieved
 by moving mouse out of the menu and left-clicking.
@@ -185,8 +186,10 @@ Light Strip. The MAC address must be entered into Preferences to control
 your LED Light Strip.
 - ***Turn On*** - Turn on the Bluetooth LED Light Strip.
 - ***Turn Off*** - Turn off the Bluetooth LED Light Strip.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
+- ***Move Up*** - Move device up in the display order.
+- ***Move Down*** - Move device down the display order.
+- ***Forget*** - Remove device from display.
+- ***Help*** - Open new browser window and navigate to this webpage.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
@@ -201,8 +204,10 @@ the following menu options appear:
 - ***Picture Off*** - Turn the display off but leave audio active.
 - ***Turn On*** - If you had turned the TV off, turn it back on.
 - ***Turn Off*** - Turn off the TV.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
+- ***Move Up*** - Move device up in the display order.
+- ***Move Down*** - Move device down the display order.
+- ***Forget*** - Remove device from display.
+- ***Help*** - Open new browser window and navigate to this webpage.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
@@ -215,8 +220,10 @@ the following menu options appear:
 
 - ***Turn On*** - If you had turned the TV off, turn it back on.
 - ***Turn Off*** - Turn off the TV.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
+- ***Move Up*** - Move device up in the display order.
+- ***Move Down*** - Move device down the display order.
+- ***Forget*** - Remove device from display.
+- ***Help*** - Open new browser window and navigate to this webpage.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
@@ -229,8 +236,10 @@ the following menu options appear:
 
 - ***Turn On*** - If you had turned the display off, turn it back on.
 - ***Turn Off*** - Turn off the display. Requires sudo password.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
+- ***Move Up*** - Move device up in the display order.
+- ***Move Down*** - Move device down the display order.
+- ***Forget*** - Remove device from display.
+- ***Help*** - Open new browser window and navigate to this webpage.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
@@ -243,8 +252,10 @@ the following menu options appear:
 
 - ***Turn On*** - This option is greyed out because your computer is on.
 - ***Turn Off*** - Turn off the the computer. This invokes a suspend.
-- ***Move Up*** - Move device up the Network Devices view.
-- ***Move Down*** - Move device down the Network Devices view.
+- ***Move Up*** - Move device up in the display order.
+- ***Move Down*** - Move device down the display order.
+- ***Forget*** - Remove device from display.
+- ***Help*** - Open new browser window and navigate to this webpage.
 - ***Close menu*** - Closes the menu. You can also close the menu by
 clicking anywhere outside the menu area.
 
@@ -381,8 +392,8 @@ file `/etc/hosts`. It will display something like this:
 127.0.1.1       Alien
 192.168.0.1     Hitronhub.home Admin                          a8:4e:3f:82:98:b2
 192.168.0.10    Alien          AW 17R3 WiFi                   9c:b6:d0:10:37:f7
+192.168.0.11    Alien-Light    hs100 AW 17R3 work light       f0:09:0d:bc:ef:d6
 192.168.0.12    Alien          AW 17R3 Ethernet               28:f1:0e:2a:1a:ed
-192.168.0.11    Phone          Moto E4 Plus                   fc:d4:36:ea:82:36
 192.168.0.13    Dell           Inspiron 17R-SE-7720 Ethernet  5c:f9:dd:5c:9c:53
 192.168.0.14    Dell           Inspiron 17R-SE-7720 WiFi      60:6c:66:86:de:bd
 192.168.0.15    SONY.Light     hs100 Sony TV Bias Light       50:d4:f7:eb:41:35
@@ -948,14 +959,14 @@ Then click the ***New Issue*** button.
 
 # How to Start **HomA**
 
-You can start ***HomA*** (`homa.py`) from the command line (a.k.a. the "Terminal"
-or the "CLI"). You can also start ***HomA*** from ***HomA Indicator***
+You can start ***HomA*** (`homa.py`) from the command line (a.k.a. the "Terminal",
+the "Console" or, the "CLI"). You can also start ***HomA*** from ***HomA Indicator***
 (`homa-indicator.py`).
 
 The examples below assume that *HomA* was installed to `/home/<USER>/HomA-main`.
 Where `<USER>` is your User Id.
 
-## Starting **HomA** From the Command Line
+## Starting **HomA** from the Command Line
 
 If *HomA* is not in your path, change to the directory where *HomA* is installed:
 
@@ -1016,7 +1027,7 @@ to narrow down the problem.
 
 ---
 
-## Starting **HomA** using **HomA Indicator**
+## Starting **HomA** from **HomA Indicator**
 
 ***HomA Indicator*** (`homa-indicator.py`) is an "Application Indicator" 
 that sits in the System Tray / Task Bar. There are no optional parameters 
