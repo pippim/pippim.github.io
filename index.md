@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 # Introduction
 
-Welcome to {{ site.title }}'s website where you can free
-open source applications.
+Welcome to {{ site.title }}'s website with free
+open source applications and no distracting ads.
 
 [Tim-ta](https://pippim.github.io/programs/tim-ta.html 
 "Create and run timers for Laundry, Workouts, Breaks etc.") 
@@ -115,12 +115,12 @@ your phone inside.
 The *Color Theme* icon is always in the same place on all webpages. 
 It always works the same way on mobile phones and desktop systems.
 
-### Hamburger Button
+### Hamburger Menu Button
 {:.no_toc}
 
-The <kbd> ☰ </kbd> (Hamburger) button reveals Page Header Buttons that
+The <kbd> ☰ </kbd> (Hamburger Menu) button reveals Page Header Buttons that
 will not fit horizontally on a phone screen. A dropdown
-menu appears with buttons arranged vertically.
+menu appears with buttons arranged vertically instead.
 
 ### Search Button
 {:.no_toc}
@@ -165,14 +165,16 @@ navigation buttons to take you to other pages:
 
 - <kbd>⌂ Home</kbd> brings you to this page.
 
-- <kbd>❓ About</kbd> discusses everything you want to know about {{ site.title }}. Still have questions? Just email.
+- <kbd>❓ About</kbd> discusses everything you want to know 
+about {{ site.title }}. Still have questions? Just email.
 
 - <kbd>✅ Answers</kbd> to questions people have about computers. 
 As of {{ site.refreshed | date: "%B %e, %Y" }}, 
 there have been over **{{ site.views_human }} views**
 of the questions where {{ site.title }} has posted up-voted answers. 
 
-- <kbd>💻 Programs</kbd> are applications {{ site.title }} created to make your life easier.
+- <kbd>💻 Programs</kbd> are applications {{ site.title }} 
+created to make your life easier.
 
 - <kbd>📧 Email</kbd> lets you send an email to {{ site.title }}.
 
