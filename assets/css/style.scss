@@ -426,7 +426,8 @@ details > summary {
 }
 
 // Fringe browsers from https://stackoverflow.com/a/10813665/6929343
-details > summary::-webkit-details-marker { display: none; }
+//details > summary::-webkit-details-marker { display: none; }
+// 2025-04-18 marker deprecated in chromium use ::marker instead
 details > summary { cursor: s-resize; }
 details[open] > summary { cursor: n-resize; }
 details > summary::before { content: '▶️ '; }
