@@ -18,7 +18,7 @@ It allows you to control the following devices from your computer:
 - TCL Google Android TVs using ADB (Android Debugging Bridge)
 - TP-Link / Kasa WiFi Smart plugs (great for controlling Bias Lights behind TVs)
 - Happy Lighting Bluetooth Low Energy (BLE) LED light strips
-- Power on/off laptop displays
+- Individually turn on/off above devices plus laptop display
 - Suspend computer and automatically power off all devices above
 - When resuming, automatically power on all devices above
 
@@ -29,8 +29,11 @@ It allows you to control the following devices from your computer:
 - LED Light Strip "breathing colors" feature varies colors and brightness levels
 - View Breathing Color Statistics to fine-tune color changes and times
 - Turn Sony TV picture off but leave on sound for listening to music or podcasts
+- When Sony Remote Control changes volume, it is reflected on the active 
+monitor. Helpful if Sony TV picture (a.k.a Panel or Display) is turned off
+- Sony TV Remote Control powers off all and suspends system
 - Automatically turn on TV bias lights only during nighttime
-- Automatically rediscover new network devices every minute
+- Automatically rediscover new network devices every x seconds
 - Communicate with devices using static MAC address to find dynamic IP address
 - Big number calculator with TeraByte, GigaByte, MegaByte units of measure
 - Large digit countdown timer with alarm
@@ -1099,6 +1102,58 @@ MOVE_WINDOW_RIGHT_ADJUST = -40  # Move Window Top Right Adjustment
 The right edge of the **HomA** window is the current mouse position
 plus the adjustment offset. The value shown is `-40` so the right edge
 will be 40 pixels to the left of the current mouse position.
+
+---
+
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
+
+# Suspend and Resume
+
+**HomA** can suspend the system with the <kbd>Suspend</kbd> button or from
+the ***File*** dropdown menu. **HomA** can also suspend the system when
+a Sony TV is being monitored for powered off. This saves mouse clicks to
+activate **HomA** and select the <kbd>Suspend</kbd> button.
+
+All devices will be shut off except the
+computer is suspended. Upon resume the terminal will appear
+like this (on 2025-04-14):
+
+``` shell
+ 1564.76 |  61°C / 5200 RPM |  66°C / 4800 RPM |  9:18 PM
+ 5165.79 |  60°C / 5200 RPM |  64°C / 5000 RPM | 10:18 PM
+ 8777.20 |  66°C / 5200 RPM |  69°C / 5000 RPM | 11:19 PM
+Application().Suspend(): Suspending system...
+Application().turnAllPower(OFF): Conditionally turning power 'OFF': SONY.LAN
+Application().turnAllPower(OFF): Conditionally turning power 'OFF': SONY.Light
+Application().turnAllPower(OFF): Conditionally turning power 'OFF': Bluetooth LED
+Computer().turnOff(): 23:24:57.033253 Suspend command: [u'systemctl', u'suspend']
+
+= = = =  Application().refreshApp() Resuming from suspend after: 5 hr, 13 min  = = = =
+
+Application().resumeAfterSuspend(): Forced 10 second wait for network to come up.
+Application().turnAllPower(ON): Unconditionally turning power 'ON': TCL.Light
+Application().turnAllPower(ON): Unconditionally turning power 'ON': SONY.LAN
+Application().turnAllPower(ON): Unconditionally turning power 'ON': SONY.Light
+Application().turnAllPower(ON): Unconditionally turning power 'ON': TCL.LAN
+Application().turnAllPower(ON): Unconditionally turning power 'ON': Bluetooth LED
+Application().turnAllPower(ON): Unconditionally turning power 'ON': Alien-Light
+    0.06 |  32°C /    0 RPM |  37°C /    0 RPM |  4:39 AM
+  177.43 |  60°C / 2900 RPM |  60°C /    0 RPM |  4:42 AM
+  179.65 |  60°C / 3300 RPM |  60°C / 3100 RPM |  4:42 AM
+```
+
+***NOTES:***
+
+> 
+> - The devices turned off are only those that are already turned on.
+> 
+> - All devices are turned on. Lights will not be turned on if 
+> GNOME Nightlight is inactive or if Eyesome reports 100% sunlight.
+> 
+> - During resume there is a 10 second delay for the network to come 
+> up. The number of seconds is defined in ***Preferences***.
+> 
 
 ---
 
