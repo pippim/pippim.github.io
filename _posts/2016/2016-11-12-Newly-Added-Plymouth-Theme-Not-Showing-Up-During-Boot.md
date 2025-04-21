@@ -10,9 +10,9 @@ created_date: 2016-11-12 03:57:11
 edit_date:    2016-11-12 17:56:56
 votes:        "2 "
 favorites:    
-views:        "10,328 "
+views:        "10,415 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Newly-Added-Plymouth-Theme-Not-Showing-Up-During-Boot.md
 toc:          false
 navigation:   true

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "176 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-29-How-do-you-uninstall-Ubuntu-completely-and-re-download-windows.md
 toc:          false
 navigation:   false

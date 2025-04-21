@@ -10,9 +10,9 @@ created_date: 2018-07-03 04:08:14
 edit_date:    2018-07-04 02:06:52
 votes:        "3 "
 favorites:    
-views:        "531 "
+views:        "536 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-03-Every-time-I-change-networks_-DNS-cache-has-the-wrong-IP.-How-to-fix-automatically-every-time_.md
 toc:          false
 navigation:   false

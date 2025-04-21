@@ -10,9 +10,9 @@ created_date: 2019-08-13 01:51:16
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,503 "
+views:        "1,519 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-Whenever-I-try-to-call-the-following-command_-_notepad-_etc_bash.bashrc_-from-Windows-WSL-I-get-an-error.md
 toc:          false
 navigation:   false

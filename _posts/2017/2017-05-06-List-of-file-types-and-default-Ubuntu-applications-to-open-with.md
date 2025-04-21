@@ -10,9 +10,9 @@ created_date: 2017-05-06 01:28:22
 edit_date:    2017-05-07 00:26:33
 votes:        "2 "
 favorites:    
-views:        "1,577 "
+views:        "1,600 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-06-List-of-file-types-and-default-Ubuntu-applications-to-open-with.md
 toc:          false
 navigation:   false

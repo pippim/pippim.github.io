@@ -10,9 +10,9 @@ created_date: 2021-06-16 00:19:03
 edit_date:    2024-11-02 14:45:35
 votes:        "5 "
 favorites:    
-views:        "138,085 "
+views:        "139,170 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-16-Transparent-background-in-a-Tkinter-window.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-04-03 00:40:31
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,054 "
+views:        "3,073 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Monitoring-CPU-freq-in-real-time.md
 toc:          false
 navigation:   false

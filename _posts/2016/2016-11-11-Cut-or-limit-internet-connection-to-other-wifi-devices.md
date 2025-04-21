@@ -10,9 +10,9 @@ created_date: 2016-11-11 00:59:15
 edit_date:    2017-04-13 12:37:16
 votes:        "2 "
 favorites:    
-views:        "5,566 "
+views:        "5,599 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-11-Cut-or-limit-internet-connection-to-other-wifi-devices.md
 toc:          false
 navigation:   false

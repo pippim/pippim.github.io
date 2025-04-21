@@ -10,9 +10,9 @@ created_date: 2017-04-16 14:44:45
 edit_date:    2017-04-20 22:30:38
 votes:        "3 "
 favorites:    
-views:        "2,974 "
+views:        "2,984 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-16-Unable-to-reduce-Grub-boot-delay.md
 toc:          false
 navigation:   false

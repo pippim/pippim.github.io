@@ -10,9 +10,9 @@ created_date: 2019-04-28 22:04:50
 edit_date:    2019-04-28 22:12:37
 votes:        "2 "
 favorites:    
-views:        "965 "
+views:        "974 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-Overriding-a-kernel-module-blacklisting-that_s-reinstated-during-apt-full-upgrade.md
 toc:          false
 navigation:   false

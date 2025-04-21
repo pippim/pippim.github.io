@@ -10,9 +10,9 @@ created_date: 2017-10-15 16:22:55
 edit_date:    2017-10-15 16:28:30
 votes:        "9 "
 favorites:    
-views:        "10,579 "
+views:        "10,590 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-15-How-would-a-local-government-make-the-switch-from-Windows-to-Ubuntu_.md
 toc:          false
 navigation:   false

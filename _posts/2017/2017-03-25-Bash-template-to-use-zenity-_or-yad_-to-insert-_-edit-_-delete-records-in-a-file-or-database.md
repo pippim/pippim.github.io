@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line bash scripts zenity yad
 created_date: 2017-03-25 15:23:15
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "4,399 "
+views:        "4,427 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-Bash-template-to-use-zenity-_or-yad_-to-insert-_-edit-_-delete-records-in-a-file-or-database.md
 toc:          false
 navigation:   true

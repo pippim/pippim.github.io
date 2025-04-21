@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1029805
 type:         Answer
 tags:         suspend password lock-screen 18.04
 created_date: 2018-04-29 18:04:15
-edit_date:    2022-02-13 23:55:05
-votes:        "75 "
+edit_date:    2025-04-02 21:41:33
+votes:        "76 "
 favorites:    
-views:        "63,148 "
+views:        "63,536 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Disable-password-request-from-suspend-18.04.md
 toc:          false
 navigation:   false
@@ -32,3 +32,6 @@ gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 ```
 
 **NOTE:** The above question and this answer is for **Ubuntu 18.04**.
+``` 
+      Works on Ubuntu 24 LTS as well. Tested on April the 2nd 2025.
+```

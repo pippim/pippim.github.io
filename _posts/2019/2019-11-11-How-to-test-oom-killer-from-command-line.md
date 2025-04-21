@@ -10,9 +10,9 @@ created_date: 2019-11-11 20:36:34
 edit_date:    2019-11-12 20:10:47
 votes:        "3 "
 favorites:    
-views:        "26,712 "
+views:        "27,400 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-11-How-to-test-oom-killer-from-command-line.md
 toc:          false
 navigation:   false

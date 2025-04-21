@@ -10,9 +10,9 @@ created_date: 2019-11-05 11:43:30
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "12,061 "
+views:        "12,213 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-Failed-to-start-Network-Manager-Wait-Online.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-10-06 20:47:39
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "217 "
+views:        "220 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-06-Show-pid-on-the-terminal-title-bar.md
 toc:          false
 navigation:   false

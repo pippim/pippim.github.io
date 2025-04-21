@@ -10,9 +10,9 @@ created_date: 2018-01-21 23:07:08
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "602 "
+views:        "611 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-21-Where-to-find-power-option-config-file_s_-for-17.10.md
 toc:          false
 navigation:   false

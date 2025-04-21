@@ -10,9 +10,9 @@ created_date: 2018-11-04 00:16:18
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "6,139 "
+views:        "6,149 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Firefox-freezing-with-100_-CPU-usage-for-30-seconds-when-launching-Chromium.md
 toc:          false
 navigation:   false

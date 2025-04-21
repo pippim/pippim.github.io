@@ -10,9 +10,9 @@ created_date: 2020-02-20 01:23:40
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "3,374 "
+views:        "3,415 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-20-Cancel-buttons-Zenity.md
 toc:          false
 navigation:   false

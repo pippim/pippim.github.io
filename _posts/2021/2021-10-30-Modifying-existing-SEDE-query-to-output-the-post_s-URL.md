@@ -10,9 +10,9 @@ created_date: 2021-10-30 22:33:16
 edit_date:    2021-11-25 12:34:01
 votes:        "3 "
 favorites:    
-views:        "192 "
+views:        "193 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-10-30-Modifying-existing-SEDE-query-to-output-the-post_s-URL.md
 toc:          false
 navigation:   false

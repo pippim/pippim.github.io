@@ -10,9 +10,9 @@ created_date: 2019-04-09 02:09:57
 edit_date:    2019-04-28 11:46:52
 votes:        "2 "
 favorites:    
-views:        "20,441 "
+views:        "20,511 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-09-What_s-a-good-back-up-strategy-for-1-desktop-PC_.md
 toc:          false
 navigation:   false

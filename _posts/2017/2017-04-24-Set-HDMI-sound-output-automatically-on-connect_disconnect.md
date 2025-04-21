@@ -10,9 +10,9 @@ created_date: 2017-04-24 22:54:02
 edit_date:    2020-06-12 14:37:07
 votes:        "9 "
 favorites:    
-views:        "27,147 "
+views:        "27,234 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-24-Set-HDMI-sound-output-automatically-on-connect_disconnect.md
 toc:          false
 navigation:   false

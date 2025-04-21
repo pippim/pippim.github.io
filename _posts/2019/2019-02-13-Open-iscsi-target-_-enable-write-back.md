@@ -10,9 +10,9 @@ created_date: 2019-02-13 01:19:13
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,454 "
+views:        "2,500 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-13-Open-iscsi-target-_-enable-write-back.md
 toc:          false
 navigation:   false

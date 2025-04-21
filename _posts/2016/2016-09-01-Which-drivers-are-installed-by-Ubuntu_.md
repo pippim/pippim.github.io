@@ -10,9 +10,9 @@ created_date: 2016-09-01 02:16:54
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "127 "
+views:        "131 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-01-Which-drivers-are-installed-by-Ubuntu_.md
 toc:          false
 navigation:   false

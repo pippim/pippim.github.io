@@ -10,9 +10,9 @@ created_date: 2021-01-02 20:06:52
 edit_date:    2021-01-24 15:29:09
 votes:        "5 "
 favorites:    
-views:        "882 "
+views:        "887 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-02-Does-the-Ubuntu-Newsletter-still-get-sent-over-email_.md
 toc:          false
 navigation:   false

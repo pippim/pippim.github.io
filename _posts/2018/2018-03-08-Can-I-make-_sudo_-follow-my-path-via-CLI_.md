@@ -10,9 +10,9 @@ created_date: 2018-03-08 02:31:15
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "1,241 "
+views:        "1,245 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Can-I-make-_sudo_-follow-my-path-via-CLI_.md
 toc:          false
 navigation:   false

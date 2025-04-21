@@ -10,9 +10,9 @@ created_date: 2018-05-01 01:21:40
 edit_date:    2018-10-28 15:07:06
 votes:        "10 "
 favorites:    
-views:        "19,617 "
+views:        "19,623 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Unable-to-upgrade-kernel-after-4.16.3.md
 toc:          false
 navigation:   true

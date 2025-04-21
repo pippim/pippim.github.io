@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 nvidia xorg brightness backlight grub
 created_date: 2017-07-17 23:26:12
 edit_date:    2020-06-12 14:37:07
-votes:        "14 "
+votes:        "15 "
 favorites:    
-views:        "23,571 "
+views:        "23,645 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-17-nvidia-backlight-brightness-problem.md
 toc:          false
 navigation:   false

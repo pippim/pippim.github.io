@@ -10,9 +10,9 @@ created_date: 2019-10-17 11:51:10
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "1,922 "
+views:        "1,926 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-17-Is-a-for-loop-using-arrays-better-than-using-field-splitting-on-a-simple-variable_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-06-06 23:12:59
 edit_date:    2018-06-07 00:31:27
 votes:        "2 "
 favorites:    
-views:        "5,221 "
+views:        "5,262 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-06-Which-intel-graphics-firmware-version-is-in-use-_-how-to-change-that.md
 toc:          false
 navigation:   false

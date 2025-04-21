@@ -10,9 +10,9 @@ created_date: 2017-05-24 03:01:14
 edit_date:    2017-05-24 03:59:08
 votes:        "16 "
 favorites:    
-views:        "12,700 "
+views:        "12,852 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-24-When-is-Birth-Date-for-a-file-actually-used_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "221 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-16-Why-does-my-laptop-suspend-after-5-minutes_.md
 toc:          false
 navigation:   false

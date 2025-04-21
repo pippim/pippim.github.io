@@ -10,9 +10,9 @@ created_date: 2024-02-18 00:47:04
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "878 "
+views:        "895 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-18-tput-does-not-try-_dev_tty-___.md
 toc:          false
 navigation:   false

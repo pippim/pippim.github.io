@@ -10,9 +10,9 @@ created_date: 2018-04-07 01:00:23
 edit_date:    2018-07-24 23:40:44
 votes:        "2 "
 favorites:    
-views:        "2,899 "
+views:        "2,903 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-Why-show-desktop-_with-alt-tab_-in-kde-renders-alternatively-two-different-things_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2020-07-26 00:50:59
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,358 "
+views:        "2,402 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-26-I-need-to-re-connect-HDMI-everytime-after-boot.md
 toc:          false
 navigation:   false

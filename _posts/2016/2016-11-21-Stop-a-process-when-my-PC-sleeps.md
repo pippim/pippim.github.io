@@ -10,9 +10,9 @@ created_date: 2016-11-21 12:53:08
 edit_date:    2017-11-29 21:21:06
 votes:        "3 "
 favorites:    
-views:        "1,170 "
+views:        "1,193 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-21-Stop-a-process-when-my-PC-sleeps.md
 toc:          false
 navigation:   false

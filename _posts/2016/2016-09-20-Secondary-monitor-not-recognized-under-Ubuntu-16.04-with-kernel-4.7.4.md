@@ -10,9 +10,9 @@ created_date: 2016-09-20 00:48:08
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "719 "
+views:        "720 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-20-Secondary-monitor-not-recognized-under-Ubuntu-16.04-with-kernel-4.7.4.md
 toc:          false
 navigation:   false

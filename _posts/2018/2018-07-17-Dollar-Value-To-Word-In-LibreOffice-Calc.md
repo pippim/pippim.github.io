@@ -10,9 +10,9 @@ created_date: 2018-07-17 04:22:19
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "1,553 "
+views:        "1,560 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-17-Dollar-Value-To-Word-In-LibreOffice-Calc.md
 toc:          false
 navigation:   false

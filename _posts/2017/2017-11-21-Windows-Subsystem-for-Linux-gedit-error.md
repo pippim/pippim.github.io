@@ -10,9 +10,9 @@ created_date: 2017-11-21 01:51:11
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "1,650 "
+views:        "1,664 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-21-Windows-Subsystem-for-Linux-gedit-error.md
 toc:          false
 navigation:   false

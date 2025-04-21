@@ -10,9 +10,9 @@ created_date: 2017-02-26 18:16:58
 edit_date:    2017-02-26 18:30:08
 votes:        "4 "
 favorites:    
-views:        "1,991 "
+views:        "1,994 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-26-My-laptop-screen-reduces-light-on-dark-applicatins.md
 toc:          false
 navigation:   false

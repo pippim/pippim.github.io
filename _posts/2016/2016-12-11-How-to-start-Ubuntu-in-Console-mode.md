@@ -10,9 +10,9 @@ created_date: 2016-12-11 22:54:26
 edit_date:    2019-09-18 22:41:08
 votes:        "69 "
 favorites:    
-views:        "535,872 "
+views:        "540,413 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-to-start-Ubuntu-in-Console-mode.md
 toc:          false
 navigation:   false

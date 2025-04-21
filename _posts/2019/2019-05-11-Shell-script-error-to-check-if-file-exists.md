@@ -10,9 +10,9 @@ created_date: 2019-05-11 11:10:01
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,519 "
+views:        "5,591 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-11-Shell-script-error-to-check-if-file-exists.md
 toc:          false
 navigation:   false

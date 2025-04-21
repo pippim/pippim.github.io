@@ -10,9 +10,9 @@ created_date: 2020-06-01 01:32:39
 edit_date:    2020-06-01 01:37:56
 votes:        "2 "
 favorites:    
-views:        "4,943 "
+views:        "5,020 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-01-How-to-*STOP*-sharing-a-folder.md
 toc:          false
 navigation:   false

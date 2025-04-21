@@ -8,11 +8,11 @@ type:         Answer
 tags:         nautilus metadata
 created_date: 2019-12-13 01:14:37
 edit_date:    2019-12-13 11:33:02
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "25,565 "
+views:        "25,921 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-What-is-gvfsd-metadata_.md
 toc:          false
 navigation:   false

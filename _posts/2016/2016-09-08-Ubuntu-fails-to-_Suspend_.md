@@ -10,9 +10,9 @@ created_date: 2016-09-08 01:34:48
 edit_date:    2020-02-08 18:37:04
 votes:        "2 "
 favorites:    
-views:        "1,768 "
+views:        "1,770 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-08-Ubuntu-fails-to-_Suspend_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2017-01-09 04:44:26
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "110,040 "
+views:        "110,130 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-09-How-do-I-change-the-login-screen-in-Ubuntu-16.04__.md
 toc:          false
 navigation:   false

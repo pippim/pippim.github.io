@@ -10,9 +10,9 @@ created_date: 2016-10-25 02:32:51
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "415 "
+views:        "424 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-25-Crashes-on-BayTrail-device.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-05-03 23:34:11
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "563 "
+views:        "571 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-03-Strange-suspension-issues-on-macbook-pro-Ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false

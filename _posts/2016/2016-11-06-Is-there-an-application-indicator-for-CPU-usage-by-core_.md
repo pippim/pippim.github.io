@@ -10,9 +10,9 @@ created_date: 2016-11-06 19:30:42
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,328 "
+views:        "3,345 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-06-Is-there-an-application-indicator-for-CPU-usage-by-core_.md
 toc:          false
 navigation:   false

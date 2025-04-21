@@ -10,9 +10,9 @@ created_date: 2019-07-21 17:39:24
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "1,110 "
+views:        "1,118 "
 accepted:     Accepted
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Nautilus-doesn_t-remember-sorting-options-in-Ubuntu-19.04.md
 toc:          false
 navigation:   false

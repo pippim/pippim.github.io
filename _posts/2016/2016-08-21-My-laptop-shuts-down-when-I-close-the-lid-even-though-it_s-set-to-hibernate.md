@@ -10,9 +10,9 @@ created_date: 2016-08-21 23:55:05
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "8,492 "
+views:        "8,501 "
 accepted:     
-uploaded:     2025-03-13 15:35:00
+uploaded:     2025-04-21 05:23:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-21-My-laptop-shuts-down-when-I-close-the-lid-even-though-it_s-set-to-hibernate.md
 toc:          false
 navigation:   false
