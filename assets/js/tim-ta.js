@@ -525,8 +525,9 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
 
     /* Fudge - Add chgH to setH and call again */
     var overrideW = setW + chgW
-    // 2025-04-23 Add 80 to height for MS Edge
-    var overrideH = setH + chgH + 80
+    // 2025-04-23 Try adding 80 to height for MS Edge but causes creep
+    // in Firefox. MS Edge users will have to used fixed height option.
+    var overrideH = setH + chgH
     /* For Chrome - chgX & chgY is meaningful, for Firefox it is wild
         Last-save  setX: -555 setY: 6 setW: 437 setH: 443
         Post-move  newX: undefined newY: 6 newW: 421 newH: 375
