@@ -2,7 +2,7 @@
 ---
 // Tim-ta (Timed Tasks)
 /*  Modifications
-    2025-04-23 Popup Window Height 100 too short on MS Edge.
+    2025-04-25 Popup Window scrollbars forced on by message box off window.
 */
 
 {% include draggable-window.js %}
@@ -525,8 +525,6 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
 
     /* Fudge - Add chgH to setH and call again */
     var overrideW = setW + chgW
-    // 2025-04-23 Try adding 80 to height for MS Edge but causes creep
-    // in Firefox. MS Edge users will have to used fixed height option.
     var overrideH = setH + chgH
     /* For Chrome - chgX & chgY is meaningful, for Firefox it is wild
         Last-save  setX: -555 setY: 6 setW: 437 setH: 443
@@ -3526,7 +3524,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
 
         RETURNS the window element created
     */
-    var win = getWin()
+    var win = getWin()  // get window (normal page) or runWindow (popup window)
     // Sanity checks - After writing your development code you can delete
     // these prior to migration to production environment.
     if (arguments.length < 2) {
@@ -3586,12 +3584,19 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     var elmDraggable = win.document.getElementById(p['idWindow']);  // ID inside <div>
     let rect = p['elmLink'].getBoundingClientRect();
     //var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
-    //var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
+    //var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top)
     var oldX = parseInt(rect.left + win.scrollX)  // Get link (anchor reference point)
-    var oldY = parseInt(rect.top + win.scrollY)  //  x (left) and y (top
+    var oldY = parseInt(rect.top + win.scrollY)  //  x (left) and y (top)
+    /* 2025-04-25 Why is draggable element not within popup window?
+    console.log("popCreate()", win.scrollX, win.scrollY);
+    console.trace();
+    */
     elmDraggable.style.left = (oldX + 20) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
+
+    displayVariable("oldX:", oldX)
+    displayVariable("oldY:", oldY)
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
