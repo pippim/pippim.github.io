@@ -11,6 +11,12 @@
 // Oct 10/22 commented out above and colorScheme went undefined for 20 minutes
 // At that period everyone will need to delete localStorage.colorScheme
 
+/* April 27/2025 - Define displayAlert and displayConsoleLog for debugging.
+*/
+let displayAlert = false  // Temporary. Get values from session storage instead.
+let displayConsoleLog = false
+
+
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
 function setCookie(cname, value, exp_days) {
     const d = new Date();
@@ -264,6 +270,14 @@ function htmlVisibilitySwitches () {
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
     html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_all_sessions" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "<h3>Debug / trace variables</h3>";
+    html += "To examine key variables when they are set use:<br>"
+    html += "&emsp; Send notification (alert) in popup window? " +
+            '<img class="with-action" id="switch_alert" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "&emsp; Print to console log (CTRL + I)? " +
+            '<img class="with-action" id="switch_console_log" ' +
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
     return html
 }
@@ -539,6 +553,8 @@ function tcmButtonVisibility() {
     switch_init("switch_this_page", vis_this_page);
     switch_init("switch_all_pages", vis_all_pages);
     switch_init("switch_all_sessions", vis_all_sessions);
+    switch_init("switch_alert", displayAlert);  // 2025-04-27 new global var
+    switch_init("switch_console_log", displayConsoleLog);  // 2025-04-27 new global var
 
     // Toggle switch on/off with button click
     document.getElementById("switch_this_page").addEventListener('click', () => {
@@ -564,6 +580,16 @@ function tcmButtonVisibility() {
             switch_set("switch_this_page", "true");
             switch_set("switch_all_pages", "true");
         }
+    });
+
+    // 2025-04-27 Add display alerts for key variables being set
+    document.getElementById("switch_alert").addEventListener('click', () => {
+        switch_toggle("switch_alert");
+    });
+
+    // 2025-04-27 Add display alerts for key variables being set
+    document.getElementById("switch_console_log").addEventListener('click', () => {
+        switch_toggle("switch_console_log");
     });
 
 }
