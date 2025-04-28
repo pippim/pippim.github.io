@@ -3616,9 +3616,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     Defined in /assets/js/theCookieMachine.js but not visible here.
 */
 function displayVariable(...args) {
-    console.log("displayAlert:", displayAlert, "displayConsoleLog:", displayConsoleLog);
     if (displayAlert == "true") {
-        alert(arguments);
+        alert(Array.prototype.join.call(arguments, ' '));
     }
     if (displayConsoleLog == "true") {
         console.log(arguments);
