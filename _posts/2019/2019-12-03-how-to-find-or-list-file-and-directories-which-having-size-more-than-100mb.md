@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "5,810 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-03-how-to-find-or-list-file-and-directories-which-having-size-more-than-100mb.md
 toc:          false
 navigation:   false

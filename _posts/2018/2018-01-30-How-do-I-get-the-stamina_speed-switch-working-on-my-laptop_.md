@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,688 "
 accepted:     
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-30-How-do-I-get-the-stamina_speed-switch-working-on-my-laptop_.md
 toc:          false
 navigation:   false

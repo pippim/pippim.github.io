@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "211 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2025/2025-03-05-How-to-setup-enviroment-variables-by-linking-a-file-in-Ubuntu_Debian_Raspberry-Pi-OS_.md
 toc:          false
 navigation:   false

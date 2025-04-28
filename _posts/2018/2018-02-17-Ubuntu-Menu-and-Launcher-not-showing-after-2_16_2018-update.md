@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "6,728 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-Ubuntu-Menu-and-Launcher-not-showing-after-2_16_2018-update.md
 toc:          false
 navigation:   false

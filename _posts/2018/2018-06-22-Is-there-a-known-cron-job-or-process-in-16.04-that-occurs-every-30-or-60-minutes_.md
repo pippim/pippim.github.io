@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "280 "
 accepted:     
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-22-Is-there-a-known-cron-job-or-process-in-16.04-that-occurs-every-30-or-60-minutes_.md
 toc:          false
 navigation:   false

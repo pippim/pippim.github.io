@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "10,267 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-How-are-the-default-user-folders-in-the-home-created-for-a-new-user_.md
 toc:          false
 navigation:   false

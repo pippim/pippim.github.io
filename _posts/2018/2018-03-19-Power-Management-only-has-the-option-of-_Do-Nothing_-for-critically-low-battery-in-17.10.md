@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "3,470 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-Power-Management-only-has-the-option-of-_Do-Nothing_-for-critically-low-battery-in-17.10.md
 toc:          false
 navigation:   true

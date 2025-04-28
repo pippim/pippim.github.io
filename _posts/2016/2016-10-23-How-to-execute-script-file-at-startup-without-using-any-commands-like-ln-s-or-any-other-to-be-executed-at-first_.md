@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,261 "
 accepted:     
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-How-to-execute-script-file-at-startup-without-using-any-commands-like-ln-s-or-any-other-to-be-executed-at-first_.md
 toc:          false
 navigation:   false

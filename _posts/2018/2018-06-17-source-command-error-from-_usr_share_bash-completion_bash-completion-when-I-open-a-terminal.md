@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "10,321 "
 accepted:     
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-source-command-error-from-_usr_share_bash-completion_bash-completion-when-I-open-a-terminal.md
 toc:          false
 navigation:   false

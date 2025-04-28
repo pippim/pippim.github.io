@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "1,993 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-Remove-playlist-from-Rhythmbox.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,545 "
 accepted:     Accepted
-uploaded:     2025-04-21 05:23:24
+uploaded:     2025-04-28 15:55:49
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_.md
 toc:          false
 navigation:   false
