@@ -5,7 +5,7 @@
     2025-04-27 Popup Window scrollbars forced on by message box off window.
 */
 
-// { % include tcm-common-code.js %}  // 2025-04-27 new displayAlert & displayConsoleLog
+{% include tcm-common-code.js %}  // 2025-04-27 new displayAlert & displayConsoleLog
 
 {% include draggable-window.js %}
 
