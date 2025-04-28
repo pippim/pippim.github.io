@@ -5,7 +5,7 @@
     2025-04-27 Popup Window scrollbars forced on by message box off window.
 */
 
-{% include tcm-common-code.js %}  // 2025-04-27 new displayAlert & displayConsoleLog
+// { % include tcm-common-code.js %}  // 2025-04-27 new displayAlert & displayConsoleLog
 
 {% include draggable-window.js %}
 
@@ -3597,9 +3597,12 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
-    // new function getting undefined reference error
-    displayVariable("oldX:", oldX);  // in /assets/js/theCookieMachine.js
-    displayVariable("oldY:", oldY);
+    // displayVariable when switches set in theCookieMachine.js
+    displayVariable("rect:", rect)
+    displayVariable("win.scrollX:", win.scrollX, "win.scrollY:", win.scrollY,
+                    "oldX:", oldX, "oldY:", oldY);
+    // displayVariable("oldX:", oldY);
+    // displayVariable("oldY:", oldY);
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
@@ -3612,13 +3615,13 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     variables and showing values with alert() and console.log() functions.
     Defined in /assets/js/theCookieMachine.js but not visible here.
 */
-function displayVariable(text, value) {
+function displayVariable() {
     console.log("displayAlert:", displayAlert, "displayConsoleLog:", displayConsoleLog)
     if (displayAlert == "true") {
-        alert(text, value)
+        alert(arguments)
     }
     if (displayConsoleLog == "true") {
-        console.log(text, value)
+        console.log(arguments)
     }
 }
 
