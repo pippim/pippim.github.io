@@ -9,12 +9,7 @@
 // Color Schemes - getRootColors.js for local storage current scheme
 // { % include getRootColors.js %}  // Breaks tcm.md window displays
 // Oct 10/22 commented out above and colorScheme went undefined for 20 minutes
-// At that period everyone will need to delete localStorage.colorScheme
-
-/* April 27/2025 - Define displayAlert and displayConsoleLog for debugging.
-*/
-let displayAlert = false  // Temporary. Get values from session storage instead.
-let displayConsoleLog = false
+// During those 20 minutes everyone will need to delete localStorage.colorScheme
 
 
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
@@ -608,6 +603,11 @@ if (vis_all_sessions == "true") {
     makeTcmButtonVisible();
 }
 
+/* April 27/2025 - Define displayAlert and displayConsoleLog for debugging.
+*/
+var displayAlert = getCookie("displayAlert")
+var displayConsoleLog = getCookie("displayConsoleLog")
+
 var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
@@ -658,12 +658,22 @@ function switch_set(id, bool) {
         vis_all_sessions = bool;
         setCookie("vis_all_sessions", vis_all_sessions, 30);
     }
+    if (id == "switch_alert") {
+        displayAlert = bool;
+        setCookie("displayAlert", displayAlert, 30);
+    }
+    if (id == "switch_console_log") {
+        displayConsoleLog = bool;
+        setCookie("displayConsoleLog", displayConsoleLog, 30);
+    }
 }
 
 function check_all_switches() {
     vis_this_page = objTcmVisById["switch_this_page"].setting;
     vis_all_pages = objTcmVisById["switch_all_pages"].setting;
     vis_all_sessions = objTcmVisById["switch_all_sessions"].setting;
+    displayAlert = objTcmVisById["switch_alert"].setting;
+    displayConsoleLog = objTcmVisById["switch_console_log"].setting;
 }
 
 function switch_toggle(id) {
@@ -671,6 +681,14 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
+function displayVariable(text, value) {
+    if (displayAlert == "true") {
+        alert(text, value)
+    }
+    if (displayConsoleLog == "true") {
+        console.log(text, value)
+    }
+}
 /*
 // TEST list the color scheme
 
