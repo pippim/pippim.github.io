@@ -3597,7 +3597,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
-    // displayVariable when switches set in theCookieMachine.js
+    // displayVariable() when switches set in theCookieMachine.js
     displayVariable("rect:", rect)
     displayVariable("win.scrollX:", win.scrollX, "win.scrollY:", win.scrollY,
                     "oldX:", oldX, "oldY:", oldY);
@@ -3615,13 +3615,13 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     variables and showing values with alert() and console.log() functions.
     Defined in /assets/js/theCookieMachine.js but not visible here.
 */
-function displayVariable() {
-    console.log("displayAlert:", displayAlert, "displayConsoleLog:", displayConsoleLog)
+function displayVariable(...args) {
+    console.log("displayAlert:", displayAlert, "displayConsoleLog:", displayConsoleLog);
     if (displayAlert == "true") {
-        alert(arguments)
+        alert(arguments);
     }
     if (displayConsoleLog == "true") {
-        console.log(arguments)
+        console.log(arguments);
     }
 }
 
