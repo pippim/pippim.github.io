@@ -3607,6 +3607,21 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
 
 }  // End of popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons)
 
+
+/*  2025-04-28 displayVariable() function checks if cookies set for watching
+    variables and showing values with alert() and console.log() functions.
+    Defined in /assets/js/theCookieMachine.js but not visible here.
+*/
+function displayVariable(text, value) {
+    console.log("displayAlert:", displayAlert, "displayConsoleLog:", displayConsoleLog)
+    if (displayAlert == "true") {
+        alert(text, value)
+    }
+    if (displayConsoleLog == "true") {
+        console.log(text, value)
+    }
+}
+
 function popBuildHtml(msg_type, msg, index, buttons) {
     var msg_head = "", msgq_class = "";
     if (msg_type == "e") { msg_head = "ERROR"; msgq_class = "msgq-error"; }
