@@ -3598,7 +3598,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
     // displayVariable() when switches set in theCookieMachine.js
-    displayVariable("rect:", rect)
+    displayVariable("msg:", msg)
+    displayVariable("rect.left:", rect.left, "rect.top:", rect.top)
     displayVariable("win.scrollX:", win.scrollX, "win.scrollY:", win.scrollY,
                     "oldX:", oldX, "oldY:", oldY);
     // displayVariable("oldX:", oldY);
@@ -3620,7 +3621,7 @@ function displayVariable(...args) {
         alert(Array.prototype.join.call(arguments, ' '));
     }
     if (displayConsoleLog == "true") {
-        console.log(arguments);
+        console.log(...args);
     }
 }
 
