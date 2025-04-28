@@ -3598,8 +3598,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
     // new function getting undefined reference error
-    displayVariable("oldX:", oldX);  // in /assets/js/theCookieMachine.js
-    displayVariable("oldY:", oldY);
+    //displayVariable("oldX:", oldX);  // in /assets/js/theCookieMachine.js
+    //displayVariable("oldY:", oldY);
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
