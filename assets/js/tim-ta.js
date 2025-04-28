@@ -3597,8 +3597,9 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
-    displayVariable("oldX:", oldX);
-    displayVariable("oldY:", oldY);
+    // new function getting undefined reference error
+    //displayVariable("oldX:", oldX);  // in /_includes/tcm-common-code.js
+    //displayVariable("oldY:", oldY);
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
