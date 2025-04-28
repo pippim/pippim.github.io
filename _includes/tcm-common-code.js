@@ -271,7 +271,7 @@ function htmlVisibilitySwitches () {
     html += "&emsp; Send notification (alert) in popup window? " +
             '<img class="with-action" id="switch_alert" ' +
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
-    html += "&emsp; Print to console log (CTRL + I)? " +
+    html += "&emsp; Print to console log (CTRL + SHIFT + I)? " +
             '<img class="with-action" id="switch_console_log" ' +
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
     return html
@@ -605,8 +605,9 @@ if (vis_all_sessions == "true") {
 
 /* April 27/2025 - Define displayAlert and displayConsoleLog for debugging.
 */
-var displayAlert = getCookie("displayAlert")
-var displayConsoleLog = getCookie("displayConsoleLog")
+var displayAlert = "false", displayConsoleLog = "false"  // default in case of error
+displayAlert = getCookie("displayAlert")
+displayConsoleLog = getCookie("displayConsoleLog")
 
 var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
