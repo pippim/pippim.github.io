@@ -258,7 +258,9 @@ function set_hdr_tooltips () {
 
 /*  2025-04-28 displayVariable() function checks if cookies set for watching
     variables and showing values with alert() and console.log() functions.
+*/
 function displayVariable(text, value) {
+    console.log("displayAlert:", displayAlert, "displayConsoleLog:", displayConsoleLog)
     if (displayAlert == "true") {
         alert(text, value)
     }
@@ -266,7 +268,6 @@ function displayVariable(text, value) {
         console.log(text, value)
     }
 }
-*/
 
 
 /* End of /assets/js/theCookieMachine.js */
