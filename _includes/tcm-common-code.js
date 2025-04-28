@@ -681,14 +681,6 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
-function displayVariable(text, value) {
-    if (displayAlert == "true") {
-        alert(text, value)
-    }
-    if (displayConsoleLog == "true") {
-        console.log(text, value)
-    }
-}
 /*
 // TEST list the color scheme
 
