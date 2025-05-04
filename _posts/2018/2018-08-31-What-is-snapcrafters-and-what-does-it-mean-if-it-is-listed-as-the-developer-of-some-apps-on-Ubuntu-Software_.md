@@ -10,9 +10,9 @@ created_date: 2018-08-31 00:44:24
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "4,161 "
+views:        "4,170 "
 accepted:     
-uploaded:     2025-04-28 15:55:49
+uploaded:     2025-05-04 11:54:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-31-What-is-snapcrafters-and-what-does-it-mean-if-it-is-listed-as-the-developer-of-some-apps-on-Ubuntu-Software_.md
 toc:          false
 navigation:   false

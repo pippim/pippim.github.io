@@ -10,9 +10,9 @@ created_date: 2018-03-12 23:11:42
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "2,869 "
+views:        "2,883 "
 accepted:     
-uploaded:     2025-04-28 15:55:49
+uploaded:     2025-05-04 11:54:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-How-can-I-record-cpu-_-ram-usage-on-Ubuntu_.md
 toc:          false
 navigation:   true

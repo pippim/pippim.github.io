@@ -10,9 +10,9 @@ created_date: 2019-10-26 15:51:22
 edit_date:    2023-03-30 16:51:00
 votes:        "3 "
 favorites:    
-views:        "326 "
+views:        "328 "
 accepted:     
-uploaded:     2025-04-28 15:55:49
+uploaded:     2025-05-04 11:54:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-26-Disable-Dropbox-integration-with-GNOME-Files-_without-disabling-Dropbox-sync__.md
 toc:          false
 navigation:   false

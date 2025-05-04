@@ -10,9 +10,9 @@ created_date: 2024-03-06 01:29:55
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "8,249 "
+views:        "8,539 "
 accepted:     
-uploaded:     2025-04-28 15:55:49
+uploaded:     2025-05-04 11:54:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-03-06-How-to-change-lid-close-behavior-to-do-nothing_.md
 toc:          false
 navigation:   false
