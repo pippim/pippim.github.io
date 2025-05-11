@@ -10,9 +10,9 @@ created_date: 2021-03-28 14:00:19
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "13,086 "
+views:        "13,174 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-03-28-There-a-quicker-way-between-Ubuntu-and-my-android-to-send-files-instead-of-Bluetooth-or-cable.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-08-11 03:56:51
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "86,858 "
+views:        "86,943 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-show-a-running-clock-in-terminal-before-the-command-prompt.md
 toc:          false
 navigation:   false

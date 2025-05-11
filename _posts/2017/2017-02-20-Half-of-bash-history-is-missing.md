@@ -10,9 +10,9 @@ created_date: 2017-02-20 22:49:16
 edit_date:    2017-04-13 12:24:42
 votes:        "12 "
 favorites:    
-views:        "38,903 "
+views:        "38,973 "
 accepted:     Accepted
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-Half-of-bash-history-is-missing.md
 toc:          false
 navigation:   false

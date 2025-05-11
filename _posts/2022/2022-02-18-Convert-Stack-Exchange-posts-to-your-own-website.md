@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "342 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false

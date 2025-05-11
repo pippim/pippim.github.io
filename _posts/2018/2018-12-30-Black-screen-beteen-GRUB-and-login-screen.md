@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "453 "
 accepted:     Accepted
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-30-Black-screen-beteen-GRUB-and-login-screen.md
 toc:          false
 navigation:   false

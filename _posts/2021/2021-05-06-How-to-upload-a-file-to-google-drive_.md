@@ -10,9 +10,9 @@ created_date: 2021-05-06 21:54:15
 edit_date:    2024-03-05 01:15:26
 votes:        "3 "
 favorites:    
-views:        "20,555 "
+views:        "20,618 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-06-How-to-upload-a-file-to-google-drive_.md
 toc:          false
 navigation:   false

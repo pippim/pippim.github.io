@@ -10,9 +10,9 @@ created_date: 2020-04-02 01:50:13
 edit_date:    
 votes:        "10 "
 favorites:    
-views:        "9,076 "
+views:        "9,119 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-02-Mouse-pointer-moving-by-itself.md
 toc:          false
 navigation:   false

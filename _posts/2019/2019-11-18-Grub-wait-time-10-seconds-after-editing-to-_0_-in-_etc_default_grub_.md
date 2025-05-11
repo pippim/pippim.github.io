@@ -10,9 +10,9 @@ created_date: 2019-11-18 00:42:29
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "11,858 "
+views:        "11,874 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-18-Grub-wait-time-10-seconds-after-editing-to-_0_-in-_etc_default_grub_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-05-07 11:09:14
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,865 "
+views:        "2,871 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-07-How-do-I-free-up-space-on-_boot_.md
 toc:          false
 navigation:   false

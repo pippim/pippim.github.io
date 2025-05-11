@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "102,720 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-19-New-installation-of-Windows-10-and-Ubuntu-from-Windows-Store-error.md
 toc:          false
 navigation:   false

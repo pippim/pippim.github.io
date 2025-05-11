@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,298 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Dual-booting_-every-time-Windows-boots_-it-increases-the-scrolling-speed-of-the-mouse-on-Ubuntu.md
 toc:          false
 navigation:   false

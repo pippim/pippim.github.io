@@ -10,9 +10,9 @@ created_date: 2020-01-11 21:09:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "10,517 "
+views:        "10,527 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-11-Refresh-rate-of-60-not-available-for-4K-resolution.md
 toc:          false
 navigation:   false

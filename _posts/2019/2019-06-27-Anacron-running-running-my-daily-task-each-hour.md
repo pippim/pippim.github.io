@@ -10,9 +10,9 @@ created_date: 2019-06-27 15:13:35
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "546 "
+views:        "547 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-27-Anacron-running-running-my-daily-task-each-hour.md
 toc:          false
 navigation:   false

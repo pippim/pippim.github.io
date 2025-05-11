@@ -10,9 +10,9 @@ created_date: 2018-10-22 18:17:40
 edit_date:    2020-06-12 14:37:07
 votes:        "14 "
 favorites:    
-views:        "5,945 "
+views:        "5,959 "
 accepted:     Accepted
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-do-I-prevent-_cd_-command-from-going-to-home-directory_.md
 toc:          false
 navigation:   false

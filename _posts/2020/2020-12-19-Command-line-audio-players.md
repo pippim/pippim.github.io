@@ -10,9 +10,9 @@ created_date: 2020-12-19 23:07:00
 edit_date:    2021-03-08 11:39:49
 votes:        "3 "
 favorites:    
-views:        "59,020 "
+views:        "59,094 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-19-Command-line-audio-players.md
 toc:          false
 navigation:   true

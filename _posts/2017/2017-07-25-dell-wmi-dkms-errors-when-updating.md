@@ -10,9 +10,9 @@ created_date: 2017-07-25 20:22:20
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "837 "
+views:        "838 "
 accepted:     Accepted
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-dell-wmi-dkms-errors-when-updating.md
 toc:          false
 navigation:   false

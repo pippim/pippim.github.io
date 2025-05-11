@@ -10,9 +10,9 @@ created_date: 2017-07-10 02:27:44
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "50,785 "
+views:        "50,941 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-to-change-mouse-DPI_.md
 toc:          false
 navigation:   false

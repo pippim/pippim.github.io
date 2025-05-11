@@ -10,9 +10,9 @@ created_date: 2019-05-06 21:52:11
 edit_date:    2020-06-12 14:37:07
 votes:        "11 "
 favorites:    
-views:        "10,305 "
+views:        "10,332 "
 accepted:     
-uploaded:     2025-05-04 11:54:06
+uploaded:     2025-05-11 09:03:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-06-How-can-I-test-a-shell-script-in-a-_safe-environment_-to-avoid-harm-to-my-computer_.md
 toc:          false
 navigation:   false
