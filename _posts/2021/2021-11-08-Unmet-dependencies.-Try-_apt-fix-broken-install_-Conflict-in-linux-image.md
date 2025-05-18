@@ -10,9 +10,9 @@ created_date: 2021-11-08 12:21:01
 edit_date:    2023-06-29 05:15:00
 votes:        "7 "
 favorites:    
-views:        "16,135 "
+views:        "16,265 "
 accepted:     
-uploaded:     2025-05-11 09:03:46
+uploaded:     2025-05-18 09:39:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-11-08-Unmet-dependencies.-Try-_apt-fix-broken-install_-Conflict-in-linux-image.md
 toc:          false
 navigation:   false

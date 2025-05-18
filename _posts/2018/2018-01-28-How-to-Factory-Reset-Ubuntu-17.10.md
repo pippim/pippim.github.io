@@ -10,9 +10,9 @@ created_date: 2018-01-28 03:25:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,667 "
+views:        "3,668 "
 accepted:     
-uploaded:     2025-05-11 09:03:46
+uploaded:     2025-05-18 09:39:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-28-How-to-Factory-Reset-Ubuntu-17.10.md
 toc:          false
 navigation:   false

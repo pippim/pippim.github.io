@@ -10,9 +10,9 @@ posts_by_year: true
 code_url: https://github.com/pippim/pippim.github.io/blob/main
 
 # Following site-wide values automatically set by sede/refresh.sh script
-views: "73,889,277 "
-views_human: 73.9 million
-refreshed: 2025-05-11 09:03:46
+views: "73,981,843 "
+views_human: 74 million
+refreshed: 2025-05-18 09:39:14
 questions: "319 "
 answers: "2,195 "
 accepted: "491 "

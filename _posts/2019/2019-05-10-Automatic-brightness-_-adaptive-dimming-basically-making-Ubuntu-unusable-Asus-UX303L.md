@@ -10,9 +10,9 @@ created_date: 2019-05-10 02:54:06
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,377 "
+views:        "2,381 "
 accepted:     
-uploaded:     2025-05-11 09:03:46
+uploaded:     2025-05-18 09:39:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-10-Automatic-brightness-_-adaptive-dimming-basically-making-Ubuntu-unusable-Asus-UX303L.md
 toc:          false
 navigation:   false

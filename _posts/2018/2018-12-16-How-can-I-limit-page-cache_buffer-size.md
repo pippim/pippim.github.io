@@ -10,9 +10,9 @@ created_date: 2018-12-16 00:59:36
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,862 "
+views:        "1,865 "
 accepted:     Accepted
-uploaded:     2025-05-11 09:03:46
+uploaded:     2025-05-18 09:39:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-How-can-I-limit-page-cache_buffer-size.md
 toc:          false
 navigation:   false
