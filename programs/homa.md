@@ -38,14 +38,15 @@ monitor. Helpful if Sony TV picture (a.k.a Panel or Display) is turned off
 - Communicate with devices using static MAC address to find dynamic IP address
 - Big number calculator with TeraByte, GigaByte, MegaByte units of measure
 - Large digit countdown timer with alarm
-- View Bluetooth devices and reset Bluetooth features
-- Command timeouts to eliminate wasted time waiting for negative response
+- View Bluetooth Devices and Reset Bluetooth functions
+- Command timeouts to save time waiting for disconnected devices
 - Command event viewer of error messages, return codes and run times
 - Floating sub windows that raise to top and move when main window is dragged
 - Message dialog boxes stay on top and cannot be "buried" under windows
-- Fading in/out tooltips appear when mouse hovers over buttons and labels
+- Tooltips fade in and out when mouse hovers over buttons and labels
 - Help buttons open web browser and this webpage. Then the page automatically
 scrolls to the appropriate section
+- Enhancements to trionesControl.py and GATTTool.py for Python 2 and 3 support
 
 ---
 
