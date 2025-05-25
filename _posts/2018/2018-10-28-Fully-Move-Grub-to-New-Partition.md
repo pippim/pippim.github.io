@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "14,329 "
 accepted:     
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-28-Fully-Move-Grub-to-New-Partition.md
 toc:          false
 navigation:   false

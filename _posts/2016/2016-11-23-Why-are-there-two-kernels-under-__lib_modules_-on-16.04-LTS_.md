@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "4,356 "
 accepted:     
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-23-Why-are-there-two-kernels-under-__lib_modules_-on-16.04-LTS_.md
 toc:          false
 navigation:   false

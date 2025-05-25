@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "16,479 "
 accepted:     
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Why-do-some-applications-have-files-with-no-extension_.md
 toc:          false
 navigation:   false

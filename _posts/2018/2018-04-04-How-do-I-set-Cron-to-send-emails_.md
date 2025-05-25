@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "39,431 "
 accepted:     
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-How-do-I-set-Cron-to-send-emails_.md
 toc:          false
 navigation:   false

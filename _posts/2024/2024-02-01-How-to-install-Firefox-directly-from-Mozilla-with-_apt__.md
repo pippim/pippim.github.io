@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "38,077 "
 accepted:     Accepted
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-01-How-to-install-Firefox-directly-from-Mozilla-with-_apt__.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,363 "
 accepted:     Accepted
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-01-I-have-just-one-OS-in-my-laptop_-why-Have-I-3-partitions_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "37,900 "
 accepted:     
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-14-Failed-to-write-_No-space-left-on-device_.md
 toc:          false
 navigation:   false

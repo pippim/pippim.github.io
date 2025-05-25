@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,535 "
 accepted:     
-uploaded:     2025-05-18 09:39:14
+uploaded:     2025-05-24 22:53:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-31-GNOME-choose-audio-device-headphones-over-headset-automatically.md
 toc:          false
 navigation:   false
