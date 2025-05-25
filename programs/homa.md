@@ -32,6 +32,7 @@ It allows you to control the following devices from your computer:
 - When Sony Remote Control changes volume, it is reflected on the active 
 monitor. Helpful if Sony TV picture (a.k.a Panel or Display) is turned off
 - Sony TV Remote Control powers off all and suspends system
+- On startup or resume, time of day 9am - 10pm sets volume to normal, else to quiet.
 - Automatically turn on TV bias lights only during nighttime
 - Automatically rediscover new network devices every x seconds
 - Communicate with devices using static MAC address to find dynamic IP address
