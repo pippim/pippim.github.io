@@ -24,7 +24,7 @@ It allows you to control the following devices from your computer:
 
 ## Extra features
 
-- Open source application written in Python with Tkinter GUI
+- Open source software written in Python with Tkinter GUI
 - Single *HomA* version works in both Python 2.7.12+ and Python 3.5+
 - LED Light Strip "breathing colors" feature varies colors and brightness levels
 - View Breathing Color Statistics to fine-tune color changes and times
@@ -547,11 +547,15 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 ### Preferences Notebook *Sony TV* tab:
 {:.no_toc}
 
-| Sony TV          | Description                                                   |
-|------------------|---------------------------------------------------------------|
-| SONY_PWD         | Sony TV REST API Password. Default "123".                     |
-| CURL_TIME        | How long to wait for `curl` command to finish. Default "0.2". |
-| KDL_TV           | HomA internal type code for Sony TV. Static value is "20".    |
+| Sony TV                 | Description                                                             |
+|-------------------------|-------------------------------------------------------------------------|
+| SONY_PWD                | Sony TV REST API Password. Default "123".                               |
+| ALLOW_REMOTE_TO_SUSPEND | Sony TV Remote Control power off suspends computer. Default "1" (True). |
+| ALLOW_VOLUME_CONTROL    | Sony TV Volume can be controlled by HomA. Default "1" (True).           |
+| QUIET_VOLUME            | Sony TV Quiet (Nighttime 10pm-9am) volume. Default "20".                |
+| NORMAL_VOLUME           | Sony TV Normal (Daytime) 9am-10pm) volume. Default "36".                |
+| CURL_TIME               | How long to wait for `curl` command to finish. Default "0.2".           |
+| KDL_TV                  | HomA internal type code for Sony TV. Static value is "20".              |
 
 ---
 
@@ -591,6 +595,7 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 | LED_LIGHTS_COLOR    | Last used color when *Set Bluetooth LED Color* was applied.                                                                     |
 | LED_RED+GREEN_ADJ   | When Red and Green are mixed together, boost red by 50%.<br>Necessary for Happy Lighting showing light green instead of yellow. |
 | BLUETOOTH_SCAN_TIME | How many seconds to scan for Bluetooth devices.<br>Longer scan time may reveal more devices.                                    |
+| SUNLIGHT_PERCENT    | Optional file where first line contains "999 %".<br>Where "999" is 0 to 100 % sunlight set each minute.                         |
 | BLE_LS              | Bluetooth Low Energy LED Light Strip type code value is "40".<br>Value used internally by *HomA* and cannot be changed.         |
 
 ---
@@ -599,13 +604,13 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 ### Preferences Notebook *Miscellaneous* tab:
 {:.no_toc}
 
-| Miscellaneous  | Description                                                        |
-|----------------|--------------------------------------------------------------------|
-| TIMER_SEC      | Seconds to run "Tools", "Timer". Default "600" (ten minutes).      |
-| TIMER_ALARM    | `.wav` filename to play when timer ends. Default "Alarm_01.wav".   |
-| SENSOR_CHECK   | How often the `sensors` command is run. Defaults to 1 second.      |
-| SENSOR_LOG     | How often to log sensor values. Default "3600" every hour.         |
-| FAN_GRANULAR   | Log sensor override when fan speed changes > x. Default "200" RPM. |
+| Miscellaneous  | Description                                                                                                   |
+|----------------|---------------------------------------------------------------------------------------------------------------|
+| TIMER_SEC      | Seconds to run "Tools", "Timer". Default "600" (ten minutes).                                                 |
+| TIMER_ALARM    | `.wav` filename to play when timer ends. Default "Alarm_01.wav".                                              |
+| SENSOR_CHECK   | How often the `sensors` command is run. Defaults to 1 second.<br>Set to 0 when Dell Virtual sensors not used. |
+| SENSOR_LOG     | How often to log sensor values. Default "3600" every hour.                                                    |
+| FAN_GRANULAR   | Log sensor override when fan speed changes > x. Default "200" RPM.                                            |
 
 ---
 
@@ -615,13 +620,13 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 | Refresh              | Description                                                          |
 |----------------------|----------------------------------------------------------------------|
-| CONFIG_FNAME         | Configuration filename. Static value is "config.json"                |
-| DEVICES_FNAME        | Previously discovered network devices. Static value "devices.json".  |
-| VIEW_ORDER_FNAME     | Saved order network devices are display in. Value "view_order.json". |
 | REFRESH_MS           | How many milliseconds screen is refreshed. Default "16" ms.          |
 | REDISCOVERY_SECONDS  | How often new network devices are checked. Default "60" seconds.     |
 | RESUME_TEST_SECONDS  | How many "disappearing" seconds represent suspend. Default "30".     |
 | RESUME_DELAY_RESTART | How many seconds after resume for network on-line. Default "5".      |
+| CONFIG_FNAME         | Configuration filename. Static value is "config.json"                |
+| DEVICES_FNAME        | Previously discovered network devices. Static value "devices.json".  |
+| VIEW_ORDER_FNAME     | Saved order network devices are display in. Value "view_order.json". |
 
 ---
 
@@ -631,14 +636,15 @@ uses internally. "10"&nbsp;=&nbsp;TP-Link/Kasa Smart Plug,
 
 | Computer            | Description                                                        |
 |---------------------|--------------------------------------------------------------------|
-| DESKTOP             | Desktop computer (anything not a laptop) type code is "100".       |
-| LAPTOP_B            | Laptop Base ("brains") CPU, GPU, Fans, USB, etc. Type code "110".  |
-| LAPTOP_D            | Laptop Display type code. Static value is "120".                   |
 | BACKLIGHT_NAME      | Automatically obtained from `/sys/class/backlight`.                |
 | BACKLIGHT_ON        | Value for laptop display backlight on. Default is "0".             |
 | BACKLIGHT_OFF       | Value for laptop display backlight off. Default is "4".            |
 | POWER_OFF_CMD_LIST  | Command and arguments to suspend. Default `systemctl suspend`.     |
 | POWER_OFF_EXCL_LIST | Devices HomA doesn't need to power on/off during resume/suspend.   |
+| DESKTOP             | Desktop computer (anything not a laptop) type code is "100".       |
+| LAPTOP_B            | Laptop Base ("brains") CPU, GPU, Fans, USB, etc. Type code "110".  |
+| LAPTOP_D            | Laptop Display type code. Static value is "120".                   |
+| ROUTER_M            | Router (Hub) modem type code. Static value is "200".               |
 
 The `POWER_OFF_EXCL_LIST` field contains three type codes for devices that do not need
 to be powered off. These devices are powered down automatically during system suspend:
