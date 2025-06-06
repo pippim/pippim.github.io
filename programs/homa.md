@@ -121,15 +121,26 @@ This option is greyed out (inaccessible) when not breathing colors.
 ### *Tools* Dropdown Menu
 {:.no_toc}
 
+- ***Turn all lights power*** - leads to submenu with options ***ON***
+and ***OFF***. All TP-Link smart plugs are turned on or off. It is 
+assumed only Bias lights are connected to the smart plugs. 
+- ***Forget sudo password*** - If you had entered your sudo password
+to control laptop display or reset Bluetooth you can use this option to
+"forget" the password. That said, it is automatically encrypted and
+reused on the next **HomA** restart so you don't have to reenter it.
+- ***Sony TV volume level*** - leads to submenu with options ***NORMAL***
+and ***QUIET***. Select **NORMAL** for 9 a.m. through 10 p.m. Select
+**QUIET** for 10 p.m. through 9 a.m. Automatically set on start up and
+when resuming from suspend based on current hour of the day.
 - ***Big Number Calculator*** - Calculator with units of measure
 for large numbers using **MB** (Megabytes), **GB** (Gigabytes),
 **TB** (Terabytes), etc.
 - ***Timer 600 seconds*** - Run a timer and display large digit countdown.
 Alarm sounds when timer ends. "600 seconds" changed in Preferences.
-- ***Forget sudo password*** - If you had entered your sudo password
-to control laptop display or reset Bluetooth you can use this option to
-"forget" the password. That said, it is automatically encrypted and
-reused on the next **HomA** restart so you don't have to reenter it.
+- ***Color scheme*** - leads to submenu with options ***WhiteSmoke***,
+***LemonChiffon***, **NavajoWhite** and ***LightSalmon***. Changing
+the color scheme switches between Network Devices Treeview and Sensors
+Treeview. Select button at bottom to change toggle Treeview back again.
 
 ---
 
