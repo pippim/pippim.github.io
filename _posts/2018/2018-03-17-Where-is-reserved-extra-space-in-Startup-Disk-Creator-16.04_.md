@@ -10,9 +10,9 @@ created_date: 2018-03-17 17:09:22
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,246 "
+views:        "1,249 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-17-Where-is-reserved-extra-space-in-Startup-Disk-Creator-16.04_.md
 toc:          false
 navigation:   false

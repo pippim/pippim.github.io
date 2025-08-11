@@ -10,9 +10,9 @@ created_date: 2018-12-03 04:23:42
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "13,404 "
+views:        "13,600 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-03-Which-is-the-right-way-to-drop-caches-in-Lubuntu_.md
 toc:          false
 navigation:   false

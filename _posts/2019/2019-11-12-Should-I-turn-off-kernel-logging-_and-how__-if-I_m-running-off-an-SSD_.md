@@ -10,9 +10,9 @@ created_date: 2019-11-12 20:34:12
 edit_date:    2020-06-12 14:37:07
 votes:        "10 "
 favorites:    
-views:        "4,111 "
+views:        "4,149 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Should-I-turn-off-kernel-logging-_and-how__-if-I_m-running-off-an-SSD_.md
 toc:          false
 navigation:   false

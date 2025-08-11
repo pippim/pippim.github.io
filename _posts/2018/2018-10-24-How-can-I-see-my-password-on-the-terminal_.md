@@ -10,9 +10,9 @@ created_date: 2018-10-24 11:28:15
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "49,909 "
+views:        "51,273 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-24-How-can-I-see-my-password-on-the-terminal_.md
 toc:          false
 navigation:   false

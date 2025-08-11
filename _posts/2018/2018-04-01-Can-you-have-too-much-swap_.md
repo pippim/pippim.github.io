@@ -10,9 +10,9 @@ created_date: 2018-04-01 00:53:49
 edit_date:    2018-04-08 17:20:46
 votes:        "2 "
 favorites:    
-views:        "19,276 "
+views:        "19,578 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Can-you-have-too-much-swap_.md
 toc:          false
 navigation:   false

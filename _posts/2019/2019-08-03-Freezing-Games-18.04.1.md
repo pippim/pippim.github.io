@@ -10,9 +10,9 @@ created_date: 2019-08-03 16:08:44
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "566 "
+views:        "567 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-03-Freezing-Games-18.04.1.md
 toc:          false
 navigation:   false

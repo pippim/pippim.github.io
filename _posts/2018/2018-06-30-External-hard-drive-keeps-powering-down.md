@@ -10,9 +10,9 @@ created_date: 2018-06-30 18:13:52
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "7,149 "
+views:        "7,312 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-30-External-hard-drive-keeps-powering-down.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-11-07 12:47:52
 edit_date:    2016-11-14 21:05:32
 votes:        "4 "
 favorites:    
-views:        "30,177 "
+views:        "30,422 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-to-create-a-directory-within-your-home-directory-Linux.md
 toc:          false
 navigation:   false

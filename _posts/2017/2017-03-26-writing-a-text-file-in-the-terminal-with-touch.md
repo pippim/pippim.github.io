@@ -10,9 +10,9 @@ created_date: 2017-03-26 03:39:10
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "101,208 "
+views:        "103,267 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-26-writing-a-text-file-in-the-terminal-with-touch.md
 toc:          false
 navigation:   false

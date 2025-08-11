@@ -10,9 +10,9 @@ created_date: 2017-08-30 23:10:24
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,425 "
+views:        "1,441 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-30-Wifi-available-networks-not-showing-up-suddenly.md
 toc:          false
 navigation:   false

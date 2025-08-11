@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1198187
 type:         Answer
 tags:         bash
 created_date: 2019-12-23 20:43:29
-edit_date:    2020-06-12 14:37:07
+edit_date:    2025-06-09 00:37:12
 votes:        "12 "
 favorites:    
-views:        "22,392 "
+views:        "22,891 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-23-Bash-How-to-detect-if-a-variable-is-more-than-a-certain-amount-of-characters.md
 toc:          false
 navigation:   false
@@ -59,7 +59,7 @@ Generally it is considered rude to allow the user only one chance to input a str
 
 ``` 
 echo "Enter character string 1 to 8 characters long or press <CTRL>+C to exit."
-while True ; do
+while true ; do
     read StringVar
     [[ ${#StringVar} -ge 1 ]] && [[ ${#StringVar} -le 8 ]] && break
     echo "Sorry that string is ${#StringVar} long. Please try again."

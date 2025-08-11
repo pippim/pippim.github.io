@@ -10,9 +10,9 @@ created_date: 2018-05-13 17:23:31
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "157,852 "
+views:        "159,513 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Weather-from-terminal.md
 toc:          false
 navigation:   false

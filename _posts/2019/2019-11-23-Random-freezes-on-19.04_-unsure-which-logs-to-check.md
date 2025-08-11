@@ -10,9 +10,9 @@ created_date: 2019-11-23 19:28:58
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,164 "
+views:        "2,181 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-23-Random-freezes-on-19.04_-unsure-which-logs-to-check.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-02-13 00:58:09
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "136,989 "
+views:        "138,305 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-13-Resetting-Ubuntu-to-factory-settings.md
 toc:          false
 navigation:   false

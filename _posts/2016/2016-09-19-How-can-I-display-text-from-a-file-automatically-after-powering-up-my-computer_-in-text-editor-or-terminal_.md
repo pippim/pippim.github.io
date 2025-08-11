@@ -10,9 +10,9 @@ created_date: 2016-09-19 10:51:34
 edit_date:    2019-10-25 01:57:15
 votes:        "9 "
 favorites:    
-views:        "1,862 "
+views:        "1,878 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer_-in-text-editor-or-terminal_.md
 toc:          false
 navigation:   false

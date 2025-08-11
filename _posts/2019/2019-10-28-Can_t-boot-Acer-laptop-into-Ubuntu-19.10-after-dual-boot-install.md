@@ -10,9 +10,9 @@ created_date: 2019-10-28 23:25:18
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,597 "
+views:        "3,641 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-28-Can_t-boot-Acer-laptop-into-Ubuntu-19.10-after-dual-boot-install.md
 toc:          false
 navigation:   false

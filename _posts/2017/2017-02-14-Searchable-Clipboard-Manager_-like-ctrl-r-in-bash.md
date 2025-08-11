@@ -10,9 +10,9 @@ created_date: 2017-02-14 00:17:58
 edit_date:    2017-04-13 12:24:59
 votes:        "4 "
 favorites:    
-views:        "2,160 "
+views:        "2,195 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-14-Searchable-Clipboard-Manager_-like-ctrl-r-in-bash.md
 toc:          false
 navigation:   false

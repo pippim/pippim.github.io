@@ -10,9 +10,9 @@ created_date: 2016-09-05 02:13:12
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "66 "
+views:        "68 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Can_t-find-local-disks.md
 toc:          false
 navigation:   false

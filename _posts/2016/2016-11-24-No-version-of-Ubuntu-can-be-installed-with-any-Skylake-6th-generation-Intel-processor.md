@@ -10,9 +10,9 @@ created_date: 2016-11-24 00:37:49
 edit_date:    2017-04-13 12:23:56
 votes:        "2 "
 favorites:    
-views:        "38,643 "
+views:        "38,741 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-No-version-of-Ubuntu-can-be-installed-with-any-Skylake-6th-generation-Intel-processor.md
 toc:          false
 navigation:   false

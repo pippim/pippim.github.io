@@ -10,9 +10,9 @@ created_date: 2016-10-24 11:27:27
 edit_date:    2016-10-27 14:50:24
 votes:        "10 "
 favorites:    
-views:        "19,239 "
+views:        "19,573 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-24-Logs-of-Ubuntu-going-into-Sleep-and-waking-up_.md
 toc:          false
 navigation:   false

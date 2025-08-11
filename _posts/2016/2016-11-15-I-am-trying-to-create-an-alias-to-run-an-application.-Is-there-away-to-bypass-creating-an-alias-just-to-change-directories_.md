@@ -10,9 +10,9 @@ created_date: 2016-11-15 11:37:47
 edit_date:    2016-11-15 12:59:57
 votes:        "2 "
 favorites:    
-views:        "487 "
+views:        "551 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-15-I-am-trying-to-create-an-alias-to-run-an-application.-Is-there-away-to-bypass-creating-an-alias-just-to-change-directories_.md
 toc:          false
 navigation:   false

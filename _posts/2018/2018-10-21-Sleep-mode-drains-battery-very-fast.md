@@ -10,9 +10,9 @@ created_date: 2018-10-21 17:30:14
 edit_date:    2018-10-21 20:25:21
 votes:        "9 "
 favorites:    
-views:        "17,280 "
+views:        "17,362 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-21-Sleep-mode-drains-battery-very-fast.md
 toc:          false
 navigation:   false

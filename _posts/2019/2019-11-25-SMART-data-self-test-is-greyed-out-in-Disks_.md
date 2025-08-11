@@ -8,11 +8,11 @@ type:         Answer
 tags:         disk smart
 created_date: 2019-11-25 12:26:14
 edit_date:    
-votes:        "18 "
+votes:        "20 "
 favorites:    
-views:        "27,803 "
+views:        "28,690 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-SMART-data-self-test-is-greyed-out-in-Disks_.md
 toc:          false
 navigation:   false

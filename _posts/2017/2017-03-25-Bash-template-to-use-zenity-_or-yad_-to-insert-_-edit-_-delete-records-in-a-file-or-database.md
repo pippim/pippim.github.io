@@ -10,9 +10,9 @@ created_date: 2017-03-25 15:23:15
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "4,447 "
+views:        "4,495 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-Bash-template-to-use-zenity-_or-yad_-to-insert-_-edit-_-delete-records-in-a-file-or-database.md
 toc:          false
 navigation:   true

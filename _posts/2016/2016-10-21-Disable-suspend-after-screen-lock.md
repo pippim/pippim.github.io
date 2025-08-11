@@ -10,9 +10,9 @@ created_date: 2016-10-21 23:20:42
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "3,894 "
+views:        "3,918 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-Disable-suspend-after-screen-lock.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         opengl mesa vulkan
 created_date: 2016-11-07 10:03:42
 edit_date:    2016-11-07 10:37:51
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "134,907 "
+views:        "141,522 "
 accepted:     Accepted
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-I-know-if-my-GPU-card-driver-supports-Vulkan_.md
 toc:          false
 navigation:   false

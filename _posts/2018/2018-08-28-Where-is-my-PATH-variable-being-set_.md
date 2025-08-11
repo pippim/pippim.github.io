@@ -10,9 +10,9 @@ created_date: 2018-08-28 23:01:05
 edit_date:    2018-09-30 14:43:51
 votes:        "4 "
 favorites:    
-views:        "11,092 "
+views:        "11,263 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-Where-is-my-PATH-variable-being-set_.md
 toc:          false
 navigation:   false

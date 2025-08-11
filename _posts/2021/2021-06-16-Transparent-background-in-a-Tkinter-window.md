@@ -8,11 +8,11 @@ type:         Answer
 tags:         python tkinter transparency
 created_date: 2021-06-16 00:19:03
 edit_date:    2024-11-02 14:45:35
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "139,690 "
+views:        "140,989 "
 accepted:     
-uploaded:     2025-05-24 22:53:28
+uploaded:     2025-08-10 20:14:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-06-16-Transparent-background-in-a-Tkinter-window.md
 toc:          false
 navigation:   false
