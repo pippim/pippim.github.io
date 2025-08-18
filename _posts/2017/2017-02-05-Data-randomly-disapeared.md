@@ -10,9 +10,9 @@ created_date: 2017-02-05 00:24:23
 edit_date:    2017-04-13 12:24:26
 votes:        "3 "
 favorites:    
-views:        "35 "
+views:        "39 "
 accepted:     Accepted
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-05-Data-randomly-disapeared.md
 toc:          false
 navigation:   false

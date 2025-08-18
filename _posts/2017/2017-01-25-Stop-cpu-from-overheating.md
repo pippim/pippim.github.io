@@ -8,11 +8,11 @@ type:         Answer
 tags:         cpu temperature conky
 created_date: 2017-01-25 00:50:03
 edit_date:    2017-08-06 13:29:25
-votes:        "15 "
+votes:        "16 "
 favorites:    
-views:        "35,896 "
+views:        "35,935 "
 accepted:     Accepted
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-25-Stop-cpu-from-overheating.md
 toc:          true
 navigation:   true

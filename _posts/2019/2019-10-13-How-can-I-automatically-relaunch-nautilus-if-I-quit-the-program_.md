@@ -10,9 +10,9 @@ created_date: 2019-10-13 00:31:10
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "708 "
+views:        "713 "
 accepted:     
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-How-can-I-automatically-relaunch-nautilus-if-I-quit-the-program_.md
 toc:          false
 navigation:   false

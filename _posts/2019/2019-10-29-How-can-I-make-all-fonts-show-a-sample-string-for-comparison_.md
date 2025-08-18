@@ -8,11 +8,11 @@ type:         Answer
 tags:         fonts
 created_date: 2019-10-29 01:25:19
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "1,978 "
+views:        "1,984 "
 accepted:     
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-29-How-can-I-make-all-fonts-show-a-sample-string-for-comparison_.md
 toc:          false
 navigation:   false

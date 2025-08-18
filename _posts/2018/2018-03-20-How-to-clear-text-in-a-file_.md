@@ -10,9 +10,9 @@ created_date: 2018-03-20 23:39:00
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "286,281 "
+views:        "286,455 "
 accepted:     
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-20-How-to-clear-text-in-a-file_.md
 toc:          false
 navigation:   false

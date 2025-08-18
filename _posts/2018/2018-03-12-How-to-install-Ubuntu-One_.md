@@ -10,9 +10,9 @@ created_date: 2018-03-12 19:01:01
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "117 "
+views:        "122 "
 accepted:     
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-How-to-install-Ubuntu-One_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-08-18 01:29:10
 edit_date:    2019-10-06 14:28:14
 votes:        "2 "
 favorites:    
-views:        "25,120 "
+views:        "25,187 "
 accepted:     
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-18-How-to-decrease-the-boot-time.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2025-02-01 22:46:15
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "969 "
+views:        "971 "
 accepted:     
-uploaded:     2025-08-10 20:14:13
+uploaded:     2025-08-18 11:20:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2025/2025-02-01-What-is-the-terminology-for-restoring-windows-after-a-shutdown-_reboot__.md
 toc:          false
 navigation:   false
