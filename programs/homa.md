@@ -21,6 +21,7 @@ It allows you to control the following devices from your computer:
 - Individually turn on/off above devices plus laptop display
 - Suspend computer and automatically power off all devices above
 - When resuming, automatically power on all devices above
+- YouTube Ad Mute and Skip
 
 ## Extra features
 
@@ -81,8 +82,8 @@ Click on the name and the dropdown menu options appear:
 {:.no_toc}
 
 Some options will be disabled out when they are not applicable. For example,
-the *Save Playlist* and *Close Playlist* options are disabled (greyed
-out) until a Playlist is opened.
+the *Discovery errors* option is disabled (greyed
+out) until at least one error is recorded.
 
 - ***Rediscover now*** - Rediscovery happens every minute but you can force
 immediate rediscovery with this option.
@@ -128,17 +129,21 @@ assumed only Bias lights are connected to the smart plugs.
 to control laptop display or reset Bluetooth you can use this option to
 "forget" the password. That said, it is automatically encrypted and
 reused on the next **HomA** restart so you don't have to reenter it.
-- ***Sony TV volume level*** - leads to submenu with options ***NORMAL***
-and ***QUIET***. Select **NORMAL** for 9 a.m. through 10 p.m. Select
-**QUIET** for 10 p.m. through 9 a.m. Automatically set on start up and
+- ***Sony TV volume level*** - leads to submenu with options ***Normal***
+and ***Quiet***. Select **Normal** for 9 a.m. through 10 p.m. Select
+**Quiet** for 10 p.m. through 9 a.m. Automatically set on start up and
 when resuming from suspend based on current hour of the day.
+- ***Configure YouTube Ads*** - Opens a new window that tracks mouse
+position and screen color. Press keyboard character to indicate start
+of progress bar for YouTube Ad or Video. Also to indicate Ad skip button
+white triangle and nearest non white pixel outside of triangle. 
 - ***Big Number Calculator*** - Calculator with units of measure
 for large numbers using **MB** (Megabytes), **GB** (Gigabytes),
 **TB** (Terabytes), etc.
 - ***Timer 600 seconds*** - Run a timer and display large digit countdown.
 Alarm sounds when timer ends. "600 seconds" changed in Preferences.
 - ***Color scheme*** - leads to submenu with options ***WhiteSmoke***,
-***LemonChiffon***, **NavajoWhite** and ***LightSalmon***. Changing
+***LemonChiffon***, ***NavajoWhite*** and ***LightSalmon***. Changing
 the color scheme switches between Network Devices Treeview and Sensors
 Treeview. Select button at bottom to change toggle Treeview back again.
 
