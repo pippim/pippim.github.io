@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,479 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:25:39
+uploaded:     2025-10-19 18:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_.md
 toc:          false
 navigation:   true

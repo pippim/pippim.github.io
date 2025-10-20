@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,461,217 "
 accepted:     
-uploaded:     2025-10-19 18:25:39
+uploaded:     2025-10-19 18:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-15-What-is-the-home-directory-on-Windows-Subsystem-for-Linux_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 I just needed to find `/etc/environment` using Ubuntu 16.04 looking into Windows 10 NTFS storage. I found it here:
 
-<!-- Language:all lang-bash -->
 
-``` 
+
+``` bash
 C:\Users\USER_NAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc\LocalState\rootfs\etc\environment
 ```
 
@@ -35,7 +35,7 @@ C:\Users\USER_NAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu16.04onWin
 
 From the Linux (Ubuntu 16.04) side the nomenclature would be:
 
-``` 
+``` bash
 $ sudo cat /mnt/c/Users/USER_NAME/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu16.04onWindows_79rhkp1fndgsc/LocalState/rootfs/etc/environment
 
 PATH="/mnt/e/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"

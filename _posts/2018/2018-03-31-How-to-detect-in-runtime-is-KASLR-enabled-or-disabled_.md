@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "14,856 "
 accepted:     
-uploaded:     2025-10-19 18:25:39
+uploaded:     2025-10-19 18:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-detect-in-runtime-is-KASLR-enabled-or-disabled_.md
 toc:          false
 navigation:   false

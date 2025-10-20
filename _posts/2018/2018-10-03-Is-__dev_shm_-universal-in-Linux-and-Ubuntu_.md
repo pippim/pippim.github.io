@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,260 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:25:39
+uploaded:     2025-10-19 18:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-03-Is-__dev_shm_-universal-in-Linux-and-Ubuntu_.md
 toc:          false
 navigation:   false

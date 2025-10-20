@@ -1565,8 +1565,18 @@ def check_code_block(ln):
         # Get "bash" inside of <!-- language-all: lang-bash -->
         # Store as language_used for inside of code block.
         try:  # 2025-10-19 First time error
-            language_used = ln.split(": ")[1]
+            # <!-- Language:all lang-bash -->
+            language_used = ln.split(":all ")[1]
         except IndexError:
+            try:
+                language_used = ln.split(": ")[1]
+            except IndexError:
+                # <!-- Language:all lang-bash -->
+                print('language_used = ln.split(": ")[1]')
+                dump(row)
+                return ln
+        except IndexError:
+            # <!-- Language:all lang-bash -->
             print('language_used = ln.split(": ")[1]')
             dump(row)
             return ln
