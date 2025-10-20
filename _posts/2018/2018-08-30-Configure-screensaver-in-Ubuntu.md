@@ -10,9 +10,9 @@ created_date: 2018-08-30 23:59:14
 edit_date:    2019-05-22 10:40:26
 votes:        "3 "
 favorites:    
-views:        "304,831 "
+views:        "306,982 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-30-Configure-screensaver-in-Ubuntu.md
 toc:          false
 navigation:   false

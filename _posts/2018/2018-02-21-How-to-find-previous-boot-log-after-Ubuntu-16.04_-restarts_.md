@@ -10,9 +10,9 @@ created_date: 2018-02-21 01:24:55
 edit_date:    2019-01-16 02:50:51
 votes:        "41 "
 favorites:    
-views:        "102,254 "
+views:        "105,175 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04_-restarts_.md
 toc:          false
 navigation:   true

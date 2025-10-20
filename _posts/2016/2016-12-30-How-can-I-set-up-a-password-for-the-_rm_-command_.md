@@ -10,9 +10,9 @@ created_date: 2016-12-30 02:32:38
 edit_date:    2017-03-05 18:08:55
 votes:        "5 "
 favorites:    
-views:        "7,196 "
+views:        "7,218 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-30-How-can-I-set-up-a-password-for-the-_rm_-command_.md
 toc:          false
 navigation:   false

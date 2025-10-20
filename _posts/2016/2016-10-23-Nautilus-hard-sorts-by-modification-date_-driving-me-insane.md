@@ -10,9 +10,9 @@ created_date: 2016-10-23 14:15:37
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "59 "
+views:        "61 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-Nautilus-hard-sorts-by-modification-date_-driving-me-insane.md
 toc:          false
 navigation:   false

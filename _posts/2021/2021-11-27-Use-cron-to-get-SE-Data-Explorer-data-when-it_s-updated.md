@@ -10,9 +10,9 @@ created_date: 2021-11-27 00:52:32
 edit_date:    2021-11-27 11:11:12
 votes:        "5 "
 favorites:    
-views:        "120 "
+views:        "121 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-11-27-Use-cron-to-get-SE-Data-Explorer-data-when-it_s-updated.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-08-19 20:36:39
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "2,633 "
+views:        "2,635 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Can-I-uninstall-Ubuntu-Software-Centre-from-18.04_.md
 toc:          false
 navigation:   false

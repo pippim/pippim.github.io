@@ -10,9 +10,9 @@ created_date: 2018-01-28 01:25:31
 edit_date:    2018-01-28 01:39:07
 votes:        "3 "
 favorites:    
-views:        "6,772 "
+views:        "6,813 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-28-KASLR-disabled_-could-not-find-suitable-E820-region!.md
 toc:          false
 navigation:   false

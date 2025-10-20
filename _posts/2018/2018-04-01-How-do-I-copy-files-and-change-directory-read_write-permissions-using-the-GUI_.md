@@ -10,9 +10,9 @@ created_date: 2018-04-01 02:59:56
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "463 "
+views:        "476 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-How-do-I-copy-files-and-change-directory-read_write-permissions-using-the-GUI_.md
 toc:          false
 navigation:   false

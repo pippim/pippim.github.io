@@ -10,9 +10,9 @@ created_date: 2024-08-05 19:37:15
 edit_date:    
 votes:        "11 "
 favorites:    
-views:        "338 "
+views:        "347 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-08-05-How-to-get-SE-sstatic-images-for-my-website.md
 toc:          false
 navigation:   false

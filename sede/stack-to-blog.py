@@ -1564,7 +1564,12 @@ def check_code_block(ln):
     if ln.lower().startswith("<!-- language"):
         # Get "bash" inside of <!-- language-all: lang-bash -->
         # Store as language_used for inside of code block.
-        language_used = ln.split(": ")[1]
+        try:  # 2025-10-19 First time error
+            language_used = ln.split(": ")[1]
+        except IndexError:
+            print('language_used = ln.split(": ")[1]')
+            dump(row)
+            return ln
         # Strip off " -->" at end of string
         language_used = language_used.lower()[:-4]
         if language_used.startswith("lang-"):

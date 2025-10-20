@@ -10,9 +10,9 @@ created_date: 2019-11-18 02:40:54
 edit_date:    2019-11-18 02:55:30
 votes:        "0 "
 favorites:    
-views:        "626 "
+views:        "631 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-18-Installing-programs-on-persistent-live-disk.md
 toc:          false
 navigation:   false

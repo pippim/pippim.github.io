@@ -10,9 +10,9 @@ created_date: 2018-12-11 02:01:41
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "12,415 "
+views:        "12,493 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-11-Purple-theme-for-_Bash-On-Ubuntu-On-Windows_-for-Windows-10.md
 toc:          false
 navigation:   false

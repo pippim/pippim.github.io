@@ -10,9 +10,9 @@ created_date: 2016-11-26 00:32:26
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "97,371 "
+views:        "97,930 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-Files-in-_etc_network_interfaces.d-ignored_-but-not-_etc_network_interfaces-itself.md
 toc:          false
 navigation:   false

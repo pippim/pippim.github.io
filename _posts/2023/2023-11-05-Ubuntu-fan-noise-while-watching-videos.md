@@ -10,9 +10,9 @@ created_date: 2023-11-05 21:36:38
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "741 "
+views:        "783 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2023/2023-11-05-Ubuntu-fan-noise-while-watching-videos.md
 toc:          false
 navigation:   false

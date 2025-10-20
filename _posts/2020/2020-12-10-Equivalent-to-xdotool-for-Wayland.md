@@ -8,11 +8,11 @@ type:         Answer
 tags:         scripts wayland xdotool
 created_date: 2020-12-10 12:00:19
 edit_date:    2022-09-07 19:05:23
-votes:        "14 "
+votes:        "15 "
 favorites:    
-views:        "16,971 "
+views:        "17,492 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-10-Equivalent-to-xdotool-for-Wayland.md
 toc:          false
 navigation:   false

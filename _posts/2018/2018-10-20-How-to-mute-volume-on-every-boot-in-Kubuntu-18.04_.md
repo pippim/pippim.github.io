@@ -10,9 +10,9 @@ created_date: 2018-10-20 17:28:42
 edit_date:    2018-10-21 13:53:23
 votes:        "2 "
 favorites:    
-views:        "228 "
+views:        "230 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-20-How-to-mute-volume-on-every-boot-in-Kubuntu-18.04_.md
 toc:          false
 navigation:   false

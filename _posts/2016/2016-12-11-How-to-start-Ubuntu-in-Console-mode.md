@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot 16.04 nvidia
 created_date: 2016-12-11 22:54:26
 edit_date:    2019-09-18 22:41:08
-votes:        "69 "
+votes:        "71 "
 favorites:    
-views:        "549,789 "
+views:        "554,271 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-to-start-Ubuntu-in-Console-mode.md
 toc:          false
 navigation:   false

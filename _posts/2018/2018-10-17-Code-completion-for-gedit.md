@@ -10,9 +10,9 @@ created_date: 2018-10-17 23:24:36
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "7,737 "
+views:        "7,788 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-17-Code-completion-for-gedit.md
 toc:          false
 navigation:   false

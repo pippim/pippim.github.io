@@ -10,9 +10,9 @@ created_date: 2019-11-04 11:56:44
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "30,016 "
+views:        "30,594 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-04-How-do-I-check-the-status-of-the-CMOS-battery_.md
 toc:          false
 navigation:   false

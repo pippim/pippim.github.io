@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot partitioning 20.04 grub2 uefi
 created_date: 2022-02-24 13:10:58
 edit_date:    
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "19,707 "
+views:        "20,349 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-24-stdin_-invalid-argument.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-07-09 23:38:56
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "7,525 "
+views:        "7,826 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-09-How-I-can-monitor-for-new-files-in-a-directory-and-drop-a-mail-if-files-are-not-added-every-30-mins_.md
 toc:          false
 navigation:   false

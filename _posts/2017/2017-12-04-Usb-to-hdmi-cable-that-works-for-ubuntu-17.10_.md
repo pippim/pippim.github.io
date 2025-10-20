@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,104 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-04-Usb-to-hdmi-cable-that-works-for-ubuntu-17.10_.md
 toc:          false
 navigation:   false

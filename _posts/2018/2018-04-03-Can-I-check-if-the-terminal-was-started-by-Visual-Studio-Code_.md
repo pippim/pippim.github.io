@@ -10,9 +10,9 @@ created_date: 2018-04-03 10:13:51
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "5,276 "
+views:        "5,372 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Can-I-check-if-the-terminal-was-started-by-Visual-Studio-Code_.md
 toc:          false
 navigation:   false

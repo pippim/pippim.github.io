@@ -8,11 +8,11 @@ type:         Answer
 tags:         sudo
 created_date: 2016-10-15 20:22:01
 edit_date:    2019-11-15 03:43:34
-votes:        "92 "
+votes:        "93 "
 favorites:    
-views:        "56,391 "
+views:        "57,020 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-Where-are-sudo_s-insults-stored_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-03-26 22:36:38
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "585 "
+views:        "592 "
 accepted:     Accepted
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Desktop-shortcut-to-Bash-script-crashes-and-burns.md
 toc:          false
 navigation:   false

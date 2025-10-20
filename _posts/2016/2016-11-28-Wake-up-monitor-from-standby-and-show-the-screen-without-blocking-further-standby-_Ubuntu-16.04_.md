@@ -10,9 +10,9 @@ created_date: 2016-11-28 20:47:02
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "8,051 "
+views:        "8,127 "
 accepted:     
-uploaded:     2025-08-18 11:20:17
+uploaded:     2025-10-19 18:25:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Wake-up-monitor-from-standby-and-show-the-screen-without-blocking-further-standby-_Ubuntu-16.04_.md
 toc:          false
 navigation:   false
