@@ -10,9 +10,9 @@ created_date: 2016-10-03 10:57:43
 edit_date:    2020-06-12 14:37:07
 votes:        "158 "
 favorites:    
-views:        "202,712 "
+views:        "202,933 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Possible-missing-firmware-_lib_firmware_i915.md
 toc:          true
 navigation:   true

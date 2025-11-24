@@ -10,9 +10,9 @@ created_date: 2019-07-03 22:03:12
 edit_date:    2019-08-23 22:35:43
 votes:        "6 "
 favorites:    
-views:        "169,298 "
+views:        "170,443 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-03-How-can-I-search-within-a-manpage_.md
 toc:          false
 navigation:   false

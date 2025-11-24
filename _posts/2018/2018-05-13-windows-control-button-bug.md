@@ -10,9 +10,9 @@ created_date: 2018-05-13 16:59:23
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "299 "
+views:        "303 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-windows-control-button-bug.md
 toc:          false
 navigation:   false

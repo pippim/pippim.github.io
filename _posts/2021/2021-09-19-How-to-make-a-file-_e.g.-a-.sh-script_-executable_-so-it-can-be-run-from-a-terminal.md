@@ -10,9 +10,9 @@ created_date: 2021-09-19 15:22:34
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,084,130 "
+views:        "2,091,024 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-09-19-How-to-make-a-file-_e.g.-a-.sh-script_-executable_-so-it-can-be-run-from-a-terminal.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-04-29 16:05:46
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "35,095 "
+views:        "35,205 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-how-do-I-fix-a-wrong-UUID-in-grub.cfg_.md
 toc:          false
 navigation:   false

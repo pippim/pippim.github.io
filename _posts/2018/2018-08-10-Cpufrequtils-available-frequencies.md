@@ -10,9 +10,9 @@ created_date: 2018-08-10 23:32:56
 edit_date:    2018-08-19 18:32:36
 votes:        "3 "
 favorites:    
-views:        "3,095 "
+views:        "3,119 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-10-Cpufrequtils-available-frequencies.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-10-05 23:16:40
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,486 "
+views:        "1,493 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-05-Nautilus-sidebar-menue_mounts-cannot-unmount.md
 toc:          false
 navigation:   false

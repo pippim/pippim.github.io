@@ -8,11 +8,11 @@ type:         Answer
 tags:         networking wifi raspbian
 created_date: 2019-07-13 21:07:07
 edit_date:    
-votes:        "11 "
+votes:        "12 "
 favorites:    
-views:        "153,819 "
+views:        "154,859 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Get-names-of-devices-on-the-network.md
 toc:          false
 navigation:   false

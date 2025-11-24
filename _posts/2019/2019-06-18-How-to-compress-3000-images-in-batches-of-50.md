@@ -10,9 +10,9 @@ created_date: 2019-06-18 11:32:51
 edit_date:    2019-06-18 23:00:33
 votes:        "1 "
 favorites:    
-views:        "386 "
+views:        "390 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-18-How-to-compress-3000-images-in-batches-of-50.md
 toc:          false
 navigation:   false

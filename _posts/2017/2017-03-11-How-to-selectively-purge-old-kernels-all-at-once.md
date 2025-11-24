@@ -10,9 +10,9 @@ created_date: 2017-03-11 19:05:58
 edit_date:    2017-08-06 02:24:19
 votes:        "6 "
 favorites:    
-views:        "8,902 "
+views:        "8,931 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once.md
 toc:          true
 navigation:   true

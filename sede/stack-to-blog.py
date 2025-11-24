@@ -1565,6 +1565,8 @@ def check_code_block(ln):
         # Get "bash" inside of <!-- language-all: lang-bash -->
         # Store as language_used for inside of code block.
         try:  # 2025-10-19 First time error
+            # posts/2019/2019-04-15-
+            #   What-is-the-home-directory-on-Windows-Subsystem-for-Linux_.md
             # <!-- Language:all lang-bash -->
             language_used = ln.split(":all ")[1]
         except IndexError:
@@ -1575,11 +1577,7 @@ def check_code_block(ln):
                 print('language_used = ln.split(": ")[1]')
                 dump(row)
                 return ln
-        except IndexError:
-            # <!-- Language:all lang-bash -->
-            print('language_used = ln.split(": ")[1]')
-            dump(row)
-            return ln
+
         # Strip off " -->" at end of string
         language_used = language_used.lower()[:-4]
         if language_used.startswith("lang-"):

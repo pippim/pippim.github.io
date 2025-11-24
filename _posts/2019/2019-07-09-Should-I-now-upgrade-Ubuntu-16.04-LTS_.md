@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "238 "
 accepted:     
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-09-Should-I-now-upgrade-Ubuntu-16.04-LTS_.md
 toc:          false
 navigation:   false

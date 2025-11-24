@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1029041
 type:         Answer
 tags:         mount
 created_date: 2018-04-28 03:00:41
-edit_date:    2020-06-12 14:37:07
+edit_date:    2025-10-23 11:22:33
 votes:        "67 "
 favorites:    
-views:        "220,888 "
+views:        "222,744 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-28-How-to-manually-mount-a-partition_.md
 toc:          false
 navigation:   false
@@ -69,6 +69,11 @@ $ sudo mount -t auto -v /dev/nvme0n1p8 /mnt/Ubuntu18.04
 ```
 
 Notice we prepend `/dev/` to the names provided by `lsblk` above.
+The options used are 
+
+ - `-t auto` (short for `--types auto`): Tell `mount` to try guess the desired type.
+ - `-v` (short for `--verbose`): Print what is being done. 
+
 
 Now let's see what we've just mounted:
 

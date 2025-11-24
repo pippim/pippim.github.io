@@ -10,9 +10,9 @@ created_date: 2016-11-07 09:43:10
 edit_date:    2016-11-07 11:41:29
 votes:        "6 "
 favorites:    
-views:        "2,065 "
+views:        "2,070 "
 accepted:     Accepted
-uploaded:     2025-10-19 18:37:33
+uploaded:     2025-11-23 17:42:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-cron-launching-but-not-executing-script.md
 toc:          false
 navigation:   false
