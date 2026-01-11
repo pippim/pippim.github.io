@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,855 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-08-Boot-options-not-appearing-after-Esc-and-all-F__-keys-held-when-powering-up-laptop.md
 toc:          false
 navigation:   false

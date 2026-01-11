@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "833 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-10-How-can-I-create-new-_gksu_-command-based-on-pkexec_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "176,024 "
 accepted:     
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Samsung-TV-_Mirror-Screen_.md
 toc:          false
 navigation:   false

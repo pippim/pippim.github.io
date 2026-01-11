@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "24,889 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-Is-it-still-bad-to-use-swap-on-a-modern-SSD_.md
 toc:          false
 navigation:   false

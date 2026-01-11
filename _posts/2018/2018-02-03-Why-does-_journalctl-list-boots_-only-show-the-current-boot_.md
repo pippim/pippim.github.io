@@ -12,7 +12,7 @@ votes:        "20 "
 favorites:    
 views:        "25,113 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-03-Why-does-_journalctl-list-boots_-only-show-the-current-boot_.md
 toc:          false
 navigation:   false

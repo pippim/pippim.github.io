@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "30 "
 accepted:     
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2026/2026-01-04-Is-Display-Scaling-feature-on-Ubuntu-also-effective-for-videos_.md
 toc:          false
 navigation:   false

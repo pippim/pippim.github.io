@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,432 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-30-Cannot-suspend-with-NVMe-M.2-SSD.md
 toc:          false
 navigation:   false

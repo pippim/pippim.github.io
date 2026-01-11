@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "62,967 "
 accepted:     
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-03-16-What-does-the-tulpn-option-mean-for-netstat_.md
 toc:          false
 navigation:   false

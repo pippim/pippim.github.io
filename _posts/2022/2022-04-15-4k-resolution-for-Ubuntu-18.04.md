@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,142 "
 accepted:     
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-04-15-4k-resolution-for-Ubuntu-18.04.md
 toc:          false
 navigation:   false

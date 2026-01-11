@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,870 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-04-How-to-fix-screen-overlap-and-top-left-zoom-of-HD-external-monitors-while-using-4k-primary-Linux-Ubuntu-20_.md
 toc:          false
 navigation:   false

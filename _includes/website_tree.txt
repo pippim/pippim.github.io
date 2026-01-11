@@ -94,9 +94,8 @@
 │   ├── 2022 [14 entries suppressed by massage_tree.sh]
 │   ├── 2023 [3 entries suppressed by massage_tree.sh]
 │   ├── 2024 [8 entries suppressed by massage_tree.sh]
-│   └── 2025 [5 entries suppressed by massage_tree.sh]
-│   └── 2026
-│       └── 2026-01-04-Is-Display-Scaling-feature-on-Ubuntu-also-effective-for-videos_.md
+│   ├── 2025 [5 entries suppressed by massage_tree.sh]
+│   └── 2026 [1 entries suppressed by massage_tree.sh]
 ├── programs
 │   ├── homa.md
 │   ├── hyperlink.md

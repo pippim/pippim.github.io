@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,919 "
 accepted:     
-uploaded:     2026-01-11 15:29:19
+uploaded:     2026-01-11 15:47:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-07-Use-Intel-RST-while-dual-booting-Ubuntu_.md
 toc:          false
 navigation:   false
