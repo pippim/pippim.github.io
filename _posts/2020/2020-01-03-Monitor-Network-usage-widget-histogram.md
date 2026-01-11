@@ -10,9 +10,9 @@ created_date: 2020-01-03 18:20:06
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "2,486 "
+views:        "2,543 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-03-Monitor-Network-usage-widget-histogram.md
 toc:          false
 navigation:   false

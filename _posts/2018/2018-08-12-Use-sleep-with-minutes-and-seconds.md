@@ -10,9 +10,9 @@ created_date: 2018-08-12 04:53:30
 edit_date:    2018-08-12 23:58:58
 votes:        "10 "
 favorites:    
-views:        "8,102 "
+views:        "8,317 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Use-sleep-with-minutes-and-seconds.md
 toc:          false
 navigation:   false

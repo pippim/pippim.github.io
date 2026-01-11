@@ -10,9 +10,9 @@ created_date: 2019-06-04 02:20:04
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "6,968 "
+views:        "7,105 "
 accepted:     Accepted
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-04-How-can-I-double-the-tty-font-size-on-a-3840x2160-monitor_.md
 toc:          false
 navigation:   false

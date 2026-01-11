@@ -10,9 +10,9 @@ created_date: 2019-07-17 17:19:19
 edit_date:    2019-07-18 00:35:05
 votes:        "2 "
 favorites:    
-views:        "3,942 "
+views:        "3,995 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-17-Can-we-disable-cron-services-in-desktop_.md
 toc:          false
 navigation:   false

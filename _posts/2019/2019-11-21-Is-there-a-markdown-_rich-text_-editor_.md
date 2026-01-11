@@ -8,11 +8,11 @@ type:         Answer
 tags:         libreoffice automation text-editor github markdown
 created_date: 2019-11-21 11:50:10
 edit_date:    2019-11-23 17:18:31
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "17,792 "
+views:        "17,976 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-21-Is-there-a-markdown-_rich-text_-editor_.md
 toc:          false
 navigation:   false

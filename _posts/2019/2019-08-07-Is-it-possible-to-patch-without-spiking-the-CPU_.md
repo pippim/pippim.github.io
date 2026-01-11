@@ -10,9 +10,9 @@ created_date: 2019-08-07 23:18:13
 edit_date:    2019-08-08 00:05:07
 votes:        "3 "
 favorites:    
-views:        "362 "
+views:        "376 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-07-Is-it-possible-to-patch-without-spiking-the-CPU_.md
 toc:          false
 navigation:   false

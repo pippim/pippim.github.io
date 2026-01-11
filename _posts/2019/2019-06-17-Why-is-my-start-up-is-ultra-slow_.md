@@ -10,9 +10,9 @@ created_date: 2019-06-17 17:13:14
 edit_date:    2019-06-17 17:20:42
 votes:        "2 "
 favorites:    
-views:        "2,109 "
+views:        "2,131 "
 accepted:     Accepted
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-17-Why-is-my-start-up-is-ultra-slow_.md
 toc:          false
 navigation:   false

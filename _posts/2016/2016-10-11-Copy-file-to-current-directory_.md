@@ -10,9 +10,9 @@ created_date: 2016-10-11 12:15:46
 edit_date:    2016-10-11 22:54:48
 votes:        "16 "
 favorites:    
-views:        "327,477 "
+views:        "327,794 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-11-Copy-file-to-current-directory_.md
 toc:          false
 navigation:   false

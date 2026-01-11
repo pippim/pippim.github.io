@@ -10,9 +10,9 @@ created_date: 2019-07-21 16:48:43
 edit_date:    2019-07-22 15:35:47
 votes:        "1 "
 favorites:    
-views:        "1,174 "
+views:        "1,195 "
 accepted:     Accepted
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Bluetooth-does-not-turn-on.md
 toc:          false
 navigation:   false

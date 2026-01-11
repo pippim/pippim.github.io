@@ -10,9 +10,9 @@ created_date: 2016-11-07 01:35:58
 edit_date:    2016-12-04 16:52:08
 votes:        "2 "
 favorites:    
-views:        "384 "
+views:        "391 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-To-Make-.RTF-Files-Non-Executable-in-Ubuntu-16.04.md
 toc:          false
 navigation:   false

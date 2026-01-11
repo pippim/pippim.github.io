@@ -10,9 +10,9 @@ created_date: 2018-08-15 10:47:00
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "19,268 "
+views:        "19,462 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-15-AlienFX-on-Ubuntu_.md
 toc:          false
 navigation:   false

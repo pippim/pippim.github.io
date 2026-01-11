@@ -10,9 +10,9 @@ created_date: 2018-05-12 03:42:00
 edit_date:    2018-05-12 20:27:51
 votes:        "2 "
 favorites:    
-views:        "48 "
+views:        "60 "
 accepted:     Accepted
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Can-I-report-about-bug-in-system-that-I-don_t-use_.md
 toc:          false
 navigation:   false

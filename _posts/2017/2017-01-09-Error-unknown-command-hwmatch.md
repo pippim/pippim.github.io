@@ -10,9 +10,9 @@ created_date: 2017-01-09 02:25:25
 edit_date:    2017-03-20 10:18:11
 votes:        "5 "
 favorites:    
-views:        "28,887 "
+views:        "28,944 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-09-Error-unknown-command-hwmatch.md
 toc:          false
 navigation:   false

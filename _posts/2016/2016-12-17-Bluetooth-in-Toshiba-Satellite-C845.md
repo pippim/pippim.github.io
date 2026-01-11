@@ -10,9 +10,9 @@ created_date: 2016-12-17 12:25:38
 edit_date:    2017-04-13 12:23:41
 votes:        "3 "
 favorites:    
-views:        "1,873 "
+views:        "1,933 "
 accepted:     
-uploaded:     2025-11-23 17:42:48
+uploaded:     2026-01-11 15:29:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-17-Bluetooth-in-Toshiba-Satellite-C845.md
 toc:          false
 navigation:   false
