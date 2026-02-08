@@ -8,11 +8,11 @@ type:         Answer
 tags:         cpu conky
 created_date: 2017-07-13 00:35:40
 edit_date:    
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "799,504 "
+views:        "801,889 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-13-Any-way-to-check-the-clock-speed-of-my-processor_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-09-30 19:35:53
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "8,404 "
+views:        "8,417 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-30-Could-not-find-valid-key-in-user-session-keyring-for-sig-specified-in-mount-option-after-upgrade-from-16.04-to-18.04.md
 toc:          false
 navigation:   false

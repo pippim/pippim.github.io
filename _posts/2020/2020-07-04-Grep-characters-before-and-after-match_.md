@@ -10,9 +10,9 @@ created_date: 2020-07-04 02:21:41
 edit_date:    2021-09-04 07:23:11
 votes:        "3 "
 favorites:    
-views:        "327,754 "
+views:        "328,450 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-04-Grep-characters-before-and-after-match_.md
 toc:          false
 navigation:   false

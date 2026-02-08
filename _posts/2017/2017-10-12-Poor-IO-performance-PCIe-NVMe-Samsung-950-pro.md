@@ -10,9 +10,9 @@ created_date: 2017-10-12 02:39:22
 edit_date:    2018-10-08 19:52:57
 votes:        "3 "
 favorites:    
-views:        "39,702 "
+views:        "39,720 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-12-Poor-IO-performance-PCIe-NVMe-Samsung-950-pro.md
 toc:          false
 navigation:   false

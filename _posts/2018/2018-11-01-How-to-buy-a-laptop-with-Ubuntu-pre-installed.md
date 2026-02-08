@@ -10,9 +10,9 @@ created_date: 2018-11-01 00:29:06
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,681 "
+views:        "1,697 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-01-How-to-buy-a-laptop-with-Ubuntu-pre-installed.md
 toc:          false
 navigation:   false

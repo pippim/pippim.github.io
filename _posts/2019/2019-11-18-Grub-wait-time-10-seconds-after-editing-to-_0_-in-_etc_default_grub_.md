@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot dual-boot grub2 15.04
 created_date: 2019-11-18 00:42:29
 edit_date:    
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "12,731 "
+views:        "12,840 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-18-Grub-wait-time-10-seconds-after-editing-to-_0_-in-_etc_default_grub_.md
 toc:          false
 navigation:   false

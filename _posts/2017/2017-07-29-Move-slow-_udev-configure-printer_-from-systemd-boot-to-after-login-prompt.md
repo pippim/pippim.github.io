@@ -10,9 +10,9 @@ created_date: 2017-07-29 18:02:33
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "958 "
+views:        "961 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-29-Move-slow-_udev-configure-printer_-from-systemd-boot-to-after-login-prompt.md
 toc:          false
 navigation:   false

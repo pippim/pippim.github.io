@@ -209,6 +209,7 @@ vala
 vcl
 velocity
 verilog
+veryl
 vhdl
 viml
 vb

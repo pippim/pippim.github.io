@@ -10,9 +10,9 @@ created_date: 2018-12-07 21:12:04
 edit_date:    2023-09-08 06:57:08
 votes:        "9 "
 favorites:    
-views:        "1,069 "
+views:        "1,076 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Big-Number-Calculator-_human-readable-format_.md
 toc:          false
 navigation:   true

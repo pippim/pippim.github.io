@@ -10,9 +10,9 @@ created_date: 2019-10-05 00:03:51
 edit_date:    2020-06-12 14:37:07
 votes:        "0 "
 favorites:    
-views:        "3,862 "
+views:        "3,887 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-05-Pause-music-when-bluetooth-connection-drops.md
 toc:          false
 navigation:   false

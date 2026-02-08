@@ -10,9 +10,9 @@ created_date: 2018-04-14 17:44:41
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "9,064 "
+views:        "9,130 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-14-Is-it-possible-to-show-ip-address-on-top-bar-near-the-time_.md
 toc:          false
 navigation:   false

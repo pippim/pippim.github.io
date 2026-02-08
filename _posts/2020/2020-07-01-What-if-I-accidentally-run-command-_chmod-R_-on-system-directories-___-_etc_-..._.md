@@ -10,9 +10,9 @@ created_date: 2020-07-01 01:48:53
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "65,039 "
+views:        "65,097 "
 accepted:     
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-01-What-if-I-accidentally-run-command-_chmod-R_-on-system-directories-___-_etc_-..._.md
 toc:          false
 navigation:   false

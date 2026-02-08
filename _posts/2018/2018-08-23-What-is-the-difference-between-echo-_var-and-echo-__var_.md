@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash
 created_date: 2018-08-23 23:56:06
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "5,733 "
+views:        "5,750 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-is-the-difference-between-echo-_var-and-echo-__var_.md
 toc:          false
 navigation:   false

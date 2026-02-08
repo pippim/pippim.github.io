@@ -10,9 +10,9 @@ created_date: 2017-03-19 01:10:27
 edit_date:    2024-09-30 16:06:18
 votes:        "8 "
 favorites:    
-views:        "8,069 "
+views:        "8,115 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true

@@ -10,9 +10,9 @@ created_date: 2016-12-15 22:18:40
 edit_date:    2016-12-21 03:11:58
 votes:        "4 "
 favorites:    
-views:        "1,628 "
+views:        "1,631 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-gedit-put-BOLD-text-with-Yellow-Background-on-a-script-comment-line.md
 toc:          false
 navigation:   false

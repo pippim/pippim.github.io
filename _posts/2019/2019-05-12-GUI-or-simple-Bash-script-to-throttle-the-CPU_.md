@@ -10,9 +10,9 @@ created_date: 2019-05-12 17:09:10
 edit_date:    2020-06-12 14:37:07
 votes:        "10 "
 favorites:    
-views:        "13,472 "
+views:        "13,500 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_.md
 toc:          false
 navigation:   true

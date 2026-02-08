@@ -10,9 +10,9 @@ created_date: 2019-12-23 20:43:29
 edit_date:    2025-06-09 00:37:12
 votes:        "12 "
 favorites:    
-views:        "23,530 "
+views:        "23,603 "
 accepted:     Accepted
-uploaded:     2026-01-11 15:47:25
+uploaded:     2026-02-08 09:04:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-23-Bash-How-to-detect-if-a-variable-is-more-than-a-certain-amount-of-characters.md
 toc:          false
 navigation:   false
