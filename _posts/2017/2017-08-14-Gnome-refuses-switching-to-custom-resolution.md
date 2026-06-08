@@ -10,9 +10,9 @@ created_date: 2017-08-14 01:12:41
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "1,195 "
+views:        "1,220 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-14-Gnome-refuses-switching-to-custom-resolution.md
 toc:          false
 navigation:   false

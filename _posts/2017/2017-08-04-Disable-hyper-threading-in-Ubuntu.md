@@ -10,9 +10,9 @@ created_date: 2017-08-04 03:30:27
 edit_date:    2021-11-15 11:54:31
 votes:        "12 "
 favorites:    
-views:        "36,434 "
+views:        "36,979 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-04-Disable-hyper-threading-in-Ubuntu.md
 toc:          true
 navigation:   true

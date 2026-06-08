@@ -8,11 +8,11 @@ type:         Answer
 tags:         display laptop brightness backlight eyesome conky multi-timer
 created_date: 2017-03-19 01:10:27
 edit_date:    2024-09-30 16:06:18
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "8,115 "
+views:        "8,268 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true

@@ -10,9 +10,9 @@ created_date: 2018-05-01 00:24:37
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "2,240 "
+views:        "2,285 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Set-custom-names-for-vmlinuz-and-initrd-so-multiple-distros-can-share-boot-directory.md
 toc:          false
 navigation:   false

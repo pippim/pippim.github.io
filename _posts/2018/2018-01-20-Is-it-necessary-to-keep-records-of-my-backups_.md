@@ -10,9 +10,9 @@ created_date: 2018-01-20 19:33:24
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "162 "
+views:        "168 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-20-Is-it-necessary-to-keep-records-of-my-backups_.md
 toc:          false
 navigation:   false

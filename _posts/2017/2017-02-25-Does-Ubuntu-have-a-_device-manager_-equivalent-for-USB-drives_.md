@@ -10,9 +10,9 @@ created_date: 2017-02-25 23:02:23
 edit_date:    2017-05-26 17:20:04
 votes:        "74 "
 favorites:    
-views:        "246,718 "
+views:        "249,111 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-Does-Ubuntu-have-a-_device-manager_-equivalent-for-USB-drives_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-01-19 01:55:22
 edit_date:    2018-01-19 02:02:05
 votes:        "2 "
 favorites:    
-views:        "1,462 "
+views:        "1,476 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-19-Upgrade-from-17.04-to-17.10.md
 toc:          false
 navigation:   false

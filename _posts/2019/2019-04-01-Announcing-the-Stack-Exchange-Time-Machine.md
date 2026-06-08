@@ -10,9 +10,9 @@ created_date: 2019-04-01 23:09:51
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "67,268 "
+views:        "67,380 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-01-Announcing-the-Stack-Exchange-Time-Machine.md
 toc:          false
 navigation:   false

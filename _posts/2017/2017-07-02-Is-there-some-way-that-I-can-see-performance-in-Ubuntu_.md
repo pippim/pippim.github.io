@@ -10,9 +10,9 @@ created_date: 2017-07-02 23:42:59
 edit_date:    2017-07-03 00:11:57
 votes:        "5 "
 favorites:    
-views:        "1,063 "
+views:        "1,091 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-02-Is-there-some-way-that-I-can-see-performance-in-Ubuntu_.md
 toc:          false
 navigation:   false

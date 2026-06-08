@@ -10,9 +10,9 @@ created_date: 2018-02-25 15:49:05
 edit_date:    2018-02-25 17:28:45
 votes:        "4 "
 favorites:    
-views:        "3,361 "
+views:        "3,403 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-What-is-the-difference-between-graphics-drivers-in-the-kernel_-and-graphics-drivers-for-Xorg_.md
 toc:          false
 navigation:   false

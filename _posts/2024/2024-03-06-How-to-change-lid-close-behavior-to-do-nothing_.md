@@ -8,11 +8,11 @@ type:         Answer
 tags:         suspend power-management laptop
 created_date: 2024-03-06 01:29:55
 edit_date:    
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "13,874 "
+views:        "16,322 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-03-06-How-to-change-lid-close-behavior-to-do-nothing_.md
 toc:          false
 navigation:   false

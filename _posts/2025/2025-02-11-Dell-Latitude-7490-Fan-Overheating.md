@@ -10,9 +10,9 @@ created_date: 2025-02-11 21:54:49
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "245 "
+views:        "295 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2025/2025-02-11-Dell-Latitude-7490-Fan-Overheating.md
 toc:          false
 navigation:   false

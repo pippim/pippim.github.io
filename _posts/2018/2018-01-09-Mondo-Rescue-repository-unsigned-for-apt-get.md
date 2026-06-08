@@ -10,9 +10,9 @@ created_date: 2018-01-09 12:14:43
 edit_date:    2018-01-10 00:33:49
 votes:        "2 "
 favorites:    
-views:        "8,183 "
+views:        "8,205 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-09-Mondo-Rescue-repository-unsigned-for-apt-get.md
 toc:          false
 navigation:   true

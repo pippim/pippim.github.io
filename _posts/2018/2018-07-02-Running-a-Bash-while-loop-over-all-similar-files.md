@@ -10,9 +10,9 @@ created_date: 2018-07-02 19:55:00
 edit_date:    2018-07-03 10:12:57
 votes:        "6 "
 favorites:    
-views:        "6,430 "
+views:        "6,520 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-02-Running-a-Bash-while-loop-over-all-similar-files.md
 toc:          false
 navigation:   false

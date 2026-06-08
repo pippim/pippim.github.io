@@ -10,9 +10,9 @@ created_date: 2017-03-24 23:36:05
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "2,176 "
+views:        "2,201 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-24-Manage-Keyboard-backlight-on-dual-boot-system.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line text-processing
 created_date: 2024-10-22 02:06:45
 edit_date:    2025-02-21 01:54:49
-votes:        "4 "
+votes:        "3 "
 favorites:    
-views:        "1,224 "
+views:        "1,339 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-10-22-Quickly-total-and-average-a-column-of-numbers-in-terminal.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-09-11 04:03:18
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "59,251 "
+views:        "59,338 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-How-do-you-set-scaling-for-a-high-dpi-monitor-and-low-dpi-monitor-independently_.md
 toc:          false
 navigation:   false

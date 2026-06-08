@@ -10,9 +10,9 @@ created_date: 2021-01-27 11:34:13
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "11,394 "
+views:        "11,493 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-27-Install-NDiSWrapper-in-Ubuntu-20.04.md
 toc:          false
 navigation:   false

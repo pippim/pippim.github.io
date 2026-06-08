@@ -10,9 +10,9 @@ created_date: 2019-11-25 12:26:14
 edit_date:    
 votes:        "21 "
 favorites:    
-views:        "30,453 "
+views:        "31,492 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-SMART-data-self-test-is-greyed-out-in-Disks_.md
 toc:          false
 navigation:   false

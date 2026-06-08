@@ -10,9 +10,9 @@ created_date: 2019-04-28 15:45:07
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "437,187 "
+views:        "442,806 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-How-to-back-up-my-entire-system_.md
 toc:          false
 navigation:   false

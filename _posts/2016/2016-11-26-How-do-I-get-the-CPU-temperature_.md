@@ -10,9 +10,9 @@ created_date: 2016-11-26 22:15:04
 edit_date:    2018-10-15 10:41:04
 votes:        "173 "
 favorites:    
-views:        "2,053,558 "
+views:        "2,081,075 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-I-get-the-CPU-temperature_.md
 toc:          false
 navigation:   false

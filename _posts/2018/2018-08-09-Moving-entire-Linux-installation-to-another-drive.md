@@ -10,9 +10,9 @@ created_date: 2018-08-09 23:26:25
 edit_date:    
 votes:        "9 "
 favorites:    
-views:        "397,339 "
+views:        "404,344 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-09-Moving-entire-Linux-installation-to-another-drive.md
 toc:          false
 navigation:   false

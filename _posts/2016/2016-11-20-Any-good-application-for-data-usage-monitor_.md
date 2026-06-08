@@ -10,9 +10,9 @@ created_date: 2016-11-20 22:49:02
 edit_date:    2018-01-13 16:40:21
 votes:        "12 "
 favorites:    
-views:        "44,222 "
+views:        "44,398 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-20-Any-good-application-for-data-usage-monitor_.md
 toc:          false
 navigation:   true

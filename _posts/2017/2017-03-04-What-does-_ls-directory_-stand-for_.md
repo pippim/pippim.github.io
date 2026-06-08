@@ -10,9 +10,9 @@ created_date: 2017-03-04 17:40:42
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "6,542 "
+views:        "6,643 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-04-What-does-_ls-directory_-stand-for_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-12-30 17:18:04
 edit_date:    2018-12-30 17:20:41
 votes:        "2 "
 favorites:    
-views:        "592 "
+views:        "606 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-30-Cronjob-not-executing_-but-command-works.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-06-16 18:58:29
 edit_date:    2019-12-08 14:12:41
 votes:        "7 "
 favorites:    
-views:        "6,730 "
+views:        "6,838 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-16-How-to-make-calendar-points-to-Sunday-as-first-day-of-the-week-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

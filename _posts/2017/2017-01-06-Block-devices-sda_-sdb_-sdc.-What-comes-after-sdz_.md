@@ -10,9 +10,9 @@ created_date: 2017-01-06 11:53:34
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "12,216 "
+views:        "12,386 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-06-Block-devices-sda_-sdb_-sdc.-What-comes-after-sdz_.md
 toc:          false
 navigation:   false

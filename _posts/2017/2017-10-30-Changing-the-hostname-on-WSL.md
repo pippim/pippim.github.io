@@ -10,9 +10,9 @@ created_date: 2017-10-30 03:06:11
 edit_date:    2017-11-24 14:43:32
 votes:        "26 "
 favorites:    
-views:        "67,206 "
+views:        "68,308 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-30-Changing-the-hostname-on-WSL.md
 toc:          false
 navigation:   false

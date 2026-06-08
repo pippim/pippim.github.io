@@ -10,9 +10,9 @@ created_date: 2019-07-01 00:14:36
 edit_date:    2020-06-12 14:37:07
 votes:        "12 "
 favorites:    
-views:        "1,826 "
+views:        "1,836 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turn-off-all-monitors-while-watching-VLC-media-on-TV.md
 toc:          false
 navigation:   true

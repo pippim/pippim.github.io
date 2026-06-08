@@ -10,9 +10,9 @@ created_date: 2016-09-05 02:26:03
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "12,792 "
+views:        "12,944 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Why-would-I-use-Wget-instead-of-a-browser_.md
 toc:          false
 navigation:   false

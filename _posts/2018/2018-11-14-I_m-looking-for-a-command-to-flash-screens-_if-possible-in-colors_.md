@@ -10,9 +10,9 @@ created_date: 2018-11-14 11:49:42
 edit_date:    2018-11-16 01:15:58
 votes:        "4 "
 favorites:    
-views:        "3,121 "
+views:        "3,169 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-I_m-looking-for-a-command-to-flash-screens-_if-possible-in-colors_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-11-20 01:16:40
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "22,652 "
+views:        "22,982 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-20-How-to-check-is-printer-on-_-offline-with-CUPS_.md
 toc:          false
 navigation:   false

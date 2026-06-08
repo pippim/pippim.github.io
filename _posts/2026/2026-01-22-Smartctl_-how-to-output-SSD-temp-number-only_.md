@@ -10,9 +10,9 @@ created_date: 2026-01-22 00:01:09
 edit_date:    2026-01-22 00:23:23
 votes:        "8 "
 favorites:    
-views:        "677 "
+views:        "818 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2026/2026-01-22-Smartctl_-how-to-output-SSD-temp-number-only_.md
 toc:          false
 navigation:   false

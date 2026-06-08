@@ -10,9 +10,9 @@ created_date: 2017-01-01 19:28:46
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "497 "
+views:        "500 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-01-Reformat-data-only-drive-from-NTFS-to-whatever-Linux-likes_.md
 toc:          false
 navigation:   false

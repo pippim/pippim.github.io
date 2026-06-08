@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-installation firefox deb
 created_date: 2024-02-01 03:05:17
 edit_date:    2024-08-08 23:52:22
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "57,077 "
+views:        "61,743 "
 accepted:     Accepted
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-02-01-How-to-install-Firefox-directly-from-Mozilla-with-_apt__.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-07-27 19:31:54
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "568,134 "
+views:        "577,130 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-How-can-I-boot-with-an-older-kernel-version_.md
 toc:          false
 navigation:   false

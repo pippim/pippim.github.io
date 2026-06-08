@@ -10,9 +10,9 @@ created_date: 2018-01-14 03:14:21
 edit_date:    2020-06-11 14:16:50
 votes:        "4 "
 favorites:    
-views:        "2,335 "
+views:        "2,378 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-14-Which-is-better_-High-CPU-_-with-Low-Frequency-or-the-opposite_.md
 toc:          false
 navigation:   false

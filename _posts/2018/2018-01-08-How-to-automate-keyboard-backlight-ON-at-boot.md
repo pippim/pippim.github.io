@@ -10,9 +10,9 @@ created_date: 2018-01-08 03:41:42
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "5,747 "
+views:        "5,790 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-08-How-to-automate-keyboard-backlight-ON-at-boot.md
 toc:          false
 navigation:   false

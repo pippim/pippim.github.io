@@ -10,9 +10,9 @@ created_date: 2019-07-24 15:58:05
 edit_date:    2019-08-24 21:47:20
 votes:        "6 "
 favorites:    
-views:        "34,285 "
+views:        "35,868 "
 accepted:     
-uploaded:     2026-02-08 09:04:24
+uploaded:     2026-06-08 06:28:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-do-I-edit-configuration-files_.md
 toc:          false
 navigation:   false
