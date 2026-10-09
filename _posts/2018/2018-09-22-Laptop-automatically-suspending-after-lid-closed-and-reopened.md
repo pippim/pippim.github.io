@@ -10,9 +10,9 @@ created_date: 2018-09-22 01:52:30
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,941 "
+views:        "1,980 "
 accepted:     Accepted
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-22-Laptop-automatically-suspending-after-lid-closed-and-reopened.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-12-17 13:44:03
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "11,963 "
+views:        "12,275 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-17-How-can-I-protect-my-OLED-screen-from-burn-in_.md
 toc:          false
 navigation:   false

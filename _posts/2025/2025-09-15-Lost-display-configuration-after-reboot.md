@@ -10,9 +10,9 @@ created_date: 2025-09-15 13:29:41
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "153 "
+views:        "221 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2025/2025-09-15-Lost-display-configuration-after-reboot.md
 toc:          false
 navigation:   false

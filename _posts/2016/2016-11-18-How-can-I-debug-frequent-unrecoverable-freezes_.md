@@ -10,9 +10,9 @@ created_date: 2016-11-18 11:22:02
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "6,701 "
+views:        "6,753 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-How-can-I-debug-frequent-unrecoverable-freezes_.md
 toc:          false
 navigation:   false

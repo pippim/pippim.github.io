@@ -10,9 +10,9 @@ created_date: 2019-06-20 01:00:29
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,107 "
+views:        "1,119 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-Desktop-icons-do-not-stay-put.md
 toc:          false
 navigation:   false

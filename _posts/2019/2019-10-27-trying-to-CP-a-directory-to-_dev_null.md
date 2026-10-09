@@ -10,9 +10,9 @@ created_date: 2019-10-27 02:46:51
 edit_date:    2019-10-28 23:52:54
 votes:        "2 "
 favorites:    
-views:        "11,511 "
+views:        "11,694 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-27-trying-to-CP-a-directory-to-_dev_null.md
 toc:          false
 navigation:   false

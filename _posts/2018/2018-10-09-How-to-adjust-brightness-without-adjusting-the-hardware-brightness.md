@@ -10,9 +10,9 @@ created_date: 2018-10-09 12:23:05
 edit_date:    2018-10-09 17:35:44
 votes:        "2 "
 favorites:    
-views:        "803 "
+views:        "822 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-09-How-to-adjust-brightness-without-adjusting-the-hardware-brightness.md
 toc:          false
 navigation:   false

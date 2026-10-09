@@ -10,9 +10,9 @@ created_date: 2019-07-13 22:04:35
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "277 "
+views:        "315 "
 accepted:     Accepted
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Unity-launch-bar-and-menu-bar-won_t-come-up-on-Ubuntu-16.04.md
 toc:          false
 navigation:   false

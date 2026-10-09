@@ -8,11 +8,11 @@ type:         Question
 tags:         command-line bash
 created_date: 2019-12-27 14:56:34
 edit_date:    2020-06-12 14:37:07
-votes:        "18 "
+votes:        "19 "
 favorites:    
-views:        "9,158 "
+views:        "9,260 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-27-What-is-the-purpose-of-the-special-parameter-___-_single-underscore_-in-environment_.md
 toc:          false
 navigation:   false

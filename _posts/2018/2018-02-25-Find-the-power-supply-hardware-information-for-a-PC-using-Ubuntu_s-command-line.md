@@ -10,9 +10,9 @@ created_date: 2018-02-25 15:26:19
 edit_date:    2018-02-26 19:07:38
 votes:        "8 "
 favorites:    
-views:        "141,486 "
+views:        "143,651 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-Find-the-power-supply-hardware-information-for-a-PC-using-Ubuntu_s-command-line.md
 toc:          false
 navigation:   false

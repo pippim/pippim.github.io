@@ -8,11 +8,11 @@ type:         Answer
 tags:         video totem subtitle
 created_date: 2018-02-17 22:39:09
 edit_date:    2020-06-12 14:37:07
-votes:        "6 "
+votes:        "5 "
 favorites:    
-views:        "2,456 "
+views:        "2,492 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-How-to-set-subtitles-to-_none_-as-a-default-for-totem_.md
 toc:          false
 navigation:   false

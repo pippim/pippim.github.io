@@ -10,9 +10,9 @@ created_date: 2019-11-14 01:33:17
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,942,120 "
+views:        "3,950,107 "
 accepted:     
-uploaded:     2026-06-08 06:28:40
+uploaded:     2026-10-09 16:40:21
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-14-Is-there-a-command-to-list-all-users_-Also-to-add_-delete_-modify-users_-in-the-terminal_.md
 toc:          false
 navigation:   false
