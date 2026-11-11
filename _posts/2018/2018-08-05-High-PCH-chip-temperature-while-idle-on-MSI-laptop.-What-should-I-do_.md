@@ -10,9 +10,9 @@ created_date: 2018-08-05 16:23:23
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "9,730 "
+views:        "9,791 "
 accepted:     
-uploaded:     2026-10-09 16:40:21
+uploaded:     2026-11-11 17:41:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-05-High-PCH-chip-temperature-while-idle-on-MSI-laptop.-What-should-I-do_.md
 toc:          false
 navigation:   false

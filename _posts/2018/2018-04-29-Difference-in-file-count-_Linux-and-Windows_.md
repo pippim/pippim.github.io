@@ -10,9 +10,9 @@ created_date: 2018-04-29 19:09:05
 edit_date:    2018-04-30 22:53:35
 votes:        "2 "
 favorites:    
-views:        "599 "
+views:        "608 "
 accepted:     
-uploaded:     2026-10-09 16:40:21
+uploaded:     2026-11-11 17:41:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Difference-in-file-count-_Linux-and-Windows_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2024-10-13 23:03:19
 edit_date:    2024-12-22 18:43:16
 votes:        "10 "
 favorites:    
-views:        "419 "
+views:        "426 "
 accepted:     Accepted
-uploaded:     2026-10-09 16:40:21
+uploaded:     2026-11-11 17:41:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2024/2024-10-13-A-SEDE-query-that-worked-for-years-is-now-timing-out-for-the-last-ten-attempts.md
 toc:          false
 navigation:   false

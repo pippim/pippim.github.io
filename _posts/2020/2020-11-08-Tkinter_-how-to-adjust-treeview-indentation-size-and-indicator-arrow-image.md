@@ -10,9 +10,9 @@ created_date: 2020-11-08 17:35:28
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,552 "
+views:        "2,562 "
 accepted:     
-uploaded:     2026-10-09 16:40:21
+uploaded:     2026-11-11 17:41:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-11-08-Tkinter_-how-to-adjust-treeview-indentation-size-and-indicator-arrow-image.md
 toc:          false
 navigation:   false

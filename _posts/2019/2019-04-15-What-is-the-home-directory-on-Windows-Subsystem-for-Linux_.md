@@ -10,9 +10,9 @@ created_date: 2019-04-15 11:34:10
 edit_date:    2019-04-16 00:49:23
 votes:        "2 "
 favorites:    
-views:        "1,513,925 "
+views:        "1,516,172 "
 accepted:     
-uploaded:     2026-10-09 16:40:21
+uploaded:     2026-11-11 17:41:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-15-What-is-the-home-directory-on-Windows-Subsystem-for-Linux_.md
 toc:          false
 navigation:   false

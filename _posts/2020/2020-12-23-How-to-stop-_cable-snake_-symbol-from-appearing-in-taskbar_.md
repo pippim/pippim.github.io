@@ -8,11 +8,11 @@ type:         Answer
 tags:         gnome indicator thunderbolt docking statusbar
 created_date: 2020-12-23 12:48:39
 edit_date:    2020-12-24 15:15:02
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "971 "
+views:        "1,020 "
 accepted:     
-uploaded:     2026-10-09 16:40:21
+uploaded:     2026-11-11 17:41:40
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-23-How-to-stop-_cable-snake_-symbol-from-appearing-in-taskbar_.md
 toc:          false
 navigation:   false
